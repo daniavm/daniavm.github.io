@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Daniel Valdés Medel - Physics Teacher, Astronomer, Data Scientist."
+title                    : "My Little Principia"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Daniel Valdés Medel"
@@ -104,7 +104,7 @@ analytics:
 author:
   name             : "Daniel Valdés M."
   avatar           : "/assets/images/foto_perfil.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a human."
+  bio              : "Physics Teacher, Astronomer, Data Scientist."
   location         : "Talagante, Santiago, Chile"
   email            :
   links:
