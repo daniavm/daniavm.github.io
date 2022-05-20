@@ -8,5 +8,5 @@ main:
      url: portfolio/portfolio-archive.md
    - title: "Blog"
      url: /blog/
-   - title: "Sitemap"
-     url: /sitemap/
+   - title: "About"
+     url: /about/
