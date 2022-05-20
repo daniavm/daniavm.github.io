@@ -3,6 +3,7 @@ layout: splash
 permalink: /
 hidden: true
 header:
+  title: "Título para probar"
   overlay_color: "#5e616c"
   overlay_image: /assets/images/teaser_wallpaper.jpeg
   actions:
