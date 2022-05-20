@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Daniel Valdés M."
+title                    : "Principia"
 title_separator          : "-"
-subtitle                 : "Physics Teacher, Astronomer, Data Scientist." # site tagline that appears below site title in masthead
-name                     : "Daniel Valdés Medel"
-description              : "An amazing website."
+subtitle                 : "In some point we must begin" # site tagline that appears below site title in masthead
+name                     : "Principia"
+description              : "A whole life project to share with everyone"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
