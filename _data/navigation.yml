@@ -3,7 +3,7 @@ main:
   #- title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
    - title: "Home"
-     url: home.md
+     url: index.html
    - title: "Portfolio"
      url: portfolio/portfolio-archive.md
    - title: "Blog"
