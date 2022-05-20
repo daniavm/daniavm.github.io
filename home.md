@@ -10,7 +10,7 @@ header:
       url: "#test-link"
 title: "Título de prueba"
 excerpt: >
-  Physics Teacher, Astronomer, Data Scientist.<br />
+  Descripción de prueba<br />
 feature_row:
   - image_path: /assets/images/mm-customizable-feature.png
     alt: "customizable"
