@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Principia"
 title_separator          : "-"
 subtitle                 : "In some point we must begin" # site tagline that appears below site title in masthead
-name                     : "Principia"
+name                     : "Hola"
 description              : "A whole life project to share with everyone"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
