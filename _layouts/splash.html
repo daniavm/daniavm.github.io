@@ -18,10 +18,5 @@ layout: default
     <section class="page__content" itemprop="text">
       {{ content }}
     </section>
-    <div class="entries-{{ entries_layout }}">
-      {% for post in posts %}
-        {% include archive-single.html type=entries_layout %}
-      {% endfor %}
-    </div>
   </article>
 </div>
