@@ -3,12 +3,12 @@ layout: splash
 permalink: /
 hidden: true
 header:
-  title: "Título para probar"
   overlay_color: "#5e616c"
   overlay_image: /assets/images/teaser_wallpaper.jpeg
   actions:
-    - label: "<i class='fas fa-download'></i> Install now"
-      url: "/docs/quick-start-guide/"
+    - label: "Download"
+      url: "#test-link"
+title: "Título de prueba"
 excerpt: >
   Physics Teacher, Astronomer, Data Scientist.<br />
 feature_row:
