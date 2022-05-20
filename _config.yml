@@ -103,7 +103,7 @@ analytics:
 # Site Author
 author:
   name             : "Daniel Valdés M."
-  avatar           : "/assets/images/foto_perfil.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "![image-center](/assets/images/foto_perfil.jpg){: .align-center}" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Physics Teacher, Astronomer, Data Scientist."
   location         : "Talagante, Santiago, Chile"
   email            :
