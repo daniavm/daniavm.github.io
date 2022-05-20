@@ -4,7 +4,7 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/teaser_wallpaper.jpeg
+  overlay_image: /assets/images/teaser_wallpaper1.jpeg
   actions:
     - label: "Download"
       url: "#test-link"
