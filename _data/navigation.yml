@@ -6,6 +6,8 @@ main:
      url: index.html
    - title: "Portfolio"
      url: portfolio/portfolio-archive.md
+   - title: "Channel"
+     url: /youtube_channel/
    - title: "Blog"
      url: /blog/
    - title: "About"
