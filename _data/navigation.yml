@@ -5,7 +5,7 @@ main:
    - title: "Home"
      url: index.html
    - title: "Portfolio"
-     url: portfolio/portfolio-archive.md
+     url: /portfolio/
    - title: "Channel"
      url: /youtube_channel/
    - title: "Blog"
