@@ -11,7 +11,7 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 include: ["_pages"]
-include: ["_portfolio"] 
+include: ["_portfolio"]
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
@@ -294,3 +294,8 @@ defaults:
       comments: # true
       share: true
       related: true
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
