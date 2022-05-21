@@ -11,4 +11,4 @@ main:
    - title: "Blog"
      url: /blog/
    - title: "About"
-     url: /about/
+     url: _pages/about.md
