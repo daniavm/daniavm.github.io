@@ -9,6 +9,10 @@ tags:
   - comet
 ---
 
+> Durante la mayor parte de la historia de nuestra especie fue incapaz de entender el cómo funciona la naturaleza. Tomamos cada tormenta, sequía, enfermedad y cometa de manera personal. Creamos mitos y espíritus en un intento de explicar los patrones de la naturaleza.
+
+> <cite><a href="https://www.brainyquote.com/quotes/ann_druyan_362159.html">Ann Druyan</a></cite>
+
 Nested and mixed lists are an interesting beast. It's a corner case to make sure that
 
 * Lists within lists do not break the ordered list numbering order
