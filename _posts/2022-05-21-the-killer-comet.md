@@ -1,13 +1,11 @@
 ---
-title: "Edge Case: Nested and Mixed Lists"
+title: "The Killer Comet"
+author_profile: true
 categories:
-  - Edge Case
+  - Posts
 tags:
-  - content
-  - css
-  - edge case
-  - lists
-  - markup
+  - pseudoscience
+  - comet
 ---
 
 Nested and mixed lists are an interesting beast. It's a corner case to make sure that
@@ -18,9 +16,9 @@ Nested and mixed lists are an interesting beast. It's a corner case to make sure
 ### Ordered -- Unordered -- Ordered
 
 1. ordered item
-2. ordered item 
+2. ordered item
    * **unordered**
-   * **unordered** 
+   * **unordered**
      1. ordered item
      2. ordered item
 3. ordered item
@@ -29,9 +27,9 @@ Nested and mixed lists are an interesting beast. It's a corner case to make sure
 ### Ordered -- Unordered -- Unordered
 
 1. ordered item
-2. ordered item 
+2. ordered item
    * **unordered**
-   * **unordered** 
+   * **unordered**
      * unordered item
      * unordered item
 3. ordered item
@@ -40,9 +38,9 @@ Nested and mixed lists are an interesting beast. It's a corner case to make sure
 ### Unordered -- Ordered -- Unordered
 
 * unordered item
-* unordered item 
+* unordered item
   1. ordered
-  2. ordered 
+  2. ordered
      * unordered item
      * unordered item
 * unordered item
@@ -51,9 +49,9 @@ Nested and mixed lists are an interesting beast. It's a corner case to make sure
 ### Unordered -- Unordered -- Ordered
 
 * unordered item
-* unordered item 
+* unordered item
   * unordered
-  * unordered 
+  * unordered
     1. **ordered item**
     2. **ordered item**
 * unordered item
