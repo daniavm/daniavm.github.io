@@ -8,7 +8,7 @@ main:
      url: /portfolio/
    - title: "Channel"
      url: https://www.youtube.com/channel/UCE9a5RZRjCwvyFlg2ORG1HA
-   - title: "Blog"
-     url: /blog/
+   - title: "Posts"
+     url: /post-archive-feature-rows/
    - title: "About"
      url: /about/
