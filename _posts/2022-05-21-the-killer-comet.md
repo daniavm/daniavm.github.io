@@ -10,6 +10,7 @@ tags:
 ---
 
 > Durante la mayor parte de la historia de nuestra especie fue incapaz de entender el cómo funciona la naturaleza. Tomamos cada tormenta, sequía, enfermedad y cometa de manera personal. Creamos mitos y espíritus en un intento de explicar los patrones de la naturaleza.
+{: style="text-align: right;"}
 
 > <cite><a href="https://www.brainyquote.com/quotes/ann_druyan_362159.html" style='text-align: right;'>Ann Druyan</a></cite>
 
