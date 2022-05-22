@@ -15,9 +15,16 @@ tags:
 
 > <cite style="text-align: right; display: block;"><a href="https://www.brainyquote.com/quotes/ann_druyan_362159.html">Ann Druyan</a></cite>
 
-## El cometa de 1910
+## Los cometas y el destino del mundo
+
+## El día en que fuimos libres
+
+## El 'veneno' del cometa de 1910
 
 pondré algo de texto aquí no más para ver como va quedando
+
+## El fin del mundo de Camille Flammarion
+
 
 <figure>
     <blockquote>
