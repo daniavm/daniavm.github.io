@@ -13,7 +13,7 @@
 include: ["_pages"]
 include: ["_portfolio"]
 include: ["_posts"]
-# theme                  : "minimal-mistakes-jekyll"
+# theme                  : "minimal-mistakes-jekyll" 
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
