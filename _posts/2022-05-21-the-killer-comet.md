@@ -1,6 +1,7 @@
 ---
 title: "The Killer Comet"
 layout: single
+author_profile: true
 categories:
   - Posts
 tags:
