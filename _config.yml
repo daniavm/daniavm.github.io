@@ -301,7 +301,7 @@ collections:
     permalink: /:collection/:path/
 
 defaults:
-  # _portfolio 
+  # _portfolio
   - scope:
       path: ""
       type: portfolio
