@@ -12,7 +12,14 @@ tags:
 > Durante la mayor parte de la historia de nuestra especie fue incapaz de entender el cómo funciona la naturaleza. Tomamos cada tormenta, sequía, enfermedad y cometa de manera personal. Creamos mitos y espíritus en un intento de explicar los patrones de la naturaleza.
 {: style="text-align: right;"}
 
-> <cite style="text-align: right"><a href="https://www.brainyquote.com/quotes/ann_druyan_362159.html">Ann Druyan</a></cite>
+> <cite style="text-align: right; display: block;"><a href="https://www.brainyquote.com/quotes/ann_druyan_362159.html">Ann Druyan</a></cite>
+
+<figure>
+    <blockquote>
+        <p>It was a bright cold day in April, and the clocks were striking thirteen.</p>
+    </blockquote>
+    <figcaption>First sentence in <cite><a href="http://www.george-orwell.org/1984/0.html">Nineteen Eighty-Four</a></cite> by George Orwell (Part 1, Chapter 1).</figcaption>
+</figure>
 
 Nested and mixed lists are an interesting beast. It's a corner case to make sure that
 
