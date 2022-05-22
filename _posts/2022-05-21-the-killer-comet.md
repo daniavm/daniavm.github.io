@@ -1,6 +1,6 @@
 ---
 title: "The Killer Comet"
-layout: posts
+layout: single
 categories:
   - Posts
 tags:
