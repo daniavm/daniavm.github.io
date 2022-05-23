@@ -1,6 +1,6 @@
 ---
-title: "Baz Boom Identity"
-collection: _portfolio
+title: "Data Science sobre Bitácoras de Trabajo Estudiantil"
+collection: portfolio
 excerpt: "Baz Boom design system including logo mark, website design, and branding applications."
 header:
   image: /assets/images/unsplash-gallery-image-1.jpg
@@ -9,7 +9,7 @@ sidebar:
   - title: "Role"
     image: http://placehold.it/350x250
     image_alt: "logo"
-    text: "Designer, Front-End Developer"
+    text: "Data Scientist"
   - title: "Responsibilities"
     text: "Reuters try PR stupid commenters should isn't a business model"
 gallery:
