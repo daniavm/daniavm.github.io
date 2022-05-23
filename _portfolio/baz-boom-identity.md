@@ -1,6 +1,6 @@
 ---
 title: "Baz Boom Identity"
-layout: _portfolio
+collection: portfolio
 excerpt: "Baz Boom design system including logo mark, website design, and branding applications."
 header:
   image: /assets/images/unsplash-gallery-image-1.jpg
