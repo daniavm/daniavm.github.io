@@ -3,8 +3,8 @@ title: "Data Science sobre Bitácoras de Trabajo Estudiantil"
 excerpt: "Baz Boom design system including logo mark, website design, and branding applications."
 layout: single
 header:
-  image: /assets/images/teaser_wallpaper.jpg
-  teaser: assets/images/teaser_wallpaper.jpg
+  image: /assets/images/Observability-and-Log-Analytics.jpg
+  teaser: assets/images/Observability-and-Log-Analytics.jpg
 sidebar:
   - title: "Role"
     image: /assets/images/teaser_wallpaper.jpg
