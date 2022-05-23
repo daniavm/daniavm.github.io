@@ -7,8 +7,8 @@ header:
   teaser: assets/images/unsplash-gallery-image-1-th.jpg
 sidebar:
   - title: "Role"
-    image: http://placehold.it/350x250
-    image_alt: "logo"
+    # image: http://placehold.it/350x250
+    # image_alt: "logo"
     text: "Data Scientist"
   - title: "Responsibilities"
     text: "Reuters try PR stupid commenters should isn't a business model"
