@@ -1,5 +1,5 @@
 ---
-title: "Data Science sobre Bitácoras de Trabajo Estudiantil"
+title: "Data Science over students log in physics"
 excerpt: "Baz Boom design system including logo mark, website design, and branding applications."
 layout: single
 header:
