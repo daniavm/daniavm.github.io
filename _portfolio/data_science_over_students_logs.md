@@ -1,6 +1,6 @@
 ---
 title: "Data Science over students log in physics"
-excerpt: "Una iniciativa pionera en el análisis de información escrita entregada por estudiantes de enseñanza media."
+excerpt: "A pioneering initiative in the analysis of written information delivered by high school students."
 layout: single
 header:
   image: /assets/images/portfolio_images/thought-catalog-505eectW54k-unsplash.jpg
