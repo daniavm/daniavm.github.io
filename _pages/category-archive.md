@@ -4,4 +4,4 @@ layout: categories
 permalink: /categories/
 author_profile: true
 ---
-Hola
+Review each post classified by category.
