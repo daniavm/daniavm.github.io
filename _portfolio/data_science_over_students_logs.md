@@ -47,7 +47,6 @@ Throughout this year I have dedicated great efforts to develop a tool that allow
 | **emocion_predominante**      |  String  | Predominant emotion at the time of working the declared record     |
 | **edition_timestamp**         | DateTime | Timestamp of the last time the submitted record was edited         |
 
-
 ## The Code
 
 ## Results and Analysis
