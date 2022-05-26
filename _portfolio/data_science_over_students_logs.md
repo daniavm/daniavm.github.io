@@ -30,19 +30,20 @@ A lo largo de este año he dedicado grandes esfuerzos a desarrollar una herramie
 
 ## La Base de datos
 
-| **NAME**                      | **Type** | **Description**                                                            |
-|-------------------------------|:--------:|----------------------------------------------------------------------------|
-| **sent_timestamp**            | DateTime | Timestamp que indica la fecha en que se hace el registro del el estudiante |
-| **mail**                      |  String  | Mail del estudiante                                                        |
-| **dia**                       |   Date   | Fecha que declara el estudiante que hace el registro de su bitácora        |
-| **hora_de_inicio**            |   Time   | Hora que el estudiante declara que partió su jornada de estudio            |
-| **hora_de_termino**           |   Time   | Hora que el estudiante declara que terminó su jornada de estudio           |
-| **duracion_minutos**          |    Int   | Duración de la jornada en minutos                                          |
-| **objetivo_logrado**          |  String  | Objetivo que se logró en la jornada de estudio                             |
-| **describe_como_lo_lograste** |  String  | Descripción del cómo se logró el objetivo abordado                         |
-| **nivel**                     |    Int   | Número que indica la habilidad y destreza trabajada por el estudiante.     |
-| **emocion_predominante**      |  String  | Emoción predominante al momento de trabajar el registro declarado          |
-| **edition_timestamp**         | DateTime | Timestamp del último momento en que se editó el registro enviado           |
+| **NAME**                      | **Type** | **Description**                                                    |
+|-------------------------------|:--------:|--------------------------------------------------------------------|
+| **sent_timestamp**            | DateTime | Timestamp indicating the date the student was registered           |
+| **mail**                      |  String  | Student email                                                      |
+| **dia**                       |   Date   | Date declared by the student who makes the registration of his log |
+| **hora_de_inicio**            |   Time   | Time that the student declares that he started his study day       |
+| **hora_de_termino**           |   Time   | Time that the student declares that he finished his study day      |
+| **duracion_minutos**          |    Int   | Duration of the study time in minutes                              |
+| **objetivo_logrado**          |  String  | Objective that was achieved in the study day                       |
+| **describe_como_lo_lograste** |  String  | Description of how the objective was achieved                      |
+| **nivel**                     |    Int   | Number that indicates the ability and skill worked by the student. |
+| **emocion_predominante**      |  String  | Predominant emotion at the time of working the declared record     |
+| **edition_timestamp**         | DateTime | Timestamp of the last time the submitted record was edited         |
+
 
 ## El Código
 
