@@ -3,8 +3,8 @@ title: "Data Science over students log in physics"
 excerpt: "A pioneering initiative in the analysis of written information delivered by high school students."
 layout: single
 header:
-  image: /assets/images/portfolio_images/marissa-grootes-flRm0z3MEoA-unsplash.jpg
-  teaser: assets/images/portfolio_images/marissa-grootes-flRm0z3MEoA-unsplash.jpg
+  image: /assets/images/portfolio_images/green-chameleon-s9CC2SKySJM-unsplash.jpg
+  teaser: assets/images/portfolio_images/green-chameleon-s9CC2SKySJM-unsplash.jpg
 sidebar:
   - title: "Role"
     image: /assets/images/teaser_wallpaper.jpg
