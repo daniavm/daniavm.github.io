@@ -1,5 +1,5 @@
 ---
-title: "Data Science over students log in physics"
+title: "Data Science Over Student Records in Physics Class"
 excerpt: "A pioneering initiative in the analysis of written information delivered by high school students."
 layout: single
 header:
@@ -28,7 +28,8 @@ gallery:
 
 <p align="justify">
 Throughout this year I have dedicated great efforts to develop a tool that allows interpreting the written records of my students in a blog activity. The initial objective of this was mainly to implement a plan to build habits, in which each student would have to have a marked regularity in their study days. The foregoing because it was found that having this kind of internship was very difficult to achieve due to the average family reality that students have, which includes "many distractions", "lack of pressure" and/or " lack of a fixed place of study".
-</p>
+</- >
+
 
 ## The Database
 
