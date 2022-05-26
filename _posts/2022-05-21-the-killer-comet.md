@@ -2,12 +2,14 @@
 title: "The Killer Comet"
 layout: single
 author_profile: true
+
 toc: true
 categories:
   - Posts
 tags:
   - pseudoscience
   - comet
+  - Science
 ---
 
 > Durante la mayor parte de la historia de nuestra especie fue incapaz de entender el cómo funciona la naturaleza. Tomamos cada tormenta, sequía, enfermedad y cometa de manera personal. Creamos mitos y espíritus en un intento de explicar los patrones de la naturaleza.
