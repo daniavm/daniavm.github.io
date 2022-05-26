@@ -30,18 +30,19 @@ A lo largo de este año he dedicado grandes esfuerzos a desarrollar una herramie
 
 ## La Base de datos
 
-### Tables
-
-| Header1 | Header2 | Header3 |
-|:--------|:-------:|--------:|
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
-|----
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
-|=====
-| Foot1   | Foot2   | Foot3
-{: rules="groups"}
+| **NAME**                      | **Type** | **Description** |
+|-------------------------------|----------|-----------------|
+| **sent_timestamp**            |          |                 |
+| **mail**                      |          |                 |
+| **dia**                       |          |                 |
+| **hora_de_inicio**            |          |                 |
+| **hora_de_termino**           |          |                 |
+| **duracion_minutos**          |          |                 |
+| **objetivo_logrado**          |          |                 |
+| **describe_como_lo_lograste** |          |                 |
+| **nivel**                     |          |                 |
+| **emocion_predominante**      |          |                 |
+| **edition_timestamp**         |          |                 |
 
 ## El Código
 
