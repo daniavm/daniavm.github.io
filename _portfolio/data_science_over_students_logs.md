@@ -25,11 +25,23 @@ gallery:
 ---
 ## Introducción
 <p align="justify">
-bla A lo largo de este año he dedicado grandes esfuerzos a desarrollar una herramienta que permita interpretar los registros escritos de mis estudiantes en una actividad de bitácora. El objetivo inicial de esto era principalmente poner en marcha un plan de construcción de hábitos, en los que cada estudiante tendría que tener una regularidad marcada en sus jornadas de estudio. Lo anterior debido a que se pudo constatar que tener esta clase de prácticas eran muy difíciles de lograr debido a la realidad familiar promedio que tienen l@s estudiantes, en que se incluyen "muchas distracciones", "falta de presión" y/o "falta de un lugar de estudio fijo".
-#{: style="text-align: justify;"}
+A lo largo de este año he dedicado grandes esfuerzos a desarrollar una herramienta que permita interpretar los registros escritos de mis estudiantes en una actividad de bitácora. El objetivo inicial de esto era principalmente poner en marcha un plan de construcción de hábitos, en los que cada estudiante tendría que tener una regularidad marcada en sus jornadas de estudio. Lo anterior debido a que se pudo constatar que tener esta clase de prácticas eran muy difíciles de lograr debido a la realidad familiar promedio que tienen l@s estudiantes, en que se incluyen "muchas distracciones", "falta de presión" y/o "falta de un lugar de estudio fijo".
 </p>
 
 ## La Base de datos
+
+### Tables
+
+| Header1 | Header2 | Header3 |
+|:--------|:-------:|--------:|
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|----
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|=====
+| Foot1   | Foot2   | Foot3
+{: rules="groups"}
 
 ## El Código
 
