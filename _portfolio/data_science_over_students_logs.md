@@ -3,8 +3,8 @@ title: "Data Science over students log in physics"
 excerpt: "Baz Boom design system including logo mark, website design, and branding applications."
 layout: single
 header:
-  image: /assets/images/Observability-and-Log-Analytics.jpg
-  teaser: assets/images/Observability-and-Log-Analytics.jpg
+  image: /assets/images/portfolio_images/thought-catalog-505eectW54k-unsplash.jpg
+  teaser: assets/images/portfolio_images/thought-catalog-505eectW54k-unsplash.jpg
 sidebar:
   - title: "Role"
     image: /assets/images/teaser_wallpaper.jpg
