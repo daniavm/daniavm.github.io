@@ -30,19 +30,19 @@ A lo largo de este año he dedicado grandes esfuerzos a desarrollar una herramie
 
 ## La Base de datos
 
-| **NAME**                      | **Type** | **Description** |
-|-------------------------------|----------|-----------------|
-| **sent_timestamp**            |          |                 |
-| **mail**                      |          |                 |
-| **dia**                       |          |                 |
-| **hora_de_inicio**            |          |                 |
-| **hora_de_termino**           |          |                 |
-| **duracion_minutos**          |          |                 |
-| **objetivo_logrado**          |          |                 |
-| **describe_como_lo_lograste** |          |                 |
-| **nivel**                     |          |                 |
-| **emocion_predominante**      |          |                 |
-| **edition_timestamp**         |          |                 |
+| **NAME**                      | **Type** | **Description**                                                            |
+|-------------------------------|:--------:|----------------------------------------------------------------------------|
+| **sent_timestamp**            | DateTime | Timestamp que indica la fecha en que se hace el registro del el estudiante |
+| **mail**                      |  String  | Mail del estudiante                                                        |
+| **dia**                       |   Date   | Fecha que declara el estudiante que hace el registro de su bitácora        |
+| **hora_de_inicio**            |   Time   | Hora que el estudiante declara que partió su jornada de estudio            |
+| **hora_de_termino**           |   Time   | Hora que el estudiante declara que terminó su jornada de estudio           |
+| **duracion_minutos**          |    Int   | Duración de la jornada en minutos                                          |
+| **objetivo_logrado**          |  String  | Objetivo que se logró en la jornada de estudio                             |
+| **describe_como_lo_lograste** |  String  | Descripción del cómo se logró el objetivo abordado                         |
+| **nivel**                     |    Int   | Número que indica la habilidad y destreza trabajada por el estudiante.     |
+| **emocion_predominante**      |  String  | Emoción predominante al momento de trabajar el registro declarado          |
+| **edition_timestamp**         | DateTime | Timestamp del último momento en que se editó el registro enviado           |
 
 ## El Código
 
