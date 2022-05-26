@@ -9,6 +9,6 @@ main:
    - title: "Channel"
      url: https://www.youtube.com/channel/UCE9a5RZRjCwvyFlg2ORG1HA
    - title: "Posts"
-     url: /year-archive/
+     url: /categories/
    - title: "About"
      url: /about/
