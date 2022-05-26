@@ -23,14 +23,14 @@ gallery:
     image_path: assets/images/teaser_wallpaper.jpg
     alt: "placeholder image 3"
 ---
-## Introducción
-[//]: <A lo largo de este año he dedicado grandes esfuerzos a desarrollar una herramienta que permita interpretar los registros escritos de mis estudiantes en una actividad de bitácora. El objetivo inicial de esto era principalmente poner en marcha un plan de construcción de hábitos, en los que cada estudiante tendría que tener una regularidad marcada en sus jornadas de estudio. Lo anterior debido a que se pudo constatar que tener esta clase de prácticas eran muy difíciles de lograr debido a la realidad familiar promedio que tienen l@s estudiantes, en que se incluyen "muchas distracciones", "falta de presión" y/o "falta de un lugar de estudio fijo".>
+## Introduction
+[//]: < ## Introducción A lo largo de este año he dedicado grandes esfuerzos a desarrollar una herramienta que permita interpretar los registros escritos de mis estudiantes en una actividad de bitácora. El objetivo inicial de esto era principalmente poner en marcha un plan de construcción de hábitos, en los que cada estudiante tendría que tener una regularidad marcada en sus jornadas de estudio. Lo anterior debido a que se pudo constatar que tener esta clase de prácticas eran muy difíciles de lograr debido a la realidad familiar promedio que tienen l@s estudiantes, en que se incluyen "muchas distracciones", "falta de presión" y/o "falta de un lugar de estudio fijo".>
 
 <p align="justify">
 Throughout this year I have dedicated great efforts to develop a tool that allows interpreting the written records of my students in a blog activity. The initial objective of this was mainly to implement a plan to build habits, in which each student would have to have a marked regularity in their study days. The foregoing because it was found that having this kind of internship was very difficult to achieve due to the average family reality that students have, which includes "many distractions", "lack of pressure" and/or " lack of a fixed place of study".
 </p>
 
-## La Base de datos
+## The Database
 
 | **NAME**                      | **Type** | **Description**                                                    |
 |-------------------------------|:--------:|--------------------------------------------------------------------|
@@ -47,13 +47,13 @@ Throughout this year I have dedicated great efforts to develop a tool that allow
 | **edition_timestamp**         | DateTime | Timestamp of the last time the submitted record was edited         |
 
 
-## El Código
+## The Code
 
-## Resultados y Análisis
+## Results and Analysis
 
-## Conclusiones
+## Conclusions
 
-## Referencias
+## References
 
 <a id="1">[1]</a>
 Dijkstra, E. W. (1968).
