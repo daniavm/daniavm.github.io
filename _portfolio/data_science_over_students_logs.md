@@ -1,6 +1,6 @@
 ---
 title: "Data Science over students log in physics"
-excerpt: "Baz Boom design system including logo mark, website design, and branding applications."
+excerpt: "Una iniciativa pionera en el análisis de información escrita entregada por estudiantes de enseñanza media."
 layout: single
 header:
   image: /assets/images/portfolio_images/thought-catalog-505eectW54k-unsplash.jpg
