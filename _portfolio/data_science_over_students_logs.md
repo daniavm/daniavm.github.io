@@ -3,6 +3,7 @@ title: "Data Science Over Student Records in Physics Class"
 excerpt: "A pioneering initiative in the analysis of written information delivered by high school students."
 layout: single
 toc: true
+toc_icon: "egg"
 header:
   image: /assets/images/portfolio_images/green-chameleon-s9CC2SKySJM-unsplash.jpg
   teaser: assets/images/portfolio_images/green-chameleon-s9CC2SKySJM-unsplash.jpg
