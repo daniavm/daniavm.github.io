@@ -31,8 +31,7 @@ gallery:
 Throughout this year I have dedicated great efforts to develop a tool that allows interpreting the written records of my students in a blog activity. The initial objective of this was mainly to implement a plan to build habits, in which each student would have to have a marked regularity in their study days. The foregoing because it was found that having this kind of internship was very difficult to achieve due to the average family reality that students have, which includes "many distractions", "lack of pressure" and/or " lack of a fixed place of study".
 </p> [[1]](#1)
 
-Throughout this year I have dedicated great efforts to develop a tool that allows interpreting the written records of my students in a blog activity. The initial objective of this was mainly to implement a plan to build habits, in which each student would have to have a marked regularity in their study days. The foregoing because it was found that having this kind of internship was very difficult to achieve due to the average family reality that students have, which includes "many distractions", "lack of pressure" and/or " lack of a fixed place of study".
-(E & Huang 2001)[^Huang2001]
+Throughout this year I have dedicated great efforts to develop a tool that allows interpreting the written records of my students in a blog activity. The initial objective of this was mainly to implement a plan to build habits, in which each student would have to have a marked regularity in their study days. The foregoing because it was found that having this kind of internship was very difficult to achieve due to the average family reality that students have, which includes "many distractions", "lack of pressure" and/or " lack of a fixed place of study" (E & Huang 2001)[^Huang2001]
 
 
 
