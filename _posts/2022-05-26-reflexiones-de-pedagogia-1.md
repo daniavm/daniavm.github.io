@@ -1,22 +1,22 @@
 ---
-title: "Thinking About Pedagogy"
+title: "Reflexiones de Pedagogía - nº1"
 layout: single
 author_profile: true
 
 toc: false
 categories:
-  - Reflections
+  - Reflexiones
 tags:
-  - Pedagogy
-  - Work
-  - Reflections
-  - Thoughts
+  - Pedagogía
+  - Trabajo
+  - Reflexiones
+  - Pensamientos
 ---
 
-> Durante la mayor parte de la historia de nuestra especie fue incapaz de entender el cómo funciona la naturaleza. Tomamos cada tormenta, sequía, enfermedad y cometa de manera personal. Creamos mitos y espíritus en un intento de explicar los patrones de la naturaleza.
+> El futuro les pertenece a quienes creen en la belleza de sus sueños.
 {: style="text-align: right;"}
 
-> <cite style="text-align: right; display: block;"><a href="https://www.brainyquote.com/quotes/ann_druyan_362159.html">Ann Druyan</a></cite>
+> <cite style="text-align: right; display: block;"><a href="https://proverbia.net/cita/13461-el-futuro-pertenece-a-quienes-creen-en-la-belleza-">Eleanor Roosevelt</a></cite>
 
 ## Los cometas y el destino del mundo
 
