@@ -2,6 +2,8 @@
 title: "The Killer Comet"
 layout: single
 author_profile: true
+share: true
+related: true
 
 toc: true
 categories:

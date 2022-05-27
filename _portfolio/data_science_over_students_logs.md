@@ -11,7 +11,6 @@ sidebar:
   - title: "Role"
     image: /assets/images/principia_logo.png
     image_alt: "Principa Logo"
-    width: 20%
 
     text: "Physics Teacher and Data Scientist"
   - title: "Responsibilities"
