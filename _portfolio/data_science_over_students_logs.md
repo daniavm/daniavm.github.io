@@ -7,8 +7,9 @@ header:
   teaser: assets/images/portfolio_images/green-chameleon-s9CC2SKySJM-unsplash.jpg
 sidebar:
   - title: "Role"
-    image: /assets/images/ppia_logo_egg.png
+    image: /assets/images/principia_logo.png
     image_alt: "Principa Logo"
+
     text: "Physics Teacher and Data Scientist"
   - title: "Responsibilities"
     text: "Reuters try PR stupid commenters should isn't a business model"
