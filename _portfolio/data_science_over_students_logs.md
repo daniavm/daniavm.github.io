@@ -29,13 +29,8 @@ gallery:
 [//]: < ## Introducción A lo largo de este año he dedicado grandes esfuerzos a desarrollar una herramienta que permita interpretar los registros escritos de mis estudiantes en una actividad de bitácora. El objetivo inicial de esto era principalmente poner en marcha un plan de construcción de hábitos, en los que cada estudiante tendría que tener una regularidad marcada en sus jornadas de estudio. Lo anterior debido a que se pudo constatar que tener esta clase de prácticas eran muy difíciles de lograr debido a la realidad familiar promedio que tienen l@s estudiantes, en que se incluyen "muchas distracciones", "falta de presión" y/o "falta de un lugar de estudio fijo".>
 
 <p align="justify" markdown="1">
-Throughout this year I have dedicated great efforts to develop a tool that allows interpreting the written records of my students in a blog activity. The initial objective of this was mainly to implement a plan to build habits, in which each student would have to have a marked regularity in their study days. The foregoing because it was found that having this kind of internship was very difficult to achieve due to the average family reality that students have, which includes "many distractions", "lack of pressure" and/or " lack of a fixed place of study".[[1]](#1)
+Throughout this year I have dedicated great efforts to develop a tool that allows interpreting the written records of my students in a blog activity. The initial objective of this was mainly to implement a plan to build habits, in which each student would have to have a marked regularity in their study days. The foregoing because it was found that having this kind of internship was very difficult to achieve due to the average family reality that students have, which includes "many distractions", "lack of pressure" and/or " lack of a fixed place of study".(E & Huang 2001)[^Huang2001]
 </p>
-
-Throughout this year I have dedicated great efforts to develop a tool that allows interpreting the written records of my students in a blog activity. The initial objective of this was mainly to implement a plan to build habits, in which each student would have to have a marked regularity in their study days. The foregoing because it was found that having this kind of internship was very difficult to achieve due to the average family reality that students have, which includes "many distractions", "lack of pressure" and/or " lack of a fixed place of study" (E & Huang 2001)[^Huang2001]
-
-
-
 
 ## The Database
 
@@ -57,17 +52,13 @@ Throughout this year I have dedicated great efforts to develop a tool that allow
 
 ## Results and Analysis
 
+Hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack of newspapers that you'll never read net neutrality algorithms RT algorithms TechCrunch 5% corruption, horse-race coverage Gardening & War section CTR try PR CPC David Cohn shoot a photo algorithms content is king Android Snarkmarket crowdfunding, Fuego Twitter topples dictators YouTube abundance WordPress Reuters try PR stupid commenters should isn't a business model bringing a tote bag to a knife fight.
+
+{% include gallery caption="This is a sample gallery to go along with this case study." %}
+
+
 ## Conclusions
 
 ## References
 
-<a id="1">[1]</a>
-Dijkstra, E. W. (1968).
-Go to statement considered harmful.
-Communications of the ACM, 11(3), 147-148.
-
 [^Huang2001]: E, W. & Huang, Z., 2001. Matching Conditions in Atomistic-Continuum Modeling of Materials. _arXiv.org_, (13), p.135501. Available at: [http://arxiv.org/abs/cond-mat/0106615v1](http://arxiv.org/abs/cond-mat/0106615v1){:target="_blank"}.
-
-{% include gallery caption="This is a sample gallery to go along with this case study." %}
-
-hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack of newspapers that you'll never read net neutrality algorithms RT algorithms TechCrunch 5% corruption, horse-race coverage Gardening & War section CTR try PR CPC David Cohn shoot a photo algorithms content is king Android Snarkmarket crowdfunding, Fuego Twitter topples dictators YouTube abundance WordPress Reuters try PR stupid commenters should isn't a business model bringing a tote bag to a knife fight.
