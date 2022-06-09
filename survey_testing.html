@@ -4,26 +4,21 @@
   id="form"
   action="https://script.google.com/macros/s/AKfycbyNpDVVmnoXTc-K5y7vIV-qWJ9nzNy-Omjp-HNSzIcoaPWQ_IBiufWz1wOqnEijEkrcIg/exec"
   target="_top"
-  onsubmit="myFunction()"
+  //onsubmit="myFunction()"
 >
 
   <p>ENCUESTA EMOCIONES</p>
   <input name="Email" type="email" placeholder="Email" required>
   <input name="Name" type="text" placeholder="Name" required>
   <a href="https://daniavm.github.io/survey_testing.html">
-  <button type="submit">Send</button>
+  <button type="submit" onClick="myFunction()">Send</button>
   </a>
 </form>
 
 <script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyNpDVVmnoXTc-K5y7vIV-qWJ9nzNy-Omjp-HNSzIcoaPWQ_IBiufWz1wOqnEijEkrcIg/exec'
-const form = document.forms['submit-to-google-sheet']
-form.addEventListener('submit', e => {
-e.preventDefault()
-fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-  .then(response => console.log('Success!', response))
-  .catch(error => console.error('Error!', error.message))
-})
+  function myFunction() {
+    window.location.href="https://daniavm.github.io/survey_testing.html";
+  }
 </script>
 
 <! -- AKfycbyNpDVVmnoXTc-K5y7vIV-qWJ9nzNy-Omjp-HNSzIcoaPWQ_IBiufWz1wOqnEijEkrcIg -->
