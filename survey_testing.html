@@ -1,3 +1,12 @@
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-8jgo{border-color:#ffffff;text-align:center;vertical-align:top}
+</style>
+
 <form
   method="POST"
   id="sheetdb-form"
@@ -14,9 +23,29 @@
     <option value="2MA">2ºA</option>
   </select>
 
-  <input name="Emocion" type="image" src="assets/images/emotions_project/imagen_feliz.png" alt="Submit" style="float:right" width="48" height="48">
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-8jgo"><input name="Emocion" type="text" placeholder="Emocion" required></th>
+    <th class="tg-8jgo"></th>
+    <th class="tg-8jgo"></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-8jgo"></td>
+    <td class="tg-8jgo"></td>
+    <td class="tg-8jgo"></td>
+  </tr>
+</tbody>
+</table>
+
   <button type="submit" onClick="myFunction()">Send</button>
 </form>
+
+
+
+
 
 <script>
   var form = document.getElementById('sheetdb-form');
