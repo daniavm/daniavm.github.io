@@ -1,6 +1,8 @@
 <form
   method="POST"
   action="https://script.google.com/macros/s/AKfycbyNpDVVmnoXTc-K5y7vIV-qWJ9nzNy-Omjp-HNSzIcoaPWQ_IBiufWz1wOqnEijEkrcIg/exec"
+  target="_top"
+  onsubmit="myFunction()"
 >
   <p>Título</p>
   <input name="Email" type="email" placeholder="Email" required>
@@ -9,6 +11,12 @@
   <button type="submit">Send</button>
   </a>
 </form>
+
+<script>
+function myFunction() {
+alert("The form was submitted. Please press okay to reload the page");
+}
+</script>
 
 
 <! -- AKfycbyNpDVVmnoXTc-K5y7vIV-qWJ9nzNy-Omjp-HNSzIcoaPWQ_IBiufWz1wOqnEijEkrcIg -->
