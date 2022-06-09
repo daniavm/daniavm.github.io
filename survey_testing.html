@@ -1,5 +1,6 @@
 <form
   method="POST"
+  name="submit-to-google-sheet"
   action="https://script.google.com/macros/s/AKfycbyNpDVVmnoXTc-K5y7vIV-qWJ9nzNy-Omjp-HNSzIcoaPWQ_IBiufWz1wOqnEijEkrcIg/exec"
   target="_top"
   onsubmit="myFunction()"
@@ -13,10 +14,14 @@
 </form>
 
 <script>
-function myFunction() {
-alert("The form was submitted. Please press okay to reload the page");
-}
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyNpDVVmnoXTc-K5y7vIV-qWJ9nzNy-Omjp-HNSzIcoaPWQ_IBiufWz1wOqnEijEkrcIg/exec'
+const form = document.forms['submit-to-google-sheet']
+form.addEventListener('submit', e => {
+e.preventDefault()
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => console.log('Success!', response))
+  .catch(error => console.error('Error!', error.message))
+})
 </script>
-
 
 <! -- AKfycbyNpDVVmnoXTc-K5y7vIV-qWJ9nzNy-Omjp-HNSzIcoaPWQ_IBiufWz1wOqnEijEkrcIg -->
