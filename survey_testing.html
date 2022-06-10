@@ -5,12 +5,23 @@ overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
 font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-8jgo{border-color:#ffffff;text-align:center;vertical-align:top}
-</style>
 
 [type=radio] {
   position: absolute;
   opacity: 0;
 }
+
+[type=radio]+img {
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+[type=radio]:checked + img {
+  outline: 5px solid SteelBlue;
+}
+</style>
+
+
 
 <form
   method="POST"
