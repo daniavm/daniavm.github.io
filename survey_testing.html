@@ -34,23 +34,68 @@ h3{
   font-size: 2.0vw;
 }
 
-.dropdown {
-  position: relative;
+.select {
+  cursor: pointer;
   display: inline-block;
+  position: relative;
+  font: normal 11px/22px Arial, Sans-Serif;
+  color: black;
+  border: 1px solid #ccc;
 }
 
-.dropdown-content {
+.styledSelect {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.styledSelect:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-color: black transparent transparent transparent;
+  position: absolute;
+  top: 9px;
+  right: 6px;
+}
+
+.styledSelect:active,
+.styledSelect.active {
+  background-color: #eee;
+}
+
+.options {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0 0;
+  padding: 0 0;
+  list-style: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.options li {
+  padding: 0 6px;
+  margin: 0 0;
+  padding: 0 10px;
+}
+
+.options li:hover {
+  background-color: #39f;
+  color: white;
 }
 
 </style>
@@ -66,12 +111,12 @@ h3{
 >
 
   <h1 style="text-align:center">ENCUESTA EMOCIONES</h1>
-  <div style="text-align:center" class="dropdown">
+  <div style="text-align:center">
   <select id="Curso" name="Curso" required>
-    <option value="1MA" class="dropdown-content">1ºA</option>
-    <option value="1MB" class="dropdown-content">1ºB</option>
-    <option value="1MC" class="dropdown-content">1ºC</option>
-    <option value="2MA" class="dropdown-content">2ºA</option>
+    <option value="1MA">1ºA</option>
+    <option value="1MB">1ºB</option>
+    <option value="1MC">1ºC</option>
+    <option value="2MA">2ºA</option>
   </select>
   </div>
 
