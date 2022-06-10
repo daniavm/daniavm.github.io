@@ -34,7 +34,6 @@ h3{
   font-size: 2.0vw;
 }
 
-/* The container must be positioned relative: */
 .custom-select {
   position: relative;
   font-family: Arial;
@@ -48,7 +47,6 @@ h3{
   background-color: DodgerBlue;
 }
 
-/* Style the arrow inside the select element: */
 .select-selected:after {
   position: absolute;
   content: "";
@@ -60,13 +58,11 @@ h3{
   border-color: #fff transparent transparent transparent;
 }
 
-/* Point the arrow upwards when the select box is open (active): */
 .select-selected.select-arrow-active:after {
   border-color: transparent transparent #fff transparent;
   top: 7px;
 }
 
-/* style the items (options), including the selected item: */
 .select-items div,.select-selected {
   color: #ffffff;
   padding: 8px 16px;
@@ -75,7 +71,6 @@ h3{
   cursor: pointer;
 }
 
-/* Style items (options): */
 .select-items {
   position: absolute;
   background-color: DodgerBlue;
@@ -85,7 +80,6 @@ h3{
   z-index: 99;
 }
 
-/* Hide the items when the select box is closed: */
 .select-hide {
   display: none;
 }
@@ -106,13 +100,13 @@ h3{
 >
 
   <h1 style="text-align:center">ENCUESTA EMOCIONES</h1>
-  <div style="text-align:center" class="custom-select">
-  <select id="Curso" name="Curso" required>
-    <option value="1MA">1ºA</option>
-    <option value="1MB">1ºB</option>
-    <option value="1MC">1ºC</option>
-    <option value="2MA">2ºA</option>
-  </select>
+  <div class="custom-select" style="width:200px;">
+    <select>
+      <option value="1MA">1ºA</option>
+      <option value="1MB">1ºB</option>
+      <option value="1MC">1ºC</option>
+      <option value="2MA">2ºA</option>
+    </select>
   </div>
 
 <table class="tg" style="max-width:90%; margin-left: auto; margin-right: auto;">
