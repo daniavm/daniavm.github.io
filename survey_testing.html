@@ -402,6 +402,7 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     //...the form gets submitted:
 
+    document.getElementById("sheetdb-form").submit();
     if(document.getElementById("sheetdb-form").onsubmit()){
       var form = document.getElementById('sheetdb-form');
       form.addEventListener("submit", e => {
@@ -418,8 +419,6 @@ function nextPrev(n) {
         });
       });
     }
-
-    //document.getElementById("sheetdb-form").submit();
 
     return false;
   }
