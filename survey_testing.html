@@ -158,7 +158,7 @@ input.invalid {
   style="width: 100vw;height: 100vh;"
 >
   <div class="tab">
-    <div class="custom-select" style="width:400px; text-align:center; margin:auto; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%);">
+    <div class="custom-select" style="width:400px; text-align:center; margin:auto;">
       <h1>Selecciona tu curso</h1>
       <select  name="Curso">
         <option value="1B">1º Básico</option>
@@ -250,7 +250,7 @@ input.invalid {
     </tbody>
     </table>
 
-  <!-- <button type="submit" onClick="myFunction()">Send</button> -->
+  <button type="submit"  style="margin-left: auto; margin-right: auto;">Registrar mi emoción</button>
   </div>
 
   <div style="overflow:auto;">
@@ -401,25 +401,7 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-
     document.getElementById("sheetdb-form").submit();
-    if(document.getElementById("sheetdb-form").onsubmit()){
-      var form = document.getElementById('sheetdb-form');
-      form.addEventListener("submit", e => {
-        e.preventDefault();
-        fetch(form.action, {
-            method : "POST",
-            body: new FormData(document.getElementById("sheetdb-form")),
-        }).then(
-            response => response.json()
-        ).then((html) => {
-          // you can put any JS code here
-          window.location.href = 'https://daniavm.github.io/survey_testing.html';
-          //alert('success')
-        });
-      });
-    }
-
     return false;
   }
   // Otherwise, display the correct tab:
