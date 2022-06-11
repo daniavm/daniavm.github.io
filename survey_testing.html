@@ -402,8 +402,9 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     //...the form gets submitted:
     document.getElementById("sheetdb-form").submit();
-    return false;
     window.location.href = 'https://daniavm.github.io/survey_testing.html';
+    alert('success')
+    return false;
   }
   // Otherwise, display the correct tab:
   showTab(currentTab);
