@@ -401,7 +401,6 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    document.getElementById("sheetdb-form").submit();
     var form = document.getElementById('sheetdb-form');
     form.addEventListener("submit", e => {
       e.preventDefault();
@@ -416,6 +415,7 @@ function nextPrev(n) {
         //alert('success')
       });
     });
+    document.getElementById("sheetdb-form").submit();
 
     return false;
   }
