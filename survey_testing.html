@@ -248,7 +248,7 @@ input.invalid {
   </tbody>
   </table>
 
-  <button type="submit" onClick="myFunction()">Send</button>
+  <!-- <button type="submit" onClick="myFunction()">Send</button> -->
   </div>
 
   <div style="overflow:auto;">
@@ -402,7 +402,20 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    document.getElementById("sheetdb-form").submit();
+    var form = document.getElementById('sheetdb-form');
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      fetch(form.action, {
+          method : "POST",
+          body: new FormData(document.getElementById("sheetdb-form")),
+      }).then(
+          response => response.json()
+      ).then((html) => {
+        // you can put any JS code here
+        window.location.href = 'https://daniavm.github.io/survey_testing.html';
+        //alert('success')
+      });
+    });
     return false;
   }
   // Otherwise, display the correct tab:
