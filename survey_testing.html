@@ -268,9 +268,6 @@ input.invalid {
 </form>
 
 
-
-
-
 <script>
   var form = document.getElementById('sheetdb-form');
   form.addEventListener("submit", e => {
@@ -405,6 +402,7 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     //...the form gets submitted:
     document.getElementById("sheetdb-form").submit();
+    window.location.href = 'https://daniavm.github.io/survey_testing.html';
     return false;
   }
   // Otherwise, display the correct tab:
