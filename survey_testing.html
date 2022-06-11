@@ -249,8 +249,9 @@ input.invalid {
       </tr>
     </tbody>
     </table>
-
-  <button type="submit"  style="margin-left: auto; margin-right: auto;">Registrar mi emoción</button>
+    <div style="margin-left: auto; margin-right: auto;">
+      <button type="submit" >Registrar mi emoción</button>
+    </div>
   </div>
 
   <div style="overflow:auto;">
@@ -382,8 +383,10 @@ function showTab(n) {
   }
   if (n == (x.length - 1)) {
     document.getElementById("nextBtn").innerHTML = "Enviar";
+    document.getElementById("nextBtn").style.display = "none";
   } else {
     document.getElementById("nextBtn").innerHTML = "Siguiente";
+    document.getElementById("nextBtn").style.display = "inline";
   }
   // ... and run a function that displays the correct step indicator:
   fixStepIndicator(n)
