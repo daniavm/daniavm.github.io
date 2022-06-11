@@ -190,7 +190,7 @@ input.invalid {
   </div>
 
   <div class="tab">
-    <h1>¿Con qué emoción llegas el día de hoy?</h1>
+    <h1 style="text-align:center; margin:auto;">¿Con qué emoción llegas el día de hoy?</h1>
     <table class="tg" style="max-width:90%; margin-left: auto; margin-right: auto;">
     <thead>
       <tr>
@@ -402,8 +402,8 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     //...the form gets submitted:
     document.getElementById("sheetdb-form").submit();
-    window.location.href = 'https://daniavm.github.io/survey_testing.html';
     return false;
+    window.location.href = 'https://daniavm.github.io/survey_testing.html';
   }
   // Otherwise, display the correct tab:
   showTab(currentTab);
