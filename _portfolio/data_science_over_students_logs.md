@@ -14,7 +14,7 @@ sidebar:
 
     text: "Physics Teacher and Data Scientist"
   - title: "Responsibilities"
-    text: "Reuters try PR stupid commenters should isn't a business model"
+    text: "I dont' know. It's just a portfolio design test to try some coding"
 gallery:
   - url: /assets/images/teaser_wallpaper.jpg
     image_path: assets/images/teaser_wallpaper.jpg
