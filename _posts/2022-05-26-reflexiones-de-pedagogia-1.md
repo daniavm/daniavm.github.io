@@ -15,10 +15,10 @@ tags:
   - Pensamientos
 ---
 
-> El futuro les pertenece a quienes creen en la belleza de sus sueños.
+> Si busco en mis recuerdos los que me han dejado un sabor duradero, si hago balance de las horas que han valido la pena, siempre me encuentro con aquellas que no me procuraron ninguna fortuna.
 {: style="text-align: right;"}
 
-> <cite style="text-align: right; display: block;"><a href="https://proverbia.net/cita/13461-el-futuro-pertenece-a-quienes-creen-en-la-belleza-">Eleanor Roosevelt</a></cite>
+> <cite style="text-align: right; display: block;"><a href="https://proverbia.net/cita/12833-si-busco-en-mis-recuerdos-los-que-me-han-dejado-un">Antoine de Saint-Exupéry</a></cite>
 
 <p align="justify" markdown="1">
 Para algun@s de nosotr@s, la expectativa de nuestras vidas pasa principalmente porque los años no sean en vano, y buscamos en cada momento de nuestra existencia una razón por la cual decirnos que vamos por un buen camino o que estamos haciendo las cosas "bien". Si ya somos mayores, en muchas de estas oportunidades posiblemente aparezcan los reflejos de una época pasada, en que las ideas de juventud, los principios y/o valores parecían escribir nuestras historias de una manera clara e indeleble y sin el mínimo atisbo de duda, haciéndonos caer en más de una ocasión en la idea de que "somos l@s dueñ@s del mundo". Felizmente, muchas de estas ideas  cambian con el tiempo y llegamos a abrazar algunos conceptos como "flexibilidad", "cambio", "incerteza"  o en el mejor de los casos, "humildad".
@@ -31,6 +31,6 @@ Si bien mucho de lo anterior parecen ser reflexiones vacías y melancólicas, ha
 <br>
 <br>
 
-Tal es esta realidad, que hace un par de días llegué a conversar nuevamente con una ex-estudiante que hoy resulta ser mi colega después de unos 9 años desde que fui su profesor. Tras intercambiar un par de palabras para partir una conversación, logramos hablar de las cosas que creíamos de nuestro entorno de trabajo y de lo que sería "la educación" de acuerdo a nuestra experiencia. En ese momento quedé asombrado de que la evidencia que ella declaraba, no eran más que las mismas apreciaciones que yo mismo vi al momento de enfrentarme a esta profesión. La esperanza de querer hacer un bien a otr@, las dificultades de enfrentar a una clase heterogénea, el atender a la falta de interés de las familias o estudiantes, el interactuar con personas que suele no interesarles más el mundo que el pago que pueden recibir de él con el argumento de que "la vida es distinta del trabajo" o simplemnete, la búsqueda por la respuesta a la pregunta fundamental de "¿cómo podemos hacer esto cambiar?".
+Nuestra historia reside en nuestr@s estudiantes. Y sus acciones para con nosotr@s hablan del cómo nuestra historia les ha brindado algo signifitivo o no.
 
 </p>
