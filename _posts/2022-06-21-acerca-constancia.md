@@ -43,12 +43,9 @@ Desconozco de todas las rutas que uno puede seguir para llevar adelante una misi
 
 Quizás no es mucho, pero como bien se diría en el libro de "Hábitos Atómicos" (Clear 2018)[^Clear2018] es bueno partir con nuestro 1% de mejoría diaria para así invertir en un impacto grande habiendo pasado un tiempo grande.
 
-This is an example of how to create a footnote[^1] in Markdown.
 
 </p>
 
 ## Referencias
 ‌
 [^Clear2018]: Clear, J. (2018). Atomic Habits. Penguin Publishing Group.
-
-[^1]: First Footnote
