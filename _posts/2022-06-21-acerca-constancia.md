@@ -55,3 +55,7 @@ Quizás no es mucho, pero como bien se diría en el libro de "Hábitos Atómicos
 Here is a simple footnote[^1]. With some additional text after it.
 
 [^1]: My reference.
+
+Here is a simple footnote[^Hola]. With some additional text after it.
+
+[^Hola]: My reference.
