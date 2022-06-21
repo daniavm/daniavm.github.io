@@ -6,6 +6,10 @@ related: true
 comments: true
 toc: false
 
+header:
+  image: /assets/images/simple_post_images/raj-rana-IB_x2fNdLEw-unsplash.jpg
+  teaser: assets/images/simple_post_images/raj-rana-IB_x2fNdLEw-unsplash.jpg
+
 categories:
   - Reflexiones
 tags:
