@@ -57,4 +57,4 @@ Quizás no es mucho, pero como bien se diría en el libro de
 - Clear, J., 2018. Atomic Habits. Penguin Publishing Group.
 
 
-[^Clear2018]: Curiosa la relación - incluso hasta poética - del simil que tiene esta firmación con la expresión que describe el Impulso en física. El impulso, entendido como el cambio en la cantidad de movimiento de los móviles, se calcula como la fuerza multiplicado por el tiempo. Es decir, $I=F\cdot t$
+[^Clear2018]: Curiosa la relación - incluso hasta poética - del simil que tiene esta firmación con la expresión que describe el Impulso en física. El impulso, entendido como el cambio en la cantidad de movimiento de los móviles, se calcula como la fuerza multiplicado por el tiempo. Es decir, $$I=F · t$$
