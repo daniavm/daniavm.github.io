@@ -45,9 +45,7 @@ Desconozco de todas las rutas que uno puede seguir para llevar adelante una misi
 </p>
 
 <p align="justify" markdown="1">
-Quizás no es mucho, pero como bien se diría en el libro de "Hábitos Atómicos" (Clear, 2018)[^Hola]. With some additional text after it.
-
-[^Hola]: My reference. es bueno partir con nuestro 1% de mejoría diaria para así invertir en un impacto grande habiendo pasado un tiempo grande.
+Quizás no es mucho, pero como bien se diría en el libro de "Hábitos Atómicos"[^Hola] (Clear, 2018) es bueno partir con nuestro 1% de mejoría diaria para así invertir en un impacto grande habiendo pasado un tiempo grande.
 
 Hola [3]
 </p>
