@@ -5,6 +5,10 @@ author_profile: true
 share: true
 related: true
 
+header:
+  image: /assets/images/killer_comet_post/halleys-comet-1682-science-source.jpg
+  teaser: assets/images/killer_comet_post/halleys-comet-1682-science-source.jpg
+
 toc: true
 categories:
   - Posts
