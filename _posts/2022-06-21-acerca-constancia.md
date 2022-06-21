@@ -43,7 +43,15 @@ Desconozco de todas las rutas que uno puede seguir para llevar adelante una misi
 
 Quizás no es mucho, pero como bien se diría en el libro de "Hábitos Atómicos" (Clear, 2018)[^1] es bueno partir con nuestro 1% de mejoría diaria para así invertir en un impacto grande habiendo pasado un tiempo grande.
 
+Here's a simple footnote,[^1] and here's a longer one.[^bignote]
+
+[^1]: This is the first footnote.
+
+[^bignote]: Here's one with multiple paragraphs and code.
+
 </p>
+
+
 
 ## Referencias
 ‌
