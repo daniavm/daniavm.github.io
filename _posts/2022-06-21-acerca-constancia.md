@@ -1,5 +1,5 @@
 ---
-title: "La constancia y los resultados"
+title: "De la decisión de ser un escritor y divulgador"
 layout: single
 author_profile: true
 related: true
