@@ -47,11 +47,14 @@ Desconozco de todas las rutas que uno puede seguir para llevar adelante una misi
 Quizás no es mucho, pero como bien se diría en el libro de
 
 
-"Hábitos Atómicos" (Clear, 2018)[^Clear2018]
+"Hábitos Atómicos" (Clear, 2018)
 
- es bueno partir con nuestro 1% de mejoría diaria para así invertir en un impacto grande habiendo pasado un tiempo grande.
+ es bueno partir con nuestro 1% de mejoría diaria para así invertir en un impacto grande habiendo pasado un tiempo grande[^Clear2018].
 </p>
 
 ## Referencias
 
-[^Clear2018]: Clear, J., 2018. Atomic Habits. Penguin Publishing Group.
+- Clear, J., 2018. Atomic Habits. Penguin Publishing Group.
+
+
+[^Clear2018]: Curiosa la relación - incluso hasta poética - del simil que tiene esta firmación con la expresión que describe el Impulso en física. El impulso, entendido como el cambio en la cantidad de movimiento de los móviles, se calcula como la fuerza multiplicado por el tiempo. Es decir, $I=F\cdot t$
