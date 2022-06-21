@@ -42,12 +42,13 @@ Por esta misma idea, he decidido caminar por nuevos rumbos para seguir respondie
 
 <p align="justify" markdown="1">
 Desconozco de todas las rutas que uno puede seguir para llevar adelante una misión así, pero en lo personal me quedaré con aquella que he aprendido a lo largo de la vida y he podido concientizar en algunos de los libros que he adquirido en el último tiempo. Haré uso de la constancia y trataré de construir un hábito, ***el hábito de escribir a lo menos 1 vez por semana un artículo en esta página***.
-
-
-Quizás no es mucho, pero como bien se diría en el libro de "Hábitos Atómicos" (Clear, 2018)[^Clear2018] es bueno partir con nuestro 1% de mejoría diaria para así invertir en un impacto grande habiendo pasado un tiempo grande.
-
 </p>
 
+<p align="justify" markdown="1">
+Quizás no es mucho, pero como bien se diría en el libro de "Hábitos Atómicos" (Clear, 2018)[^Clear2018] es bueno partir con nuestro 1% de mejoría diaria para así invertir en un impacto grande habiendo pasado un tiempo grande.
+</p>
+
+(Clear, 2018)[^Clear2018]
 ## Referencias
 ‌
 [^Clear2018]: Clear, J., 2018. Atomic Habits. Penguin Publishing Group.
