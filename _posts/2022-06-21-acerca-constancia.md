@@ -47,12 +47,13 @@ Desconozco de todas las rutas que uno puede seguir para llevar adelante una misi
 <p align="justify" markdown="1">
 Quizás no es mucho, pero como bien se diría en el libro de "Hábitos Atómicos"[^Hola] (Clear, 2018) es bueno partir con nuestro 1% de mejoría diaria para así invertir en un impacto grande habiendo pasado un tiempo grande.
 
-Hola [3]
+Hola [^3]
 </p>
 
 ## Referencias
 ‌
 [^Hola]: Clear, J., 2018. Atomic Habits. Penguin Publishing Group.
+
 [^Clear2018]: Clear, J., 2018. Atomic Habits. Penguin Publishing Group.
 
-[3]: Nadie esta aqui
+[^3]: Nadie esta aqui
