@@ -35,11 +35,9 @@ Un gran cambio suele ser fruto de grandes cantidades de energía y tiempo, dos c
 <p align="justify" markdown="1">
 
 Por esta misma idea, he decidido caminar por nuevos rumbos para seguir respondiendo a mi necesidad de compartir con quienes navegan por las aguas de la curiosidad y responder a la necesidad constante de entender un poco más *qué es la realidad*. He sido un científico, he sido un astrónomo y he sido profesor, pero hoy también deseo ser un divulgador de la ciencia y por ende, también deseo ser un escritor.
-</p>
 
 <br>
 
-<p align="justify" markdown="1">
 Desconozco de todas las rutas que uno puede seguir para llevar adelante una misión así, pero en lo personal me quedaré con aquella que he aprendido a lo largo de la vida y he podido concientizar en algunos de los libros que he adquirido en el último tiempo. Haré uso de la constancia y trataré de construir un hábito, ***el hábito de escribir a lo menos 1 vez por semana un artículo en esta página***.
 </p>
 
