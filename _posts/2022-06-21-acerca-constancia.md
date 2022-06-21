@@ -7,8 +7,8 @@ comments: true
 toc: false
 
 header:
-  image: /assets/images/portfolio_images/green-chameleon-s9CC2SKySJM-unsplash.jpg
-  teaser: assets/images/portfolio_images/green-chameleon-s9CC2SKySJM-unsplash.jpg
+  image: /assets/images/simple_post_images/lala-azizli-4SutVTJ6Rv4-unsplash.jpg
+  teaser: assets/images/simple_post_images/lala-azizli-4SutVTJ6Rv4-unsplash.jpg
 
 categories:
   - Reflexiones
