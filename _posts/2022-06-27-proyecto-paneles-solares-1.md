@@ -24,7 +24,7 @@ tags:
 
 
 <p align="justify" markdown="1">
-En muchos años he intentado buscar alternativas para poder encontrar la manera de no pagar más cuentas por el uso de la energía que consumo. Así como hay much@s que creen que esto es imposible - o inapropiado - porque no conciben un mundo en el que no se paguen cuentas de luz o se tenga que pagar por el balón de gas que te calienta el agua de la ducha, también habemos much@s que creemos que la energía se encuentra en todas partes y debemos incurrir en otro tipo de "sacrificios" para ser beneficiad@s por sus bondades. La diferencia radica que en éste último caso, el sacrificio no se paga a lo largo de toda la vida.
+En muchos años he intentado buscar alternativas para poder encontrar la manera de no pagar más cuentas por el uso de la energía que consumo. Así como hay much@s que creen que esto es imposible - o inapropiado - porque no conciben un mundo en el que no se paguen cuentas de luz, o se tenga que pagar por el balón de gas que te calienta el agua de la ducha, también habemos much@s que creemos que la energía se encuentra en todas partes y debemos incurrir en otro tipo de "sacrificios" para ser beneficiad@s por sus bondades. La diferencia radica que, en éste último caso, el sacrificio no se paga a lo largo de toda la vida.
 </p>
 
 > El sol es el resorte que lo maneja todo. El sol preserva la vida humana y suministra toda la energía humana.
@@ -33,8 +33,10 @@ En muchos años he intentado buscar alternativas para poder encontrar la manera 
 > <cite style="text-align: right; display: block;"><a href="https://books.google.cl/books?id=pvOW-PIqZ5UC&pg=PA272&lpg=PA272&dq=El+sol+es+el+resorte+que+lo+maneja+todo.+El+sol+preserva+la+vida+humana+y+suministra+toda+la+energ%C3%ADa+humana.&source=bl&ots=-R-BLf4S_J&sig=ACfU3U2c6gO0moxlN0qJmfktN3nPoNs_zw&hl=es-419&sa=X&ved=2ahUKEwiF0cCc2c34AhXkANQKHTW5B7cQ6AF6BAgTEAM#v=onepage&q=El%20sol%20es%20el%20resorte%20que%20lo%20maneja%20todo.%20El%20sol%20preserva%20la%20vida%20humana%20y%20suministra%20toda%20la%20energ%C3%ADa%20humana.&f=false" target="_blank">Nikola Tesla</a></cite>
 
 <p align="justify" markdown="1">
-Un gran cambio suele ser fruto de grandes cantidades de energía y tiempo, dos cosas que no estamos dispuestos muchas veces a entregar cuando tenemos un problema importante que resolver. Esta naturaleza de las cosas hace que nuestra mente tienda a buscar soluciones simplificadas, haciéndonos perder la noción de las acciones que debemos realizar antes de modificar quienes por ejemplo, queremos ser.
+Sin ir en desmedro de las creencias de nadie - puesto que cada persona responde a su relación con el universo de acuerdo a sus propios recursos y decisiones - me enfocaré en cómo intentar dar una respuesta a quienes optan por el segundo camino. En este caso, el sacrificio pasa principalmente por el aprendizaje de las técnicas que han dejado nuestr@s antepasad@s para aprovechar la naturaleza, pero también en gran manera depende de nuestra capacidad de utilizar tales conocimientos con el respeto suficiente para también aportar al entorno con algo de lo que extraes de esa manera.
 </p>
+
+#La Energía del Sol
 
 <p align="justify" markdown="1">
 Por esta misma idea, he decidido caminar por nuevos rumbos para seguir respondiendo a mi necesidad de compartir con quienes navegan por las aguas de la curiosidad y responder a la necesidad constante de entender un poco más *qué es la realidad*. He sido un científico, he sido un astrónomo y he sido profesor, pero hoy también deseo ser un divulgador de la ciencia y por ende, también deseo ser un escritor.
