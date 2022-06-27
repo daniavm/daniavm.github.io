@@ -39,28 +39,26 @@ Sin ir en desmedro de las creencias de nadie - puesto que cada persona responde 
 ## La Energía del Sol
 
 <p align="justify" markdown="1">
-El Sol es la principal fuente de energía que tenemos, y prácticamente todos los procesos naturales estan ligados a el. Por esta razón no es raro pensar que en su naturaleza estén mayor parte de las respuestas que tienen que ver con nuestros problemas de energía.
+El Sol es la principal fuente de energía que tenemos, y prácticamente todos los procesos naturales estan ligados a el. Por esta razón no es raro pensar que en su naturaleza estén la mayor parte de las respuestas que tienen que ver con nuestros problemas de energía.
 </p>
 
 <p align="justify" markdown="1">
-Sin ir demasiado lejos, en este post dejaré el registro de cómo utilizar la tecnología actual y algunos conocimientos antiguos para poder montar en mi hogar un arreglo (matriz o red) de paneles solares con los que pretendo alimentar todas las necesidades de mi familia, con el objetivo de no pagar más cuentas de electricidad (pero sí responder por la tecnología que se ha creado para tales fines).
+Sin ir demasiado lejos, en este post iré dejando el registro de cómo utilizar la tecnología actual y algunos conocimientos antiguos para poder montar en mi hogar un arreglo (matriz o red) de paneles solares con los que pretendo alimentar todas las necesidades de mi familia, con el objetivo de no pagar más cuentas de electricidad (pero sí responder por la tecnología que se ha creado para tales fines). Así que antes que cualquier cosa, elaboraré una especie de algoritmo para ir construyendo los próximos artículos y así ir compartiendo las próximas experiencias.
 </p>
 
-### El Diseño
+### El Algoritmo a seguir
 
 <p align="justify" markdown="1">
-Para partir crearé un proyecto en mi cuenta de Google Drive para ir dejando cada uno de los elementos que voy construyendo.
+Cada uno de los elementos que dejaré puestos en esta lista estarán ligados a un nuevo post que tendrá los detalles de cada paso para llevar adelante el proyecto.
 
+1. El lugar donde dejaré mi proyecto - Google Drive
+2. Determinar el ángulo óptimo de los paneles solares
+3. Resolver el problema de las sombras y la separación entre cada panel
+4. Resolver el problema de la altura a la que deberían ponerse los paneles
+5. Elaborar un boceto del diseño inicial
+6. Lista de materiales y precios en el mercado
+7. Emplazamiento y proceso de construcción
+8. Instalación del inversor
+9. Primeras pruebas y evaluación del sistema
 
-"Hábitos Atómicos" (Clear, 2018)
-
- es bueno partir con nuestro 1% de mejoría diaria para así invertir en un impacto grande habiendo pasado un tiempo grande[^Clear2018].
 </p>
-
----
-
-[^Clear2018]: Curiosa la relación - incluso hasta poética - del simil que tiene esta firmación con la expresión que describe el Impulso en física. El impulso, entendido como el cambio en la cantidad de movimiento de los móviles, se calcula como la fuerza "multiplicado" por el tiempo. Es decir, hay tres formas de cambiar significativamente la cantidad de movimiento. O aplicamos grandes fuerzas en tiempos cortos, o pequeñas fuerzas en tiempos prolongados o grandes fuerzas y por mucho tiempo,  I = F · t.
-
-## Referencias
-
-1. Clear, J., 2018. Atomic Habits. Penguin Publishing Group.
