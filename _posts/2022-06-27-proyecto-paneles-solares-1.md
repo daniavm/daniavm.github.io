@@ -36,9 +36,10 @@ En muchos años he intentado buscar alternativas para poder encontrar la manera 
 Sin ir en desmedro de las creencias de nadie - puesto que cada persona responde a su relación con el universo de acuerdo a sus propios recursos y decisiones - me enfocaré en cómo intentar dar una respuesta a quienes optan por el segundo camino. En este caso, el sacrificio pasa principalmente por el aprendizaje de las técnicas que han dejado nuestr@s antepasad@s para aprovechar la naturaleza, pero también en gran manera depende de nuestra capacidad de utilizar tales conocimientos con el respeto suficiente para también aportar al entorno con algo de lo que extraes de esa manera.
 </p>
 
+##La Energía del Sol
+
 <p align="justify" markdown="1">
-#La Energía del Sol
-Por esta misma idea, he decidido caminar por nuevos rumbos para seguir respondiendo a mi necesidad de compartir con quienes navegan por las aguas de la curiosidad y responder a la necesidad constante de entender un poco más *qué es la realidad*. He sido un científico, he sido un astrónomo y he sido profesor, pero hoy también deseo ser un divulgador de la ciencia y por ende, también deseo ser un escritor.
+El Sol es la principal fuente de energía que tenemos, y prácticamente todos los procesos naturales estan ligados a el. Por esta razón no es raro pensar que en su naturaleza estén mayor parte de las respuestas que tienen que ver con nuestros problemas de energía.
 </p>
 
 <p align="justify" markdown="1">
