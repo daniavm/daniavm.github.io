@@ -50,6 +50,7 @@ Sin ir demasiado lejos, en este post iré dejando el registro de cómo utilizar 
 
 <p align="justify" markdown="1">
 Cada uno de los elementos que dejaré puestos en esta lista estarán ligados a un nuevo post que tendrá los detalles de cada paso para llevar adelante el proyecto.
+</p>
 
 1. El lugar donde dejaré mi proyecto - Google Drive
 2. Determinar el ángulo óptimo de los paneles solares
@@ -60,5 +61,3 @@ Cada uno de los elementos que dejaré puestos en esta lista estarán ligados a u
 7. Emplazamiento y proceso de construcción
 8. Instalación del inversor
 9. Primeras pruebas y evaluación del sistema
-
-</p>
