@@ -1,5 +1,5 @@
 ---
-title: "Proyecto 1 - No pagar más cuentas por energía"
+title: "No pagaré más cuentas de luz (electricidad)"
 layout: single
 author_profile: true
 related: true
