@@ -12,9 +12,9 @@ sidebar:
     image: /assets/images/principia_logo.png
     image_alt: "Principa Logo"
 
-    text: "Physics Teacher and Data Scientist"
+    text: "Physics Teacher"
   - title: "Responsibilities"
-    text: "I dont' know. It's just a portfolio design test to try some coding"
+    text: "Build a solution to provide to my students a better feedback about thier work in a remote teaching context."
 gallery:
   - url: /assets/images/teaser_wallpaper.jpg
     image_path: assets/images/teaser_wallpaper.jpg
