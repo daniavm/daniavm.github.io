@@ -1,6 +1,6 @@
 ---
 title: "Automated Feedback System in Physics Remote Teaching"
-excerpt: "A personal project in which I seek to provide a solution to the problem of the lack of information that a teacher receives in online classes."
+excerpt: "A personal project in which I seek to provide a solution to the problem of the lack of information that teacher and students gets in online classes."
 layout: single
 toc: true
 toc_icon: "egg"
