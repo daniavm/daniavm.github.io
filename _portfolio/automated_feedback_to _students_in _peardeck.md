@@ -8,9 +8,9 @@ header:
   image: /assets/images/portfolio_images/iog6dVfJX7zzLbscbKzC7H.jpeg
   teaser: assets/images/portfolio_images/iog6dVfJX7zzLbscbKzC7H.jpeg
 sidebar:
-  - title: "Role"
+  - title: "My Role"
     text: "Physics Teacher"
-    
+
   - title: "Responsibilities"
     text: "Build a solution to provide to my students a better feedback about thier work in a remote teaching context."
 gallery:
