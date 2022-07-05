@@ -30,7 +30,7 @@ El movimiento del Sol ha sido motivo de estudio durante milenios, y sin duda, es
 > <cite style="text-align: right; display: block;"><a href="https://quotefancy.com/quote/772170/Benjamin-Franklin-No-employment-can-be-managed-without-arithmetic-no-mechanical-invention" target="_blank">Benjamin Franklin</a></cite>
 
 <p align="justify" markdown="1">
-Sin ir en desmedro de las creencias de nadie - puesto que cada persona responde a su relación con el universo de acuerdo a sus propios recursos y decisiones - me enfocaré en cómo intentar dar una respuesta a quienes optan por el segundo camino. En este caso, el sacrificio pasa principalmente por el aprendizaje de las técnicas que han dejado nuestr@s antepasad@s para aprovechar la naturaleza, pero también en gran manera depende de nuestra capacidad de utilizar tales conocimientos con el respeto suficiente para también aportar al entorno con algo de lo que extraes de esa manera.
+El Sol no tiene una elevación fija durante el año (ángulo que forma con respecto al horizonte) por lo que es importante hacer ciertas consideraciones antes de instalar un panel solar y definir su posicionamiento "definitivo".
 </p>
 
 <!-- comentario de todo de portada Foto de <a href="https://unsplash.com/@publicpowerorg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">American Public Power Association</a> en <a href="https://unsplash.com/es/s/fotos/solar-panels?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
@@ -38,8 +38,10 @@ Sin ir en desmedro de las creencias de nadie - puesto que cada persona responde 
 ## El Movimiento del Sol
 
 <p align="justify" markdown="1">
-[Utiliza la animación para tu localidad](https://ccnmtl.github.io/astro-simulations/sun-motion-simulator/) El Sol es la principal fuente de energía que tenemos, y prácticamente todos los procesos naturales estan ligados a el. Por esta razón no es raro pensar que en su naturaleza estén la mayor parte de las respuestas que tienen que ver con nuestros problemas de energía.
+<a href="https://ccnmtl.github.io/astro-simulations/sun-motion-simulator/">Usa la simulación para tu localidad</a> en <a href="https://unsplash.com/es/s/fotos/solar-panels?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  [Utiliza la animación para tu localidad](https://ccnmtl.github.io/astro-simulations/sun-motion-simulator/) El Sol es la principal fuente de energía que tenemos, y prácticamente todos los procesos naturales estan ligados a el. Por esta razón no es raro pensar que en su naturaleza estén la mayor parte de las respuestas que tienen que ver con nuestros problemas de energía.
 </p>
+
+<img src="assets/images/simple_post_images/solarmotion_gif.gif">
 
 <p align="justify" markdown="1">
 Sin ir demasiado lejos, en este post iré dejando el registro de cómo utilizar la tecnología actual y algunos conocimientos antiguos para poder montar en mi hogar un arreglo (matriz o red) de paneles solares con los que pretendo alimentar todas las necesidades de mi familia, con el objetivo de no pagar más cuentas de electricidad (pero sí responder por la tecnología que se ha creado para tales fines). Así que antes que cualquier cosa, elaboraré una especie de algoritmo para ir construyendo los próximos artículos y así ir compartiendo las próximas experiencias.
