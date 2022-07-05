@@ -38,10 +38,10 @@ El Sol no tiene una elevación fija durante el año (ángulo que forma con respe
 ## El Movimiento del Sol
 
 <p align="justify" markdown="1">
-<a href="https://ccnmtl.github.io/astro-simulations/sun-motion-simulator/"  target="_blank">Usa la simulación para tu localidad</a> en <a href="https://unsplash.com/es/s/fotos/solar-panels?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  [Utiliza la animación para tu localidad](https://ccnmtl.github.io/astro-simulations/sun-motion-simulator/) El Sol es la principal fuente de energía que tenemos, y prácticamente todos los procesos naturales estan ligados a el. Por esta razón no es raro pensar que en su naturaleza estén la mayor parte de las respuestas que tienen que ver con nuestros problemas de energía.
+<a href="https://ccnmtl.github.io/astro-simulations/sun-motion-simulator/"  target="_blank">Usa la simulación para tu localidad</a>  [Utiliza la animación para tu localidad](https://ccnmtl.github.io/astro-simulations/sun-motion-simulator/) El Sol es la principal fuente de energía que tenemos, y prácticamente todos los procesos naturales estan ligados a el. Por esta razón no es raro pensar que en su naturaleza estén la mayor parte de las respuestas que tienen que ver con nuestros problemas de energía.
 </p>
 
-<img src="assets/images/simple_post_images/solarmotion_gif.gif">
+<img src="/assets/images/simple_post_images/solarmotion_gif.gif">
 
 <p align="justify" markdown="1">
 Sin ir demasiado lejos, en este post iré dejando el registro de cómo utilizar la tecnología actual y algunos conocimientos antiguos para poder montar en mi hogar un arreglo (matriz o red) de paneles solares con los que pretendo alimentar todas las necesidades de mi familia, con el objetivo de no pagar más cuentas de electricidad (pero sí responder por la tecnología que se ha creado para tales fines). Así que antes que cualquier cosa, elaboraré una especie de algoritmo para ir construyendo los próximos artículos y así ir compartiendo las próximas experiencias.
