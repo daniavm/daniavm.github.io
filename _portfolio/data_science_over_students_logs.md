@@ -55,7 +55,6 @@ Hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack 
 
 {% include gallery caption="This is a sample gallery to go along with this case study." %}
 
-
 ## Conclusions
 
 ## References
