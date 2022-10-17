@@ -1,0 +1,339 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+<style type="text/css">
+
+
+
+  .tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;width:100%;}
+.tg td{border-color:black;border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-z9od{font-size:12px;text-align:left;vertical-align:top}
+.tg .tg-lj01{font-family:Tahoma, Geneva, sans-serif !important;font-size:12px;text-align:left;vertical-align:top}
+
+
+.buttonCurso {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.buttonCurso:hover {
+  background-color: #5BBEC0; /* Green */
+  color: white;
+}
+
+.buttonCurso:focus {
+  background-color: f44336;
+	border: 3px solid f44336;
+  border-radius: 15px;
+}
+
+.buttonSigla {
+  background-color: #5BBEC0; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.buttonSigla:hover {
+  background-color: #DDC23F; /* Green */
+  color: white;
+  border-radius: 15px;
+}
+
+.buttonSigla:focus {
+  background-color: f44336;
+	border: 3px solid f44336;
+  border-radius: 15px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+.radioCurso label,
+.radioCurso input {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.radioCurso input[type="radio"] {
+  display: none;
+}
+
+.radioCurso label:hover {
+  background-color: #5BBEC0; /* Green */
+  color: white;
+}
+
+.radioCurso input[type="radio"]:checked + label {
+  background-color: f44336;
+	border: 3px solid f44336;
+  border-radius: 15px;
+}
+
+.radioSigla label,
+.radioSigla input {
+  background-color: #5BBEC0; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.radioSigla input[type="radio"] {
+  display: none;
+}
+
+.radioSigla label:hover {
+  background-color: #DDC23F; /* Green */
+  color: white;
+  border-radius: 15px;
+}
+
+.radioSigla input[type="radio"]:checked + label {
+  background-color: f44336;
+	border: 3px solid f44336;
+  border-radius: 15px;
+}
+
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+
+[type=radio]+img {
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+[type=radio]:checked + img {
+  outline: 15px solid Red;
+}
+
+img{
+  max-width: 100%;
+  max-height: 300px;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 100%;
+  font-size: 30px;
+}
+
+</style>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- head definitions go here -->
+    </head>
+    <body>
+        <form
+          method="POST"  action="https://script.google.com/macros/s/AKfycbxV2iWn3yNHNDckUv9eN2pgahRzh7NebfOhJbjxSG0IZZeCH6Qa0lzScD6xIQIzfXxn/exec"
+          target="_top"
+          style="width: 100vw;height: 100vh; margin-left: auto; margin-right: auto;">
+          <table class="tg">
+            <th class="tg-z9od" colspan="2">
+              <h1 style="font-family: 'Mali', cursive;text-align:center;font-size:40px;">Auto-Percepción Emocional</h1>
+            </th>
+            <tr>
+              <th class="tg-lj01"style="min-height: 10em; display: table-cell; vertical-align: middle">
+              <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-baqh" colspan="4">
+                    	<p style="font-family: 'Open Sans', sans-serif;font-size:20px;">Selecciona tu curso</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class = "radioCurso">
+                      <input type="radio" id="1º" name="Nivel" value="1º">
+                      <label for="1º">1º</label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class = "radioCurso">
+                      <input type="radio" id="2º" name="Nivel" value="2º">
+                      <label for="2º">2º</label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class = "radioCurso">
+                      <input type="radio" id="3º" name="Nivel" value="3º">
+                      <label for="3º">3º</label>
+                      </div>
+                    </td>
+                   <td>
+                      <div class = "radioCurso">
+                   		<input type="radio" id="4º" name="Nivel" value="4º">
+                      <label for="4º">4º</label>
+                     </div>
+                   </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class = "radioCurso">
+                      <input type="radio" id="5º" name="Nivel" value="5º">
+                      <label for="5º">5º</label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class = "radioCurso">
+                      <input type="radio" id="6º" name="Nivel" value="6º">
+                      <label for="6º">6º</label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class = "radioCurso">
+                      <input type="radio" id="7º" name="Nivel" value="7º">
+                      <label for="7º">7º</label>
+                      </div>
+                    </td>
+                   <td>
+                      <div class = "radioCurso">
+                   		<input type="radio" id="8º" name="Nivel" value="8º">
+                      <label for="8º">8º</label>
+                     </div>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class = "radioCurso">
+                      <input type="radio" id="Iº" name="Nivel" value="Iº">
+                      <label for="Iº">Iº</label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class = "radioCurso">
+                      <input type="radio" id="IIº" name="Nivel" value="IIº">
+                      <label for="IIº">IIº</label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class = "radioCurso">
+                      <input type="radio" id="IIIº" name="Nivel" value="IIIº">
+                      <label for="IIIº">IIIº</label>
+                      </div>
+                    </td>
+                   	<td>
+                      <div class = "radioCurso">
+                   		<input type="radio" id="IVº" name="Nivel" value="IVº">
+                      <label for="IVº">IVº</label>
+                     </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-93sx" colspan="4" style="text-align: center">
+                      <div class = "radioSigla">
+                   		<input type="radio" id="A" name="Sigla" value="A">
+                      <label for="A">A</label>
+                      <input type="radio" id="B" name="Sigla" value="B">
+                      <label for="B">B</label>
+                      <input type="radio" id="C" name="Sigla" value="C">
+                      <label for="C">C</label>
+                     	</div>
+                    </td>
+                  </tr>
+                </tbody>
+                </table>
+              </th>
+              <th class="tg-z9od">
+              	<table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-7dkj" colspan="3">
+                      <h1 style="font-family: 'Open Sans', sans-serif;font-size:20px;">¿Con qué emoción llegas el día de hoy?</h1>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td bgcolor="#A6DD8F" class="tg-0lax">
+                      <label>
+            					<input type="radio" name="Emocion" value="Alegre" checked>
+            					<img src="http://drive.google.com/uc?export=view&id=1EeIGV3EIbSOF6GHToZYu8-mOO9uzRKv5" style = "width:100%;float:center">
+          						</label>
+                    </td>
+                    <td bgcolor="#d0f0fd"class="tg-0lax">
+                      <label>
+            					<input type="radio" name="Emocion" value="Triste" checked>
+            					<img src="http://drive.google.com/uc?export=view&id=1aSonqNZukTAkEONSVwyJeN2cVPQc4YFU" style = "width:100%;float:center">
+          						</label>
+                    </td>
+                    <td bgcolor="#f67950" class="tg-0lax">
+                      <label>
+            					<input type="radio" name="Emocion" value="Enojad@" checked>
+            					<img src="http://drive.google.com/uc?export=view&id=1Qrbgp945DbkhilYLbe7wF5-y45ZH90DR" style = "width:100%;float:center">
+          						</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#A6DD8F" class="tg-0lax">
+                      <label>
+            					<input type="radio" name="Emocion" value="Sorprendid@" checked>
+            					<img src="http://drive.google.com/uc?export=view&id=1sSdWGoFLIs6qjtiouo9SUMm3raJus-WF" style = "width:100%;float:center">
+          						</label>
+                    </td>
+                    <td bgcolor="#d0f0fd" class="tg-0lax">
+                      <label>
+            					<input type="radio" name="Emocion" value="Temeros@" checked>
+            					<img src="http://drive.google.com/uc?export=view&id=1OIbYgubnITdVb3J5RMbrGYPocP3C9amH" style = "width:100%;float:center">
+          						</label>
+                    </td>
+                    <td bgcolor="#f67950" class="tg-0lax">
+                      <label>
+            					<input type="radio" name="Emocion" value="Desagrad@" checked>
+            					<img src="http://drive.google.com/uc?export=view&id=1LT7y-xd5ChuONNqm0RbbWh6x7WAMz5W4" style = "width:100%;float:center">
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+                </table>
+              </th>
+            </tr>
+            <tr>
+              <td class="tg-z9od" colspan="2">
+                <div style= "text-align:center;"><input type="submit" value="Enviar" style="font-family: 'Open Sans', sans-serif;"></div>
+              </td>
+            </tr>
+          </table>
+      </form>
+    </body>
+</html>

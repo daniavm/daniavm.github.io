@@ -46,23 +46,3 @@ El Sol no tiene una elevación fija durante el año (ángulo que forma con respe
 <p align="justify" markdown="1">
 Sin ir demasiado lejos, en este post iré dejando el registro de cómo utilizar la tecnología actual y algunos conocimientos antiguos para poder montar en mi hogar un arreglo (matriz o red) de paneles solares con los que pretendo alimentar todas las necesidades de mi familia, con el objetivo de no pagar más cuentas de electricidad (pero sí responder por la tecnología que se ha creado para tales fines). Así que antes que cualquier cosa, elaboraré una especie de algoritmo para ir construyendo los próximos artículos y así ir compartiendo las próximas experiencias.
 </p>
-
-### El Algoritmo a seguir
-
-<p align="justify" markdown="1">
-Cada uno de los elementos que dejaré puestos en esta lista estarán ligados a un nuevo post que tendrá los detalles de cada paso para llevar adelante el proyecto.
-</p>
-
-1. El lugar donde dejaré mi proyecto - Google Drive
-2. Determinar el ángulo óptimo de los paneles solares
-3. Resolver el problema de las sombras y la separación entre cada panel
-4. Resolver el problema de la altura a la que deberían ponerse los paneles
-5. Elaborar un boceto del diseño inicial
-6. Lista de materiales y precios en el mercado
-7. Emplazamiento y proceso de construcción
-8. Instalación del inversor
-9. Primeras pruebas y evaluación del sistema
-
-<p align="justify" markdown="1">
-Son hartos puntos a considerar, pero supongo que hay tiempo para ir construyendola :). Nos vemos en la siguiente publicación.
-</p>
