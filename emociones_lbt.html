@@ -174,7 +174,9 @@ input[type=button], input[type=submit], input[type=reset] {
         <form
           method="POST"  action="https://script.google.com/macros/s/AKfycbxV2iWn3yNHNDckUv9eN2pgahRzh7NebfOhJbjxSG0IZZeCH6Qa0lzScD6xIQIzfXxn/exec"
           target="_top"
-          style="width: 100vw;height: 100vh; margin-left: auto; margin-right: auto;">
+          style="width: 100vw;height: 100vh; margin-left: auto; margin-right: auto;"
+          id="sheetdb-form"
+          >
           <table class="tg">
             <th class="tg-z9od" colspan="2">
               <h1 style="font-family: 'Mali', cursive;text-align:center;font-size:40px;">Auto-Percepción Emocional</h1>
@@ -296,7 +298,7 @@ input[type=button], input[type=submit], input[type=reset] {
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="tg-0lax">
+                    <td class="tg-0lax" style="margin:5px;">
                       <label>
             					<input type="radio" name="Emocion" value="1" required>
             					<img src="assets/images/emotions_project/1.png" style = "width:100%;float:center">
@@ -345,11 +347,29 @@ input[type=button], input[type=submit], input[type=reset] {
             <tr>
               <td class="tg-z9od" colspan="2">
                 <div style= "text-align:center;">
-                  <input type="submit" value="Enviar" style="font-family: 'Open Sans', sans-serif;"  onSubmit="redirect();">
+                  <input type="submit" value="Enviar" style="font-family: 'Open Sans', sans-serif;">
                 </div>
               </td>
             </tr>
           </table>
       </form>
+
+      <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.location.href = 'https://daniavm.github.io/survey_testing.html';
+            alert('¡Tus emociones han sido registradas!')
+          });
+        });
+      </script>
+
     </body>
 </html>
