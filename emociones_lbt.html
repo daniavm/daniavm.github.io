@@ -728,7 +728,7 @@ input[type=button], input[type=submit], input[type=reset] {
                   <tr>
                     <td>
                       <div class = "radioCurso">
-                      <input type="radio" id="1º" name="Nivel" value="1º" required>
+                      <input type="radio" id="1º" name="Nivel" value="1º" oninvalid="this.setCustomValidity('Selecciona un Curso')" required>
                       <label for="1º">1º</label>
                       </div>
                     </td>
@@ -805,7 +805,7 @@ input[type=button], input[type=submit], input[type=reset] {
                   <tr>
                     <td class="tg-93sx" colspan="4" style="text-align: center">
                       <div class = "radioSigla">
-                   		<input type="radio" id="A" name="Sigla" value="A" required>
+                   		<input type="radio" id="A" name="Sigla" value="A" oninvalid="this.setCustomValidity('Selecciona una sigla')" required>
                       <label for="A">A</label>
                       <input type="radio" id="B" name="Sigla" value="B">
                       <label for="B">B</label>
@@ -830,7 +830,7 @@ input[type=button], input[type=submit], input[type=reset] {
                   <tr>
                     <td class="tg-0lax">
                       <label>
-            					<input type="radio" name="Emocion" value="1" required>
+            					<input type="radio" name="Emocion" value="1" oninvalid="this.setCustomValidity('Selecciona una emocion')" required>
             					<img src="assets/images/emotions_project/1.png" style = "width:100%;float:center">
           						</label>
                     </td>
