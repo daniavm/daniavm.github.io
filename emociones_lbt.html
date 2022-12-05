@@ -92,6 +92,36 @@ h3 {
   border-radius: 15px;
 }
 
+
+.radioCursoMedia label,
+.radioCursoMedia input {
+  background-color: #FE9800; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.radioCursoMedia input[type="radio"] {
+  display: none;
+}
+
+.radioCursoMedia label:hover {
+  background-color: #5BBEC0; /* Green */
+  color: white;
+}
+
+.radioCursoMedia input[type="radio"]:checked + label {
+  background-color: f44336;
+	border: 3px solid f44336;
+  border-radius: 15px;
+}
+
+
 .radioSigla label,
 .radioSigla input {
   background-color: #5BBEC0; /* Green */
@@ -238,25 +268,25 @@ input[type=button], input[type=submit], input[type=reset] {
                   </tr>
                   <tr>
                     <td>
-                      <div class = "radioCurso">
+                      <div class = "radioCursoMedia">
                       <input type="radio" id="Iº" name="Nivel" value="Iº" style="background-color: #FE9800;">
                       <label for="Iº">Iº</label>
                       </div>
                     </td>
                     <td>
-                      <div class = "radioCurso">
+                      <div class = "radioCursoMedia">
                       <input type="radio" id="IIº" name="Nivel" value="IIº" style="background-color:#FE9800;">
                       <label for="IIº">IIº</label>
                       </div>
                     </td>
                     <td>
-                      <div class = "radioCurso">
+                      <div class = "radioCursoMedia">
                       <input type="radio" id="IIIº" name="Nivel" value="IIIº" style="background-color:#FE9800;">
                       <label for="IIIº">IIIº</label>
                       </div>
                     </td>
                    	<td>
-                      <div class = "radioCurso">
+                      <div class = "radioCursoMedia">
                    		<input type="radio" id="IVº" name="Nivel" value="IVº" style="background-color:#FE9800;">
                       <label for="IVº">IVº</label>
                      </div>
