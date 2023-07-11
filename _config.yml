@@ -107,7 +107,7 @@ analytics:
 author:
   name             : "Daniel Valdés M."
   avatar           : "/assets/images/foto_perfil.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Physics Teacher, Astronomer, Data Scientist."
+  bio              : "Data Analyst, Physics Teacher, Astronomer, Writter"
   location         : "Talagante, CL"
   email            :
   links:
@@ -116,7 +116,7 @@ author:
       # url: "mailto:dani.avm@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      # url: "https://daniavm.github.io/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/daniavm"
