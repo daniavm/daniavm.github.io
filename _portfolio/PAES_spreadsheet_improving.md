@@ -42,7 +42,7 @@ A partir de esta información y teniendo el archivo de la planilla utilizada el 
 2. Ingresar la prueba M2 a la estructura general de análisis (esto no estaba debido ya que dicha prueba apareció posterior a la construcción de la planilla inicial así que tenía su propio entorno de trabajo diferente de las otras pruebas)
 3. Mantener las funciones originales de análisis que incluian la semaforización de los puntajes obtenidos, la clasificación de los puntajes por grupos de trabajo (asociados a distintos profesores)
 
-## The Database
+## La planilla original
 
 | **NAME**                      | **Type** | **Description**                                                    |
 |-------------------------------|:--------:|--------------------------------------------------------------------|
@@ -58,7 +58,7 @@ A partir de esta información y teniendo el archivo de la planilla utilizada el 
 | **emocion_predominante**      |  String  | Predominant emotion at the time of working the declared record     |
 | **edition_timestamp**         | DateTime | Timestamp of the last time the submitted record was edited         |
 
-## The Code
+## La propuesta a nuevos cambios
 
 ## Results and Analysis
 
