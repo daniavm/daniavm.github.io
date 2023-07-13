@@ -27,11 +27,21 @@ gallery:
 
 <p align="justify" markdown="1">
 La labor consistía inicialmente en solo modificar o adaptar una planilla de Excel que se utilizaba en el colegio para poder hacer algunos análisis de los ensayos que se iban rindiendo por los estudiantes de 4° medio como parte del plan de preparación para la prueba PAES. 
+
 Las funciones principales de esta planilla eran:
+
 1. Registrar los resultados de los ensayos rendidos cada mes.
-2. Corregir el sistema de clasificación en 4 rangos de respuestas correctas (RC) respondidas en cada ensayo
-3. Ingresar la prueba M2 a la estructura general de análisis (esto no estaba debido ya que dicha prueba apareció posterior a la construcción de la planilla inicial así que tenía su propio entorno de trabajo diferente de las otras pruebas)
-4. Mantener las funciones originales de análisis que incluian la semaforización de los puntajes obtenidos, la clasificación de los puntajes por grupos de trabajo (asociados a distintos profesores)
+2. Semaforizar (poner en colores) los distintos resultados para identificar visualmente poblaciones de estudiantes.
+3. Clasificar los resultados por grupos de trabajo (que a su vez estan asociados a un profesor(a) en específico)
+4. Tener un análisis independiente de cada prueba con la posibilidad de filtrar resultados a partir de algunas variables (nombre, puntaje, etc)
+
+A partir de esta información y teniendo el archivo de la planilla utilizada el año 2022 como referencia se procedió a implementar los siguientes cambios.
+
+1. Corregir el sistema de clasificación en 4 rangos de respuestas correctas (RC) respondidas en cada ensayo
+2. Ingresar la prueba M2 a la estructura general de análisis (esto no estaba debido ya que dicha prueba apareció posterior a la construcción de la planilla inicial así que tenía su propio entorno de trabajo diferente de las otras pruebas)
+3. Mantener las funciones originales de análisis que incluian la semaforización de los puntajes obtenidos, la clasificación de los puntajes por grupos de trabajo (asociados a distintos profesores)
+
+
 </p>
 
 ## The Database
