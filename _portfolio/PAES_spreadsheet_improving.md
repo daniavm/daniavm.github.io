@@ -31,7 +31,7 @@ Cada colegio que cuenta con educación media suele tener su propio plan de traba
 
 La labor consistía inicialmente en modificar o adaptar una planilla de Excel que se utilizaba en el colegio para poder hacer algunos análisis de los ensayos que se iban rindiendo por los estudiantes de 4° medio como parte del plan de preparación para la Prueba de Acceso a la Educación Superior (PAES). Una vez hecha la revisión del instrumento, se constató que las características principales que tenía eran más o menos las siguientes:
 
-1. Permitía <b>**registrar**</b> los resultados de los ensayos rendidos cada mes para cada estudiante. Estos resultados eran únicamente las respuestas correctas de cada ensayo.
+1. Permitía <span style="color: red;">registrar</span>**registrar** los resultados de los ensayos rendidos cada mes para cada estudiante. Estos resultados eran únicamente las respuestas correctas de cada ensayo.
 2. **Semaforiza** (poner en colores) los distintos resultados para identificar visualmente poblaciones de estudiantes en un set de 4 rangos de puntajes (rojo, amarillo, verde y azul) en cada una de las pruebas de cada mes.
 3. **Clasifica** los resultados de acuerdo a grupos de trabajo, que a su vez estan asociados a un docente en específico.
 4. **Clasifica** los puntajes de cada estudiante de utilizando los filtros de Excel
