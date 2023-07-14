@@ -29,14 +29,17 @@ Cada colegio que cuenta con educación media suele tener su propio plan de traba
 
 ## Estudiando el problema
 
-La labor consistía inicialmente en modificar o adaptar una planilla de Excel que se utilizaba en el colegio para poder hacer algunos análisis de los ensayos que se iban rindiendo por los estudiantes de 4° medio como parte del plan de preparación para la Prueba de Acceso a la Educación Superior (PAES). Una vez hecha la revisión del instrumento se constató que las características principales que tenía eran más o menos las siguientes:
+La labor consistía inicialmente en modificar o adaptar una planilla de Excel que se utilizaba en el colegio para poder hacer algunos análisis de los ensayos que se iban rindiendo por los estudiantes de 4° medio como parte del plan de preparación para la Prueba de Acceso a la Educación Superior (PAES). Una vez hecha la revisión del instrumento, se constató que las características principales que tenía eran más o menos las siguientes:
 
-Las funciones principales de esta planilla eran:
+1. Permitía **registrar** los resultados de los ensayos rendidos cada mes para cada estudiante. Estos resultados eran únicamente las respuestas correctas de cada ensayo.
+2. **Semaforiza** (poner en colores) los distintos resultados para identificar visualmente poblaciones de estudiantes en un set de 4 rangos de puntajes (rojo, amarillo, verde y azul) en cada una de las pruebas de cada mes.
+3. **Clasifica** los resultados de acuerdo a grupos de trabajo, que a su vez estan asociados a un docente en específico.
+4. **Clasifica** los puntajes de cada estudiante de utilizando los filtros de Excel
+5. **Calcula** variables de tendencia central básicas como la media de los resultados que se van acumulando para así relacionarlo con las metas propuestas por el colegio para cada prueba.
+6. **Identifica** estudiantes que pueden tener un desempeño que requiera atención particular. 
+7. **Convierte** el puntaje obtenido (a partir de las respuestas correctas) a puntaje PAES usando unas tablas de conversión en hojas ocultas.
 
-1. Registrar los resultados de los ensayos rendidos cada mes.
-2. Semaforizar (poner en colores) los distintos resultados para identificar visualmente poblaciones de estudiantes.
-3. Clasificar los resultados por grupos de trabajo (que a su vez estan asociados a un profesor(a) en específico)
-4. Tener un análisis independiente de cada prueba con la posibilidad de filtrar resultados a partir de algunas variables (nombre, puntaje, etc)
+A partir de estas características también se solicitó información respecto de l
 
 A partir de esta información y teniendo el archivo de la planilla utilizada el año 2022 como referencia se procedió a implementar los siguientes cambios.
 
