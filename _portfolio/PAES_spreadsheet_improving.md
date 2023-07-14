@@ -46,7 +46,16 @@ A partir de estas características también se solicitó información respecto d
 3. La manera de compartir la información con los docentes involucrados en el plan de 4° medio era derechamente o duplicar la planilla o permitir modificaciones imprevistas que implicarían un trabajo mayor en el futuro, asíq ue la idea era proponer una solución a este problema.
 4. Las tablas de conversión de RC a puntaje PAES van actualizandose año a año, por lo que se necesitaba una planilla que permitiera tal modificación de manera más simple. 
 
+Algunas de las imágenes que muestran la planilla original se muestran a continuación:
 
+```html
+<figure class="third">
+	<img src="assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png">
+	<img src="assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png">
+	<img src="assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png">
+	<figcaption>Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada.</figcaption>
+</figure>
+```
 
 </div>
 
