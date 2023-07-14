@@ -31,7 +31,7 @@ Cada colegio que cuenta con educación media suele tener su propio plan de traba
 
 La labor consistía inicialmente en modificar o adaptar una planilla de Excel que se utilizaba en el colegio para poder hacer algunos análisis de los ensayos que se iban rindiendo por los estudiantes de 4° medio como parte del plan de preparación para la Prueba de Acceso a la Educación Superior (PAES). Una vez hecha la revisión del instrumento, se constató que las características principales que tenía eran más o menos las siguientes:
 
-1. Permitía <span style="color: red;">registrar</span>**registrar** los resultados de los ensayos rendidos cada mes para cada estudiante. Estos resultados eran únicamente las respuestas correctas de cada ensayo.
+1. Permitía <span style="color: green;font-weight:bold;">registrar</span> los resultados de los ensayos rendidos cada mes para cada estudiante. Estos resultados eran únicamente las respuestas correctas de cada ensayo.
 2. **Semaforiza** (poner en colores) los distintos resultados para identificar visualmente poblaciones de estudiantes en un set de 4 rangos de puntajes (rojo, amarillo, verde y azul) en cada una de las pruebas de cada mes.
 3. **Clasifica** los resultados de acuerdo a grupos de trabajo, que a su vez estan asociados a un docente en específico.
 4. **Clasifica** los puntajes de cada estudiante de utilizando los filtros de Excel
@@ -39,13 +39,14 @@ La labor consistía inicialmente en modificar o adaptar una planilla de Excel qu
 6. **Identifica** estudiantes que pueden tener un desempeño que requiera atención particular. 
 7. **Convierte** el puntaje obtenido (a partir de las respuestas correctas) a puntaje PAES usando unas tablas de conversión en hojas ocultas.
 
-A partir de estas características también se solicitó información respecto de l
+A partir de estas características también se solicitó información respecto de las distintas motiaciones que sugerían la necesidad de un cambio en la planilla. Las respuestas fueron estas:
 
-A partir de esta información y teniendo el archivo de la planilla utilizada el año 2022 como referencia se procedió a implementar los siguientes cambios.
+1. Los puntajes de clasificación podían cambiar año a año debido a los ajustes en las estrategias académicas, así que se necesitaba algo más versatil.
+2. La prueba M2 había sido ingresada a la planilla como una hoja aparte debido a que fue una prueba que surgió en medio del año escolar, así que necesitaba unificarse con las estadísticas de todas las pruebas y seguir su formato.
+3. La manera de compartir la información con los docentes involucrados en el plan de 4° medio era derechamente o duplicar la planilla o permitir modificaciones imprevistas que implicarían un trabajo mayor en el futuro, asíq ue la idea era proponer una solución a este problema.
+4. Las tablas de conversión de RC a puntaje PAES van actualizandose año a año, por lo que se necesitaba una planilla que permitiera tal modificación de manera más simple. 
 
-1. Corregir el sistema de clasificación en 4 rangos de respuestas correctas (RC) respondidas en cada ensayo
-2. Ingresar la prueba M2 a la estructura general de análisis (esto no estaba debido ya que dicha prueba apareció posterior a la construcción de la planilla inicial así que tenía su propio entorno de trabajo diferente de las otras pruebas)
-3. Mantener las funciones originales de análisis que incluian la semaforización de los puntajes obtenidos, la clasificación de los puntajes por grupos de trabajo (asociados a distintos profesores)
+
 
 </div>
 
