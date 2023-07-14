@@ -23,13 +23,14 @@ gallery:
 
 ---
 ## Introduction
-[//]: < ## Introducción A lo largo de este año he dedicado grandes esfuerzos a desarrollar una herramienta que permita interpretar los registros escritos de mis estudiantes en una actividad de bitácora. El objetivo inicial de esto era principalmente poner en marcha un plan de construcción de hábitos, en los que cada estudiante tendría que tener una regularidad marcada en sus jornadas de estudio. Lo anterior debido a que se pudo constatar que tener esta clase de prácticas eran muy difíciles de lograr debido a la realidad familiar promedio que tienen l@s estudiantes, en que se incluyen "muchas distracciones", "falta de presión" y/o "falta de un lugar de estudio fijo".>
-
-<p align="justify" markdown="1">
-La labor consistía inicialmente en solo modificar o adaptar una planilla de Excel que se utilizaba en el colegio para poder hacer algunos análisis de los ensayos que se iban rindiendo por los estudiantes de 4° medio como parte del plan de preparación para la prueba PAES. 
-</p>
 
 <div align="justify" markdown="1">
+Cada colegio que cuenta con educación media suele tener su propio plan de trabajo para hacer el análisis de los datos recabados de sus cuartos medios a la hora de hablar de las pruebas de ingreso a la educación superior. A pesar de esto y el problema inherente que acarrea el tener una herramienta que puede variar de contexto en contexto, he podido identificar ciertas características comunes en las que este tipo de instrumento podría mejorarse y hasta reformularse. La idea de este primer trabajo fue identificar algunas de estas características que hacen dificultoso el trabajo entre los equipos y crear aquellas funciones que provean información de mayor valor a la hora de tomar decisiones en el ámbito pedagógico. 
+
+## Estudiando el problema
+
+La labor consistía inicialmente en modificar o adaptar una planilla de Excel que se utilizaba en el colegio para poder hacer algunos análisis de los ensayos que se iban rindiendo por los estudiantes de 4° medio como parte del plan de preparación para la Prueba de Acceso a la Educación Superior (PAES). Una vez hecha la revisión del instrumento se constató que las características principales que tenía eran más o menos las siguientes:
+
 Las funciones principales de esta planilla eran:
 
 1. Registrar los resultados de los ensayos rendidos cada mes.
