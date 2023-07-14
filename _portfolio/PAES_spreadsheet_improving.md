@@ -32,12 +32,12 @@ Cada colegio que cuenta con educación media suele tener su propio plan de traba
 La labor consistía inicialmente en modificar o adaptar una planilla de Excel que se utilizaba en el colegio para poder hacer algunos análisis de los ensayos que se iban rindiendo por los estudiantes de 4° medio como parte del plan de preparación para la Prueba de Acceso a la Educación Superior (PAES). Una vez hecha la revisión del instrumento, se constató que las características principales que tenía eran más o menos las siguientes:
 
 1. Permitía <span style="color: green;font-weight:bold;">registrar</span> los resultados de los ensayos rendidos cada mes para cada estudiante. Estos resultados eran únicamente las respuestas correctas de cada ensayo.
-2. **Semaforiza** (poner en colores) los distintos resultados para identificar visualmente poblaciones de estudiantes en un set de 4 rangos de puntajes (rojo, amarillo, verde y azul) en cada una de las pruebas de cada mes.
-3. **Clasifica** los resultados de acuerdo a grupos de trabajo, que a su vez estan asociados a un docente en específico.
-4. **Clasifica** los puntajes de cada estudiante de utilizando los filtros de Excel
-5. **Calcula** variables de tendencia central básicas como la media de los resultados que se van acumulando para así relacionarlo con las metas propuestas por el colegio para cada prueba.
-6. **Identifica** estudiantes que pueden tener un desempeño que requiera atención particular. 
-7. **Convierte** el puntaje obtenido (a partir de las respuestas correctas) a puntaje PAES usando unas tablas de conversión en hojas ocultas.
+2. <span style="color: green;font-weight:bold;">Semaforizar</span> (poner en colores) los distintos resultados para identificar visualmente poblaciones de estudiantes en un set de 4 rangos de puntajes (rojo, amarillo, verde y azul) en cada una de las pruebas de cada mes.
+3. <span style="color: green;font-weight:bold;">Clasificar</span> los resultados de acuerdo a grupos de trabajo, que a su vez estan asociados a un docente en específico.
+4. <span style="color: green;font-weight:bold;">Clasificar</span> los puntajes de cada estudiante de utilizando los filtros de Excel
+5. <span style="color: green;font-weight:bold;">Calcular</span> variables de tendencia central básicas como la media de los resultados que se van acumulando para así relacionarlo con las metas propuestas por el colegio para cada prueba.
+6. <span style="color: green;font-weight:bold;">Identificar</span> estudiantes que pueden tener un desempeño que requiera atención particular. 
+7. <span style="color: green;font-weight:bold;">Convertir</span> el puntaje obtenido (a partir de las respuestas correctas) a puntaje PAES usando unas tablas de conversión en hojas ocultas.
 
 A partir de estas características también se solicitó información respecto de las distintas motiaciones que sugerían la necesidad de un cambio en la planilla. Las respuestas fueron estas:
 
