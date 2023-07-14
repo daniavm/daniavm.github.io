@@ -48,14 +48,13 @@ A partir de estas características también se solicitó información respecto d
 
 Algunas de las imágenes que muestran la planilla original se muestran a continuación:
 
-```html
 <figure class="third">
 	<img src="assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png">
 	<img src="assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png">
 	<img src="assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png">
 	<figcaption>Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada.</figcaption>
 </figure>
-```
+
 
 </div>
 
