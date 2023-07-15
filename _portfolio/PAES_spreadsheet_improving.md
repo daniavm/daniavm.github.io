@@ -51,12 +51,18 @@ Algunas de las imágenes que muestran la planilla original se muestran a continu
 <figure class="half">
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png"></a>
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png"></a>
-	<figcaption>Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada.</figcaption>
 </figure>
 
 <figure class="half">
  <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png"></a>
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/resumen_grupos.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/resumen_grupos.png"></a>
+	<figcaption>Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada.</figcaption>
+</figure>
+
+<figure class="third">
+  <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png"></a>
+  <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png"></a>
+  <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png"></a>
 	<figcaption>Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada.</figcaption>
 </figure>
 
@@ -84,7 +90,7 @@ Algunas de las imágenes que muestran la planilla original se muestran a continu
 
 Hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack of newspapers that you'll never read net neutrality algorithms RT algorithms TechCrunch 5% corruption, horse-race coverage Gardening & War section CTR try PR CPC David Cohn shoot a photo algorithms content is king Android Snarkmarket crowdfunding, Fuego Twitter topples dictators YouTube abundance WordPress Reuters try PR stupid commenters should isn't a business model bringing a tote bag to a knife fight.
 
-{% include gallery caption="This is a sample gallery to go along with this case study." %}
+
 
 ## Conclusions
 
