@@ -63,10 +63,12 @@ Algunas de las imágenes que muestran la planilla original se muestran a continu
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png"></a>
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png"></a>
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png"></a>
-	<figcaption>Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada.</figcaption>
+	<figcaption>Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada. Las imágenes restantes se incluyen en la galería al final de este artículo.</figcaption>
 </figure>
 
-{% include gallery caption="Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada." %}
+## La propuesta
+
+
 
 </div>
 
@@ -95,6 +97,8 @@ Hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack 
 
 
 ## Conclusions
+
+{% include gallery caption="Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada." %}
 
 ## References
 
