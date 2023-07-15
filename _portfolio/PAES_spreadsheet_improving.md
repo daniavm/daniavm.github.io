@@ -43,18 +43,22 @@ A partir de estas características también se solicitó información respecto d
 
 1. Los puntajes de clasificación podían cambiar año a año debido a los ajustes en las estrategias académicas, así que se necesitaba algo más versatil.
 2. La prueba M2 había sido ingresada a la planilla como una hoja aparte debido a que fue una prueba que surgió en medio del año escolar, así que necesitaba unificarse con las estadísticas de todas las pruebas y seguir su formato.
-3. La manera de compartir la información con los docentes involucrados en el plan de 4° medio era derechamente o duplicar la planilla o permitir modificaciones imprevistas que implicarían un trabajo mayor en el futuro, asíq ue la idea era proponer una solución a este problema.
+3. La manera de compartir la información con los docentes involucrados en el plan de 4° medio era derechamente o duplicar la planilla o permitir modificaciones imprevistas que implicarían un trabajo mayor en el futuro, así que la idea era proponer una solución a este problema.
 4. Las tablas de conversión de RC a puntaje PAES van actualizandose año a año, por lo que se necesitaba una planilla que permitiera tal modificación de manera más simple. 
 
 Algunas de las imágenes que muestran la planilla original se muestran a continuación:
 
-<figure class="third">
+<figure class="half">
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png"></a>
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png"></a>
-  <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png"></a>
 	<figcaption>Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada.</figcaption>
 </figure>
 
+<figure class="half">
+ <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png"></a>
+  <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/resumen_grupos.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/resumen_grupos.png"></a>
+	<figcaption>Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada.</figcaption>
+</figure>
 
 </div>
 
