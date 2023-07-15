@@ -104,6 +104,14 @@ La construcción de la planilla inicia con el diseño estético para luego estab
 
 <div>
 
+´´´html
+function Macroquitadodefiltros() {
+  spreadsheet.getRange('B4:AQ113').activate();
+  spreadsheet.getActiveSheet().getFilter().remove();
+  spreadsheet.getRange('B4:AQ113').activate();
+  spreadsheet.getRange('B4:AQ113').createFilter();
+};
+´´´
 
 
 </div>
