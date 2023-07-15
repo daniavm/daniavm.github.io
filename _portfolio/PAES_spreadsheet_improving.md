@@ -83,23 +83,26 @@ Finalmente, la modificación probablemente más radical es la de <u>pasar del en
 
 ## Diseño e Implementación
 
+La construcción de la planilla inicia con el diseño estético para luego establecer la parte funcional. Se construyeron múltiples hojas que representarían los distintos entornos de trabajo. El detalle es el siguiente:
+
 </div>
 
 ## La planilla original
 
-| **NAME**                      | **Type** | **Description**                                                    |
+| **Nombre de Hoja**                      | **Visibilidad** | **Descripción**                                                    |
 |-------------------------------|:--------:|--------------------------------------------------------------------|
-| **sent_timestamp**            | DateTime | Timestamp indicating the date the student was registered           |
-| **mail**                      |  String  | Student email                                                      |
-| **dia**                       |   Date   | Date declared by the student who makes the registration of his log |
-| **hora_de_inicio**            |   Time   | Time that the student declares that he started his study day       |
-| **hora_de_termino**           |   Time   | Time that the student declares that he finished his study day      |
-| **duracion_minutos**          |    Int   | Duration of the study time in minutes                              |
-| **objetivo_logrado**          |  String  | Objective that was achieved in the study day                       |
-| **describe_como_lo_lograste** |  String  | Description of how the objective was achieved                      |
-| **nivel**                     |    Int   | Number that indicates the ability and skill worked by the student. |
-| **emocion_predominante**      |  String  | Predominant emotion at the time of working the declared record     |
-| **edition_timestamp**         | DateTime | Timestamp of the last time the submitted record was edited         |
+| **GLOBAL_PARAMETERS**            | Invisible | Guardará los parámetros de los cursos disponibles para generar la lista de estudiantes, las tablas de conversión de puntajes y opciones para botones dentro de las otras hojas.           |
+| **SETTINGS**                      |  Visible  | Panel de control inicial para que el usuario modifique parámetros que tienen que ver con los análisis posteriores. Esto no incluye la clasificación de estudiantes por grupo.                                                      |
+| **GRUPOS**                       |   Visible   | Presenta la lista de estudiantes y una clasificación opr grupos y especialidades que dependen de los valores ingresados en SETTINGS. |
+| **TRASLADADOR DE PUNTAJES**            |   Visible   | Permite copiar directamente los ID de cada estudiante y su puntaje con el fin de organizarlos y traspasar la información de manera directa a la base de datos de la planilla.       |
+| **BASE DE DATOS**           |   Visible   | Puntajes       |
+| **ANÁLISIS C. LECTORA**          |    Visible   | Duration of the study time in minutes                              |
+| **ANÁLISIS MATEMÁTICA**          |  Visible  | Objective that was achieved in the study day                       |
+| **ANÁLISIS M2** |  Visible  | Description of how the objective was achieved                      |
+| **ANÁLISIS HISTORIA**                     |    Int   | Number that indicates the ability and skill worked by the student. |
+| **ANÁLISIS CIENCIAS**      |  Visible  | Predominant emotion at the time of working the declared record     |
+| **PREPARACIÓN ENVÍO DE REPORTES**         | Visible | Timestamp of the last time the submitted record was edited         |
+| **FORMATO DE REPORTES**         | Visible | Timestamp of the last time the submitted record was edited         |
 
 
 ## Results and Analysis
