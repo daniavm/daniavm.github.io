@@ -1,5 +1,5 @@
 ---
-title: "Creación de Planilla de Análisis Personalizable para Ensayos de Prueba PAES"
+title: "Análisis Personalizable para seguimiento de Ensayos PAES"
 excerpt: "Un piloto que apoya el registro de datos y la toma de decisiones para la Prueba de Acceso a la Educación Superior"
 layout: single
 toc: true
