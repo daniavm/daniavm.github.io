@@ -46,8 +46,10 @@ Quizás no es mucho, pero como bien se diría en el libro de
 
 "Hábitos Atómicos" (Clear, 2018)
 
- es bueno partir con nuestro 1% de mejoría diaria para así invertir en un impacto grande habiendo pasado un tiempo grande[^Clear2018].
+ es bueno partir con nuestro 1% de mejoría diaria para así invertir en un impacto grande habiendo pasado un tiempo grande[^1].
 </p>
+
+[^1]: Curiosa la relación - incluso hasta poética - del simil que tiene esta firmación con la expresión que describe el Impulso en física. El impulso, entendido como el cambio en la cantidad de movimiento de los móviles, se calcula como la fuerza "multiplicado" por el tiempo. Es decir, hay tres formas de cambiar significativamente la cantidad de movimiento. O aplicamos grandes fuerzas en tiempos cortos, o pequeñas fuerzas en tiempos prolongados o grandes fuerzas y por mucho tiempo,  I = F · t.
 
 ---
 
@@ -56,4 +58,4 @@ Quizás no es mucho, pero como bien se diría en el libro de
 1. Clear, J., 2018. Atomic Habits. Penguin Publishing Group.
 
 
-[Reflexión]: Curiosa la relación - incluso hasta poética - del simil que tiene esta firmación con la expresión que describe el Impulso en física. El impulso, entendido como el cambio en la cantidad de movimiento de los móviles, se calcula como la fuerza "multiplicado" por el tiempo. Es decir, hay tres formas de cambiar significativamente la cantidad de movimiento. O aplicamos grandes fuerzas en tiempos cortos, o pequeñas fuerzas en tiempos prolongados o grandes fuerzas y por mucho tiempo,  I = F · t.
+
