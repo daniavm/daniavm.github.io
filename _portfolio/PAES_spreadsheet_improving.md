@@ -68,6 +68,19 @@ Algunas de las imágenes que muestran la planilla original se muestran a continu
 
 ## La propuesta
 
+Por supuesto, la propueta resolvería las solicitudes inciales pero de acuerdo a las necesidades que parecían proyectarse, se agregaron nuevas ideas que derechamente me pareció "buena idea" incluir. El detalle de las soluciones agregadas es el siguiente:
+
+1. Una hoja de configuración de la planilla completa. Así se <u>centralizan los parámetros de control</u> del entorno de estudio.
+2. Hacer que la semaforización sea variable y dependiente de el set de celdas que corresponda a cada prueba. Esto <u>agregaría una cualidad adaptativa</u> al instrumento.
+3. Incluir las metas de distribución esperada en los gráficos de avance. Esto <u>permitiría que cada profesor visibilizara la meta</u> a medida que se van recibiendo los resultados.
+4. Una hoja de clasificación para cada uno de los grupos. Otra función que <u>centraliza la información</u> en un solo lugar.
+5. Trasladador de puntajes. Esto <u>evita las grandes jornadas de traspaso de información y disminuye los errores humanos</u> en los registros.
+6. Un analisis de población por histograma variable. Con esta herramienta <u>se puede identificar poblaciones</u> a niveles de detalle que los 4 rangos estándar no permiten.
+7. Agregar la posibilidad de construir un reporte para cada estudiante en PDF. Esto mejoraría pos supuesto la retroalimentación y el seguimiento de los estudiantes.
+8. Integrar una herramienta de envío automático a las familias, estudiantes y profesores jefes. Esto promueve la retroalimentación en distintos niveles de acción del colegio y automatiza los reportes individualizando cada uno de los avances
+
+Finalmente, la modificación probablemente más radical es la de pasar del entorno de Excel a una planilla de Google Sheets. La necesidad de esto pasa principalmente por la filosofía de trabajo que Excel tiene y que no promueve una interacción fácil en grupos de trabajo cuyos privilegios de acceso son distintos y requieren funciones adaptables a cada necesidad. Esto además de la dificultad existente para relacionar herramientas de automatización como el envío de correspondencia masiva por terceros.
+
 
 
 </div>
