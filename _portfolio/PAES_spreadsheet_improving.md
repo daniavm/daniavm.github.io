@@ -81,7 +81,7 @@ Por supuesto, la propueta resolvería las solicitudes inciales pero de acuerdo a
 
 Finalmente, la modificación probablemente más radical es la de <u>pasar del entorno de Excel a una planilla de Google Sheets</u>. La necesidad de esto pasa principalmente por la filosofía de trabajo que Excel tiene y que no promueve una interacción fácil en grupos de trabajo cuyos privilegios de acceso son distintos y requieren funciones adaptables a cada necesidad. Esto además de la dificultad existente para relacionar herramientas de automatización como el envío de correspondencia masiva por terceros.
 
-
+## Diseño e Implementación
 
 </div>
 
@@ -101,7 +101,6 @@ Finalmente, la modificación probablemente más radical es la de <u>pasar del en
 | **emocion_predominante**      |  String  | Predominant emotion at the time of working the declared record     |
 | **edition_timestamp**         | DateTime | Timestamp of the last time the submitted record was edited         |
 
-## La propuesta a nuevos cambios
 
 ## Results and Analysis
 
