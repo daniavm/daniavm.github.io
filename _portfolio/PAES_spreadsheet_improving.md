@@ -87,24 +87,26 @@ La construcción de la planilla inicia con el diseño estético para luego estab
 
 </div>
 
-## La planilla original
-
 | **Nombre de Hoja**                      | **Visibilidad** | **Descripción**                                                    |
 |-------------------------------|:--------:|--------------------------------------------------------------------|
 | **GLOBAL_PARAMETERS**            | Invisible | Guardará los parámetros de los cursos disponibles para generar la lista de estudiantes, las tablas de conversión de puntajes y opciones para botones dentro de las otras hojas.           |
 | **SETTINGS**                      |  Visible  | Panel de control inicial para que el usuario modifique parámetros que tienen que ver con los análisis posteriores. Esto no incluye la clasificación de estudiantes por grupo.                                                      |
 | **GRUPOS**                       |   Visible   | Presenta la lista de estudiantes y una clasificación opr grupos y especialidades que dependen de los valores ingresados en SETTINGS. |
 | **TRASLADADOR DE PUNTAJES**            |   Visible   | Permite copiar directamente los ID de cada estudiante y su puntaje con el fin de organizarlos y traspasar la información de manera directa a la base de datos de la planilla.       |
-| **BASE DE DATOS**           |   Visible   | Puntajes       |
-| **ANÁLISIS C. LECTORA**          |    Visible   | Duration of the study time in minutes                              |
-| **ANÁLISIS MATEMÁTICA**          |  Visible  | Objective that was achieved in the study day                       |
-| **ANÁLISIS M2** |  Visible  | Description of how the objective was achieved                      |
-| **ANÁLISIS HISTORIA**                     |    Int   | Number that indicates the ability and skill worked by the student. |
-| **ANÁLISIS CIENCIAS**      |  Visible  | Predominant emotion at the time of working the declared record     |
-| **PREPARACIÓN ENVÍO DE REPORTES**         | Visible | Timestamp of the last time the submitted record was edited         |
-| **FORMATO DE REPORTES**         | Visible | Timestamp of the last time the submitted record was edited         |
+| **BASE DE DATOS**           |   Visible   | Puntajes en cada una de las jornadas de ensayo clasificados por tipo y "semaforizados" de acuerdo a los puntajes ingresados en SETTINGS       |
+| **ANÁLISIS C. LECTORA**          |    Visible   | Visualización de la información almacenada en la base de datos para la prueba de Comprensión Lectora                              |
+| **ANÁLISIS MATEMÁTICA**          |  Visible  | Visualización de la información almacenada en la base de datos para la prueba de Comprensión Matemática                       |
+| **ANÁLISIS M2** |  Visible  | Visualización de la información almacenada en la base de datos para la prueba de M2                      |
+| **ANÁLISIS HISTORIA**                     |    Visible   | Visualización de la información almacenada en la base de datos para la prueba de Historia |
+| **ANÁLISIS CIENCIAS**      |  Visible  | Visualización de la información almacenada en la base de datos para la prueba de Ciencias     |
+| **PREPARACIÓN ENVÍO DE REPORTES**         | Visible | Entorno para seleccionar a los estudiantes a los que se enviará el reporte en PDF. Tiene también las opciones de enviar la información a apoderados y profesores jefe de cada curso.         |
+| **FORMATO DE REPORTES**         | Visible | Formato que se utilizará para crear el PDF de cada reporte y que tiene la posibilidad de seleccionar a cada estudiante para ver sus avances generales.         |
+
+<div>
 
 
+
+</div>
 ## Results and Analysis
 
 Hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack of newspapers that you'll never read net neutrality algorithms RT algorithms TechCrunch 5% corruption, horse-race coverage Gardening & War section CTR try PR CPC David Cohn shoot a photo algorithms content is king Android Snarkmarket crowdfunding, Fuego Twitter topples dictators YouTube abundance WordPress Reuters try PR stupid commenters should isn't a business model bringing a tote bag to a knife fight.
