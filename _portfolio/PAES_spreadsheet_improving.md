@@ -15,16 +15,16 @@ sidebar:
     text: "Mejorar o reconstruir la planilla de análisis de ensayos PAES existente en el colegio."
 gallery:
   - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png
-    image_path: assets/images/teaser_wallpaper.jpg
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png
     alt: "placeholder image 1"
   - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png
-    image_path: assets/images/teaser_wallpaper.jpg
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png
     alt: "placeholder image 2"
   - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png
-    image_path: assets/images/teaser_wallpaper.jpg
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png
     alt: "placeholder image 3"
   - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/resumen_grupos.png
-    image_path: assets/images/teaser_wallpaper.jpg
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/resumen_grupos.png
     alt: "placeholder image 4"
 
 
