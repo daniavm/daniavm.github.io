@@ -76,10 +76,10 @@ Por supuesto, la propueta resolvería las solicitudes inciales pero de acuerdo a
 4. Una hoja de clasificación para cada uno de los grupos. Otra función que <u>centraliza la información</u> en un solo lugar.
 5. Trasladador de puntajes. Esto <u>evita las grandes jornadas de traspaso de información y disminuye los errores humanos</u> en los registros.
 6. Un analisis de población por histograma variable. Con esta herramienta <u>se puede identificar poblaciones</u> a niveles de detalle que los 4 rangos estándar no permiten.
-7. Agregar la posibilidad de construir un reporte para cada estudiante en PDF. Esto mejoraría pos supuesto la retroalimentación y el seguimiento de los estudiantes.
-8. Integrar una herramienta de envío automático a las familias, estudiantes y profesores jefes. Esto promueve la retroalimentación en distintos niveles de acción del colegio y automatiza los reportes individualizando cada uno de los avances
+7. Agregar la posibilidad de construir un reporte para cada estudiante en PDF. Esto mejoraría por supuesto <u>la retroalimentación y el seguimiento de los estudiantes</u>.
+8. Integrar una herramienta de envío automático a las familias, estudiantes y profesores jefes. Esto <u>promueve la retroalimentación en distintos niveles de acción del colegio y automatiza los reportes individualizando cada uno de los avances</u>.
 
-Finalmente, la modificación probablemente más radical es la de pasar del entorno de Excel a una planilla de Google Sheets. La necesidad de esto pasa principalmente por la filosofía de trabajo que Excel tiene y que no promueve una interacción fácil en grupos de trabajo cuyos privilegios de acceso son distintos y requieren funciones adaptables a cada necesidad. Esto además de la dificultad existente para relacionar herramientas de automatización como el envío de correspondencia masiva por terceros.
+Finalmente, la modificación probablemente más radical es la de <u>pasar del entorno de Excel a una planilla de Google Sheets</u>. La necesidad de esto pasa principalmente por la filosofía de trabajo que Excel tiene y que no promueve una interacción fácil en grupos de trabajo cuyos privilegios de acceso son distintos y requieren funciones adaptables a cada necesidad. Esto además de la dificultad existente para relacionar herramientas de automatización como el envío de correspondencia masiva por terceros.
 
 
 
