@@ -19,7 +19,7 @@ tags:
   - Hábitos
 ---
 <p align="justify" markdown="1">
-La página en blanco quizas es uno de los problemas más recurrentes y más complejos de resolver para nosotr@s l@s humanos. Creo que no tengo recuerdo la cantidad de veces que me he quedado sin ideas, o bien sin la posibilidad de responder a algún problema que me ha entregado la vida respecto de alguna situación en específico. Nuestra mente tiende a buscar resultados rápidos sin percatarse de la verdadera naturaleza de los mecanismos que producen los cambios en las cosas.
+La página en blanco quizas es uno de los problemas más recurrentes y más complejos de resolver para nosotr@s l@s human@s. Creo que no tengo recuerdo la cantidad de veces que me he quedado sin ideas, o bien sin la posibilidad de responder a algún problema que me ha entregado la vida respecto de alguna situación en específico. Nuestra mente tiende a buscar resultados rápidos sin percatarse de la verdadera naturaleza de los mecanismos que producen los cambios en las cosas.
 </p>
 
 <p align="justify" markdown="1">
@@ -37,7 +37,7 @@ Por esta misma idea, he decidido caminar por nuevos rumbos para seguir respondie
 </p>
 
 <p align="justify" markdown="1">
-Desconozco de todas las rutas que uno puede seguir para llevar adelante una misión así, pero en lo personal me quedaré con aquella que he aprendido a lo largo de la vida y he podido concientizar en algunos de los libros que he adquirido en el último tiempo. Haré uso de la constancia y trataré de construir un hábito, ***el hábito de escribir a lo menos 1 vez por semana un artículo en esta página***.
+Desconozco de todas las rutas que uno puede seguir para llevar adelante una misión así, pero en lo personal me quedaré con aquella que he aprendido a lo largo de la vida y he podido concientizar en algunos de los libros que he adquirido en el último tiempo. Haré uso de la constancia y trataré de construir un hábito, ***el hábito de escribir a lo menos 1 vez por semana para así ver si puedo acercarme a algo más riguroso y formal.***.
 </p>
 
 <p align="justify" markdown="1">
@@ -51,8 +51,9 @@ Quizás no es mucho, pero como bien se diría en el libro de
 
 ---
 
-[^Clear2018]: Curiosa la relación - incluso hasta poética - del simil que tiene esta firmación con la expresión que describe el Impulso en física. El impulso, entendido como el cambio en la cantidad de movimiento de los móviles, se calcula como la fuerza "multiplicado" por el tiempo. Es decir, hay tres formas de cambiar significativamente la cantidad de movimiento. O aplicamos grandes fuerzas en tiempos cortos, o pequeñas fuerzas en tiempos prolongados o grandes fuerzas y por mucho tiempo,  I = F · t.
-
 ## Referencias
 
 1. Clear, J., 2018. Atomic Habits. Penguin Publishing Group.
+
+
+[Reflexión]: Curiosa la relación - incluso hasta poética - del simil que tiene esta firmación con la expresión que describe el Impulso en física. El impulso, entendido como el cambio en la cantidad de movimiento de los móviles, se calcula como la fuerza "multiplicado" por el tiempo. Es decir, hay tres formas de cambiar significativamente la cantidad de movimiento. O aplicamos grandes fuerzas en tiempos cortos, o pequeñas fuerzas en tiempos prolongados o grandes fuerzas y por mucho tiempo,  I = F · t.
