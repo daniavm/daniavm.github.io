@@ -14,12 +14,20 @@ sidebar:
   - title: "Responsabilidades"
     text: "Mejorar o reconstruir la planilla de análisis de ensayos PAES existente en el colegio."
 gallery:
-  - url: /assets/images/teaser_wallpaper.jpg
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png
     image_path: assets/images/teaser_wallpaper.jpg
     alt: "placeholder image 1"
-  - url: /assets/images/teaser_wallpaper.jpg
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png
     image_path: assets/images/teaser_wallpaper.jpg
     alt: "placeholder image 2"
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png
+    image_path: assets/images/teaser_wallpaper.jpg
+    alt: "placeholder image 3"
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/resumen_grupos.png
+    image_path: assets/images/teaser_wallpaper.jpg
+    alt: "placeholder image 4"
+
+
 
 ---
 ## Introduction
@@ -90,7 +98,7 @@ Algunas de las imágenes que muestran la planilla original se muestran a continu
 
 Hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack of newspapers that you'll never read net neutrality algorithms RT algorithms TechCrunch 5% corruption, horse-race coverage Gardening & War section CTR try PR CPC David Cohn shoot a photo algorithms content is king Android Snarkmarket crowdfunding, Fuego Twitter topples dictators YouTube abundance WordPress Reuters try PR stupid commenters should isn't a business model bringing a tote bag to a knife fight.
 
-
+{% include gallery caption="This is a sample gallery to go along with this case study." %}
 
 ## Conclusions
 
