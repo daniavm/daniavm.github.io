@@ -116,6 +116,14 @@ function Macroquitadodefiltros() {
 };
 ```
 
+{% highlight javascript linenos %}
+function Macroquitadodefiltros() {
+  spreadsheet.getRange('B4:AQ113').activate();
+  spreadsheet.getActiveSheet().getFilter().remove();
+  spreadsheet.getRange('B4:AQ113').activate();
+  spreadsheet.getRange('B4:AQ113').createFilter();
+};
+{% endhighlight %}
 
 ## Results and Analysis
 
