@@ -29,8 +29,30 @@ gallery:
   - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/alertas.png
     image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/alertas.png
     alt: "placeholder image 5"
-
-
+  - url: /assets/images/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png
+    alt: "placeholder image 6"
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png
+    alt: "placeholder image 7"
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_grupal.png
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_grupal.png
+    alt: "placeholder image 8"
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_estudiante.png
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_estudiante.png
+    alt: "placeholder image 9"
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png
+    alt: "placeholder image 10"
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png
+    alt: "placeholder image 11"
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/trasladador.png
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/trasladador.png
+    alt: "placeholder image 12"
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/mensajes_ui.png
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/mensajes_ui.png
+    alt: "placeholder image 13"
 
 ---
 ## Introduction
