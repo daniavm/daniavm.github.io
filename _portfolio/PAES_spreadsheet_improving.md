@@ -4,6 +4,8 @@ excerpt: "Un piloto que apoya el registro de datos y la toma de decisiones para 
 layout: single
 toc: true
 toc_icon: "egg"
+toc_sticky: true
+
 header:
   image: /assets/images/portfolio_images/timesheetJsBanner.jpg
   teaser: assets/images/portfolio_images/timesheetJsBanner.jpg
