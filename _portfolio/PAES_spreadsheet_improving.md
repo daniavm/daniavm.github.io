@@ -136,7 +136,43 @@ function Macroquitadodefiltros() {
 
 ## Results and Analysis
 
-Hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack of newspapers that you'll never read net neutrality algorithms RT algorithms TechCrunch 5% corruption, horse-race coverage Gardening & War section CTR try PR CPC David Cohn shoot a photo algorithms content is king Android Snarkmarket crowdfunding, Fuego Twitter topples dictators YouTube abundance WordPress Reuters try PR stupid commenters should isn't a business model bringing a tote bag to a knife fight.
+Hoja de settings
+<figure>
+	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png"></a>
+	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png" title="Hoja de Settings">Hoja qu epermite modificar parámetros</a>.</figcaption>
+</figure>
+
+Hoja de clasificación de grupos
+
+<figure>
+	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png"></a>
+	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png" title="Hoja de Clasificacion de Grupos">Hoja para clasificar cada estudiante por grupos</a>.</figcaption>
+</figure>
+
+Base de Datos
+<figure>
+	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png"></a>
+	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png" title="Hoja de Base de Datos">Base de Datos</a>.</figcaption>
+</figure>
+
+Hoja de trasladador
+
+<figure class="half">
+	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/trasladador.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/trasladador.png"></a>
+	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/mensajes_ui.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/mensajes_ui.png"></a>
+	<figcaption>Trasladador y mensajes de interfaz de usuario</figcaption>
+</figure>
+
+Hoja de clasificación de grupos
+
+<figure class="third">
+	<img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png">
+	<img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_grupal.png">
+	<img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_estudiante.png">
+	<figcaption>Hoja de análisis</figcaption>
+</figure>
+
+
 
 
 
