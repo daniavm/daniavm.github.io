@@ -66,7 +66,7 @@ Algunas de las imágenes que muestran la planilla original se muestran a continu
 	<figcaption>Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada. Las imágenes restantes se incluyen en la galería al final de este artículo.</figcaption>
 </figure>
 
-## La propuesta
+## La Propuesta
 
 Por supuesto, la propueta resolvería las solicitudes inciales pero de acuerdo a las necesidades que parecían proyectarse, se agregaron nuevas ideas que derechamente me pareció "buena idea" incluir. El detalle de las soluciones agregadas es el siguiente:
 
@@ -166,9 +166,9 @@ function Macroquitadodefiltros() {
 ### Hoja de Análisis para Docentes
 
 <figure class="third">
-	<img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png">
-	<img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_grupal.png">
-	<img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_estudiante.png">
+	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png"></a>
+  <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_grupal.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_grupal.png"></a>
+  <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_estudiante.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_estudiante.png"></a>
 	<figcaption>Hoja de análisis</figcaption>
 </figure>
 
