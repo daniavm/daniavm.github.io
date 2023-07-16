@@ -202,6 +202,11 @@ function Macroquitadodefiltros() {
 
 ## Conclusions
 
+
+## Galería de Imágenes
+
+A continuación se muestra una galería de las imágenes utilizadas en todo este artículo.
+
 {% include gallery caption="Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada." %}
 
 ## References
