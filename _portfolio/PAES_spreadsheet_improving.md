@@ -134,28 +134,28 @@ function Macroquitadodefiltros() {
 };
 {% endhighlight %}
 
-## Results and Analysis
+## Resultados y Análisis
 
-Hoja de settings
+### Hoja de Settings (configuración)
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png"></a>
 	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png" title="Hoja de Settings">Hoja qu epermite modificar parámetros</a>.</figcaption>
 </figure>
 
-Hoja de clasificación de grupos
+### Hoja de Clasificación de Grupos
 
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png"></a>
 	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png" title="Hoja de Clasificacion de Grupos">Hoja para clasificar cada estudiante por grupos</a>.</figcaption>
 </figure>
 
-Base de Datos
+### Hoja para la Base de Datos
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png"></a>
 	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png" title="Hoja de Base de Datos">Base de Datos</a>.</figcaption>
 </figure>
 
-Hoja de trasladador
+### Hoja del "Trasladador" de Puntajes
 
 <figure class="half">
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/trasladador.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/trasladador.png"></a>
@@ -163,7 +163,7 @@ Hoja de trasladador
 	<figcaption>Trasladador y mensajes de interfaz de usuario</figcaption>
 </figure>
 
-Hoja de clasificación de grupos
+### Hoja de Análisis para Docentes
 
 <figure class="third">
 	<img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png">
