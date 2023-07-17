@@ -128,9 +128,6 @@ La construcción de la planilla inicia con el diseño estético para luego estab
 
 <div>
 
-
-</div>
-
 ## Resultados y Análisis
 
 La planilla piloto final puede ser analizada en función de sus hojas, ya que cada una se creó con el fin de conducir el proceso de análisis que se hace a nivel del colegio. Por esta razón, a continuación se muestra el detalle de cada una de las hojas que describen a este trabajo.
@@ -141,16 +138,19 @@ Esta hoja se construyó con la función de centralizar los parámetros más impo
 
 En la columna A y B se encuentran los selectores de los cursos que busca mostrarse en la planilla. Estos cursos están ligados directamente a la base de datos de estudiantes del colegio.
 
-Se incluyeron 2 secciones que tienen que ver con la cantidad de grupos de estudiantes que darán cierta prueba. Esto está relacionado con la estrategia de trabajo del colegio pero es adaptable a un contexto incluso donde haya solo un grupo de estudiantes. En estas secciones es posible agregar el nombre del docente que tiene a cargo cada grupo y el nombre d ela asignatura que se tenga en el colegio.
-
-Se incluyeron dos herramientas para monitorear el logro de las metas: por puntaje y por distribución. Las metas por puntaje responden a un puntaje físico esparado para alcanzar por la generación mientras que las metas por distribución son una cantidad de estudiantes que se espera que se encuentren en cada uno de los rangos de logro. Adjunto a esto se agregó un parámetro de tolerancia llamado "Porcentaje de Error" que busca regular los resultados obtenidos a lo largo del tiempo. Un ejemplo de uso del parámetro anterior es que si un curso alcanza su meta de 750 puntos no será considerado como logro hasta que la desviación de los resultados obtenidos no haya superado el rango de tolerancia, es decir un 3% en este caso.
-
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png"></a>
 	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png" title="Hoja de Settings">Hoja qu epermite modificar parámetros</a>.</figcaption>
 </figure>
 
+Se incluyeron 2 secciones que tienen que ver con la cantidad de grupos de estudiantes que darán cierta prueba. Esto está relacionado con la estrategia de trabajo del colegio pero es adaptable a un contexto incluso donde haya solo un grupo de estudiantes. En estas secciones es posible agregar el nombre del docente que tiene a cargo cada grupo y el nombre d ela asignatura que se tenga en el colegio.
+
+Se incluyeron dos herramientas para monitorear el logro de las metas: por puntaje y por distribución. Las metas por puntaje responden a un puntaje físico esparado para alcanzar por la generación mientras que las metas por distribución son una cantidad de estudiantes que se espera que se encuentren en cada uno de los rangos de logro. Adjunto a esto se agregó un parámetro de tolerancia llamado "Porcentaje de Error" que busca regular los resultados obtenidos a lo largo del tiempo. Un ejemplo de uso del parámetro anterior es que si un curso alcanza su meta de 750 puntos no será considerado como logro hasta que la desviación de los resultados obtenidos no haya superado el rango de tolerancia, es decir un 3% en este caso.
+
+
 ### Hoja de Clasificación de Grupos
+
+
 
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png"></a>
@@ -189,7 +189,7 @@ function Macroquitadodefiltros() {
 	<figcaption>Hoja de análisis</figcaption>
 </figure>
 
-
+</div>
 
 
 
