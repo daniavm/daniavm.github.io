@@ -140,7 +140,7 @@ En la columna A y B se encuentran los selectores de los cursos que busca mostrar
 
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png"></a>
-	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png" title="Hoja de Settings">Hoja qu epermite modificar parámetros</a>.</figcaption>
+	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png" title="Hoja de Settings">Hoja de la planilla modificada que permite cambiar los parámetros de clasificación de la información, resultados, grupos y elementos visuales.</a>.</figcaption>
 </figure>
 
 Se incluyeron 2 secciones que tienen que ver con la cantidad de grupos de estudiantes que darán cierta prueba. Esto está relacionado con la estrategia de trabajo del colegio pero es adaptable a un contexto incluso donde haya solo un grupo de estudiantes. En estas secciones es posible agregar el nombre del docente que tiene a cargo cada grupo y el nombre d ela asignatura que se tenga en el colegio.
@@ -150,11 +150,11 @@ Se incluyeron dos herramientas para monitorear el logro de las metas: por puntaj
 
 ### Hoja de Clasificación de Grupos
 
-
+La hoja siguiente es el primer entorno que incluye los datos de los estudiantes. En este punto se busca solamente hacer la clasificación más detallada de la información por grupos. 
 
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png"></a>
-	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png" title="Hoja de Clasificacion de Grupos">Hoja para clasificar cada estudiante por grupos</a>.</figcaption>
+	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png" title="Hoja de Clasificacion de Grupos">Hoja de clasificación de grupos por cada una de las pruebas. Se adjunta también una clasificación para la especialidad en la prueba de ciencias. </a>.</figcaption>
 </figure>
 
 ### Hoja para la Base de Datos
