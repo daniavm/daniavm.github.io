@@ -121,7 +121,7 @@ La construcción de la planilla inicia con el diseño estético para luego estab
 | **ANÁLISIS C. LECTORA**          | Visualización de la información almacenada en la base de datos para la prueba de Comprensión Lectora                              |
 | **ANÁLISIS MATEMÁTICA**          | Visualización de la información almacenada en la base de datos para la prueba de Comprensión Matemática                       |
 | **ANÁLISIS M2** | Visualización de la información almacenada en la base de datos para la prueba de M2                      |
-| **ANÁLISIS HISTORIA**                     |    Visible   | Visualización de la información almacenada en la base de datos para la prueba de Historia |
+| **ANÁLISIS HISTORIA**                     | Visualización de la información almacenada en la base de datos para la prueba de Historia |
 | **ANÁLISIS CIENCIAS**      | Visualización de la información almacenada en la base de datos para la prueba de Ciencias     |
 | **PREPARACIÓN ENVÍO DE REPORTES**         | Entorno para seleccionar a los estudiantes a los que se enviará el reporte en PDF. Tiene también las opciones de enviar la información a apoderados y profesores jefe de cada curso.         |
 | **FORMATO DE REPORTES**         | Formato que se utilizará para crear el PDF de cada reporte y que tiene la posibilidad de seleccionar a cada estudiante para ver sus avances generales.         |
