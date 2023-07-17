@@ -148,6 +148,8 @@ Se incluyeron 2 secciones que tienen que ver con la cantidad de grupos de estudi
 
 Se incluyeron dos herramientas para monitorear el logro de las metas: por puntaje y por distribución. Las metas por puntaje responden a un puntaje físico esparado para alcanzar por la generación mientras que las metas por distribución son una cantidad de estudiantes que se espera que se encuentren en cada uno de los rangos de logro. Adjunto a esto se agregó un parámetro de tolerancia llamado "Porcentaje de Error" que busca regular los resultados obtenidos a lo largo del tiempo. Un ejemplo de uso del parámetro anterior es que si un curso alcanza su meta de 750 puntos no será considerado como logro hasta que la desviación de los resultados obtenidos no haya superado el rango de tolerancia, es decir un 3% en este caso.
 
+Finalmente, se agregan los rangos de respuestas correctas (RC) a los que respondería cada una de las clasificaciones. Esto impactará posteriormente en la clasificación visual de los entornos de análisis.
+
 
 ### Hoja de Clasificación de Grupos
 
@@ -161,13 +163,6 @@ La hoja siguiente es el primer entorno que incluye los datos de los estudiantes.
 </figure>
 
 ### Hoja del "Trasladador" de Puntajes
-
-
-Esta hoja queda como remanente del sistema original ya que había una familiaridad con su uso de parte del colegio. Aquí se pueden hacer filtros de información por cad auno de los estudiantes de cada prueba, pero la filosofía sugerida de uso fue que realmente no había que modificar nada de esta parte ya que se encontraban las mismas herramientas en las secciones de análisis. 
-
-Aquí se puede ver también una de las priemras consecuencias de los cambios en la hoja de SETTINGS, ya que cada uno de los colores mostrados en los puntajes responde a los rangos llenados en la hoja inicial.
-
-</div>
 
 <figure class="half">
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/trasladador.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/trasladador.png"></a>
@@ -184,14 +179,21 @@ function Macroquitadodefiltros() {
 };
 {% endhighlight %}
 
+
 ### Hoja para la Base de Datos
 
-Esta hoja muestra los 
+Esta hoja queda como remanente del sistema original ya que había una familiaridad con su uso de parte del colegio. Aquí se pueden hacer filtros de información por cad auno de los estudiantes de cada prueba, pero la filosofía sugerida de uso fue que realmente no había que modificar nada de esta parte ya que se encontraban las mismas herramientas en las secciones de análisis. 
 
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png"></a>
 	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png" title="Hoja de Base de Datos">Base de Datos</a>.</figcaption>
 </figure>
+
+Aquí se puede ver también una de las primeras consecuencias de los cambios en la hoja de SETTINGS, ya que cada uno de los colores mostrados en los puntajes responde a los rangos llenados en la hoja inicial.
+
+</div>
+
+
 
 
 ### Hoja de Análisis para Docentes
@@ -205,15 +207,15 @@ Esta hoja muestra los
 
 
 
-## Conclusions
+## Conclusiones
 
+
+## References
+
+[^Huang2001]: E, W. & Huang, Z., 2001. Matching Conditions in Atomistic-Continuum Modeling of Materials. _arXiv.org_, (13), p.135501. Available at: [http://arxiv.org/abs/cond-mat/0106615v1](http://arxiv.org/abs/cond-mat/0106615v1){:target="_blank"}.
 
 ## Galería de Imágenes
 
 A continuación se muestra una galería de las imágenes utilizadas en todo este artículo.
 
 {% include gallery caption="Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada." %}
-
-## References
-
-[^Huang2001]: E, W. & Huang, Z., 2001. Matching Conditions in Atomistic-Continuum Modeling of Materials. _arXiv.org_, (13), p.135501. Available at: [http://arxiv.org/abs/cond-mat/0106615v1](http://arxiv.org/abs/cond-mat/0106615v1){:target="_blank"}.
