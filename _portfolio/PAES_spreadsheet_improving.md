@@ -92,7 +92,7 @@ Algunas de las imágenes que muestran la planilla original se muestran a continu
 
 ## La Propuesta
 
-Por supuesto, la propueta resolvería las solicitudes inciales pero de acuerdo a las necesidades que parecían proyectarse, se agregaron nuevas ideas que derechamente me pareció "buena idea" incluir. El detalle de las soluciones agregadas es el siguiente:
+Por supuesto, la propuesta resolvería las solicitudes inciales pero de acuerdo a las necesidades que parecían proyectarse, se agregaron nuevas ideas que derechamente me pareció "buena idea" incluir. El detalle de las soluciones agregadas es el siguiente:
 
 1. Una hoja de configuración de la planilla completa. Así se <u>centralizan los parámetros de control</u> del entorno de estudio.
 2. Hacer que la semaforización sea variable y dependiente de el set de celdas que corresponda a cada prueba. Esto <u>agregaría una cualidad adaptativa</u> al instrumento.
@@ -131,18 +131,13 @@ La construcción de la planilla inicia con el diseño estético para luego estab
 
 </div>
 
-{% highlight javascript linenos %}
-function Macroquitadodefiltros() {
-  spreadsheet.getRange('B4:AQ113').activate();
-  spreadsheet.getActiveSheet().getFilter().remove();
-  spreadsheet.getRange('B4:AQ113').activate();
-  spreadsheet.getRange('B4:AQ113').createFilter();
-};
-{% endhighlight %}
-
 ## Resultados y Análisis
 
+La planilla piloto final puede ser analizada en función de sus hojas, ya que cada una se creó con el fin de conducir el proceso de análisis que se hace a nivel del colegio. Por esta razón, a continuación se muestra el detalle de cada una de las hojas que describen a este trabajo.
+
 ### Hoja de Settings (configuración)
+
+Esta hoja se construyó con la función de centralizar los parámetros más importantes que generarían la estética y clasificación visual de los elementos dentro de los análisis. 
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png"></a>
 	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png" title="Hoja de Settings">Hoja qu epermite modificar parámetros</a>.</figcaption>
@@ -168,6 +163,15 @@ function Macroquitadodefiltros() {
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/mensajes_ui.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/mensajes_ui.png"></a>
 	<figcaption>Trasladador y mensajes de interfaz de usuario</figcaption>
 </figure>
+
+{% highlight javascript linenos %}
+function Macroquitadodefiltros() {
+  spreadsheet.getRange('B4:AQ113').activate();
+  spreadsheet.getActiveSheet().getFilter().remove();
+  spreadsheet.getRange('B4:AQ113').activate();
+  spreadsheet.getRange('B4:AQ113').createFilter();
+};
+{% endhighlight %}
 
 ### Hoja de Análisis para Docentes
 
