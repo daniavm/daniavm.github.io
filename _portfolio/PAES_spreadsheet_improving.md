@@ -92,45 +92,42 @@ Algunas de las imágenes que muestran la planilla original se muestran a continu
 
 ## La Propuesta
 
-Por supuesto, la propuesta resolvería las solicitudes inciales pero de acuerdo a las necesidades que parecían proyectarse, se agregaron nuevas ideas que derechamente me pareció "buena idea" incluir. El detalle de las soluciones agregadas es el siguiente:
+Además de abordar los desafíos iniciales, mi propuesta incluye nuevas ideas que consideré fundamentales:
 
-1. Una hoja de configuración de la planilla completa. Así se <u>centralizan los parámetros de control</u> del entorno de estudio.
-2. Hacer que la semaforización sea variable y dependiente de el set de celdas que corresponda a cada prueba. Esto <u>agregaría una cualidad adaptativa</u> al instrumento.
-3. Incluir las metas de distribución esperada en los gráficos de avance. Esto <u>permitiría que cada profesor visibilizara la meta</u> a medida que se van recibiendo los resultados.
-4. Una hoja de clasificación para cada uno de los grupos. Otra función que <u>centraliza la información</u> en un solo lugar.
-5. Trasladador de puntajes. Esto <u>evita las grandes jornadas de traspaso de información y disminuye los errores humanos</u> en los registros.
-6. Un analisis de población por histograma variable. Con esta herramienta <u>se puede identificar poblaciones</u> a niveles de detalle que los 4 rangos estándar no permiten.
-7. Agregar la posibilidad de construir un reporte para cada estudiante en PDF. Esto mejoraría por supuesto <u>la retroalimentación y el seguimiento de los estudiantes</u>.
-8. Integrar una herramienta de envío automático a las familias, estudiantes y profesores jefes. Esto <u>promueve la retroalimentación en distintos niveles de acción del colegio y automatiza los reportes individualizando cada uno de los avances</u>.
+1. Hoja de configuración para <u>centralizar parámetros de control</u> en un solo lugar.
+2. Semaforización <u>variable y adaptativa</u>, según el conjunto de celdas correspondiente a cada prueba.
+3. Inclusión de metas de distribución esperada en los gráficos de avance para <u>que los profesores visualicen las metas fácilmente</u>.
+4. Hoja de clasificación para cada grupo de trabajo, <u>centralizando la información</u> de manera eficiente.
+5. Trasladador de puntajes <u>para copiar y traspasar la información sin errores</u>.
+6. Análisis de población por histograma variable para <u>identificar detalles en los resultados</u>.
+7. Generación de <u>reportes personalizados en PDF</u> para mejorar la retroalimentación y el seguimiento de los estudiantes.
+8. Integración de herramienta de envío automático para <u>promover la retroalimentación en distintos niveles</u> del colegio.
 
-Finalmente, la modificación probablemente más radical es la de <u>pasar del entorno de Excel a una planilla de Google Sheets</u>. La necesidad de esto pasa principalmente por la filosofía de trabajo que Excel tiene y que no promueve una interacción fácil en grupos de trabajo cuyos privilegios de acceso son distintos y requieren funciones adaptables a cada necesidad. Esto además de la dificultad existente para relacionar herramientas de automatización como el envío de correspondencia masiva por terceros.
+Por último, una de las modificaciones más significativas es pasar del entorno de Excel a Google Sheets para fomentar la colaboración en grupos de trabajo con diferentes niveles de acceso y mayor adaptabilidad a las necesidades específicas. Además, facilita la integración de herramientas de automatización, como el envío de correspondencia masiva.
 
 ## Diseño e Implementación
 
-La construcción de la planilla inicia con el diseño estético para luego establecer la parte funcional. Se construyeron múltiples hojas que representarían los distintos entornos de trabajo. El detalle es el siguiente:
+La planilla se construyó en varias hojas, cada una con un propósito específico:
 
 </div>
 
 | **Nombre de Hoja**                      | **Descripción**                                                    |
 |-------------------------------|--------------------------------------------------------------------|
-| **GLOBAL_PARAMETERS**            | Guardará los parámetros de los cursos disponibles para generar la lista de estudiantes, las tablas de conversión de puntajes y opciones para botones dentro de las otras hojas.           |
-| **SETTINGS**                      | Panel de control inicial para que el usuario modifique parámetros que tienen que ver con los análisis posteriores. Esto no incluye la clasificación de estudiantes por grupo.                                                      |
-| **GRUPOS**                       | Presenta la lista de estudiantes y una clasificación opr grupos y especialidades que dependen de los valores ingresados en SETTINGS. |
-| **TRASLADADOR DE PUNTAJES**            | Permite copiar directamente los ID de cada estudiante y su puntaje con el fin de organizarlos y traspasar la información de manera directa a la base de datos de la planilla.       |
-| **BASE DE DATOS**           | Puntajes en cada una de las jornadas de ensayo clasificados por tipo y "semaforizados" de acuerdo a los puntajes ingresados en SETTINGS       |
+| **GLOBAL_PARAMETERS**            | Guarda los parámetros de los cursos disponibles, tablas de conversión y opciones para botones.           |
+| **SETTINGS**                      | Panel de control inicial para modificar parámetros de análisis.                                                     |
+| **GRUPOS**                       | Lista de estudiantes clasificados por grupos y especialidades. |
+| **TRASLADADOR DE PUNTAJES**            | Permite copiar y traspasar la información de puntajes.       |
+| **BASE DE DATOS**           | Almacena los puntajes de cada jornada de ensayo y su respectiva semaforización.       |
 | **ANÁLISIS C. LECTORA**          | Visualización de la información almacenada en la base de datos para la prueba de Comprensión Lectora                              |
-| **ANÁLISIS MATEMÁTICA**          | Visualización de la información almacenada en la base de datos para la prueba de Comprensión Matemática                       |
-| **ANÁLISIS M2** | Visualización de la información almacenada en la base de datos para la prueba de M2                      |
-| **ANÁLISIS HISTORIA**                     | Visualización de la información almacenada en la base de datos para la prueba de Historia |
-| **ANÁLISIS CIENCIAS**      | Visualización de la información almacenada en la base de datos para la prueba de Ciencias     |
-| **PREPARACIÓN ENVÍO DE REPORTES**         | Entorno para seleccionar a los estudiantes a los que se enviará el reporte en PDF. Tiene también las opciones de enviar la información a apoderados y profesores jefe de cada curso.         |
-| **FORMATO DE REPORTES**         | Formato que se utilizará para crear el PDF de cada reporte y que tiene la posibilidad de seleccionar a cada estudiante para ver sus avances generales.         |
+| **ANÁLISIS MATEMÁTICA, ANÁLISIS M2, ANÁLISIS HISTORIA, ANÁLISIS CIENCIAS**          | Visualización de los puntajes por prueba.                       |
+| **PREPARACIÓN ENVÍO DE REPORTES**         | Permite seleccionar estudiantes para enviar reportes en PDF a apoderados y profesores.         |
+| **FORMATO DE REPORTES**         | Define el formato de los reportes en PDF.         |
 
 ## Resultados y Análisis
 
 <div align="justify" markdown="1">
 
-La planilla piloto final puede ser analizada en función de sus hojas, ya que cada una se creó con el fin de conducir el proceso de análisis que se hace a nivel del colegio. Por esta razón, a continuación se muestra el detalle de cada una de las hojas que describen a este trabajo.
+El análisis de la planilla piloto se basa en las diferentes hojas creadas para cada proceso de análisis del colegio. A continuación, se detallan cada una de ellas para describir mi trabajo en profundidad.
 
 
 ### Hoja de Settings (configuración)
