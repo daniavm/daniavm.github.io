@@ -9,12 +9,7 @@ toc_sticky: true
 header:
   image: /assets/images/portfolio_images/timesheetJsBanner.jpg
   teaser: assets/images/portfolio_images/timesheetJsBanner.jpg
-sidebar:
-  - title: "Mi Rol"
-    text: "Programador y Analista de Datos"
 
-  - title: "Responsabilidades"
-    text: "Mejorar o reconstruir la planilla de análisis de ensayos PAES existente en el colegio."
 gallery:
   - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png
     image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png
