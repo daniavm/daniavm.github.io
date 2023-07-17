@@ -60,9 +60,9 @@ gallery:
 ## Introduction
 
 <div align="justify" markdown="1">
-En cada colegio de educación media, es común tener un plan de trabajo para analizar los datos de los estudiantes de 4° medio, especialmente cuando se trata de las pruebas de ingreso a la educación superior (PAES). Identificar características comunes y mejorar este tipo de herramientas ha sido mi objetivo principal. Mi proyecto se centra en crear funciones que proporcionen información valiosa para la toma de decisiones pedagógicas.
+En cada colegio de educación media, es común tener un plan de trabajo para analizar los datos de los estudiantes de 4° medio, especialmente cuando se trata de las pruebas de ingreso a la educación superior (PAES). Identificar características comunes y mejorar este tipo de herramientas ha sido mi objetivo principal. Mi proyecto se centra en crear funciones que proporcionen información valiosa para la toma de decisiones pedagógicas y disminuir los tiempos de trabajo de mis pares.
 
-## Estudiando el problema
+## Abordando el problema
 
 Mi labor inicial consistió en modificar una hoja de cálculo de Excel utilizada en el colegio para analizar los ensayos de los estudiantes de 4° medio, como parte de su preparación para la Prueba de Acceso a la Educación Superior (PAES). Tras una revisión exhaustiva, identifiqué las siguientes características clave:
 
@@ -90,7 +90,7 @@ Algunas de las imágenes que muestran la planilla original se muestran a continu
 	<figcaption>Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada. Las imágenes restantes se incluyen en la galería al final de este artículo.</figcaption>
 </figure>
 
-## La Propuesta
+## Mi Propuesta
 
 Además de abordar los desafíos iniciales, mi propuesta incluye nuevas ideas que consideré fundamentales:
 
