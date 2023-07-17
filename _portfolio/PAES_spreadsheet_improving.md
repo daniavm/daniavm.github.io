@@ -138,6 +138,13 @@ La planilla piloto final puede ser analizada en función de sus hojas, ya que ca
 ### Hoja de Settings (configuración)
 
 Esta hoja se construyó con la función de centralizar los parámetros más importantes que generarían la estética y clasificación visual de los elementos dentro de los análisis. 
+
+En la columna A y B se encuentran los selectores de los cursos que busca mostrarse en la planilla. Estos cursos están ligados directamente a la base de datos de estudiantes del colegio.
+
+Se incluyeron 2 secciones que tienen que ver con la cantidad de grupos de estudiantes que darán cierta prueba. Esto está relacionado con la estrategia de trabajo del colegio pero es adaptable a un contexto incluso donde haya solo un grupo de estudiantes. En estas secciones es posible agregar el nombre del docente que tiene a cargo cada grupo y el nombre d ela asignatura que se tenga en el colegio.
+
+Se incluyeron dos herramientas para monitorear el logro de las metas: por puntaje y por distribución. Las metas por puntaje responden a un puntaje físico esparado para alcanzar por la generación mientras que las metas por distribución son una cantidad de estudiantes que se espera que se encuentren en cada uno de los rangos de logro. Adjunto a esto se agregó un parámetro de tolerancia llamado "Porcentaje de Error" que busca regular los resultados obtenidos a lo largo del tiempo. Un ejemplo de uso del parámetro anterior es que si un curso alcanza su meta de 750 puntos no será considerado como logro hasta que la desviación de los resultados obtenidos no haya superado el rango de tolerancia, es decir un 3% en este caso.
+
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png"></a>
 	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png" title="Hoja de Settings">Hoja qu epermite modificar parámetros</a>.</figcaption>
