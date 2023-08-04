@@ -163,7 +163,10 @@ Esta clasificación entregará información posterior respecto de cómo van evol
 
 ### Herramienta de Traslado de Puntajes
 
-En mi opinión, una de las herramientas que ha traído la mayor reducción de horas de trabajo por parte de la herramienta. El trasladador de puntajes resuelve el problema del traspaso de información a mano. En el colegio se pasaba cada uno de los puntajes una vez que se recibía de parte del corrector automático ya que los estudiantes no necesariamente estaban organizados de igual manera en la lista de un sistema y otro. Junto con eso, el cambio de una pregunta que quizás estaba mal corregida o cualquier modificación que pudiera haber en el ensayo suponía un volumen de energía invertida tremenda por parte de la persona encargada. 
+En mi opinión, una de las herramientas que ha traído la mayor reducción de horas de trabajo. El trasladador de puntajes resuelve el problema del traspaso de información a mano. En el colegio se pasaba cada uno de los puntajes una vez que se recibía de parte del corrector automático ya que los estudiantes no necesariamente estaban organizados de igual manera en la lista de un sistema y otro. Junto con eso, el cambio de una pregunta que quizás estaba mal corregida o cualquier modificación que pudiera haber en el ensayo suponía un volumen de energía invertida tremenda por parte de la persona encargada.
+Aplicar esta solución redujo literalmente días de trabajo y gestión, ya que permitía tomar la información de parte del corrector, pegarla en la planilla para organizarla y finalmente trasladarla a la base de datos de manera totalmente automática.
+
+Junto a esto se diseñó toda una interfaz gráfica a base de un botón y selectores que hacen el traslado previniendo incluso que se produzcan errores posterior al envío. Para esto último se programó en Google Sheets mensajes de confirmación para el usuario antes de hacer el traspaso.
 
 <figure class="half">
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/trasladador.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/trasladador.png"></a>
