@@ -148,7 +148,9 @@ Con esta hoja, se logra centralizar y ajustar los parámetros esenciales para el
 ### Clasificación de Estudiantes por Grupos
 
 
-La siguiente hoja representa el primer entorno donde se incluyen los datos de los estudiantes y se realiza una clasificación más detallada por grupos. En esta etapa, el objetivo principal es organizar la información por grupos específicos.
+La siguiente hoja representa el primer entorno donde se incluyen los datos de los estudiantes y se realiza una clasificación más detallada por grupos. En esta etapa, el objetivo principal es organizar la información por grupos específicos de trabajo en el colegio.
+
+Esta clasificación entregará información posterior respecto de cómo van evolucionando los grupos de trabajo para así tomar decisiones que tienen que ver con el desempeño docente o la redistribución de estudiantes de un grupo a otro. Esto se verá posteriormente en las hojas de cada una de las asignaturas. 
 
 
 <figure>
@@ -156,7 +158,12 @@ La siguiente hoja representa el primer entorno donde se incluyen los datos de lo
 	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png" title="Hoja de Clasificacion de Grupos">Hoja de clasificación de grupos por cada una de las pruebas. Se adjunta también una clasificación para la especialidad en la prueba de ciencias. </a>.</figcaption>
 </figure>
 
+
+
+
 ### Herramienta de Traslado de Puntajes
+
+En mi opinión, una de las herramientas que ha traído la mayor reducción de horas de trabajo por parte de la herramienta. El trasladador de puntajes resuelve el problema del traspaso de información a mano. En el colegio se pasaba cada uno de los puntajes una vez que se recibía de parte del corrector automático ya que los estudiantes no necesariamente estaban organizados de igual manera en la lista de un sistema y otro. Junto con eso, el cambio de una pregunta que quizás estaba mal corregida o cualquier modificación que pudiera haber en el ensayo suponía un volumen de energía invertida tremenda por parte de la persona encargada. 
 
 <figure class="half">
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/trasladador.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/trasladador.png"></a>
