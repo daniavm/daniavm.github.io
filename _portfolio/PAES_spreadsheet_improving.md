@@ -174,6 +174,8 @@ Junto a esto se diseñó toda una interfaz gráfica a base de un botón y select
 	<figcaption>Trasladador y mensajes de interfaz de usuario</figcaption>
 </figure>
 
+Como comentario complementario, resaltaré un código que agregué al script para así mantener los filtros que existen en la hoja de base de datos en caso de que los usuarios tengan algún uso en ese entorno.
+
 {% highlight javascript linenos %}
 function Macroquitadodefiltros() {
   spreadsheet.getRange('B4:AQ113').activate();
