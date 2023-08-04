@@ -187,7 +187,7 @@ function Macroquitadodefiltros() {
 
 
 ### Base de Datos de Puntajes
-
+x
 Esta hoja queda como remanente del sistema original ya que había una familiaridad con su uso de parte del colegio. Aquí se pueden hacer filtros de información por cad auno de los estudiantes de cada prueba, pero la filosofía sugerida de uso fue que realmente no había que modificar nada de esta parte ya que se encontraban las mismas herramientas en las secciones de análisis. 
 
 <figure>
@@ -200,6 +200,18 @@ Aquí se puede ver también una de las primeras consecuencias de los cambios en 
 </div>
 
 ### Análisis Personalizado para Docentes
+
+En este punto la riqueza de la información se basa fundamentalmente en la organización de la información y las herrameintas que permiten los estudios en mayor detalle. En términos concretos, las mejoras aplicadas fueron las siguientes:
+
+1. Se agregaron a las tablas anteriores los rangos de colores que se configuran desde la hoja SETTINGS (y son variables de acuerdo a esta configuración).
+2. Se agregó un gráfico de crecimiento para cada uno de los rangos de logro lo que mejora la visibilización del comportamiento de la población.
+3. Se agregaron indicadores para el alcance de metas. Muestra un punto rojo si aún se está lejos de la meta de distribución propuesta, verde si ya se ha alcanzado la meta esperada y amarillo si se está cerca de la meta buscada.
+4. Se agregó un gráfico de distribuciones donde se muestra la meta a alcanzar.
+5. Se agregó una herramienta de análisis de poblaciones para quienes deseen indagar de manera más fina en los resultados (histograma azul). Con esta herramientas se puede seleccionar el ensayo específico para hacer cortes variados en los bins del histograma. 
+6. Se agregó la estadística para cada uno de los grupos de trabajo, su promedio acumulado, error en dispersión y puntaje aproximado ponderado.
+7. Se clasifican los grupos "outlayer" para identificar problemas significativos.
+8. Se agregó una tabla de puntajes para las asignatura correspondiente además de un gráfico de crecimiento por estudiante y una proyección lineal de los resultados a la fecha. Esta sección busca disminuir la manipulación de la hoja "Base de Datos" para así no ensuciar la información que pueda contener. 
+
 
 <figure class="third">
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png"></a>
