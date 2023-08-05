@@ -275,9 +275,18 @@ Junto con lo anterior, la planilla trabaja con una carpeta en Google Drive que p
 
 </div>
 
-## References
+## Proyecciones
 
-[^Huang2001]: E, W. & Huang, Z., 2001. Matching Conditions in Atomistic-Continuum Modeling of Materials. _arXiv.org_, (13), p.135501. Available at: [http://arxiv.org/abs/cond-mat/0106615v1](http://arxiv.org/abs/cond-mat/0106615v1){:target="_blank"}.
+<div align="justify" markdown="1">
+
+A la fecha la planilla ha funcionado bien con algunas correcciones menores. Creo que a manera de mejora, trataré de implementar el análisis de items por dificultad y habilidades (que es algo que en el colegio hacen de manera regular en este tipo de ensayos pero es un elemento que no se utiliza hasta ahora). Esto podría enriquecer el análisis y también aportar nuevas variables a la toma de decisiones. 
+
+Otro elemento que podría ser interesante a la hora de la implementación es el estudio de los grupos. Creo que hay una posibilidad de aplicar técnicas de clustering que permitiría afinar aquellos grupos de acuerdo a un estudio más complejo de variables (como k-means o similar). 
+
+Finalmente, si bien no ha sido un estudio completamente acabado el que se aplicó en estos cambios (podría haberme aferrado a algún tipo de bibliografía que justificara mejor las modificaciones), los aportes actuales han sido notables en términos de la disminución de los tiempos de trabajo de quienes estan involucrados con el proceso seguimiento de los ensayos. La experiencia ha sido positiva por todos quienes se ha tomado algún tipo de opinión y han incluso compartido sus mejoras para poder hacer aún mejor la modificación.
+
+
+</div>
 
 ## Galería de Imágenes
 
