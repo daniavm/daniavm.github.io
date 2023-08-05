@@ -91,7 +91,7 @@ Algunas de las imágenes que muestran la planilla original se muestran a continu
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/semaforizacion.png"></a>
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/resumen.png"></a>
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/grafico.png"></a>
-	<figcaption>Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada. Las imágenes restantes se incluyen en la galería al final de este artículo.</figcaption>
+	<figcaption>Galería 1: Imágenes que describen algunas de las funciones antes mencionadas de la planilla original trabajada. Las imágenes restantes se incluyen en la galería al final de este artículo.</figcaption>
 </figure>
 
 ## Mi Propuesta
@@ -142,7 +142,7 @@ En las columnas A y B, se encuentran los selectores de los cursos que se mostrar
 
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png"></a>
-	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png" title="Hoja de Settings">Hoja de la planilla modificada que permite cambiar los parámetros de clasificación de la información, resultados, grupos y elementos visuales.</a>.</figcaption>
+	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/settings.png" title="Hoja de Settings">Imagen 1: Hoja de la planilla modificada que permite cambiar los parámetros de clasificación de la información, resultados, grupos y elementos visuales.</a>.</figcaption>
 </figure>
 
 Además, se incluyeron dos secciones relacionadas con la cantidad de grupos de estudiantes que presentarán ciertas pruebas. Estas secciones son adaptables a cualquier contexto, incluso si solo hay un grupo de estudiantes. Aquí es posible agregar el nombre del docente a cargo de cada grupo y el nombre de la asignatura que se imparte en el colegio.
@@ -164,7 +164,7 @@ Esta clasificación entregará información posterior respecto de cómo van evol
 
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png"></a>
-	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png" title="Hoja de Clasificacion de Grupos">Hoja de clasificación de grupos por cada una de las pruebas. Se adjunta también una clasificación para la especialidad en la prueba de ciencias. </a>.</figcaption>
+	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png" title="Hoja de Clasificacion de Grupos">Imagen 2: Hoja de clasificación de grupos por cada una de las pruebas. Se adjunta también una clasificación para la especialidad en la prueba de ciencias. </a>.</figcaption>
 </figure>
 
 
@@ -180,7 +180,7 @@ Junto a esto se diseñó toda una interfaz gráfica a base de un botón y select
 <figure class="half">
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/trasladador.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/trasladador.png"></a>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/mensajes_ui.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/mensajes_ui.png"></a>
-	<figcaption>Trasladador y mensajes de interfaz de usuario</figcaption>
+	<figcaption>Galería 2: Trasladador y mensajes de interfaz de usuario</figcaption>
 </figure>
 
 Como comentario complementario, resaltaré un código que agregué al script para así mantener los filtros que existen en la hoja de base de datos en caso de que los usuarios tengan algún uso en ese entorno.
@@ -201,7 +201,7 @@ Esta hoja queda como remanente del sistema original ya que había una familiarid
 
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png"></a>
-	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png" title="Hoja de Base de Datos">Base de Datos</a>.</figcaption>
+	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png" title="Hoja de Base de Datos">Imagen 2: Base de Datos</a>.</figcaption>
 </figure>
 
 Aquí se puede ver también una de las primeras consecuencias de los cambios en la hoja de SETTINGS, ya que cada uno de los colores mostrados en los puntajes responde a los rangos llenados en la hoja inicial.
@@ -226,7 +226,7 @@ En este punto la riqueza de la información se basa fundamentalmente en la organ
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png"></a>
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_grupal.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_grupal.png"></a>
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_estudiante.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_estudiante.png"></a>
-	<figcaption>Hoja de análisis</figcaption>
+	<figcaption>Galería 3: Hoja de análisis</figcaption>
 </figure>
 
 ### Envío masivo de reportes en PDF
