@@ -201,7 +201,7 @@ Esta hoja queda como remanente del sistema original ya que había una familiarid
 
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png"></a>
-	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png" title="Hoja de Base de Datos">Imagen 2: Base de Datos</a>.</figcaption>
+	<figcaption><a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/base_datos.png" title="Hoja de Base de Datos">Imagen 3: Resultado final del entorno que rodea la planilla de Base de Datos</a>.</figcaption>
 </figure>
 
 Aquí se puede ver también una de las primeras consecuencias de los cambios en la hoja de SETTINGS, ya que cada uno de los colores mostrados en los puntajes responde a los rangos llenados en la hoja inicial.
@@ -226,7 +226,7 @@ En este punto la riqueza de la información se basa fundamentalmente en la organ
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png"></a>
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_grupal.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_grupal.png"></a>
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_estudiante.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_estudiante.png"></a>
-	<figcaption>Galería 3: Hoja de análisis</figcaption>
+	<figcaption>Galería 3: Aquí se muestran los distintos elementos incluidos en la hoja de análisis. Todos los elementos estan lligados a la hoja de SETTINGS para que haya coherencia entre la configuración y la organización visual. El histograma en azul es aquel que permite el análisis fino de poblaciones y en la tercera imagen se ven los gráficos de evolución para cada estudiante junto con su predicción lineal de los ensayos. El mismo gráfico de evolución se puede ver también en los rangos de logro para visualizar el avance de las poblaciones. </figcaption>
 </figure>
 
 ### Envío masivo de reportes en PDF
@@ -241,7 +241,7 @@ Junto con lo anterior, la planilla trabaja con una carpeta en Google Drive que p
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/entorno_envio_reportes.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/entorno_envio_reportes.png"></a>
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_1.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_1.png"></a>
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_2.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_2.png"></a>
-	<figcaption>Aquí se muestran imagenes de lo que sería el entorno de envío de reportes.</figcaption>
+	<figcaption>Galería 4: Aquí se muestran imagenes de lo que sería el entorno de envío de reportes.</figcaption>
 </figure>
 
 
@@ -252,8 +252,8 @@ Junto con lo anterior, la planilla trabaja con una carpeta en Google Drive que p
 - Se logró una personalización de colores, metas, rangos y grupos que no depende de un programador que administre la planilla sino de quien configura la hoja SETTINGS.
 - Se hizo una simplificación en la clasificación por grupos para expresar los resultados.
 - Se diseñó un script que traslada los puntajes desde el corrector a la base de datos, lo que disminuyó los tiempos de trabajo en el orden de los días, simplificó el cambio de los puntajes debido a posibles errores posteriores y disminuyó los errores de traslado que se producen al hacerlo manual.
-- En el entorno de análisis se agregaron gráficos de evolución por rango, histogramas de análisis fino (y variable), indicadores de alcance de metas, gráficos de avance en puntajes estudiantiles y una proyección lineal de resultados para el factor "predictivo". 
-- Se reconstruyó la base de datos original para que fuese dependiente de los parámetros de SETTINGS y así el usuario no tenga que involucrarse más con funciones avanzadas de Excel (o en este caso Google Sheets) para lograr el trabajo de organización visual. Con esto nuevamente se reducen al orden de horas los tiempos de trabajo.
+- En el entorno de análisis se agregaron gráficos de evolución por rango, histogramas de análisis fino (y variable), indicadores de alcance de metas, gráficos de avance en puntajes estudiantiles y una proyección lineal de resultados para fomentar la mirada "predictivo" en los análisis estadísticos. 
+- Se reconstruyó la base de datos original para que fuese dependiente de los parámetros de SETTINGS y así el usuario no tenga que involucrarse más con funciones avanzadas de Excel (o en este caso Google Sheets). Con esto nuevamente se reducen al orden de horas los tiempos de trabajo.
 - Se agregó un script que permite el envío de reportería a los involucrados del proceso de aprendizaje de estos ensayos. Con esto se da un salto importante en temas de retroalimentación, seguimiento, documentación y alfabetización digital en el colegio. 
 
 ## References
