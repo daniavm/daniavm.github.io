@@ -1,5 +1,5 @@
 ---
-title: "Dentro de mi mundo - Un vistazo a quien soy"
+title: "Dentro de mi - Un vistazo a quien soy"
 permalink: /about/
 date: 2023-08-05T07:00:00+03:00
 ---
@@ -8,7 +8,16 @@ date: 2023-08-05T07:00:00+03:00
 
 ¡Hola! Soy Daniel Valdés, un apasionado astrónomo, educador y analista de datos con una curiosidad que espero se pueda calificar a lo menos de "grande". Mi trayectoria ha estado impulsada por una pasión por la astronomía, la ciencia, la pedagogía y mi conocimiento de la tecnología, pero principalmente me gustaría decir que es por la contínua búsqueda de experiencias que permitan a quienes me rodean avanzar en sus vidas apelando al autodescubrimiento, al desarrollo de sus habilidades y al alucinante deseo de explorar nuevos horizontes. 
 
-En esta última idea he querido acuñar en mis relatos el concepto de "aprendanza", que podría ser un infantil intento de consolidar las ideas de "aprendizaje" y "enseñanza" en un mismo término ya que, de lo que he podido aprender a lo largo de mi vida, no se pueden describir la una sin referirse también a la otra [^1]. Así que si tuviera que corregir algo de este primer párrafo, quizás sería la idea de que soy alguien que "enseña" o un "educador" por la idea de que probablemente apelo a ser un "aprendanzante" de mi vida y busco que quienes me rodean puedan a apelar a descubrir algo de lo que quiere decir practicar algo así. 
+En esta última idea he querido acuñar en mis relatos el concepto de "aprendanza", que podría ser un infantil intento de consolidar las ideas de "aprendizaje" y "enseñanza", pero de lo que he podido aprender a lo largo de mi vida, no se pueden describir la una sin referirse también a la otra [^1]. Así que si tuviera que corregir algo de este primer párrafo, quizás sería la idea de que soy alguien que "enseña" o un "educador" por la idea de que probablemente apelo a ser un "aprendanzante" experimentado y busco que quienes me rodean puedan a apelar a descubrir algo de lo que quiere decir practicar algo así. 
+
+Mi formación académica incluyó inicialmente la carrera de astronomía que me dio la posibilidad de entrar en el mundo de la programación y el análisis de datos, pero no fue a lo que me dediqué principalmente a pesar de adquirir muchas de estas habilidades y saberes. Decidí que a pesar de aprender muchísimo en ese lugar, no sería posible completar mi educación si no había alguien a quien transmitiera algo de lo que descubría, así que terminé mis estudios en pedagogía para también sacar una carrera de profesor ahí. 
+
+Astrónomo y profesor suenan como a algo importante - me repetía a veces a mi mismo - , pero creo que es solo un decir. Nunca entendí "una carrera como un fin" para ser yo, sino más bien como una herramienta "para buscar quien era". Así que utilicé lo que aprendí de ambos mundos para así desenvolverme en una de las labores más complejas que he podido tomar, ser profesor.
+
+
+
+
+
 
 A lo largo de mi vida, he combinado la aprendanza - un concepto que he querido acuñar en mi mente  - en áreas como Física y Astronomía con una inquietud por la tecnología, la programación y el impacto que podría tener cada una de estas cosas en la pedagogía. Mi entusiasmo por aprender me llevó a sumergirme en el análisis de datos, donde he encontrado un fascinante mundo de oportunidades para optimizar y mejorar los entornos educativos, así que es el área donde actualmente me desempeño para encontrar un punto en donde estos mundos empiecen a comunicarse.
 
