@@ -31,9 +31,12 @@ Siempre estoy dispuesto a explorar nuevos desafíos y descubrir lo que el futuro
 
 ¡Espero poder conocerte algún día para compartir una travesía en busca del conocimiento y la creatividad!
 
-Nos vemos en el Principia.
+<div align="right">
+¡Nos vemos en el Principia!
 
 DV
+
+</div>
 
 
 [^1]: Me parece una propiedad fascinante y curiosa la que tiene esta idea ya que el camino para producir nuestros cambios personales, nuestra capacidad de crecer, para "iluminarnos" como dirían muchos, se parece tremendamente a las propiedades que la luz en sí posee. La luz tiene una naturaleza dual (no es ni onda ni partícula sino que algo que esta en el medio y depende de cómo la trabajemos) y el proceso de "iluminarnos" también. No hay buena enseñanza si no eres un(a) buen(a) aprendiz. De la misma manera que no encontrarás un(a) buen(a) profesor(a) si no es una persona que se permita aprender de quienes son sus aprendices. 
