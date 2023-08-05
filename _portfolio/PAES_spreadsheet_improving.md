@@ -50,6 +50,15 @@ gallery:
   - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/mensajes_ui.png
     image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/mensajes_ui.png
     alt: "placeholder image 13"
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/entorno_envio_reportes.png
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/entorno_envio_reportes.png
+    alt: "placeholder image 14"
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/mensajes_ui.png
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_1.png
+    alt: "placeholder image 15"
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/mensajes_ui.png
+    image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_2.png
+    alt: "placeholder image 16"
 
 ---
 ## Introduction
@@ -187,7 +196,7 @@ function Macroquitadodefiltros() {
 
 
 ### Base de Datos de Puntajes
-x
+
 Esta hoja queda como remanente del sistema original ya que había una familiaridad con su uso de parte del colegio. Aquí se pueden hacer filtros de información por cad auno de los estudiantes de cada prueba, pero la filosofía sugerida de uso fue que realmente no había que modificar nada de esta parte ya que se encontraban las mismas herramientas en las secciones de análisis. 
 
 <figure>
@@ -220,6 +229,17 @@ En este punto la riqueza de la información se basa fundamentalmente en la organ
 	<figcaption>Hoja de análisis</figcaption>
 </figure>
 
+### Envío masivo de reportes en PDF
+
+Finalmente, una de las grandes funciones de esta planilla es la posibilidad de enviar a todos involucrados la información mínima que se requiere de estos ensayos. Se tiene la posibilidad de seleccionar de una lista previamente acordada los correos de estudiantes, apoderados, coordinadores del área de 3° y 4° medio y profesores jefes.
+Esta función no existía en la planilla Excel original y sería una complicación tremenda el hacerlo en el entorno de Microsoft - más a sabiendas que el colegio requería comenzar a formentar el uso de las herramientas de Google en su comunidad-. Los beneficios que ha traido esta función son enormes desde el punto de vista de la retroalliemntación y el seguimiento de los avances en estas pruebas de ensayo. 
+
+<figure class="third">
+	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/entorno_envio_reportes.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/entorno_envio_reportes.png"></a>
+  <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_1.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_1.png"></a>
+  <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/areporte_2.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_2.png"></a>
+	<figcaption>Hoja de análisis</figcaption>
+</figure>
 
 
 ## Conclusiones
