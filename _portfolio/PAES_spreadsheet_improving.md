@@ -153,14 +153,18 @@ Por último, se incluyen los rangos de respuestas correctas (RC) correspondiente
 
 Con esta hoja, se logra centralizar y ajustar los parámetros esenciales para el análisis de los resultados y garantizar una presentación visual clara y precisa en las siguientes etapas del proyecto.
 
+</div>
+
 
 ### Clasificación de Estudiantes por Grupos
 
+<div align="justify" markdown="1">
 
 La siguiente hoja representa el primer entorno donde se incluyen los datos de los estudiantes y se realiza una clasificación más detallada por grupos. En esta etapa, el objetivo principal es organizar la información por grupos específicos de trabajo en el colegio.
 
 Esta clasificación entregará información posterior respecto de cómo van evolucionando los grupos de trabajo para así tomar decisiones que tienen que ver con el desempeño docente o la redistribución de estudiantes de un grupo a otro. Esto se verá posteriormente en las hojas de cada una de las asignaturas. 
 
+</div>
 
 <figure>
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/clasificacion_grupos.png"></a>
@@ -172,6 +176,7 @@ Esta clasificación entregará información posterior respecto de cómo van evol
 
 ### Herramienta de Traslado de Puntajes
 
+<div align="justify" markdown="1">
 En mi opinión, una de las herramientas que ha traído la mayor reducción de horas de trabajo. El trasladador de puntajes resuelve el problema del traspaso de información a mano. En el colegio se pasaba cada uno de los puntajes una vez que se recibía de parte del corrector automático ya que los estudiantes no necesariamente estaban organizados de igual manera en la lista de un sistema y otro. Junto con eso, el cambio de una pregunta que quizás estaba mal corregida o cualquier modificación que pudiera haber en el ensayo suponía un volumen de energía invertida tremenda por parte de la persona encargada.
 Aplicar esta solución redujo literalmente días de trabajo y gestión, ya que permitía tomar la información de parte del corrector, pegarla en la planilla para organizarla y finalmente trasladarla a la base de datos de manera totalmente automática.
 
@@ -185,6 +190,8 @@ Junto a esto se diseñó toda una interfaz gráfica a base de un botón y select
 
 Como comentario complementario, resaltaré un código que agregué al script para así mantener los filtros que existen en la hoja de base de datos en caso de que los usuarios tengan algún uso en ese entorno.
 
+</div>
+
 {% highlight javascript linenos %}
 function Macroquitadodefiltros() {
   spreadsheet.getRange('B4:AQ113').activate();
@@ -196,6 +203,8 @@ function Macroquitadodefiltros() {
 
 
 ### Base de Datos de Puntajes
+
+<div align="justify" markdown="1">
 
 Esta hoja queda como remanente del sistema original ya que había una familiaridad con su uso de parte del colegio. Aquí se pueden hacer filtros de información por cad auno de los estudiantes de cada prueba, pero la filosofía sugerida de uso fue que realmente no había que modificar nada de esta parte ya que se encontraban las mismas herramientas en las secciones de análisis. 
 
@@ -210,6 +219,8 @@ Aquí se puede ver también una de las primeras consecuencias de los cambios en 
 
 ### Análisis Personalizado para Docentes
 
+<div align="justify" markdown="1">
+
 En este punto la riqueza de la información se basa fundamentalmente en la organización de la información y las herrameintas que permiten los estudios en mayor detalle. En términos concretos, las mejoras aplicadas fueron las siguientes:
 
 1. Se agregaron a las tablas anteriores los rangos de colores que se configuran desde la hoja SETTINGS (y son variables de acuerdo a esta configuración).
@@ -221,6 +232,7 @@ En este punto la riqueza de la información se basa fundamentalmente en la organ
 7. Se clasifican los grupos "outlayer" para identificar problemas significativos.
 8. Se agregó una tabla de puntajes para las asignatura correspondiente además de un gráfico de crecimiento por estudiante y una proyección lineal de los resultados a la fecha. Esta sección busca disminuir la manipulación de la hoja "Base de Datos" para así no ensuciar la información que pueda contener. 
 
+</div>
 
 <figure class="third">
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/analisis_asignatura.png"></a>
@@ -231,11 +243,14 @@ En este punto la riqueza de la información se basa fundamentalmente en la organ
 
 ### Envío masivo de reportes en PDF
 
+<div align="justify" markdown="1">
 Finalmente, una de las grandes funciones de esta planilla es la posibilidad de enviar a todos involucrados la información mínima que se requiere de estos ensayos. Se tiene la posibilidad de seleccionar de una lista previamente acordada los correos de estudiantes, apoderados, coordinadores del área de 3° y 4° medio y profesores jefes.
 
 Esta función no existía en la planilla Excel original y sería una complicación tremenda el hacerlo en el entorno de Microsoft - más a sabiendas que el colegio requería comenzar a formentar el uso de las herramientas de Google en su comunidad-. Los beneficios que ha traido esta función son enormes desde el punto de vista de la retroalimentación y el seguimiento de los avances en estas pruebas de ensayo. El sistema permite también seleccionar a las personas a las que se decide enviar este reporte a partir de selectores que Google Sheet permite ingresar.
 
 Junto con lo anterior, la planilla trabaja con una carpeta en Google Drive que permite almacenar cada uno de los reportes en PDF para así hacer la consulta correspondiente posterior. Todo esto de manera totalmente autónoma y automatizada. 
+
+</div>
 
 <figure class="third">
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/entorno_envio_reportes.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/entorno_envio_reportes.png"></a>
@@ -247,6 +262,8 @@ Junto con lo anterior, la planilla trabaja con una carpeta en Google Drive que p
 
 ## Conclusiones
 
+<div align="justify" markdown="1">
+
 - Se construyó un entorno basade en Google Sheets para hacer un análisis completo de los ensayos PAES en el colegio.
 - Todas las necesidades solicitadas por el colegio fueron implementadas y en conjunto con una gran cantidad de funciones y comportamientos que iban más allá de lo solicitado para así también ampliar la mirada de los alcances de la tecnología aplicada en el seguimiento de los ensayos PAES.
 - Se logró una personalización de colores, metas, rangos y grupos que no depende de un programador que administre la planilla sino de quien configura la hoja SETTINGS.
@@ -255,6 +272,8 @@ Junto con lo anterior, la planilla trabaja con una carpeta en Google Drive que p
 - En el entorno de análisis se agregaron gráficos de evolución por rango, histogramas de análisis fino (y variable), indicadores de alcance de metas, gráficos de avance en puntajes estudiantiles y una proyección lineal de resultados para fomentar la mirada "predictivo" en los análisis estadísticos. 
 - Se reconstruyó la base de datos original para que fuese dependiente de los parámetros de SETTINGS y así el usuario no tenga que involucrarse más con funciones avanzadas de Excel (o en este caso Google Sheets). Con esto nuevamente se reducen al orden de horas los tiempos de trabajo.
 - Se agregó un script que permite el envío de reportería a los involucrados del proceso de aprendizaje de estos ensayos. Con esto se da un salto importante en temas de retroalimentación, seguimiento, documentación y alfabetización digital en el colegio. 
+
+</div>
 
 ## References
 
