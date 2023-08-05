@@ -245,6 +245,14 @@ Junto con lo anterior, la planilla trabaja con una carpeta en Google Drive que p
 
 ## Conclusiones
 
+- Se construyó un entorno basade en Google Sheets para hacer un análisis completo de los ensayos PAES en el colegio.
+- Todas las necesidades solicitadas por el colegio fueron implementadas y en conjunto con una gran cantidad de funciones y comportamientos que iban más allá de lo solicitado para así también ampliar la mirada de los alcances de la tecnología aplicada en el seguimiento de los ensayos PAES.
+- Se logró una personalización de colores, metas, rangos y grupos que no depende de un programador que administre la planilla sino de quien configura la hoja SETTINGS.
+- Se hizo una simplificación en la clasificación por grupos para expresar los resultados.
+- Se diseñó un script que traslada los puntajes desde el corrector a la base de datos, lo que disminuyó los tiempos de trabajo en el orden de los días, simplificó el cambio de los puntajes debido a posibles errores posteriores y disminuyó los errores de traslado que se producen al hacerlo manual.
+- En el entorno de análisis se agregaron gráficos de evolución por rango, histogramas de análisis fino (y variable), indicadores de alcance de metas, gráficos de avance en puntajes estudiantiles y una proyección lineal de resultados para el factor "predictivo". 
+- Se reconstruyó la base de datos original para que fuese dependiente de los parámetros de SETTINGS y así el usuario no tenga que involucrarse más con funciones avanzadas de Excel (o en este caso Google Sheets) para lograr el trabajo de organización visual. Con esto nuevamente se reducen al orden de horas los tiempos de trabajo.
+- Se agregó un script que permite el envío de reportería a los involucrados del proceso de aprendizaje de estos ensayos. Con esto se da un salto importante en temas de retroalimentación, seguimiento, documentación y alfabetización digital en el colegio. 
 
 ## References
 
