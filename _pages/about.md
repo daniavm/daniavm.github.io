@@ -31,7 +31,7 @@ Siempre estoy dispuesto a explorar nuevos desafíos y descubrir lo que el futuro
 
 ¡Espero poder conocerte algún día para compartir una travesía en busca del conocimiento y la creatividad!
 
-<div align="right">
+<div align="right" markdown="1">
 ¡Nos vemos en el Principia!
 
 DV
