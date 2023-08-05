@@ -4,7 +4,7 @@ permalink: /about/
 date: 2023-08-05T07:00:00+03:00
 ---
 
-###¡Explorador de Mundos y Datos!
+### ¡Explorador de Mundos!
 
 ¡Hola! Soy Daniel Valdés, un apasionado astrónomo, educador y analista de datos con una curiosidad que espero se pueda calificar a lo menos de "grande". Mi trayectoria ha estado impulsada por una pasión por la astronomía, la ciencia, la pedagogía y mi conocimiento de la tecnología, pero principalmente me gustaría decir que es por la contínua búsqueda de /experiencias que permitan a quienes me rodean avanzar en sus vidas apelando al autodescubrimiento, al desarrollo de sus habilidades y al alucinante deseo de explorar nuevos horizontes. En esta última idea he querido acuñar en mis relatos el concepto de "aprendanza", que podría ser un infantil intento de consolidar las ideas de "aprendizaje" y "enseñanza" en un mismo término ya que, de lo que he podido aprender a lo largo de mi vida, no se pueden describir la una sin referirse también a la otra [^1]. Así que si tuviera que corregir algo de este primer párrafo, quizás sería la idea de que soy alguien que "enseña" o un "educador" por la idea de que probablemente apelo a ser un "aprendanzante" de mi vida y busco que quienes me rodean puedan a apelar a descubrir algo de lo que quiere decir practicar algo así. 
 
