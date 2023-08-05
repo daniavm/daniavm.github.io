@@ -53,10 +53,10 @@ gallery:
   - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/entorno_envio_reportes.png
     image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/entorno_envio_reportes.png
     alt: "placeholder image 14"
-  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/mensajes_ui.png
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_1.png
     image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_1.png
     alt: "placeholder image 15"
-  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/mensajes_ui.png
+  - url: /assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_2.png
     image_path: /assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_2.png
     alt: "placeholder image 16"
 
@@ -233,12 +233,13 @@ En este punto la riqueza de la información se basa fundamentalmente en la organ
 
 Finalmente, una de las grandes funciones de esta planilla es la posibilidad de enviar a todos involucrados la información mínima que se requiere de estos ensayos. Se tiene la posibilidad de seleccionar de una lista previamente acordada los correos de estudiantes, apoderados, coordinadores del área de 3° y 4° medio y profesores jefes.
 Esta función no existía en la planilla Excel original y sería una complicación tremenda el hacerlo en el entorno de Microsoft - más a sabiendas que el colegio requería comenzar a formentar el uso de las herramientas de Google en su comunidad-. Los beneficios que ha traido esta función son enormes desde el punto de vista de la retroalliemntación y el seguimiento de los avances en estas pruebas de ensayo. 
+Junto con lo anterior, la planilla trabaja con una carpeta en Google Drive que permite almacenar cada uno de los reportes en PDF para así hacer la consulta correspondiente posterior. Todo esto de manera totalmente autónoma y automatizada. 
 
 <figure class="third">
 	<a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/entorno_envio_reportes.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/entorno_envio_reportes.png"></a>
   <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_1.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_1.png"></a>
-  <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/areporte_2.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_2.png"></a>
-	<figcaption>Hoja de análisis</figcaption>
+  <a href="/assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_2.png"><img src="/assets/images/portfolio_images/spreadsheet_PAES_improve/reporte_2.png"></a>
+	<figcaption>Aquí se muestran imagenes de lo que sería el entorno de envío de reportes.</figcaption>
 </figure>
 
 
