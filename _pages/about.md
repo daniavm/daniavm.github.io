@@ -1,8 +1,30 @@
 ---
-title: "Sample Page"
+title: "Dentro de mi mundo - Un vistazo a quien soy"
 permalink: /about/
-date: 2016-02-24T03:02:20+00:00
+date: 2023-08-05T07:00:00+03:00
 ---
+
+###¡Explorador de Mundos y Datos!
+
+¡Hola! Soy Daniel Valdés, un apasionado astrónomo, educador y analista de datos con una curiosidad que espero se pueda calificar a lo menos de "grande". Mi trayectoria ha estado impulsada por una pasión por la astronomía, la ciencia, la pedagogía y mi conocimiento de la tecnología, pero principalmente me gustaría decir que es por la contínua búsqueda de /experiencias que permitan a quienes me rodean avanzar en sus vidas apelando al autodescubrimiento, al desarrollo de sus habilidades y al alucinante deseo de explorar nuevos horizontes. En esta última idea he querido acuñar en mis relatos el concepto de "aprendanza", que podría ser un infantil intento de consolidar las ideas de "aprendizaje" y "enseñanza" en un mismo término ya que, de lo que he podido aprender a lo largo de mi vida, no se pueden describir la una sin referirse también a la otra. Así que si tuviera que corregir algo de este primer párrafo, quizás sería la idea de que soy alguien que "enseña" o un "educador" por la idea de que probablemente apelo a ser un "aprendanzante" de mi vida y busco que quienes me rodean puedan a apelar a descubrir algo de lo que quiere decir practicar algo así. 
+
+A lo largo de mi vida, he combinado la aprendanza - un concepto que he querido acuñar en mi mente  - en áreas como Física y Astronomía con una inquietud por la tecnología, la programación y el impacto que podría tener cada una de estas cosas en la pedagogía. Mi entusiasmo por aprender me llevó a sumergirme en el análisis de datos, donde he encontrado un fascinante mundo de oportunidades para optimizar y mejorar los entornos educativos, así que es el área donde actualmente me desempeño para encontrar un punto en donde estos mundos empiecen a comunicarse.
+
+
+
+
+
+
+
+Como Analista de Datos y Encargado de Plataformas Digitales en el Colegio San Benito, he trabajado incansablemente para impulsar el crecimiento de la institución a través de la implementación de soluciones innovadoras. Desde la coordinación de equipos hasta el análisis de datos, cada paso ha sido una emocionante aventura que me ha permitido contribuir a la toma de decisiones académicas.
+
+Además, durante mi tiempo en el Liceo Bicentenario de Talagante, fui pionero en la transformación digital del establecimiento al digitalizar los cursos y brindar una experiencia interactiva a los estudiantes. Mi pasión por la tecnología me llevó a participar en competencias de robótica y a desarrollar una academia de Astronomía.
+
+Mi formación en Astronomía y astrofísica en la Pontificia Universidad Católica de Chile me ha dotado de habilidades analíticas que he llevado más allá, explorando el fascinante mundo de la analítica de datos y la programación. He obtenido certificaciones en Data Science, Data Analysis y Machine Learning, además de haber sido reconocido como Google Certified Educator Level 1.
+
+Mi viaje no ha hecho más que comenzar, y mi sed de conocimiento no tiene límites. Estoy emocionado por seguir aprendiendo y contribuyendo a la innovación y crecimiento en el ámbito educativo y más allá. Siempre estoy dispuesto a explorar nuevos desafíos y descubrir lo que el futuro tiene reservado.
+
+¡Únete a mí en esta emocionante travesía en busca del conocimiento y la creatividad!
 
 This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:
 
