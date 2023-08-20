@@ -13,8 +13,8 @@ En esta última idea he querido acuñar en mis relatos el concepto de **"aprenda
 Mi formación académica incluyó inicialmente la astronomía, que me dio la posibilidad de entrar en el mundo de la programación y el análisis de datos pero no fue a lo que me dediqué principalmente a pesar de adquirir muchas de estos saberes. Debido a todo lo que aprendí en ese lugar, decidí que no sería posible completar mi educación si no había alguien a quien transmitiera algo de lo que descubría, así que terminé también los estudios en pedagogía para lograr un título de profesor. 
 
 > Viaje antes que destino 
-
-> _Brandon Sanderson - El Archivo de las Tormentas._
+>
+>_Brandon Sanderson - El Archivo de las Tormentas._
 {: style="text-align: right;"}
 
 
