@@ -13,7 +13,10 @@ En esta última idea he querido acuñar en mis relatos el concepto de **"aprenda
 Mi formación académica incluyó inicialmente la astronomía, que me dio la posibilidad de entrar en el mundo de la programación y el análisis de datos pero no fue a lo que me dediqué principalmente a pesar de adquirir muchas de estos saberes. Debido a todo lo que aprendí en ese lugar, decidí que no sería posible completar mi educación si no había alguien a quien transmitiera algo de lo que descubría, así que terminé también los estudios en pedagogía para lograr un título de profesor. 
 
 > Viaje antes que destino 
+
 > _Brandon Sanderson - El Archivo de las Tormentas._
+{: style="text-align: right;"}
+
 
 Astrónomo y profesor suenan como cosas importantes - o por lo menos eso me repetía la gente y yo mismo hasta hace un tiempo - , pero creo que es solo un decir. Nunca entendí "una carrera como un fin para ser alguien", sino más bien como una herramienta más "para aprender a buscar quien soy". Así que utilicé lo que aprendí de ambos mundos para así desenvolverme en una de las labores más complejas que he podido tomar, ser un "buen profesor" - que no es lo mismo que ser "un profesor" como verás en algunos de mis artículos -. En esto último dediqué 17 años de mi vida, así que pienso que adquirí buena parte de lo que se requiere para entender "el rubro", y por esta misma razón decidí dejarlo el año 2022. Tuve grandes experiencias con todos mis estudiantes - de hecho mi canal de [Youtube](https://www.youtube.com/channel/UCE9a5RZRjCwvyFlg2ORG1HA) nace prácticamnete de ell@s - pero **había muy poca aprendanza en las órbitas que me desenvolví los últimos años y que tenían que ver con la gestión y los equipos administrativos**. Así que pensé en buscar un lugar desde donde quizás se pueda aportar más a este sector y fui en busca del análisis de datos. Hoy continúo desenvolviéndome en la educación pero desde esta mirada e investigando sus bondades, así que supongo que cambiaré este perfil en un tiempo más para completar esta idea si la experiencia lo merece.
 
