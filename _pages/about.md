@@ -23,6 +23,7 @@ Astrónomo y profesor suenan como cosas importantes - o por lo menos eso me repe
 Soy un lector y oyente de libros absoluto. Me encanta la fantasía y la novela, pero por supuesto no dejo de lado la lectura académica para complementar mi formación. Soy un seguidor fiel de los trabajos de **J.R.R. Tolkien** y en esta época de aparente falta de trabajos - o por lo menos trabajos de este calibre -, también soy un seguidor del mejor autor del que he tenido conocimiento actualmente, [**Brandon Sanderson**](https://www.brandonsanderson.com/). Y si bien esta es mi parte como "consumidor" de libros, también estoy apoyando en la construcción de algunos con el autor [**Valendis Eldamel**](https://www.wattpad.com/user/valendiseldamel) que creo que tiene grandes posibilidades para el futuro.
 
 > Un adulto creativo es un niño que ha sobrevivido 
+>
 > _Ursula K. Le Guin._
 
 Me fascina el arte, el diseño, la estética y la arquitectura pero creo que estas áreas aportan más bien el motor de mis estudios antes que la forma en que los adquiero. Y supongo que siempre debo darle un espacio a la música en lo que refiere a las artes. Soy un amante de esta área sin duda y me encanta trabajar en ella cada vez que puedo. 
