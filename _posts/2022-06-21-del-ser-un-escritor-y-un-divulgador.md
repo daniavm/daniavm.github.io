@@ -37,11 +37,11 @@ Por esta misma idea, he decidido caminar por nuevos rumbos para seguir respondie
 </p>
 
 <p align="justify" markdown="1">
-Desconozco de todas las rutas que uno puede seguir para llevar adelante una misión así, pero en lo personal me quedaré con aquella que he aprendido a lo largo de la vida y he podido concientizar en algunos de los libros que he adquirido en el último tiempo. Haré uso de la constancia y trataré de construir un hábito, ***el hábito de escribir a lo menos 1 vez por semana para así ver si puedo acercarme a algo más riguroso y formal.***.
+Desconozco de todas las rutas que uno puede seguir para llevar adelante una misión así, pero en lo personal me quedaré con aquella que he aprendido a lo largo de la vida y he podido concientizar en algunos de los libros que he adquirido en el último tiempo. Haré uso de la constancia y trataré de construir un hábito, ***el hábito de escribir a lo menos 1 vez por semana para así ver si puedo acercarme a algo más riguroso y formal***.
 </p>
 
 <p align="justify" markdown="1">
-Quizás no es mucho, pero como bien se diría en el libro de
+Quizás no es mucho, pero como bien se diría en el libro de “Hábitos Atómicos” (Clear, 2018) es bueno partir con nuestro 1% de mejoría diaria para así invertir en un impacto grande habiendo pasado un tiempo grande[^1]
 
 
 "Hábitos Atómicos" (Clear, 2018)
