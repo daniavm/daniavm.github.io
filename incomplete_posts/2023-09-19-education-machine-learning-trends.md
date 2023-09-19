@@ -8,7 +8,7 @@ toc: false
 
 head_scripts:
   - https://www.gstatic.com/charts/loader.js
-  <script type="text/javascript">
+  - <script type="text/javascript">
     // Carga la biblioteca de visualización de Google Charts
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
