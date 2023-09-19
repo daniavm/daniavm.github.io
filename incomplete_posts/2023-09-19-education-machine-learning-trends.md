@@ -27,6 +27,8 @@ tags:
 La página en blanco quizas es uno de los problemas más recurrentes y más complejos de resolver para nosotr@s l@s human@s. Creo que no tengo recuerdo la cantidad de veces que me he quedado sin ideas, o bien sin la posibilidad de responder a algún problema que me ha entregado la vida respecto de alguna situación en específico. Nuestra mente tiende a buscar resultados rápidos sin percatarse de la verdadera naturaleza de los mecanismos que producen los cambios en las cosas.
 </div>
 
+<div id="chart"></div>
+
 <script>
     // Datos
     var data = [
