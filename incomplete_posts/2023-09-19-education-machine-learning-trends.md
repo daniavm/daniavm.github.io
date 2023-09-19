@@ -7,7 +7,7 @@ comments: true
 toc: false
 
 head_scripts:
-  - https://d3js.org/d3.v7.min.js
+  - http://d3js.org/d3.v3.js
 
 header:
   image: /assets/images/teaser_wallpaper.jpg
