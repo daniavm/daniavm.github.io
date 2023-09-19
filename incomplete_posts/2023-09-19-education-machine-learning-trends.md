@@ -8,26 +8,7 @@ toc: false
 
 head_scripts:
   - https://www.gstatic.com/charts/loader.js
-
-header:
-  image: /assets/images/teaser_wallpaper.jpg
-  teaser: /assets/images/teaser_wallpaper.jpg
-
-categories:
-  - Estudios
-  - Educación
-  - Machine Learning
-tags:
-  - Machine Learning
-  - Educación
-  - Tendencias
-  - Análisis de Datos
----
-<div align="justify" markdown="1">
-La página en blanco quizas es uno de los problemas más recurrentes y más complejos de resolver para nosotr@s l@s human@s. Creo que no tengo recuerdo la cantidad de veces que me he quedado sin ideas, o bien sin la posibilidad de responder a algún problema que me ha entregado la vida respecto de alguna situación en específico. Nuestra mente tiende a buscar resultados rápidos sin percatarse de la verdadera naturaleza de los mecanismos que producen los cambios en las cosas.
-</div>
-
-<script type="text/javascript">
+  <script type="text/javascript">
     // Carga la biblioteca de visualización de Google Charts
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
@@ -107,6 +88,26 @@ La página en blanco quizas es uno de los problemas más recurrentes y más comp
       chart.draw(data, options);
     }
   </script>
+
+header:
+  image: /assets/images/teaser_wallpaper.jpg
+  teaser: /assets/images/teaser_wallpaper.jpg
+
+categories:
+  - Estudios
+  - Educación
+  - Machine Learning
+tags:
+  - Machine Learning
+  - Educación
+  - Tendencias
+  - Análisis de Datos
+---
+<div align="justify" markdown="1">
+La página en blanco quizas es uno de los problemas más recurrentes y más complejos de resolver para nosotr@s l@s human@s. Creo que no tengo recuerdo la cantidad de veces que me he quedado sin ideas, o bien sin la posibilidad de responder a algún problema que me ha entregado la vida respecto de alguna situación en específico. Nuestra mente tiende a buscar resultados rápidos sin percatarse de la verdadera naturaleza de los mecanismos que producen los cambios en las cosas.
+</div>
+
+
 
 
   <div id="chart_div" style="width: 100%; height: 400px;"></div>
