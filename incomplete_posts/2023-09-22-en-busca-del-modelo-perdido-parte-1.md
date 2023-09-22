@@ -31,6 +31,14 @@ Al partir necesitamos explorar. Tal como Indiana Jones en cada una de sus aventu
 
 El EDA es un proceso en el cual te dedicas a entender tu conjunto de datos para luego comenzar su manipulación. Puedes analizar desde el punto de vista de las tablas como de los gráficos, pero nunca olvides que la idea fundamental es familiarizarte con la naturaleza ... de los datos. 
 
+```ruby
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+```
+
 </div>
 
 
