@@ -25,11 +25,37 @@ Partir en el análisis de datos puede ser un camino complejo para quienes no man
 
 En este primer artículo buscaré mostrar las primeras etapas de exploración del análisis de datos, así que compartiré parte del código que estoy usando para descubrir un posible modelo que prediga los resultados de una prueba de acceso universitario con los datos de un colegio. 
 
-## Análisis de Datos Exploratorio (EDA) o Exploratory data analysis (EDA)
+## Análisis de Datos Exploratorio (EDA)
 
 Al partir necesitamos explorar. Tal como Indiana Jones en cada una de sus aventuras, el objetivo inicial cuando ya has entendido las necesidades y problemas del lugar donde estas inmers@ es entender el conjunto de datos que tienes a disposición.
 
-El EDA es un proceso en el cual te dedicas a entender tu conjunto de datos para luego comenzar su manipulación. Puedes analizar desde el punto de vista de las tablas como de los gráficos, pero nunca olvides que la idea fundamental es familiarizarte con la naturaleza ... de los datos. 
+El EDA - o Exploratory Data Analysis (EDA) en inglés - es un proceso en el cual te dedicas a entender tu conjunto de datos para luego comenzar su manipulación. Puedes analizar desde el punto de vista de las tablas como de los gráficos, pero nunca olvides que la idea fundamental es familiarizarte con la naturaleza ... de los datos. 
+
+En el caso de esta misión, utilizaremos una base de datos que se encuentra en un archivo CSV - comma separated values o "valores separados por coma" - y lo leeremos con las funciones básicas de Python.
+
+### Entrando en la Jungla de Datos
+
+Lo primero es definir nuestras herramientas de trabajo, y en python esto quiere decir referirse a las liberías. El código a continuación permite leer el archivo CSV que mencionamos anterior mente.
+
+{% highlight python linenos %}
+# Declaramos librerías necesarias
+
+import numpy as np
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import cross_val_score, KFold
+from sklearn.metrics import mean_absolute_error
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+from joblib import Parallel, delayed
+
+# Cargar los datos desde el archivo CSV
+csv_filename = "PAES_training_set_2022_Complete - PAES_training_set_2022 - Matemáticas.csv"
+data = pd.read_csv(csv_filename)
+
+data.info()
+{% endhighlight %}
+
 
 ```ruby
 def print_hi(name)
