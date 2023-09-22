@@ -44,11 +44,28 @@ data.info()
 
 El output después de aplicar este comando es algo así:
 
-<figure style = "float: right; width: 100%; text-align: center; font-style: italic; font-size: 0.6em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <img src="/assets/images/PAES_prediction_model/dataset_info.png" width="40%"  alt="Nubes de metano en Titán y posiblemente lluvia.">
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.6em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <img src="/assets/images/PAES_prediction_model/dataset_info.png" width="100%"  alt="Nubes de metano en Titán y posiblemente lluvia.">
   <figcaption>Output del comando .info() cuando se aplica al dataset leído.</figcaption>
 </figure>
 
+Aquí podrás ver los nombres d elos encabezados de cada una de las columnas, el conteo de los valores que no son noles (Non-Null Count) y la naturaleza de los datos encontrados (Dtype). Con esto ya hay una primera mirada pero un elemento clave dentro del análisis de datos es saber cuántos de estos datos son nulos para así tener una mejor idea de con cuántos datos contarás al final para hacer tus modelos. Para esto puedes usar el siguiente comando:
+
+{% highlight javascript linenos %}
+# El comando .isnull() identifica los valores que son nulos dentro del dataset.
+# El comando .sum() hará la suma de estos datos por culumna
+# El comando .len(data) hará el conteo de los elementos del dataset (data) incluyendo los valores no nulos
+# Finalmente el comando *100 está multiplicando el resultado de (data.isnull().sum()/(len(data))) por 100 
+# para así dejar el output como si fuera un porcentaje
+(data.isnull().sum()/(len(data)))*100
+{% endhighlight %}
+
+El output de este comando es el siguiente:
+
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.6em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <img src="/assets/images/PAES_prediction_model/dataset_non_null_output.png" width="100%"  alt="Nubes de metano en Titán y posiblemente lluvia.">
+  <figcaption>Output del comando .info() cuando se aplica al dataset leído.</figcaption>
+</figure>
 
 ```ruby
 def print_hi(name)
