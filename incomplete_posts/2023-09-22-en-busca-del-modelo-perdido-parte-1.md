@@ -38,8 +38,26 @@ En el caso de esta misión, utilizaremos una base de datos que se encuentra en u
 Lo primero es definir nuestras herramientas de trabajo, y en python esto quiere decir referirse a las liberías. El código a continuación permite leer el archivo CSV que mencionamos anterior mente. No olvides que el archivo CSV tiene que estar en la misma carpeta donde estas corriendo el código o bien escribir correctamente la ruta a la carpeta que contiene el dataset (set de datos).
 
 {% highlight javascript linenos %}
-# Usamos el comando read_csv para leer el archivo con los datos desde la ruta anterior
-data.info()
+  # Declaramos librerías necesarias
+
+  # Necesitaremos Numpy para hacer procesamientos matemáticos y Pandas para manipular el dataset en CSV
+  import numpy as np 
+  import pandas as pd
+
+  # Definimos la ruta donde se encuentra el dataset
+  csv_filename = "ruta_al_dataset_para_armar_el_modelo.csv"
+
+  # Usamos el comando read_csv para leer el archivo con los datos desde la ruta anterior
+  data = pd.read_csv(csv_filename)
+{% endhighlight %}
+
+### Las propiedades del entorno
+
+Hasta aquí nos posicionamos ya en el lugar donde queremos trabajar, ahora hay que dar una mirada. Para eso utilizamos el comando "info()" para así tener una idea inicial de qué es lo que contiene el dataset.
+
+{% highlight python linenos %}
+  # Usamos el comando read_csv para leer el archivo con los datos desde la ruta anterior
+  data.info()
 {% endhighlight %}
 
 El output después de aplicar este comando es algo así:
@@ -51,13 +69,13 @@ El output después de aplicar este comando es algo así:
 
 Aquí podrás ver los nombres d elos encabezados de cada una de las columnas, el conteo de los valores que no son noles (Non-Null Count) y la naturaleza de los datos encontrados (Dtype). Con esto ya hay una primera mirada pero un elemento clave dentro del análisis de datos es saber cuántos de estos datos son nulos para así tener una mejor idea de con cuántos datos contarás al final para hacer tus modelos. Para esto puedes usar el siguiente comando:
 
-{% highlight javascript linenos %}
-# El comando .isnull() identifica los valores que son nulos dentro del dataset.
-# El comando .sum() hará la suma de estos datos por culumna
-# El comando .len(data) hará el conteo de los elementos del dataset (data) incluyendo los valores no nulos
-# Finalmente el comando *100 está multiplicando el resultado de (data.isnull().sum()/(len(data))) por 100 
-# para así dejar el output como si fuera un porcentaje
-(data.isnull().sum()/(len(data)))*100
+{% highlight python linenos %}
+  # El comando .isnull() identifica los valores que son nulos dentro del dataset.
+  # El comando .sum() hará la suma de estos datos por culumna
+  # El comando .len(data) hará el conteo de los elementos del dataset (data) incluyendo los valores no nulos
+  # Finalmente el comando *100 está multiplicando el resultado de (data.isnull().sum()/(len(data))) por 100 
+  # para así dejar el output como si fuera un porcentaje
+  (data.isnull().sum()/(len(data)))*100
 {% endhighlight %}
 
 El output de este comando es el siguiente:
