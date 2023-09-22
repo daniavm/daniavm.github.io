@@ -35,26 +35,19 @@ En el caso de esta misión, utilizaremos una base de datos que se encuentra en u
 
 ### Entrando en la Jungla de Datos
 
-Lo primero es definir nuestras herramientas de trabajo, y en python esto quiere decir referirse a las liberías. El código a continuación permite leer el archivo CSV que mencionamos anterior mente.
+Lo primero es definir nuestras herramientas de trabajo, y en python esto quiere decir referirse a las liberías. El código a continuación permite leer el archivo CSV que mencionamos anterior mente. No olvides que el archivo CSV tiene que estar en la misma carpeta donde estas corriendo el código o bien escribir correctamente la ruta a la carpeta que contiene el dataset (set de datos).
 
-{% highlight python linenos %}
-# Declaramos librerías necesarias
-
-import numpy as np
-import pandas as pd
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import cross_val_score, KFold
-from sklearn.metrics import mean_absolute_error
-from sklearn.preprocessing import StandardScaler
-import matplotlib.pyplot as plt
-from joblib import Parallel, delayed
-
-# Cargar los datos desde el archivo CSV
-csv_filename = "PAES_training_set_2022_Complete - PAES_training_set_2022 - Matemáticas.csv"
-data = pd.read_csv(csv_filename)
-
+{% highlight javascript linenos %}
+# Usamos el comando read_csv para leer el archivo con los datos desde la ruta anterior
 data.info()
 {% endhighlight %}
+
+El output después de aplicar este comando es algo así:
+
+<figure style = "float: right; width: 100%; text-align: center; font-style: italic; font-size: 0.6em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <img src="/assets/images/PAES_prediction_model/dataset_info.png" width="40%"  alt="Nubes de metano en Titán y posiblemente lluvia.">
+  <figcaption>Output del comando .info() cuando se aplica al dataset leído.</figcaption>
+</figure>
 
 
 ```ruby
