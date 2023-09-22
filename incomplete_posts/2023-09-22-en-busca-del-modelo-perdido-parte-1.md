@@ -1,5 +1,5 @@
 ---
-title: "En Busca del Modelo Perdido (Parte 1 - Explorando)"
+title: "En Busca del Modelo Perdido (Parte 1 - Exploración)"
 layout: single
 author_profile: true
 related: true
@@ -79,7 +79,7 @@ Aquí podrás ver los nombres de los encabezados de cada una de las columnas, el
 
 El output de este comando es el siguiente:
 
-<figure style = "float: center; width: 70%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+<figure style = "float: center; width: 80%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <img src="/assets/images/PAES_prediction_model/dataset_non_null_output.png"  alt="Output del comando .info() cuando se aplica al dataset leído.">
   <figcaption>Imagen 2: Output del comando (data.isnull().sum()/(len(data)))*100 para identificar el porcentaje de valores nulospor cada columna.</figcaption>
 </figure>
