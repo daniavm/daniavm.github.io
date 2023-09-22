@@ -66,8 +66,8 @@ data.info()
 
 El output después de aplicar este comando es algo así:
 
-<figure style = "float: center; text-align: center; font-style: italic; font-size: 0.6em; text-indent: 0; margin: 0.7em; padding: 0.8em;">
-  <img src="/assets/images/PAES_prediction_model/dataset_info.png" width="100%"  alt="Nubes de metano en Titán y posiblemente lluvia.">
+<figure style = "float: center; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <img src="/assets/images/PAES_prediction_model/dataset_info.png"  alt="Output del comando .info() cuando se aplica al dataset leído.">
   <figcaption>Imagen 1: Output del comando .info() cuando se aplica al dataset leído.</figcaption>
 </figure>
 
@@ -79,8 +79,8 @@ Aquí podrás ver los nombres de los encabezados de cada una de las columnas, el
 
 El output de este comando es el siguiente:
 
-<figure style = "float: center; text-align: center; font-style: italic; font-size: 0.6em; text-indent: 0; margin: 0.7em; padding: 0.8em;">
-  <img src="/assets/images/PAES_prediction_model/dataset_non_null_output.png" width="100%"  alt="Nubes de metano en Titán y posiblemente lluvia.">
+<figure style = "float: center; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <img src="/assets/images/PAES_prediction_model/dataset_non_null_output.png"  alt="Output del comando .info() cuando se aplica al dataset leído.">
   <figcaption>Imagen 2: Output del comando (data.isnull().sum()/(len(data)))*100 para identificar el porcentaje de valores nulospor cada columna.</figcaption>
 </figure>
 
