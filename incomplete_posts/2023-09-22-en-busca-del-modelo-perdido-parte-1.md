@@ -94,16 +94,11 @@ Un detalle de los elementos de esta instrucción es el siguiente:
 Y esto ha sido el inicio de nuestra travesía buscando modelos de predicción. Nada mal para ser un@s iniciad@s en el tema 🤠.
 
 ¡Nos vemos en el siguiente post del Principia 🥚!
+
 DV
 
 </div>
 
-
----
-
-## Referencias
-
-- Clear, J., 2018. Atomic Habits. Penguin Publishing Group.
 
 
 
