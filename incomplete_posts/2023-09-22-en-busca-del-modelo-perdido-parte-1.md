@@ -74,7 +74,9 @@ El output después de aplicar este comando es algo así:
   <figcaption>Imagen 1: Output del comando .info() cuando se aplica al dataset leído.</figcaption>
 </figure>
 
-Aquí podrás ver los nombres de los encabezados de cada una de las columnas, el conteo de los valores que no son noles (Non-Null Count) y la naturaleza de los datos encontrados (Dtype). Con esto ya hay una primera mirada pero un elemento clave dentro del análisis de datos es saber cuántos de estos datos son nulos para así tener una mejor idea de con cuántos datos contarás al final para hacer tus modelos. Para esto puedes usar el siguiente comando:
+Aquí podrás ver los nombres de los encabezados de cada una de las columnas, el conteo de los valores que no son noles (Non-Null Count) y la naturaleza de los datos encontrados (Dtype). 
+
+Con esto ya hay una primera mirada pero un elemento clave dentro del análisis de datos es saber cuántos de estos datos son nulos para así tener una mejor idea de con cuántos datos contarás al final para hacer tus modelos. Para esto puedes usar el siguiente comando:
 
 {% highlight python linenos %}
 (data.isnull().sum()/(len(data)))*100
