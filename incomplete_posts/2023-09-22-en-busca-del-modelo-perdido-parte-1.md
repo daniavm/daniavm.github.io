@@ -1,6 +1,5 @@
 ---
 title: "En Busca del Modelo Perdido"
-subtitle: "Parte 1 - Exploración"
 layout: single
 author_profile: true
 related: true
@@ -26,12 +25,13 @@ tags:
 
 ---
 <div align="justify" markdown="1">
+
+### Parte 1 - Exploración
 Partir en el análisis de datos puede ser un camino complejo para quienes no manejan demasiado la programación. De hecho yo mismo no me considero un experto, pero como he mencionado en publicaciones anteriores, mi objetivo es ser un aprendanzante experimentado, así que quiero aprender enseñando.
 
 En este primer artículo buscaré mostrar las primeras etapas de exploración del análisis de datos, así que compartiré parte del código que estoy usando para descubrir un posible modelo que prediga los resultados de una prueba de acceso universitario con los datos de un colegio. 
 
 ## Análisis de Datos Exploratorio (ADE)
-{% if page.subtitle %}{{ page.subtitle }}{% endif %}
 
 Al partir el viaje necesitamos explorar. Tal como Indiana Jones 🤠 en cada una de sus aventuras, el objetivo inicial - cuando ya has entendido las necesidades y problemas del lugar donde estas inmers@ - es entender el conjunto de datos que tienes a disposición.
 
