@@ -55,7 +55,6 @@ csv_filename = "ruta_al_dataset_para_armar_el_modelo.csv"
 data = pd.read_csv(csv_filename)
 {% endhighlight %}
 
-<script src="https://gist.github.com/daniavm/df68bc84bfc99ed0a9af1dff00eb77e5.js"></script>
 
 ### Las propiedades del entorno
 
@@ -98,6 +97,14 @@ Y esto ha sido el inicio de nuestra travesía buscando modelos de predicción. N
 ¡Nos vemos en el siguiente post del Principia 🥚!
 
 DV
+
+---
+
+## Anexos
+
+A continuación tienes el código completo analizado en esta publicación.
+
+<script src="https://gist.github.com/daniavm/df68bc84bfc99ed0a9af1dff00eb77e5.js"></script>
 
 </div>
 
