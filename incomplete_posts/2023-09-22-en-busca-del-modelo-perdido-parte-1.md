@@ -31,15 +31,15 @@ En este primer artículo buscaré mostrar las primeras etapas de exploración de
 
 ## Análisis de Datos Exploratorio (ADE)
 
-Al partir necesitamos explorar. Tal como Indiana Jones 🤠 en cada una de sus aventuras, el objetivo inicial cuando ya has entendido las necesidades y problemas del lugar donde estas inmers@ es entender el conjunto de datos que tienes a disposición.
+Al partir el viaje necesitamos explorar. Tal como Indiana Jones 🤠 en cada una de sus aventuras, el objetivo inicial - cuando ya has entendido las necesidades y problemas del lugar donde estas inmers@ - es entender el conjunto de datos que tienes a disposición.
 
-El EDA - o Exploratory Data Analysis (EDA) en inglés - es un proceso en el cual te dedicas a entender tu conjunto de datos para luego comenzar su manipulación. Puedes analizar desde el punto de vista de las tablas como de los gráficos, pero nunca olvides que la idea fundamental es familiarizarte con la naturaleza ... de los datos. 
+El EDA - o Exploratory Data Analysis (EDA) en inglés - es un proceso en el cual te dedicas a entender tu conjunto de datos para luego comenzar su manipulación. Puedes considerar el punto de vista de las tablas como de los gráficos, pero nunca olvides que **la idea fundamental es familiarizarte con la naturaleza ... de los datos**. 
 
-En el caso de esta misión, utilizaremos una base de datos que se encuentra en un archivo CSV - comma separated values o "valores separados por coma" - y lo leeremos con las funciones básicas de Python.
+En esta misión utilizaremos una base de datos que se encuentra en un archivo CSV - "comma separated values" o "valores separados por coma" - y lo leeremos con las funciones básicas de Python.
 
 ### 🌿🐒🦟 Entrando en la Jungla de Datos 🐍🐊🌿
 
-Lo primero es definir nuestras herramientas de trabajo, y en python esto quiere decir referirse a las liberías. El código a continuación permite leer el archivo CSV que mencionamos anterior mente. No olvides que el archivo CSV tiene que estar en la misma carpeta donde estas corriendo el código o bien escribir correctamente la ruta a la carpeta que contiene el dataset (set de datos).
+Lo primero es definir nuestras herramientas de trabajo, y en python esto quiere decir referirse a las liberías. El código a continuación permite leer el archivo CSV que mencionamos anteriormente. No olvides que el archivo CSV tiene que estar en la misma carpeta donde estas corriendo el código o bien escribir correctamente la ruta a la carpeta que contiene el dataset (set de datos).
 
 {% highlight javascript linenos %}
 # Declaramos librerías necesarias
@@ -54,6 +54,8 @@ csv_filename = "ruta_al_dataset_para_armar_el_modelo.csv"
 # Usamos el comando read_csv para leer el archivo con los datos desde la ruta anterior
 data = pd.read_csv(csv_filename)
 {% endhighlight %}
+
+<script src="https://gist.github.com/daniavm/df68bc84bfc99ed0a9af1dff00eb77e5.js"></script>
 
 ### Las propiedades del entorno
 
