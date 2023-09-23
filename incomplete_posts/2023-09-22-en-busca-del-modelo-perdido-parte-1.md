@@ -1,5 +1,6 @@
 ---
-title: "En Busca del Modelo Perdido (Parte 1 - Exploración)"
+title: "En Busca del Modelo Perdido"
+subtitle: "Parte 1 - Exploración"
 layout: single
 author_profile: true
 related: true
