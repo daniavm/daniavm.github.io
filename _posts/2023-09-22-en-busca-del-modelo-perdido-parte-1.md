@@ -24,6 +24,8 @@ tags:
   - Educación
 
 ---
+
+
 <div align="justify" markdown="1">
 
 Partir en el análisis de datos puede ser un camino complejo para quienes no manejan demasiado la programación. De hecho yo mismo no me considero un experto, pero como he mencionado en publicaciones anteriores, mi objetivo es ser un aprendanzante experimentado, así que quisiera aprender enseñando.
