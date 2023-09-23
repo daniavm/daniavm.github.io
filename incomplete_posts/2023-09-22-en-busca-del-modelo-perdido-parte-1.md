@@ -39,7 +39,9 @@ En esta misión utilizaremos una base de datos que se encuentra en un archivo CS
 
 ### 🌿🐒🦟 Entrando en la Jungla de Datos 🐍🐊🌿
 
-Lo primero es definir nuestras herramientas de trabajo, y en python esto quiere decir referirse a las liberías. El código a continuación permite leer el archivo CSV que mencionamos anteriormente. No olvides que el archivo CSV tiene que estar en la misma carpeta donde estas corriendo el código o bien escribir correctamente la ruta a la carpeta que contiene el dataset (set de datos).
+Lo primero es definir nuestras herramientas de trabajo, y en python esto quiere decir referirse a las liberías. El código a continuación permite leer el archivo CSV que mencionamos anteriormente. 
+
+No olvides que el archivo CSV tiene que estar en la misma carpeta donde estas corriendo el código o bien escribir correctamente la ruta a la carpeta que contiene el dataset (set de datos).
 
 {% highlight javascript linenos %}
 # Declaramos librerías necesarias
