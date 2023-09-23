@@ -22,12 +22,12 @@ figure.highlight {
 
 .highlight table {
   margin-bottom: 0;
-  font-size: 1em;
+  font-size: $type-size-7;
   border: 0;
 
   td {
     padding: 0;
-    width: calc(100% - 1em);
+    width: calc(100% - $type-size-7);
     border: 0;
 
     /* line numbers*/
