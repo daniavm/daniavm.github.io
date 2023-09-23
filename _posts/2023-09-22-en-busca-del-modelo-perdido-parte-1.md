@@ -100,9 +100,13 @@ Un detalle de los elementos de esta instrucción es el siguiente:
 
 Y esto ha sido el inicio de nuestra travesía buscando modelos de predicción. Nada mal para ser un@s iniciad@s en el tema 🤠.
 
-¡Nos vemos en el siguiente post del Principia 🥚!
+<div align="right" markdown="1">
+
+_Hasta el próximo cronopunto del Principia 🥚._
 
 DV
+
+</div>
 
 ---
 
