@@ -31,6 +31,7 @@ Partir en el análisis de datos puede ser un camino complejo para quienes no man
 En este primer artículo buscaré mostrar las primeras etapas de exploración del análisis de datos, así que compartiré parte del código que estoy usando para descubrir un posible modelo que prediga los resultados de una prueba de acceso universitario con los datos de un colegio. 
 
 ## Análisis de Datos Exploratorio (ADE)
+{% if page.subtitle %}{{ page.subtitle }}{% endif %}
 
 Al partir el viaje necesitamos explorar. Tal como Indiana Jones 🤠 en cada una de sus aventuras, el objetivo inicial - cuando ya has entendido las necesidades y problemas del lugar donde estas inmers@ - es entender el conjunto de datos que tienes a disposición.
 
@@ -41,8 +42,6 @@ En esta misión utilizaremos una base de datos que se encuentra en un archivo CS
 ### 🌿🐒🦟 Entrando en la Jungla de Datos 🐍🐊🌿
 
 Lo primero es definir nuestras herramientas de trabajo, y en python esto quiere decir referirse a las liberías. El código a continuación permite leer el archivo CSV que mencionamos anteriormente. 
-
-No olvides que el archivo CSV tiene que estar en la misma carpeta donde estas corriendo el código o bien escribir correctamente la ruta a la carpeta que contiene el dataset (set de datos).
 
 {% highlight javascript linenos %}
 # Declaramos librerías necesarias
@@ -58,6 +57,7 @@ csv_filename = "ruta_al_dataset_para_armar_el_modelo.csv"
 data = pd.read_csv(csv_filename)
 {% endhighlight %}
 
+**Observación**: No olvides que el archivo CSV tiene que estar en la misma carpeta donde estas corriendo el código o bien escribir correctamente la ruta a la carpeta que contiene el dataset (set de datos).
 
 ### Las propiedades del entorno
 
