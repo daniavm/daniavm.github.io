@@ -27,7 +27,6 @@ tags:
 
 
 <div align="justify" markdown="1">
-
 Partir en el análisis de datos puede ser un camino complejo para quienes no manejan demasiado la programación. De hecho yo mismo no me considero un experto, pero como he mencionado en publicaciones anteriores, mi objetivo es ser un aprendanzante experimentado, así que quisiera aprender enseñando.
 
 En este primer artículo buscaré mostrar las primeras etapas de exploración del análisis de datos, así que compartiré parte del código que estoy usando para descubrir un posible modelo que prediga los resultados de una prueba de acceso universitario con los datos de un colegio. 
