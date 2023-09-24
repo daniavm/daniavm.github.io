@@ -9,7 +9,6 @@ toc: false
 header:
   image: /assets/images/PAES_prediction_model/24417257_2202_w015_n001_735b_p15_735.jpg
   teaser: /assets/images/PAES_prediction_model/24417257_2202_w015_n001_735b_p15_735.jpg
-  image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
 
 categories:
   - Data Analysis
