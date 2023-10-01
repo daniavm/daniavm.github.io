@@ -27,7 +27,7 @@ tags:
 <div align="justify" markdown="1">
 Si te adentras en la jungla y no tienes demasiada experiencia es posible que una de las emociones emergentes sea el miedo. Es todo un alivio saber que en estos días la computación permite intentar procedimientos más de una vez sin tener más heridas que las que produce un asiento de computador y las horas frente al monitor. Vivimos en tiempos más que generosos para la aprendanza y esta es la razón para tomar con gusto los desafíos ... ¡Así que vamos por esos errores que tanto necesitamos!
 
-Independiente de la misión, ya sea en la jungla o en el desierto, tendremos herramientas o intentaremos crearlas. Si somos personas inexpertas y no tendremos mucha idea de cómo ocupar una cuchilla en la selva, a lo menos tendremos la noción de que nos servirá para cortar algún arbusto para hacernos un refugio. De la misma manera que no tienes que ser Indiana Jones para salir a buscar la aventura más alocada del cine, tampoco tienes que ser de la NASA para adentrarte en las herramientas mínimas del análisis de datos. Solo hay que darle una miradita a la mochila que trajiste y ver qué podría servir.
+Independiente de la misión, ya sea en la jungla o en el desierto, tendremos herramientas o intentaremos crearlas. Si somos personas inexpertas y no tendremos mucha idea de cómo ocupar una cuchilla, a lo menos tendremos la noción de que nos servirá para cortar algún arbusto para hacernos un refugio. De la misma manera que no tienes que ser Indiana Jones para salir a buscar la aventura más alocada del cine, tampoco tienes que ser de la NASA para adentrarte en las herramientas mínimas del análisis de datos. Solo hay que darle una miradita a la mochila que trajiste y ver qué podría servir.
 
 ## 📚👩🏻‍🏫 Una visita al bibliotecario 🧑🏻‍🏫📚
 
@@ -51,17 +51,17 @@ El resultado que entregó una mezcla de Google con ChatGPT fue más o menos el s
 
 Son bastantes opciones para partir, así que deberíamos idear alguna forma para ir teniendo una noción de cuál usar primero. 
 
-## 🗺️ El plan inicial 🗺️
+## El plan inicial 🗺️
 
 Si te enviaran a construir una casa y nunca has hecho una, probablemente no tendrías idea de cómo responder a la pregunta de "¿cuáles son las herramientas que necesitas para construirla?". A pesar de la dificultad del asunto, creo que por nociones básicas y conocimientos previos podríamos intuir que el "martillo" sería una de las herramientas que estaría en esa lista. Esto ya es un punto de partida y disminuye la incertidumbre.
 
-De esta misma manera, el análisis de datos no se trata de cuál herramienta usar para encontrar "el resultado que quieres encontrar". Ninguna persona puede saber realmente cuál es la respuesta a esa pregunta, ya que depende del problema que quieres resolver. Por esta misma razón no nos podemos quedar con un único modelo inicial o con un set específico de modelos, ya que el problema se va resolviendo a medida que vamos ganando experiencia de él. 
+De esta misma manera, el análisis de datos no se trata de cuál herramienta usar para encontrar "el resultado que quieres encontrar". **Ninguna persona puede saber realmente cuál es la respuesta a esa pregunta, ya que depende del problema que quieres resolver**. Por esta misma razón no nos podemos quedar con un único modelo inicial o con un set específico de modelos, ya que el problema se va resolviendo a medida que vamos ganando experiencia de él. 
 
-Quizás en el futuro hayamos resuelto tantos problemas del mismo tipo que ahí intuiremos qué herramienta podríamos utilizar con un nivel de trabajo e incertidumbre menor, pero mientras tanto debemos explorar, y eso implica necesariamente experimentar lo que más puedamos con todo lo que tenemos. Así que probaremos idealmente todas estas herramientas para observar los resultados.
+Quizás en el futuro hayamos resuelto tantos problemas del mismo tipo que intuiremos qué herramienta podríamos utilizar con un nivel de trabajo e incertidumbre menor, pero **mientras tanto debemos explorar**, y eso implica necesariamente experimentar lo que más puedamos con todo lo que tenemos. Así que probaremos idealmente todas estas herramientas para observar los resultados.
 
-De acuerdo a lo que vimos en el artículo anterior, en este problema contaremos con unas 100 filas de datos y unos 20 campos de información por cada una, así que no es un dataset demasiado robusto. Esto hace que el problema del overfitting (sobreajuste) o underfitting (subajuste) esten siempre acechando - hablaré de estos conceptos más adelante en caso de que te hayan llamado la atención -, pero sabemos ciertas cosas. 
+De acuerdo a lo que vimos en el artículo anterior, en este problema contaremos con unas 100 filas de datos y unos 20 campos de información por cada una, así que no es un dataset demasiado robusto. Esto hace que el problema del overfitting (sobreajuste) o underfitting (subajuste) esten siempre acechando - hablaré de estos conceptos en otro post más adelante en caso de que te hayan llamado la atención -. 
 
-Por ejemplo, creo que estos datos no estan del todo correlacionados entre sí y tampoco son lineales, así que no daría demasiada importancia a los modelos 1 y 2. El modelo 6 tampoco le daría demasiada importancia para partir porque da por presupuesta una relación unoa uno de los datos y está más o menos claro que no es así. Los ensayos de PAES son secuenciales en el tiempo, así que necesitamos un modelo que estudie la evolución antes que la relación directa entre variables.
+Por ejemplo, **creo que estos datos no estan del todo correlacionados entre sí y tampoco son lineales**, así que no daría demasiada importancia a los modelos 1 y 2. El modelo 6 tampoco le daría demasiada importancia para partir porque da por presupuesta una relación uno a uno de los datos y está más o menos claro que no es así. Los ensayos de PAES son secuenciales en el tiempo, así que necesitamos un modelo que estudie la evolución antes que la relación directa entre variables.
 
 Nos quedan entonces los modelos 3, 4 y 5 de los cuales creo que no tengo ninguna razón para privilegiar el uno sobre el otro, así que solo tomaré el 3 porque es el que está primero en la lista.
 
@@ -74,8 +74,9 @@ A nuestra mochila de viaje agregaremos entonces los siguientes elementos:
 2. Gradient Boosting (Gradient Boosting (XGBoost, LightGBM, CatBoost))
 3. Redes Neuronales Artificiales (Artificial Neural Networks (Neural Networks))
 
-Debido a que la muestra de datos no es muy grande, agregaremos también herramientas para prevenir el overfitting y underfitting 
+Debido a que la muestra de datos no es muy grande, agregaremos también el mecanismo de "Validación Cruzada" para prevenir el overfitting y underfitting. Después de todo, el objetivo último de la misión es descubrir un modelo predictivo para una prueba, pero debemos resguardar la idea de que tambien sea un "modelo realista" minimizando los sesgos que nos puedan acarrear los datos.
 
+Hablaremos más de ello en la próxima publicación. Ya sabemos como deberíamos partir.
 
 
 <div align="right" markdown="1">
