@@ -76,7 +76,7 @@ A nuestra mochila de viaje agregaremos entonces los siguientes elementos:
 
 Debido a que la muestra de datos no es muy grande, agregaremos también el mecanismo de "Validación Cruzada" para prevenir el overfitting y underfitting. Después de todo, el objetivo último de la misión es descubrir un modelo predictivo para una prueba, pero debemos resguardar la idea de que tambien sea un "modelo realista" minimizando los sesgos que nos puedan acarrear los datos.
 
-Hablaremos más de ello en la próxima publicación. Ya sabemos como deberíamos partir.
+Hablaremos más de ello en la próxima publicación porque ya sabemos como deberíamos partir.
 
 
 <div align="right" markdown="1">
