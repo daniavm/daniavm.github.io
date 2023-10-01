@@ -87,13 +87,6 @@ DV
 
 </div>
 
----
-
-## Anexos
-
-A continuación tienes el código completo analizado en esta publicación.
-
-<script src="https://gist.github.com/daniavm/df68bc84bfc99ed0a9af1dff00eb77e5.js"></script>
 
 </div>
 
