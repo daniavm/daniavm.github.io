@@ -118,7 +118,7 @@ author:
       icon: "fas fa-fw fa-link"
       # url: "https://daniavm.github.io/"
     - label: "Twitter"
-      icon: "fa-brands fa-square-x-twitter"
+      icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/daniavm"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
