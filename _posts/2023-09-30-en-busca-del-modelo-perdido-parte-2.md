@@ -1,5 +1,5 @@
 ---
-title: "En Busca del Modelo Perdido - Herramientas"
+title: "En Busca del Modelo Perdido - Parte 2: Herramientas"
 layout: single
 author_profile: true
 related: true
@@ -13,13 +13,13 @@ header:
 categories:
   - Data Analysis
 tags:
-  - Python
   - Data Analysis
   - EDA
   - Análisis de Datos Exploratorio
   - ADE
   - Exploratory Data Analysis
   - Educación
+  - Modelos de regresión
 
 ---
 
