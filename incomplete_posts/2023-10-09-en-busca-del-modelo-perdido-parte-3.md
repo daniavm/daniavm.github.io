@@ -25,11 +25,21 @@ tags:
 
 
 <div align="justify" markdown="1">
-Si te adentras en la jungla y no tienes demasiada experiencia es posible que una de las emociones emergentes sea el miedo. Es todo un alivio saber que en estos días la computación permite intentar procedimientos más de una vez sin tener más heridas que las que produce un asiento de computador y las horas frente al monitor. Vivimos en tiempos más que generosos para la aprendanza y esta es la razón para tomar con gusto los desafíos ... ¡Así que vamos por esos errores que tanto necesitamos!
+Hemos llegado a una encrucijada y el camino tiende a hacerse más complejo. La información del bibliotecario no traía consigo las decisiones que tendríamos que tomar en el camino, por lo que aquí debemos echar mano a nuestra experiencia, o en caso de no tenerla, a nuestro espíritu de aventura. 
 
-Independiente de la misión, ya sea en la jungla o en el desierto, tendremos herramientas o intentaremos crearlas. Si somos personas inexpertas y no tendremos mucha idea de cómo ocupar una cuchilla, a lo menos tendremos la noción de que nos servirá para cortar algún arbusto para hacernos un refugio. De la misma manera que no tienes que ser Indiana Jones para salir a buscar la aventura más alocada del cine, tampoco tienes que ser de la NASA para adentrarte en las herramientas mínimas del análisis de datos. Solo hay que darle una miradita a la mochila que trajiste y ver qué podría servir.
+Hoy en día tenemos herramientas que pueden darnos una solución bastante robusta sin tener demasiados conocimientos de programación. Una de ellas es ChatGPT que, además de ser gratuita y tremendamente versátil, creo que a estas alturas ya no hay que salir de casa sin él ... ¿o ella?
 
-## 📚👩🏻‍🏫 Una visita al bibliotecario 🧑🏻‍🏫📚
+Aquí aparece una complicación. Si no tenemos grandes conocimientos de programación ¿cómo podríamos saber que lo que estamos generando con ChatGPT responde a nuestras necesidades? Por supuesto, esta pregunta nos hace dudar si tomar un curso de programación  - y hacer el trabajo con nuestras propias manos - o bien idear alguna alternativa que me permita entender lo que saldrá de ese "bicho".
+
+El dilema es evidente, ¿ChatGPT o Yo? ... en este primer trabajo quizás la respuesta más cercana a la decisión será "ambos". 
+
+## 🔮 Visita al oráculo  ... ChatGPT 🤖
+
+En nuestro primer capítulo vimos la manera de trabajar un dataset que contenía la información para lograr nuestro trabajo. El archivo que contendría los datos sería en CSV y solo las columnas distintas de 'ID', 'Curso', 'Nombre' y 'PAES' serían las que construirían el modelo. Con esto en mente y el nombre del archivo, fui a preguntar a ChatGPT respecto de un modelo de random forest que literalmente me permitiera hacer una predicción de los resultados PAES.
+
+Así que nos armamos de valor y "pronunciamos las palabras mágicas":
+
+__"Oh gran ChatGPT, usa un archivo de CSV cuyo nombre es "__
 
 Mientras escribo este artículo le he echado una mirada a nuestra mochila del análisis de datos y creo que cuenta con un montón de herramientas. De hecho son tantas que probablemente no podamos conocerlas todas de manera detallada hasta que no nos involucremos con ellas más seriamente. Así que haremos algo simple para iniciar ... buscaremos en Google, o mejor aún ... preguntémosle a una inteligencia artificial.
 
