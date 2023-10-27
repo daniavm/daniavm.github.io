@@ -122,7 +122,7 @@ En un segundo aspecto, si hay valores de la columna PAES que estan vacíos, ento
 Considerando estos razonamientos, parece justo decir que para obtener el modelo que mejor se adecúe y que no tenga "ruido" por los valores que no estaban en la base original, entonces <u>debemos borrar todas las filas que tengan algún dato faltante</u>.
 
 
-### La Última Pregunta
+### 🌳 La Última Pregunta 🌳
 
 Pedimos a ChatGPT que considere borrar todas las filas que tengan valores vacíos o nulos. El código final fue este:
 
