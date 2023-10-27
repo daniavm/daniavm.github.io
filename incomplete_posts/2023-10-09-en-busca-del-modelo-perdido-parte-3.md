@@ -27,7 +27,7 @@ tags:
 <div align="justify" markdown="1">
 Hemos llegado a una encrucijada y el camino tiende a hacerse más complejo. La información del bibliotecario no traía consigo las decisiones que tendríamos que tomar en el camino, por lo que aquí debemos echar mano a nuestra experiencia, o en caso de no tenerla, a nuestro espíritu de aventura. 
 
-Hoy en día tenemos herramientas que pueden darnos una solución bastante robusta sin tener demasiados conocimientos de programación. Una de ellas es ChatGPT que, además de ser gratuita y tremendamente versátil, creo que a estas alturas ya no hay que salir de casa sin él ... ¿o ella?
+Hoy en día tenemos herramientas que pueden darnos una solución bastante robusta sin tener demasiados conocimientos de programación. Una de ellas es ChatGPT que, además de ser gratuita y tremendamente versátil, creo que a estas alturas ya no hay que salir de casa sin ella ... ¿o él?
 
 Aquí aparece una complicación. Si no tenemos grandes conocimientos de programación ¿cómo podríamos saber que lo que estamos generando con ChatGPT responde a nuestras necesidades? Por supuesto, esta pregunta nos hace dudar si tomar un curso de programación  - y hacer el trabajo con nuestras propias manos - o bien idear alguna alternativa que me permita entender lo que saldrá de ese "bicho".
 
@@ -35,11 +35,11 @@ El dilema es evidente, ¿ChatGPT o Yo? ... en este primer trabajo quizás la res
 
 ## 🔮 Visita al oráculo  ... ChatGPT 🤖
 
-En nuestro primer capítulo vimos la manera de trabajar un dataset que contenía la información para lograr nuestro trabajo. El archivo que contendría los datos sería en CSV y solo las columnas distintas de 'ID', 'Curso', 'Nombre' y 'PAES' serían las que construirían el modelo. Con esto en mente y el nombre del archivo, fui a preguntar a ChatGPT respecto de un modelo de random forest que literalmente me permitiera hacer una predicción de los resultados PAES.
+En nuestro primer capítulo vimos la manera de trabajar un dataset que contenía la información para lograr nuestra misión... lograr un modelo predictivo de la PAES para el 2024. El archivo que contendría los datos sería en CSV y <ins>solo las columnas distintas de 'ID', 'Curso', 'Nombre' y 'PAES' serían las que construirían el modelo</ins>. Con esto en mente y el nombre del archivo, fui a preguntar a ChatGPT respecto de un modelo de random forest que literalmente me permitiera hacer una predicción de los resultados PAES - supongo que en pedir no hay engaño -.
 
-Así que nos armamos de valor y "pronunciamos las palabras mágicas":
+Así que nos armamos de valor, vamos al **[lugar del oráculo](chat.openai.com)** y "pronunciamos las palabras mágicas":
 
-__"Oh gran ChatGPT, usa un archivo de CSV cuyo nombre es "__
+***"Oh gran ChatGPT, usa un archivo de CSV cuyo nombre es _______.csv y entrega el código en python para poder predecir los resultados"***
 
 Mientras escribo este artículo le he echado una mirada a nuestra mochila del análisis de datos y creo que cuenta con un montón de herramientas. De hecho son tantas que probablemente no podamos conocerlas todas de manera detallada hasta que no nos involucremos con ellas más seriamente. Así que haremos algo simple para iniciar ... buscaremos en Google, o mejor aún ... preguntémosle a una inteligencia artificial.
 
