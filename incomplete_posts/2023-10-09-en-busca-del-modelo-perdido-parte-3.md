@@ -104,17 +104,39 @@ El gráfico expulsado fue este:
 Todo parece muy bien hasta ahora ... aunque hay algo que no se siente "bien".
 
 
-### 🔨 Algo Anda Mal ... 🪓🎒
+### 🤔 Algo Anda Mal ... 🤔
 
 Nuestra labor como investigadoræs aventurer@s es cuestionar, y cuestionar fuertemente. Por esta razón creo que es importante resaltar algunas preguntas que nacen si echas cuenta de lo que hemos hecho para obtener nuestro modelo:
 
-1. El primer error se obtuvo porque habán datos vacíos en mi dataset ¿Qué hace la función SimpleImputer que corrigió ese problema?
-2. ¿Qué debo hacer con los valores que son estan vacíos de mi dataset? ¿Debería eliminarlos? ¿Eliminar una fila entera? ¿Eliminar solo el dato?
+1. El primer error se obtuvo porque habían datos vacíos en mi dataset ¿Qué hace la función SimpleImputer que resolvió ese problema?
+2. ¿Qué debo hacer con los valores que son estan vacíos de mi dataset? ¿Debería eliminarlos? ¿Eliminar una fila entera? Reemplazar solo el dato? ¿Y con qué valor?
 3. Si pierdo datos o los reconstruyo de alguna manera, ¿Pierdo precisión en mi modelo predictivo? ¿Agrego algún tipo de ruido?
+4. ¿Qué son las variables n_estimators y random_state al momento de aplicar el código de random forest? ¿y por qué tienen los valores de 100 y 42? ¿Son correctos para mi situación?
 
 La respuesta a estas preguntas solo depende de lo bien que entiendas el problema y a qué decisiones debes tomar para sortear/parchar/eliminar estas dificultades. El mundo parece no ser perfecto en estas líneas de trabajo, por ende una solución demasiado perfecta o sencilla debe parecernos contraproducente ... o a lo menos cuestionable.
 
+Tras averiguar lo que hace la función SimpleImputer, se puede corroborar que es una función que inserta valores a nuestro dataset para que pueda llenar los espacios que se encuentran vacíos. Esto no parece adecuado para los fines que buscamos, ya que al ser un modelo predictivo no deberíamos introducir por nuestra cuenta valores que pueden afectar el modelo. 
 
+En un segundo aspecto, si hay valores de la columna PAES que estan vacíos, entonces no es posible usar los otros valores para estimar una predicción, ya que no sabemos el resultado al cual deberíamos llegar. Por ende esa fila completa debería desaparecer de nuestro dataset.
+
+Considerando estos razonamientos, parece justo decir que para obtener el modelo que mejor se ajuste, y que no tenga "ruido" por los valores que no estaban en la base original, entonces debemos borrar todas las filas que tengan algún dato faltante.
+
+
+### La Última Pregunta
+
+Pedimos a ChatGPT que considere borrar todas las filas que tengan valores vacíos o nulos. El código final fue este:
+
+<script src="https://gist.github.com/daniavm/2b929e13e7438d3d40123a43149d40ff.js"></script>
+
+Como verás, aquí no nos preocuparemos de momento por las variables n_estimators y random_state ya que es un espacio completo para otro artículo. Pero claramente es un problema que tendremos que abordar.
+
+El output del código fue el siguiente:
+
+<img src="{{https://daniavm.github.io}}{{ site.baseurl }}/assets/images/PAES_prediction_model/modelo_perdido_cap3_output_final.png" alt="">
+
+Como verás, es un resultado que tiene muchos menos puntos y que presenta claramente una precisión menor respecto del anterior (RMSE = 68,42)... aunque creo que se siente "más razonable". Mal que mal, ahora corregimos un problema importante como lo eran los datos introducidos "manualmente", lo que agrega una cuota de tranquilidad a nuestro trabajo ya que nos acercamos un poco más a la realidad mientras más conocemos lo que estamos haciendo. 
+
+Solo nos resta una cosa más... entender el código y los parámetros que lo definen para ver si es posible mejorar la precisión en las predicciones y afinar esto lo mejor posible. Pero hasta entonces, creo que nos merecemos un descanso... ha sido un largo camino por el Random Forest.
 
 
 <div align="right" markdown="1">
