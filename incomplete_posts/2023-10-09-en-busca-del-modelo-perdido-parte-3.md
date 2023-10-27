@@ -44,6 +44,7 @@ Así que nos armamos de valor, vamos al **[lugar del oráculo](chat.openai.com)*
 La emoción comienza a llegar a nuestro ser y tras esperar un par de segundos aparece el siguiente mensaje:
 
 > Lamentablemente, no puedo acceder ni utilizar archivos específicos, como el archivo CSV que mencionas, ya que mi capacidad de interactuar con el entorno es limitada y mi conocimiento está basado en datos que se detienen en enero de 2022. Sin embargo, puedo proporcionarte un código genérico en Python que puedes utilizar como punto de partida para realizar la tarea que mencionaste. Solo necesitas asegurarte de cargar tu archivo CSV con los datos adecuados. Asegúrate de que tengas la biblioteca Scikit-Learn instalada para usar el modelo Random Forest. Puedes instalarlo usando pip install scikit-learn.
+> 
 > _Respuesta inicial de ChatGPT_
 {: style="text-align: right;"}
 
@@ -88,57 +89,32 @@ Tras ingresar nuevamente el error a ChatGPT, nos entrega otra respuesta más:
 
 ## 🏆 Nuestro Primer Logro 🏆
 
-¡El código resultó! Tras dos intentos fallidos finalmente logramos ver un "output" que nos muestra un resultado interesantísimo. Además, no solo nos entregó un gráfico como le solicitamos, sino que una estimación del error en la predicción que se llamó "Error Cuadrado Medio" o "Error Cuadrático Medio" (ECM). Si no estas muy familiarizado con la estadística, basta con saber que esto nos da una estimación de qué tan bien se ajusta este modelo con los datos. 
+¡El código resultó! Tras dos intentos fallidos finalmente logramos ver un "output" que nos muestra un resultado interesantísimo. Además, no solo nos entregó un gráfico como le solicitamos, sino que una estimación del error en la predicción que se llamó "Error Cuadrado Medio" o "Error Cuadrático Medio" (ECM). Si no estas muy familiarizad@ con la estadística, basta con saber que esto nos da una estimación de qué tan bien se ajusta este modelo con los datos. 
 
-De hecho, si calculamos la raíz cuadrada de esta valor (que aquí nos dio 1409.76) tendremos una idea más clara de cómo se ajusta el modelo ya que este valor tendrá las unidades de la variable que estamos modelando. La raíz del ECM o RMSE por sus siglas en inglés nos dio en este caso 37,54 que representaría las desviaciones que tendría este modelo predictivo con la realidad. ¿Nada mal para alguien que solo está partiendo no?
+De hecho, si calculamos la raíz cuadrada de esta valor (que aquí nos dio 1409.76) tendremos una idea más clara de cómo se ajusta el modelo ya que este valor tendrá las unidades de la variable que estamos modelando. La raíz del ECM o RMSE por sus siglas en inglés nos dio en este caso 37,54 que representaría las desviaciones que tendría este modelo predictivo con la realidad. Es decir, nuestra predicción de los resultados PAES en la prueba de matemática no serían mucho más que 37,54 puntos ... que en este caso representan unas 2 a 3 preguntas como máximo.
+
+¿Nada mal para alguien que solo está partiendo no?
 
 El gráfico expulsado fue este:
 
 <img src="{{https://daniavm.github.io}}{{ site.baseurl }}/assets/images/PAES_prediction_model/modelo_perdido_cap3_plot_output.png" alt="">
 
+... y como podemos ver, se ajusta realmente bastante bien a los valores que teníamos en nuestros datos. 
+
+Todo parece muy bien hasta ahora ... aunque hay algo que no se siente "bien".
 
 
+### 🔨 Algo Anda Mal ... 🪓🎒
+
+Nuestra labor como investigadoræs aventurer@s es cuestionar, y cuestionar fuertemente. Por esta razón creo que es importante resaltar algunas preguntas que nacen si echas cuenta de lo que hemos hecho para obtener nuestro modelo:
+
+1. El primer error se obtuvo porque habán datos vacíos en mi dataset ¿Qué hace la función SimpleImputer que corrigió ese problema?
+2. ¿Qué debo hacer con los valores que son estan vacíos de mi dataset? ¿Debería eliminarlos? ¿Eliminar una fila entera? ¿Eliminar solo el dato?
+3. Si pierdo datos o los reconstruyo de alguna manera, ¿Pierdo precisión en mi modelo predictivo? ¿Agrego algún tipo de ruido?
+
+La respuesta a estas preguntas solo depende de lo bien que entiendas el problema y a qué decisiones debes tomar para sortear/parchar/eliminar estas dificultades. El mundo parece no ser perfecto en estas líneas de trabajo, por ende una solución demasiado perfecta o sencilla debe parecernos contraproducente ... o a lo menos cuestionable.
 
 
-La frase clave que usaré en esta oportunidad es la siguiente: "¿Cuáles son los modelos de machine learning que permiten hacer una predicción de resultados si tus datos son numéricos?". Me pareció importante mencionar lo último, ya que ***todos los datos que tenemos hasta ahora (salvo el rut, curso y nombre del estudiante) son números***. Esto ayuda a disminuir la cantidad de modelos que podrían salir una vez que le preguntemos a nuestra fuente.
-
-El resultado que entregó una mezcla de Google con ChatGPT fue más o menos el siguiente:
-
-1. Regresión Lineal Múltiple (Linear Regression)
-2. Regresión de Ridge o Lasso (Ridge Regression o Lasso Regression)
-3. Bosques Aleatorios (Random Forests)
-4. Gradient Boosting (Gradient Boosting (XGBoost, LightGBM, CatBoost))
-5. Redes Neuronales Artificiales (Artificial Neural Networks (Neural Networks))
-6. Regresión de Vecinos más Cercanos (k-Nearest Neighbors (K-NN))
-
-Son bastantes opciones para partir, así que deberíamos idear alguna forma para ir teniendo una noción de cuál usar primero. 
-
-## El plan inicial 🗺️
-
-Si te enviaran a construir una casa y nunca has hecho una, probablemente no tendrías idea de cómo responder a la pregunta de "¿cuáles son las herramientas que necesitas para construirla?". A pesar de la dificultad del asunto, creo que por nociones básicas y conocimientos previos podríamos intuir que el "martillo" sería una de las herramientas que estaría en esa lista. Esto ya es un punto de partida y disminuye la incertidumbre.
-
-Así mismo el análisis de datos no se trata de cuál herramienta usar para encontrar "el resultado que quieres encontrar". ***Ninguna persona puede saber realmente cuál es la respuesta a esa pregunta, ya que depende del problema que quieres resolver***. Por esta misma razón no nos podemos quedar con un único modelo inicial o con un set específico de modelos, ya que el problema se va resolviendo a medida que vamos ganando experiencia de él. 
-
-Quizás en el futuro hayamos resuelto tantos problemas del mismo tipo que intuiremos qué herramienta podríamos utilizar con un nivel de trabajo e incertidumbre menor, pero **mientras tanto debemos explorar**, y eso implica necesariamente experimentar lo que más puedamos con todo lo que tenemos. Así que probaremos idealmente todas estas herramientas para observar los resultados.
-
-De acuerdo a lo que vimos en el artículo anterior, en este problema contaremos con unas 100 filas de datos y unos 20 campos de información por cada una, así que no es un dataset demasiado robusto. ***Esto hace que el problema del overfitting (sobreajuste) o underfitting (subajuste) esten siempre acechando*** - hablaré de estos conceptos en otro post más adelante en caso de que te hayan llamado la atención -. 
-
-Considerando estas últimas observaciones, podría decir que ***creo que estos datos no estan del todo correlacionados entre sí y tampoco son lineales***, así que no daría demasiada importancia a los modelos 1 y 2. El modelo 6 tampoco le daría demasiada importancia al partir porque da por presupuesta una relación uno a uno de los datos y está más o menos claro que no es así. Los ensayos de PAES son secuenciales en el tiempo, así que necesitamos un modelo que estudie la evolución antes que la relación directa entre variables.
-
-Nos quedan entonces los modelos 3, 4 y 5 de los cuales creo que no tengo ninguna razón para privilegiar el uno sobre el otro, así que solo tomaré el 3 porque es el que está primero en la lista.
-
-
-### 🎒🔨 Preparando la mochila 🪓🎒
-
-A nuestra mochila de viaje agregaremos entonces los siguientes elementos:
-
-1. Bosques Aleatorios (Random Forests)
-2. Gradient Boosting (Gradient Boosting (XGBoost, LightGBM, CatBoost))
-3. Redes Neuronales Artificiales (Artificial Neural Networks (Neural Networks))
-
-Debido a que la muestra de datos no es muy grande, agregaremos también el mecanismo de "Validación Cruzada" para prevenir el overfitting y underfitting. Después de todo, el objetivo último de la misión es descubrir un modelo predictivo para una prueba, pero debemos resguardar la idea de que tambien sea un "modelo realista" minimizando los sesgos que nos puedan acarrear los datos.
-
-Hablaremos más de ello en la próxima publicación porque ya sabemos como deberíamos partir.
 
 
 <div align="right" markdown="1">
