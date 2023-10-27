@@ -48,13 +48,21 @@ La emoción comienza a llegar a nuestro ser y tras esperar un par de segundo apa
 
 Asombrados por el resultado, decidimos simplemente copiar y pegar este código en nuestro cuaderno de Jupyter dispuesto para trabajar (hablaremos de esto en otro post en caso de que te sea muy ajeno). Al hacerlo llega nuestra primer obstáculo.
 
+## 🏗️ Construyendo la solución ⚒️
 
-<img src="{{ https://daniavm.github.io/}}{{ site.baseurl }}/assets/images/PAES_prediction_model/error1_cap3_chatGTP.png" alt="">
+El output de ese código fue un error que se muestra en la imagen a continuación:
 
-<figure style = "float: right; width: 60%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <img src="/assets/images/PAES_prediction_model/librarian_IJ.jpeg" width="60%"  alt="Albert Evansky, el bibliotecario que le dio las ipstas a Indiana Jones para su misión. Él es nuestro equivalente de Google o ChatGPT y la librería... bueno, nuestra querida internet.">
-  <figcaption>Albert Evansky, el bibliotecario que le dio las pistas a Indiana Jones para su misión. Él es nuestro equivalente de Google o ChatGPT, y la librería ... bueno, sería nuestra querida internet.</figcaption>
-</figure>
+
+<img src="{{https://daniavm.github.io}}{{ site.baseurl }}/assets/images/PAES_prediction_model/error1_cap3_chatGTP.png" alt="">
+
+
+Claramente el oráculo no es infalible, ya que no conoce todo el contexto de nuestros datos. Así que copiamos y pegamos este mensaje de error en el oráculo y nos entrega la siguiente respuesta:
+
+> El error que estás viendo se debe a la presencia de valores faltantes (NaN) en tus datos. Antes de entrenar un modelo de Random Forest, debes ocuparte de manejar estos valores faltantes. Aquí hay una versión modificada del código que incluye la imputación de valores faltantes utilizando SimpleImputer de scikit-learn:
+
+<script src="https://gist.github.com/daniavm/2c0fd0da477f1e7129330282294a7d5d.js"></script>
+
+
 
 La frase clave que usaré en esta oportunidad es la siguiente: "¿Cuáles son los modelos de machine learning que permiten hacer una predicción de resultados si tus datos son numéricos?". Me pareció importante mencionar lo último, ya que ***todos los datos que tenemos hasta ahora (salvo el rut, curso y nombre del estudiante) son números***. Esto ayuda a disminuir la cantidad de modelos que podrían salir una vez que le preguntemos a nuestra fuente.
 
