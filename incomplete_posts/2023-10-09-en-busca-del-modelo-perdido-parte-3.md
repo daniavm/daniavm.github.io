@@ -44,11 +44,13 @@ Así que nos armamos de valor, vamos al **[lugar del oráculo](chat.openai.com)*
 La emoción comienza a llegar a nuestro ser y tras esperar un par de segundos aparece el siguiente mensaje:
 
 > Lamentablemente, no puedo acceder ni utilizar archivos específicos, como el archivo CSV que mencionas, ya que mi capacidad de interactuar con el entorno es limitada y mi conocimiento está basado en datos que se detienen en enero de 2022. Sin embargo, puedo proporcionarte un código genérico en Python que puedes utilizar como punto de partida para realizar la tarea que mencionaste. Solo necesitas asegurarte de cargar tu archivo CSV con los datos adecuados. Asegúrate de que tengas la biblioteca Scikit-Learn instalada para usar el modelo Random Forest. Puedes instalarlo usando pip install scikit-learn.
+> _Respuesta inicial de ChatGPT_
+{: style="text-align: right;"}
 
 <script src="https://gist.github.com/daniavm/ebc450d85ec0a021d6c604096e1c2a77.js"></script>
 
 
-Asombrados por el resultado, decidimos simplemente copiar y pegar este código en nuestro cuaderno de Jupyter dispuesto para trabajar (hablaremos de esto en otro post en caso de que te sea muy ajeno). Al hacerlo llega nuestra primer obstáculo.
+Asombrad@s por el resultado, decidimos simplemente copiar y pegar este código en nuestro cuaderno de Jupyter dispuesto para trabajar (hablaremos de esto en otro post en caso de que te sea muy ajeno). Al hacerlo llega nuestra primer obstáculo.
 
 ## 🏗️ Construyendo la solución ⚒️
 
@@ -61,6 +63,9 @@ El output del código entregado por ChatGPT fue un error que se muestra en la im
 Claramente el oráculo no es infalible, ya que no conoce todo el contexto de nuestros datos. Así que copiamos y pegamos este mensaje de error en el oráculo y que tenga mayor información respecto del error. Lo que nos entregó fue la siguiente respuesta:
 
 > El error que estás viendo se debe a la presencia de valores faltantes (NaN) en tus datos. Antes de entrenar un modelo de Random Forest, debes ocuparte de manejar estos valores faltantes. Aquí hay una versión modificada del código que incluye la imputación de valores faltantes utilizando SimpleImputer de scikit-learn:
+> 
+> _ChatGPT tras error 1_
+{: style="text-align: right;"}
 
 <script src="https://gist.github.com/daniavm/2c0fd0da477f1e7129330282294a7d5d.js"></script>
 
@@ -69,12 +74,27 @@ Tras borrar el código anterior e incluir el nuevo en nuestro cuaderno Jupyter n
 
 <img src="{{https://daniavm.github.io}}{{ site.baseurl }}/assets/images/PAES_prediction_model/error2_cap3_chatGTP.png" alt="">
 
-"¡Que cosa más desesperante esta!" dirán algun@s, pero lo cierto es que el proceso de construcción de una buena respuesta con ChatGPT puede tomar tanto como construir nosotr@s mism@s nuestro código desde cero si no damos los suficientes detalles al "oráculo". De hecho puede incluso ocurrir que la respuesta no llegue hasta después de muchas iteraciones o quizás correcciones que un@ mism@ tendrá que reconocer.
+"¡Que cosa más desesperante esta!" dirán algun@s, pero lo cierto es que el proceso de construcción de una buena respuesta con ChatGPT puede tomar tanto como construir nosotr@s mism@s nuestro código desde cero si no damos los suficientes detalles al "oráculo". De hecho, puede incluso ocurrir que la respuesta no llegue hasta después de muchas iteraciones o quizás correcciones que un@ mism@ tendrá que reconocer.
 
 Tras ingresar nuevamente el error a ChatGPT, nos entrega otra respuesta más:
 
+> Si estás obteniendo un error que indica que "Input y contains NaN," significa que tus etiquetas objetivo (en este caso, la columna 'PAES') también contienen valores faltantes (NaN). Debes manejar los valores faltantes en las etiquetas objetivo antes de entrenar un modelo. Aquí hay una versión modificada del código que aborda este problema utilizando la imputación de valores faltantes en las etiquetas objetivo:
+> 
+> _ChatGPT tras error 1_
+{: style="text-align: right;"}
+
+<script src="https://gist.github.com/daniavm/9e6079b6e991562d23e9505fb9c70260.js"></script>
 
 
+## 🏆 Nuestro Primer Logro 🏆
+
+¡El código resultó! Tras dos intentos fallidos finalmente logramos ver un "output" que nos muestra un resultado interesantísimo. Además, no solo nos entregó un gráfico como le solicitamos, sino que una estimación del error en la predicción que se llamó "Error Cuadrado Medio" o "Error Cuadrático Medio" (ECM). Si no estas muy familiarizado con la estadística, basta con saber que esto nos da una estimación de qué tan bien se ajusta este modelo con los datos. 
+
+De hecho, si calculamos la raíz cuadrada de esta valor (que aquí nos dio 1409.76) tendremos una idea más clara de cómo se ajusta el modelo ya que este valor tendrá las unidades de la variable que estamos modelando. La raíz del ECM o RMSE por sus siglas en inglés nos dio en este caso 37,54 que representaría las desviaciones que tendría este modelo predictivo con la realidad. ¿Nada mal para alguien que solo está partiendo no?
+
+El gráfico expulsado fue este:
+
+<img src="{{https://daniavm.github.io}}{{ site.baseurl }}/assets/images/PAES_prediction_model/modelo_perdido_cap3_plot_output.png" alt="">
 
 
 
