@@ -41,7 +41,9 @@ Así que nos armamos de valor, vamos al **[lugar del oráculo](chat.openai.com)*
 
 ***"Oh gran ChatGPT, usa un archivo de CSV cuyo nombre es PAES_training_set_2022_Complete - PAES_training_set_2022 - Matemáticas.csv y entrega el código en python para poder predecir los resultados de la columna llamada "PAES" descartando las columnas llamadas 'ID', 'Curso' y 'Nombre' para entrenar el modelo. Usa todas las otras aplicando el método de random forest y grafica los resultados de valores reales vs valores predichos por el modelo"***
 
-La emoción comienza a llegar a nuestro ser y tras esperar un par de segundo aparece el siguiente mensaje:
+La emoción comienza a llegar a nuestro ser y tras esperar un par de segundos aparece el siguiente mensaje:
+
+> Lamentablemente, no puedo acceder ni utilizar archivos específicos, como el archivo CSV que mencionas, ya que mi capacidad de interactuar con el entorno es limitada y mi conocimiento está basado en datos que se detienen en enero de 2022. Sin embargo, puedo proporcionarte un código genérico en Python que puedes utilizar como punto de partida para realizar la tarea que mencionaste. Solo necesitas asegurarte de cargar tu archivo CSV con los datos adecuados. Asegúrate de que tengas la biblioteca Scikit-Learn instalada para usar el modelo Random Forest. Puedes instalarlo usando pip install scikit-learn.
 
 <script src="https://gist.github.com/daniavm/ebc450d85ec0a021d6c604096e1c2a77.js"></script>
 
@@ -50,17 +52,31 @@ Asombrados por el resultado, decidimos simplemente copiar y pegar este código e
 
 ## 🏗️ Construyendo la solución ⚒️
 
-El output de ese código fue un error que se muestra en la imagen a continuación:
+El output del código entregado por ChatGPT fue un error que se muestra en la imagen a continuación:
 
 
 <img src="{{https://daniavm.github.io}}{{ site.baseurl }}/assets/images/PAES_prediction_model/error1_cap3_chatGTP.png" alt="">
 
 
-Claramente el oráculo no es infalible, ya que no conoce todo el contexto de nuestros datos. Así que copiamos y pegamos este mensaje de error en el oráculo y nos entrega la siguiente respuesta:
+Claramente el oráculo no es infalible, ya que no conoce todo el contexto de nuestros datos. Así que copiamos y pegamos este mensaje de error en el oráculo y que tenga mayor información respecto del error. Lo que nos entregó fue la siguiente respuesta:
 
 > El error que estás viendo se debe a la presencia de valores faltantes (NaN) en tus datos. Antes de entrenar un modelo de Random Forest, debes ocuparte de manejar estos valores faltantes. Aquí hay una versión modificada del código que incluye la imputación de valores faltantes utilizando SimpleImputer de scikit-learn:
 
 <script src="https://gist.github.com/daniavm/2c0fd0da477f1e7129330282294a7d5d.js"></script>
+
+
+Tras borrar el código anterior e incluir el nuevo en nuestro cuaderno Jupyter nos topamos otra vez con otro error 😔. 
+
+<img src="{{https://daniavm.github.io}}{{ site.baseurl }}/assets/images/PAES_prediction_model/error2_cap3_chatGTP.png" alt="">
+
+"¡Que cosa más desesperante esta!" dirán algun@s, pero lo cierto es que el proceso de construcción de una buena respuesta con ChatGPT puede tomar tanto como construir nosotr@s mism@s nuestro código desde cero si no damos los suficientes detalles al "oráculo". De hecho puede incluso ocurrir que la respuesta no llegue hasta después de muchas iteraciones o quizás correcciones que un@ mism@ tendrá que reconocer.
+
+Tras ingresar nuevamente el error a ChatGPT, nos entrega otra respuesta más:
+
+
+
+
+
 
 
 
