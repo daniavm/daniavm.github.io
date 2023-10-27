@@ -11,7 +11,7 @@ header:
   teaser: /assets/images/PAES_prediction_model/RandomForestBanner.jpg
 
 categories:
-  - Data Analysis
+  - Machine Learning
 tags:
   - Data Analysis
   - EDA
@@ -19,7 +19,9 @@ tags:
   - ADE
   - Exploratory Data Analysis
   - Educación
+  - Machine Learning
   - Modelos de regresión
+  - Random Forest
 
 ---
 
