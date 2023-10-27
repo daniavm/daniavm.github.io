@@ -1,5 +1,5 @@
 ---
-title: "En Busca del Modelo Perdido - Parte 3: El Random Forest"
+title: "En Busca del Modelo Perdido - Parte 3: El Random Forest + ChatGPT"
 layout: single
 author_profile: true
 related: true
