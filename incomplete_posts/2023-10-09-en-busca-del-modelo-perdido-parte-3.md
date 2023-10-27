@@ -39,9 +39,14 @@ En nuestro primer capítulo vimos la manera de trabajar un dataset que contenía
 
 Así que nos armamos de valor, vamos al **[lugar del oráculo](chat.openai.com)** y "pronunciamos las palabras mágicas":
 
-***"Oh gran ChatGPT, usa un archivo de CSV cuyo nombre es _______.csv y entrega el código en python para poder predecir los resultados"***
+***"Oh gran ChatGPT, usa un archivo de CSV cuyo nombre es PAES_training_set_2022_Complete - PAES_training_set_2022 - Matemáticas.csv y entrega el código en python para poder predecir los resultados de la columna llamada "PAES" descartando las columnas llamadas 'ID', 'Curso' y 'Nombre' para entrenar el modelo. Usa todas las otras aplicando el método de random forest y grafica los resultados de valores reales vs valores predichos por el modelo"***
 
-Mientras escribo este artículo le he echado una mirada a nuestra mochila del análisis de datos y creo que cuenta con un montón de herramientas. De hecho son tantas que probablemente no podamos conocerlas todas de manera detallada hasta que no nos involucremos con ellas más seriamente. Así que haremos algo simple para iniciar ... buscaremos en Google, o mejor aún ... preguntémosle a una inteligencia artificial.
+La emoción comienza a llegar a nuestro ser y tras esperar un par de segundo aparece el siguiente mensaje:
+
+<script src="https://gist.github.com/daniavm/ebc450d85ec0a021d6c604096e1c2a77.js"></script>
+
+
+
 
 <figure style = "float: right; width: 60%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <img src="/assets/images/PAES_prediction_model/librarian_IJ.jpeg" width="60%"  alt="Albert Evansky, el bibliotecario que le dio las ipstas a Indiana Jones para su misión. Él es nuestro equivalente de Google o ChatGPT y la librería... bueno, nuestra querida internet.">
