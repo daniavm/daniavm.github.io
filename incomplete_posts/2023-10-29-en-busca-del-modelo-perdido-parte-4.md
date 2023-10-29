@@ -66,21 +66,21 @@ Cada camino que creas desde el nodo raíz hasta una hoja se llama una rama o un 
 
 **Ejemplo:** Al seguir tu elección inicial del camino de la derecha, te das cuenta de que algunas de las decisiones que tomaste no te acercaron al modelo perdido. Decides podar esas decisiones inútiles, dejando solo las que realmente importan en tu búsqueda.
 
-## 🌳 Padres e Hij@s: La Jerarquía del Bosque 🌳
+## 🌳 PMadres e Hij@s: La Jerarquía del Bosque 🌳
 
-Dentro de nuestro bosque de decisiones, los nodos de decisión forman una jerarquía, similar a una familia. Cada nod@ de decisión tiene un rol específico, y algun@s actúan como nod@s padre@s, mientras que otr@s son nod@s hij@s.
+Dentro de nuestro bosque de decisiones, los nodos de decisión forman una jerarquía, similar a una familia. Cada nod@ de decisión tiene un rol específico, y algun@s actúan como nod@s pmadre@s, mientras que otr@s son nod@s hij@s.
 
-### Nod@s Padres
+### Nod@s PMadres
 
 Est@s nod@s son como tus mentor@s o supervisor@s en tu búsqueda. En lugar de tomar decisiones directamente, guían tu camino y dirigen tus acciones. Son responsables de dividir el camino en múltiples opciones, creando así nod@s hij@s que representan diferentes rutas que puedes seguir.
 
 ### Nod@s Hij@s
 
-L@s nod@s hij@s son como tus compañer@s de viaje. Están conectad@s a l@s nod@s padre@s a través de caminos, lo que significa que sigues las indicaciones de un nod@ padre para llegar a un nod@ hij@. Cada nod@ hij@ representa una elección específica que puedes hacer en tu búsqueda en busca del modelo perdido.
+L@s nod@s hij@s son como tus compañer@s de viaje. Están conectad@s a l@s nod@s pmadre@s a través de caminos, lo que significa que sigues las indicaciones de un nod@ pmadre para llegar a un nod@ hij@. Cada nod@ hij@ representa una elección específica que puedes hacer en tu búsqueda en busca del modelo perdido.
 
-**Ejemplo:** Imagina que estás en el bosque y llegas a un cruce de caminos. En este punto, te encuentras con un nod@ padre que te ofrece tres opciones: tomar el camino de la izquierda, seguir el camino recto o aventurarte por el camino de la derecha. Cada un@ de est@s caminos está representad@ por un nod@ hij@. Sigues un@ de est@s caminos según la elección que hagas en ese nod@ padre.
+**Ejemplo:** Imagina que estás en el bosque y llegas a un cruce de caminos. En este punto, te encuentras con un nod@ pmadre que te ofrece tres opciones: tomar el camino de la izquierda, seguir el camino recto o aventurarte por el camino de la derecha. Cada un@ de est@s caminos está representad@ por un nod@ hij@. Sigues un@ de est@s caminos según la elección que hagas en ese nod@ pmadre.
 
-La magia del Random Forest radica en que puedes crear much@s de est@s árboles de decisiones, cada un@ con su propia jerarquía única de nod@s padre@s e hij@s. Luego, el Random Forest combina est@s jerarquías para obtener una visión completa de tus acciones y decisiones en busca del modelo perdido.
+La magia del Random Forest radica en que puedes crear much@s de est@s árboles de decisiones, cada un@ con su propia jerarquía única de nod@s pmadre@s e hij@s. Luego, el Random Forest combina est@s jerarquías para obtener una visión completa de tus acciones y decisiones en busca del modelo perdido.
 
 ## 🌳🌳 Parámetros n_estimators y random_state 🌳🌳
 
@@ -94,7 +94,7 @@ Otro parámetro importante es `random_state`, que se encarga de controlar la ale
 
 ## 🌟🌟 En Resumen: Navegando el Bosque de Random Forest 🌟🌟
 
-Así como un aventur@r toma decisiones cruciales para encontrar el tesoro perdido, Random Forest toma decisiones basadas en los datos para construir un modelo poderos@. Cada nod@, rama y nod@ terminal representa una elección y una conclusión. La jerarquía de nod@s padre@s e hij@s organiza el camino en el bosque de decisiones.
+Así como un aventur@r toma decisiones cruciales para encontrar el tesoro perdido, Random Forest toma decisiones basadas en los datos para construir un modelo poderos@. Cada nod@, rama y nod@ terminal representa una elección y una conclusión. La jerarquía de nod@s pmadre@s e hij@s organiza el camino en el bosque de decisiones.
 
 Mientras exploramos el Random Forest, ten en cuenta que no seguimos un sol@ árbol de decisión sino un bosque complet@ de ell@s. Cada árbol ofrece su propia perspectiva sobre cómo alcanzar nuestro objetivo.
 
