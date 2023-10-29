@@ -40,6 +40,8 @@ tags:
 
 ---
 
+<div align="justify" markdown="1">
+
 Hemos llegado a un emocionante punto en nuestra búsqueda para encontrar el modelo perdido que prediga los resultados de la PAES en 2024. En nuestro último capítulo, exploramos cómo utilizar ChatGPT para generar código de Random Forest, una técnica poderosa en el aprendizaje automático.
 
 Si aún no has leíd@ el capítulo anterior, te invito a echarle un vistazo para obtener una visión general de cómo ChatGPT nos ayudó a dar los primeros pasos en la creación de nuestro modelo predictivo.
@@ -96,4 +98,15 @@ Así como un aventur@r toma decisiones cruciales para encontrar el tesoro perdid
 
 Mientras exploramos el Random Forest, ten en cuenta que no seguimos un sol@ árbol de decisión sino un bosque complet@ de ell@s. Cada árbol ofrece su propia perspectiva sobre cómo alcanzar nuestro objetivo.
 
+<div align="right" markdown="1">
+
+_Hasta el próximo cronopunto del Principia 🥚._
+
+DV
+
+</div>
+
 ---
+
+</div>
+
