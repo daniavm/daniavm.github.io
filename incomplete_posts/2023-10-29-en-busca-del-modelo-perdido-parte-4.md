@@ -60,9 +60,6 @@ En este espeso bosque de decisiones, cada versión de ti comienza en lo que llam
 
 A medida que avanzas en tu búsqueda, tomas una serie de decisiones, como "¿Debería recopilar más datos?" o "¿Qué enfoque debo utilizar para construir el modelo?".
 
-![Ejemplo 1: La Raíz](/assets/images/PAES_prediction_model/modelo_perdido_cap4_raices.gif)
-<img src="{{https://daniavm.github.io}}{{ site.baseurl }}/assets/images/PAES_prediction_model/modelo_perdido_cap4_raices.gif" alt="">
-
 ### 🌿 Poda y Ramas 🌿
 
 Para mantener tu bosque de decisiones saludable, a menudo realizas una técnica llamada poda. La poda implica eliminar caminos que no son útiles o que pueden causar confusión en tu búsqueda. Esto ayuda a que tu bosque de decisiones sea más eficiente y preciso.
@@ -70,8 +67,6 @@ Para mantener tu bosque de decisiones saludable, a menudo realizas una técnica 
 Cada camino que creas desde el nodo raíz hasta una hoja se llama una rama o un sub-árbol. Cada rama es un camino diferente que podrías tomar en tu búsqueda en busca del modelo perdido.
 
 **Ejemplo:** Al seguir tu elección inicial del camino de la derecha, te das cuenta de que algunas de las decisiones que tomaste no te acercaron al modelo perdido. Decides podar esas decisiones inútiles, dejando solo las que realmente importan en tu búsqueda.
-
-![Ejemplo 3: Hojas y Poda](/assets/images/RandomForestPruningExample.png)
 
 ### 🌳 PMadres e Hij@s: La Jerarquía del Bosque 🌳
 
@@ -87,7 +82,6 @@ Los nodos hijos son como tus compañeros de viaje. Están conectados a los nodos
 
 **Ejemplo:** Imagina que estás en el bosque y llegas a un cruce de caminos. En este punto, te encuentras con un nodo padre que te ofrece tres opciones: tomar el camino de la izquierda, seguir el camino recto o aventurarte por el camino de la derecha. Cada uno de estos caminos está representado por un nodo hijo. Sigues uno de estos caminos según la elección que hagas en ese nodo padre.
 
-![Ejemplo 2: Nodos, Ramificación y Jerarquía](/assets/images/RandomForestHierarchyExample.png)
 
 ## 🌳🌳 Parámetros n_estimators y random_state 🌳🌳
 
@@ -99,13 +93,14 @@ Otro parámetro importante es `random_state`, que se encarga de controlar la ale
 
 **Ejemplo:** Si configuramos `random_state` en 42, tus diarios siempre seguirán el mismo patrón de decisiones. Esto es útil cuando deseas comparar resultados o depurar el modelo de manera consistente.
 
-![Ejemplo 4: Parámetro n_estimators](/assets/images/RandomForestNestimatorsExample.png)
 
 ## 🌟🌟 En Resumen: Navegando el Bosque de Random Forest 🌟🌟
 
 Así como un aventurero toma decisiones cruciales para encontrar el tesoro perdido, Random Forest toma decisiones basadas en los datos para construir un modelo poderoso. Cada nodo, rama, hoja y diario representa una elección y una conclusión. La jerarquía de nodos padres e hijos organiza el camino en el bosque de decisiones.
 
 Mientras exploramos el Random Forest, ten en cuenta que no seguimos un solo árbol de decisión, sino un bosque completo de ellos. Cada árbol ofrece su propia perspectiva sobre cómo alcanzar nuestro objetivo.
+
+<img src="{{https://daniavm.github.io}}{{ site.baseurl }}/assets/images/PAES_prediction_model/modelo_perdido_cap4_analogia.gif" alt="">
 
 <div align="right" markdown="1">
 
