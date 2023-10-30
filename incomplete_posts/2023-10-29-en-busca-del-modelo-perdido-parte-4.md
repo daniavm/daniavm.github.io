@@ -48,7 +48,7 @@ Si aún no has leíd@ el capítulo anterior, te invito a [echarle un vistazo](ht
 
 ## 🌲🌲 Random Forest: Un Bosque de Decisiones 🌲🌲
 
-Ahora, profundicemos en la técnica de Random Forest. Imagina que estás en medio de un emocionante bosque lleno de árboles de decisiones, donde cada árbol representa una versión única de tu búsqueda en busca del modelo perdido. Pero, en lugar de árboles viv@s, estos son como descripciones de las decisiones que podrías tomar mientras avanzas en tu búsqueda.
+Ahora, nos tomaremos un descanso en el recorrido para profundizar en la técnica de Random Forest. Imagina que estás en medio de un bosque lleno de árboles de decisiones, donde cada árbol representa una versión única de tu búsqueda en busca del modelo perdido. Pero, en lugar de árboles viv@s, estos son como descripciones de las decisiones que podrías tomar mientras avanzas en tu búsqueda.
 
 ### 🌳 Nodos y Ramificación 🌳
 
