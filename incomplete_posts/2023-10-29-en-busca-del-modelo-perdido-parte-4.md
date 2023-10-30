@@ -37,10 +37,26 @@ tags:
   - Data Analysis
   - Análisis de Datos
 
+carousels:
+- images: 
+  - image: /assets/images/PAES_prediction_model/modelo_perdido_cap3_plot_output.png
+    url: post-name-1
+  - image: /assets/images/PAES_prediction_model/modelo_perdido_cap3_plot_output.png
+    url: post-name-2
+  - image: /assets/images/PAES_prediction_model/modelo_perdido_cap3_plot_output.png
+    url: post-name-3
 
 ---
 
 <div align="justify" markdown="1">
+
+<div class="carousel__track">
+    <ul>
+    {% for item in page.carousels[number].images %}
+        <li class="carousel__slide" style="background-image: url('{{ item.image }}');"><a href="{{ item.url }}">{{ item.url }}</a></li>
+    {% endfor %}
+    </ul>
+</div>
 
 Hemos llegado a un emocionante punto en nuestra búsqueda para encontrar el modelo perdido que prediga los resultados de la PAES. En nuestro último capítulo, exploramos cómo utilizar ChatGPT para generar código de Random Forest, una técnica poderosa en el aprendizaje automático.
 
@@ -48,9 +64,9 @@ Si aún no has leíd@ el capítulo anterior, te invito a [echarle un vistazo](ht
 
 ## 🌲🌲 Explorando el Random Forest 🌲🌲
 
-Ahora, nos tomaremos un descanso en el recorrido para profundizar en la técnica de Random Forest. Imagina que estás en medio de un bosque rodeado de árboles que, en lugar de solo estar vivos, cada uno de ellos representa una versión única de tu búsqueda en la travesía hacia el modelo perdido. Las raíces, ramas y hojas representan de alguna manera las decisione sque has tomado en los distintos puntos de tu travesía y cada árbol termina siendo una historia de lo que hiciste en cada camino tomado.
+Ahora, nos tomaremos un descanso en el recorrido para profundizar en la técnica de Random Forest. Imagina que estás en medio de un bosque rodeado de árboles que, en lugar de solo estar vivos, cada uno de ellos representa una versión única de tu búsqueda en la travesía hacia el modelo perdido. Las raíces, ramas y hojas representan de alguna manera las decisiones que has tomado en los distintos puntos de tu travesía y cada árbol termina siendo una historia de lo que hiciste en cada camino tomado.
 
-Si no te queda del todo claro, bueno ese es uno de los motivos por los que construir esta publicación. Hacernos un poco más conocedoræs de estas representaciones para usarlas en casos reales.
+Si no te queda del todo claro, bueno, ese es uno de los motivos por los cuales construir esta publicación. Hacernos un poco más conocedoræs de estas representaciones para usarlas en casos reales.
 
 ### 🌳 Nodos y Ramificación 🌳
 
