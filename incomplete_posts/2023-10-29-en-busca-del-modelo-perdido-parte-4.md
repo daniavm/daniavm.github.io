@@ -42,9 +42,9 @@ tags:
 
 <div align="justify" markdown="1">
 
-Hemos llegado a un emocionante punto en nuestra búsqueda para encontrar el modelo perdido que prediga los resultados de la PAES en 2024. En nuestro último capítulo, exploramos cómo utilizar ChatGPT para generar código de Random Forest, una técnica poderosa en el aprendizaje automático.
+Hemos llegado a un emocionante punto en nuestra búsqueda para encontrar el modelo perdido que prediga los resultados de la PAES. En nuestro último capítulo, exploramos cómo utilizar ChatGPT para generar código de Random Forest, una técnica poderosa en el aprendizaje automático.
 
-Si aún no has leíd@ el capítulo anterior, te invito a echarle un vistazo para obtener una visión general de cómo ChatGPT nos ayudó a dar los primeros pasos en la creación de nuestro modelo predictivo.
+Si aún no has leíd@ el capítulo anterior, te invito a [echarle un vistazo](https://daniavm.github.io/machine%20learning/en-busca-del-modelo-perdido-parte-3/) para obtener una visión general de cómo ChatGPT nos ayudó a dar los primeros pasos en la creación de nuestro modelo predictivo.
 
 ## 🌲🌲 Random Forest: Un Bosque de Decisiones 🌲🌲
 
