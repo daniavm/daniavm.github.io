@@ -340,6 +340,14 @@ defaults:
       layout: single
       author_profile: false
       share: true
+  # _learninganalytics
+  - scope:
+      path: ""
+      type: learninganalytics
+    values:
+      layout: single
+      author_profile: false
+      share: true
 
 collections:
   portfolio:
