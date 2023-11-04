@@ -37,26 +37,9 @@ tags:
   - Data Analysis
   - Análisis de Datos
 
-carousels:
-- images: 
-  - image: /assets/images/PAES_prediction_model/modelo_perdido_cap3_plot_output.png
-    url: post-name-1
-  - image: /assets/images/PAES_prediction_model/modelo_perdido_cap3_plot_output.png
-    url: post-name-2
-  - image: /assets/images/PAES_prediction_model/modelo_perdido_cap3_plot_output.png
-    url: post-name-3
-
 ---
 
 <div align="justify" markdown="1">
-
-<div class="carousel__track">
-    <ul>
-    {% for item in page.carousels[number].images %}
-        <li class="carousel__slide" style="background-image: url('{{ item.image }}');"><a href="{{ item.url }}">{{ item.url }}</a></li>
-    {% endfor %}
-    </ul>
-</div>
 
 Hemos llegado a un emocionante punto en nuestra búsqueda para encontrar el modelo perdido que prediga los resultados de la PAES. En nuestro último capítulo, exploramos cómo utilizar ChatGPT para generar código de Random Forest, una técnica poderosa en el aprendizaje automático.
 

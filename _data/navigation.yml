@@ -4,11 +4,13 @@ main:
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
    - title: "Home"
      url: /
+   - title: "Posts"
+     url: /categories/
+   - title: "Learning Analytics"
+     url: /LA/
    - title: "Portfolio"
      url: /portfolio/
    - title: "Youtube"
      url: https://www.youtube.com/channel/UCE9a5RZRjCwvyFlg2ORG1HA
-   - title: "Posts"
-     url: /categories/
    - title: "About"
      url: /about/
