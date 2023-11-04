@@ -64,7 +64,7 @@ gallery:
 ## Introduction
 
 <div align="justify" markdown="1">
-En cada colegio de educación media, es común tener un plan de trabajo para analizar los datos de los estudiantes de 4° medio, especialmente cuando se trata de las pruebas de ingreso a la educación superior (PAES). Identificar características comunes y mejorar este tipo de herramientas ha sido mi objetivo principal. Mi proyecto se centra en crear funciones que proporcionen información valiosa para la toma de decisiones pedagógicas y disminuir los tiempos de trabajo de mis pares.
+En cada colegio de educación media, es común tener un plan de trabajo para analizar los datos de los estudiantes de 4° medio, especialmente cuando se trata de las pruebas de ingreso a la educación superior (PAES). Identificar características comunes y mejorar este tipo de herramientas ha sido mi objetivo principal. Mi proyecto se centra en crear funciones que proporcionen información valiosa para la toma de decisiones pedagógicas y disminuir los tiempos de trabajo de mis pares .
 
 ## Abordando el problema
 
