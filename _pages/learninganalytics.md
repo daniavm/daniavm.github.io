@@ -1,8 +1,8 @@
 ---
 title: Learning Analytics
 layout: collection
-permalink: /LA/
-collection: learninganalytics
+permalink: /learninganalytics/
+collection: portfolio
 entries_layout: grid
 classes: wide
 ---
