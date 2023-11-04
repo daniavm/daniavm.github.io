@@ -1,5 +1,5 @@
 ---
-title: "Optimizando el análisis en el seguimiento de Ensayos PAES"
+title: "Probando LA"
 excerpt: "Un piloto que apoya el registro de datos y la toma de decisiones para la Prueba de Acceso a la Educación Superior"
 layout: single
 toc: true
