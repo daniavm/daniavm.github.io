@@ -33,8 +33,8 @@ Si cuentas con una amplia cantidad de evaluaciones aplicada a distintos niveles,
 
 Junto a lo anterior también podrás ver algunos elementos estadísticos mínimos como el promedio por nivel y la cantidad de estudiantes que rindieron la evaluación. 
 
-<figure style = "float: center; width: 80%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_niveles.png" width="60%"  alt="Albert Evansky, el bibliotecario que le dio las ipstas a Indiana Jones para su misión. Él es nuestro equivalente de Google o ChatGPT y la librería... bueno, nuestra querida internet.">
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_niveles.png" width="60%"  alt="Imagen 1: Visualización de resultados a nivel de colegio para una jornada de evaluación ficticia.">
   <figcaption>Albert Evansky, el bibliotecario que le dio las pistas a Indiana Jones para su misión. Él es nuestro equivalente de Google o ChatGPT, y la librería ... bueno, sería nuestra querida internet.</figcaption>
 </figure>
 
@@ -43,6 +43,11 @@ Junto a lo anterior también podrás ver algunos elementos estadísticos mínimo
 Si deseas profundizar en el rendimiento de los estudiantes en cursos específicos, esta herramienta te permite desglosar la información y obtener datos detallados estándares para cada curso de un nivel seleccionado. El objetivo de esto es identificar diferencias que puedan existir entre los cursos o confirmar el avance homogéneo a lo largo del tiempo.
 
 Cabe notar que se hace la misma mirada de la información tanto en la visual institucional como por curso. Esto ayuda a entender cómo se relacionan los resultados macroeducativos con respecto a un nivel de detalle más fino (más resolución de la información). Es decir, los mismos gráficos que estan a nivel de institución, se encontrarán a nivel de cursos para ver la conexión entre ellos.
+
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_cursos.png" width="60%"  alt="Imagen 2: Visualización de resultados a nivel de cursos para una jornada de evaluación ficticia.">
+  <figcaption>Albert Evansky, el bibliotecario que le dio las pistas a Indiana Jones para su misión. Él es nuestro equivalente de Google o ChatGPT, y la librería ... bueno, sería nuestra querida internet.</figcaption>
+</figure>
 
 ## Potenciando el Trabajo de Profesores de Asignatura
 
@@ -55,6 +60,11 @@ Si deseas identificar a los estudiantes que necesitan apoyo adicional en una asi
 ### Clasificación por Niveles de Logro
 
 Una de las funciones destacadas de esta herramienta es la capacidad de clasificar por niveles de logro, que pueden basarse en porcentajes de logro (valor numérico) o colores en la planilla (valor simbólico). Esto permite una evaluación más precisa del rendimiento de los estudiantes y la toma de decisiones más informadas.
+
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_estudiante.png" width="60%"  alt="Imagen 3: Visualización de la clasificación por niveles de logro para cada estudiante de un curso ficticio seleccionado.">
+  <figcaption>Albert Evansky, el bibliotecario que le dio las pistas a Indiana Jones para su misión. Él es nuestro equivalente de Google o ChatGPT, y la librería ... bueno, sería nuestra querida internet.</figcaption>
+</figure>
 
 ## Complemento Perfecto para MarkQual
 
