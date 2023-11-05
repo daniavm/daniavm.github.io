@@ -7,8 +7,8 @@ comments: true
 toc: false
 
 header:
-  image: /assets/images/analysis_automation.jpg
-  teaser: /assets/images/analysis_automation.jpg
+  image: /assets/images/learninganalytics_images/banner_script_clasificacion_1.png
+  teaser: /assets/images/learninganalytics_images/banner_script_clasificacion_1.png
 
 categories:
   - Educación
