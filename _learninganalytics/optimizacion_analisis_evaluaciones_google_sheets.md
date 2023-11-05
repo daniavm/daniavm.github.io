@@ -21,8 +21,6 @@ tags:
 
 ---
 
-<div align="justify" markdown="1">
-
 En el mundo de la educación, el análisis de los resultados de las evaluaciones escolares es una tarea crítica para tomar decisiones informadas y brindar una educación de alta calidad. Sabemos que esto puede ser una labor ardua y que consume mucho tiempo. La buena noticia es que hemos desarrollado una herramienta de automatización en Google Sheets que se centra en las necesidades de jefes de departamento, coordinadores y profesores de asignatura, y que puede traer beneficios significativos a su labor. 
 
 ## Facilitando el Trabajo de Jefes de Departamento y Coordinadores
@@ -73,14 +71,12 @@ Si deseas aprender cómo configurar y utilizar esta planilla y script, te invita
 
 La automatización del análisis de evaluaciones escolares en Google Sheets es una herramienta esencial que se adapta a las necesidades de jefes de departamento, coordinadores y profesores de asignatura. Esta solución ahorra tiempo y esfuerzo al simplificar el trabajo de organización, lo que enriquece la enseñanza y el aprendizaje. Además, impulsa una educación centrada en el rendimiento individual de los estudiantes y la idea de "aprendanza".
 
-</div>
-
-<div align="right" markdown="1">
+Descarga tu copia de la planilla [aquí](enlace-de-descarga-aqui) y comienza a aprovechar los beneficios de la automatización.
 
 _Hasta el próximo cronopunto del Principia 🥚._
 
 DV
 
-</div>
-
 ---
+
+Asegúrate de completar los enlaces necesarios en los lugares marcados como "[enlace-de-youtube-aqui]" y "[enlace-de-descarga-aqui]" para que puedas utilizarlos en tu artículo.
