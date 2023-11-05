@@ -35,7 +35,7 @@ Junto a lo anterior también podrás ver algunos elementos estadísticos mínimo
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_niveles.png" width="60%"  alt="Imagen 1: Visualización de resultados a nivel de colegio para una jornada de evaluación ficticia.">
-  <figcaption>Albert Evansky, el bibliotecario que le dio las pistas a Indiana Jones para su misión. Él es nuestro equivalente de Google o ChatGPT, y la librería ... bueno, sería nuestra querida internet.</figcaption>
+  <figcaption>Imagen 1: Visualización de resultados a nivel de colegio para una jornada de evaluación ficticia.</figcaption>
 </figure>
 
 ### Análisis por Cursos
@@ -46,7 +46,7 @@ Cabe notar que se hace la misma mirada de la información tanto en la visual ins
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_cursos.png" width="60%"  alt="Imagen 2: Visualización de resultados a nivel de cursos para una jornada de evaluación ficticia.">
-  <figcaption>Albert Evansky, el bibliotecario que le dio las pistas a Indiana Jones para su misión. Él es nuestro equivalente de Google o ChatGPT, y la librería ... bueno, sería nuestra querida internet.</figcaption>
+  <figcaption>Imagen 2: Visualización de resultados a nivel de cursos para una jornada de evaluación ficticia.</figcaption>
 </figure>
 
 ## Potenciando el Trabajo de Profesores de Asignatura
@@ -63,12 +63,18 @@ Una de las funciones destacadas de esta herramienta es la capacidad de clasifica
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_estudiante.png" width="60%"  alt="Imagen 3: Visualización de la clasificación por niveles de logro para cada estudiante de un curso ficticio seleccionado.">
-  <figcaption>Albert Evansky, el bibliotecario que le dio las pistas a Indiana Jones para su misión. Él es nuestro equivalente de Google o ChatGPT, y la librería ... bueno, sería nuestra querida internet.</figcaption>
+  <figcaption>Imagen 3: Visualización de la clasificación por niveles de logro para cada estudiante de un curso ficticio seleccionado.</figcaption>
 </figure>
 
 ## Complemento Perfecto para MarkQual
 
 Esta automatización se integra perfectamente con el software de corrección y calificación de exámenes MarkQual. MarkQual permite modificar los niveles de exigencia, la nota base, calificar preguntas de desarrollo y de opciones múltiples, introducir ponderaciones variables y definir ejes temáticos. Sus funciones se adaptan perfectamente a esta planilla, lo que enriquece el proceso de clasificación de los resultados de las evaluaciones escolares.
+
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_estudiante.png" width="60%"  alt="Imagen 4: Detalle de cómo la planilla se adapta a los datos entregados por Markqual. Los elementos mínimos que debes agregar por tu cuenta son el nivel y el curso. COmo alternativa puedes agregar el nombre de la jornada de evaluación y la fecha, auqnue esto no tiene un objetivo funcional en el script.">
+  <figcaption>Imagen 4: Detalle de cómo la planilla se adapta a los datos entregados por Markqual. Los elementos mínimos que debes agregar por tu cuenta son el nivel y el curso. COmo alternativa puedes agregar el nombre de la jornada de evaluación y la fecha, auqnue esto no tiene un objetivo funcional en el script.</figcaption>
+</figure>
+
 
 ## Superando Obstáculos Tradicionales
 
