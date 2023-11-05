@@ -5,6 +5,7 @@ author_profile: true
 related: true
 comments: true
 toc: true
+toc_icon: "egg"
 
 header:
   image: /assets/images/learninganalytics_images/script_de_clasificacion_v1/banner_script_clasificacion_1.png
