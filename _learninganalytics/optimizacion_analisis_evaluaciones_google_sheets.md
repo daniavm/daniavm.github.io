@@ -4,7 +4,7 @@ layout: single
 author_profile: true
 related: true
 comments: true
-toc: false
+toc: true
 
 header:
   image: /assets/images/learninganalytics_images/script_de_clasificacion_v1/banner_script_clasificacion_1.png
