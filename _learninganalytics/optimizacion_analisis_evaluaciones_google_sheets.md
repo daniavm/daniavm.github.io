@@ -99,7 +99,7 @@ Si deseas aprender cómo configurar y utilizar esta planilla y script, te invita
 
 ## Descarga la Planilla
 
-Si estás listo para optimizar el análisis de evaluaciones escolares, puedes descargar una copia de la planilla haciendo clic [aquí](https://docs.google.com/spreadsheets/d/1c4Pm8lD_xFMrcKWiG16M42Ae5ao9Hm9cLJAkYmJR04U/copy){:target="_blank"}. ¡Empieza a simplificar tu trabajo y aporta a una educación de más calidad!
+Si estás listo para optimizar el análisis de evaluaciones escolares, puedes descargar una copia de la planilla haciendo clic [aquí](https://docs.google.com/spreadsheets/d/1KiHY-vEx5T5dWo_JPikekfvFq7Bnr0rARJJ_cgjzimU/copy){:target="_blank"}. ¡Empieza a simplificar tu trabajo y aporta a una educación de más calidad!
 
 ## En Resumen
 
