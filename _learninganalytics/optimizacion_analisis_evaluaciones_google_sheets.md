@@ -23,9 +23,9 @@ tags:
 <div align="justify" markdown="1">
 En el mundo de la educación, la clasificación de los resultados de una evaluación es una tarea crítica para visibilizar poblaciones de estudiantes de distinto desempeño y tomar decisiones informadas para brindar una educación de alta calidad. Sabemos que este proceso puede ser arduo y consumir mucho tiempo. Debido a esto he desarrollado una herramienta de automatización en Google Sheets que se centra en las necesidades de jefes de departamento, coordinadores y profesores de asignatura, y que puede traer beneficios significativos a su labor.
 
-## Facilitando el Trabajo de Jefes de Departamento y Coordinadores
+## Facilitando el Trabajo de Jefæs de Departamento y Coordinadoræs
 
-Si eres un(a) coordinador(a), jefe(a) de departamento o un(a) docente de cierta asignatura en una institución educativa y deseas clasificar el rendimiento de los estudiantes en las evaluaciones, utilizar esta herramienta te daría una mano para visibilizar lo siguiente:
+Si eres un(a) coordinador(a), jefe(a) de departamento o un(a) docente de cierta asignatura en una institución educativa y deseas clasificar el rendimiento de l@s estudiantes en las evaluaciones, utiliza esta herramienta para visibilizar lo siguiente:
 
 ### Análisis Institucional
 
@@ -55,11 +55,11 @@ Cabe notar que se hace la misma mirada de la información tanto en la visual ins
 
 ## Potenciando el Trabajo de Profesores de Asignatura
 
-Supongamos que eres un profesor(a) de asignatura y deseas entender mejor el desempeño de tus estudiantes en tus clases. Esta herramienta te brinda ventajas significativas como las siguientes:
+Supongamos que eres un(a) profesor(a) de asignatura y deseas entender mejor el desempeño de tus estudiantes en tus clases. Esta herramienta te brinda ventajas significativas como las siguientes:
 
 ### Análisis Individual de Estudiantes
 
-Si deseas identificar a los estudiantes que necesitan apoyo adicional en una asignatura específica, la herramienta te permite analizar el rendimiento de cada estudiante de manera individual, lo que es fundamental para brindar una educación centrada en las necesidades de cada estudiante. Puedes detectar quiénes requieren aoyo adicional y así diseñar intervenciones específicas.
+Si deseas identificar a l@s estudiantes que necesitan apoyo adicional en una asignatura específica, la herramienta te permite analizar el rendimiento de cada estudiante de manera individual, lo que es fundamental para brindar una educación centrada en las necesidades de cada persona. Puedes detectar quiénes requieren apoyo adicional y así diseñar intervenciones específicas.
 
 ### Clasificación por Niveles de Logro
 
