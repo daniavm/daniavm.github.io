@@ -23,27 +23,27 @@ tags:
 
 <div align="justify" markdown="1">
 
-En el mundo de la educación, el análisis de los resultados de las evaluaciones escolares es una tarea crítica para tomar decisiones informadas y brindar una educación de alta calidad. Sabemos que esto puede ser una labor ardua y que consume mucho tiempo. La buena noticia es que hemos desarrollado una herramienta de automatización en Google Sheets que se centra en las necesidades de jefes de departamento, coordinadores y profesores de asignatura, y que puede traer beneficios significativos a su labor. 
+En el mundo de la educación, el análisis de los resultados de las evaluaciones escolares es una tarea crítica para tomar decisiones informadas y brindar una educación de alta calidad. Sabemos que esto puede ser una labor ardua y que consume mucho tiempo. La buena noticia es que hemos desarrollado una herramienta de automatización en Google Sheets que se centra en las necesidades de jefes de departamento, coordinadores y profesores de asignatura, y que puede traer beneficios significativos a su labor.
 
 ## Facilitando el Trabajo de Jefes de Departamento y Coordinadores
 
-Supongamos que eres el jefe de departamento en una escuela secundaria y deseas analizar el rendimiento de los estudiantes en los exámenes de matemáticas de distintos cursos. Utilizar esta herramienta te permitirá:
+Imagina que eres un jefe de departamento en una institución educativa y deseas analizar el rendimiento de los estudiantes en las evaluaciones de distintas asignaturas. Utilizar esta herramienta te permitirá:
 
 ### Análisis Institucional
 
-Si tuvieras una evaluación con una gran cantidad de estudiantes y cursos, esta herramienta clasifica los resultados en niveles de logro, proporcionando una visión general del rendimiento de la institución. Esto es fundamental para que los jefes de departamento y coordinadores puedan tomar decisiones basadas en datos sólidos que mejoren la enseñanza y el aprendizaje en la institución.
+Si cuentas con una amplia cantidad de evaluaciones y necesitas un panorama general del rendimiento de la institución, esta herramienta clasifica los resultados en niveles de logro, proporcionando una visión completa. Esto es fundamental para que los jefes de departamento y coordinadores puedan tomar decisiones basadas en datos sólidos que mejoren la enseñanza y el aprendizaje en la institución.
 
 ### Análisis por Cursos
 
-Si deseas profundizar en el rendimiento en matemáticas por curso, esta automatización te permite desglosar la información y obtener datos detallados sobre el progreso de los estudiantes en sus respectivos cursos. Esto es invaluable para evaluar el impacto de diferentes métodos de enseñanza y desarrollar estrategias de mejora.
+Si deseas profundizar en el rendimiento de los estudiantes en asignaturas específicas, esta automatización te permite desglosar la información y obtener datos detallados sobre el progreso de los estudiantes en sus respectivos cursos. Esto es invaluable para evaluar el impacto de diferentes métodos de enseñanza y desarrollar estrategias de mejora.
 
 ## Potenciando el Trabajo de Profesores de Asignatura
 
-Supongamos que eres un profesor de matemáticas y deseas entender mejor el desempeño de tus estudiantes. Esta herramienta te brinda ventajas significativas:
+Supongamos que eres un profesor de asignatura y deseas entender mejor el desempeño de tus estudiantes en tus clases. Esta herramienta te brinda ventajas significativas:
 
 ### Análisis Individual de Estudiantes
 
-Si quisieras identificar a los estudiantes que necesitan apoyo adicional en matemáticas, la herramienta te permite analizar el rendimiento de cada estudiante de manera individual, lo que es fundamental para brindar una educación centrada en las necesidades de cada alumno. Puedes detectar quiénes requieren ayuda adicional y diseñar intervenciones específicas.
+Si deseas identificar a los estudiantes que necesitan apoyo adicional en una asignatura específica, la herramienta te permite analizar el rendimiento de cada estudiante de manera individual, lo que es fundamental para brindar una educación centrada en las necesidades de cada alumno. Puedes detectar quiénes requieren ayuda adicional y diseñar intervenciones específicas.
 
 ### Clasificación por Niveles de Logro
 
@@ -51,23 +51,15 @@ Una de las funciones destacadas de esta herramienta es la capacidad de clasifica
 
 ## Complemento Perfecto para MarkQual
 
-Esta automatización es el complemento perfecto para el software de corrección y calificación de exámenes MarkQual. MarkQual permite modificar los niveles de exigencia, la nota base, calificar preguntas de desarrollo y de opciones múltiples, introducir ponderaciones variables y definir ejes temáticos. Sus funciones se adaptan perfectamente a esta planilla, lo que enriquece el proceso de clasificación de los resultados de las evaluaciones escolares.
+Esta automatización se integra perfectamente con el software de corrección y calificación de exámenes MarkQual. MarkQual permite modificar los niveles de exigencia, la nota base, calificar preguntas de desarrollo y de opciones múltiples, introducir ponderaciones variables y definir ejes temáticos. Sus funciones se adaptan perfectamente a esta planilla, lo que enriquece el proceso de clasificación de los resultados de las evaluaciones escolares.
 
-## Personalización y Adaptabilidad
+## Superando Obstáculos Tradicionales
 
-Entendemos que cada institución tiene sus propias necesidades y estándares. Nuestra herramienta ofrece:
+Esta herramienta aborda varias dificultades que suelen encontrarse en el análisis de evaluaciones escolares. En el pasado, la clasificación y el análisis de datos podían ser procesos complicados y propensos a errores. Sin embargo, con esta automatización, esos problemas se resuelven de manera eficiente.
 
-- **Selección de Niveles y Cursos**: Los selectores de dropdown permiten a los usuarios filtrar los datos por nivel educativo y curso, adaptando así la herramienta a las necesidades específicas de cada institución.
+Por ejemplo, a menudo se requería un análisis manual que consumía tiempo y recursos valiosos. La automatización reduce significativamente la carga de trabajo y permite a los educadores centrarse en la enseñanza y el apoyo a los estudiantes, en lugar de perder tiempo en tareas tediosas.
 
-- **Estándares Personalizados**: Los rangos de logro son adaptables y se pueden ajustar según los estándares específicos de evaluación o las políticas institucionales. Esto asegura que los resultados reflejen los objetivos educativos de la institución y los criterios de calificación particulares.
-
-## Más Tiempo para la Enseñanza y el Aprendizaje
-
-Una de las ventajas más destacadas de esta automatización es la simplificación del trabajo de organización. Antes, se requería un análisis manual que consumía tiempo y recursos. Con esta solución, los profesores de asignatura pueden enfocarse en la enseñanza y el apoyo a sus estudiantes, lo que enriquece su trabajo y su relación con el proceso de aprendizaje.
-
-## Hacia un Enfoque de "Aprendanza"
-
-En el corazón de esta herramienta está la noción de "aprendanza", una combinación inseparable de aprendizaje y enseñanza que impulsa el crecimiento y el autodescubrimiento en la educación. Al proporcionar un análisis detallado a nivel institucional, de cursos y de estudiantes, estamos contribuyendo a una educación centrada en la idea de "aprendanza".
+Además, la personalización y adaptabilidad de esta herramienta la hacen adecuada para cualquier institución educativa. Puedes ajustar los niveles de logro y los estándares de evaluación de acuerdo con las necesidades específicas de tu institución, lo que garantiza que los resultados reflejen los objetivos educativos y los criterios de calificación particulares.
 
 ## Aprende a Configurar y Utilizar la Planilla
 
