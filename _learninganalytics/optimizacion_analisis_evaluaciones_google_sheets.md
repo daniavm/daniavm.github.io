@@ -21,6 +21,8 @@ tags:
 
 ---
 
+<div align="justify" markdown="1">
+
 En el mundo de la educación, el análisis de los resultados de las evaluaciones escolares es una tarea crítica para tomar decisiones informadas y brindar una educación de alta calidad. Sabemos que esto puede ser una labor ardua y que consume mucho tiempo. La buena noticia es que hemos desarrollado una herramienta de automatización en Google Sheets que se centra en las necesidades de jefes de departamento, coordinadores y profesores de asignatura, y que puede traer beneficios significativos a su labor. 
 
 ## Facilitando el Trabajo de Jefes de Departamento y Coordinadores
@@ -29,11 +31,11 @@ Supongamos que eres el jefe de departamento en una escuela secundaria y deseas a
 
 ### Análisis Institucional
 
-Imagina que necesitas un informe que resuma el rendimiento en matemáticas de toda la institución. Esta herramienta clasifica los resultados en niveles de logro, proporcionando una visión general del rendimiento de la institución. Esto es fundamental para que los jefes de departamento y coordinadores puedan tomar decisiones basadas en datos sólidos que mejoren la enseñanza y el aprendizaje en la institución.
+Si tuvieras una evaluación con una gran cantidad de estudiantes y cursos, esta herramienta clasifica los resultados en niveles de logro, proporcionando una visión general del rendimiento de la institución. Esto es fundamental para que los jefes de departamento y coordinadores puedan tomar decisiones basadas en datos sólidos que mejoren la enseñanza y el aprendizaje en la institución.
 
 ### Análisis por Cursos
 
-Deseas profundizar en el rendimiento en matemáticas por curso. La automatización te permite desglosar la información y obtener datos detallados sobre el progreso de los estudiantes en sus respectivos cursos. Esto es invaluable para evaluar el impacto de diferentes métodos de enseñanza y desarrollar estrategias de mejora.
+Si deseas profundizar en el rendimiento en matemáticas por curso, esta automatización te permite desglosar la información y obtener datos detallados sobre el progreso de los estudiantes en sus respectivos cursos. Esto es invaluable para evaluar el impacto de diferentes métodos de enseñanza y desarrollar estrategias de mejora.
 
 ## Potenciando el Trabajo de Profesores de Asignatura
 
@@ -41,11 +43,15 @@ Supongamos que eres un profesor de matemáticas y deseas entender mejor el desem
 
 ### Análisis Individual de Estudiantes
 
-Imagina que deseas identificar a los estudiantes que necesitan apoyo adicional en matemáticas. La herramienta te permite analizar el rendimiento de cada estudiante de manera individual, lo que es fundamental para brindar una educación centrada en las necesidades de cada alumno. Puedes detectar quiénes requieren ayuda adicional y diseñar intervenciones específicas.
+Si quisieras identificar a los estudiantes que necesitan apoyo adicional en matemáticas, la herramienta te permite analizar el rendimiento de cada estudiante de manera individual, lo que es fundamental para brindar una educación centrada en las necesidades de cada alumno. Puedes detectar quiénes requieren ayuda adicional y diseñar intervenciones específicas.
 
 ### Clasificación por Niveles de Logro
 
 Una de las funciones destacadas de esta herramienta es la capacidad de clasificar por niveles de logro, que pueden basarse en porcentajes de logro o colores en la planilla. Esto permite una evaluación más precisa del rendimiento de los estudiantes y la toma de decisiones más informadas.
+
+## Complemento Perfecto para MarkQual
+
+Esta automatización es el complemento perfecto para el software de corrección y calificación de exámenes MarkQual. MarkQual permite modificar los niveles de exigencia, la nota base, calificar preguntas de desarrollo y de opciones múltiples, introducir ponderaciones variables y definir ejes temáticos. Sus funciones se adaptan perfectamente a esta planilla, lo que enriquece el proceso de clasificación de los resultados de las evaluaciones escolares.
 
 ## Personalización y Adaptabilidad
 
@@ -67,16 +73,20 @@ En el corazón de esta herramienta está la noción de "aprendanza", una combina
 
 Si deseas aprender cómo configurar y utilizar esta planilla y script, te invitamos a ver nuestro tutorial en [YouTube](https://www.youtube.com/channel/UCE9a5RZRjCwvyFlg2ORG1HA). Este recurso te guiará paso a paso a través de la instalación y configuración, asegurando que aproveches al máximo esta herramienta.
 
+## Descarga la Planilla
+
+Si estás listo para optimizar el análisis de evaluaciones escolares, puedes descargar una copia de la planilla haciendo clic [aquí](https://tu-enlace-de-descarga.com). ¡Empieza a simplificar tu trabajo y aportar a una educación de calidad!
+
 ## En Resumen
 
 La automatización del análisis de evaluaciones escolares en Google Sheets es una herramienta esencial que se adapta a las necesidades de jefes de departamento, coordinadores y profesores de asignatura. Esta solución ahorra tiempo y esfuerzo al simplificar el trabajo de organización, lo que enriquece la enseñanza y el aprendizaje. Además, impulsa una educación centrada en el rendimiento individual de los estudiantes y la idea de "aprendanza".
 
-Descarga tu copia de la planilla [aquí](enlace-de-descarga-aqui) y comienza a aprovechar los beneficios de la automatización.
+</div>
+
+<div align="right" markdown="1">
 
 _Hasta el próximo cronopunto del Principia 🥚._
 
 DV
 
----
-
-Asegúrate de completar los enlaces necesarios en los lugares marcados como "[enlace-de-youtube-aqui]" y "[enlace-de-descarga-aqui]" para que puedas utilizarlos en tu artículo.
+</div>
