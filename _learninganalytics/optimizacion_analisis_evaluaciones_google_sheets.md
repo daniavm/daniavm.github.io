@@ -1,5 +1,5 @@
 ---
-title: "Optimiza el Análisis de Evaluaciones con Google Sheets"
+title: "Optimiza el Análisis de Evaluaciones Escolares con Google Sheets"
 layout: single
 author_profile: true
 related: true
