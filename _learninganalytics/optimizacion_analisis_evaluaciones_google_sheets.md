@@ -95,11 +95,11 @@ Además, la personalización y adaptabilidad de esta herramienta la hacen adecua
 
 ## Aprende a Configurar y Utilizar la Planilla
 
-Si deseas aprender cómo configurar y utilizar esta planilla y script, te invitamos a ver nuestro tutorial en [YouTube](https://www.youtube.com/channel/UCE9a5RZRjCwvyFlg2ORG1HA). Este recurso te guiará paso a paso a través de la instalación y configuración, asegurando que aproveches al máximo esta herramienta.
+Si deseas aprender cómo configurar y utilizar esta planilla y script, te invitamos a ver nuestro tutorial en [YouTube](https://www.youtube.com/channel/UCE9a5RZRjCwvyFlg2ORG1HA){:target="_blank"}. Este recurso te guiará paso a paso a través de la instalación y configuración, asegurando que aproveches al máximo esta herramienta.
 
 ## Descarga la Planilla
 
-Si estás listo para optimizar el análisis de evaluaciones escolares, puedes descargar una copia de la planilla haciendo clic [aquí](https://docs.google.com/spreadsheets/d/1c4Pm8lD_xFMrcKWiG16M42Ae5ao9Hm9cLJAkYmJR04U/copy). ¡Empieza a simplificar tu trabajo y aporta a una educación de más calidad!
+Si estás listo para optimizar el análisis de evaluaciones escolares, puedes descargar una copia de la planilla haciendo clic [aquí](https://docs.google.com/spreadsheets/d/1c4Pm8lD_xFMrcKWiG16M42Ae5ao9Hm9cLJAkYmJR04U/copy){:target="_blank"}. ¡Empieza a simplificar tu trabajo y aporta a una educación de más calidad!
 
 ## En Resumen
 
