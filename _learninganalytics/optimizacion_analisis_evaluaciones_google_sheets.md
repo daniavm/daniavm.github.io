@@ -23,7 +23,7 @@ tags:
 
 <div align="justify" markdown="1">
 
-En el mundo de la educación, el análisis de los resultados de las evaluaciones escolares es una tarea crítica para tomar decisiones informadas y brindar una educación de alta calidad. Sabemos que esto puede ser una labor ardua y que consume mucho tiempo. La buena noticia es que hemos desarrollado una herramienta de automatización en Google Sheets que se centra en las necesidades de jefes de departamento, coordinadores y profesores de asignatura, y que puede traer beneficios significativos a su labor.
+En el mundo de la educación, el análisis de los resultados de las evaluaciones escolares es una tarea crítica para tomar decisiones informadas y brindar una educación de alta calidad. Sabemos que esto puede ser una labor ardua y que consume mucho tiempo. La buena noticia es que hemos desarrollado una herramienta de automatización en Google Sheets que se centra en las necesidades de jefes de departamento, coordinadores y profesores de asignatura, y que puede traer beneficios significativos a su labor. 
 
 ## Facilitando el Trabajo de Jefes de Departamento y Coordinadores
 
