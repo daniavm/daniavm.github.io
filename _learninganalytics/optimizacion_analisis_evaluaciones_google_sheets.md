@@ -7,8 +7,8 @@ comments: true
 toc: false
 
 header:
-  image: /assets/images/learninganalytics_images/banner_script_clasificacion_1.png
-  teaser: /assets/images/learninganalytics_images/banner_script_clasificacion_1.png
+  image: /assets/images/learninganalytics_images/script_de_clasificacion_v1/banner_script_clasificacion_1.png
+  teaser: /assets/images/learninganalytics_images/script_de_clasificacion_v1/banner_script_clasificacion_1.png
 
 categories:
   - Educación
@@ -34,7 +34,9 @@ Si cuentas con una amplia cantidad de evaluaciones aplicada a distintos niveles,
 Junto a lo anterior también podrás ver algunos elementos estadísticos mínimos como el promedio por nivel y la cantidad de estudiantes que rindieron la evaluación. 
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_niveles.png" width="60%"  alt="Imagen 1: Visualización de resultados a nivel de colegio para una jornada de evaluación ficticia.">
+  <a href="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_niveles.png">
+    <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_niveles.png" width="60%"  alt="Imagen 1: Visualización de resultados a nivel de colegio para una jornada de evaluación ficticia.">
+  </a>
   <figcaption>Imagen 1: Visualización de resultados a nivel de colegio para una jornada de evaluación ficticia.</figcaption>
 </figure>
 
@@ -45,7 +47,9 @@ Si deseas profundizar en el rendimiento de los estudiantes en cursos específico
 Cabe notar que se hace la misma mirada de la información tanto en la visual institucional como por curso. Esto ayuda a entender cómo se relacionan los resultados macroeducativos con respecto a un nivel de detalle más fino (más resolución de la información). Es decir, los mismos gráficos que estan a nivel de institución, se encontrarán a nivel de cursos para ver la conexión entre ellos.
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_cursos.png" width="60%"  alt="Imagen 2: Visualización de resultados a nivel de cursos para una jornada de evaluación ficticia.">
+  <a href="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_cursos.png">
+    <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_cursos.png" width="60%"  alt="Imagen 2: Visualización de resultados a nivel de cursos para una jornada de evaluación ficticia.">
+  </a> 
   <figcaption>Imagen 2: Visualización de resultados a nivel de cursos para una jornada de evaluación ficticia.</figcaption>
 </figure>
 
@@ -62,7 +66,9 @@ Si deseas identificar a los estudiantes que necesitan apoyo adicional en una asi
 Una de las funciones destacadas de esta herramienta es la capacidad de clasificar por niveles de logro, que pueden basarse en porcentajes de logro (valor numérico) o colores en la planilla (valor simbólico). Esto permite una evaluación más precisa del rendimiento de los estudiantes y la toma de decisiones más informadas.
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_estudiante.png" width="60%"  alt="Imagen 3: Visualización de la clasificación por niveles de logro para cada estudiante de un curso ficticio seleccionado.">
+  <a href="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_estudiante.png">
+    <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/script_clasificacion_por_estudiante.png" width="60%"  alt="Imagen 3: Visualización de la clasificación por niveles de logro para cada estudiante de un curso ficticio seleccionado.">
+  </a>
   <figcaption>Imagen 3: Visualización de la clasificación por niveles de logro para cada estudiante de un curso ficticio seleccionado.</figcaption>
 </figure>
 
