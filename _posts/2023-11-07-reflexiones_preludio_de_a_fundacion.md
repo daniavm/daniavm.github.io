@@ -35,7 +35,7 @@ El lenguaje accesible de Asimov es otro punto de reflexión. Me recordó la impo
 
 Mientras avanzo hacia el resto de la saga, invito a los lectores a acompañarme en esta aventura intelectual que "Preludio a la Fundación" ha iniciado. No como un final que nos deja con ansias de más, sino como un comienzo que promete expandir nuestros horizontes.
 
-La idea de la aprendanza, ese concepto de que enseñar y aprender son las dos caras de una misma moneda, se ve reflejada en mi interacción con este libro. Al compartir mis pensamientos, estoy aprendiendo aún más sobre lo que he leído y, al mismo tiempo, espero enseñar algo a quienes lean estas palabras. Así, invito a cada uno a considerar "Preludio a la Fundación" no solo como una historia fascinante, sino como una oportunidad para reflexionar sobre nuestra propia búsqueda de conocimiento y sobre cómo cada libro que leemos nos enseña algo sobre nosotros mismos y sobre cómo vemos el mundo.
+La idea de la aprendanza, ese concepto de que aprender y enseñar son las dos caras de una misma moneda, se ve reflejada en mi interacción con este libro. Al compartir mis pensamientos, estoy aprendiendo aún más sobre lo que he leído y, al mismo tiempo, espero enseñar algo a quienes lean estas palabras. Así, invito a cada uno a considerar "Preludio a la Fundación" no solo como una historia fascinante, sino como una oportunidad para reflexionar sobre nuestra propia búsqueda de conocimiento y sobre cómo cada libro que leemos nos enseña algo sobre nosotros mismos y sobre cómo vemos el mundo.
 
 </div>
 
@@ -43,5 +43,4 @@ La idea de la aprendanza, ese concepto de que enseñar y aprender son las dos ca
 
 ## Referencias
 - Asimov, I. (1988). *Preludio a la Fundación*. New York: Bantam Books.
-- Miskimin, H.A. (1973). *The Renaissance Chancellors*. Princeton: Princeton University Press.
-- Skinner, B.F. (1957). *Verbal Behavior*. New York: Appleton-Century-Crofts.
+
