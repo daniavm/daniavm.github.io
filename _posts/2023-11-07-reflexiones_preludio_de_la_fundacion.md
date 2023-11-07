@@ -1,6 +1,6 @@
 ---
 title: "Descubriendo la Psicohistoria: Impresiones de 'Preludio a la Fundación'"
-layout: post
+layout: single
 author_profile: true
 related: true
 comments: true
@@ -17,7 +17,6 @@ tags:
   - Aprendanza
   - Fundación
 ---
-
 <div markdown="1" style="text-align: justify;">
 Sumergirse en "Preludio a la Fundación" es como abrir una puerta a un corredor que promete un viaje largo y rico en descubrimientos. Isaac Asimov, con su prosa hábil, nos introduce en un mundo que es el preámbulo de algo mucho más vasto y complejo. Al recorrer las páginas de este libro, uno no puede evitar sentir que está en la antesala de una saga que se despliega majestuosamente ante nosotros.
 
@@ -25,7 +24,7 @@ Mi experiencia con la obra ha sido notable, si bien no trascendental. Es como si
 
 He aprendido que un personaje bien construido puede ser el hilo conductor de una narración, una lección que sin duda aplicaré en mis propias creaciones literarias. Asimov me ha mostrado que la relación entre personajes debe ser orgánica, creciendo y desarrollándose con la historia, y no algo que se siente forzado o inmediato.
 
-> "Algo que aprecié fue la economía de descripciones del entorno en el libro, permitiendo que sean los personajes quienes lo revelen. Esto me habla de la confianza del autor en la capacidad de sus lectores para imaginar y construir mundos a partir de interacciones y diálogos, en lugar de depender de largas y tediosas descripciones."
+Algo que aprecié fue la economía de descripciones del entorno en el libro, permitiendo que sean los personajes quienes lo revelen. Esto me habla de la confianza del autor en la capacidad de sus lectores para imaginar y construir mundos a partir de interacciones y diálogos, en lugar de depender de largas y tediosas descripciones.
 
 El lenguaje accesible de Asimov es otro punto de reflexión. Me recordó la importancia de mantener los nombres y los términos en un punto medio, donde no se pierda el lector entre la complejidad y lo inolvidable. Es un equilibrio que buscaré en mi escritura.
 
