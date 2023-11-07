@@ -26,6 +26,11 @@ He aprendido que un personaje bien construido puede ser el hilo conductor de una
 
 Algo que aprecié fue la economía de descripciones del entorno en el libro, permitiendo que sean los personajes quienes lo revelen. Esto me habla de la confianza del autor en la capacidad de sus lectores para imaginar y construir mundos a partir de interacciones y diálogos, en lugar de depender de largas y tediosas descripciones.
 
+> "Si todos los seres humanos comprendieran la Historia, podrían dejar de cometer los mismos estúpidos errores una y otra vez."
+>
+>_Isaac Asimov, Preludio a la Fundación._
+{: style="text-align: right;"}
+
 El lenguaje accesible de Asimov es otro punto de reflexión. Me recordó la importancia de mantener los nombres y los términos en un punto medio, donde no se pierda el lector entre la complejidad y lo inolvidable. Es un equilibrio que buscaré en mi escritura.
 
 Mientras avanzo hacia el resto de la saga, invito a los lectores a acompañarme en esta aventura intelectual que "Preludio a la Fundación" ha iniciado. No como un final que nos deja con ansias de más, sino como un comienzo que promete expandir nuestros horizontes.
