@@ -39,6 +39,14 @@ La idea de la aprendanza, ese concepto de que aprendizaje y enseñanza son las d
 
 </div>
 
+<div align="right" markdown="1">
+
+_Hasta el próximo cronopunto del Principia 🥚._
+
+DV
+
+</div>
+
 ---
 
 ## Referencias
