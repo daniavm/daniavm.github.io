@@ -95,7 +95,7 @@ Además, la personalización y adaptabilidad de esta herramienta la hacen adecua
 
 ## Aprende a Configurar y Utilizar la Planilla
 
-Si deseas aprender cómo configurar y utilizar esta planilla y script, te invitamos a ver nuestro tutorial en [YouTube](https://www.youtube.com/channel/UCE9a5RZRjCwvyFlg2ORG1HA){:target="_blank"}. Este recurso te guiará paso a paso a través de la instalación y configuración, asegurando que aproveches al máximo esta herramienta.
+Si deseas aprender cómo configurar y utilizar esta planilla y script, te invitamos a ver nuestro tutorial en [YouTube](https://youtu.be/Oc0nt1h3yKc){:target="_blank"}. Este recurso te guiará paso a paso a través de la instalación y configuración, asegurando que aproveches al máximo esta herramienta.
 
 ## Descarga la Planilla
 
