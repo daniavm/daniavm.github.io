@@ -12,11 +12,6 @@ header:
 
 categories:
   - Machine Learning
-  - Aprendizaje Automático
-  - Data Science
-  - Ciencia de Datos
-  - Model Building
-  - Construcción de Modelos
 tags:
   - Random Forest
   - Bosque Aleatorio
