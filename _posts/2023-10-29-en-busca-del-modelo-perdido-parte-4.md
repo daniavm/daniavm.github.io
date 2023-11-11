@@ -24,16 +24,12 @@ tags:
   - Árboles de Decisión
   - Machine Learning Models
   - Modelos de Aprendizaje Automático
-  - Model Evaluation
-  - Evaluación de Modelos
   - Feature Engineering
   - Ingeniería de Características
   - Python Programming
   - Programación en Python
   - Data Preprocessing
   - Procesamiento de Datos
-  - Data Analysis
-  - Análisis de Datos
 
 ---
 <div align="justify" markdown="1">
@@ -112,7 +108,7 @@ A continuación te dejo también un pequeño GIF que engloba buena parte de la c
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/PAES_prediction_model/modelo_perdido_cap4_analogia.gif">
-    <img src="/assets/images/PAES_prediction_model/modelo_perdido_cap4_analogia.gif" width="60%"  alt="Imagen GIF 1: Slides que muestran la analogía de un árbol de decisión con el dibujo de un árbol.">
+    <img src="/assets/images/PAES_prediction_model/modelo_perdido_cap4_analogia.gif" width="100%"  alt="Imagen GIF 1: Slides que muestran la analogía de un árbol de decisión con el dibujo de un árbol.">
   </a>
   <figcaption>Imagen GIF 1: Slides que muestran la analogía de un árbol de decisión con el dibujo de un árbol.</figcaption>
 </figure>
