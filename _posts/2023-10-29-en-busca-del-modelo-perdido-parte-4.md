@@ -57,7 +57,7 @@ tree.fit(X, y)  # 'X' son las características del clima escolar, 'y' es el rend
 
 ##  🌿 Poda: Enfocando el Análisis 🌿
 
-La poda es un proceso mediante el cual se eliminan las opciones menos relevantes para hacer el análisis más eficiente. Por ejemplo, el director podría descartar factores como los cambios menores en el menú del comedor al evaluar el impacto del clima escolar en el rendimiento académico, centrándose en aspectos más influyentes (poda).
+La poda es un proceso mediante el cual se eliminan las opciones menos relevantes para hacer el análisis más eficiente (resultados iguales o mejores con los mismos o menos recursos). Por ejemplo, el director podría descartar factores como los cambios menores en el menú del comedor para evaluar el impacto del clima escolar en el rendimiento académico. Esto haría que se centre en los aspectos más influyentes de lo que quiere saber (poda).
 
 ### Código de Ejemplo: Poda de un Árbol de Decisión
 ```python
@@ -67,7 +67,7 @@ tree.fit(X, y)
 
 ## 🌳 Padres e Hijos: Desarrollando Estrategias 🌳
 
-Cada decisión inicial puede conducir a nuevas decisiones subsecuentes. Si el director decide enfocarse en mejorar el clima escolar, la siguiente pregunta podría ser qué recursos adicionales se necesitarán, representando así un nuevo nodo hijo (nodo hijo) en la cadena de decisiones.
+Cada decisión inicial puede conducir a nuevas decisiones subsecuentes. Si el director decide enfocarse en mejorar el clima escolar, la siguiente pregunta podría ser "qué recursos adicionales se necesitarán", representando así un nuevo nodo (nodo hijo) en la cadena de decisiones.
 
 ### Código de Ejemplo: Visualización de Nodos en un Árbol de Decisión
 ```python
@@ -81,7 +81,7 @@ plt.show()
 
 ## 🌳🌳 Parámetros Clave en Random Forest 🌳🌳
 
-Los parámetros n_estimators y random_state tienen un papel fundamental en el Random Forest. Consultar a diferentes miembros del equipo educativo proporciona una visión más completa del problema, similar a cómo más árboles en un Random Forest ofrecen una perspectiva más rica y diversa (n_estimators).
+Los parámetros n_estimators y random_state tienen un papel fundamental en el Random Forest. Consultar a diferentes miembros del equipo educativo proporciona una visión más completa del problema, esto es idéntico a cómo más árboles en un Random Forest ofrecen una perspectiva más rica y diversa (n_estimators).
 
 ### Código de Ejemplo: Random Forest con Diferentes n_estimators
 ```python
@@ -91,7 +91,7 @@ forest = RandomForestClassifier(n_estimators=100)
 forest.fit(X, y)
 ```
 
-Usar un random_state específico es como asegurar que cada vez que se consulte, se obtengan opiniones consistentes de las mismas personas, lo que es crucial para comparar y entender las tendencias a lo largo del tiempo (random_state).
+Usar un random_state específico es como asegurar que cada vez que se consulte, se obtengan opiniones consistentes de las mismas personas, lo que es crucial para comparar y entender las tendencias a lo largo del tiempo (random_state). En el caso de que este valor decida no establecerse, será aleatorio, lo que es equivalente a hacer la misma consulta a personas diferentes de tu equipo académico.
 
 ### Código de Ejemplo: Random Forest con un random_state Específico
 ```python
@@ -101,9 +101,13 @@ forest.fit(X, y)
 
 ## 🌟🌟 Conclusión: El Poder del Random Forest en la Educación 🌟🌟
 
-El Random Forest nos ofrece una forma poderosa y multifacética de abordar problemas complejos en el ámbito educativo. Al aprovechar la diversidad de perspectivas y profundizar en los datos, podemos tomar decisiones más informadas y efectivas.
+El Random Forest, como hemos visto, es una herramienta valiosa para predecir resultados educativos como los de la PAES. Su habilidad para adaptarse a variados patrones de datos y su estructura compuesta por múltiples árboles de decisión, lo hacen ideal para entender y mejorar el rendimiento estudiantil. 
 
-Continuemos explorando las posibilidades que nos brinda el aprendizaje automático para enriquecer el mundo de la educación. A continuación te dejo también un pequeño GIF que engloba buena parte de la comprensión de lo que sería un árbol de decisión. Espero pueda reforzar tu entendimiento del nueo concepto.
+Este método nos permite no solo predecir con mayor precisión, sino también comprender mejor los diversos factores que influyen en el éxito académico. Su uso en la educación abre caminos para intervenciones más informadas y efectivas, marcando un avance significativo en cómo abordamos los desafíos educativos.
+
+Espero estos cnceptos básicos hayan ayudado a mejorar tu idea de lo que hará el código en los siguietnes capítulos. Continuemos explorando las posibilidades que nos brinda el aprendizaje automático o Machine Learning para enriquecer el mundo de la educación. 
+
+A continuación te dejo también un pequeño GIF que engloba buena parte de la comprensión de lo que sería un árbol de decisión. Espero pueda reforzar tu entendimiento del nuevo concepto.
 
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
