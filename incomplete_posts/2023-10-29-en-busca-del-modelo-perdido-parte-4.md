@@ -1,5 +1,5 @@
 ---
-title: "En Busca del Modelo Perdido - Parte 4: Los Secretos del Random Forest"
+title: "En Busca del Modelo Perdido - Parte 4:  Explorando el Random Forest"
 layout: single
 author_profile: true
 related: true
@@ -36,74 +36,80 @@ tags:
   - Análisis de Datos
 
 ---
-
 <div align="justify" markdown="1">
+Bienvenidos al cuarto capítulo de nuestra serie "En Busca del Modelo Perdido". En esta entrega, nos enfocaremos en desentrañar los secretos del Random Forest y su aplicación en la predicción de los resultados de la PAES. Si te perdiste el capítulo anterior sobre cómo ChatGPT nos ayudó a dar los primeros pasos en la creación de nuestro modelo predictivo, te invito a [leerlo aquí](https://daniavm.github.io/machine%20learning/en-busca-del-modelo-perdido-parte-3/).
 
-Hemos llegado a un emocionante punto en nuestra búsqueda para encontrar el modelo perdido que prediga los resultados de la PAES. En nuestro último capítulo, exploramos cómo utilizar ChatGPT para generar código de Random Forest, una técnica poderosa en el aprendizaje automático.
+## 🌲🌲 El Bosque de Decisiones: Introducción al Random Forest 🌲🌲
 
-Si aún no has leíd@ el capítulo anterior, te invito a [echarle un vistazo](https://daniavm.github.io/machine%20learning/en-busca-del-modelo-perdido-parte-3/) para obtener una visión general de cómo ChatGPT nos ayudó a dar los primeros pasos en la creación de nuestro modelo predictivo.
+Imagínate un equipo de asesores, cada uno especializado en un área diferente, trabajando juntos para resolver un problema complejo. Esto es similar a lo que hace el Random Forest en el mundo del aprendizaje automático.
 
-## 🌲🌲 Explorando el Random Forest 🌲🌲
+### 🌳 Nodos y Ramas: Decisiones Estratégicas 🌳
 
-Ahora, nos tomaremos un descanso en el recorrido para profundizar en la técnica de Random Forest. Imagina que estás en medio de un bosque rodeado de árboles que, en lugar de solo estar vivos, cada uno de ellos representa una versión única de tu búsqueda en la travesía hacia el modelo perdido. Las raíces, ramas y hojas representan de alguna manera las decisiones que has tomado en los distintos puntos de tu travesía y cada árbol termina siendo una historia de lo que hiciste en cada camino tomado.
+En un árbol de decisión del Random Forest, cada punto de decisión se llama nodo y el camino al que conduce es una rama. Por ejemplo, un director de colegio podría enfrentarse a la pregunta inicial: "¿Cómo influye el clima escolar en el rendimiento académico?". Aquí se debe tomar una decisión (nodo) y, dependiendo de los datos que se tengan, esta pregunta conduce a diferentes caminos de acción y análisis (rama).
 
-Si no te queda del todo claro, bueno, ese es uno de los motivos por los cuales construir esta publicación. Es decir, la idea de hacernos un poco más conocedoræs de estas representaciones para usarlas en casos reales.
+```python
+from sklearn.tree import DecisionTreeClassifier
 
-### 🌳 Nodos y Ramificación 🌳
+tree = DecisionTreeClassifier()
+tree.fit(X, y)  # 'X' son las características del clima escolar, 'y' es el rendimiento académico.
+```
 
-En este espeso bosque de decisiones, cada versión de ti comienza en lo que llamamos el nodo raíz. En este momento, eres tú quien está en el bosque, y te enfrentas a una encrucijada crucial en tu búsqueda del modelo perdido. En este punto inicial donde debes tomar una decisión se dice que te encuentras en un nodo dispuesto a ramificarse. Las ramas serán aquellos posibles caminos que pudiste tomar o que tomaste.
+##  🌿 Poda: Enfocando el Análisis 🌿
 
-**Ejemplo:** Te encuentras en el nodo raíz del primer árbol de decisión. Aquí, enfrentas la primera decisión clave: ¿Por dónde comenzar tu búsqueda? ¿Tomar el camino de la derecha, que parece más transitado, o aventurarte a explorar el camino menos recorrido junto al riachuelo? Esta elección da lugar a tu primera rama en el árbol de decisiones.
+La poda es un proceso mediante el cual se eliminan las opciones menos relevantes para hacer el análisis más eficiente. Por ejemplo, el director podría descartar factores como los cambios menores en el menú del comedor al evaluar el impacto del clima escolar en el rendimiento académico, centrándose en aspectos más influyentes (poda).
 
-A medida que avanzas en tu búsqueda, te enfrentarás a una serie de decisiones como "¿Debería recopilar más datos?" o "¿Qué enfoque debo utilizar para construir el modelo?". Cada uno de estas decisiones representa un nodo en nuestro **árbol de decisión**.
+```python
+tree = DecisionTreeClassifier(max_depth=3)  # Limitando la profundidad del árbol.
+tree.fit(X, y)
+```
 
-### 🌿 Poda y Ramas 🌿
+## 🌳 Padres e Hijos: Desarrollando Estrategias 🌳
 
-Para mantener tus árboles de decisiones saludable, a menudo realizas una técnica llamada poda. La poda implica eliminar caminos que no son útiles o que pueden causar confusión en tu búsqueda. Esto ayuda a que tu bosque de decisiones sea más eficiente y preciso (recuerda que a nivel de la programación, mientras menos procesos innecesarios incluyas más rápido procesará tu algoritmo).
+Cada decisión inicial puede conducir a nuevas decisiones subsecuentes. Si el director decide enfocarse en mejorar el clima escolar, la siguiente pregunta podría ser qué recursos adicionales se necesitarán, representando así un nuevo nodo hijo (nodo hijo) en la cadena de decisiones.
 
-Cada camino que creas desde el nodo raíz hasta una hoja se llama una rama o un sub-árbol. Cada rama es un camino diferente que podrías tomar en tu búsqueda en busca del modelo perdido.
+```python
+import matplotlib.pyplot as plt
+from sklearn import tree
 
-**Ejemplo:** Al seguir tu elección inicial del camino de la derecha, te das cuenta de que algunas de las decisiones que tomaste no te acercaron al modelo perdido. De hecho te podrían haber llevado a un precipicio cno la única opción de devolverte. Situaciones como esa son en las que optas por podar esas decisiones inútiles, dejando solo las que realmente importan en tu búsqueda... aquellas que conducen a tu objetivo.
+plt.figure(figsize=(20,10))
+tree.plot_tree(tree.fit(X, y), filled=True)
+plt.show()
+```
 
-### 🌳 PMadres e Hij@s: La Jerarquía del Bosque 🌳
+## 🌳🌳 Parámetros Clave en Random Forest 🌳🌳
 
-Dentro de nuestro árbol de decisiones, los nodos forman una jerarquía, similar a una familia o una organización. Cada nodo de decisión tiene un rol específico, y algunos actúan como nodos padres, mientras que otros son nodos hijos. 
+Los parámetros n_estimators y random_state tienen un papel fundamental en el Random Forest. Consultar a diferentes miembros del equipo educativo proporciona una visión más completa del problema, similar a cómo más árboles en un Random Forest ofrecen una perspectiva más rica y diversa (n_estimators).
 
-### Nodos Padres
+```python
+Copy code
+from sklearn.ensemble import RandomForestClassifier
 
-Estos nodos son como tus mentores o supervisores en tu búsqueda. En lugar de tomar decisiones directamente, guían tu camino y dirigen tus acciones. Son responsables de dividir el camino en múltiples opciones, creando así nodos hijos que representan diferentes rutas que puedes seguir.
+forest = RandomForestClassifier(n_estimators=100)
+forest.fit(X, y)
+```
 
-### Nodos Hijos
+Usar un random_state específico es como asegurar que cada vez que se consulte, se obtengan opiniones consistentes de las mismas personas, lo que es crucial para comparar y entender las tendencias a lo largo del tiempo (random_state).
 
-Los nodos hij@s son como tus compañeros de viaje. Están conectados a los nodos pmadres a través de caminos, lo que significa que sigues las indicaciones de un nodo pmadre para llegar a un nodo hij@. Cada nodo hij@ representa una elección específica que puedes hacer en tu búsqueda en busca del modelo que andas buscando.
+```python
+Copy code
+forest = RandomForestClassifier(n_estimators=100, random_state=42)
+forest.fit(X, y)
+```
 
-Como dato interesante, creo que podrás notar que un nodo hij@ puede convertirse en un nodo pmadre para así abrir paso a nuevos hij@s. Todo dependerá de la cantidad de posibilidades que te ofrezca el camino (lo que en un caso práctico representarán los datos que has extraido, ya que por cada uno de esos valores alguien tuvo que tomar la decisión de medirlos ¿no?).
+## 🌟🌟 Conclusión: El Poder del Random Forest en la Educación 🌟🌟
 
-**Ejemplo:** Imagina que estás en el bosque y llegas a un cruce de caminos. En este punto, te encuentras con un "nodo pmadre" que te ofrece tres opciones: tomar el camino de la izquierda, seguir el camino recto o aventurarte por el camino de la derecha. Cada uno de estos caminos está representado por un nodo hij@. Sigues uno de estos caminos según la elección que hagas en ese nodo pmadre.
+El Random Forest nos ofrece una forma poderosa y multifacética de abordar problemas complejos en el ámbito educativo. Al aprovechar la diversidad de perspectivas y profundizar en los datos, podemos tomar decisiones más informadas y efectivas.
 
-
-## 🌳🌳 Parámetros n_estimators y random_state 🌳🌳
-
-La historia que sea que se cuente se puede representar en cada uno de estos árboles, por lo que cada uno de ellos es como una bitácora o un diario de vida que habla de la travesía que alguien que tuvo éxito o fracasó en su búsqueda. Si tuvieramos la posibilidad de tomar al azar una cierta cantidad de estos diarios, entonces tendríamos una idea de cuantos lograron llegar al modelo y cuántos no. 
-
-Hablando un poco ahora de programación, hemos de recordar algo del código mostrado en la publicación anterior. Uno de los parámetros más importantes es `n_estimators`, que determina cuántos de estos "diarios" de decisiones debes considerar en tu bosque. Cada diario representa una versión única de tu búsqueda cuando avanzas hacia el modelo perdido.
-
-**Ejemplo:** Imagina que mientras avanzas en tu búsqueda, decides llevar varios diarios para documentar todas tus decisiones. ¿Cuántos diarios necesitas para obtener una imagen precisa de tus acciones y decisiones para llegar a tu objetivo? En esta situación, determinar la cantidad de diarios es análogo a saber la cantidad de árboles de deberás considerar para tomar tus decisiones.
-
-En la misma línea del código, otro parámetro importante es `random_state`, que se encarga de controlar la aleatoriedad en la creación de tus diarios de decisiones.
-
-**Ejemplo:** Si configuramos `random_state` en 42, tus diarios siempre seguirán el mismo patrón de decisiones (elegirás siempre los mismos "diarios"). Esto es útil cuando deseas comparar resultados o depurar el modelo de manera consistente. En csao de que busques una elección distinta de "diarios", entonces no defines este parámetro.
+Continuemos explorando las posibilidades que nos brinda el aprendizaje automático para enriquecer el mundo de la educación. A continuación te dejo también un pequeño GIF que engloba buena parte de la comprensión de lo que sería un árbol de decisión. Espero pueda reforzar tu entendimiento del nueo concepto.
 
 
-## 🌟🌟 En Resumen: Navegando el Bosque de Random Forest 🌟🌟
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <a href="/assets/images/PAES_prediction_model/modelo_perdido_cap4_analogia.gif">
+    <img src="/assets/images/PAES_prediction_model/modelo_perdido_cap4_analogia.gif" width="60%"  alt="Imagen 1: Visualización de resultados a nivel de colegio para una jornada de evaluación ficticia.">
+  </a>
+  <figcaption>Imagen 1: Visualización de resultados a nivel de colegio para una jornada de evaluación ficticia.</figcaption>
+</figure>
 
-Así como un aventurero toma decisiones cruciales para encontrar el tesoro perdido, Random Forest toma decisiones basadas en los datos para construir un modelo poderoso. Cada nodo, rama, hoja y diario representa una elección y una conclusión. La jerarquía de nodos padres e hijos organiza el camino en el bosque de decisiones.
-
-Como verás, el modelo creado no tiene pre-establecida la idea de que debe haber un comportamiento específico en los datos, lo que lo hace tremendamente versatil a muchas situaciones de las cuales no podemos reconocer algún patrón en específico. 
-
-Mientras exploramos el Random Forest, ten en cuenta que no seguimos un solo árbol de decisión, sino un bosque completo de ellos. Cada árbol ofrece su propia perspectiva sobre cómo alcanzar nuestro objetivo.
-
-<img src="{{https://daniavm.github.io}}{{ site.baseurl }}/assets/images/PAES_prediction_model/modelo_perdido_cap4_analogia.gif" alt="">
 
 <div align="right" markdown="1">
 
