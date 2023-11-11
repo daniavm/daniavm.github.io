@@ -105,9 +105,9 @@ Continuemos explorando las posibilidades que nos brinda el aprendizaje automáti
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/PAES_prediction_model/modelo_perdido_cap4_analogia.gif">
-    <img src="/assets/images/PAES_prediction_model/modelo_perdido_cap4_analogia.gif" width="60%"  alt="Imagen 1: Visualización de resultados a nivel de colegio para una jornada de evaluación ficticia.">
+    <img src="/assets/images/PAES_prediction_model/modelo_perdido_cap4_analogia.gif" width="60%"  alt="Imagen GIF 1: Slides que muestran la analogía de un árbol de decisión con el dibujo de un árbol.">
   </a>
-  <figcaption>Imagen 1: Visualización de resultados a nivel de colegio para una jornada de evaluación ficticia.</figcaption>
+  <figcaption>Imagen GIF 1: Slides que muestran la analogía de un árbol de decisión con el dibujo de un árbol.</figcaption>
 </figure>
 
 
