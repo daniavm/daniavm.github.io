@@ -28,7 +28,7 @@ tags:
 
 ---
 <div align="justify" markdown="1">
-Bienvenidos al cuarto capítulo de nuestra serie "En Busca del Modelo Perdido". En esta entrega, nos enfocaremos en desentrañar los secretos del Random Forest y su aplicación en la predicción de los resultados de la PAES. Si te perdiste el capítulo anterior sobre cómo ChatGPT nos ayudó a dar los primeros pasos en la creación de nuestro modelo predictivo, te invito a [leerlo aquí](https://daniavm.github.io/machine%20learning/en-busca-del-modelo-perdido-parte-3/). 
+Bienvenid@s al cuarto capítulo de nuestra serie "En Busca del Modelo Perdido". En esta entrega, nos enfocaremos en desentrañar los secretos del Random Forest y su aplicación en la predicción de los resultados de la PAES. Si te perdiste el capítulo anterior sobre cómo ChatGPT nos ayudó a dar los primeros pasos en la creación de nuestro modelo predictivo, te invito a [leerlo aquí](https://daniavm.github.io/machine%20learning/en-busca-del-modelo-perdido-parte-3/). 
 
 ## 🌲🌲 El Bosque de Decisiones: Introducción al Random Forest 🌲🌲
 
