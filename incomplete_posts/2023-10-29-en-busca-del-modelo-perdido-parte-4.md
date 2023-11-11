@@ -41,7 +41,7 @@ Bienvenidos al cuarto capítulo de nuestra serie "En Busca del Modelo Perdido". 
 
 ## 🌲🌲 El Bosque de Decisiones: Introducción al Random Forest 🌲🌲
 
-Imagínate un equipo de asesores, cada uno especializado en un área diferente, trabajando juntos para resolver un problema complejo. Esto es similar a lo que hace el Random Forest en el mundo del aprendizaje automático.
+Imagínate un equipo de asesores, cada uno especializado en un área diferente, trabajando juntos para resolver un problema complejo y en donde cada uno con su experiencia vota por el camino a seguir. Esto es similar a lo que hace el Random Forest en el mundo del aprendizaje automático pero con un grado de complejidad por supuesto mucho más amplio.
 
 ## 🌳 Nodos y Ramas: Decisiones Estratégicas 🌳
 
