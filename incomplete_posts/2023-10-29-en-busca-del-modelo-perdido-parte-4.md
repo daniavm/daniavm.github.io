@@ -43,10 +43,11 @@ Bienvenidos al cuarto capítulo de nuestra serie "En Busca del Modelo Perdido". 
 
 Imagínate un equipo de asesores, cada uno especializado en un área diferente, trabajando juntos para resolver un problema complejo. Esto es similar a lo que hace el Random Forest en el mundo del aprendizaje automático.
 
-### 🌳 Nodos y Ramas: Decisiones Estratégicas 🌳
+## 🌳 Nodos y Ramas: Decisiones Estratégicas 🌳
 
 En un árbol de decisión del Random Forest, cada punto de decisión se llama nodo y el camino al que conduce es una rama. Por ejemplo, un director de colegio podría enfrentarse a la pregunta inicial: "¿Cómo influye el clima escolar en el rendimiento académico?". Aquí se debe tomar una decisión (nodo) y, dependiendo de los datos que se tengan, esta pregunta conduce a diferentes caminos de acción y análisis (rama).
 
+### Código de Ejemplo: Creando un Árbol de Decisión
 ```python
 from sklearn.tree import DecisionTreeClassifier
 
@@ -58,6 +59,7 @@ tree.fit(X, y)  # 'X' son las características del clima escolar, 'y' es el rend
 
 La poda es un proceso mediante el cual se eliminan las opciones menos relevantes para hacer el análisis más eficiente. Por ejemplo, el director podría descartar factores como los cambios menores en el menú del comedor al evaluar el impacto del clima escolar en el rendimiento académico, centrándose en aspectos más influyentes (poda).
 
+### Código de Ejemplo: Poda de un Árbol de Decisión
 ```python
 tree = DecisionTreeClassifier(max_depth=3)  # Limitando la profundidad del árbol.
 tree.fit(X, y)
@@ -67,6 +69,7 @@ tree.fit(X, y)
 
 Cada decisión inicial puede conducir a nuevas decisiones subsecuentes. Si el director decide enfocarse en mejorar el clima escolar, la siguiente pregunta podría ser qué recursos adicionales se necesitarán, representando así un nuevo nodo hijo (nodo hijo) en la cadena de decisiones.
 
+### Código de Ejemplo: Visualización de Nodos en un Árbol de Decisión
 ```python
 import matplotlib.pyplot as plt
 from sklearn import tree
@@ -80,8 +83,8 @@ plt.show()
 
 Los parámetros n_estimators y random_state tienen un papel fundamental en el Random Forest. Consultar a diferentes miembros del equipo educativo proporciona una visión más completa del problema, similar a cómo más árboles en un Random Forest ofrecen una perspectiva más rica y diversa (n_estimators).
 
+### Código de Ejemplo: Random Forest con Diferentes n_estimators
 ```python
-Copy code
 from sklearn.ensemble import RandomForestClassifier
 
 forest = RandomForestClassifier(n_estimators=100)
@@ -90,8 +93,8 @@ forest.fit(X, y)
 
 Usar un random_state específico es como asegurar que cada vez que se consulte, se obtengan opiniones consistentes de las mismas personas, lo que es crucial para comparar y entender las tendencias a lo largo del tiempo (random_state).
 
+### Código de Ejemplo: Random Forest con un random_state Específico
 ```python
-Copy code
 forest = RandomForestClassifier(n_estimators=100, random_state=42)
 forest.fit(X, y)
 ```
