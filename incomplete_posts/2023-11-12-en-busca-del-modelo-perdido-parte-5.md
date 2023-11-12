@@ -27,8 +27,7 @@ tags:
   - Enseñanza
 ---
 
-# En Busca del Modelo Perdido - Parte 5: Afinando el Random Forest
-
+<div align="justify" markdown="1">
 Continuando nuestra exploración en el mundo del análisis de datos, nos enfrentamos ahora al desafío de afinar nuestro modelo de Random Forest. En este capítulo, nos centramos en entender mejor las decisiones detrás de nuestra programación y el impacto que tienen en los resultados finales.
 
 ## 🎓 Comprendiendo el Porqué Detrás del Código 🎓
@@ -50,21 +49,34 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 La función '***train_test_split***' es una herramienta que divide nuestros datos en dos partes: un conjunto para entrenar nuestro modelo y otro para probarlo. El test_size=0.2 significa que el 20% de los datos se reservan para probar el modelo, mientras que el resto se utiliza para el entrenamiento. Pero, ¿por qué 20% y no otro número? Elegir el tamaño del conjunto de prueba es una decisión que puede afectar la precisión de nuestras predicciones. Un conjunto de prueba demasiado pequeño puede no capturar la variabilidad de los datos, mientras que uno demasiado grande podría no dejar suficientes datos para entrenar el modelo adecuadamente.
 
-### La Importancia de la Validación Cruzada
+### La Importancia de 'n_estimators' y 'random_state'
 La validación cruzada es como un examen riguroso para nuestro modelo. En lugar de solo un test, nuestro modelo debe pasar múltiples pruebas, mejorando así su robustez y confiabilidad.
 
+```python
+from sklearn.ensemble import RandomForestRegressor
 
+# Creamos el modelo de Random Forest
+model = RandomForestRegressor(n_estimators=100, random_state=42)
+```
+
+El parámetro ***n_estimators*** determina cuántos árboles incluir en nuestro bosque. Cien árboles es un buen punto de partida, pero no hay una respuesta única para todos los casos. Necesitamos equilibrar la complejidad del modelo con la capacidad de generalizar bien a nuevos datos.
+
+El ***random_state*** es nuestra semilla de aleatoriedad. Utilizar un número fijo, como 42, garantiza que si repetimos el análisis obtendremos los mismos resultados. Esto es crucial para la reproducibilidad de nuestro estudio.
+
+
+# 🔍 Validación Cruzada: Profundizando en la Confianza del Modelo 🔍
+
+En lugar de confiar en una única división de nuestros datos, empleamos la validación cruzada para evaluar cómo nuestro modelo podría funcionar en diferentes muestras de nuestros datos.
+
+```python
 from sklearn.model_selection import cross_val_score, KFold
 
 # Configuramos la validación cruzada
 kf = KFold(n_splits=5)
 cross_val_scores = cross_val_score(model, X, y, cv=kf)
+```
 
-
-KFold es una técnica que divide nuestros datos en 'k' partes, o 'folds', y luego realiza 'k' pruebas diferentes, cada una usando una parte diferente como conjunto de prueba. cross_val_score toma nuestro modelo y datos y aplica esta técnica para evaluar qué tan bien está realizando el modelo.
-
-Explorando el Número de Estimadores y Folds
-El siguiente paso fue explorar cómo el número de estimadores y 'folds' afecta el rendimiento del modelo. Este proceso es fundamental para afinar nuestro modelo y asegurar que se generalice bien a nuevos datos.
+La función '***KFold***' de '***sklearn***' nos permite realizar esta técnica avanzada, dividiendo los datos en cinco partes ('folds') y utilizando cada parte como un conjunto de prueba único mientras se entrena con las partes restantes. Esto nos da una mejor idea de cómo el modelo se desempeñaría con diferentes conjuntos de datos.
 
 # Experimento con diferentes cantidades de estimadores y 'folds'
 for fold in range(2, 80):
@@ -99,3 +111,5 @@ En la próxima etapa de nuestro viaje, continuaremos afinando nuestro modelo, si
 Hasta entonces, nos vemos en el próximo cronopunto del Principia 🥚.
 
 DV
+
+</div>
