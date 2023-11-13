@@ -38,6 +38,8 @@ Para no olvidar nuestro trabajo hasta ahora, te comparto el código que dejamos 
 
 <script src="https://gist.github.com/daniavm/2b929e13e7438d3d40123a43149d40ff.js"></script>
 
+A pesar de ser un código que entrega resultados prometedores, aún nos falta saber si es posible acercarnos a un nivel de confiabilidad superior y conciente. Para lograr esto último, comenzaremos entonces por analizar las piezas de código que son fundamentales. 
+
 ### ¿Por qué dividimos los datos?
 
 ```python
@@ -50,7 +52,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 La función '***train_test_split***' es una herramienta que divide nuestros datos en dos partes: un conjunto para entrenar nuestro modelo y otro para probarlo. El test_size=0.2 significa que el 20% de los datos se reservan para probar el modelo, mientras que el resto se utiliza para el entrenamiento. Pero, ¿por qué 20% y no otro número? Elegir el tamaño del conjunto de prueba es una decisión que puede afectar la precisión de nuestras predicciones. Un conjunto de prueba demasiado pequeño puede no capturar la variabilidad de los datos, mientras que uno demasiado grande podría no dejar suficientes datos para entrenar el modelo adecuadamente.
 
 ### La Importancia de 'n_estimators' y 'random_state'
-La validación cruzada es como un examen riguroso para nuestro modelo. En lugar de solo un test, nuestro modelo debe pasar múltiples pruebas, mejorando así su robustez y confiabilidad.
 
 ```python
 from sklearn.ensemble import RandomForestRegressor
@@ -64,9 +65,9 @@ El parámetro ***n_estimators*** determina cuántos árboles incluir en nuestro 
 El ***random_state*** es nuestra semilla de aleatoriedad. Utilizar un número fijo, como 42, garantiza que si repetimos el análisis obtendremos los mismos resultados. Esto es crucial para la reproducibilidad de nuestro estudio.
 
 
-# 🔍 Validación Cruzada: Profundizando en la Confianza del Modelo 🔍
+## 🔍 Refinando la Validación: Superando la División Estática 🔍
 
-En lugar de confiar en una única división de nuestros datos, empleamos la validación cruzada para evaluar cómo nuestro modelo podría funcionar en diferentes muestras de nuestros datos.
+La división estándar de los datos en un 80% para entrenamiento y un 20% para pruebas no siempre captura la complejidad y variabilidad inherentes en nuestro conjunto de datos. Para mejorar nuestra evaluación del modelo y asegurarnos de que es robusto y confiable, implementamos la validación cruzada.
 
 ```python
 from sklearn.model_selection import cross_val_score, KFold
@@ -76,7 +77,7 @@ kf = KFold(n_splits=5)
 cross_val_scores = cross_val_score(model, X, y, cv=kf)
 ```
 
-La función '***KFold***' de '***sklearn***' nos permite realizar esta técnica avanzada, dividiendo los datos en cinco partes ('folds') y utilizando cada parte como un conjunto de prueba único mientras se entrena con las partes restantes. Esto nos da una mejor idea de cómo el modelo se desempeñaría con diferentes conjuntos de datos.
+La función '***KFold***' de '***sklearn***' nos permite dividir el conjunto de datos en múltiples segmentos o 'folds'. A diferencia de una única división de entrenamiento/prueba, la validación cruzada evalúa el modelo en varias rondas, utilizando cada vez un segmento diferente como conjunto de prueba y el resto como entrenamiento. Esto garantiza que cada muestra de los datos se utilice tanto para entrenar como para validar el modelo, dándonos una medida más fiable de su rendimiento y evitando que ciertas peculiaridades de los datos influyan de manera desproporcionada en los resultados.
 
 # Experimento con diferentes cantidades de estimadores y 'folds'
 for fold in range(2, 80):
