@@ -79,6 +79,62 @@ cross_val_scores = cross_val_score(model, X, y, cv=kf)
 
 La función '***KFold***' de '***sklearn***' nos permite dividir el conjunto de datos en múltiples segmentos o 'folds'. A diferencia de una única división de entrenamiento/prueba, la validación cruzada evalúa el modelo en varias rondas, utilizando cada vez un segmento diferente como conjunto de prueba y el resto como entrenamiento. Esto garantiza que cada muestra de los datos se utilice tanto para entrenar como para validar el modelo, dándonos una medida más fiable de su rendimiento y evitando que ciertas peculiaridades de los datos influyan de manera desproporcionada en los resultados.
 
+## 📐 Analizando el Error Absoluto Medio (MAE) 📐
+
+Una parte esencial en la afinación de nuestro modelo Random Forest es la elección de cuántos 'folds' o particiones usar en la validación cruzada. Esta decisión puede influir significativamente en la confiabilidad de las predicciones que hacemos. Para guiar esta elección, recurrimos al Error Absoluto Medio (MAE), que nos ofrece una medida directa de cuánto se desvían nuestras predicciones de los valores reales.
+
+El MAE es la diferencia promedio entre el valor predicho y el valor real. En otras palabras, nos dice cuánto se equivoca nuestro modelo, en promedio, en las predicciones que hace. Un MAE bajo indica que nuestras predicciones son precisas, mientras que un MAE alto sugiere que podríamos estar bastante lejos del objetivo.
+
+### Explorando el número óptimo de 'folds'
+
+Para encontrar el número óptimo de 'folds', realizamos un experimento iterando a través de un rango de valores y calculando el MAE para cada uno. Aquí está el fragmento de código que lleva a cabo esta tarea:
+
+```python
+from sklearn.model_selection import cross_val_score, KFold
+from sklearn.ensemble import RandomForestRegressor
+
+# Experimento con diferentes cantidades de 'folds'
+for fold in range(2, 80):
+    # Configuramos el KFold con el número actual de 'folds'
+    kf = KFold(n_splits=fold)
+    
+    # Inicializamos el modelo Random Forest con 100 estimadores
+    model = RandomForestRegressor(n_estimators=100)
+    
+    # Calculamos el MAE para el número actual de 'folds'
+    # Usamos la validación cruzada para asegurarnos de que el cálculo del MAE es robusto
+    mae_score = -cross_val_score(model, X, y, cv=kf, scoring='neg_mean_absolute_error').mean()
+    
+    # Imprimimos el número de 'folds' y el MAE correspondiente
+    print(f"{fold} folds: MAE = {mae_score}")
+```
+
+Cada iteración del bucle **'for'** configura un nuevo objeto **'KFold'** con un número diferente de 'folds', que luego se utiliza para evaluar el modelo Random Forest. La función cross_val_score se emplea aquí para realizar la validación cruzada, y le pasamos el scoring parameter como '**neg_mean_absolute_error**' porque queremos calcular el MAE negativo; lo negamos (multiplicamos por -1) para convertirlo en un valor positivo que podemos interpretar fácilmente.
+
+### Interpretando los Resultados con Visualizaciones
+
+Tras realizar el experimento y calcular el MAE para cada número de 'folds', es hora de interpretar los resultados. Una forma efectiva de hacerlo es a través de la visualización de datos. Los gráficos nos permiten ver tendencias y patrones que pueden no ser evidentes solo con los números.
+
+#### Visualización del MAE y el Número de Folds
+
+El siguiente código nos da una representación gráfica de cómo el MAE varía con el número de 'folds' utilizado en la validación cruzada:
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Gráfico de MAE promedio en función del número de folds
+plt.figure(figsize=(10, 6))
+sns.lineplot(x=num_folds_range, y=mae_scores_mean, marker='o')
+plt.xlabel('Número de Folds de Validación Cruzada')
+plt.ylabel('Error Absoluto Medio (MAE) Promedio')
+plt.title('Análisis del Número de Folds en Validación Cruzada (Paralelizado)')
+plt.grid()
+plt.show()
+```
+
+En este gráfico de líneas, cada punto representa el MAE promedio para un número específico de 'folds'. Lo que buscamos es una línea que tienda a estabilizarse, indicando que hemos alcanzado un punto en el que aumentar el número de 'folds' no mejora significativamente el MAE. Encontrar este punto de equilibrio nos ayuda a evitar el sobreajuste y el subajuste, garantizando que nuestro modelo sea generalizable.
+
 # Experimento con diferentes cantidades de estimadores y 'folds'
 for fold in range(2, 80):
     kf = KFold(n_splits=fold)
