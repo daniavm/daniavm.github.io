@@ -38,8 +38,6 @@ Para no olvidar nuestro trabajo hasta ahora, te comparto el código que dejamos 
 
 [Revisar el código aquí](https://gist.github.com/daniavm/2b929e13e7438d3d40123a43149d40ff.js)
 
-<script src="https://gist.github.com/daniavm/2b929e13e7438d3d40123a43149d40ff.js"></script>
-
 A pesar de ser un código que entrega resultados prometedores, aún nos falta saber si es posible acercarnos a un nivel de confiabilidad superior y conciente. Para lograr esto último, comenzaremos entonces por analizar las piezas de código que son fundamentales. 
 
 ### ¿Por qué dividimos los datos?
