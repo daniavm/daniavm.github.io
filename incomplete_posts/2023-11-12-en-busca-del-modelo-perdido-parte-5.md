@@ -147,25 +147,57 @@ for fold in range(2, 80):
 
 El bucle for en Python nos permite probar una serie de valores en un proceso iterativo, lo cual es ideal para experimentar con diferentes configuraciones de nuestro modelo. Aquí, estamos buscando el 'fold' óptimo que minimice el Error Absoluto Medio (MAE), una medida de qué tan lejos están nuestras predicciones de los valores reales.
 
-## El Viaje hacia un Modelo Más Preciso
-Al final, lo que buscamos es un modelo que nos ofrezca predicciones confiables. Para llegar a esto, hemos refinado nuestro Random Forest y ahora miramos hacia los resultados reales.
+### Ajustando el Enfoque: MAE, Folds y Estimadores
 
-# Visualización de los resultados del modelo
-plt.figure(figsize=(10, 6))
-plt.scatter(y, y_pred, alpha=0.5)
-plt.xlabel('Valores Reales de PAES')
-plt.ylabel('Predicciones de PAES')
-plt.title('Comparación de Valores Reales y Predicciones')
-plt.grid()
+A medida que avanzamos en el refinamiento de nuestro modelo, nos damos cuenta de que la evaluación del MAE no depende únicamente de la cantidad de 'folds'. Hay otro factor en juego que puede ser igualmente importante: la cantidad de estimadores en nuestro Random Forest. La precisión de las predicciones podría verse afectada por el número de árboles que estamos utilizando para construir el modelo. Por lo tanto, nos enfrentamos a un análisis tridimensional donde debemos considerar 'folds', estimadores y MAE simultáneamente para optimizar nuestro modelo.
+
+#### Explorando la Interacción entre Folds y Estimadores
+
+Para abordar esta complejidad, ampliamos nuestro experimento para incluir un rango de estimadores. Aquí está el código que utilizamos para paralelizar el cálculo del MAE promedio, considerando ambos factores:
+
+```python
+from sklearn.model_selection import cross_val_score, KFold
+from sklearn.ensemble import RandomForestRegressor
+from joblib import Parallel, delayed
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Rangos de número de estimadores y número de folds a explorar
+n_estimators_range = list(range(10, 1001, 10))
+num_folds_range = list(range(2, 81, 1))
+
+# Función para calcular MAE promedio en paralelo para un número de folds y estimadores
+def calculate_mae_mean(num_folds, n_estimators):
+    rf_regressor = RandomForestRegressor(n_estimators=n_estimators, random_state=42)
+    kf = KFold(n_splits=num_folds)
+    cv_mae_scores = -cross_val_score(rf_regressor, X, y, cv=kf, scoring='neg_mean_absolute_error')
+    mae_mean = cv_mae_scores.mean()
+    return mae_mean
+
+# Paralelizar el cálculo del MAE promedio para diferentes números de folds y estimadores
+num_cores = 4  # Define el número de núcleos a utilizar en paralelo
+
+mae_scores_mean = Parallel(n_jobs=num_cores)(
+    delayed(calculate_mae_mean)(num_folds, n_estimators) 
+    for num_folds in num_folds_range 
+    for n_estimators in n_estimators_range
+)
+
+# Crear una matriz de valores de MAE en función de num_folds_range y n_estimators_range
+mae_matrix = np.array(mae_scores_mean).reshape(len(num_folds_range), -1)
+
+# Crear el mapa de calor
+plt.figure(figsize=(12, 8))
+sns.heatmap(mae_matrix, cmap="YlOrRd", annot=False, fmt=".2f", xticklabels=n_estimators_range, yticklabels=num_folds_range)
+plt.xlabel('Número de Estimadores (n_estimators)')
+plt.ylabel('Número de Folds (num_folds_range)')
+plt.title('Mapa de Calor de MAE en función de Num Folds y Num Estimadores')
 plt.show()
+```
 
 
-Esta visualización es crucial. Al comparar los valores reales y las predicciones con un gráfico de dispersión, podemos ver visualmente la precisión de nuestro modelo. Si los puntos se alinean cerca de una línea imaginaria diagonal, nuestro modelo está en buen camino.
 
-## 🎓 Lecciones Aprendidas y Camino a Seguir 🎓
-Este capítulo nos ha llevado a través de una exploración detallada de cómo ajustar nuestro modelo de Random Forest. Hemos aprendido que cada parámetro cuenta su propia historia y que solo a través de la comprensión y la experimentación podemos esperar acercarnos a la verdad detrás de nuestros datos.
-
-En la próxima etapa de nuestro viaje, continuaremos afinando nuestro modelo, siempre con la mente abierta y dispuestos a aprender de los datos que tenemos entre manos.
 
 Hasta entonces, nos vemos en el próximo cronopunto del Principia 🥚.
 
