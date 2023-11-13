@@ -36,7 +36,7 @@ Cada línea de código en un análisis de datos tiene un propósito y puede infl
 
 Para no olvidar nuestro trabajo hasta ahora, te comparto el código que dejamos en el capítulo 3:
 
-<div align="center">
+<div align="center" markdown="1">
 [Revisar el código aquí](https://gist.github.com/daniavm/2b929e13e7438d3d40123a43149d40ff.js)
 </div>
 
@@ -67,7 +67,7 @@ El parámetro ***n_estimators*** determina cuántos árboles incluir en nuestro 
 El ***random_state*** es nuestra semilla de aleatoriedad. Utilizar un número fijo, como 42, garantiza que si repetimos el análisis obtendremos los mismos resultados. Esto es crucial para la reproducibilidad de nuestro estudio.
 
 
-## 🔍 Refinando la Validación: Superando la División Estática 🔍
+## 🔍 Refinando la Validación del modelo: Superando la División Estática 🔍
 
 La división estándar de los datos en un 80% para entrenamiento y un 20% para pruebas no siempre captura la complejidad y variabilidad inherentes en nuestro conjunto de datos. Para mejorar nuestra evaluación del modelo y asegurarnos de que es robusto y confiable, implementamos la validación cruzada.
 
