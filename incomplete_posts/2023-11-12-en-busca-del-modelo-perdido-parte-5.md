@@ -36,7 +36,9 @@ Cada línea de código en un análisis de datos tiene un propósito y puede infl
 
 Para no olvidar nuestro trabajo hasta ahora, te comparto el código que dejamos en el capítulo 3:
 
+<div align="center">
 [Revisar el código aquí](https://gist.github.com/daniavm/2b929e13e7438d3d40123a43149d40ff.js)
+</div>
 
 A pesar de ser un código que entrega resultados prometedores, aún nos falta saber si es posible acercarnos a un nivel de confiabilidad superior y conciente. Para lograr esto último, comenzaremos entonces por analizar las piezas de código que son fundamentales. 
 
