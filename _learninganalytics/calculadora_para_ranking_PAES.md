@@ -1,5 +1,5 @@
 ---
-title: "Herramienta de Estimación del Ranking de Estudiantes para el Ingreso a la Educación Superior"
+title: "Herramienta de Cálculo del Ranking para PAES"
 layout: single
 author_profile: true
 related: true
@@ -14,11 +14,12 @@ header:
 categories:
   - Educación
 tags:
-  - Ranking de Estudiantes
+  - Ranking
   - Educación Superior
   - Google Sheets
   - Análisis de Datos
   - Equidad en Educación
+  - PAES
 
 ---
 <div align="justify" markdown="1">
@@ -34,7 +35,7 @@ La herramienta utiliza fórmulas establecidas en Google Sheets para procesar los
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/_learninganalytics/google_sheets_ranking_ejemplo.png">
-    <img src="/_learninganalytics/calculadora_para_ranking_PAES.md" width="60%"  alt="Imagen 1: Ejemplo de uso de la herramienta de cálculo del ranking en Google Sheets.">
+    <img src="/_learninganalytics/google_sheets_ranking_ejemplo.png" width="60%"  alt="Imagen 1: Ejemplo de uso de la herramienta de cálculo del ranking en Google Sheets.">
   </a>
   <figcaption>Imagen 1: Ejemplo de uso de la herramienta de cálculo del ranking en Google Sheets.</figcaption>
 </figure>
