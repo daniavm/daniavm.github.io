@@ -44,7 +44,7 @@ La herramienta utiliza fórmulas establecidas en Google Sheets para procesar los
 
 Para garantizar un uso efectivo de la herramienta, he creado un tutorial en video que explica paso a paso cómo utilizarla:
 
-- **[Link al Tutorial en YouTube](https://youtu.be/pr6mLNRqwXU)**
+- **<a href="https://youtu.be/pr6mLNRqwXU" target="_blank">Link al Tutorial en YouTube</a>**
 
 Este recurso es esencial para entender cómo ingresar los datos y analizar los resultados.
 
@@ -52,7 +52,8 @@ Este recurso es esencial para entender cómo ingresar los datos y analizar los r
 
 La planilla está disponible para su descarga y uso. Puedes acceder a ella y hacer una copia para tu colegio a través del siguiente enlace:
 
-- **[Link a la Planilla de Cálculo](https://docs.google.com/spreadsheets/d/1HAqEFXSEi8P4ci_kkVOEhkcZTcFm_3Iv0zJrGlf7pXw/copy)**
+- **<a href="https://docs.google.com/spreadsheets/d/1HAqEFXSEi8P4ci_kkVOEhkcZTcFm_3Iv0zJrGlf7pXw/copy" target="_blank"Link a la Planilla de Cálculo</a>**
+
 
 ## Conclusión
 
