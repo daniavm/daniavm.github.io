@@ -23,7 +23,7 @@ tags:
 
 ---
 <div align="justify" markdown="1">
-En el contexto educativo chileno, el cálculo del ranking de estudiantes es un aspecto crucial para el ingreso a la educación superior pero también el número que ofrece las mayores complicaciones de cálculo. Consciente de los desafíos que enfrentan los colegios, especialmente aquellos con recursos limitados, he desarrollado una herramienta en Google Sheets que facilita el cálculo del ranking de estudiantes basándose en sus promedios académicos de los años anteriores y por supuesto, en la documentación que entrega DEMRE para estos fines ([ver documentación aquí](https://demre.cl/proceso-admision/factores-seleccion/puntaje-ranking)).
+En el contexto educativo chileno, el cálculo del ranking de estudiantes es un aspecto crucial para el ingreso a la educación superior pero también el número que ofrece las mayores complicaciones de cálculo. Consciente de los desafíos que enfrentan los colegios, especialmente aquellos con recursos limitados, he desarrollado una herramienta en Google Sheets que facilita el cálculo del ranking de estudiantes basándose en sus promedios académicos de los años anteriores y por supuesto, en la documentación que entrega DEMRE para estos fines (<a href="https://demre.cl/proceso-admision/factores-seleccion/puntaje-ranking" target="_blank">ver documentación aquí</a>)    .
 
 ## Simplificando la Estimación del Ranking para Colegios
 
@@ -57,7 +57,7 @@ La planilla está disponible para su descarga y uso. Puedes acceder a ella y hac
 
 ## Conclusión
 
-Espero que esta herramienta sea de gran utilidad para los colegios en Chile que no cuentan con la posibilidad de estimar este número y que facilite el proceso de estimación del ranking de sus estudiantes. También confío en que esto podría contribuir a disminuir la incertidumbre de sus estudiantes antes de la evaluación que estan por enfrentar.
+Espero que esta herramienta sea de gran utilidad para los colegios en Chile que no cuentan con la posibilidad de estimar este número y que facilite el proceso de cálculo del ranking de sus estudiantes. También confío en que esto podría contribuir a disminuir la incertidumbre de sus estudiantes antes de la evaluación que estan por enfrentar.
 
 </div>
 
