@@ -42,7 +42,7 @@ La herramienta utiliza fórmulas establecidas en Google Sheets para procesar los
 
 ## Tutorial de Uso
 
-Para garantizar un uso efectivo de la herramienta, hemos creado un tutorial en video que explica paso a paso cómo utilizarla:
+Para garantizar un uso efectivo de la herramienta, he creado un tutorial en video que explica paso a paso cómo utilizarla:
 
 - **[Link al Tutorial en YouTube](https://youtu.be/pr6mLNRqwXU)**
 
@@ -56,7 +56,7 @@ La planilla está disponible para su descarga y uso. Puedes acceder a ella y hac
 
 ## Conclusión
 
-Esperamos que esta herramienta sea de gran utilidad para los colegios en Chile, facilitando el proceso de estimación del ranking de estudiantes y contribuyendo a una mayor equidad en el acceso a la educación superior.
+Espero que esta herramienta sea de gran utilidad para los colegios en Chile, facilitando el proceso de estimación del ranking de estudiantes y contribuyendo a una mayor equidad en el acceso a la educación superior. Confío en que será un pequeño grano de arena para que sus estudiantes disminuyan su incertidumbre conocimiendo un dato más antes de esa prueba.
 
 </div>
 
