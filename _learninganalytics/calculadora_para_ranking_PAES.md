@@ -44,7 +44,7 @@ La herramienta utiliza fórmulas establecidas en Google Sheets para procesar los
 
 Para garantizar un uso efectivo de la herramienta, he creado un tutorial en video que explica paso a paso cómo utilizarla:
 
-- **<a href="https://youtu.be/pr6mLNRqwXU" target="_blank">Link al Tutorial en YouTube</a>**
+- **<a href="https://youtu.be/ms1yTtnfj20" target="_blank">Link al Tutorial en YouTube</a>**
 
 Este recurso es esencial para entender cómo ingresar los datos y analizar los resultados.
 
