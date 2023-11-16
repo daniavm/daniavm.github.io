@@ -34,8 +34,8 @@ Esta herramienta está pensada para ser utilizada por colegios que requieren cal
 La herramienta utiliza fórmulas establecidas en Google Sheets para procesar los promedios ingresados y generar una estimación del ranking para una generación. Es una solución práctica y eficiente que reduce significativamente la carga de trabajo manual y el riesgo de errores en el cálculo.
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <a href="/_learninganalytics/google_sheets_ranking_ejemplo.png">
-    <img src="/_learninganalytics/google_sheets_ranking_ejemplo.png" width="60%"  alt="Imagen 1: Ejemplo de uso de la herramienta de cálculo del ranking en Google Sheets.">
+  <a href="/assets/images/learninganalytics_images/script_de_clasificacion_v1/google_sheets_ranking_ejemplo.png">
+    <img src="/assets/images/learninganalytics_images/script_de_clasificacion_v1/google_sheets_ranking_ejemplo.png" width="60%"  alt="Imagen 1: Ejemplo de uso de la herramienta de cálculo del ranking en Google Sheets.">
   </a>
   <figcaption>Imagen 1: Entorno de uso de la herramienta de cálculo del ranking en Google Sheets.</figcaption>
 </figure>
