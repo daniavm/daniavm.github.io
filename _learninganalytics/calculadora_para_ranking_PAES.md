@@ -52,7 +52,7 @@ Este recurso es esencial para entender cómo ingresar los datos y analizar los r
 
 La planilla está disponible para su descarga y uso. Puedes acceder a ella y hacer una copia para tu colegio a través del siguiente enlace:
 
-- **<a href="https://docs.google.com/spreadsheets/d/1HAqEFXSEi8P4ci_kkVOEhkcZTcFm_3Iv0zJrGlf7pXw/copy" target="_blank"Link a la Planilla de Cálculo</a>**
+- **<a href="https://docs.google.com/spreadsheets/d/1HAqEFXSEi8P4ci_kkVOEhkcZTcFm_3Iv0zJrGlf7pXw/copy" target="_blank">Link a la Planilla de Cálculo</a>**
 
 
 ## Conclusión
