@@ -57,7 +57,7 @@ La planilla está disponible para su descarga y uso. Puedes acceder a ella y hac
 
 ## Conclusión
 
-Espero que esta herramienta sea de gran utilidad para los colegios en Chile, facilitando el proceso de estimación del ranking de estudiantes y contribuyendo a una mayor equidad en el acceso a la educación superior. Confío en que será un pequeño grano de arena para que sus estudiantes disminuyan su incertidumbre conocimiendo un dato más antes de esa prueba.
+Espero que esta herramienta sea de gran utilidad para los colegios en Chile que no cuentan con la posibilidad de estimar este número y que facilite el proceso de estimación del ranking de sus estudiantes. También confío en que esto podría contribuir a disminuir la incertidumbre de sus estudiantes antes de la evaluación que estan por enfrentar.
 
 </div>
 
