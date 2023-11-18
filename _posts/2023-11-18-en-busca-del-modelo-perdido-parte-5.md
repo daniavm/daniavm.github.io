@@ -13,11 +13,6 @@ header:
 
 categories:
   - Machine Learning
-  - Aprendizaje Automático
-  - Data Science
-  - Ciencia de Datos
-  - Educational Data Mining
-  - Minería de Datos Educativos
 
 tags:
   - Random Forest
@@ -25,7 +20,10 @@ tags:
   - Optimización de Modelos
   - Predicción de Resultados
   - PAES
-  - Enseñanza
+  - Aprendanza
+  - Data Science
+  - Aprendizaje Automático
+  - Data Analysis
 
 ---
 <div align="justify" markdown="1">
