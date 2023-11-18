@@ -213,7 +213,7 @@ plt.show()
 
 La razón por las que he parelelizado este algoritmo es simplemente porque tengo claro que es de una complejidad tan grande que soy consciente de que mi computador tardará bastante en evaluar algo así. Estamos tomando 78 modelos distintos cuando cambiamos los 'folds' y 100 modelos extra por cada uno de estos donde probamos los distintos estimadores. Esto da un no menor total de 780 modelos de random forest utilizando validación cruzada y calculando el MAE en cada iteración ... así que tengo por seguro que mi querido Charlie (el nombre de mi computador) tendrá una cuota de sufrimiento extra en nuestra aventura.
 
-## ⏲️ 3 horas después ...
+### ⏲️ 3 horas después ...
 
 Después de harto maquinar el cómo cumplir esta misión, el código finalmente entregó nuestro esperado resultado. Por supuesto, graficar 3 variables no es nada grato para nuestras mentes acostumbradas al 2D, así que hasta decidir el cómo visualizar esta información en este problema resulta ser un desafío. Pero somos aspirantes a aprendanzantes, así que ¡hay que avanzar y no pierdas la disciplina que hemos tenido hasta ahora!
 
