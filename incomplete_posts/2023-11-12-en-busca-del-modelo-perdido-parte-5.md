@@ -4,7 +4,8 @@ layout: single
 author_profile: true
 related: true
 comments: true
-toc: false
+toc: true
+toc_icon: "egg"
 
 header:
   image: /assets/images/PAES_prediction_model/RandomForestComplex.jpg
@@ -120,21 +121,20 @@ for fold in range(2, 80):
 
 Cada iteración del bucle **'for'** configura un nuevo objeto **'KFold'** con un número diferente de 'folds' (que en este caso se mueve entre valores desde el 2 hasta el 80), que luego se utiliza para evaluar el modelo Random Forest. La función cross_val_score se emplea aquí para realizar la validación cruzada, y le pasamos el scoring parameter como '**neg_mean_absolute_error**' porque queremos calcular el MAE negativo; luego lo negamos (multiplicamos por -1) para convertirlo en un valor positivo que podemos interpretar fácilmente.
 
-## Experimento con diferentes cantidades de estimadores y 'folds'
+### Experimento con diferentes cantidades de estimadores y 'folds'
+```python
 for fold in range(2, 80):
     kf = KFold(n_splits=fold)
     model = RandomForestRegressor(n_estimators=100)
     mae_score = -cross_val_score(model, X, y, cv=kf, scoring='neg_mean_absolute_error').mean()
     print(f"{fold} folds: MAE = {mae_score}")
-
+```
 
 El bucle for en Python nos permite probar una serie de valores en un proceso iterativo, lo cual es ideal para experimentar con diferentes configuraciones de nuestro modelo. Aquí, estamos buscando el 'fold' óptimo que minimice el Error Absoluto Medio (MAE), una medida de qué tan lejos están nuestras predicciones de los valores reales.
 
 ### Interpretando los Resultados con Visualizaciones
 
 Tras realizar el experimento y calcular el MAE para cada número de 'folds', es hora de interpretar los resultados. Una forma efectiva de hacerlo es a través de la visualización de datos. Los gráficos nos permiten ver tendencias y patrones que pueden no ser evidentes solo con los números.
-
-### Visualización del MAE y el Número de Folds
 
 El siguiente código nos da una representación gráfica de cómo el MAE varía con el número de 'folds' utilizado en la validación cruzada:
 
@@ -147,7 +147,7 @@ plt.figure(figsize=(10, 6))
 sns.lineplot(x=num_folds_range, y=mae_scores_mean, marker='o')
 plt.xlabel('Número de Folds de Validación Cruzada')
 plt.ylabel('Error Absoluto Medio (MAE) Promedio')
-plt.title('Análisis del Número de Folds en Validación Cruzada (Paralelizado)')
+plt.title('Análisis del Número de Folds en Validación Cruzada')
 plt.grid()
 plt.show()
 ```
@@ -164,11 +164,11 @@ El resultado de este experimento se muestra en el siguiente gráfico:
 Como puedes ver, la precisión de nuestro modelo depende de los valores que tenga **'KFold'** y es de gran importancia determinar cuál es el valor adecuado para nuestro modelo predictivo y cuáles fueron los criterios utilizados para definirlo. En nuestro caso, utilizaré aquel KFold que minimice el valor de MAE, pero que tambien presente indicios de estabilidad en el modelo. Esto último se logra evidenciando sectores en que MAE sea constante dentro de este gráfico, o en palabras más simples, cuando el MAE no cambie demasiado si yo  cambio KFolds.
 
 
-### Ajustando el Enfoque: MAE, Folds y Estimadores
+## Ajustando el Enfoque: MAE, Folds y Estimadores
 
 A medida que avanzamos en el refinamiento de nuestro modelo, nos damos cuenta de que la evaluación del MAE no depende únicamente de la cantidad de 'folds'. Hay otro factor en juego que puede ser igualmente importante: la cantidad de estimadores en nuestro Random Forest. La precisión de las predicciones podría verse afectada por el número de árboles que estamos utilizando para construir el modelo. Por lo tanto, nos enfrentamos a un análisis tridimensional donde debemos considerar 'folds', estimadores y MAE simultáneamente para optimizar nuestro modelo.
 
-#### Explorando la Interacción entre Folds y Estimadores
+### Explorando la Interacción entre Folds y Estimadores
 
 Para abordar esta complejidad, ampliamos nuestro experimento para incluir un rango de estimadores. Aquí está el código que utilizamos para paralelizar el cálculo del MAE promedio, considerando ambos factores:
 
