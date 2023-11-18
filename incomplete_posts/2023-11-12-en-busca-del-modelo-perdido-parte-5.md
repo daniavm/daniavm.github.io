@@ -37,7 +37,8 @@ Cada línea de código en un análisis de datos tiene un propósito y puede infl
 Para no olvidar nuestro trabajo hasta ahora, te comparto el código que dejamos en el capítulo 3:
 
 <div align="center" markdown="1">
-[Revisar el código aquí](https://gist.github.com/daniavm/2b929e13e7438d3d40123a43149d40ff.js)
+
+<a href="https://gist.github.com/daniavm/2b929e13e7438d3d40123a43149d40ff" target="_blank" align="center"> Revisar el código aquí</a>
 </div>
 
 A pesar de ser un código que entrega resultados prometedores, aún nos falta saber si es posible acercarnos a un nivel de confiabilidad superior y conciente. Para lograr esto último, comenzaremos entonces por analizar las piezas de código que son fundamentales. 
@@ -51,7 +52,11 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 ```
 
-La función '***train_test_split***' es una herramienta que divide nuestros datos en dos partes: un conjunto para entrenar nuestro modelo y otro para probarlo. El test_size=0.2 significa que el 20% de los datos se reservan para probar el modelo, mientras que el resto se utiliza para el entrenamiento. Pero, ¿por qué 20% y no otro número? Elegir el tamaño del conjunto de prueba es una decisión que puede afectar la precisión de nuestras predicciones. Un conjunto de prueba demasiado pequeño puede no capturar la variabilidad de los datos, mientras que uno demasiado grande podría no dejar suficientes datos para entrenar el modelo adecuadamente.
+La función '***train_test_split***' es una herramienta que divide nuestros datos en dos partes: un conjunto para entrenar nuestro modelo y otro para probarlo. El test_size=0.2 significa que el 20% de los datos se reservan para probar el modelo, mientras que el resto se utiliza para el entrenamiento. 
+
+Pero, ¿por qué 20% y no otro número? Elegir el tamaño del conjunto de prueba es una decisión que puede afectar la precisión de nuestras predicciones. Un conjunto de prueba demasiado pequeño puede no capturar la variabilidad de los datos, mientras que uno demasiado grande podría no dejar suficientes datos para entrenar el modelo adecuadamente.
+
+Esto último es la razón por la que este mecanismo de separación de los datos puede no ser el mejor para generalizar nuestro modelo. 
 
 ### La Importancia de 'n_estimators' y 'random_state'
 
@@ -62,14 +67,14 @@ from sklearn.ensemble import RandomForestRegressor
 model = RandomForestRegressor(n_estimators=100, random_state=42)
 ```
 
-El parámetro ***n_estimators*** determina cuántos árboles incluir en nuestro bosque. Cien árboles es un buen punto de partida, pero no hay una respuesta única para todos los casos. Necesitamos equilibrar la complejidad del modelo con la capacidad de generalizar bien a nuevos datos.
+El parámetro ***n_estimators*** determina cuántos árboles incluir en nuestro bosque. Cien árboles es un buen punto de partida, pero no hay una respuesta única para todos los casos. Es evidente que mientras más árboles decidimos usar el modelo "podría mejorar" ya que la cantidad de posibles caminos considerados es mayor, pero también requeriremos más potencia de cómputo. Debemos equilibrar la complejidad del modelo con la capacidad de generalizar bien a nuevos datos para así no usar recursos innecesarios y hacer que el código sea también ágil.
 
-El ***random_state*** es nuestra semilla de aleatoriedad. Utilizar un número fijo, como 42, garantiza que si repetimos el análisis obtendremos los mismos resultados. Esto es crucial para la reproducibilidad de nuestro estudio.
+El ***random_state*** es nuestra semilla de aleatoriedad. Utilizar un número fijo, como 42, garantiza que si repetimos el análisis obtendremos los mismos resultados cada vez que corremos el código. Esto es crucial para la reproducibilidad de nuestro estudio y no sacar conclusiones diferentes por cada vez que vemos los resultados del output.
 
 
 ## 🔍 Refinando la Validación del modelo: Superando la División Estática 🔍
 
-La división estándar de los datos en un 80% para entrenamiento y un 20% para pruebas no siempre captura la complejidad y variabilidad inherentes en nuestro conjunto de datos. Para mejorar nuestra evaluación del modelo y asegurarnos de que es robusto y confiable, implementamos la validación cruzada.
+La división estándar de los datos en un 80% para entrenamiento y un 20% para pruebas no siempre captura la complejidad y variabilidad inherentes en nuestro conjunto de datos. Para mejorar nuestra evaluación del modelo y asegurarnos de que es robusto y confiable, implementamos una técnica llamada "validación cruzada".
 
 ```python
 from sklearn.model_selection import cross_val_score, KFold
@@ -79,11 +84,13 @@ kf = KFold(n_splits=5)
 cross_val_scores = cross_val_score(model, X, y, cv=kf)
 ```
 
-La función '***KFold***' de '***sklearn***' nos permite dividir el conjunto de datos en múltiples segmentos o 'folds'. A diferencia de una única división de entrenamiento/prueba, la validación cruzada evalúa el modelo en varias rondas, utilizando cada vez un segmento diferente como conjunto de prueba y el resto como entrenamiento. Esto garantiza que cada muestra de los datos se utilice tanto para entrenar como para validar el modelo, dándonos una medida más fiable de su rendimiento y evitando que ciertas peculiaridades de los datos influyan de manera desproporcionada en los resultados.
+La función '***KFold***' de '***sklearn***' nos permite dividir el conjunto de datos en múltiples segmentos o 'folds'. A diferencia de una única división de entrenamiento/prueba, la validación cruzada evalúa el modelo en varias rondas, utilizando cada vez un segmento diferente como conjunto de prueba y el resto como entrenamiento. Esto garantiza que cada muestra de los datos se utilice tanto para entrenar como para validar el modelo, dándonos una medida más fiable de su rendimiento y evitando que ciertas peculiaridades de los datos influyan de manera desproporcionada en los resultados. En palabras simples, le da a todos los datos disponibles la posibilidad de ser parte del grupo de entrenamiento y también del de prueba.
+
+Esto consumirá una cantidad de recursos de procesamiento mucho mayor, pero también es una ganancia enorme en confiabilidad del modelo por lo que se sugiere muy fuertemente utilizar mecanismos de ésta índole.
 
 ## 📐 Analizando el Error Absoluto Medio (MAE) 📐
 
-Una parte esencial en la afinación de nuestro modelo Random Forest es la elección de cuántos 'folds' o particiones usar en la validación cruzada. Esta decisión puede influir significativamente en la confiabilidad de las predicciones que hacemos. Para guiar esta elección, recurrimos al Error Absoluto Medio (MAE), que nos ofrece una medida directa de cuánto se desvían nuestras predicciones de los valores reales.
+Una parte esencial en la afinación de nuestro modelo Random Forest es la elección de cuántos 'folds' o particiones usar en la validación cruzada. Esta decisión puede influir significativamente en la confiabilidad de las predicciones que hacemos. Para guiar esta elección, recurrimos al concepto de Error Absoluto Medio (MAE), que nos ofrece una medida directa de cuánto se desvían nuestras predicciones de los valores reales.
 
 El MAE es la diferencia promedio entre el valor predicho y el valor real. En otras palabras, nos dice cuánto se equivoca nuestro modelo, en promedio, en las predicciones que hace. Un MAE bajo indica que nuestras predicciones son precisas, mientras que un MAE alto sugiere que podríamos estar bastante lejos del objetivo.
 
@@ -111,7 +118,16 @@ for fold in range(2, 80):
     print(f"{fold} folds: MAE = {mae_score}")
 ```
 
-Cada iteración del bucle **'for'** configura un nuevo objeto **'KFold'** con un número diferente de 'folds', que luego se utiliza para evaluar el modelo Random Forest. La función cross_val_score se emplea aquí para realizar la validación cruzada, y le pasamos el scoring parameter como '**neg_mean_absolute_error**' porque queremos calcular el MAE negativo; lo negamos (multiplicamos por -1) para convertirlo en un valor positivo que podemos interpretar fácilmente.
+Cada iteración del bucle **'for'** configura un nuevo objeto **'KFold'** con un número diferente de 'folds' (que en este caso se mueve entre valores desde el 2 hasta el 80), que luego se utiliza para evaluar el modelo Random Forest. La función cross_val_score se emplea aquí para realizar la validación cruzada, y le pasamos el scoring parameter como '**neg_mean_absolute_error**' porque queremos calcular el MAE negativo; luego lo negamos (multiplicamos por -1) para convertirlo en un valor positivo que podemos interpretar fácilmente.
+
+El resultado de este experimento se muestra en el siguiente gráfico:
+
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <a href="/assets/images/PAES_prediction_model/modelo_perdido_cap5_MAEvsFolds_n100.png">
+    <img src="/assets/images/PAES_prediction_model/modelo_perdido_cap5_MAEvsFolds_n100.png" width="100%"  alt="Imagen 1: Resultado del experimento para ver cómo cambian los resultados de MAE a medida que cambiamos la cantidad de Folds en el proceso de validación cruzada.">
+  </a>
+  <figcaption>Imagen GIF 1: Slides que muestran la analogía de un árbol de decisión con el dibujo de un árbol.</figcaption>
+</figure>
 
 ### Interpretando los Resultados con Visualizaciones
 
