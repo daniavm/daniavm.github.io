@@ -150,7 +150,9 @@ El resultado de este experimento se muestra en el siguiente gráfico:
   <figcaption>Imagen 1: Resultado del experimento para ver cómo cambian los resultados de MAE a medida que cambiamos la cantidad de Folds en el proceso de validación cruzada. En este caso, el eje Y está en términos de la cantidad de respuestas correctas en que el modelo predictivo difiere con los datos reales, mientras que el eje X representa la cantidad de KFolds considerados en cada iteración.</figcaption>
 </figure>
 
-Como puedes ver, la precisión de nuestro modelo depende de los valores que tenga **'KFold'** y es de gran importancia determinar cuál es el valor adecuado para nuestro modelo predictivo y cuáles fueron los criterios utilizados para definirlo. En nuestro caso, utilizaré aquel KFold que minimice el valor de MAE, pero que tambien presente indicios de estabilidad en el modelo. Esto último se logra evidenciando sectores en que MAE sea constante dentro de este gráfico, o en palabras más simples, cuando el MAE no cambie demasiado si yo  cambio KFolds.
+Como puedes ver, la precisión de nuestro modelo depende de los valores que tenga **'KFold'** y es de gran importancia determinar cuál es el valor adecuado para nuestro modelo predictivo. Esto y saber cuáles fueron los criterios utilizados para definirlo. 
+
+En nuestro caso, utilizaré aquel KFold que minimice el valor de MAE, pero que tambien presente indicios de estabilidad en el modelo. Esto último se logra evidenciando sectores en que MAE sea constante dentro de este gráfico, o en palabras más simples, cuando el MAE no cambie demasiado si yo  cambio KFolds.
 
 
 ## 📐 Ajustando el Enfoque: MAE, Folds y Estimadores 📊
