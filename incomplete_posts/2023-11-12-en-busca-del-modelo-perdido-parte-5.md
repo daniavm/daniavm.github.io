@@ -228,8 +228,8 @@ He puesto el heatmap en un formato html para que puedas interactuar con él y sa
 
 Supongo que ya ha sido suficiente por hoy y debemos descansar ...
 
-<figure style = "float: center; width: 100%; height: 200px; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%" height="200px"  alt="Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos. ">
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%"  alt="Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos. ">
   <figcaption>Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos.</figcaption>
 </figure>
 
