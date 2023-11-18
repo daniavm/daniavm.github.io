@@ -89,7 +89,7 @@ La función '***KFold***' de '***sklearn***' nos permite dividir el conjunto de 
 
 Esto consumirá una cantidad de recursos de procesamiento mucho mayor, pero también es una ganancia enorme en confiabilidad del modelo por lo que se sugiere muy fuertemente utilizar mecanismos de ésta índole.
 
-## 📐 Analizando el Error Absoluto Medio (MAE) 📐
+### Analizando el Error Absoluto Medio (MAE)
 
 Una parte esencial en la afinación de nuestro modelo Random Forest es la elección de cuántos 'folds' o particiones usar en la validación cruzada. Esta decisión puede influir significativamente en la confiabilidad de las predicciones que hacemos. Para guiar esta elección, recurrimos al concepto de Error Absoluto Medio (MAE), que nos ofrece una medida directa de cuánto se desvían nuestras predicciones de los valores reales.
 
@@ -153,7 +153,7 @@ El resultado de este experimento se muestra en el siguiente gráfico:
 Como puedes ver, la precisión de nuestro modelo depende de los valores que tenga **'KFold'** y es de gran importancia determinar cuál es el valor adecuado para nuestro modelo predictivo y cuáles fueron los criterios utilizados para definirlo. En nuestro caso, utilizaré aquel KFold que minimice el valor de MAE, pero que tambien presente indicios de estabilidad en el modelo. Esto último se logra evidenciando sectores en que MAE sea constante dentro de este gráfico, o en palabras más simples, cuando el MAE no cambie demasiado si yo  cambio KFolds.
 
 
-## Ajustando el Enfoque: MAE, Folds y Estimadores
+## 📐 Ajustando el Enfoque: MAE, Folds y Estimadores 📊
 
 A medida que avanzamos en el refinamiento de nuestro modelo, nos damos cuenta de que la evaluación del MAE no depende únicamente de la cantidad de 'folds'. Hay otro factor en juego que puede ser igualmente importante: la cantidad de estimadores en nuestro Random Forest. De hecho me inquietó tanto el problema que hice un experimento similar al que hicimos con los 'folds' pero esta vez con el número de estimadores. El resultado fue el siguiente gráfico:
 
@@ -215,12 +215,21 @@ La razón por las que he parelelizado este algoritmo es simplemente porque tengo
 
 ## ⏲️ 3 horas después ...
 
-Después de harto maquinar el cómo cumplir esta misión, el código finalmente entregó su esperado resultado. Lo he puesto a continuación para que también puedan interactuar con él y saquen sus propias conclusiones hasta el siguiente capítulo. 
+Después de harto maquinar el cómo cumplir esta misión, el código finalmente entregó nuestro esperado resultado. Por supuesto, graficar 3 variables no es nada grato para nuestras mentes acostumbradas al 2D, así que hasta decidir el cómo visualizar esta información en este problema resulta ser un desafío. Pero somos aspirantes a aprendanzantes, así que ¡hay que avanzar y no pierdas la disciplina que hemos tenido hasta ahora!
 
-Supongo que ya ha sido suficiente por hoy ...
+Después de mucho indagar al respecto, decidí que el mejor mecanismo de visualización para estos resultados era un mapa de calor (heatmap). Puedes visualizar en un plano bidimensional (folds y estimadores) distintos colores (MAE) que nos darán una idea de cómo tomar la decisión final para estos parámetros de nuestro modelo.
 
-<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%"  alt="Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos. ">
+He puesto el heatmap en un formato html para que puedas interactuar con él y saques tus propias conclusiones hasta que llegue el siguiente capítulo. 
+
+<div align="center" markdown="1">
+
+<a href="https://daniavm.github.io/assets/images/PAES_prediction_model/heatmap_interactivo.html" target="_blank" align="center">Ver el Heatmap aquí</a>
+</div>
+
+Supongo que ya ha sido suficiente por hoy y debemos descansar ...
+
+<figure style = "float: center; width: 100%; height: 200px; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%" height="200px"  alt="Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos. ">
   <figcaption>Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos.</figcaption>
 </figure>
 
