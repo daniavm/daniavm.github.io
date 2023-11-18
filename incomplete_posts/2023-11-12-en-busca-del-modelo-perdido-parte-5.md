@@ -120,20 +120,21 @@ for fold in range(2, 80):
 
 Cada iteración del bucle **'for'** configura un nuevo objeto **'KFold'** con un número diferente de 'folds' (que en este caso se mueve entre valores desde el 2 hasta el 80), que luego se utiliza para evaluar el modelo Random Forest. La función cross_val_score se emplea aquí para realizar la validación cruzada, y le pasamos el scoring parameter como '**neg_mean_absolute_error**' porque queremos calcular el MAE negativo; luego lo negamos (multiplicamos por -1) para convertirlo en un valor positivo que podemos interpretar fácilmente.
 
-El resultado de este experimento se muestra en el siguiente gráfico:
+## Experimento con diferentes cantidades de estimadores y 'folds'
+for fold in range(2, 80):
+    kf = KFold(n_splits=fold)
+    model = RandomForestRegressor(n_estimators=100)
+    mae_score = -cross_val_score(model, X, y, cv=kf, scoring='neg_mean_absolute_error').mean()
+    print(f"{fold} folds: MAE = {mae_score}")
 
-<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <a href="/assets/images/PAES_prediction_model/modelo_perdido_cap5_MAEvsFolds_n100.png">
-    <img src="/assets/images/PAES_prediction_model/modelo_perdido_cap5_MAEvsFolds_n100.png" width="100%"  alt="Imagen 1: Resultado del experimento para ver cómo cambian los resultados de MAE a medida que cambiamos la cantidad de Folds en el proceso de validación cruzada.">
-  </a>
-  <figcaption>Imagen GIF 1: Slides que muestran la analogía de un árbol de decisión con el dibujo de un árbol.</figcaption>
-</figure>
+
+El bucle for en Python nos permite probar una serie de valores en un proceso iterativo, lo cual es ideal para experimentar con diferentes configuraciones de nuestro modelo. Aquí, estamos buscando el 'fold' óptimo que minimice el Error Absoluto Medio (MAE), una medida de qué tan lejos están nuestras predicciones de los valores reales.
 
 ### Interpretando los Resultados con Visualizaciones
 
 Tras realizar el experimento y calcular el MAE para cada número de 'folds', es hora de interpretar los resultados. Una forma efectiva de hacerlo es a través de la visualización de datos. Los gráficos nos permiten ver tendencias y patrones que pueden no ser evidentes solo con los números.
 
-#### Visualización del MAE y el Número de Folds
+### Visualización del MAE y el Número de Folds
 
 El siguiente código nos da una representación gráfica de cómo el MAE varía con el número de 'folds' utilizado en la validación cruzada:
 
@@ -151,17 +152,17 @@ plt.grid()
 plt.show()
 ```
 
-En este gráfico de líneas, cada punto representa el MAE promedio para un número específico de 'folds'. Lo que buscamos es una línea que tienda a estabilizarse, indicando que hemos alcanzado un punto en el que aumentar el número de 'folds' no mejora significativamente el MAE. Encontrar este punto de equilibrio nos ayuda a evitar el sobreajuste y el subajuste, garantizando que nuestro modelo sea generalizable.
+El resultado de este experimento se muestra en el siguiente gráfico:
 
-# Experimento con diferentes cantidades de estimadores y 'folds'
-for fold in range(2, 80):
-    kf = KFold(n_splits=fold)
-    model = RandomForestRegressor(n_estimators=100)
-    mae_score = -cross_val_score(model, X, y, cv=kf, scoring='neg_mean_absolute_error').mean()
-    print(f"{fold} folds: MAE = {mae_score}")
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <a href="/assets/images/PAES_prediction_model/modelo_perdido_cap5_MAEvsFolds_n100.png">
+    <img src="/assets/images/PAES_prediction_model/modelo_perdido_cap5_MAEvsFolds_n100.png" width="100%"  alt="Imagen 1: Resultado del experimento para ver cómo cambian los resultados de MAE a medida que cambiamos la cantidad de Folds en el proceso de validación cruzada.">
+  </a>
+  <figcaption>Imagen 1: Resultado del experimento para ver cómo cambian los resultados de MAE a medida que cambiamos la cantidad de Folds en el proceso de validación cruzada. En este caso, el eje Y está en términos de la cantidad de respuestas correctas en que el modelo predictivo difiere con los datos reales, mientras que el eje X representa la cantidad de KFolds considerados en cada iteración.</figcaption>
+</figure>
 
+Como puedes ver, la precisión de nuestro modelo depende de los valores que tenga **'KFold'** y es de gran importancia determinar cuál es el valor adecuado para nuestro modelo predictivo y cuáles fueron los criterios utilizados para definirlo. En nuestro caso, utilizaré aquel KFold que minimice el valor de MAE, pero que tambien presente indicios de estabilidad en el modelo. Esto último se logra evidenciando sectores en que MAE sea constante dentro de este gráfico, o en palabras más simples, cuando el MAE no cambie demasiado si yo  cambio KFolds.
 
-El bucle for en Python nos permite probar una serie de valores en un proceso iterativo, lo cual es ideal para experimentar con diferentes configuraciones de nuestro modelo. Aquí, estamos buscando el 'fold' óptimo que minimice el Error Absoluto Medio (MAE), una medida de qué tan lejos están nuestras predicciones de los valores reales.
 
 ### Ajustando el Enfoque: MAE, Folds y Estimadores
 
