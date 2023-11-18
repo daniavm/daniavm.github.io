@@ -8,8 +8,8 @@ toc: true
 toc_icon: "egg"
 
 header:
-  image: /assets/images/PAES_prediction_model/RandomForestComplex.jpg
-  teaser: /assets/images/PAES_prediction_model/RandomForestComplex_teaser.jpg
+  image: /assets/images/PAES_prediction_model/RandomForestBanner.jpg
+  teaser: /assets/images/PAES_prediction_model/RandomForestBanner.jpg
 
 categories:
   - Machine Learning
@@ -26,8 +26,8 @@ tags:
   - Predicción de Resultados
   - PAES
   - Enseñanza
----
 
+---
 <div align="justify" markdown="1">
 Continuando nuestra exploración en el mundo del análisis de datos, nos enfrentamos ahora al desafío de afinar nuestro modelo de Random Forest. En este capítulo, nos centramos en entender mejor las decisiones detrás de nuestra programación y el impacto que tienen en los resultados finales.
 
@@ -220,7 +220,7 @@ Después de harto maquinar el cómo cumplir esta misión, el código finalmente 
 Supongo que ya ha sido suficiente por hoy ...
 
 
-<embed type="text/html" src="assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%"  alt="Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos. ">
+<embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%"  alt="Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos. ">
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/PAES_prediction_model/modelo_perdido_cap5_MAEvsEstimators.png">
