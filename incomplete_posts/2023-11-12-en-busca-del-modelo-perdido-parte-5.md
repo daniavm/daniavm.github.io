@@ -220,11 +220,9 @@ Después de harto maquinar el cómo cumplir esta misión, el código finalmente 
 Supongo que ya ha sido suficiente por hoy ...
 
 
-<embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%"  alt="Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos. ">
-
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/PAES_prediction_model/modelo_perdido_cap5_MAEvsEstimators.png">
-    <embed type="text/html" src="assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%"  alt="Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos. ">
+    <embed type="text/html" src="assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%" height="200px" alt="Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos. ">
   </a>
   <figcaption>Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos.</figcaption>
 </figure>
