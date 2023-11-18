@@ -166,11 +166,13 @@ A medida que avanzamos en el refinamiento de nuestro modelo, nos damos cuenta de
   <figcaption>Imagen 2: Resultado del experimento para ver cómo cambian los resultados de MAE a medida que cambiamos la cantidad de Estimadores en el proceso de validación cruzada.</figcaption>
 </figure>
 
-De llo que podemos ver, la precisión de las predicciones se ve claramente afectada por el número de árboles que estamos utilizando para construir el modelo. Por lo tanto, nos enfrentamos a un análisis tridimensional donde debemos considerar 'folds', estimadores y MAE simultáneamente para optimizar nuestro modelo... y eso creo que puede ser el problema mas complejo de toda nuestra aventura 😨.
+De lo que podemos ver, la precisión de las predicciones se ve claramente afectada por el número de árboles que estamos utilizando para construir el modelo. 
+
+Por lo tanto, nos enfrentamos a un análisis tridimensional donde debemos considerar 'folds', estimadores y MAE simultáneamente para optimizar nuestro modelo... y eso creo que puede ser el problema mas complejo de toda nuestra aventura 😨.
 
 ### Explorando la Interacción entre Folds y Estimadores
 
-Para abordar esta complejidad, ampliamos nuestro experimento para incluir un rango de estimadores. Aquí está el código que utilizamos para paralelizar el cálculo del MAE promedio, considerando ambos factores:
+Para abordar esta complejidad, ampliamos nuestro experimento para incluir un rango de estimadores. Aquí está el código que utilicé para paralelizar el cálculo del MAE promedio y considerando ambos factores:
 
 ```python
 from sklearn.model_selection import cross_val_score, KFold
@@ -213,15 +215,19 @@ plt.title('Mapa de Calor de MAE en función de Num Folds y Num Estimadores')
 plt.show()
 ```
 
-La razón por las que he parelelizado este algoritmo es simplemente porque tengo claro que es de una complejidad tan grande que soy consciente de que mi computador tardará bastante en evaluar algo así. Estamos tomando 78 modelos distintos cuando cambiamos los 'folds' y 100 modelos extra por cada uno de estos donde probamos los distintos estimadores. Esto da un no menor total de 780 modelos de random forest utilizando validación cruzada y calculando el MAE en cada iteración ... así que tengo por seguro que mi querido Charlie (el nombre de mi computador) tendrá una cuota de sufrimiento extra en nuestra aventura.
+La razón por las que he parelelizado este algoritmo es simplemente porque tengo claro que es de una complejidad tan grande que soy consciente de que mi computador tardará bastante en evaluar algo así. 
+
+Estamos tomando 78 modelos distintos cuando cambiamos los 'folds' y 100 modelos extra por cada uno de estos donde probamos los distintos estimadores. Esto da un no menor total de 780 modelos de random forest utilizando validación cruzada y calculando el MAE en cada iteración ... así que tengo por seguro que mi querido Charlie (el nombre de mi computador) tendrá una cuota de sufrimiento extra en nuestra aventura.
 
 ### ⏲️ 3 horas después ...
 
-Después de harto maquinar el cómo cumplir esta misión, el código finalmente entregó nuestro esperado resultado. Por supuesto, graficar 3 variables no es nada grato para nuestras mentes acostumbradas al 2D, así que hasta decidir el cómo visualizar esta información en este problema resulta ser un desafío. Pero somos aspirantes a aprendanzantes, así que ¡hay que avanzar y no pierdas la disciplina que hemos tenido hasta ahora!
+Después de harto maquinar el cómo cumplir esta misión, el código finalmente entregó nuestro esperado resultado. Por supuesto, graficar 3 variables no es nada grato para nuestras mentes acostumbradas al 2D, así que hasta decidir cómo visualizar la información en este problema puede ser todo un desafío. 
+
+Pero somos aspirantes a aprendanzantes, así que ¡hay que avanzar ... y no pierdas la disciplina que hemos tenido hasta ahora!
 
 Después de mucho indagar al respecto, decidí que el mejor mecanismo de visualización para estos resultados era un mapa de calor (heatmap). Puedes visualizar en un plano bidimensional (folds y estimadores) distintos colores (MAE) que nos darán una idea de cómo tomar la decisión final para estos parámetros de nuestro modelo.
 
-He puesto el heatmap en un formato html para que puedas interactuar con él y saques tus propias conclusiones hasta que llegue el siguiente capítulo. 
+He puesto el heatmap en un formato html para que puedas interactuar con él y saques tus propias conclusiones hasta que llegue el siguiente capítulo. También lo dejé dispuesto un poco más abajo del post, pero creo que no se ve "bien" (sugiero mirar el enlace).
 
 <div align="center" markdown="1">
 
