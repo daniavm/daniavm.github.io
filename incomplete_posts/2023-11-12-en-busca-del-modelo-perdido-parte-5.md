@@ -121,17 +121,6 @@ for fold in range(2, 80):
 
 Cada iteración del bucle **'for'** configura un nuevo objeto **'KFold'** con un número diferente de 'folds' (que en este caso se mueve entre valores desde el 2 hasta el 80), que luego se utiliza para evaluar el modelo Random Forest. La función cross_val_score se emplea aquí para realizar la validación cruzada, y le pasamos el scoring parameter como '**neg_mean_absolute_error**' porque queremos calcular el MAE negativo; luego lo negamos (multiplicamos por -1) para convertirlo en un valor positivo que podemos interpretar fácilmente.
 
-### Experimento con diferentes cantidades de estimadores y 'folds'
-```python
-for fold in range(2, 80):
-    kf = KFold(n_splits=fold)
-    model = RandomForestRegressor(n_estimators=100)
-    mae_score = -cross_val_score(model, X, y, cv=kf, scoring='neg_mean_absolute_error').mean()
-    print(f"{fold} folds: MAE = {mae_score}")
-```
-
-El bucle for en Python nos permite probar una serie de valores en un proceso iterativo, lo cual es ideal para experimentar con diferentes configuraciones de nuestro modelo. Aquí, estamos buscando el 'fold' óptimo que minimice el Error Absoluto Medio (MAE), una medida de qué tan lejos están nuestras predicciones de los valores reales.
-
 ### Interpretando los Resultados con Visualizaciones
 
 Tras realizar el experimento y calcular el MAE para cada número de 'folds', es hora de interpretar los resultados. Una forma efectiva de hacerlo es a través de la visualización de datos. Los gráficos nos permiten ver tendencias y patrones que pueden no ser evidentes solo con los números.
@@ -166,7 +155,16 @@ Como puedes ver, la precisión de nuestro modelo depende de los valores que teng
 
 ## Ajustando el Enfoque: MAE, Folds y Estimadores
 
-A medida que avanzamos en el refinamiento de nuestro modelo, nos damos cuenta de que la evaluación del MAE no depende únicamente de la cantidad de 'folds'. Hay otro factor en juego que puede ser igualmente importante: la cantidad de estimadores en nuestro Random Forest. La precisión de las predicciones podría verse afectada por el número de árboles que estamos utilizando para construir el modelo. Por lo tanto, nos enfrentamos a un análisis tridimensional donde debemos considerar 'folds', estimadores y MAE simultáneamente para optimizar nuestro modelo.
+A medida que avanzamos en el refinamiento de nuestro modelo, nos damos cuenta de que la evaluación del MAE no depende únicamente de la cantidad de 'folds'. Hay otro factor en juego que puede ser igualmente importante: la cantidad de estimadores en nuestro Random Forest. De hecho me inquietó tanto el problema que hice un experimento similar al que hicimos con los 'folds' pero esta vez con el número de estimadores. El resultado fue el siguiente gráfico:
+
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <a href="/assets/images/PAES_prediction_model/modelo_perdido_cap5_MAEvsEstimators.png">
+    <img src="/assets/images/PAES_prediction_model/modelo_perdido_cap5_MAEvsEstimators.png" width="100%"  alt="Imagen 2: Resultado del experimento para ver cómo cambian los resultados de MAE a medida que cambiamos la cantidad de Estimadores en el proceso de validación cruzada.">
+  </a>
+  <figcaption>Imagen 2: Resultado del experimento para ver cómo cambian los resultados de MAE a medida que cambiamos la cantidad de Estimadores en el proceso de validación cruzada.</figcaption>
+</figure>
+
+De llo que podemos ver, la precisión de las predicciones se ve claramente afectada por el número de árboles que estamos utilizando para construir el modelo. Por lo tanto, nos enfrentamos a un análisis tridimensional donde debemos considerar 'folds', estimadores y MAE simultáneamente para optimizar nuestro modelo... y eso creo que puede ser el problema mas complejo de toda nuestra aventura 😨.
 
 ### Explorando la Interacción entre Folds y Estimadores
 
@@ -213,11 +211,31 @@ plt.title('Mapa de Calor de MAE en función de Num Folds y Num Estimadores')
 plt.show()
 ```
 
+La razón por las que he parelelizado este algoritmo es simplemente porque tengo claro que es de una complejidad tan grande que soy consciente de que mi computador tardará bastante en evaluar algo así. Estamos tomando 78 modelos distintos cuando cambiamos los 'folds' y 100 modelos extra por cada uno de estos donde probamos los distintos estimadores. Esto da un no menor total de 780 modelos de random forest utilizando validación cruzada y calculando el MAE en cada iteración ... así que tengo por seguro que mi querido Charlie (el nombre de mi computador) tendrá una cuota de sufrimiento extra en nuestra aventura.
+
+## ⏲️ 3 horas después ...
+
+Después de harto maquinar el cómo cumplir esta misión, el código finalmente entregó su esperado resultado. Lo he puesto a continuación para que también puedan interactuar con él y saquen sus propias conclusiones hasta el siguiente capítulo. 
+
+Supongo que ya ha sido suficiente por hoy ...
 
 
+<embed type="text/html" src="assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%"  alt="Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos. ">
 
-Hasta entonces, nos vemos en el próximo cronopunto del Principia 🥚.
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <a href="/assets/images/PAES_prediction_model/modelo_perdido_cap5_MAEvsEstimators.png">
+    <embed type="text/html" src="assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%"  alt="Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos. ">
+  </a>
+  <figcaption>Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos.</figcaption>
+</figure>
+
+
+<div align="right" markdown="1">
+
+_Hasta el próximo cronopunto del Principia 🥚._
 
 DV
+
+</div>
 
 </div>
