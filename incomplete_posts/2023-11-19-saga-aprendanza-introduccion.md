@@ -42,13 +42,13 @@ Inspirado en parte por las teorías de Carol Dweck sobre la mentalidad de crecim
 Los próximos capítulos profundizarán en cómo este enfoque integrado podría revolucionar la práctica educativa. Exploraremos su posible impacto en el diseño curricular y su influencia en el desarrollo personal y profesional. Pero lo que es más emocionante es el potencial transformador que podría tener este enfoque. Imagina un viaje de descubrimiento similar al que encuentras en una novela apasionante, donde cada página te acerca más al núcleo de un gran misterio. Esta serie te guiará en un viaje de exploración no solo en el ámbito educativo, sino también en cómo nos relacionamos con el mundo y los demás. Te invito a unirte a esta exploración, donde cada capítulo te llevará a una comprensión más profunda y revelaciones significativas sobre nuestra forma de aprender y enseñar. ¿Estás listo para embarcarte en este viaje y explorar cómo la educación, y posiblemente incluso el mundo, pueden ser vistos desde una perspectiva nueva y emocionante?
 
 
-<div align="right" markdown="1">
+---
 
-_Hasta el próximo cronopunto del Principia 🥚._
+## Referencias
+- OECD (2019). *PISA 2018* Results. OECD Publishing.
+- Robinson, K. (2006). *Escuelas Creativas: La Revolución que está Transformando la Educación*. Penguin Books.
+- Dweck, C. (2006). *Mindset: The New Psychology of Success*. Ballantine Books.
 
-DV
-
-</div>
 
 </div>
 
