@@ -9,7 +9,6 @@ toc_icon: "egg"
 
 classes: wide
 
-
 header:
   image: /assets/images/historias_de_clase/historias_de_clase_circulo_cuadrado.png
   teaser: /assets/images/historias_de_clase/historias_de_clase_circulo_cuadrado.png
