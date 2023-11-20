@@ -2,15 +2,20 @@
 main:
   #- title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-   - title: "Home"
-     url: /
-   - title: "Learning Analytics"
-     url: /learninganalytics/
-   - title: "Posts"
-     url: /categories/
-   - title: "Youtube"
-     url: https://www.youtube.com/channel/UCE9a5RZRjCwvyFlg2ORG1HA
-   - title: "Portfolio"
-     url: /portfolio/
-   - title: "About"
-     url: /about/
+  - title: "Home"
+    url: /
+  - title: "Learning Analytics"
+    url: /learninganalytics/
+  - title: "Posts"
+    url: /categories/
+  - title: "Youtube"
+    url: https://www.youtube.com/channel/UCE9a5RZRjCwvyFlg2ORG1HA
+  - title: "Sagas"
+    url: /about/
+      children:
+      - title: "Working with Posts"
+        url: /docs/posts/
+  - title: "Portfolio"
+    url: /portfolio/
+  - title: "About"
+    url: /about/
