@@ -348,11 +348,22 @@ defaults:
       layout: single
       author_profile: false
       share: true
+  # _sagas
+  - scope:
+      path: ""
+      type: sagas
+    values:
+      layout: single
+      author_profile: false
+      share: true
 
 collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
   learninganalytics:
+    output: true
+    permalink: /:collection/:path/
+  sagas:
     output: true
     permalink: /:collection/:path/

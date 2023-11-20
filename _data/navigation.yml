@@ -8,10 +8,8 @@ main:
     url: /learninganalytics/
   - title: "Posts"
     url: /categories/
-  - title: "Youtube"
-    url: https://www.youtube.com/channel/UCE9a5RZRjCwvyFlg2ORG1HA
   - title: "Sagas"
-    url: /about/ 
+    url: /sagas/
   - title: "Portfolio"
     url: /portfolio/
   - title: "About"
