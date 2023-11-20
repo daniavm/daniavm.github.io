@@ -7,5 +7,8 @@ entries_layout: grid
 classes: wide
 ---
 
-Esta sección es el núcleo de nuestra exploración en el mundo del Learning Analytics. Aquí, encontrarás recursos para mejorar las técnicas de aprendizaje y enseñanza, y podrás comprender cómo el Learning Analytics se integra de manera natural en los pilares de la pedagogía y las necesidades de la aprendanza. Esta sección servirá como un repositorio de las herramientas digitales que estoy desarrollando en el área de Learning Analytics.
+En esta sección encontrarás las múltiples sagas en las que he podido trabajar. Si bien hay mucho camino por recorrer aún, creo que lo que expondré aquí en primera instancia puede ayudar a que te motives a seguir más de alguna de estas iniciativas. 
+
+La invitación está hecha y espero puedas disfrutar de estos entornos de creación que he podido idear para transmitir a quienes vengan después de mi.
+
 
