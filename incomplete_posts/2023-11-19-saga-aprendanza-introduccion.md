@@ -11,8 +11,8 @@ classes: wide
 
 
 header:
-  image: /assets/images/PAES_prediction_model/RandomForestBanner.jpg
-  teaser: /assets/images/PAES_prediction_model/RandomForestBanner.jpg
+  image: /assets/images/aprendanza_book/libro_de_la_aprendanza_img1.png
+  teaser: /assets/images/aprendanza_book/libro_de_la_aprendanza_img1.png
 
 categories:
   - Reflexiones de Educación
