@@ -11,7 +11,7 @@ main:
   - title: "Youtube"
     url: https://www.youtube.com/channel/UCE9a5RZRjCwvyFlg2ORG1HA
   - title: "Sagas"
-    url: /about/
+    url: /about/ 
       children:
       - title: "Working with Posts"
         url: /docs/posts/
