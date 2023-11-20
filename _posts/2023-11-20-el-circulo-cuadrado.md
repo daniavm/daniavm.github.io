@@ -25,7 +25,6 @@ tags:
 
 ---
 <div align="justify" markdown="1">
-
 Era un típico jueves por la mañana en el Electivo de Física, pero lo que empezó como una clase ordinaria pronto se transformaría en una de las más memorables. Estábamos inmersos en una discusión sobre la aplicación de conceptos físicos en diferentes contextos, y decidí aprovechar la ocasión para introducir un desafío único. "Hoy vamos a hacer algo distinto", anuncié, despertando una mezcla de sorpresa e interés en la clase. "Quiero que consideren esta pregunta: ¿es posible dibujar un círculo que sea también un cuadrado?"
 
 Inmediatamente, el aula se llenó de murmullos y risas incrédulas. "¿Un círculo-cuadrado? Eso no tiene sentido, profe", comentó Carla, mientras otros asentían o se encogían de hombros en señal de desconcierto.
