@@ -10,8 +10,8 @@ toc_icon: "egg"
 classes: wide
 
 header:
-  image: /assets/images/historias_de_clase/historias_de_clase_circulo_cuadrado.png
-  teaser: /assets/images/historias_de_clase/historias_de_clase_circulo_cuadrado.png
+  image: /assets/images/historias_de_clase/historias_de_clases_portada.png
+  teaser: /assets/images/historias_de_clase/historias_de_clases_portada.png
 
 categories:
   - Historias de Clase
