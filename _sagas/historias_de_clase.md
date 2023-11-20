@@ -7,6 +7,8 @@ comments: true
 toc: false
 toc_icon: "egg"
 
+classes: wide
+
 header:
   image: /assets/images/historias_de_clase/historias_de_clases_portada.png
   teaser: /assets/images/historias_de_clase/historias_de_clases_portada.png
@@ -43,8 +45,5 @@ _Hasta el próximo cronopunto del Principia 🥚._
 DV
 
 </div>
-
-
-
 
 </div>
