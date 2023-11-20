@@ -7,6 +7,8 @@ comments: true
 toc: false
 toc_icon: "egg"
 
+classes: wide
+
 
 header:
   image: /assets/images/PAES_prediction_model/RandomForestBanner.jpg
