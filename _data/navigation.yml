@@ -19,17 +19,17 @@ modelo_perdido:
   - title: Parte 1 - Exploración
     children:
       - title: "Parte 1: Exploración"
-        url: /_posts/en_busca_del_modelo_perdido/2023-09-22-en-busca-del-modelo-perdido-parte-1.md
+        url: /_posts/en_busca_del_modelo_perdido/2023-09-22-en-busca-del-modelo-perdido-parte-1
       - title: "Parte 2: Herramientas"
-        url: /_posts/en_busca_del_modelo_perdido/2023-09-30-en-busca-del-modelo-perdido-parte-2.md
+        url: /_posts/en_busca_del_modelo_perdido/2023-09-30-en-busca-del-modelo-perdido-parte-2
 
   - title: Parte 2 - El Random Forest
     children:
       - title: "Parte 3: El Random Forest + ChatGPT"
-        url: /_posts/en_busca_del_modelo_perdido/2023-10-09-en-busca-del-modelo-perdido-parte-3.md
+        url: /_posts/en_busca_del_modelo_perdido/2023-10-09-en-busca-del-modelo-perdido-parte-3
       - title: "Parte 4:  Explorando el Random Forest"
-        url: /_posts/en_busca_del_modelo_perdido/2023-11-10-en-busca-del-modelo-perdido-parte-4.md
+        url: /_posts/en_busca_del_modelo_perdido/2023-11-10-en-busca-del-modelo-perdido-parte-4
       - title: "Parte 5: Afinando el Random Forest"
-        url: /_posts/en_busca_del_modelo_perdido/2023-11-18-en-busca-del-modelo-perdido-parte-5.md
+        url: /_posts/en_busca_del_modelo_perdido/2023-11-18-en-busca-del-modelo-perdido-parte-5
 
 
