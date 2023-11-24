@@ -28,7 +28,7 @@ tags:
 
 ---
 <div align="justify" markdown="1">
-¡Bienvenidos aventureros del conocimiento y entusiastas del Machine Learning! Nos complace presentar nuestra emocionante serie: "En Busca del Modelo Perdido". Esta saga es un viaje a través de los intrincados caminos del aprendizaje automático y la ciencia de datos, con un enfoque especial en predecir los resultados de la prueba PAES en Chile.
+¡Embarcamos en "En Busca del Modelo Perdido", una aventura apasionante en el mundo del análisis de datos y Machine Learning! Cada capítulo es un salto hacia la maestría en predicción de resultados educativos, ideal para curiosos, educadores y entusiastas del aprendizaje automático. ¡Acompáñanos y expande tus horizontes en esta travesía llena de conocimiento y descubrimientos!
 
 1. [**Capítulo 1 - Exploración**](/_posts/en_busca_del_modelo_perdido/2023-09-22-en-busca-del-modelo-perdido-parte-1): En el inicio de nuestra aventura, exploramos las primeras etapas del análisis de datos utilizando Python, enfocándonos en el Análisis de Datos Exploratorio (ADE) para descubrir un modelo que prediga resultados de pruebas universitarias. Aprendemos a manejar y entender un conjunto de datos, marcando el primer paso hacia la construcción de modelos predictivos.
 
@@ -41,9 +41,9 @@ tags:
 5. [**Capítulo 5 - Afinando el Random Forest**](/_posts/en_busca_del_modelo_perdido/2023-11-18-en-busca-del-modelo-perdido-parte-5): Profundizamos en la optimización de nuestro modelo Random Forest, analizando cómo cada línea de código impacta en los resultados. Exploramos la importancia de entender parámetros clave como 'n_estimators' y 'random_state', y aplicamos técnicas de validación cruzada y análisis del Error Absoluto Medio (MAE) para mejorar la precisión del modelo. Este capítulo se enfoca en ajustar y comprender mejor las variables críticas para un modelo predictivo más confiable y eficaz en el ámbito educativo.
 
 
-La "Saga En Busca del Modelo Perdido" es un viaje de descubrimiento, desafíos y aprendizaje. Cada capítulo ofrece una mezcla única de teoría y práctica, diseñada para inspirar y educar a estudiantes, educadores y profesionales por igual. Esperamos que estos relatos l@s guíen en su propia aventura en el análisis de datos y el aprendizaje automático.
+La "Saga En Busca del Modelo Perdido" es una aventura en análisis de datos y Machine Learning, fusionando teoría y práctica. Diseñada para inspirar a estudiantes, educadores y profesionales, esta serie es su brújula en el emocionante mundo del aprendizaje automático.
 
-Esten atentos para más capítulos en esta emocionante saga de aprendizaje automático y ciencia de datos!
+¡Prepárense para más capítulos en esta fascinante saga!
 
 <div align="right" markdown="1">
 
