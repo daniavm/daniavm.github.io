@@ -16,14 +16,14 @@ main:
     url: /about/
 
 modelo_perdido:
-  - title: Parte 1 - Exploración
+  - title: Exploración
     children:
       - title: "Parte 1: Exploración"
         url: /_posts/en_busca_del_modelo_perdido/2023-09-22-en-busca-del-modelo-perdido-parte-1
       - title: "Parte 2: Herramientas"
         url: /_posts/en_busca_del_modelo_perdido/2023-09-30-en-busca-del-modelo-perdido-parte-2
 
-  - title: Parte 2 - El Random Forest
+  - title: El Random Forest
     children:
       - title: "Parte 3: El Random Forest + ChatGPT"
         url: /_posts/en_busca_del_modelo_perdido/2023-10-09-en-busca-del-modelo-perdido-parte-3
