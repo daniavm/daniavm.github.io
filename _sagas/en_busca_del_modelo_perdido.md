@@ -9,6 +9,9 @@ toc_icon: "egg"
 
 classes: wide
 
+sidebar:
+  nav: "modelo_perdido"
+
 header:
   image: /assets/images/PAES_prediction_model/en_busca_del_modelo_perdido_portada.png
   teaser: /assets/images/PAES_prediction_model/en_busca_del_modelo_perdido_portada.png
