@@ -24,18 +24,18 @@ tags:
 
 ---
 <div align="justify" markdown="1">
-¡Saludos, amantes de las historias y la educación! Estamos emocionados de presentarles nuestra nueva serie: la "Saga de Historias de Clase". Esta serie está dedicada a explorar diversos aspectos del mundo educativo, desde los desafíos modernos hasta los momentos de descubrimiento y asombro en el aula. Cada historia de esta saga es una ventana a diferentes experiencias y perspectivas dentro de la educación, combinando realismo, fantasía, y reflexiones profundas sobre el aprendizaje y la enseñanza.
+¡Bienvenidos a un viaje único en el corazón de la educación! Me emociona presentarles "Historias de Clase", una serie nacida de mis vivencias en el aula. Cada capítulo es un fragmento de la vida real, entrelazado con toques de fantasía y reflexión, revelando las alegrías, desafíos y descubrimientos que la enseñanza y el aprendizaje pueden ofrecer.
 
 1. [**Capítulo 1 - El Misterio del Círculo-Cuadrado**](https://daniavm.github.io/historias%20de%20clase/el-circulo-cuadrado/):
-  En este capítulo inaugural, nos sumergimos en una aula de física donde un objeto ordinario - una simple lata de bebida - se convierte en el centro de un fascinante misterio geométrico. Los estudiantes descubren el poder de la observación y la perspectiva, llevándolos a un momento de 'eureka' que cambia un poco más su comprensión del mundo.
+  En este capítulo inaugural, nos sumergimos en una aula de física donde un objeto ordinario - una simple lata de bebida - se convierte en el centro de un fascinante misterio geométrico. L@s estudiantes descubren el poder de la observación y la perspectiva, llevándolos a un momento de 'eureka' que cambia un poco más su comprensión del mundo.
   
 2. Próximos Capítulos: 
-  Títulos y temas tentativos: Estén atentos para futuros capítulos que abordarán temas como la tecnología en el aula, los métodos de enseñanza innovadores, las historias personales de profesores y estudiantes, y mucho más
+  Próximamente, compartiré más historias que abarcan desde la integración de tecnologías innovadoras en el aula hasta las profundas lecciones personales que he aprendido como educador. ¿Cómo puede un dispositivo cambiar la dinámica de una clase? ¿Qué historias personales se esconden detrás de cada estudiante y profesor?
 
 
-La "Saga de Historias de Clase" es más que una colección de cuentos; es un homenaje a la educación y a aquellos momentos mágicos de aprendizaje y descubrimiento que todos hemos experimentado alguna vez. Cada capítulo es un recordatorio de que la educación no solo se trata de adquirir conocimientos, sino de abrir nuestras mentes a nuevas ideas y perspectivas. Esperamos que estas historias resuenen con ustedes, inspiren conversaciones y traigan recuerdos de sus propios días en el aula.
+"Historias de Clase" es más que una serie; es un testimonio de mi viaje como educador. Cada historia es un recordatorio de que la educación es una aventura constante, llena de momentos de iluminación y crecimiento. A través de estas páginas, espero inspirarles y llevarles a reflexionar sobre el impacto transformador de la educación en nuestras vidas.
 
-¡Sigan conectados para más aventuras en esta saga educativa!
+Manténganse conectados para más capítulos de esta saga educativa, donde cada lección aprendida es una historia por contar.
 
 <div align="right" markdown="1">
 
