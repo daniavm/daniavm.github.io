@@ -27,7 +27,7 @@ tags:
 
 ---
 <div align="justify" markdown="1">
-¡Bienvenid@s a un viaje único en el corazón de la educación! Me emociona presentarles "Historias de Clase", una serie nacida de mis vivencias en el aula. Cada capítulo es un fragmento de la vida real, entrelazado con toques de fantasía y reflexión, revelando las alegrías, desafíos y descubrimientos que la aprendanza puede ofrecer.
+¡Bienvenid@s a un viaje único en el corazón de la educación! Me emociona presentarles "Historias de Clase", una **serie** nacida de mis vivencias en el aula. Cada capítulo es un fragmento de la vida real, entrelazado con toques de fantasía y reflexión, revelando las alegrías, desafíos y descubrimientos que la aprendanza puede ofrecer.
 
 <div markdown="1" style = "font-size: 1.2em;">
 
