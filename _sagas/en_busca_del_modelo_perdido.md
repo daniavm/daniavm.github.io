@@ -28,7 +28,7 @@ tags:
 
 ---
 <div align="justify" markdown="1">
-¡Embarcamos en "En Busca del Modelo Perdido", una aventura apasionante en el mundo del análisis de datos y Machine Learning! Cada capítulo es un salto hacia la maestría en predicción de resultados educativos, ideal para curiosos, educadores y entusiastas del aprendizaje automático. ¡Acompáñanos y expande tus horizontes en esta travesía llena de conocimiento y descubrimientos!
+¡Embarcamos en "En Busca del Modelo Perdido", una aventura apasionante en el mundo del análisis de datos y Machine Learning! Cada capítulo es un salto hacia la maestría en predicción de resultados educativos, ideal para curios@s, educadoræs y entusiastas del aprendizaje automático. ¡Acompáñanos y expande tus horizontes en esta travesía llena de conocimiento y descubrimientos!
 
 <div markdown="1" style = "font-size: 1.2em;">
 
@@ -45,7 +45,7 @@ tags:
 </div>
 
 
-La "Saga En Busca del Modelo Perdido" es una aventura en análisis de datos y Machine Learning, fusionando teoría y práctica. Diseñada para inspirar a estudiantes, educadores y profesionales, esta serie es su brújula en el emocionante mundo del aprendizaje automático.
+La "Saga En Busca del Modelo Perdido" es una aventura en análisis de datos y Machine Learning, fusionando teoría y práctica. Diseñada para inspirar a estudiantes, educadoræs y profesionales, esta serie es su brújula en el emocionante mundo del aprendizaje automático.
 
 ¡Prepárense para más capítulos en esta fascinante saga!
 

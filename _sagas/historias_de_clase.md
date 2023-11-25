@@ -27,7 +27,9 @@ tags:
 
 ---
 <div align="justify" markdown="1">
-¡Bienvenidos a un viaje único en el corazón de la educación! Me emociona presentarles "Historias de Clase", una serie nacida de mis vivencias en el aula. Cada capítulo es un fragmento de la vida real, entrelazado con toques de fantasía y reflexión, revelando las alegrías, desafíos y descubrimientos que la aprendanza puede ofrecer.
+¡Bienvenid@s a un viaje único en el corazón de la educación! Me emociona presentarles "Historias de Clase", una serie nacida de mis vivencias en el aula. Cada capítulo es un fragmento de la vida real, entrelazado con toques de fantasía y reflexión, revelando las alegrías, desafíos y descubrimientos que la aprendanza puede ofrecer.
+
+<div markdown="1" style = "font-size: 1.2em;">
 
 1. [**Capítulo 1 - El Misterio del Círculo-Cuadrado**](https://daniavm.github.io/historias%20de%20clase/el-circulo-cuadrado/):
   En este capítulo inaugural, nos sumergimos en una aula de física donde un objeto ordinario - una simple lata de bebida - se convierte en el centro de un fascinante misterio geométrico. L@s estudiantes descubren el poder de la observación y la perspectiva, llevándolos a un momento de 'eureka' que cambia un poco más su comprensión del mundo.
@@ -35,6 +37,7 @@ tags:
 2. Próximos Capítulos: 
   Próximamente, compartiré más historias que abarcan desde la integración de tecnologías innovadoras en el aula hasta las profundas lecciones personales que he aprendido como educador. ¿Cómo puede un dispositivo cambiar la dinámica de una clase? ¿Qué historias personales se esconden detrás de cada estudiante y profesor?
 
+</div>
 
 "Historias de Clase" es más que una serie; es un testimonio de mi viaje como educador. Cada historia es un recordatorio de que la educación es una aventura constante, llena de momentos de iluminación y crecimiento. A través de estas "páginas", espero inspirarles y llevarles a reflexionar sobre el impacto transformador de la educación en nuestras vidas y en las de quienes pasan por ellas.
 
