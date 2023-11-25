@@ -30,7 +30,7 @@ tags:
 <div align="justify" markdown="1">
 ¡Embarcamos en "En Busca del Modelo Perdido", una aventura apasionante en el mundo del análisis de datos y Machine Learning! Cada capítulo es un salto hacia la maestría en predicción de resultados educativos, ideal para curiosos, educadores y entusiastas del aprendizaje automático. ¡Acompáñanos y expande tus horizontes en esta travesía llena de conocimiento y descubrimientos!
 
-<div markdown="1" style = "font-size: 1.5em;">
+<div markdown="1" style = "font-size: 1.1em;">
 
 - [**Capítulo 1 - Exploración**](/_posts/en_busca_del_modelo_perdido/2023-09-22-en-busca-del-modelo-perdido-parte-1): En el inicio de nuestra aventura, exploramos las primeras etapas del análisis de datos utilizando Python, enfocándonos en el Análisis de Datos Exploratorio (ADE) para descubrir un modelo que prediga resultados de pruebas universitarias. Aprendemos a manejar y entender un conjunto de datos, marcando el primer paso hacia la construcción de modelos predictivos.
 
