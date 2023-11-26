@@ -1,5 +1,5 @@
 ---
-title: "En Busca del Modelo Perdido - Parte 5: La Primera Reliquia"
+title: "En Busca del Modelo Perdido - Parte 6: La Primera Reliquia"
 layout: single
 author_profile: true
 related: true
@@ -55,10 +55,11 @@ La decisión de 800 árboles y 5 folds no fue aleatoria. Después de una exhaust
 ## 📊 Analizando el Heatmap: Una Visión Clara del MAE
 El análisis del heatmap fue revelador. Mostró cómo diferentes combinaciones de n_estimators y num_folds afectan el Error Absoluto Medio (MAE). Nuestra elección de 800 y 5, respectivamente, destacó por ofrecer un MAE sustancialmente bajo, lo que indica una alta precisión en las predicciones.
 
-<figure style = "float: center; width: 100%; text-align: center;">
-  <embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%"  alt="Imagen 1: Heatmap del Análisis de MAE.">
+<figure style = "float: center; width: 100%; height: 500px; text-align: center; object-fit: contain;">
+  <embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%" height="100%" alt="Imagen 1: Heatmap del Análisis de MAE.">
   <figcaption>Imagen 1: Heatmap que muestra cómo varían los valores de MAE con diferentes combinaciones de 'n_estimators' y 'num_folds'.</figcaption>
 </figure>
+
 
 ## 🧐 Justificación de la Elección: Equilibrio entre Precisión y Generalización
 Nuestra elección se basa en una justificación sólida. La combinación de n_estimators=800 y num_folds=5 no solo mostró un MAE mejor que el promedio, sino que también indicó estabilidad y robustez. Esta configuración asegura que el modelo es preciso, pero también generalizable a nuevos datos, un equilibrio crucial en la ciencia de datos.
