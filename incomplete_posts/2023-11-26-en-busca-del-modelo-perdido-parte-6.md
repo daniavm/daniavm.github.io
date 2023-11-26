@@ -4,8 +4,10 @@ layout: single
 author_profile: true
 related: true
 comments: true
-toc: true
-toc_icon: "egg"
+toc: false
+
+sidebar:
+  nav: "modelo_perdido"
 
 classes: wide
 
