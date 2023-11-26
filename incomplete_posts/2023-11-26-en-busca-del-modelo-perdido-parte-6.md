@@ -42,13 +42,13 @@ Nuestro viaje en el universo del análisis de datos nos lleva a un descubrimient
 El corazón de nuestra indagación se centra en dos parámetros cruciales: `n_estimators` y `num_folds` en la validación cruzada. La elección no es trivial, ya que cada ajuste puede influir significativamente en la precisión y eficiencia de nuestro modelo.
 
 ### 🌐 Patrones en el Heatmap: Folds como Factor Dominante
-Al analizar el heatmap interactivo de MAE, un patrón interesante salió a la luz: la dependencia de los resultados con el número de folds. Observamos patrones horizontales claros, lo que indica que el número de folds tiene un impacto más significativo en el MAE que el número de estimadores.
+Al analizar el heatmap interactivo de MAE, un patrón interesante salió a la luz: la dependencia de los resultados con el número de folds. **Observamos patrones horizontales claros, lo que indica que el número de folds tiene un impacto más significativo en el MAE que el número de estimadores**.
 
 Este hallazgo fue crucial para nuestro análisis. Aunque los n_estimators tienen cierta influencia, especialmente hasta el valor de 200, cualquier número más allá de este punto no parecía afectar significativamente los resultados del modelo (no hay líneas verticales que hablen de fluctuaciones significativas). Esto sugiere que alcanzamos un límite en la precisión del modelo con respecto a n_estimators, y la atención debería centrarse en optimizar el número de folds para un equilibrio adecuado entre precisión y generalización.
 
 <figure style = "float: center; width: 100%; text-align: center; object-fit: contain;">
   <embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%" height="50%" alt="Imagen 1: Heatmap del Análisis de MAE.">
-  <figcaption>Imagen 1: Heatmap que muestra cómo varían los valores de MAE con diferentes combinaciones de 'n_estimators' y 'num_folds'.</figcaption>
+  <figcaption>Imagen 1: Heatmap interactivo que muestra cómo varían los valores de MAE con diferentes combinaciones de 'n_estimators' y 'num_folds'.</figcaption>
 </figure>
 
 ### 📐 Ajustando el Enfoque: MAE, Folds y Estimadores 📊
@@ -59,7 +59,7 @@ Continuando en nuestro periplo, el análisis de la estabilidad de los valores de
   <figcaption>Imagen 2: Análisis de la Estabilidad de los Folds 3, 5 y 14 en función del número de estimadores.</figcaption>
 </figure>
 
-Este gráfico me ayudó a comprender la relación entre el número de estimadores y el MAE para cada uno de estos números de folds específicos. A manera de análisis, creo que es importante que notes que los folds 3 y 5 tienden a minimizar el MAE a partir del valor 700 aproximadamente. El fold 14 (color amarillo) se mantiene ligeramente más arriba que estos dos lo cual hace que descartemos su uso.
+Este gráfico me ayudó a comprender la relación entre el número de estimadores y el MAE para cada uno de estos números de folds específicos. A manera de análisis, creo que es importante que notes que **los folds 3 y 5 tienden a minimizar el MAE a partir del valor 700 aproximadamente**. El fold 14 (color amarillo) se mantiene ligeramente más arriba que estos dos lo cual hace que descartemos su uso.
 
 En vista de que hay una estabilidad importante para los fold 3 y 5 en el rango de 600 y 1000 de n_estimators seleccioné un valor intermedio para asegurar de alguna manera la estabilidad del modelo (no cerca del borde inferior o exterior del rango). Como una mayor cantidad de folds ayuda a mejorar la generacionación y entrenamiento del modelo, entonces privilegiamos 5 por sobre 3.
 
@@ -133,7 +133,9 @@ plt.grid()
 plt.show()
 ```
 
-Podrás notar que como valor agregado hemos hecho que se entreguen los elementos de la tabla original de datos que puedan ser más significativos para la construcción del modelo. Esto nos da luces de qué es lo que quizás pueda ocurrir a lo largo de ls ensayos o mediciones que podría ayudar a corregir el proceso de aprendizaje. El resultado de todo se muestra a continuación:
+Podrás notar que como valor agregado hemos hecho **que se entreguen los elementos de la tabla original de datos que puedan ser más significativos para la construcción del modelo**. Esto nos da luces de qué es lo que quizás pueda ocurrir a lo largo de ls ensayos o mediciones que podría ayudar a corregir el proceso de aprendizaje. El resultado de todo se muestra a continuación:
+
+### Resultados
 
 Características más importantes:
 1. EnsayoSeptiembre: 0.2947
@@ -142,7 +144,7 @@ Características más importantes:
 4. EnsayoNoviembre: 0.1094
 5. EnsayoAgosto: 0.0870
 
-<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/PAES_prediction_model/modelo_paes1.png">
     <img src="/assets/images/PAES_prediction_model/modelo_paes1.png" width="100%"  alt="Imagen 3: Resultado del modelo de random forest ajustado y valores reales obtenidos en la PAES.">
   </a>
@@ -151,12 +153,12 @@ Características más importantes:
 
 Este código incorpora la normalización de los datos, el uso de Random Forest con los parámetros seleccionados y la validación cruzada. Además, proporciona una visualización de las predicciones del modelo frente a los valores reales de PAES que concluyen con un excelente error de unos 50 puntos. 
 
-Puede parecer mucho, pero en los niveles en los que se tienen los resultados, **cada pregunta de la PAES pesa entre unos 17 y 20 puntos, por lo que el error de nuestro modelo de predicción es en el peor de los casos de 3 preguntas, lo cual es increíblemente notable considerando la base de datos que tenemos para partir**.
+Puede parecer mucho, pero en los niveles en los que se tienen los resultados **cada pregunta de la PAES pesa entre unos 17 y 20 puntos, por lo que el error de nuestro modelo de predicción es en el peor de los casos de 3 preguntas, lo cual es increíblemente notable considerando la base de datos que tenemos para partir**.
 
 ## 📈 Análisis de Residuos: Comprendiendo el Error del Modelo
 Para evaluar aún más el rendimiento de nuestro modelo, realizamos un análisis de residuos. Esto ayudará a entender dónde se concentraban los datos y a visibilizar el nivel de error del modelo de manera más clara.
 
-<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/PAES_prediction_model/residuos_paes1.png">
     <img src="/assets/images/PAES_prediction_model/residuos_paes1.png" width="100%"  alt="Imagen 4: Analisis de residuos entre el modelo predictivo, los valores reales y la distribución de los resultados en cada eje.">
   </a>
@@ -168,7 +170,9 @@ Este análisis gráfico nos proporciona una perspectiva detallada de la distribu
 La mayor población de resultados se mueve en un rango superior a los 850 puntos por lo que debemos considerar que esta es una población de estudiantes que en general tuvieron buenos resultados en la prueba PAES. Para mejorar los rangos inferiores habría que tener más datos y de estudiantes con esas realidades para así afinar más la predicción.
 
 ## 🚀 Hacia el Futuro: La Importancia de la Primera Reliquia
-Este descubrimiento, la Primera Reliquia, no es solo un paso en nuestra saga, sino una base sólida para futuras exploraciones. Con un modelo bien afinado, estamos más cerca de desvelar los secretos de la PAES y su predicción a nivel escolar.
+Este descubrimiento, la Primera Reliquia, no es solo un paso en nuestra saga, sino una base sólida para futuras exploraciones. Con un modelo bien afinado, estamos más cerca de desvelar los secretos de la PAES y su predicción a nivel escolar. Esto ayudará sin duda a que las autoridades que tienen a cargo instituciones educativas o procesos de gestión en el aprendizaje tengan claridad de qué parametros deben "mover" para maximizar el aprendizaje de sus estudiantes y así entregar más oportunidades a sus vidas. 
+
+Por fin, esto ya no se trata solo de un asunto de "percepciones" que la mayor parte del tiempo carecen de un fundamento claro para la toma de decisiones. Enfocar el aprendizaje con herramientas de este tipo favorece sin dudas la claridad en los procesos de aprendizaje que pueden estar afectando los desempeños. Si podemos aplicarlo esta primera vez par ala PAES, podemos por supuesto aplicarlo a todas las prácticas pedagógicas.
 
 En el próximo capítulo, continuaremos nuestra aventura, llevando nuestra Primera Reliquia hacia nuevos horizontes y desafíos. Manténganse atentos, aprendanzantes, la búsqueda continúa...
 
