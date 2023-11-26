@@ -138,11 +138,11 @@ Podrás notar que como valor agregado hemos hecho **que se entreguen los element
 ### Resultados
 
 Características más importantes:
-1. EnsayoSeptiembre: 0.2947
-2. EnsayoJunio: 0.2383
-3. EnsayoOctubre: 0.1460
-4. EnsayoNoviembre: 0.1094
-5. EnsayoAgosto: 0.0870
+1. EnsayoSeptiembre: 29.47%
+2. EnsayoJunio: 23.83%
+3. EnsayoOctubre: 14.60%
+4. EnsayoNoviembre: 10.94%
+5. EnsayoAgosto: 8.70%
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/PAES_prediction_model/modelo_paes1.png">
@@ -154,6 +154,10 @@ Características más importantes:
 Este código incorpora la normalización de los datos, el uso de Random Forest con los parámetros seleccionados y la validación cruzada. Además, proporciona una visualización de las predicciones del modelo frente a los valores reales de PAES que concluyen con un excelente error de unos 50 puntos. 
 
 Puede parecer mucho, pero en los niveles en los que se tienen los resultados **cada pregunta de la PAES pesa entre unos 17 y 20 puntos, por lo que el error de nuestro modelo de predicción es en el peor de los casos de 3 preguntas, lo cual es increíblemente notable considerando la base de datos que tenemos para partir**.
+
+Junto a lo anterior, se encuentran el aporte que hacen los factores más relevantes en la descripción del modelo. Como puedes notar, los elementos más importantes fueron algunos de los ensayos (y no la asistencia u otros elementos de la base de datos), lo cual parece consistente con nuestra intuición y posiblemente experiencia. Ahora bien, una persona a cargo del diseño de estos ensayos podría estar al tanto de los tiempos en que se juegan los resultados cruciales y motivar algún cambio que pueda impactar en los resultados finales. 
+
+Esto es solo un ejemplo de lo que se puede lograr con este simple ensayo. **Si la base de datos aumenta con nuevas variables, el estudio de elementos clave en el proceso se hará visible** y las decisiones apalancadoras del aprendizaje aflorarán.
 
 ## 📈 Análisis de Residuos: Comprendiendo el Error del Modelo
 Para evaluar aún más el rendimiento de nuestro modelo, realizamos un análisis de residuos. Esto ayudará a entender dónde se concentraban los datos y a visibilizar el nivel de error del modelo de manera más clara.
