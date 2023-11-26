@@ -55,14 +55,18 @@ La decisión de 800 árboles y 5 folds no fue aleatoria. Después de una exhaust
 ## 📊 Analizando el Heatmap: Una Visión Clara del MAE
 El análisis del heatmap fue revelador. Mostró cómo diferentes combinaciones de n_estimators y num_folds afectan el Error Absoluto Medio (MAE). Nuestra elección de 800 y 5, respectivamente, destacó por ofrecer un MAE sustancialmente bajo, lo que indica una alta precisión en las predicciones.
 
-<figure style = "float: center; width: 100%; text-align: center; object-fit: contain; margin-bottom: 20px;">
+## 🧐 Justificación de la Elección: Equilibrio entre Precisión y Generalización
+Nuestra elección se basa en una justificación sólida. La combinación de n_estimators=800 y num_folds=5 no solo mostró un MAE mejor que el promedio, sino que también indicó estabilidad y robustez. Esta configuración asegura que el modelo es preciso, pero también generalizable a nuevos datos, un equilibrio crucial en la ciencia de datos.
+
+## 🌐 Patrones en el Heatmap: Folds como Factor Dominante
+Al analizar el heatmap interactivo de MAE, un patrón interesante salió a la luz: la dependencia de los resultados en el número de folds. Observamos patrones horizontales claros, lo que indica que el número de folds tiene un impacto más significativo en el MAE que el número de estimadores.
+
+Este hallazgo fue crucial para nuestro análisis. Aunque los n_estimators tienen cierta influencia, especialmente hasta el valor de 200, cualquier número más allá de este punto no parecía afectar significativamente los resultados del modelo. Esto sugiere que alcanzamos un límite en la precisión del modelo con respecto a n_estimators, y la atención debería centrarse en optimizar el número de folds para un equilibrio adecuado entre precisión y generalización.
+
+<figure style = "float: center; width: 100%; text-align: center; object-fit: contain;">
   <embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%" height="50%" alt="Imagen 1: Heatmap del Análisis de MAE.">
   <figcaption>Imagen 1: Heatmap que muestra cómo varían los valores de MAE con diferentes combinaciones de 'n_estimators' y 'num_folds'.</figcaption>
 </figure>
-
-
-## 🧐 Justificación de la Elección: Equilibrio entre Precisión y Generalización
-Nuestra elección se basa en una justificación sólida. La combinación de n_estimators=800 y num_folds=5 no solo mostró un MAE mejor que el promedio, sino que también indicó estabilidad y robustez. Esta configuración asegura que el modelo es preciso, pero también generalizable a nuevos datos, un equilibrio crucial en la ciencia de datos.
 
 ### 📐 Ajustando el Enfoque: MAE, Folds y Estimadores 📊
 Continuando en nuestro periplo, el análisis de la estabilidad de los valores de folds se hizo imprescindible. Utilizamos un gráfico de dispersión para entender mejor cómo el MAE cambia con diferentes números de estimadores, enfocándonos en los folds 3, 5 y 14, que habían mostrado un comportamiento prometedor.
@@ -74,15 +78,6 @@ Continuando en nuestro periplo, el análisis de la estabilidad de los valores de
 
 Este análisis nos ayudó a comprender la relación entre el número de estimadores y el MAE para cada uno de estos números de folds específicos, siendo un factor determinante en nuestra elección del número de folds.
 
-## 🌐 Patrones en el Heatmap: Folds como Factor Dominante
-Al analizar el heatmap interactivo de MAE, un patrón interesante salió a la luz: la dependencia de los resultados en el número de folds. Observamos patrones horizontales claros, lo que indica que el número de folds tiene un impacto más significativo en el MAE que el número de estimadores.
-
-Este hallazgo fue crucial para nuestro análisis. Aunque los n_estimators tienen cierta influencia, especialmente hasta el valor de 200, cualquier número más allá de este punto no parecía afectar significativamente los resultados del modelo. Esto sugiere que alcanzamos un límite en la precisión del modelo con respecto a n_estimators, y la atención debería centrarse en optimizar el número de folds para un equilibrio adecuado entre precisión y generalización.
-
-<figure style = "float: center; width: 100%; text-align: center;">
-  <embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%"  alt="Imagen 3: Heatmap de Dependencia de Folds">
-  <figcaption>Imagen 3: Heatmap mostrando la dependencia del MAE en el número de folds, con patrones horizontales que indican su impacto predominante.</figcaption>
-</figure>
 
 ## 🛠️ Construyendo el Modelo: El Código Final 🧑‍💻
 
