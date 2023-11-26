@@ -56,7 +56,7 @@ La decisión de 800 árboles y 5 folds no fue aleatoria. Después de una exhaust
 El análisis del heatmap fue revelador. Mostró cómo diferentes combinaciones de n_estimators y num_folds afectan el Error Absoluto Medio (MAE). Nuestra elección de 800 y 5, respectivamente, destacó por ofrecer un MAE sustancialmente bajo, lo que indica una alta precisión en las predicciones.
 
 <figure style = "display: block; width: 100%; height: 250px; text-align: center; object-fit: contain; margin-bottom: 20px;">
-  <embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%"  alt="Imagen 1: Heatmap del Análisis de MAE.">
+  <embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%" height="50%" alt="Imagen 1: Heatmap del Análisis de MAE.">
   <figcaption>Imagen 1: Heatmap que muestra cómo varían los valores de MAE con diferentes combinaciones de 'n_estimators' y 'num_folds'.</figcaption>
 </figure>
 
