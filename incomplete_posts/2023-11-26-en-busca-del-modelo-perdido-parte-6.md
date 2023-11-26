@@ -37,7 +37,7 @@ La odisea continúa en "En Busca del Modelo Perdido", y en este episodio, titula
 
 Nuestro viaje en el universo del análisis de datos nos lleva a un descubrimiento esencial: la afinación precisa de nuestro modelo Random Forest. Al profundizar en los secretos de la programación y sus impactos, hemos dado con un dato clave: el heatmap que relaciona la precisión del modelo con los valores de `n_estimators` y `num_folds`. El análisis de este gráfico es crucial para definir el modelo que nos dará la confiabilidad necesaria para establecer las predicciones finales.
 
-### 🌟 El Desafío de los Parámetros: `n_estimators` y `num_folds`
+## 🌟 El Desafío de los Parámetros: `n_estimators` y `num_folds`
 
 El corazón de nuestra indagación se centra en dos parámetros cruciales: `n_estimators` y `num_folds` en la validación cruzada. La elección no es trivial, ya que cada ajuste puede influir significativamente en la precisión y eficiencia de nuestro modelo.
 
