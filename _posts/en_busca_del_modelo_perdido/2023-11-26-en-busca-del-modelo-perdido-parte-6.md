@@ -48,7 +48,7 @@ Este hallazgo fue crucial para nuestro análisis. Aunque los n_estimators tienen
 
 <figure style = "float: center; width: 100%; text-align: center; object-fit: contain;">
   <embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%" height="50%" alt="Imagen 1: Heatmap del Análisis de MAE.">
-  <figcaption>Imagen 1: Heatmap interactivo que muestra cómo varían los valores de MAE con diferentes combinaciones de 'n_estimators' y 'num_folds'.</figcaption>
+  <figcaption>Imagen 1 (visible en computadores): Heatmap interactivo que muestra cómo varían los valores de MAE con diferentes combinaciones de 'n_estimators' y 'num_folds'.</figcaption>
 </figure>
 
 ### 📐 Ajustando el Enfoque: MAE, Folds y Estimadores 📊
