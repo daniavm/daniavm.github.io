@@ -35,33 +35,16 @@ La odisea continúa en "En Busca del Modelo Perdido", y en este episodio, titula
 
 ## 🧭 Descifrando el Mapa hacia la Primera Reliquia 🗺️
 
-Nuestro viaje en el universo del análisis de datos nos lleva a un descubrimiento esencial: la afinación precisa de nuestro modelo Random Forest. Al profundizar en los secretos de la programación y sus impactos, hemos dado con la primera reliquia: una configuración óptima de parámetros que marca el camino hacia predicciones confiables.
+Nuestro viaje en el universo del análisis de datos nos lleva a un descubrimiento esencial: la afinación precisa de nuestro modelo Random Forest. Al profundizar en los secretos de la programación y sus impactos, hemos dado con un dato clave: el heatmap que relaciona la precisión del modelo con los valores de `n_estimators` y `num_folds`. El análisis de este gráfico es crucial para definir el modelo que nos dará la confiabilidad necesaria para establecer las predicciones finales.
 
 ### 🌟 El Desafío de los Parámetros: `n_estimators` y `num_folds`
 
 El corazón de nuestra indagación se centra en dos parámetros cruciales: `n_estimators` y `num_folds` en la validación cruzada. La elección no es trivial, ya que cada ajuste puede influir significativamente en la precisión y eficiencia de nuestro modelo.
 
-```python
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import cross_val_score, KFold
+### 🌐 Patrones en el Heatmap: Folds como Factor Dominante
+Al analizar el heatmap interactivo de MAE, un patrón interesante salió a la luz: la dependencia de los resultados con el número de folds. Observamos patrones horizontales claros, lo que indica que el número de folds tiene un impacto más significativo en el MAE que el número de estimadores.
 
-# Configuramos la validación cruzada y el Random Forest
-kf = KFold(n_splits=5)
-model = RandomForestRegressor(n_estimators=800, random_state=42)
-```
-
-La decisión de 800 árboles y 5 folds no fue aleatoria. Después de una exhaustiva experimentación, representada en un mapa de calor, identificamos que esta combinación proporcionaba un balance ideal entre precisión (bajo MAE) y generalización.
-
-## 📊 Analizando el Heatmap: Una Visión Clara del MAE
-El análisis del heatmap fue revelador. Mostró cómo diferentes combinaciones de n_estimators y num_folds afectan el Error Absoluto Medio (MAE). Nuestra elección de 800 y 5, respectivamente, destacó por ofrecer un MAE sustancialmente bajo, lo que indica una alta precisión en las predicciones.
-
-## 🧐 Justificación de la Elección: Equilibrio entre Precisión y Generalización
-Nuestra elección se basa en una justificación sólida. La combinación de n_estimators=800 y num_folds=5 no solo mostró un MAE mejor que el promedio, sino que también indicó estabilidad y robustez. Esta configuración asegura que el modelo es preciso, pero también generalizable a nuevos datos, un equilibrio crucial en la ciencia de datos.
-
-## 🌐 Patrones en el Heatmap: Folds como Factor Dominante
-Al analizar el heatmap interactivo de MAE, un patrón interesante salió a la luz: la dependencia de los resultados en el número de folds. Observamos patrones horizontales claros, lo que indica que el número de folds tiene un impacto más significativo en el MAE que el número de estimadores.
-
-Este hallazgo fue crucial para nuestro análisis. Aunque los n_estimators tienen cierta influencia, especialmente hasta el valor de 200, cualquier número más allá de este punto no parecía afectar significativamente los resultados del modelo. Esto sugiere que alcanzamos un límite en la precisión del modelo con respecto a n_estimators, y la atención debería centrarse en optimizar el número de folds para un equilibrio adecuado entre precisión y generalización.
+Este hallazgo fue crucial para nuestro análisis. Aunque los n_estimators tienen cierta influencia, especialmente hasta el valor de 200, cualquier número más allá de este punto no parecía afectar significativamente los resultados del modelo (no hay líneas verticales que hablen de fluctuaciones significativas). Esto sugiere que alcanzamos un límite en la precisión del modelo con respecto a n_estimators, y la atención debería centrarse en optimizar el número de folds para un equilibrio adecuado entre precisión y generalización.
 
 <figure style = "float: center; width: 100%; text-align: center; object-fit: contain;">
   <embed type="text/html" src="/assets/images/PAES_prediction_model/heatmap_interactivo.html" width="100%" height="50%" alt="Imagen 1: Heatmap del Análisis de MAE.">
@@ -69,15 +52,19 @@ Este hallazgo fue crucial para nuestro análisis. Aunque los n_estimators tienen
 </figure>
 
 ### 📐 Ajustando el Enfoque: MAE, Folds y Estimadores 📊
-Continuando en nuestro periplo, el análisis de la estabilidad de los valores de folds se hizo imprescindible. Utilizamos un gráfico de dispersión para entender mejor cómo el MAE cambia con diferentes números de estimadores, enfocándonos en los folds 3, 5 y 14, que habían mostrado un comportamiento prometedor.
+Continuando en nuestro periplo, el análisis de la estabilidad de los valores de folds se hizo imprescindible. Como puedes notar en el gráfico interactivo, los valores de 3, 5 y 14 en la cantidad de folds parecen mostrar los valores más bajos y significativos para MAE. Utilizamos un gráfico de dispersión para entender mejor cómo el MAE cambia con diferentes números de estimadores y estos valores para los folds. El resultado se muestra a continuación.
 
 <figure style = "float: center; width: 100%; text-align: center;">
   <img src="/assets/images/PAES_prediction_model/folds_stability_analysis.png" width="100%"  alt="Imagen 2: Análisis de la Estabilidad de los Folds">
   <figcaption>Imagen 2: Análisis de la Estabilidad de los Folds 3, 5 y 14 en función del número de estimadores.</figcaption>
 </figure>
 
-Este análisis nos ayudó a comprender la relación entre el número de estimadores y el MAE para cada uno de estos números de folds específicos, siendo un factor determinante en nuestra elección del número de folds.
+Este análisis me ayudó a comprender la relación entre el número de estimadores y el MAE para cada uno de estos números de folds específicos. A manera de análisis, creo que es importante que notes que los folds 3 y 5 tienden a minimizar el MAE a partir del valor 700 aproximadamente. El fold 14 (color amarillo) se mantiene ligeramente más arriba que estos dos lo cual hace que descartemos su uso.
 
+En vista de que hay una estabilidad importante para los fold 3 y 5 en el rango de 600 y 1000 de n_estimators seleccioné un valor intermedio para asegurar de alguna manera la estabilidad del modelo (no cerca del borde inferior o exterior del rango). Como una mayor cantidad de folds ayuda a mejorar la generacionación y entrenamiento del modelo, entonces privilegiamos 5 por sobre 3.
+
+## 🧐 Justificación de la Elección: Equilibrio entre Precisión y Generalización
+Por el análisis anterior, nuestra elección se basa en una justificación sólida. La combinación de n_estimators=800 y num_folds=5 no solo mostró un MAE mejor que el promedio, sino que también indicó estabilidad y robustez. Esta configuración asegura que el modelo es preciso, pero también generalizable a nuevos datos, un equilibrio crucial en la ciencia de datos.
 
 ## 🛠️ Construyendo el Modelo: El Código Final 🧑‍💻
 
@@ -149,7 +136,7 @@ plt.show()
 El resultado se muestra a continuación:
 
 <figure style = "float: center; width: 100%; text-align: center;">
-  <embed type="text/html" src="/assets/images/PAES_prediction_model/modelo_paes1.png" width="100%"  alt="Imagen 3: Heatmap de Dependencia de Folds">
+  <embed type="text/html" src="/assets/images/PAES_prediction_model/modelo_paes1.png" width="80%"  alt="Imagen 3: Heatmap de Dependencia de Folds">
   <figcaption>Imagen 3: Heatmap mostrando la dependencia del MAE en el número de folds, con patrones horizontales que indican su impacto predominante.</figcaption>
 </figure>
 
@@ -158,62 +145,8 @@ Este código incorpora la normalización de los datos, el uso de Random Forest c
 ## 📈 Análisis de Residuos: Comprendiendo el Error del Modelo
 Para evaluar aún más el rendimiento de nuestro modelo, realizamos un análisis de residuos. Esto nos ayudó a entender dónde se concentraban los datos y a medir el nivel de error del modelo.
 
-```python
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Calcula los residuos
-residuos = y - y_pred
-
-# Calcula la media y la desviación estándar de los residuos
-media_residuos = np.mean(residuos)
-desviacion_estandar_residuos = np.std(residuos)
-
-# Define las líneas para las desviaciones estándar
-linea_1_std = media_residuos + desviacion_estandar_residuos
-linea_2_std = media_residuos + 2 * desviacion_estandar_residuos
-linea_m1_std = media_residuos - desviacion_estandar_residuos
-linea_m2_std = media_residuos - 2 * desviacion_estandar_residuos
-
-# Crea una figura y un arreglo de subplots
-fig = plt.figure(figsize=(16, 8))
-grid = plt.GridSpec(4, 4, hspace=0.2, wspace=0.2)
-
-# Gráfico de dispersión principal
-ax_main = fig.add_subplot(grid[1:4, 0:3])
-ax_x_hist = fig.add_subplot(grid[0, 0:3], sharex=ax_main)
-ax_y_hist = fig.add_subplot(grid[1:4, 3], sharey=ax_main)
-
-# Gráfico de dispersión principal
-ax_main.scatter(y_pred, residuos, alpha=0.5)
-ax_main.axhline(y=0, color='red', linestyle='--', linewidth=1)
-ax_main.axhline(y=linea_1_std, color='green', linestyle='--', linewidth=1, label='1st Std Dev')
-ax_main.axhline(y=linea_2_std, color='orange', linestyle='--', linewidth=1, label='2nd Std Dev')
-ax_main.axhline(y=linea_m1_std, color='green', linestyle='--', linewidth=1)
-ax_main.axhline(y=linea_m2_std, color='orange', linestyle='--', linewidth=1)
-
-# Áreas sombreadas entre las desviaciones estándar en el eje Y
-ax_main.fill_betweenx([linea_m2_std, linea_2_std], min(y_pred), max(y_pred), color='orange', alpha=0.04, label='-2nd--1st Std Dev')
-ax_main.fill_betweenx([linea_m1_std, linea_1_std], min(y_pred), max(y_pred), color='green', alpha=0.1, label='1st-2nd Std Dev')
-
-ax_main.set_xlim([min(y_pred), max(y_pred)])  # Ajusta los límites del eje X
-ax_main.set_xlabel('Predicción de PAES')
-ax_main.set_ylabel('Residuos')
-ax_main.legend()
-
-# Histograma en el eje X (predicciones)
-ax_x_hist.hist(y_pred, bins=30, edgecolor='k')
-ax_x_hist.set_xlabel('Predicción de PAES')
-
-# Histograma en el eje Y (residuos)
-ax_y_hist.hist(residuos, bins=30, orientation='horizontal', edgecolor='k')
-ax_y_hist.set_ylabel('Residuos')
-
-plt.show()
-```
-
 <figure style = "float: center; width: 100%; text-align: center;">
-  <embed type="text/html" src="/assets/images/PAES_prediction_model/residuos_paes1.png" width="100%"  alt="Imagen 3: Heatmap de Dependencia de Folds">
+  <embed type="text/html" src="/assets/images/PAES_prediction_model/residuos_paes1.png" width="80%"  alt="Imagen 3: Heatmap de Dependencia de Folds">
   <figcaption>Imagen 3: Heatmap mostrando la dependencia del MAE en el número de folds, con patrones horizontales que indican su impacto predominante.</figcaption>
 </figure>
 
