@@ -135,9 +135,11 @@ plt.show()
 
 El resultado se muestra a continuación:
 
-<figure style = "float: center; width: 100%; text-align: center;">
-  <embed type="text/html" src="/assets/images/PAES_prediction_model/modelo_paes1.png" width="80%"  alt="Imagen 3: Heatmap de Dependencia de Folds">
-  <figcaption>Imagen 3: Heatmap mostrando la dependencia del MAE en el número de folds, con patrones horizontales que indican su impacto predominante.</figcaption>
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <a href="/assets/images/PAES_prediction_model/modelo_paes1.png">
+    <img src="/assets/images/PAES_prediction_model/modelo_paes1.png" width="100%"  alt="Imagen 3: Heatmap de Dependencia de Folds">
+  </a>
+  <figcaption>Imagen 2: Resultado del experimento para ver cómo cambian los resultados de MAE a medida que cambiamos la cantidad de Estimadores en el proceso de validación cruzada.</figcaption>
 </figure>
 
 Este código incorpora la normalización de los datos, el uso de Random Forest con los parámetros seleccionados y la validación cruzada. Además, proporciona una visualización de las predicciones del modelo frente a los valores reales de PAES.
@@ -145,9 +147,11 @@ Este código incorpora la normalización de los datos, el uso de Random Forest c
 ## 📈 Análisis de Residuos: Comprendiendo el Error del Modelo
 Para evaluar aún más el rendimiento de nuestro modelo, realizamos un análisis de residuos. Esto nos ayudó a entender dónde se concentraban los datos y a medir el nivel de error del modelo.
 
-<figure style = "float: center; width: 100%; text-align: center;">
-  <embed type="text/html" src="/assets/images/PAES_prediction_model/residuos_paes1.png" width="80%"  alt="Imagen 3: Heatmap de Dependencia de Folds">
-  <figcaption>Imagen 3: Heatmap mostrando la dependencia del MAE en el número de folds, con patrones horizontales que indican su impacto predominante.</figcaption>
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <a href="/assets/images/PAES_prediction_model/residuos_paes1.png">
+    <img src="/assets/images/PAES_prediction_model/residuos_paes1.png" width="100%"  alt="Imagen 3: Heatmap de Dependencia de Folds">
+  </a>
+  <figcaption>Imagen 2: Resultado del experimento para ver cómo cambian los resultados de MAE a medida que cambiamos la cantidad de Estimadores en el proceso de validación cruzada.</figcaption>
 </figure>
 
 Este análisis gráfico nos proporciona una perspectiva detallada de la distribución de los errores de nuestro modelo, permitiéndonos identificar patrones y áreas de mejora.
