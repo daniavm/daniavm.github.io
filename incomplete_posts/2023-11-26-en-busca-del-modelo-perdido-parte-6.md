@@ -172,9 +172,9 @@ La mayor población de resultados se mueve en un rango superior a los 850 puntos
 ## 🚀 Hacia el Futuro: La Importancia de la Primera Reliquia
 Este descubrimiento, la Primera Reliquia, no es solo un paso en nuestra saga, sino una base sólida para futuras exploraciones. Con un modelo bien afinado, estamos más cerca de desvelar los secretos de la PAES y su predicción a nivel escolar. Esto ayudará sin duda a que las autoridades que tienen a cargo instituciones educativas o procesos de gestión en el aprendizaje tengan claridad de qué parametros deben "mover" para maximizar el aprendizaje de sus estudiantes y así entregar más oportunidades a sus vidas. 
 
-Por fin, esto ya no se trata solo de un asunto de "percepciones" que la mayor parte del tiempo carecen de un fundamento claro para la toma de decisiones. Enfocar el aprendizaje con herramientas de este tipo favorece sin dudas la claridad en los procesos de aprendizaje que pueden estar afectando los desempeños. Si podemos aplicarlo esta primera vez par ala PAES, podemos por supuesto aplicarlo a todas las prácticas pedagógicas.
+Por fin, esto ya no se trata solo de un asunto de "percepciones" que la mayor parte del tiempo carecen de un fundamento claro en la toma de decisiones. **Enfocar el aprendizaje con herramientas de este tipo favorece sin dudas la claridad en los procesos de aprendizaje que pueden estar afectando los desempeños. Si podemos aplicarlo esta primera vez par ala PAES, podemos por supuesto aplicarlo a todas las prácticas pedagógicas**.
 
-En el próximo capítulo, continuaremos nuestra aventura, llevando nuestra Primera Reliquia hacia nuevos horizontes y desafíos. Manténganse atentos, aprendanzantes, la búsqueda continúa...
+En el próximo capítulo, continuaremos nuestra aventura, llevando nuestra Primera Reliquia hacia nuevos horizontes y desafíos. Manténganse atent@s, aprendanzantes, la búsqueda continúa...
 
 <div align="right" markdown="1">
 Hasta el próximo cronopunto del Principia 🥚.
