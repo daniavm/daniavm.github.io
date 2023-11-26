@@ -148,7 +148,7 @@ Características más importantes:
   <a href="/assets/images/PAES_prediction_model/modelo_paes1.png">
     <img src="/assets/images/PAES_prediction_model/modelo_paes1.png" width="100%"  alt="Imagen 3: Resultado del modelo de random forest ajustado y valores reales obtenidos en la PAES.">
   </a>
-  <figcaption>Imagen 3: Resultado del modelo de random forest ajustado y valores reales obtenidos en la PAES.</figcaption>
+  <figcaption>Imagen 3: Resultado del modelo de random forest ajustado y valores reales obtenidos en la PAES. Los resultados muestran un ajuste con una desviación del orden de 50 puntos.</figcaption>
 </figure>
 
 Este código incorpora la normalización de los datos, el uso de Random Forest con los parámetros seleccionados y la validación cruzada. Además, proporciona una visualización de las predicciones del modelo frente a los valores reales de PAES que concluyen con un excelente error de unos 50 puntos. 
