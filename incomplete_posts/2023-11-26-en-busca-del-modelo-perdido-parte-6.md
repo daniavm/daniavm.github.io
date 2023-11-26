@@ -12,8 +12,8 @@ sidebar:
 classes: wide
 
 header:
-  image: /assets/images/PAES_prediction_model/RandomForestBanner.jpg
-  teaser: /assets/images/PAES_prediction_model/RandomForestBanner.jpg
+  image: /assets/images/PAES_prediction_model/busca_del_modelo_perdido_parte_6.png
+  teaser: /assets/images/PAES_prediction_model/busca_del_modelo_perdido_parte_6.png
 
 categories:
   - Machine Learning
