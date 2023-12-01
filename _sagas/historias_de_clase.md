@@ -9,8 +9,6 @@ toc_icon: "egg"
 
 classes: wide
 
-sidebar:
-  nav: "historias_de_clase"
 
 header:
   image: /assets/images/historias_de_clase/historias_de_clases_portada.png
