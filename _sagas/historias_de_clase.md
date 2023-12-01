@@ -34,7 +34,9 @@ tags:
 1. [**Capítulo 1 - El Misterio del Círculo-Cuadrado**](https://daniavm.github.io/historias%20de%20clase/el-circulo-cuadrado/):
   En este capítulo inaugural, nos sumergimos en una aula de física donde un objeto ordinario - una simple lata de bebida - se convierte en el centro de un fascinante misterio geométrico. L@s estudiantes descubren el poder de la observación y la perspectiva, llevándolos a un momento de 'eureka' que cambia un poco más su comprensión del mundo.
   
-2. Próximos Capítulos: 
+2. [**Capítulo 2 - "12 + 1 = 1"**](https://daniavm.github.io/historias%20de%20clase/12_mas_1_es_1/): Este capítulo lleva a los estudiantes a una aventura intelectual en el aula de física, donde una aparentemente simple ecuación matemática desafía su comprensión convencional. A través de un enigma que desafía la lógica, los estudiantes exploran el propósito real de las matemáticas y cómo pueden servir para interpretar el mundo a su alrededor. Este viaje de descubrimiento y debate estimula su curiosidad y confianza, revelando que las matemáticas son más que números: son una herramienta vital para comprender nuestra realidad.
+
+3. Próximos Capítulos: 
   Próximamente, compartiré más historias que abarcan desde la integración de tecnologías innovadoras en el aula hasta las profundas lecciones personales que he aprendido como educador. ¿Cómo puede un dispositivo cambiar la dinámica de una clase? ¿Qué historias personales se esconden detrás de cada estudiante y profesor?
 
 </div>
