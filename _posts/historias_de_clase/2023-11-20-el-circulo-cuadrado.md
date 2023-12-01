@@ -1,7 +1,7 @@
 ---
 title: "Historias de Clase - El Círculo Cuadrado"
 layout: single
-author_profile: true
+author_profile: false
 related: true
 comments: true
 toc: false
