@@ -39,6 +39,8 @@ historias_de_clase:
     children:
       - title: "Clase 1: El Círculo-Cuadrado"
         url: /_posts/historias_de_clase/2023-11-20-el-circulo-cuadrado
+      - title: "Clase 2: 12 + 1 = 1"
+        url: /_posts/historias_de_clase/2023-11-29-12_mas_1_es_1
 
   - title: Recuerdos de Estudiantes
 
