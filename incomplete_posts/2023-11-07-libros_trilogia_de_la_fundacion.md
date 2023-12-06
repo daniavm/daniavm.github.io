@@ -22,7 +22,9 @@ Cuando me sumergí en la trilogía "Fundación" de Isaac Asimov, que incluye "Fu
 
 ## La magia narrativa de Asimov
 
-Asimov construye un mundo donde ciencia e historia humana se entrelazan de una forma que yo describiría como magistral. La psicohistoria, este concepto central en la trilogía, me hizo pensar mucho en cómo nuestras tecnologías actuales están redefiniendo lo que significa ser humano. Me pregunto, ¿no te parece increíble cómo algo tan futurista como las prótesis controladas mentalmente están cambiando nuestra percepción de lo posible?
+Asimov construye un mundo donde ciencia e historia humana se entrelazan de una forma que yo describiría como magistral. Si bien hay algunos problemas de coherencia o conexión en algunos puntos del relato, lo más notable es el cómo Asimov entiende las relaciones políticas, bélicas o sociales a lo largo del tiempo, produciendo un libro que abarca las decenas de años sin necesariamente perder un hilo conductor entre sus personajes. 
+
+La psicohistoria, este concepto central en la trilogía, es un excelente pegamento para continuar en el relato. Ello me hizo pensar mucho en cómo nuestras tecnologías actuales están redefiniendo lo que significa ser humano y el alcance que quizás deberíamos darles. Recordando que hoy ya existen mecanismos para hacer que alguien pueda mover un brazo mecánico con solo pensarlo me pregunto, ¿no es equivalente a que te estén "leyendo el cerebro"? ¿Cuánto tardará en que llegue alguien que vea esta tecnología con el fin de ejercer un control mental?
 
 ## Conexiones personales y reflexiones universales
 
@@ -48,6 +50,4 @@ DV
 
 ---
 
-## Referencias
-- Asimov, I. (1988). *Preludio a la Fundación*. New York: Bantam Books.
 
