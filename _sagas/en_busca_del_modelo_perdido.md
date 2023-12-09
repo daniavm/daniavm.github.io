@@ -42,6 +42,8 @@ tags:
 
 - [**Capítulo 5 - Afinando el Random Forest**](/_posts/en_busca_del_modelo_perdido/2023-11-18-en-busca-del-modelo-perdido-parte-5): Profundizamos en la optimización de nuestro modelo Random Forest, analizando cómo cada línea de código impacta en los resultados. Exploramos la importancia de entender parámetros clave como 'n_estimators' y 'random_state', y aplicamos técnicas de validación cruzada y análisis del Error Absoluto Medio (MAE) para mejorar la precisión del modelo. Este capítulo se enfoca en ajustar y comprender mejor las variables críticas para un modelo predictivo más confiable y eficaz en el ámbito educativo.
 
+- [**Capítulo 6 - La Primera Reliquia**](/_posts/en_busca_del_modelo_perdido/2023-11-26-en-busca-del-modelo-perdido-parte-6): En este capítulo clave, revelamos la "Primera Reliquia": una configuración óptima del modelo Random Forest, descubierta mediante el análisis de un heatmap interactivo. Centrándonos en los parámetros n_estimators y num_folds, optimizamos el modelo para una precisión avanzada en la predicción de resultados educativos. Este hallazgo nos prepara para abordar desafíos más complejos en el análisis de datos aplicado a la educación.
+
 </div>
 
 
