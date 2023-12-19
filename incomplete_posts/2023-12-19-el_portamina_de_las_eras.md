@@ -50,6 +50,26 @@ Entre la variedad de objetos, un portaminas captó mi atención. Estaba apartado
 
 Algo en sus palabras resonó conmigo. Sentí una conexión inexplicable con ese objeto imperfecto, pero lleno de potencial. Decidí comprarlo, sin saber que aquel portaminas sería más que una herramienta; sería un compañero en mi viaje académico y personal, un símbolo de que incluso lo imperfecto puede tener un gran valor.
 
+## Un Camino de Desafíos y Descubrimientos
+
+Era un día cualquiera en el liceo José Victorino Lastarria. Me encontraba en la clase de física, sosteniendo mi portaminas, enfrentándome a una ecuación que parecía indescifrable. "No tiene sentido", murmuré para mí mismo, recordando mi primera nota desastrosa en el curso.
+
+"¡Concéntrate!", exclamó el profesor, observando mi frustración. "La física no es solo memorizar, es entender, es pensar".
+
+Mientras trabajaba en el problema, mis pensamientos se desviaron hacia mis héroes: Newton, Einstein, Euler. Había leído sus historias, admirado sus logros. En sus vidas, encontré la inspiración para perseguir la astronomía.
+
+"¿Y si intento esto?", me dije, inspirado por sus ejemplos. Con cada trazo del portaminas, me acercaba a la solución, sintiendo una conexión con estos gigantes de la ciencia.
+
+En el electivo de matemáticas con Arquímedes, la atmósfera era intensa. Su método poco convencional nos empujaba al límite. "Este problema no se resolverá solo", decía con un tono desafiante. "¡Piensen!"
+
+El portaminas se movía frenéticamente sobre el papel, en una carrera contra el tiempo y la dificultad. "Tienes que ser más rápido, más astuto", me animaba a mí mismo.
+
+"¡Eso es!", exclamé un día, al encontrar finalmente la solución a uno de sus complicados problemas. Arquímedes, con una mirada de aprobación, asintió levemente. "No está mal, muchacho. Tal vez haya esperanza para ti después de todo".
+
+Al final de la enseñanza media, reflexioné sobre mi viaje. Había pasado de ser un estudiante distraído y poco consciente a uno de los mejores en física y matemáticas, gracias en parte a la rigurosa tutela de Arquímedes y a la inspiración de los grandes científicos.
+
+"Voy a estudiar astronomía", anuncié una noche en casa, con el portaminas en la mano, símbolo de mi determinación y mis sueños. "Es mi forma de caminar entre las estrellas, siguiendo los pasos de los que admiro".
+
 <div align="right" markdown="1">
 
 _Hasta el próximo cronopunto del Principia 🥚._
