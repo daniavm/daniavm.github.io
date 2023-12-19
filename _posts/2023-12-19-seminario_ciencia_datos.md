@@ -30,6 +30,10 @@ Este seminario no solo representó una oportunidad para compartir mis investigac
 
 Concluyendo, mi participación en este evento fue un reencuentro con el núcleo académico que había dejado atrás. Fue un recordatorio de que lo que hago es significativo y que estoy contribuyendo a un campo en expansión. Espero que mi historia anime a otros a buscar sus propios caminos, ya sea dentro o fuera del ámbito universitario, y a construir puentes entre disciplinas para un futuro mejor.
 
+_Hasta el próximo cronopunto del Principia 🥚._
+
+DV
+
 <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
  border-radius: 8px; will-change: transform;">
@@ -42,10 +46,6 @@ Concluyendo, mi participación en este evento fue un reencuentro con el núcleo 
 </div>
 
 <div align="right" markdown="1">
-
-_Hasta el próximo cronopunto del Principia 🥚._
-
-DV
 
 </div>
 
