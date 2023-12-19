@@ -18,7 +18,7 @@ tags:
   - Educación
 ---
 <div markdown="1" style="text-align: justify;">
-Participar en el seminario "Ciencia de Datos, Innovación e Investigación en un Área Multidisciplinar" en la Universidad de La Serena fue un hito no solo profesional sino también personal. Esta oportunidad, cortesía de mi compañero de astronomía Cristian Vega, marcó mi regreso a un entorno académico después de diez años enfocado en la educación fuera de la universidad.
+Participar en el seminario "Ciencia de Datos, Innovación e Investigación en un Área Multidisciplinar" en la Universidad de La Serena fue un hito no solo profesional sino también personal. Esta oportunidad, cortesía de mi compañero de astronomía Cristian Vega, marcó mi regreso a un entorno académico después de más de diez años enfocado en la educación fuera de la universidad.
 
 Al pisar el campus, sentí un profundo contraste con mi vida reciente. Había pasado una década desde que, a diferencia de mis compañeros que optaron por carreras internacionales, decidí quedarme en Chile para dedicarme a la educación. Este regreso a un entorno universitario, un lugar donde las mentes están constantemente trabajando para moldear el mundo, fue revitalizante.
 
