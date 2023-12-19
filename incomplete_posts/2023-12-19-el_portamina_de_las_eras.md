@@ -70,6 +70,26 @@ Al final de la enseñanza media, reflexioné sobre mi viaje. Había pasado de se
 
 "Voy a estudiar astronomía", anuncié una noche en casa, con el portaminas en la mano, símbolo de mi determinación y mis sueños. "Es mi forma de caminar entre las estrellas, siguiendo los pasos de los que admiro".
 
+## El Despertar del Educador
+
+La universidad fue un calidoscopio de experiencias y descubrimientos. Luisa, con su carácter extrovertido, contrastaba con Mauro y Pato, quienes compartían mi inclinación hacia la introspección. Pato, navegando entre ingeniería y astronomía, y Mauro, mi compañero en los desafiantes laboratorios de física, eran pilares en mi vida universitaria.
+
+"Este experimento va a ser el fin de mí", suspiraba Mauro, mientras luchábamos con un laboratorio particularmente complicado.
+
+"Lo lograremos", le aseguraba, mi portaminas siempre listo para anotar los datos y nuestras ideas.
+
+Fue durante estas largas noches de estudio cuando una epifanía tomó forma. "La ciencia es increíble, pero también increíblemente solitaria", reflexionaba en voz alta. "Necesito compartir esto, no puedo mantenerlo encerrado".
+
+Luisa, escuchando atentamente, asintió. "Siempre has tenido esa habilidad para explicar cosas complejas. Deberías enseñar", sugirió con una sonrisa alentadora.
+
+La idea resonó en mí. "Sí", pensé. "Quiero llevar la ciencia más allá de estos muros. Quiero enseñar". Fue un momento decisivo, marcando el fin de una etapa y el comienzo de otra. Decidí estudiar pedagogía en física, un camino que me llevaría a compartir mi pasión con otros.
+
+"Vas a ser un gran profesor", afirmó Pato, dándome un apretón de manos en el día de mi graduación. "Vas a abrir mundos enteros para tus estudiantes".
+
+Con mi portaminas en mano, símbolo de tantos años de aprendizaje, me embarqué en esta nueva aventura. "Este portaminas ha sido testigo de mi viaje en astronomía", pensé. "Ahora, será parte de mi misión como educador".
+
+
+
 <div align="right" markdown="1">
 
 _Hasta el próximo cronopunto del Principia 🥚._
