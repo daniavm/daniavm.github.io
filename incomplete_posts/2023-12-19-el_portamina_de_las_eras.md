@@ -34,59 +34,21 @@ tags:
 
 ## El Encuentro en el Bazar
 
-Era un lunes por la mañana en la sala del electivo de física, y el ambiente estaba lleno de la energía habitual de los estudiantes. Algunos conversando, otros contando algún chiste o ironizando por alguna cosa que ocurrió en sus vidas. Saludaba a quienes me encontraban antes de llegar a la mesa del profesor y luego esperé pacientemente a que el bullicio se transformara en silencio antes de saludar.
+Era una tarde de abril en Santiago cuando, siendo estudiante de segundo medio, me encontré frente a las puertas de un bazar local. Las campanillas sobre la puerta tintinearon al abrirse, anunciando mi llegada. Dentro, una señora mayor, con un delantal desgastado y una sonrisa amable, me miró por encima de sus lentes.
 
-"Buenos días, chicos y chicas", dije, captando su atención.
+"Buenas tardes, joven. ¿En qué puedo ayudarte hoy?" preguntó con voz suave.
 
-"Buenos días, profesor", respondieron, algunos con más energía que otros.
+"Solo estoy echando un vistazo", respondí, paseando mis ojos curiosos por los estantes.
 
-"Hoy, quiero que exploremos algo juntos ya que es prácticamente una de nuestras primeras clases", anuncié. "¿Para qué creen ustedes que sirven las matemáticas en la física?" dije sin más.
+Entre la variedad de objetos, un portaminas captó mi atención. Estaba apartado, como olvidado, y noté que le faltaba la tapa de la goma de borrar. A pesar de este defecto, había algo en él que me atraía. Lo levanté, sintiendo su ligereza y su textura.
 
-Ante la confusión, comenzó el cuchicheo y el murmullo que suele aparecer después de formular alguna pregunta que sale de lo "esperado". Después de todo, tras casi 10 años de condicionamiento a un formato establecido de clases, todos esperamos que una clase de "física" comience por hablar de ecuaciones y quien sabe qué otro prejuicio más. 
+"Ah, veo que has encontrado el portaminas", dijo la señora, acercándose. "Ese ha estado aquí mucho tiempo. Parece que nadie lo quiere por su pequeño defecto."
 
-Pasado un momento, las respuestas comenzaron a llegar: "Para hacer cálculos", dijo Diego. "Para calcular áreas en geometría", añadió Lucía. "Nos sirven para ir de compras y calcular el vuelto", comentó otro estudiante.
+"¿Le falta la tapa?", pregunté, observando el extremo desnudo del portaminas.
 
-Entusiasmado por las repuestas que escuchaba, aprecié cada aporte y asentí. "Esas son aplicaciones prácticas, pero hoy me gustaría que intentáramos ver algo más allá de todo eso." Me dirigí al pizarrón y escribí: "12 + 1 = 1". "Hemos llegado todos hasta aquí sabiendo algo de ecuaciones, pero consideren lo que está escrito ahí. ¿De qué manera lo que está escrito ahí podría ser acertado?"
+"Sí, pero te aseguro que eso no le quita su utilidad. Es un buen portaminas, solo necesita alguien que aprecie su valor más allá de una tapa perdida", explicó con una sonrisa.
 
-La sala se sumergió en un torbellino de ideas y teorías. "Eso es imposible", dijo Diego. "Quizás es un código", sugirió otro. "¿Es un error?", preguntó Lucía.
-
-"No, no es un error. Pero quiero que para ustededs sea una oportunidad de pensar de manera diferente este ramo", repliqué. "Piensen en cómo los números pueden ser una herramienta para interpretar nuestro mundo o las cosas que tenemos en nuestro alrededor."
-
-Ana, desde su lugar en la parte trasera, observaba en silencio. Ella era una niña que solía mantener un perfil bajo, pero en esta ocasión me percaté que estaba especialmente inquieta con lo que estaba pasando. Noté que su mirada se desplazaba lentamente hacia el reloj en la pared, como si estuviera insinuando una respuesta que por mi parte decidí conscientemente "ignorar".
-
-"¡Es el tiempo!", dijo poniendo sus manos sobre su pupitre y la clase se volteaba a verla. "En un reloj, 12 más 1 es igual a 1."
-
-El murmullo empezaba a subir su intensidad y pedí silencio para enfocarnos en quien había postulado algo con tanta fuerza.
-
-"¿Estás segura?", pregunté, queriendo evaluar su confianza.
-
-Ella asintió firmemente. "Sí, estoy segura."
-
-"Pero con eso me estas diciendo que lo que te han enseñado prácticamente toda la vida en matemática es un error, ¿no?", pregunté insistente.
-
-Ana reflexionaba, pero finalmente respondió "Aún así, en el reloj es así". 
-
-Tras una intensa alegría interna por la determinación que estaba presenciando, exclamé "¡Exactamente!". "Los números y las matemáticas se inventaron para servirnos, y NO nosotros para servir a las matemáticas. Ellas son nuestras herramientas para hablar del mundo; para hablar de eso que llamamos "realidad"".
-
-La clase se transformó en una discusión animada sobre la percepción y la realidad. Los estudiantes, completamente involucrados, compartían sus pensamientos y descubrimientos hasta que uno de ellos compartió algo inquietante. Pensó acerca de lo que pasaría si eso llegaba a oídos de sus padres o sus otros profesores. 
-
-Me pareció que era una inquietud más que razonable, después de todo, ni siquiera yo tengo un recuerdo de que alguno de mis profesores me hablara de algo así. 
-
-"¿Crees en que lo que has descubierto aquí tiene algo de cierto?", pregunté. Alonso asintió. "Pero también crees que tus padres y profesores tienen algo de razón al decir lo contrario ¿no?", él asintió nuevamente. "Entonces es una excelente oportunidad para compartir puntos de vista. Quizás no encuentres la misma disposición de aceptar un punto de vista tan "extraño" como el que Ana está proponiendo aquí, pero así como en este problema hay algo en lo que debemos ponernos de acuerdo, la ciencia se trata de lo mismo." 
-
-Respondía mientras elaboraba la respuesta en mi mente, y compartía el miedo de Alonso tras creer que estaba generando una tormenta académica con mis pares profesoræs. Pero me pareció que la educación necesitaba algo más de esto por alguna razón, así que continué. 
-
-"Desconozco si habrá una "verdad" al final de este camino de discusiones, pero lo interesante parece ser que al ponernos de acuerdo todos sabemos de los límites de nuestras afirmaciones. La ciencia como las matemáticas no se trata de verdades, sino de los acuerdos que logramos a partir de nuestras evidencias y las cosas que podemos hacer con ellos ... como en este caso 12 + 1 es igual a 1. Por eso creo que es bueno que propongas estas ideas con quienes te contradicen para ver qué clase de acuerdos puedes lograr tanto para ti como para ell@s". 
-
-La clase parecía absorta en aquellas palabras. Era como si hubiera alguien que estuviera hablando de algo que "no parecía de colegio". Y creo que por esa misma razón, tenía la sensación de que iba por el camino "correcto" para con mis estudiantes. 
-
-Cuando el timbre sonó, marcando el final de la clase, noté un cambio más que significativo en ell@s. L@s estudiantes se levantaron, y muchos expresaron su agradecimiento por la clase vivida. Algunos incluso se despidieron, cosa que rara vez ocurría antes. Sentí un respeto renovado y profundo de parte de ell@s, y creo que no era tanto por las cosas que yo "sabía", sino por las experiencias que había logrado generar en sus mentes. Por ese quiebre en las cosas que tenían por establecidas.
-
-Me quedé un momento en la sala vacía, reflexionando sobre el poder de una simple ecuación para desencadenar a ese nivel la imaginación y el pensamiento crítico. Reflexioné sobre nuestro rol como educadoræs. ¿Nuestro trabajo es simplemente impartir conocimientos, seguir un libro de texto, respetar un curriculum, o hay algo más? ¿Es nuestra responsabilidad inspirar, provocar cuestionamientos, encender la chispa de la curiosidad en nuestros estudiantes?
-
-Este tipo de enseñanza, que desafía las normas y celebra el descubrimiento, podría ser el camino hacia un aprendizaje más significativo y duradero. Quizás, al desviarnos del camino trazado, al permitirnos y permitir a otr@s explorar y cuestionar, podríamos descubrir no solo cómo enseñar mejor, sino cómo aprender junt@s en un mundo que está en constante cambio... acercarnos a la aprendanza.
-
-Ese día, en la sala de ese electivo de física, habíamos hecho más que resolver un enigma matemático; habíamos abierto una puerta hacia un futuro donde el aprendizaje y la enseñanza ... la aprendanza, es una aventura. Un constante cuestionar y redescubrir del mundo que nos rodea con las herramientas que nuestros antepasados nos han dejado para simplemente aprovecharlas.
+Algo en sus palabras resonó conmigo. Sentí una conexión inexplicable con ese objeto imperfecto, pero lleno de potencial. Decidí comprarlo, sin saber que aquel portaminas sería más que una herramienta; sería un compañero en mi viaje académico y personal, un símbolo de que incluso lo imperfecto puede tener un gran valor.
 
 <div align="right" markdown="1">
 
