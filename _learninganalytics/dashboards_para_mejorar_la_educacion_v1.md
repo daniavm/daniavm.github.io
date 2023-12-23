@@ -43,19 +43,40 @@ Este dashboard es una ventana a la realidad educativa, ofreciendo una visión m�
 - Facilita el monitoreo de los patrones de asistencia, permitiendo identificar y apoyar a tiempo a los estudiantes en riesgo.
 - Los directivos pueden utilizar estos datos para comprender las dinámicas de sus instituciones y adaptar políticas para mejorar tanto la asistencia como el rendimiento estudiantil.
 
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <a href="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia.png">
+    <img src="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia.png" width="60%"  alt="Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.">
+  </a>
+  <figcaption>Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.</figcaption>
+</figure>
+
 ### Análisis de Tendencias y Correlaciones en el Aprendizaje
 - Observa cómo las asistencias se relacionan con otros factores académicos, brindando información clave para adaptar y mejorar las estrategias pedagógicas.
 - Los coordinadores pueden utilizar esta herramienta para obtener una perspectiva detallada y planificar intervenciones dirigidas, optimizando la enseñanza y el aprendizaje.
 
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <a href="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia2.png">
+    <img src="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia2.png" width="60%"  alt="Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.">
+  </a>
+  <figcaption>Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.</figcaption>
+</figure>
+
 ### Evaluación y Ajuste de Políticas Educativas
 - Permite evaluar la efectividad de las políticas y programas implementados, utilizando los datos para realizar ajustes necesarios y mejorar los resultados educativos.
+
+<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <a href="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia3.png">
+    <img src="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia3.png" width="60%"  alt="Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.">
+  </a>
+  <figcaption>Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.</figcaption>
+</figure>
 
 ### Usabilidad y Accesibilidad para Todos en la Comunidad Educativa
 - Diseñado con un enfoque en la simplicidad y la accesibilidad, este dashboard permite a todos los profesionales de la educación acceder y utilizar los datos fácilmente.
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <a href="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia.png">
-    <img src="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia.png" width="60%"  alt="Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.">
+  <a href="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia4.png">
+    <img src="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia4.png" width="60%"  alt="Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.">
   </a>
   <figcaption>Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.</figcaption>
 </figure>
