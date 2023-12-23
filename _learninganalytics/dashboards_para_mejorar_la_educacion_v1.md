@@ -56,9 +56,9 @@ Este dashboard es una ventana a la realidad educativa, ofreciendo una visión m�
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia2.png">
-    <img src="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia2.png" width="60%"  alt="Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.">
+    <img src="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia2.png" width="60%"  alt="Imagen 2: Sección del dashboard que incluye el análisis por posicionamiento geográfico. Este panel se obtiene usando solo las direcciones de cada estudiante y sistematizando su posición geográfica para construir relaciones con esta variable que rara vez suele utilizarse en educación tradicional. ">
   </a>
-  <figcaption>Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.</figcaption>
+  <figcaption>Imagen 2: Sección del dashboard que incluye el análisis por posicionamiento geográfico. Este panel se obtiene usando solo las direcciones de cada estudiante y sistematizando su posición geográfica para construir relaciones con esta variable que rara vez suele utilizarse en educación tradicional. </figcaption>
 </figure>
 
 ### Evaluación y Ajuste de Políticas Educativas
@@ -66,9 +66,9 @@ Este dashboard es una ventana a la realidad educativa, ofreciendo una visión m�
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia3.png">
-    <img src="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia3.png" width="60%"  alt="Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.">
+    <img src="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia3.png" width="60%"  alt="Imagen 3: Distribución de inasistencias por curso. El recuedro de mayor tamaño implica que tendrá la mayor acumulación de inasistencias.">
   </a>
-  <figcaption>Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.</figcaption>
+  <figcaption>Imagen 3: Distribución de inasistencias por curso. El recuedro de mayor tamaño implica que tendrá la mayor acumulación de inasistencias.</figcaption>
 </figure>
 
 ### Usabilidad y Accesibilidad para Todos en la Comunidad Educativa
@@ -76,9 +76,9 @@ Este dashboard es una ventana a la realidad educativa, ofreciendo una visión m�
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia4.png">
-    <img src="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia4.png" width="60%"  alt="Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.">
+    <img src="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia4.png" width="60%"  alt="Imagen 4: Distribución de las inasistencias a lo largo de los días del mes. Aquí puedes visibilizar los puntos en el tiempo donde posiblemente hay mayor impacto de inasistencias.">
   </a>
-  <figcaption>Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.</figcaption>
+  <figcaption>Imagen 4: Distribución de las inasistencias a lo largo de los días del mes. Aquí puedes visibilizar los puntos en el tiempo donde posiblemente hay mayor impacto de inasistencias.</figcaption>
 </figure>
 
 ## Optimización del Tiempo y Recursos: Un Enfoque Práctico
