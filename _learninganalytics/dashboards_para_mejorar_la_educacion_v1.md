@@ -54,8 +54,8 @@ Este dashboard es una ventana a la realidad educativa, ofreciendo una visión m�
 - Diseñado con un enfoque en la simplicidad y la accesibilidad, este dashboard permite a todos los profesionales de la educación acceder y utilizar los datos fácilmente.
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <a href="/assets/images/learninganalytics_images/dashboards_educacionales/dashboardv1_banner.png">
-    <img src="/assets/images/learninganalytics_images/dashboards_educacionales/dashboardv1_banner.png" width="60%"  alt="Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.">
+  <a href="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia.png">
+    <img src="/assets/images/learninganalytics_images/dashboards_educacionales/Panel_de_Inasistencia.png" width="60%"  alt="Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.">
   </a>
   <figcaption>Imagen 1: Sección de evolución temporal en el Panel de inasistencias. Aquí verás presentes funciones de comparación entre periodos, seguimiento en el tiempo y escalamiento de la información en distintos niveles de detalle.</figcaption>
 </figure>
