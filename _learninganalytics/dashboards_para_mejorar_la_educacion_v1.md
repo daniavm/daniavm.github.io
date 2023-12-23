@@ -93,6 +93,10 @@ Como creador de esta herramienta, estoy entusiasmado por la posibilidad de adapt
 ## Conclusión
 Este dashboard es mi contribución a una transformación necesaria dentro de la educación. Invito a educadores, coordinadores y directivos a unirse en este esfuerzo de transformación. Juntos, podemos utilizar la tecnología para enriquecer nuestra práctica pedagógica, reducir la carga administrativa y dedicarnos plenamente a lo que realmente importa: enseñar, inspirar y cambiar vidas.
 
+En el siguiente enlace puede probar el dashboard del que se ha hablado en esta publicación, aunque iré publicando nuevos elementos a medida que pase el tiempo:
+
+[PRUEBA EL DASHBOARD DE EJEMPLO AQUÍ](https://lookerstudio.google.com/reporting/e81a598c-e5b5-4b41-918e-5905662ad99c/page/p_azmi7xwwbd)
+
 
 </div>
 
