@@ -8,8 +8,8 @@ toc: true
 toc_icon: "egg"
 
 header:
-  image: /assets/images/learninganalytics_images/script_de_clasificacion_v1/dashboardv1_banner.png
-  teaser: /assets/images/learninganalytics_images/script_de_clasificacion_v1/dashboardv1_banner.png
+  image: /assets/images/learninganalytics_images/dashboards_educacionales/dashboardv1_banner.png
+  teaser: /assets/images/learninganalytics_images/dashboards_educacionales/dashboardv1_banner.png
 
 categories:
   - Gestión Pedagógica
