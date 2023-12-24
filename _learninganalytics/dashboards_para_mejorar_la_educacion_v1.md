@@ -81,6 +81,9 @@ Este dashboard es una ventana a la realidad educativa, ofreciendo una visión m�
   <figcaption>Imagen 4: Distribución de las inasistencias a lo largo de los días del mes. Aquí puedes visibilizar los puntos en el tiempo donde posiblemente hay mayor impacto de inasistencias.</figcaption>
 </figure>
 
+## Integración con Plataformas Existentes
+Es importante destacar que la creación de estos dashboards no requiere de recursos adicionales. La información necesaria para su funcionamiento ya está disponible en plataformas comúnmente utilizadas en los colegios, como Napsis y Colegium. Estas plataformas, aunque no ofrecen soluciones tan adaptativas y flexibles como los dashboards personalizados en Google Looker, contienen datos valiosos que podemos aprovechar. La clave es utilizar estos datos de manera inteligente, guiados por profesionales competentes en pedagogía y tecnología educativa.
+
 ## Optimización del Tiempo y Recursos: Un Enfoque Práctico
 Reflexionemos sobre cómo la eficiencia en la gestión de datos puede liberar tiempo y recursos. Este dashboard no solo reduce la carga administrativa, sino que también abre nuevas posibilidades para reorientar nuestra energía hacia prácticas pedagógicas más efectivas y enriquecedoras.
 
