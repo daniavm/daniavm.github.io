@@ -98,7 +98,11 @@ Este dashboard es mi contribución a una transformación necesaria dentro de la 
 
 En el siguiente enlace puede probar el dashboard del que se ha hablado en esta publicación, aunque iré publicando nuevos elementos a medida que pase el tiempo:
 
+<div align="center" markdown="1">
+
 [PRUEBA EL DASHBOARD DE EJEMPLO AQUÍ](https://lookerstudio.google.com/reporting/e81a598c-e5b5-4b41-918e-5905662ad99c/page/p_azmi7xwwbd){:target="_blank"}
+
+</div>
 
 
 </div>
