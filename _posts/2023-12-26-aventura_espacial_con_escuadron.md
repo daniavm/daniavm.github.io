@@ -6,8 +6,8 @@ related: true
 comments: true
 toc: false
 header:
-image: /assets/images/simple_post_images/banner_escuadron.png
-teaser: /assets/images/simple_post_images/banner_escuadron.png
+  image: /assets/images/simple_post_images/banner_escuadron.png
+  teaser: /assets/images/simple_post_images/banner_escuadron.png
 
 categories:
   - Literatura
