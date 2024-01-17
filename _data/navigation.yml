@@ -33,6 +33,10 @@ modelo_perdido:
         url: /_posts/en_busca_del_modelo_perdido/2023-11-18-en-busca-del-modelo-perdido-parte-5
       - title: "Parte 6: La Primera Reliquia"
         url: /_posts/en_busca_del_modelo_perdido/2023-11-26-en-busca-del-modelo-perdido-parte-6
+  - title: El Modelo XGBoost
+    children:
+      - title: "Parte 7: Bagging vs Boosting: Desenredando los Hilos del Aprendizaje Automático"
+        url: /_posts/en_busca_del_modelo_perdido/2023-01-17-en-busca-del-modelo-perdido-parte-7
 
 historias_de_clase:
   - title: Mis Recuerdos
