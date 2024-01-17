@@ -50,6 +50,8 @@ XGBoost, en cambio, es como un solista dedicado, afinando cada nota y aprendiend
 ## Conclusión
 Al final de esta sinfonía de datos entre Random Forest y XGBoost, comprendemos que cada uno toca su propia melodía en la predicción de los resultados de PAES. Random Forest nos ofrece una armonía robusta y generalizable, ideal para un espectro amplio de datos. XGBoost, con su enfoque detallista, perfecciona las predicciones donde la precisión en los detalles es crucial.
 
+Con estas diferencias claras, ya podemos adentrarnos de lleno en lo que será un enorme salto en nuestro estudio ... el modelo de XGBoost para predecir lso resultados de PAES.
+
 <div align="right" markdown="1">
 Hasta el próximo cronopunto del Principia 🥚.
 
