@@ -29,8 +29,6 @@ tags:
 
 ---
 <div align="justify" markdown="1">
-
-## Introducción
 ¿Alguna vez te has sentido como si estuvieras intentando descifrar un jeroglífico cuando te enfrentas a términos como Bagging y Boosting? ¡No te preocupes! Hoy vamos a transformar esos jeroglíficos en un mapa del tesoro que nos llevará a la comprensión de estas dos técnicas esenciales en el mundo del aprendizaje automático.
 
 ## Sección 1: Bagging - Más Allá del Número de Árboles
