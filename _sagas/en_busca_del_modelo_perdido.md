@@ -44,6 +44,8 @@ tags:
 
 - [**Capítulo 6 - La Primera Reliquia**](/_posts/en_busca_del_modelo_perdido/2023-11-26-en-busca-del-modelo-perdido-parte-6): En este capítulo clave, revelamos la "Primera Reliquia": una configuración óptima del modelo Random Forest, descubierta mediante el análisis de un heatmap interactivo. Centrándonos en los parámetros n_estimators y num_folds, optimizamos el modelo para una precisión avanzada en la predicción de resultados educativos. Este hallazgo nos prepara para abordar desafíos más complejos en el análisis de datos aplicado a la educación.
 
+- [**Capítulo 7 - Desvelando Bagging y Boosting en Machine Learning**](/_posts/en_busca_del_modelo_perdido/2024-01-17-en-busca-del-modelo-perdido-parte-7): En esta parte, profundizamos en la esencia y las diferencias clave entre Bagging y Boosting. A través de una exploración detallada, comparamos cómo Random Forest (Bagging) y XGBoost (Boosting) abordan la predicción de resultados educativos, resaltando sus fortalezas y limitaciones. Este capítulo aclara conceptos esenciales, guiándonos en la elección del modelo más adecuado para nuestros datos y objetivos en el ámbito educativo.
+
 </div>
 
 
