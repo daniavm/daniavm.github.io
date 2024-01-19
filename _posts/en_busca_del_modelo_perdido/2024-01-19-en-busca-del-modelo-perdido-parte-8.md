@@ -86,12 +86,12 @@ Este gráfico puede parecer prometedor (de hecho llega a ser casi perfecto en su
 ## 🔍 Navegando por los Hiperparámetros de XGBoost 🔍
 Cada hiperparámetro de XGBoost es un artefacto crucial en nuestra aventura, similar a los que Indiana Jones encontraría en sus expediciones. Los exploramos detalladamente, comprendiendo su función y cómo afectan nuestras predicciones:
 
-- Learning Rate (Tasa de Aprendizaje): Controla el paso con el que el modelo se ajusta a los datos. Un paso demasiado grande puede hacer que el modelo se pierda detalles finos.
-- N_Estimators (Número de Estimadores): El número de árboles de decisión en el modelo. Más árboles pueden llevar a un mayor riesgo de sobreajuste.
-- Gamma: Un parámetro de regularización que ayuda a controlar la complejidad del modelo.
-- Min Child Weight: Un umbral para decidir cuándo se debe detener la división de un nodo, afectando la complejidad del modelo.
-- Subsample: La fracción de muestras utilizadas para entrenar cada árbol. Un subsample bajo puede llevar a un modelo más robusto.
-- Colsample_by*: Estos parámetros controlan la fracción de características consideradas para cada árbol, nivel o división. Una selección más pequeña puede prevenir el sobreajuste.
+- **Learning Rate (Tasa de Aprendizaje)**: Controla el paso con el que el modelo se ajusta a los datos. Un paso demasiado grande puede hacer que el modelo se pierda detalles finos.
+- **N_Estimators (Número de Estimadores)**: El número de árboles de decisión en el modelo. Más árboles pueden llevar a un mayor riesgo de sobreajuste.
+- **Gamma**: Un parámetro de regularización que ayuda a controlar la complejidad del modelo.
+- **Min Child Weight**: Un umbral para decidir cuándo se debe detener la división de un nodo, afectando la complejidad del modelo.
+- **Subsample**: La fracción de muestras utilizadas para entrenar cada árbol. Un subsample bajo puede llevar a un modelo más robusto.
+- **Colsample_by_**: Estos parámetros controlan la fracción de características consideradas para cada árbol, nivel o división. Una selección más pequeña puede prevenir el sobreajuste.
 
 ## 🚀 El Desafío de XGBoost: Evitando las Trampas del Sobreajuste 🚀
 A diferencia de Random Forest, XGBoost puede ser susceptible al sobreajuste. Es como si Indiana Jones enfrentara una serie de espejismos mientras busca un tesoro. Necesitamos ajustar los hiperparámetros cuidadosamente para evitar seguir un mapa engañoso.
