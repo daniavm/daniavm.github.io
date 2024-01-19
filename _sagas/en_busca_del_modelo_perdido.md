@@ -46,6 +46,8 @@ tags:
 
 - [**Capítulo 7 - Desvelando Bagging y Boosting en Machine Learning**](/_posts/en_busca_del_modelo_perdido/2024-01-17-en-busca-del-modelo-perdido-parte-7): En esta parte, profundizamos en la esencia y las diferencias clave entre Bagging y Boosting. A través de una exploración detallada, comparamos cómo Random Forest (Bagging) y XGBoost (Boosting) abordan la predicción de resultados educativos, resaltando sus fortalezas y limitaciones. Este capítulo aclara conceptos esenciales, guiándonos en la elección del modelo más adecuado para nuestros datos y objetivos en el ámbito educativo.
 
+- [**Capítulo 8 - El Laberinto de XGBoost**](/_posts/en_busca_del_modelo_perdido/2024-01-19-en-busca-del-modelo-perdido-parte-8): Este capítulo introduce a XGBoost, un avanzado modelo de aprendizaje automático basado en árboles de decisión, diferenciándolo de Random Forest. Profundizamos en la anatomía de XGBoost, explorando cómo los hiperparámetros influyen en la construcción del modelo y la importancia de ajustarlos para evitar el sobreajuste. Utilizamos analogías para hacer más accesible el complejo concepto de hiperparámetros y sus rangos. Este capítulo prepara el escenario para el próximo desafío: encontrar la combinación perfecta de hiperparámetros para una predicción precisa de los resultados de la PAES.
+
 </div>
 
 

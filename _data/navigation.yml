@@ -37,6 +37,8 @@ modelo_perdido:
     children:
       - title: "Parte 7: Bagging vs Boosting: Desenredando los Hilos del Aprendizaje Automático"
         url: /_posts/en_busca_del_modelo_perdido/2024-01-17-en-busca-del-modelo-perdido-parte-7
+      - title: "Parte 8: El Laberinto de XGBoost"
+        url: /_posts/en_busca_del_modelo_perdido/2024-01-19-en-busca-del-modelo-perdido-parte-8
 
 historias_de_clase:
   - title: Mis Recuerdos
