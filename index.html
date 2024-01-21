@@ -16,6 +16,9 @@ recent_posts: 'Publicaciones Recientes'
 
 intro: 
   - excerpt: 'Un proyecto personal para compartir de ciencia, código, pensamientos y la aprendanza con l@s personas de nuestro planeta.'
+
+intro2: 
+  - excerpt: 'Un proyecto personal para compartir de ciencia, código, pensamientos y la aprendanza con l@s personas de nuestro planeta.'
 feature_row:
   - image_path: /assets/images/learning_analytics_index.png
     alt: "Analítica"
@@ -46,7 +49,9 @@ feature_row:
   {% include feature_row%}
 </div>
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Publicaciones Recientes" }}</h3>
+{% include feature_row id="intro2" type="center" %}
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: 'Publicaciones Recientes' }}</h3>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}
