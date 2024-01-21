@@ -26,19 +26,20 @@ feature_row:
     excerpt: "Built with HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
     url: "/docs/layouts/"
     btn_class: "btn--primary"
-    btn_label: "Learn more"
+    btn_label: "Ver más"
   - image_path: /assets/images/mm-free-feature.png
     alt: "100% free"
     title: "Libros"
-    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it... whatever!"
+    excerpt: "Reseñas e impresiones de los libros que he podido abordar en mi vida"
     url: "/docs/license/"
     btn_class: "btn--primary"
-    btn_label: "Learn more"  
+    btn_label: "Ver más"  
 ---
 <h3 style="text-align: center;">En algún cronopunto debemos empezar …</h3>
 <p style="text-align: center;"> Un proyecto personal para compartir de ciencia, código, pensamientos y la aprendanza con l@s personas de nuestro planeta.</p>
 <hr style="width:61%;text-align:center;margin-left:0">
 {% include feature_row %}
+
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Publicaciones Recientes" }}</h3>
 
 {% if paginator %}
