@@ -8,7 +8,7 @@ header:
 title: "En algún cronopunto debemos empezar ..."
 excerpt: >
   Un proyecto personal para compartir de ciencia, código, pensamientos y la aprendanza con l@s personas de nuestro planeta.
-layout: home
+layout: splash
 author_profile: true
 classes: wide
 # entries_layout: grid
@@ -36,3 +36,19 @@ feature_row:
     btn_label: "Learn more"  
 ---
 {% include feature_row %}
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in posts %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
+</div>
+
+{% include paginator.html %}
