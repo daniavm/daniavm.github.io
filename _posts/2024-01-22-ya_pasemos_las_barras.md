@@ -18,13 +18,12 @@ categories:
 
 tags:
   - Educación
-  - Aprendanza
-  - Aprendizaje
-  - Enseñanza
-  - Pensamiento Crítico
-  - Innovación
-  - Electivo de Física
-  - Historias de Clase
+  - Análisis de Datos
+  - Visualización de Datos
+  - Innovación Educativa
+  - Estrategias Pedagógicas
+  - Mejora del Rendimiento
+  - Herramientas Educativas
 
 ---
 <div align="justify" markdown="1">
