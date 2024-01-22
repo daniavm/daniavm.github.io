@@ -6,13 +6,13 @@ main:
     url: /
   - title: "Learning Analytics"
     url: /learninganalytics/
-  - title: "Posts"
-    url: /categories/
   - title: "Sagas"
     url: /sagas/
+  - title: "Posts"
+    url: /categories/
   - title: "Portfolio"
     url: /portfolio/
-  - title: "About"
+  - title: "AboutMe"
     url: /about/
 
 modelo_perdido:
