@@ -4,10 +4,10 @@ layout: single
 author_profile: true
 related: true
 comments: true
-toc: true
+toc: false
 toc_icon: "egg"
 
-# classes: wide
+classes: wide
 
 header:
   image: /assets/images/historias_de_clase/historias_de_clase_12_mas_1_igual_1.png
