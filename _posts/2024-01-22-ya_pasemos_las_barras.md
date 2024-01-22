@@ -28,7 +28,7 @@ tags:
 
 ---
 <div align="justify" markdown="1">
-En el ámbito educativo, la interpretación de datos es una habilidad fundamental para comprender y responder a las dinámicas de aprendizaje y rendimiento estudiantil. Tradicionalmente, los gráficos de barras han sido la herramienta principal para representar información. Sin embargo, según un estudio reciente [Nombre del Estudio], estos gráficos pueden no ser suficientes para capturar la complejidad y la variabilidad inherentes a los datos educativos. Este artículo profundiza en cómo los gráficos más avanzados pueden proporcionar una visión más completa y matizada.
+En el ámbito educativo, la interpretación de datos es una habilidad fundamental para comprender y responder a las dinámicas de aprendizaje y rendimiento estudiantil. Tradicionalmente, los gráficos de barras han sido la herramienta principal para representar información. Sin embargo, según un estudio del año 2015 declara estos gráficos pueden no ser suficientes para capturar la complejidad y la variabilidad inherentes a los datos educativos (Weissgerber, T. L., Milic, N. M., Winham, S. J., & Garovic, V. D., 2015). Este artículo profundiza en cómo los gráficos más avanzados pueden proporcionar una visión más completa y matizada.
 
 ## Desafiando la Norma con Gráficos Avanzados
 
@@ -40,9 +40,9 @@ La dependencia de los gráficos de barras en la educación puede llevar a interp
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/simple_post_images/boxplot.png">
-    <img src="/assets/images/simple_post_images/boxplot.png" width="100%"  alt="Imagen 1: Resultado de ajuste por XGBoost para los datos de la predicción buscada en la prueba de matemática 1. El eje izquierdo muestra la predicción y el inferior los valores reales de las pruebas consideradas. EL error aproximado entre la predicción y los valores reales fue de unos 15 puntos, lo que representa 1 respuesta correcta de error en la predicción.">
+    <img src="/assets/images/simple_post_images/boxplot.png" width="100%" alt="Imagen 1: Comparación entre un gráfico de barras tradicional y un box plot, destacando la distribución y variabilidad de los datos.">
   </a>
-  <figcaption>Imagen 1: Resultado de ajuste por XGBoost para los datos de la predicción buscada en la prueba de matemática 1. El eje izquierdo muestra la predicción y el inferior los valores reales de las pruebas consideradas. EL error aproximado entre la predicción y los valores reales fue de unos 15 puntos, lo que representa 1 respuesta correcta de error en la predicción.</figcaption>
+  <figcaption>Imagen 1: Comparación entre un gráfico de barras tradicional y un box plot, destacando la distribución y variabilidad de los datos.</figcaption>
 </figure>
 
 El box plot muestra la mediana, los cuartiles y los valores atípicos, ofreciendo una comprensión más detallada de la distribución de los datos que el gráfico de barras. Por ejemplo, en un análisis de rendimiento en matemáticas, este gráfico permite a los docentes identificar estudiantes con necesidades específicas de apoyo o enriquecimiento, llevando a estrategias pedagógicas más personalizadas. Los educadores deben observar la posición de la mediana dentro de la caja, ya que un desplazamiento significativo de esta hacia un extremo puede indicar sesgo en los resultados.
@@ -51,9 +51,9 @@ El box plot muestra la mediana, los cuartiles y los valores atípicos, ofreciend
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/simple_post_images/violin.png">
-    <img src="/assets/images/simple_post_images/violin.png" width="100%"  alt="Imagen 1: Resultado de ajuste por XGBoost para los datos de la predicción buscada en la prueba de matemática 1. El eje izquierdo muestra la predicción y el inferior los valores reales de las pruebas consideradas. EL error aproximado entre la predicción y los valores reales fue de unos 15 puntos, lo que representa 1 respuesta correcta de error en la predicción.">
+    <img src="/assets/images/simple_post_images/violin.png" width="100%" alt="Imagen 2: Comparación entre un gráfico de barras tradicional y un violin plot, mostrando cómo el violin plot ofrece una visión más detallada de la distribución de datos.">
   </a>
-  <figcaption>Imagen 1: Resultado de ajuste por XGBoost para los datos de la predicción buscada en la prueba de matemática 1. El eje izquierdo muestra la predicción y el inferior los valores reales de las pruebas consideradas. EL error aproximado entre la predicción y los valores reales fue de unos 15 puntos, lo que representa 1 respuesta correcta de error en la predicción.</figcaption>
+  <figcaption>Imagen 2: Comparación entre un gráfico de barras tradicional y un violin plot, mostrando cómo el violin plot ofrece una visión más detallada de la distribución de datos.</figcaption>
 </figure>
 
 Al combinar la densidad de los datos con la representación del box plot, el violin plot ofrece una visión más profunda de la distribución de los puntajes. Esto es particularmente útil en la revisión de nuevos métodos de enseñanza, donde dos grupos distintos de rendimiento podrían indicar la necesidad de ajustar el enfoque pedagógico. Los educadores deben prestar atención a las "protuberancias" o anchuras en el gráfico, que indican una mayor concentración de puntajes, crucial para identificar si hay una o más poblaciones predominantes en los resultados de los estudiantes.
@@ -62,9 +62,9 @@ Al combinar la densidad de los datos con la representación del box plot, el vio
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/simple_post_images/swarm.png">
-    <img src="/assets/images/simple_post_images/swarm.png" width="100%"  alt="Imagen 1: Resultado de ajuste por XGBoost para los datos de la predicción buscada en la prueba de matemática 1. El eje izquierdo muestra la predicción y el inferior los valores reales de las pruebas consideradas. EL error aproximado entre la predicción y los valores reales fue de unos 15 puntos, lo que representa 1 respuesta correcta de error en la predicción.">
+    <img src="/assets/images/simple_post_images/swarm.png" width="100%" alt="Imagen 3: Comparación entre un gráfico de barras tradicional y un swarm plot, ilustrando la capacidad del swarm plot para mostrar cada punto de dato individualmente.">
   </a>
-  <figcaption>Imagen 1: Resultado de ajuste por XGBoost para los datos de la predicción buscada en la prueba de matemática 1. El eje izquierdo muestra la predicción y el inferior los valores reales de las pruebas consideradas. EL error aproximado entre la predicción y los valores reales fue de unos 15 puntos, lo que representa 1 respuesta correcta de error en la predicción.</figcaption>
+  <figcaption>Imagen 3: Comparación entre un gráfico de barras tradicional y un swarm plot, ilustrando la capacidad del swarm plot para mostrar cada punto de dato individualmente.</figcaption>
 </figure>
 
 El swarm plot muestra cada punto de datos individualmente, permitiendo una observación detallada de las variaciones individuales. En el contexto de un proyecto grupal, este gráfico podría revelar cómo diferentes estudiantes contribuyen al trabajo, sugiriendo la necesidad de estrategias para equilibrar la participación. Los profesores deben examinar la distribución y densidad de los puntos para comprender mejor la participación y el rendimiento de cada estudiante.
@@ -73,9 +73,9 @@ El swarm plot muestra cada punto de datos individualmente, permitiendo una obser
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/simple_post_images/strip.png">
-    <img src="/assets/images/simple_post_images/strip.png" width="100%"  alt="Imagen 1: Resultado de ajuste por XGBoost para los datos de la predicción buscada en la prueba de matemática 1. El eje izquierdo muestra la predicción y el inferior los valores reales de las pruebas consideradas. EL error aproximado entre la predicción y los valores reales fue de unos 15 puntos, lo que representa 1 respuesta correcta de error en la predicción.">
+    <img src="/assets/images/simple_post_images/strip.png" width="100%" alt="Imagen 4: Comparación entre un gráfico de barras tradicional y un strip plot, destacando cómo el strip plot es más adecuado para grandes volúmenes de datos.">
   </a>
-  <figcaption>Imagen 1: Resultado de ajuste por XGBoost para los datos de la predicción buscada en la prueba de matemática 1. El eje izquierdo muestra la predicción y el inferior los valores reales de las pruebas consideradas. EL error aproximado entre la predicción y los valores reales fue de unos 15 puntos, lo que representa 1 respuesta correcta de error en la predicción.</figcaption>
+  <figcaption>Imagen 4: Comparación entre un gráfico de barras tradicional y un strip plot, destacando cómo el strip plot es más adecuado para grandes volúmenes de datos.</figcaption>
 </figure>
 
 Similar al swarm plot, pero más adecuado para grandes volúmenes de datos, el strip plot es ideal para analizar tendencias a lo largo del tiempo, como la asistencia o la participación en actividades extracurriculares. En un colegio, este análisis puede ayudar a identificar patrones y tomar medidas para mejorar la participación estudiantil. La dispersión de los puntos puede revelar variabilidad en la asistencia, motivando investigaciones sobre factores que influyen en la participación de los estudiantes.
@@ -84,9 +84,9 @@ Similar al swarm plot, pero más adecuado para grandes volúmenes de datos, el s
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/simple_post_images/boxplotystrip.png">
-    <img src="/assets/images/simple_post_images/boxplotystrip.png" width="100%"  alt="Imagen 1: Resultado de ajuste por XGBoost para los datos de la predicción buscada en la prueba de matemática 1. El eje izquierdo muestra la predicción y el inferior los valores reales de las pruebas consideradas. EL error aproximado entre la predicción y los valores reales fue de unos 15 puntos, lo que representa 1 respuesta correcta de error en la predicción.">
+    <img src="/assets/images/simple_post_images/boxplotystrip.png" width="100%" alt="Imagen 5: Comparación entre un gráfico de barras tradicional y una combinación de gráficos (scatter y box plot), mostrando una visión integrada de los datos.">
   </a>
-  <figcaption>Imagen 1: Resultado de ajuste por XGBoost para los datos de la predicción buscada en la prueba de matemática 1. El eje izquierdo muestra la predicción y el inferior los valores reales de las pruebas consideradas. EL error aproximado entre la predicción y los valores reales fue de unos 15 puntos, lo que representa 1 respuesta correcta de error en la predicción.</figcaption>
+  <figcaption>Imagen 5: Comparación entre un gráfico de barras tradicional y una combinación de gráficos (scatter y box plot), mostrando una visión integrada de los datos.</figcaption>
 </figure>
 
 Este gráfico combina barras, scatter plot y box plot en un solo eje, proporcionando una comparación visual rica entre estadísticas generales y distribuciones detalladas de los datos. Por ejemplo, al evaluar los resultados de exámenes estandarizados, este gráfico podría usarse para comparar el rendimiento general del colegio con las variaciones individuales de los estudiantes, destacando áreas de enfoque para el desarrollo curricular. La combinación de estos gráficos permite una comprensión más holística de los datos, facilitando una interpretación más rica y contextualizada del rendimiento académico.
@@ -107,12 +107,6 @@ Para generar estos gráficos a partir de hojas de cálculo o datasets CSV, los e
 
 La integración de gráficos avanzados en el análisis de datos es un paso hacia una educación más informada y adaptativa, donde las decisiones se basan en una comprensión profunda y matizada de los datos. Estos gráficos se convierten en poderosas herramientas para visualizar la diversidad y las necesidades individuales dentro del entorno educativo.
 
-## Referencias
-
-- Weissgerber TL, Milic NM, Winham SJ, Garovic VD (2015) "Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm." PLoS Biol 13(4): e1002128. [doi:10.1371/journal.pbio.1002128](https://doi.org/10.1371/journal.pbio.1002128)
-
-
-
 <div align="right" markdown="1">
 
 _Hasta el próximo cronopunto del Principia 🥚._
@@ -120,6 +114,10 @@ _Hasta el próximo cronopunto del Principia 🥚._
 DV
 
 </div>
+
+## Referencias
+
+- Weissgerber TL, Milic NM, Winham SJ, Garovic VD (2015) "Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm." PLoS Biol 13(4): e1002128. [doi:10.1371/journal.pbio.1002128](https://doi.org/10.1371/journal.pbio.1002128)
 
 
 </div>
