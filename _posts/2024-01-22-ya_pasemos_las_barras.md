@@ -10,8 +10,8 @@ toc_icon: "egg"
 classes: wide
 
 header:
-  image: /assets/images/historias_de_clase/historias_de_clase_12_mas_1_igual_1.png
-  teaser: /assets/images/historias_de_clase/historias_de_clase_12_mas_1_igual_1.png
+  image: /assets/images/simple_post_images/de_barras_a_la_pedagogia.png
+  teaser: /assets/images/simple_post_images/de_barras_a_la_pedagogia.png
 
 categories:
   - Data Analysis
