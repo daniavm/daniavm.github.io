@@ -28,11 +28,11 @@ tags:
 
 ---
 <div align="justify" markdown="1">
-En el ámbito educativo, la interpretación de datos es una habilidad fundamental para comprender y responder a las dinámicas de aprendizaje y rendimiento estudiantil. Tradicionalmente, los gráficos de barras y torta han sido la herramienta principal para representar información. Sin embargo, según el estudio que he tomado de referencia, estos gráficos pueden no ser suficientes para capturar la complejidad y la variabilidad inherentes a los datos educativos (Weissgerber, T. L., Milic, N. M., Winham, S. J., & Garovic, V. D., 2015). Este artículo profundiza en cómo los gráficos más avanzados pueden proporcionar una visión más completa y matizada para apoyar la toma de decisiones basadas en datos.
+En el ámbito educativo, la interpretación de datos es una habilidad fundamental para comprender y responder a las dinámicas de aprendizaje y rendimiento estudiantil. Tradicionalmente, los gráficos de barras (y circulares) han sido la herramienta principal para representar información. Sin embargo, según el estudio que he tomado de referencia, estos gráficos pueden no ser suficientes para capturar la complejidad y la variabilidad inherentes a los datos educativos (Weissgerber, T. L., Milic, N. M., Winham, S. J., & Garovic, V. D., 2015). Este artículo profundiza en cómo los gráficos más avanzados pueden proporcionar una visión más completa y matizada para apoyar la toma de decisiones basadas en datos.
 
 ## Desafiando la Norma con Gráficos Avanzados
 
-Más allá de los gráficos de barras, existen herramientas gráficas que pueden revelar detalles esenciales ocultos en los datos educativos. Estos gráficos avanzados, como los box plots, violin plots y swarm plots, van más allá de las simples medias, iluminando la variabilidad y las características únicas de los datos. El estudio de Weissgerber TL, Milic NM, Winham SJ y Garovic VD (2015) destacna cómo estos gráficos pueden desentrañar patrones y tendencias que los gráficos de barras tradicionales a menudo pasan por alto. Al adoptar estos enfoques más sofisticados, l@s educadoræs y administradoræs pueden obtener una comprensión más precisa del rendimiento estudiantil y de las necesidades educativas, lo que es crucial para una toma de decisiones pedagógicas más informada y efectiva.
+Más allá de los gráficos de barras, **existen herramientas gráficas que pueden revelar detalles esenciales ocultos en los datos educativos**. Estos gráficos avanzados, como los box plots, violin plots y swarm plots, van más allá de las simples medias, iluminando la variabilidad y las características únicas de los datos. El estudio de Weissgerber TL, Milic NM, Winham SJ y Garovic VD destacan cómo estos gráficos pueden desentrañar patrones y tendencias que los gráficos de barras tradicionales a menudo pasan por alto. Al adoptar estos enfoques más sofisticados, l@s educadoræs y administradoræs pueden obtener una comprensión más precisa del rendimiento estudiantil y de las necesidades educativas, lo que es crucial para una toma de decisiones pedagógicas más informada y efectiva.
 
 ## Explorando la Realidad Educativa con Gráficos Detallados
 
@@ -42,7 +42,7 @@ Más allá de los gráficos de barras, existen herramientas gráficas que pueden
   <a href="/assets/images/simple_post_images/boxplot.png">
     <img src="/assets/images/simple_post_images/boxplot.png" width="100%" alt="Imagen 1: Comparación entre un gráfico de barras tradicional y un box plot, destacando la distribución y variabilidad de los datos.">
   </a>
-  <figcaption>Imagen 1: Comparación entre un gráfico de barras tradicional y un box plot, destacando la distribución y variabilidad de los datos.</figcaption>
+  <figcaption>Imagen 1: Comparación entre un gráfico de barras tradicional y un box plot, destacando la distribución y variabilidad de los datos. Nótese la posibilidad de observar "outlayers" en los datos, algo que es imposible en un gráfico de barras. La línea roja intercalada muestra el nivel de suficiencia mínimo que debería tener cada estudiante.</figcaption>
 </figure>
 
 El box plot muestra la mediana, los cuartiles y los valores atípicos, ofreciendo una comprensión más detallada de la distribución de los datos que el gráfico de barras. Por ejemplo, en un análisis de rendimiento en matemáticas, este gráfico permite a los docentes identificar estudiantes con necesidades específicas de apoyo o enriquecimiento, llevando a estrategias pedagógicas más personalizadas. Los educadores deben observar la posición de la mediana dentro de la caja, ya que un desplazamiento significativo de esta hacia un extremo puede indicar sesgo en los resultados.
@@ -53,10 +53,10 @@ El box plot muestra la mediana, los cuartiles y los valores atípicos, ofreciend
   <a href="/assets/images/simple_post_images/violin.png">
     <img src="/assets/images/simple_post_images/violin.png" width="100%" alt="Imagen 2: Comparación entre un gráfico de barras tradicional y un violin plot, mostrando cómo el violin plot ofrece una visión más detallada de la distribución de datos.">
   </a>
-  <figcaption>Imagen 2: Comparación entre un gráfico de barras tradicional y un violin plot, mostrando cómo el violin plot ofrece una visión más detallada de la distribución de datos.</figcaption>
+  <figcaption>Imagen 2: Comparación entre un gráfico de barras tradicional y un violin plot, mostrando cómo el violin plot ofrece una visión más detallada de la distribución de datos. Aquí los engrosamientos muestran la parte donde los puntajes fueron más abultados (probables) y un alargamiento vertical indicaría una dispersión importante de los resultados, lo que indicaría la necesidad de tomar acciones para un grupo heterogéneo. La línea roja intercalada muestra el nivel de suficiencia mínimo que debería tener cada estudiante.</figcaption>
 </figure>
 
-Al combinar la densidad de los datos con la representación del box plot, el violin plot ofrece una visión más profunda de la distribución de los puntajes. Esto es particularmente útil en la revisión de nuevos métodos de enseñanza, donde dos grupos distintos de rendimiento podrían indicar la necesidad de ajustar el enfoque pedagógico. Los educadores deben prestar atención a las "protuberancias" o anchuras en el gráfico, que indican una mayor concentración de puntajes, crucial para identificar si hay una o más poblaciones predominantes en los resultados de los estudiantes.
+Al combinar la densidad de los datos con la representación del box plot, el violin plot ofrece una visión más profunda de la distribución de los puntajes. Esto es particularmente útil en la revisión de nuevos métodos de enseñanza, donde dos grupos distintos de rendimiento podrían indicar la necesidad de ajustar el enfoque pedagógico. Los educadores deben prestar atención a las "protuberancias" o anchuras en el gráfico, que indican una mayor concentración de puntajes, crucial para identificar si hay una o más poblaciones predominantes en los resultados de los estudiantes y el punto rojo indica la mediana.
 
 ### Gráfico 3: Swarm Plot vs. Gráfico de Barras: 
 
@@ -64,7 +64,7 @@ Al combinar la densidad de los datos con la representación del box plot, el vio
   <a href="/assets/images/simple_post_images/swarm.png">
     <img src="/assets/images/simple_post_images/swarm.png" width="100%" alt="Imagen 3: Comparación entre un gráfico de barras tradicional y un swarm plot, ilustrando la capacidad del swarm plot para mostrar cada punto de dato individualmente.">
   </a>
-  <figcaption>Imagen 3: Comparación entre un gráfico de barras tradicional y un swarm plot, ilustrando la capacidad del swarm plot para mostrar cada punto de dato individualmente.</figcaption>
+  <figcaption>Imagen 3: Comparación entre un gráfico de barras tradicional y un swarm plot, ilustrando la capacidad del swarm plot para mostrar cada punto de dato individualmente, similar a lo que muestra un histograma. A diferencia el gráfico de violín, aquí tenemos una distribución mucho más clara de los resultados indicándonos la posibilidad de ver grupos, outlayers y tendencias. La línea roja intercalada muestra el nivel de suficiencia mínimo que debería tener cada estudiante y el punto rojo indica la mediana.</figcaption>
 </figure>
 
 El swarm plot muestra cada punto de datos individualmente, permitiendo una observación detallada de las variaciones individuales. En el contexto de un proyecto grupal, este gráfico podría revelar cómo diferentes estudiantes contribuyen al trabajo, sugiriendo la necesidad de estrategias para equilibrar la participación. Los profesores deben examinar la distribución y densidad de los puntos para comprender mejor la participación y el rendimiento de cada estudiante.
@@ -75,7 +75,7 @@ El swarm plot muestra cada punto de datos individualmente, permitiendo una obser
   <a href="/assets/images/simple_post_images/strip.png">
     <img src="/assets/images/simple_post_images/strip.png" width="100%" alt="Imagen 4: Comparación entre un gráfico de barras tradicional y un strip plot, destacando cómo el strip plot es más adecuado para grandes volúmenes de datos.">
   </a>
-  <figcaption>Imagen 4: Comparación entre un gráfico de barras tradicional y un strip plot, destacando cómo el strip plot es más adecuado para grandes volúmenes de datos.</figcaption>
+  <figcaption>Imagen 4: Comparación entre un gráfico de barras tradicional y un strip plot, destacando cómo el strip plot es más adecuado para grandes volúmenes de datos. La línea roja intercalada muestra el nivel de suficiencia mínimo que debería tener cada estudiante y el punto rojo indica la mediana.</figcaption>
 </figure>
 
 Similar al swarm plot, pero más adecuado para grandes volúmenes de datos, el strip plot es ideal para analizar tendencias a lo largo del tiempo, como la asistencia o la participación en actividades extracurriculares. En un colegio, este análisis puede ayudar a identificar patrones y tomar medidas para mejorar la participación estudiantil. La dispersión de los puntos puede revelar variabilidad en la asistencia, motivando investigaciones sobre factores que influyen en la participación de los estudiantes.
@@ -86,7 +86,7 @@ Similar al swarm plot, pero más adecuado para grandes volúmenes de datos, el s
   <a href="/assets/images/simple_post_images/boxplotystrip.png">
     <img src="/assets/images/simple_post_images/boxplotystrip.png" width="100%" alt="Imagen 5: Comparación entre un gráfico de barras tradicional y una combinación de gráficos (scatter y box plot), mostrando una visión integrada de los datos.">
   </a>
-  <figcaption>Imagen 5: Comparación entre un gráfico de barras tradicional y una combinación de gráficos (scatter y box plot), mostrando una visión integrada de los datos.</figcaption>
+  <figcaption>Imagen 5: Comparación entre un gráfico de barras tradicional y una combinación de gráficos (scatter y box plot), mostrando una visión integrada de los datos. La línea roja intercalada muestra el nivel de suficiencia mínimo que debería tener cada estudiante y el punto rojo indica la mediana.</figcaption>
 </figure>
 
 Este gráfico combina barras, scatter plot y box plot en un solo eje, proporcionando una comparación visual rica entre estadísticas generales y distribuciones detalladas de los datos. Por ejemplo, al evaluar los resultados de exámenes estandarizados, este gráfico podría usarse para comparar el rendimiento general del colegio con las variaciones individuales de los estudiantes, destacando áreas de enfoque para el desarrollo curricular. La combinación de estos gráficos permite una comprensión más holística de los datos, facilitando una interpretación más rica y contextualizada del rendimiento académico.
