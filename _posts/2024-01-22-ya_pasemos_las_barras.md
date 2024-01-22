@@ -1,5 +1,5 @@
 ---
-title: "Repensando la Visualización de Datos en Educación: Un Análisis Crítico Basado en Evidencia y Estudios"
+title: "Elevando la Comprensión Educativa: Más allá del Gráfico de Barras"
 layout: single
 author_profile: true
 related: true
