@@ -376,6 +376,6 @@ collections:
   sagas:
     output: true
     permalink: /:collection/:path/
-  libros:
+  reviewlibros:
     output: true
     permalink: /:collection/:path/
