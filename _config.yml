@@ -357,6 +357,14 @@ defaults:
       layout: single
       author_profile: false
       share: true
+  # _reviewlibros
+  - scope:
+      path: ""
+      type: reviewlibros
+    values:
+      layout: single
+      author_profile: false
+      share: true
 
 collections:
   portfolio:
@@ -366,5 +374,8 @@ collections:
     output: true
     permalink: /:collection/:path/
   sagas:
+    output: true
+    permalink: /:collection/:path/
+  libros:
     output: true
     permalink: /:collection/:path/
