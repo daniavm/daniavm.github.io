@@ -10,9 +10,8 @@ header:
   # actions:
   #  - label: "Learn More..."
   #    url: "/about/"
-title: ""
-excerpt: >
-  ''
+title: "Principia"
+excerpt: 'En algún cronopunto debemos empezar ...'
 layout: splash
 author_profile: true
 classes: wide
@@ -44,7 +43,16 @@ feature_row:
     excerpt: "Reseñas e impresiones de los libros que he podido abordar desde que creé este espacio en la web"
     url: "/docs/license/"
     btn_class: "btn--primary"
-    btn_label: "Ver más"  
+    btn_label: "Ver más"
+
+feature_row2:
+- image_path: /assets/images/learning_analytics_index.png
+  alt: "Portafolio"
+  title: "Descubre la Magia de los Datos: Visita Mi Portafolio"
+  excerpt: "Sumérgete en mi mundo de Data Science, donde cada proyecto es una historia única contada a través de los datos. ¡Explora, descubre y déjate inspirar!"
+  url: "https://daniavm.github.io/portfolio/"
+  btn_class: "btn--primary"
+  btn_label: "Ir al Portafolio"
 ---
 
 <div style="font-size: 1.563em;">
@@ -58,6 +66,10 @@ feature_row:
 
 <div style="font-size: 1.563em;">
   <i>{% include feature_row id="intro2" type="center" %}</i>
+</div>
+
+<div style="text-align: center;">
+  {% include feature_row2% type="left"}
 </div>
 
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: 'Publicaciones Recientes' }}</h3>
