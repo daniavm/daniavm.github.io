@@ -8,6 +8,8 @@ main:
     url: /learninganalytics/
   - title: "Sagas"
     url: /sagas/
+  - title: "RLibros"
+    url: /reviewlibros/
   - title: "Posts"
     url: /categories/
   - title: "Portfolio"
