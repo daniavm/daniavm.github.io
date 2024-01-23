@@ -359,8 +359,8 @@ defaults:
       share: true
   # _reviewlibros
   - scope:
-      path: ""
-      type: "_posts/_reviewlibros"
+      path: "_posts/_reviewlibros"
+      type: reviewlibros
     values:
       layout: single
       author_profile: false
