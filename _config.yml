@@ -360,7 +360,7 @@ defaults:
   # _reviewlibros
   - scope:
       path: ""
-      type: reviewlibros
+      type: "_posts/_reviewlibros"
     values:
       layout: single
       author_profile: false
