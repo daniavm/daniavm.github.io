@@ -9,7 +9,7 @@ header:
   image: /assets/images/simple_post_images/trilogia_de_la_fundacion_principia.png
   teaser: /assets/images/simple_post_images/trilogia_de_la_fundacion_principia.png
 categories:
-  - Literatura
+  - Reflexiones de libros
 tags:
   - Isaac Asimov
   - Ciencia Ficción
