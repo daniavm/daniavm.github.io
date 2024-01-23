@@ -5,17 +5,23 @@ author_profile: true
 related: true
 comments: true
 toc: false
+
+classes: wide
+
 header:
   image: /assets/images/simple_post_images/banner_el_camino_de_los_reyes.png
   teaser: /assets/images/simple_post_images/banner_el_camino_de_los_reyes.png
+
 categories:
-  - Fantasía Épica
+  - Reflexiones de libros
+
 tags:
   - Brandon Sanderson
   - El Archivo de las Tormentas
   - Fantasía
   - Aventura
   - Aprendanza
+  - Fantasía Épica
 ---
 <div markdown="1" style="text-align: justify;">
 La física y la astronomía resuenan con patrones y leyes que rigen el cosmos; de manera similar, "El Camino de los Reyes" de Brandon Sanderson resuena con las vibraciones de la existencia humana. En mi día a día, sumergido en el flujo de datos y códigos, esta obra de fantasía se alza como un recordatorio constante de que el aprendizaje es una aventura continua, no un simple quehacer o una meta que cumplir. Los personajes se convierten en mentores silenciosos cuyas voces se funden con el susurro de mi computador y los vínculos que tengo con quienes me rodean, impartiendo lecciones de resiliencia, ética y el poder de la narrativa.
