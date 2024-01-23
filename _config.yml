@@ -13,6 +13,7 @@
 include: ["_pages"]
 include: ["_portfolio"]
 include: ["_posts"]
+include: ["_reviewlibros"]
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
@@ -359,7 +360,7 @@ defaults:
       share: true
   # _reviewlibros
   - scope:
-      path: "_pages/reviewlibros.md"
+      path: ""
       type: reviewlibros
     values:
       layout: single
