@@ -1,7 +1,7 @@
 ---
 title: Review de Libros
 layout: collection
-permalink: _posts/_reviewlibros
+permalink: _posts/reviewlibros/
 collection: reviewlibros
 entries_layout: grid
 classes: wide

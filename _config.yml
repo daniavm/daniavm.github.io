@@ -155,7 +155,7 @@ footer:
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/principia_hacia_la_aprendanza/"
 
-
+ 
 # Reading Files
 include:
   - .htaccess
