@@ -10,7 +10,7 @@ header:
   teaser: /assets/images/simple_post_images/banner_escuadron.png
 
 categories:
-  - Literatura
+  - Reflexiones de libros
 tags:
   - Brandon Sanderson
   - Ciencia Ficción
