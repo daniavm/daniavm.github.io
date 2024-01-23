@@ -359,7 +359,7 @@ defaults:
       share: true
   # _reviewlibros
   - scope:
-      path: "_posts/_reviewlibros"
+      path: "_pages/reviewlibros.md"
       type: reviewlibros
     values:
       layout: single
