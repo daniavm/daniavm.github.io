@@ -9,8 +9,8 @@ toc_sticky: true
 author_profile: true
 
 header:
-  image: /assets/images/portfolio_images/timesheetJsBanner.jpg
-  teaser: assets/images/portfolio_images/timesheetJsBanner.jpg
+  image: /assets/images/portfolio_images/conductual_banner.png
+  teaser: assets/images/portfolio_images/conductual_banner.png
 ---
 
 <div align="justify" markdown="1">
