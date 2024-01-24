@@ -58,6 +58,19 @@ Desarrollé un dashboard en Google Looker que permitía a los docentes visualiza
   <figcaption>Imagen 3: Vista del dashboard interactivo en Google Looker.</figcaption>
 </figure>
 
+<figure class="third">
+  <a href="/assets/images/portfolio_images/registros_conductuales/looker1.png">
+  <img src="/assets/images/portfolio_images/registros_conductuales/looker1.png"></a>
+
+  <a href="/assets/images/portfolio_images/registros_conductuales/looker2.png">
+  <img src="/assets/images/portfolio_images/registros_conductuales/looker2.png"></a>
+
+  <a href="/assets/images/portfolio_images/registros_conductuales/looker3.png">
+  <img src="/assets/images/portfolio_images/registros_conductuales/looker3.png"></a>
+
+  <figcaption>Imagen 3, 4 y 5: Vista del dashboard interactivo en Google Looker (proximamente se podrá ver un demo en este post)</figcaption>
+</figure>
+
 ### Script Personalizado en Google Sheets
 Para mejorar aún más la eficiencia del proceso, programé un script personalizado en Google Sheets que:
 - **Automatizaba la Clasificación de Registros:** El script categorizaba automáticamente el comportamiento estudiantil según los criterios del reglamento de convivencia del colegio.
