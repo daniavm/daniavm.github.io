@@ -76,7 +76,7 @@ Para mejorar aún más la eficiencia del proceso, programé un script personaliz
   <a href="/assets/images/portfolio_images/registros_conductuales/agrupamiento.png">
   <img src="/assets/images/portfolio_images/registros_conductuales/agrupamiento.png"></a>
 
-  <figcaption>Imagen 4 y 5: (izquierda) Ejemplo del script personalizado en Google Sheets para la automatización de procesos. (derecha) Resultado del agrupamiento para posterior revisión y envío automático a quienes corresponda la información.</figcaption>
+  <figcaption>Imagen 6 y 7: (izquierda) Ejemplo del script personalizado en Google Sheets para la automatización de procesos. (derecha) Resultado del agrupamiento para posterior revisión y envío automático a quienes corresponda la información.</figcaption>
 </figure>
 
 
