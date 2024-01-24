@@ -51,13 +51,6 @@ Desarrollé un dashboard en Google Looker que permitía a los docentes visualiza
 - **Visualización de Datos:** El dashboard presentaba los datos de manera clara y comprensible, facilitando la identificación de patrones y tendencias conductuales.
 - **Personalización según el Reglamento de Convivencia:** Alineé el dashboard con el reglamento de convivencia del colegio, asegurando que la información presentada fuera relevante y directamente aplicable en el contexto escolar.
 
-<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <a href="/assets/images/portfolio_images/dashboard_looker.png">
-    <img src="/assets/images/portfolio_images/dashboard_looker.png" width="100%"  alt="Imagen del dashboard en Google Looker">
-  </a>
-  <figcaption>Imagen 3: Vista del dashboard interactivo en Google Looker.</figcaption>
-</figure>
-
 <figure class="third">
   <a href="/assets/images/portfolio_images/registros_conductuales/looker1.png">
   <img src="/assets/images/portfolio_images/registros_conductuales/looker1.png"></a>
@@ -76,19 +69,12 @@ Para mejorar aún más la eficiencia del proceso, programé un script personaliz
 - **Automatizaba la Clasificación de Registros:** El script categorizaba automáticamente el comportamiento estudiantil según los criterios del reglamento de convivencia del colegio.
 - **Generaba Alertas Automáticas:** Se configuraron alertas automáticas para informar a los profesores jefe y coordinadores sobre casos de riesgo, lo que permitió una intervención temprana y más efectiva.
 
-<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <a href="/assets/images/portfolio_images/registros_conductuales/script.png">
-    <img src="/assets/images/portfolio_images/registros_conductuales/script.png" width="100%"  alt="Imagen del script personalizado en Google Sheets">
-  </a>
-  <figcaption>Imagen 4: Ejemplo del script personalizado en Google Sheets para la automatización de procesos.</figcaption>
-</figure>
-
 <figure class="half">
   <a href="/assets/images/portfolio_images/registros_conductuales/script.png">
   <img src="/assets/images/portfolio_images/registros_conductuales/script.png"></a>
 
   <a href="/assets/images/portfolio_images/registros_conductuales/agrupamiento.png">
-  <img src="assets/images/portfolio_images/registros_conductuales/agrupamiento.png"></a>
+  <img src="/assets/images/portfolio_images/registros_conductuales/agrupamiento.png"></a>
 
   <figcaption>Imagen 4 y 5: (izquierda) Ejemplo del script personalizado en Google Sheets para la automatización de procesos. (derecha) Resultado del agrupamiento para posterior revisión y envío automático a quienes corresponda la información.</figcaption>
 </figure>
