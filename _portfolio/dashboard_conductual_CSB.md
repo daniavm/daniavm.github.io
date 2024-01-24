@@ -16,55 +16,72 @@ header:
 <div align="justify" markdown="1">
 
 ## Introducción
-En 2023, asumí el reto de transformar la gestión de registros conductuales en el Colegio San Benito, buscando una mejora integral que involucrara tanto la eficiencia administrativa como la atención pedagógica.
+En 2023, tomé la iniciativa de abordar un desafío significativo en el Colegio San Benito: la mejora del sistema de gestión de registros conductuales. Este proyecto no solo buscaba optimizar un proceso administrativo, sino también potenciar el seguimiento pedagógico, respetando la cultura y los mecanismos establecidos en el colegio.
 
-## El Problema y el Contexto Institucional
-La gestión tradicional de registros conductuales mediante correos electrónicos semanales y planillas de Excel presentaba desafíos significativos. Comprender y respetar los procesos existentes en el colegio fue esencial para formular una solución efectiva.
+## El Problema
+El colegio se enfrentaba a un proceso de gestión de registros conductuales obsoleto y poco eficiente. Cada semana, se enviaban correos electrónicos a los docentes con adjuntos de planillas de Excel que contenían miles de registros de comportamiento estudiantil. Este sistema presentaba varios desafíos:
+- **Volumen de Datos Inmanejable:** Las planillas incluían hasta 80,000 registros, lo que las hacía prácticamente imposibles de manejar eficientemente.
+- **Falta de Capacitación en Herramientas de Análisis de Datos:** Muchos docentes no estaban familiarizados con Excel, lo que dificultaba aún más el análisis de los datos.
+- **Ineficiencia en el Seguimiento:** La sobrecarga de información impedía un seguimiento conductual efectivo y oportuno de los estudiantes.
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/portfolio_images/correo_semanal.png">
     <img src="/assets/images/portfolio_images/correo_semanal.png" width="100%"  alt="Imagen del correo que se enviaba semanalmente">
   </a>
-  <figcaption>Imagen 1: Correo original enviado semanalmente con la planilla de Excel.</figcaption>
+  <figcaption>Imagen 1: Ejemplo del correo electrónico semanal con la planilla de Excel adjunta.</figcaption>
 </figure>
 
-## Innovación y Automatización
-1. **Automatización con Google Sheets:** Implementamos una planilla de Google Sheets, eligiendo esta herramienta por su accesibilidad y coste cero.
-2. **Dashboard en Google Looker:** Diseñé un dashboard en Google Looker para facilitar el análisis de los datos conductuales de manera intuitiva y eficiente.
+## Desarrollo de la Solución
+Ante este panorama, mi enfoque se centró en desarrollar una solución que no solo abordara la eficiencia administrativa sino que también apoyara de manera más efectiva el seguimiento y bienestar estudiantil.
+
+### Automatización con Google Sheets
+El primer paso fue reemplazar las planillas de Excel por una planilla de Google Sheets. Este cambio trajo varios beneficios:
+- **Accesibilidad y Facilidad de Uso:** Google Sheets es una herramienta más accesible y fácil de usar, lo que redujo la barrera de entrada para los docentes menos familiarizados con el análisis de datos.
+- **Actualización en Tiempo Real:** Permitió que los datos se actualizaran en tiempo real, ofreciendo una visión más actualizada del comportamiento estudiantil.
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/portfolio_images/google_sheets.png">
     <img src="/assets/images/portfolio_images/google_sheets.png" width="100%"  alt="Imagen de la planilla de Google Sheets">
   </a>
-  <figcaption>Imagen 2: Planilla de Google Sheets utilizada para recopilar los datos.</figcaption>
+  <figcaption>Imagen 2: Planilla de Google Sheets utilizada para recopilar y actualizar los datos conductuales.</figcaption>
 </figure>
+
+### Dashboard Interactivo en Google Looker
+Desarrollé un dashboard en Google Looker que permitía a los docentes visualizar y analizar los datos de manera intuitiva y dinámica:
+- **Visualización de Datos:** El dashboard presentaba los datos de manera clara y comprensible, facilitando la identificación de patrones y tendencias conductuales.
+- **Personalización según el Reglamento de Convivencia:** Alineé el dashboard con el reglamento de convivencia del colegio, asegurando que la información presentada fuera relevante y directamente aplicable en el contexto escolar.
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/portfolio_images/dashboard_looker.png">
     <img src="/assets/images/portfolio_images/dashboard_looker.png" width="100%"  alt="Imagen del dashboard en Google Looker">
   </a>
-  <figcaption>Imagen 3: Vista del dashboard creado en Google Looker.</figcaption>
+  <figcaption>Imagen 3: Vista del dashboard interactivo en Google Looker.</figcaption>
 </figure>
 
-## Script Personalizado en Google Sheets
-Desarrollé un script en Google Sheets que se alinea con el reglamento de convivencia del colegio. Este script clasifica el estado conductual de los estudiantes y automatiza la identificación temprana de casos de riesgo, así como el envío de alertas a profesores y coordinadores, reduciendo significativamente las horas de trabajo y el papeleo.
+### Script Personalizado en Google Sheets
+Para mejorar aún más la eficiencia del proceso, programé un script personalizado en Google Sheets que:
+- **Automatizaba la Clasificación de Registros:** El script categorizaba automáticamente el comportamiento estudiantil según los criterios del reglamento de convivencia del colegio.
+- **Generaba Alertas Automáticas:** Se configuraron alertas automáticas para informar a los profesores jefe y coordinadores sobre casos de riesgo, lo que permitió una intervención temprana y más efectiva.
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/portfolio_images/script_google_sheets.png">
     <img src="/assets/images/portfolio_images/script_google_sheets.png" width="100%"  alt="Imagen del script personalizado en Google Sheets">
   </a>
-  <figcaption>Imagen 4: Representación del script personalizado en Google Sheets.</figcaption>
+  <figcaption>Imagen 4: Ejemplo del script personalizado en Google Sheets para la automatización de procesos.</figcaption>
 </figure>
 
 ## Impacto Pedagógico y Operacional
-La automatización y la innovación introducidas mejoraron significativamente el monitoreo y el seguimiento de los estudiantes, permitiendo intervenciones pedagógicas más oportunas y eficaces.
+La implementación de estas soluciones no solo optimizó la eficiencia administrativa, sino que también tuvo un profundo impacto pedagógico:
+- **Intervenciones Oportunas y Efectivas:** La capacidad de identificar rápidamente casos de riesgo y comportamientos estudiantiles problemáticos permitió a los docentes y coordinadores actuar de manera más informada y oportuna.
+- **Reducción de Carga Administrativa:** La automatización de la clasificación y el reporte de datos liberó tiempo valioso para los docentes, permitiéndoles centrarse más en el apoyo directo a los estudiantes.
 
 ## Resultados y Reflexión Institucional
-- **Eficiencia Mejorada:** Se redujo el tiempo dedicado al procesamiento de información, lo que refleja el impacto positivo de la solución implementada.
-- **Adopción del Sistema:** La integración exitosa de la herramienta en los procesos del colegio demuestra un avance significativo hacia la innovación y la mejora continua.
+- **Eficiencia Mejorada:** Se logró una reducción significativa en el tiempo dedicado al procesamiento y análisis de información conductual.
+- **Adopción del Sistema:** La integración del dashboard y el script personalizado en las rutinas diarias del colegio reflejó un cambio significativo hacia prácticas más innovadoras y efectivas.
+- **Costo-Efectividad:** La solución implementada utilizó herramientas gratuitas (Google Sheets y Looker), demostrando que la innovación no siempre requiere de grandes inversiones.
 
-## Conclusión y Compromiso con la Eficiencia
-Este proyecto destacó mi compromiso con la eficiencia y el buen funcionamiento del colegio. La transformación de un proceso manual en una solución digital automatizada ha mejorado nuestra capacidad para apoyar el desarrollo y bienestar de los estudiantes, manteniendo al mismo tiempo un enfoque consciente en las necesidades y la realidad institucional.
+## Conclusión y Compromiso con la Mejora Continua
+Este proyecto destacó mi compromiso no solo con la eficiencia y la innovación, sino también con el bienestar y desarrollo de los estudiantes. Al transformar un proceso manual en una solución digital automatizada y alineada con las políticas del colegio, hemos mejorado significativamente nuestra capacidad de apoyo estudiantil, manteniendo un enfoque consciente en las necesidades y la realidad institucional.
 
 </div>
 
