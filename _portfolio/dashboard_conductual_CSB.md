@@ -70,7 +70,7 @@ Para mejorar aún más la eficiencia del proceso, programé un script personaliz
   <figcaption>Imagen 4: Ejemplo del script personalizado en Google Sheets para la automatización de procesos.</figcaption>
 </figure>
 
-<figure class="half" style = "text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+<figure class="half">
   <a href="/assets/images/portfolio_images/registros_conductuales/script.png">
   <img src="/assets/images/portfolio_images/registros_conductuales/script.png"></a>
 
