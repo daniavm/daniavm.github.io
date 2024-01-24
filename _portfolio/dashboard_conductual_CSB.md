@@ -70,6 +70,17 @@ Para mejorar aún más la eficiencia del proceso, programé un script personaliz
   <figcaption>Imagen 4: Ejemplo del script personalizado en Google Sheets para la automatización de procesos.</figcaption>
 </figure>
 
+<figure class="half" style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
+  <a href="/assets/images/portfolio_images/registros_conductuales/script.png">
+  <img src="/assets/images/portfolio_images/registros_conductuales/script.png"></a>
+
+  <a href="/assets/images/portfolio_images/registros_conductuales/agrupamiento.png">
+  <img src="assets/images/portfolio_images/registros_conductuales/agrupamiento.png"></a>
+
+  <figcaption>Imagen 4 y 5: (izquierda) Ejemplo del script personalizado en Google Sheets para la automatización de procesos. (derecha) Resultado del agrupamiento para posterior revisión y envío automático a quienes corresponda la información.</figcaption>
+</figure>
+
+
 ## Impacto Pedagógico y Operacional
 La implementación de estas soluciones no solo optimizó la eficiencia administrativa, sino que también tuvo un profundo impacto pedagógico:
 - **Intervenciones Oportunas y Efectivas:** La capacidad de identificar rápidamente casos de riesgo y comportamientos estudiantiles problemáticos permitió a los docentes y coordinadores actuar de manera más informada y oportuna.
