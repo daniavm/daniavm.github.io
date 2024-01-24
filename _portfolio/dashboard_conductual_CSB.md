@@ -16,10 +16,10 @@ header:
 <div align="justify" markdown="1">
 
 ## Introducción
-En 2023, enfrenté el desafío de mejorar la gestión de registros conductuales en el Colegio San Benito, con el objetivo de simplificar y automatizar este proceso, aumentando así la eficiencia y el impacto pedagógico.
+En 2023, abordé el desafío de transformar la gestión de registros conductuales en el Colegio San Benito, con el enfoque de mejorar la eficiencia administrativa y potenciar el seguimiento pedagógico, respetando y comprendiendo los mecanismos preestablecidos en el colegio.
 
-## El Problema
-La gestión tradicional de registros conductuales en el colegio se hacía mediante el envío semanal de correos electrónicos con extensas planillas de Excel. Este método resultaba ineficiente y poco práctico, sobrecargando a los profesores y limitando su capacidad para actuar oportunamente ante las necesidades de los estudiantes.
+## El Problema y Comprensión del Contexto
+La gestión tradicional de registros conductuales se realizaba mediante el envío semanal de correos con planillas de Excel. Este método, aunque familiar, era ineficiente y limitaba la capacidad de respuesta rápida ante las necesidades de los estudiantes. Comprender este proceso y su impacto en la dinámica del colegio fue crucial para proponer una solución adecuada.
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/portfolio_images/correo_semanal.png">
@@ -28,10 +28,10 @@ La gestión tradicional de registros conductuales en el colegio se hacía median
   <figcaption>Imagen 1: Correo original enviado semanalmente con la planilla de Excel.</figcaption>
 </figure>
 
-## La Solución
-La solución consistió en varios pasos clave:
-1. **Automatización con Google Sheets:** Implementamos una planilla de Google Sheets que se actualizaba semanalmente con los datos del archivo Excel. Este cambio redujo la carga de trabajo del personal y mejoró la precisión de los datos.
-2. **Dashboard Interactivo en Google Looker:** Diseñé un dashboard intuitivo en Google Looker que permitía a los educadores analizar rápidamente los comportamientos estudiantiles, identificando patrones y áreas de preocupación.
+## La Solución y Conciencia Institucional
+La solución que propuse tuvo en cuenta no solo la eficiencia técnica sino también la integración con los procesos ya existentes en el colegio:
+1. **Automatización con Google Sheets:** Se optó por Google Sheets, una herramienta gratuita y accesible, facilitando la transición sin incurrir en costos adicionales ni en necesidad de capacitaciones extras.
+2. **Dashboard en Google Looker:** El diseño del dashboard en Google Looker se hizo pensando en mantener una interfaz familiar para los usuarios, permitiendo una adopción más natural y sin resistencias.
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
   <a href="/assets/images/portfolio_images/google_sheets.png">
@@ -47,15 +47,15 @@ La solución consistió en varios pasos clave:
   <figcaption>Imagen 3: Vista del dashboard creado en Google Looker.</figcaption>
 </figure>
 
-## Impacto Pedagógico
-La implementación de esta solución tuvo un impacto significativo en la gestión pedagógica. Los educadores ahora pueden identificar y responder a las necesidades de los estudiantes de manera más rápida y efectiva, mejorando las intervenciones y el apoyo al desarrollo estudiantil.
+## Impacto Pedagógico y Operacional
+La implementación de esta solución no solo mejoró la eficiencia en la gestión de registros, sino que también permitió un monitoreo más dinámico y actualizado de los comportamientos estudiantiles. La reducción de la necesidad de reuniones presenciales para el papeleo o gestión se tradujo en más tiempo para la interacción directa con los estudiantes.
 
-## Resultados
-- **Eficiencia Mejorada:** El tiempo dedicado al procesamiento de información se redujo de 4 horas semanales a cero.
-- **Adopción del Sistema:** El dashboard fue integrado como una herramienta oficial en el colegio, mejorando la comunicación y colaboración entre los educadores.
+## Resultados y Reflexión Institucional
+- **Eficiencia Mejorada:** El tiempo de procesamiento de información se redujo significativamente, mostrando el impacto de la solución propuesta.
+- **Adopción del Sistema:** La integración de la herramienta como parte de los procesos del colegio refleja un compromiso con la mejora continua y la innovación educativa.
 
-## Conclusión
-Este proyecto no solo optimizó un proceso administrativo clave en el Colegio San Benito, sino que también elevó la calidad del seguimiento pedagógico. Al transformar un proceso manual en una solución digital automatizada, hemos mejorado significativamente nuestra capacidad para apoyar el desarrollo y bienestar de nuestros estudiantes.
+## Conclusión y Compromiso Personal
+Este proyecto destacó mi compromiso con el buen funcionamiento y la eficiencia en mi lugar de trabajo. Al transformar un proceso manual en una solución digital automatizada, demostramos que es posible mejorar significativamente nuestra capacidad para apoyar el desarrollo y bienestar de nuestros estudiantes, manteniendo una conciencia clara de la realidad institucional.
 
 </div>
 
