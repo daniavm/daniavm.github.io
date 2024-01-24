@@ -9,8 +9,8 @@ toc_sticky: true
 author_profile: true
 
 header:
-  image: /assets/images/portfolio_images/conductual_banner.png
-  teaser: assets/images/portfolio_images/conductual_banner.png
+  image: /assets/images/portfolio_images/registros_conductuales/conductual_banner.png
+  teaser: assets/images/portfolio_images/registros_conductuales/conductual_banner.png
 ---
 
 <div align="justify" markdown="1">
@@ -25,8 +25,8 @@ El colegio se enfrentaba a un proceso de gestión de registros conductuales obso
 - **Ineficiencia en el Seguimiento:** La sobrecarga de información impedía un seguimiento conductual efectivo y oportuno de los estudiantes.
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <a href="/assets/images/portfolio_images/correo_semanal.png">
-    <img src="/assets/images/portfolio_images/correo_semanal.png" width="100%"  alt="Imagen del correo que se enviaba semanalmente">
+  <a href="/assets/images/portfolio_images/registros_conductuales/email.png">
+    <img src="/assets/images/portfolio_images/registros_conductuales/email.png" width="100%"  alt="Imagen del correo que se enviaba semanalmente">
   </a>
   <figcaption>Imagen 1: Ejemplo del correo electrónico semanal con la planilla de Excel adjunta.</figcaption>
 </figure>
@@ -40,8 +40,8 @@ El primer paso fue reemplazar las planillas de Excel por una planilla de Google 
 - **Actualización en Tiempo Real:** Permitió que los datos se actualizaran en tiempo real, ofreciendo una visión más actualizada del comportamiento estudiantil.
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <a href="/assets/images/portfolio_images/google_sheets.png">
-    <img src="/assets/images/portfolio_images/google_sheets.png" width="100%"  alt="Imagen de la planilla de Google Sheets">
+  <a href="/assets/images/portfolio_images/registros_conductuales/planilla.png">
+    <img src="/assets/images/portfolio_images/registros_conductuales/planilla.png" width="100%"  alt="Imagen de la planilla de Google Sheets">
   </a>
   <figcaption>Imagen 2: Planilla de Google Sheets utilizada para recopilar y actualizar los datos conductuales.</figcaption>
 </figure>
@@ -64,8 +64,8 @@ Para mejorar aún más la eficiencia del proceso, programé un script personaliz
 - **Generaba Alertas Automáticas:** Se configuraron alertas automáticas para informar a los profesores jefe y coordinadores sobre casos de riesgo, lo que permitió una intervención temprana y más efectiva.
 
 <figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.8em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <a href="/assets/images/portfolio_images/script_google_sheets.png">
-    <img src="/assets/images/portfolio_images/script_google_sheets.png" width="100%"  alt="Imagen del script personalizado en Google Sheets">
+  <a href="/assets/images/portfolio_images/registros_conductuales/script.png">
+    <img src="/assets/images/portfolio_images/registros_conductuales/script.png" width="100%"  alt="Imagen del script personalizado en Google Sheets">
   </a>
   <figcaption>Imagen 4: Ejemplo del script personalizado en Google Sheets para la automatización de procesos.</figcaption>
 </figure>
