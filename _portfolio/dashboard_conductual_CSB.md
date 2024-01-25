@@ -1,5 +1,5 @@
 ---
-title: "Innovación en Colegio San Benito: Automatizando Registros Conductuales con Google Looker"
+title: "Automatización de Registros Conductuales con Google Looker"
 excerpt: "Descubre cómo la digitalización transformó el manejo de registros conductuales en el Colegio San Benito, mejorando la eficiencia y la toma de decisiones."
 layout: single
 toc: true
