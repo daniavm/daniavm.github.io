@@ -78,10 +78,10 @@ El Raincloud Plot tiene diversas aplicaciones en el ámbito educativo, mejorando
 Para facilitar la creación de Raincloud Plots, ofrezco dos herramientas accesibles:
 
 1. **Cuaderno de Google Colab**: Diseñado para entusiastas de la programación y educadores, este cuaderno simplifica la creación de Raincloud Plots. Incluso quienes tienen experiencia limitada en programación pueden usarlo, integrándolo con datos de Google Sheets.
-   - Accede aquí: [Cuaderno de Google Colab para Raincloud Plot](https://colab.research.google.com/drive/1ohITDbRnslpJm3btjmyXsBUozb_bhVrV?usp=sharing).
+   - Accede aquí: [Cuaderno de Google Colab para Raincloud Plot](https://colab.research.google.com/drive/1ohITDbRnslpJm3btjmyXsBUozb_bhVrV?usp=sharing){:target="_blank"}.
 
 2. **Datatab.net**: Para aquellos que buscan una solución más directa sin programación, esta herramienta online permite generar Raincloud Plots fácilmente.
-   - Visita Datatab.net: [Crear Raincloud Plots Online](https://datatab.net/statistics-calculator/charts).
+   - Visita Datatab.net: [Crear Raincloud Plots Online](https://datatab.net/statistics-calculator/charts){:target="_blank"}.
 
 Estas herramientas hacen que el Raincloud Plot sea accesible y aplicable para una amplia gama de usuarios en el ámbito educativo.
 
@@ -103,6 +103,6 @@ Las herramientas de visualización como el Raincloud Plot se pueden valorar en e
 
 **Referencias**:
 
-- Allen, M., Poggiali, D., Whitaker, K., Marshall, T. R., & Kievit, R. A. (2019). "Raincloud plots: a multi-platform tool for robust data visualization". Wellcome Open Research, 4:63. [Consultar el estudio](https://wellcomeopenresearch.org/articles/4-63/v1).
+- Allen, M., Poggiali, D., Whitaker, K., Marshall, T. R., & Kievit, R. A. (2019). "Raincloud plots: a multi-platform tool for robust data visualization". Wellcome Open Research, 4:63. [Consultar el estudio](https://wellcomeopenresearch.org/articles/4-63/v1){:target="_blank"}.
 
 </div>
