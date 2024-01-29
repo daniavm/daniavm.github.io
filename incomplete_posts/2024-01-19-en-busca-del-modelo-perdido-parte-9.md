@@ -1,5 +1,5 @@
 ---
-title: "En Busca del Modelo Perdido - Parte 8: El Laberinto de XGBoost"
+title: "En Busca del Modelo Perdido - Parte 9: Navegando el Laberinto de Hiperparámetros de XGBoost"
 layout: single
 author_profile: false
 related: true
@@ -31,13 +31,9 @@ tags:
 
 ---
 <div align="justify" markdown="1">
-Título del Artículo: "En Busca del Modelo Perdido - Parte 9: Navegando el Laberinto de Hiperparámetros de XGBoost"
-
-Introducción
-
 En nuestra inquebrantable búsqueda del modelo perfecto para predecir los resultados de la prueba PAES, nos enfrentamos a uno de los desafíos más complejos y enigmáticos: la optimización de hiperparámetros en XGBoost. Este capítulo nos sumerge en el laberinto multidimensional de hiperparámetros, donde la mente humana lucha por visualizar la solución debido a la complejidad matemática que subyace en este problema.
 
-Hiperparámetros: El Laberinto Multidimensional
+## Hiperparámetros: El Laberinto Multidimensional
 
 Imagina que te encuentras en un terreno montañoso, buscando el punto más bajo, el "mínimo", en este terreno irregular. Cada metro cuadrado representa una combinación única de hiperparámetros que influyen en el rendimiento de tu modelo. Al principio, estás en un mundo bidimensional, como un plano extenso. En este mundo, encontrar un mínimo es relativamente sencillo, pero es como explorar un corte de pastel sin saber si es el único.
 
