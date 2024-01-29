@@ -47,9 +47,9 @@ Cada hiperparámetro es una dimensión adicional en este mundo, y encontrar el m
 
 En esta travesía, nos encontramos en la encrucijada de elegir entre métodos que nos ayudarán a navegar este laberinto de manera eficiente. La elección de la herramienta adecuada es fundamental, ya que nos permitirá explorar este laberinto multidimensional con inteligencia y nos acercará cada vez más a encontrar el modelo perdido que buscamos.
 
-<figure style = "float: center; width: 100%; text-align: center; font-style: italic; font-size: 0.7em; text-indent: 0; margin: 0.6em; padding: 0.8em;">
-  <embed type="text/html" src="/assets/images/simple_post_images/minimos_superficie.html" width="100%"  alt="Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos. ">
-  <figcaption>Imagen 3: Heatmap en que se muestra el resultado del experimento en que se varían la cantidad de folds y estimadores para calcular el MAE de los distintos modelos predictivos.</figcaption>
+<figure style = "float: center; width: 100%; text-align: center; object-fit: contain;">
+  <embed type="text/html" src="/assets/images/simple_post_images/minimos_superficie.html" width="100%" height="50%" alt="Imagen 1: Heatmap del Análisis de MAE.">
+  <figcaption>Imagen 1 (visible en computadores): Heatmap interactivo que muestra cómo varían los valores de MAE con diferentes combinaciones de 'n_estimators' y 'num_folds'.</figcaption>
 </figure>
 
 Los Tesoros Escondidos: Nuestros Hiperparámetros
