@@ -48,7 +48,7 @@ Cada hiperparámetro es una dimensión adicional en este mundo, y encontrar el m
 En esta travesía, nos encontramos en la encrucijada de elegir entre métodos que nos ayudarán a navegar este laberinto de manera eficiente. La elección de la herramienta adecuada es fundamental, ya que nos permitirá explorar este laberinto multidimensional con inteligencia y nos acercará cada vez más a encontrar el modelo perdido que buscamos.
 
 <figure style = "float: center; width: 100%; text-align: center; object-fit: contain;">
-  <embed type="text/html" src="/assets/images/simple_post_images/minimos_superficie.html" width="100%" alt="Imagen 1: Heatmap del Análisis de MAE.">
+  <embed type="text/html" src="/assets/images/simple_post_images/minimos_superficie.html" width="90%" alt="Imagen 1: Heatmap del Análisis de MAE.">
   <figcaption>Imagen 1 (visible en computadores): Heatmap interactivo que muestra cómo varían los valores de MAE con diferentes combinaciones de 'n_estimators' y 'num_folds'.</figcaption>
 </figure>
 
