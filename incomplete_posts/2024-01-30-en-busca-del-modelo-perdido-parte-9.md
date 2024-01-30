@@ -13,8 +13,8 @@ sidebar:
 classes: wide
 
 header:
-  image: /assets/images/simple_post_images/minimos_superficie.png
-  teaser: /assets/images/simple_post_images/minimos_superficie.png
+  image: /assets/images/PAES_prediction_model/busca_del_modelo_perdido_parte_9.png
+  teaser: /assets/images/PAES_prediction_model/busca_del_modelo_perdido_parte_9.png
 
 categories:
   - Machine Learning

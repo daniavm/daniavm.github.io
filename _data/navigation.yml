@@ -41,6 +41,8 @@ modelo_perdido:
         url: /_posts/en_busca_del_modelo_perdido/2024-01-17-en-busca-del-modelo-perdido-parte-7
       - title: "Parte 8: El Laberinto de XGBoost"
         url: /_posts/en_busca_del_modelo_perdido/2024-01-19-en-busca-del-modelo-perdido-parte-8
+      - title: "Parte 9: Explorando el Terreno de Hiperparámetros con Grid Search e Hyperopt"
+        url: /_posts/en_busca_del_modelo_perdido/2024-01-30-en-busca-del-modelo-perdido-parte-9.md
 
 historias_de_clase:
   - title: Mis Recuerdos
