@@ -8,6 +8,8 @@ toc: false
 
 classes: wide
 
+collections: 
+
 header:
   image: /assets/images/simple_post_images/banner_el_camino_de_los_reyes.png
   teaser: /assets/images/simple_post_images/banner_el_camino_de_los_reyes.png
