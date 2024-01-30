@@ -1,11 +1,11 @@
 ---
-title: "En Busca del Modelo Perdido - Parte 9: Navegando el Laberinto de Hiperparámetros de XGBoost"
+title: "En Busca del Modelo Perdido - Parte 9: Explorando el Terreno de Hiperparámetros con Grid Search e Hyperopt"
 layout: single
 author_profile: false
 related: true
 comments: true
 toc: false
-date: 2024-01-19T11:48:41-04:00
+date: 2024-01-30T11:48:41-04:00
 
 sidebar:
   nav: "modelo_perdido"
@@ -13,8 +13,8 @@ sidebar:
 classes: wide
 
 header:
-  image: /assets/images/PAES_prediction_model/busca_del_modelo_perdido_parte_8.png
-  teaser: /assets/images/PAES_prediction_model/busca_del_modelo_perdido_parte_8.png
+  image: /assets/images/simple_post_images/minimos_superficie.png
+  teaser: /assets/images/simple_post_images/minimos_superficie.png
 
 categories:
   - Machine Learning
@@ -22,14 +22,14 @@ categories:
 tags:
   - XGBoost
   - Hiperparámetros
-  - Sobreajuste
-  - Validación Cruzada
-  - Predicción de PAES
+  - Optimización
+  - Grid Search
+  - Hyperopt
   - Aprendizaje Automático
   - Análisis de Datos
-  - Técnicas de Boosting
 
 ---
+
 <div align="justify" markdown="1">
 En nuestra inquebrantable búsqueda del mejor modelo para predecir los resultados de la prueba PAES, nos enfrentamos a uno de los desafíos más complejos y enigmáticos: la optimización de hiperparámetros en XGBoost. En este capítulo abordaremos los mecanismos que tenemos a disposición para buscar combinaciones de hiperparámetros que nos ayuden a encontrar el mejor modelo de predicción después de adentrarnos en este laberinto multidimensional, donde las herramientas gráficas son insuficientes pero nuestra imaginación y desarrollo de las matemáticas hacen la diferencia para lograr el objetivo.
 
@@ -50,8 +50,8 @@ Encontrar el mínimo absoluto en un espacio multidimensional es un desafío comp
 
 En esta travesía, nos encontramos en la encrucijada de elegir entre métodos que nos ayudarán a navegar este laberinto de manera eficiente. La elección de la herramienta adecuada es fundamental, ya que nos permitirá explorar este laberinto multidimensional con inteligencia y nos acercará cada vez más a encontrar el modelo perdido que buscamos.
 
-## Comparando Grid Search y Hyperopt
-Ahora que hemos desvelado los tesoros de nuestros hiperparámetros y comprendido su funcionamiento (capítulo anterior), es hora de aprender cómo encontrar las combinaciones óptimas para ajustar nuestro modelo XGBoost. En esta sección, compararemos dos enfoques populares para optimizar los hiperparámetros: Grid Search y Hyperopt.
+## Comparando Grid Search e Hyperopt
+Ahora que hemos desvelado los tesoros de nuestros hiperparámetros y comprendido su funcionamiento (capítulo anterior), es hora de aprender cómo encontrar las combinaciones óptimas para ajustar nuestro modelo XGBoost. En esta sección, compararemos dos enfoques populares para optimizar los hiperparámetros: Grid Search e Hyperopt.
 
 ### Grid Search: Recorriendo todo el laberinto de hiperparámetros
 
@@ -132,7 +132,7 @@ print(f"Mejor puntuación MAE: {best_mae}")
 
 Es importante resaltar que la elección del espacio de búsqueda de hiperparámetros desempeña un papel fundamental en el éxito de estas técnicas ("param_grid" para Grid Search y "space" para Hyperopt). Ambos métodos tienen la capacidad de buscar eficientemente dentro de los límites que establezcamos. Por lo tanto, **definir adecuadamente estos límites requiere un sólido entendimiento del problema y un conocimiento profundo de las características estadísticas de los hiperparámetros**.
 
-La elección entre Grid Search y Hyperopt dependerá en gran medida de la complejidad del espacio de búsqueda y de tus preferencias personales. **Grid Search es una opción simple y exhaustiva, pero su velocidad puede disminuir en espacios de búsqueda extensos**. En contraste, **Hyperopt es más eficiente pero demanda una configuración inicial más detallada**. Esta elección es análoga al dilema de recorrer minuciosamente la superficie de búsqueda punto por punto (teniendo la certeza de vamos a encontrar la solución pero a un costo de recursos alto), o bien, decidirse a explorar de manera más "inteligente", utilizando herramientas locales (como la visión del terreno, la gravedad, u otros) pero con la incertidumbre de saber si al punto que llegamos es verdaderamente "el punto más bajo".
+La elección entre Grid Search e Hyperopt dependerá en gran medida de la complejidad del espacio de búsqueda y de tus preferencias personales. **Grid Search es una opción simple y exhaustiva, pero su velocidad puede disminuir en espacios de búsqueda extensos**. En contraste, **Hyperopt es más eficiente pero demanda una configuración inicial más detallada**. Esta elección es análoga al dilema de recorrer minuciosamente la superficie de búsqueda punto por punto (teniendo la certeza de vamos a encontrar la solución pero a un costo de recursos alto), o bien, decidirse a explorar de manera más "inteligente", utilizando herramientas locales (como la visión del terreno, la gravedad, u otros) pero con la incertidumbre de saber si al punto que llegamos es verdaderamente "el punto más bajo".
 
 ### Elección de Hyperopt: Descubriendo el Potencial de los Datos
 
