@@ -46,7 +46,8 @@ La visualización en 3D que generamos (ver imagen a continuación) ilustra este 
 
 Sin embargo, esta imagen es solo una metáfora simplificada. En la realidad, trabajamos con espacios de muchas más dimensiones, donde la visualización gráfica se vuelve imposible. En estos espacios de alta dimensión, las herramientas gráficas pierden su utilidad y dependemos enteramente de métodos matemáticos y estadísticos avanzados.
 
-Encontrar el mínimo absoluto en un espacio multidimensional es un desafío complejo. Más allá de los tres ejes que podemos visualizar, debemos aplicar algoritmos y técnicas de optimización para navegar en un terreno donde la intuición visual ya no puede ayudarnos. El proceso va más allá de seguir un gradiente visible; se convierte en una búsqueda analítica y matemática en un laberinto de posibilidades.
+Encontrar el mínimo absoluto en un espacio multidimensional - como el espacio que describe el MAE (
+Mean Absolute Error)- es un desafío complejo. Más allá de los tres ejes que podemos visualizar, debemos aplicar algoritmos y técnicas de optimización para navegar en un terreno donde la intuición visual ya no puede ayudarnos. El proceso va más allá de seguir un gradiente visible; se convierte en una búsqueda analítica y matemática en un laberinto de posibilidades.
 
 En esta travesía, nos encontramos en la encrucijada de elegir entre métodos que nos ayudarán a navegar este laberinto de manera eficiente. La elección de la herramienta adecuada es fundamental, ya que nos permitirá explorar este laberinto multidimensional con inteligencia y nos acercará cada vez más a encontrar el modelo perdido que buscamos.
 
