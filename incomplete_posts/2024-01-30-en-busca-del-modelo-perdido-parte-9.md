@@ -51,7 +51,7 @@ Encontrar el mínimo absoluto en un espacio multidimensional - como el espacio q
 En esta travesía, nos encontramos en la encrucijada de elegir entre métodos que nos ayudarán a navegar este laberinto de manera eficiente. La elección de la herramienta adecuada es fundamental, ya que nos permitirá explorar este laberinto multidimensional con eficiencia y nos acercará cada vez más a encontrar el modelo perdido que buscamos.
 
 ## Comparando Grid Search e Hyperopt
-Ahora que hemos desvelado los tesoros de nuestros hiperparámetros y comprendido su funcionamiento ([capítulo 8](https://daniavm.github.io/_posts/en_busca_del_modelo_perdido/2024-01-19-en-busca-del-modelo-perdido-parte-8/){:target="_blank"}), es hora de aprender cómo encontrar las combinaciones óptimas para ajustar nuestro modelo XGBoost. En esta sección, compararemos dos enfoques populares para optimizar los hiperparámetros: Grid Search e Hyperopt.
+Ahora que hemos desvelado los tesoros de nuestros hiperparámetros y comprendido su funcionamiento ([capítulo 8](https://daniavm.github.io/_posts/en_busca_del_modelo_perdido/2024-01-19-en-busca-del-modelo-perdido-parte-8/){:target="_blank"}), es hora de aprender cómo encontrar las combinaciones óptimas para ajustar nuestro modelo XGBoost. En esta sección, compararemos dos enfoques populares para optimizar los hiperparámetros: **Grid Search e Hyperopt**.
 
 ### Grid Search: Recorriendo todo el laberinto de hiperparámetros
 
@@ -130,19 +130,19 @@ print(f"Mejor puntuación MAE: {best_mae}")
 
 ## Una Elección Importante: Definir el Espacio de Búsqueda
 
-Es importante resaltar que la elección del espacio de búsqueda de hiperparámetros desempeña un papel fundamental en el éxito de estas técnicas ("param_grid" para Grid Search y "space" para Hyperopt). Ambos métodos tienen la capacidad de buscar eficientemente dentro de los límites que establezcamos. Por lo tanto, **definir adecuadamente estos límites requiere un sólido entendimiento del problema y un conocimiento profundo de las características estadísticas de los hiperparámetros**.
+Es importante resaltar que la elección del espacio de búsqueda de hiperparámetros desempeña un papel fundamental en el éxito de estas técnicas ("param_grid" para el código de Grid Search y "space" para Hyperopt). Ambos métodos tienen la capacidad de buscar eficientemente dentro de los límites que establezcamos. Por lo tanto, **definir adecuadamente estos límites requiere un sólido entendimiento del problema y un conocimiento profundo de las características estadísticas de los hiperparámetros**.
 
-La elección entre Grid Search e Hyperopt dependerá en gran medida de la complejidad del espacio de búsqueda y de tus preferencias personales. **Grid Search es una opción simple y exhaustiva, pero su velocidad puede disminuir en espacios de búsqueda extensos**. En contraste, **Hyperopt es más eficiente pero demanda una configuración inicial más detallada**. Esta elección es análoga al dilema de recorrer minuciosamente la superficie de búsqueda punto por punto (teniendo la certeza de vamos a encontrar la solución pero a un costo de recursos alto), o bien, decidirse a explorar de manera más "inteligente", utilizando herramientas locales (como la visión del terreno, la gravedad, u otros) pero con la incertidumbre de saber si al punto que llegamos es verdaderamente "el punto más bajo".
+La elección entre Grid Search e Hyperopt dependerá en gran medida de la complejidad del espacio de búsqueda y de tus preferencias personales. **Grid Search es una opción simple y exhaustiva, pero su velocidad puede disminuir en espacios de búsqueda extensos**. En contraste, **Hyperopt es más eficiente pero demanda una configuración inicial más detallada para no caer en sub o sobre ajustes**. Esta elección es análoga al dilema de recorrer minuciosamente la superficie de búsqueda punto por punto (teniendo la certeza de vamos a encontrar la solución pero a un costo de recursos alto), o bien, decidirse a explorar de manera más "inteligente", utilizando herramientas locales (como la visión del terreno, la gravedad, u otros) pero con la incertidumbre de saber si al punto que llegamos es verdaderamente "el punto más bajo".
 
 ### Elección de Hyperopt: Descubriendo el Potencial de los Datos
 
-En nuestra búsqueda para construir el modelo perfecto que prediga los resultados de la prueba PAES, hemos hecho un hallazgo revelador. Más allá de los ensayos de los estudiantes, contamos con una amplia gama de información adicional, como anotaciones conductuales, asistencia, registros de psicopedagogía y más.
+En nuestra búsqueda para construir el mejor modelo que prediga los resultados de la prueba PAES, hemos hecho un hallazgo revelador. Más allá de los ensayos de los estudiantes, contamos con una amplia gama de información adicional, como anotaciones conductuales, asistencia, registros de psicopedagogía y más. Los cuales podemos agregar a este modelo.
 
-Este descubrimiento nos lleva a la elección de Hyperopt como nuestra herramienta de optimización de hiperparámetros. Hyperopt es capaz de manejar eficientemente espacios de hiperparámetros extensos y aprender en tiempo real, lo que es fundamental en un entorno de datos tan rico.
+Este descubrimiento nos lleva a la elección de Hyperopt como nuestra herramienta de optimización de hiperparámetros. Hyperopt es capaz de manejar eficientemente espacios de hiperparámetros extensos y aprender en tiempo real, lo que es fundamental en un entorno de datos tan rico como el escolar.
 
 Nuestra elección de Hyperopt se basa en su capacidad para abordar la complejidad de nuestros datos y su eficiencia en el uso de recursos. Esto nos permite incorporar más datos y mejorar nuestro modelo para que XGBoost, nuestro 'músico obsesivo por la perfección', pueda aprovechar al máximo la información disponible y perfeccionar su técnica.
 
-En el próximo capítulo, definiremos los límites del espacio de búsqueda en Hyperopt, un paso crucial en nuestro camino hacia el modelo perfecto.
+En el próximo capítulo, definiremos los límites del espacio de búsqueda en Hyperopt, un paso crucial en nuestro camino hacia el modelo perdido.
 
 <div align="right" markdown="1">
 Hasta el próximo cronopunto del Principia 🥚.
