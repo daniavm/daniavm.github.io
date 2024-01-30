@@ -31,15 +31,15 @@ tags:
 
 ---
 <div align="justify" markdown="1">
-En nuestra inquebrantable búsqueda del modelo perfecto para predecir los resultados de la prueba PAES, nos enfrentamos a uno de los desafíos más complejos y enigmáticos: la optimización de hiperparámetros en XGBoost. Este capítulo nos sumerge en el laberinto multidimensional de hiperparámetros, donde la mente humana lucha por visualizar la solución debido a la complejidad matemática que subyace en este problema.
+En nuestra inquebrantable búsqueda del mejor modelo para predecir los resultados de la prueba PAES, nos enfrentamos a uno de los desafíos más complejos y enigmáticos: la optimización de hiperparámetros en XGBoost. Este capítulo nos sumerge en el laberinto multidimensional de hiperparámetros, donde la mente humana lucha por visualizar la solución debido a la complejidad matemática que subyace en este problema.
 
 ## Hiperparámetros: El Laberinto Multidimensional
 
-Imagina que te encuentras en un terreno montañoso, buscando el punto más bajo, el "mínimo", en este terreno irregular. Cada metro cuadrado representa una combinación única de hiperparámetros que afectan el rendimiento de tu modelo.
+Imagina que te encuentras en un terreno montañoso, buscando el punto más bajo, el "mínimo", en este terreno irregular. Cada metro cuadrado representa una combinación única de "coordenadas" de hiperparámetros que afectan el rendimiento de tu modelo.
 
-Al principio, estás en un mundo bidimensional, como un plano extenso. En este mundo, encontrar un mínimo es relativamente sencillo, pero es como explorar un corte de pastel sin saber si es el único.
+Al principio, estás en un mundo bidimensional (dos hiperparámetros), como un plano extenso. En este mundo, encontrar un mínimo es relativamente sencillo, pero es como explorar un corte de pastel sin saber si es el único. Te preguntas si habrán otras cosas que considerar.
 
-Luego avanzas a un mundo tridimensional, donde cortas el terreno en diferentes direcciones, pero aún no puedes visualizar el paisaje completo. Aquí, encontrar un mínimo local se convierte en un desafío. Las curvas de nivel representan los resultados del MAE en tu búsqueda, midiendo cuán cerca estás del mínimo absoluto. El objetivo es minimizar el MAE, que refleja cuán preciso es tu modelo.
+Luego avanzas y decides observar hacia arriba. Te das cuenta que estas en un mundo tridimensional, donde aparece el terreno en diferentes direcciones y profundidades, pero aún no puedes visualizar el paisaje completo ya que algunas cosas te nublan la visión. Aquí, encontrar un mínimo local se convierte en un desafío ya que hemos aumentado la cantidad de características del terreno. Analogamente, este problema con el terreno es lo que pasa con nuestros hiperparámetros. Mientras más agregamos, más dimensiones ponemos a nuestro "terreno" y por ende la búsqueda de una posición correcta para encontrar el punto más "bajo" se vuelve literalmente, una locura. El terreno es nuestro espacio de búsqueda, y en esta analogía representa al valor que antes llamamos MAE. El objetivo es minimizar el MAE, que refleja cuán preciso es tu modelo.
 
 Sin embargo, el MAE puede ser engañoso, ya que no garantiza el mínimo absoluto. Aquí es donde entra el desafío: buscar el valor mínimo de una función topológica en un espacio multidimensional. El MAE se convierte en una guía para explorar las curvas de nivel y acercarse al mínimo.
 
@@ -60,7 +60,7 @@ En esta travesía, nos encontramos en la encrucijada de elegir entre métodos qu
 ## Comparando Grid Search y Hyperopt
 Ahora que hemos desvelado los tesoros de nuestros hiperparámetros y comprendido su funcionamiento (capítulo anterior), es hora de aprender cómo encontrar las combinaciones óptimas para ajustar nuestro modelo XGBoost. En esta sección, compararemos dos enfoques populares para optimizar los hiperparámetros: Grid Search y Hyperopt.
 
-### Grid Search: Navegando el Laberinto de Hiperparámetros
+### Grid Search: Recorriendo todo el laberinto de hiperparámetros
 
 Comencemos con Grid Search, un método que se asemeja a tener un mapa detallado pero limitado de nuestro laberinto de hiperparámetros. Este enfoque es bastante simple de entender y usar, pero puede ser lento en espacios de búsqueda extensos.
 
@@ -95,7 +95,7 @@ print(f"Mejores hiperparámetros encontrados: {best_params}")
 print(f"Mejor puntuación MAE: {best_mae}")
 ```
 
-### Hyperopt: Exploración Inteligente del Laberinto
+### Hyperopt: Exploración "Inteligente" del Laberinto
 
 Ahora, cambiemos nuestro enfoque hacia Hyperopt, un método que se asemeja a un explorador inteligente en nuestro laberinto. Hyperopt utiliza algoritmos basados en mecanismos bayesianos para buscar de manera más eficiente en el espacio de hiperparámetros. Esto lo convierte en una excelente opción cuando el espacio de búsqueda es extenso y deseas una optimización más rápida.
 
