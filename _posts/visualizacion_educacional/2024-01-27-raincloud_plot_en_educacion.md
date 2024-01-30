@@ -15,7 +15,7 @@ header:
 
 categories:
   - Data Analysis
-  - Education
+  - Educación
 
 tags:
   - Raincloud Plot
