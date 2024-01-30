@@ -48,6 +48,8 @@ tags:
 
 - [**Capítulo 8 - El Laberinto de XGBoost**](/_posts/en_busca_del_modelo_perdido/2024-01-19-en-busca-del-modelo-perdido-parte-8): Este capítulo introduce a XGBoost, un avanzado modelo de aprendizaje automático basado en árboles de decisión, diferenciándolo de Random Forest. Profundizamos en la anatomía de XGBoost, explorando cómo los hiperparámetros influyen en la construcción del modelo y la importancia de ajustarlos para evitar el sobreajuste. Utilizamos analogías para hacer más accesible el complejo concepto de hiperparámetros y sus rangos. Este capítulo prepara el escenario para el próximo desafío: encontrar la combinación perfecta de hiperparámetros para una predicción precisa de los resultados de la PAES.
 
+- [**Capítulo 9 - Explorando el Terreno de Hiperparámetros con Grid Search e Hyperopt**](/_posts/en_busca_del_modelo_perdido/2024-01-30-en-busca-del-modelo-perdido-parte-9): Llegamos al núcleo de la optimización en XGBoost. Comparamos Grid Search, un método exhaustivo, con Hyperopt, más ágil y basado en optimización bayesiana. Este capítulo demuestra cómo estas herramientas afinan nuestro modelo XGBoost, destacando la búsqueda del equilibrio perfecto en hiperparámetros para una predicción educativa precisa. Una etapa clave en la travesía hacia el modelo ideal.
+
 </div>
 
 
