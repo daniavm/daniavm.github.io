@@ -97,9 +97,11 @@ print(f"Mejor puntuación MAE: {best_mae}")
 
 ### Hyperopt: Exploración Inteligente del Laberinto
 
-Ahora, cambiemos nuestro enfoque hacia Hyperopt, un método que se asemeja a un explorador inteligente en nuestro laberinto. Hyperopt utiliza algoritmos para buscar de manera más eficiente en el espacio de hiperparámetros. Esto lo convierte en una excelente opción cuando el espacio de búsqueda es extenso y deseas una optimización más rápida.
+Ahora, cambiemos nuestro enfoque hacia Hyperopt, un método que se asemeja a un explorador inteligente en nuestro laberinto. Hyperopt utiliza algoritmos basados en mecanismos bayesianos para buscar de manera más eficiente en el espacio de hiperparámetros. Esto lo convierte en una excelente opción cuando el espacio de búsqueda es extenso y deseas una optimización más rápida.
 
-Hyperopt es como seguir el gradiente en el gráfico interactivo que presentamos. El gradiente representa la dirección óptima para buscar la combinación perfecta de hiperparámetros que minimice el MAE. En lugar de probar todas las combinaciones, Hyperopt ajusta sus pasos para avanzar de manera más efectiva hacia el mínimo.
+Hyperopt es como seguir el gradiente en el gráfico interactivo que presentamos. El gradiente representa la dirección óptima para buscar la combinación perfecta de hiperparámetros que minimice el MAE. Sin embargo, en lugar de probar todas las combinaciones posibles, Hyperopt ajusta sus pasos utilizando información recopilada de las iteraciones anteriores. Funciona como un explorador que aprende de sus experiencias previas y adapta su estrategia para avanzar de manera más efectiva hacia el mínimo.
+
+En esencia, Hyperopt utiliza modelos bayesianos para estimar la función objetivo y su incertidumbre en función de las observaciones previas. Luego, elige la siguiente combinación de hiperparámetros que maximice la información ganada. Este enfoque permite que Hyperopt explore el espacio de búsqueda de manera más inteligente y se acerque rápidamente a las soluciones óptimas.
 
 ```python
 from hyperopt import hp, fmin, tpe, Trials, STATUS_OK, space_eval
@@ -135,13 +137,19 @@ print(f"Mejor puntuación MAE: {best_mae}")
 
 ## Una Elección Importante: Definir el Espacio de Búsqueda
 
-Es importante destacar que la elección del espacio de búsqueda de hiperparámetros es crucial para el éxito de estas técnicas ("param_grid" en el caso de Grid Search y "space" en el caso de Hyperopt). Tanto Grid Search como Hyperopt pueden buscar eficientemente dentro de los límites que establezcamos. Por lo tanto, definir adecuadamente estos límites requiere un conocimiento sólido del problema y de las características estadísticas de los hiperparámetros.
+Es importante resaltar que la elección del espacio de búsqueda de hiperparámetros desempeña un papel fundamental en el éxito de estas técnicas ("param_grid" para Grid Search y "space" para Hyperopt). Ambos métodos tienen la capacidad de buscar eficientemente dentro de los límites que establezcamos. Por lo tanto, **definir adecuadamente estos límites requiere un sólido entendimiento del problema y un conocimiento profundo de las características estadísticas de los hiperparámetros**.
 
-Ambos métodos tienen sus ventajas y desventajas, y la elección entre ellos dependerá de la complejidad del espacio de búsqueda y de tus preferencias personales. Grid Search es simple y exhaustivo, pero puede ser lento en espacios de búsqueda grandes. Hyperopt es más eficiente pero requiere más configuración. Es análogo al dilema de recorrer la superficie de búsqueda punto por punto y saber que vamos a encontrar la solución al punto más bajo, o bien decidirse a ir en busca de este punto solo utilizando herramientas locales como la visión del terreno, la gravedad o cualquier otro para decir direccionar nuestra caminata al punto "mas bajo".
+La elección entre Grid Search y Hyperopt dependerá en gran medida de la complejidad del espacio de búsqueda y de tus preferencias personales. **Grid Search es una opción simple y exhaustiva, pero su velocidad puede disminuir en espacios de búsqueda extensos**. En contraste, **Hyperopt es más eficiente pero demanda una configuración inicial más detallada**. Esta elección es análoga al dilema de recorrer minuciosamente la superficie de búsqueda punto por punto (teniendo la certeza de vamos a encontrar la solución pero a un costo de recursos alto), o bien, decidirse a explorar de manera más "inteligente", utilizando herramientas locales (como la visión del terreno, la gravedad, u otros) pero con la incertidumbre de saber si al punto que llegamos es verdaderamente "el punto más bajo".
 
-La Elección de Hyperopt
+### Elección de Hyperopt: Descubriendo el Potencial de los Datos
 
-Dada la complejidad de nuestro laberinto de hiperparámetros y la necesidad de una solución eficiente, hemos elegido Hyperopt como nuestra herramienta preferida. Su enfoque basado en la optimización bayesiana nos permite navegar este terreno con mayor precisión y rapidez. En los próximos pasos de nuestra aventura, profundizaremos en el uso de Hyperopt y descubriremos cómo esta elección nos acerca cada vez más a encontrar el modelo perdido que buscamos.
+En nuestra búsqueda para construir el modelo perfecto que prediga los resultados de la prueba PAES, hemos hecho un hallazgo revelador. Más allá de los ensayos de los estudiantes, contamos con una amplia gama de información adicional, como anotaciones conductuales, asistencia, registros de psicopedagogía y más.
+
+Este descubrimiento nos lleva a la elección de Hyperopt como nuestra herramienta de optimización de hiperparámetros. Hyperopt es capaz de manejar eficientemente espacios de hiperparámetros extensos y aprender en tiempo real, lo que es fundamental en un entorno de datos tan rico.
+
+Nuestra elección de Hyperopt se basa en su capacidad para abordar la complejidad de nuestros datos y su eficiencia en el uso de recursos. Esto nos permite incorporar más datos y mejorar nuestro modelo para que XGBoost, nuestro 'músico obsesivo por la perfección', pueda aprovechar al máximo la información disponible y perfeccionar su técnica.
+
+En el próximo capítulo, definiremos los límites del espacio de búsqueda en Hyperopt, un paso crucial en nuestro camino hacia el modelo perfecto.
 
 <div align="right" markdown="1">
 Hasta el próximo cronopunto del Principia 🥚.
