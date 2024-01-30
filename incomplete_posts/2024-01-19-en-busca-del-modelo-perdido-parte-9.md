@@ -31,31 +31,24 @@ tags:
 
 ---
 <div align="justify" markdown="1">
-En nuestra inquebrantable búsqueda del mejor modelo para predecir los resultados de la prueba PAES, nos enfrentamos a uno de los desafíos más complejos y enigmáticos: la optimización de hiperparámetros en XGBoost. Este capítulo nos sumerge en el laberinto multidimensional de hiperparámetros, donde la mente humana lucha por visualizar la solución debido a la complejidad matemática que subyace en este problema.
+En nuestra inquebrantable búsqueda del mejor modelo para predecir los resultados de la prueba PAES, nos enfrentamos a uno de los desafíos más complejos y enigmáticos: la optimización de hiperparámetros en XGBoost. En este capítulo abordaremos los mecanismos que tenemos a disposición para buscar combinaciones de hiperparámetros que nos ayuden a encontrar el mejor modelo de predicción después de adentrarnos en este laberinto multidimensional, donde las herramientas gráficas son insuficientes pero nuestra imaginación y desarrollo de las matemáticas hacen la diferencia para lograr el objetivo.
 
 ## Hiperparámetros: El Laberinto Multidimensional
 
-Imagina que te encuentras en un terreno montañoso, buscando el punto más bajo, el "mínimo", en este terreno irregular. Cada metro cuadrado representa una combinación única de "coordenadas" de hiperparámetros que afectan el rendimiento de tu modelo.
+Imagina que estás explorando un paisaje montañoso, donde cada punto simboliza una combinación de hiperparámetros que afectan el rendimiento de tu modelo. Comienzas en un entorno bidimensional, donde identificar el mínimo parece sencillo. Pero al agregar más hiperparámetros, entras en un espacio tridimensional y, eventualmente, en dimensiones aún mayores, incrementando significativamente la complejidad de tu búsqueda.
 
-Al principio, estás en un mundo bidimensional (dos hiperparámetros), como un plano extenso. En este mundo, encontrar un mínimo es relativamente sencillo, pero es como explorar un corte de pastel sin saber si es el único. Te preguntas si habrán otras cosas que considerar.
-
-Luego avanzas y decides observar hacia arriba. Te das cuenta que estas en un mundo tridimensional, donde aparece el terreno en diferentes direcciones y profundidades, pero aún no puedes visualizar el paisaje completo ya que algunas cosas te nublan la visión. Aquí, encontrar un mínimo local se convierte en un desafío ya que hemos aumentado la cantidad de características del terreno. Analogamente, este problema con el terreno es lo que pasa con nuestros hiperparámetros. Mientras más agregamos, más dimensiones ponemos a nuestro "terreno" y por ende la búsqueda de una posición correcta para encontrar el punto más "bajo" se vuelve literalmente, una locura. El terreno es nuestro espacio de búsqueda, y en esta analogía representa al valor que antes llamamos MAE. El objetivo es minimizar el MAE, que refleja cuán preciso es tu modelo.
-
-Sin embargo, el MAE puede ser engañoso, ya que no garantiza el mínimo absoluto. Aquí es donde entra el desafío: buscar el valor mínimo de una función topológica en un espacio multidimensional. El MAE se convierte en una guía para explorar las curvas de nivel y acercarse al mínimo.
-
-Finalmente, te adentras en un mundo multidimensional, donde cada hiperparámetro es una dimensión adicional. Visualizar esto se vuelve abrumador. Es como cortar el terreno en diferentes direcciones, niveles y ángulos en todas las dimensiones posibles.
-
-Aquí nuestra mente humana se queda atrás, incapaz de visualizar el espacio completo sin recurrir a las matemáticas o a la "fuerza bruta" de probar innumerables combinaciones de hiperparámetros.
-
-Una idea de lo que he expresado aquí se muestra en el siguiente gráfico para poder ayudar a la idea de la búsqueda de un mínimo en un espacio dado (que en este caso es tridimensional).
+La visualización en 3D que generamos (ver imagen a continuación) ilustra este primer salto a la complejidad. En ella, puedes ver cómo el terreno cambia con cada conjunto de hiperparámetros. Los cortes verticales azules representan distintas perspectivas de este terreno, revelando la presencia de múltiples mínimos locales. La línea roja, nuestro gradiente, te guía a través de este paisaje en busca de un mínimo local, partiendo de un punto específico.
 
 <figure style="width: 100%; text-align: center;">
     <embed type="text/html" src="/assets/images/simple_post_images/minimos_superficie.html" style="width: 100%; height: 500px; border: none;" alt="Imagen 1: Heatmap del Análisis de MAE.">
     <figcaption>Imagen 1: Ilustración del Desafío de la Búsqueda de Mínimos - Esta visualización en 3D representa un terreno complejo que simboliza el desafío de encontrar el mínimo absoluto en el contexto de los hiperparámetros. Los cortes verticales azules muestran diferentes perspectivas de este terreno multidimensional, revelando múltiples mínimos locales dependiendo del corte elegido. En este laberinto de posibilidades, explorar cada punto sería una tarea costosa en términos de tiempo y recursos. Es aquí donde entra en juego el "gradiente," representado por la línea roja, que guía la búsqueda hacia un mínimo local desde un punto de partida específico. Sin embargo, el uso del gradiente puede llevarnos a mínimos locales en lugar del mínimo absoluto, lo que ilustra la complejidad de encontrar la combinación óptima de hiperparámetros para nuestro modelo.</figcaption>
 </figure>
 
-En esta travesía, nos encontramos en la encrucijada de elegir entre métodos que nos ayudarán a navegar este laberinto de manera eficiente. La elección de la herramienta adecuada es fundamental, ya que nos permitirá explorar este laberinto multidimensional con inteligencia y nos acercará cada vez más a encontrar el modelo perdido que buscamos.
+Sin embargo, esta imagen es solo una metáfora simplificada. En la realidad, trabajamos con espacios de muchas más dimensiones, donde la visualización gráfica se vuelve imposible. En estos espacios de alta dimensión, las herramientas gráficas pierden su utilidad y dependemos enteramente de métodos matemáticos y estadísticos avanzados.
 
+Encontrar el mínimo absoluto en un espacio multidimensional es un desafío complejo. Más allá de los tres ejes que podemos visualizar, debemos aplicar algoritmos y técnicas de optimización para navegar en un terreno donde la intuición visual ya no puede ayudarnos. El proceso va más allá de seguir un gradiente visible; se convierte en una búsqueda analítica y matemática en un laberinto de posibilidades.
+
+En esta travesía, nos encontramos en la encrucijada de elegir entre métodos que nos ayudarán a navegar este laberinto de manera eficiente. La elección de la herramienta adecuada es fundamental, ya que nos permitirá explorar este laberinto multidimensional con inteligencia y nos acercará cada vez más a encontrar el modelo perdido que buscamos.
 
 ## Comparando Grid Search y Hyperopt
 Ahora que hemos desvelado los tesoros de nuestros hiperparámetros y comprendido su funcionamiento (capítulo anterior), es hora de aprender cómo encontrar las combinaciones óptimas para ajustar nuestro modelo XGBoost. En esta sección, compararemos dos enfoques populares para optimizar los hiperparámetros: Grid Search y Hyperopt.
