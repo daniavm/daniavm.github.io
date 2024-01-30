@@ -49,7 +49,7 @@ En esta travesía, nos encontramos en la encrucijada de elegir entre métodos qu
 
 <figure style="width: 100%; text-align: center;">
     <embed type="text/html" src="/assets/images/simple_post_images/minimos_superficie.html" style="width: 100%; height: 500px; border: none;" alt="Imagen 1: Heatmap del Análisis de MAE.">
-    <figcaption>Imagen 1 (visible en computadores): Heatmap interactivo que muestra cómo varían los valores de MAE con diferentes combinaciones de 'n_estimators' y 'num_folds'.</figcaption>
+    <figcaption>Imagen 1: Ilustración del Desafío de la Búsqueda de Mínimos - Esta visualización en 3D representa un terreno complejo que simboliza el desafío de encontrar el mínimo absoluto en el contexto de los hiperparámetros. Los cortes verticales azules muestran diferentes perspectivas de este terreno multidimensional, revelando múltiples mínimos locales dependiendo del punto de partida. En este laberinto de posibilidades, explorar cada punto sería una tarea costosa en términos de tiempo y recursos. Es aquí donde entra en juego el "gradiente," representado por la línea roja, que guía la búsqueda hacia un mínimo local desde un punto de partida específico. Sin embargo, el uso del gradiente puede llevarnos a mínimos locales en lugar del mínimo absoluto, lo que ilustra la complejidad de encontrar la combinación óptima de hiperparámetros para nuestro modelo.</figcaption>
 </figure>
 
 
@@ -63,6 +63,7 @@ Gamma: Actúa como un regulador de la complejidad del modelo.
 Min Child Weight: Define un umbral para la división de nodos.
 Subsample: Controla la fracción de muestras utilizadas para entrenar cada árbol.
 Colsample_by:* Regula la selección de características.
+
 Comparando Grid Search y Hyperopt
 
 Para descifrar este laberinto de hiperparámetros, tenemos dos herramientas a nuestra disposición: Grid Search y Hyperopt. Ambos métodos buscan la combinación óptima de hiperparámetros, pero difieren en su enfoque y eficiencia.
