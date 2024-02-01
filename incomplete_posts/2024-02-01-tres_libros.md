@@ -1,5 +1,5 @@
 ---
-title: "Reflejos de un Aprendanzante en 'El Camino de los Reyes'"
+title: "Tres Pilares para un Nuevo Amanecer Educativo: Aprendanza a través de Kahneman, Clear y Walker"
 layout: single
 author_profile: true
 related: true
