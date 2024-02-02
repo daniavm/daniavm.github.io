@@ -40,6 +40,11 @@ Kahneman expone cómo nuestros sesgos y procesos de pensamiento, a menudo oculto
 ### El Valor de la Reflexión y la Toma de Decisiones Conscientes:
 La obra de Kahneman resalta la importancia de equilibrar nuestro pensamiento rápido e intuitivo con el análisis más lento y deliberado. En el ámbito educativo, esto sugiere una revisión profunda de nuestras prácticas pedagógicas. ¿Cuántas de nuestras decisiones educativas diarias son producto de este "pensamiento rápido"? Investigaciones en el campo educativo indican que una mayor reflexión y conciencia en nuestras acciones pueden llevar a prácticas de enseñanza más efectivas (Hansen, 2020). Esta idea resuena profundamente conmigo, destacando la necesidad de cuestionar y ajustar continuamente nuestra forma de enseñar para mejorar el aprendizaje de nuestros estudiantes.
 
+> "Nuestra consoladora convicción de que el mundo tiene sentido descansa sobre un fundamento seguro: nuestra capacidad casi ilimitada para ignorar nuestra ignorancia."
+>
+>_Daniel Kahneman, "Pensar Rápido, Pensar Despacio"._
+{: style="text-align: right;"}
+
 ### Hacia una Educación Más Justa y Equitativa:
 Este libro no solo ilumina la complejidad de la mente humana, sino que también nos proporciona un camino hacia prácticas pedagógicas más reflexivas, empáticas y efectivas. Al entender y trabajar con nuestros procesos mentales, podemos evolucionar como educadores y crear un entorno educativo donde cada estudiante tiene la oportunidad de alcanzar su máximo potencial.
 
@@ -49,6 +54,11 @@ James Clear en "Hábitos Atómicos" nos brinda una guía práctica y poderosa pa
 
 ### La Trampa de la Inmediatez y la Gestión del Tiempo:
 En mi experiencia y observaciones, muchos educadores viven atrapados en un ciclo de respuesta inmediata a las demandas diarias, dejando poco espacio para la reflexión o el crecimiento personal y profesional. Clear argumenta convincentemente la importancia de los pequeños cambios constantes, que eventualmente conducen a resultados significativos. ¿Cómo podemos, como educadores, aplicar esta filosofía para mejorar nuestra enseñanza y bienestar personal? Un estudio de la Universidad de Harvard (Knight, 2018) demuestra que la adopción de hábitos productivos y la planificación consciente pueden reducir significativamente el estrés y aumentar la eficacia en el trabajo.
+
+> "Si quieres mejores resultados, entonces olvídate de establecer metas. En cambio, concéntrate en tu sistema. Uno no se eleva al nivel de sus metas. Cae al nivel de sus sistemas."
+>
+>_James Clear, "Hábitos Atómicos"._
+{: style="text-align: right;"}
 
 ### Desarrollando Hábitos Positivos en la Educación:
 La lectura de "Hábitos Atómicos" me lleva a preguntarme: ¿estamos, como comunidad educativa, valorando la importancia de desarrollar y mantener hábitos saludables y sostenibles? ¿Cómo podríamos incorporar estas enseñanzas en nuestra práctica diaria para construir un entorno de trabajo más equilibrado y enriquecedor? Este libro nos desafía a alejarnos del caos de la inmediatez y a avanzar hacia una práctica pedagógica que valora y fomenta el bienestar a largo plazo.
@@ -65,6 +75,12 @@ Observando la realidad educativa, me preocupa ver cómo el descanso adecuado es 
 
 ### El Sueño y su Relación con el Aprendizaje y la Salud Mental:
 Este libro me hace reflexionar sobre cómo el sueño, o la falta de él, impacta nuestra labor educativa. Walker nos muestra que un sueño adecuado es fundamental para el procesamiento de la información y la regulación emocional. ¿Cómo puede esto cambiar nuestra aproximación a la enseñanza y el aprendizaje? ¿Estamos subestimando el poder del sueño en la preparación de nuestras clases y en la asimilación del conocimiento por parte de los estudiantes?
+
+
+> "Si llevas al médico a un niño que duerme mal y le describes estos síntomas sin mencionarle la falta de sueño, el doctor no te dirá que tu hijo duerme demasiado poco, sino que tiene un TDAH"
+>
+>_Matthew Walker, "Por qué dormimos"._
+{: style="text-align: right;"}
 
 ### Hacia una Cultura Educativa que Valora el Descanso:
 "¿Por qué dormimos?" nos desafía a transformar nuestra percepción del sueño. En la educación, esto significa crear un entorno que no solo valore el descanso y la recuperación, sino que también los promueva activamente. Imaginemos escuelas y universidades donde el bienestar de los docentes y estudiantes sea una prioridad, reflejándose en horarios y cargas de trabajo razonables. Este libro nos invita a ver el sueño no como un lujo, sino como un componente esencial de una pedagogía efectiva y humanizada.
