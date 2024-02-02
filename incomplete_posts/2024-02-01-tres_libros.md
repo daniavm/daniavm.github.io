@@ -77,7 +77,7 @@ Observando la realidad educativa, me preocupa ver cómo el descanso adecuado es 
 Este libro me hace reflexionar sobre cómo el sueño, o la falta de él, impacta nuestra labor educativa. Walker nos muestra que un sueño adecuado es fundamental para el procesamiento de la información y la regulación emocional. ¿Cómo puede esto cambiar nuestra aproximación a la enseñanza y el aprendizaje? ¿Estamos subestimando el poder del sueño en la preparación de nuestras clases y en la asimilación del conocimiento por parte de los estudiantes?
 
 
-> "Si llevas al médico a un niño que duerme mal y le describes estos síntomas sin mencionarle la falta de sueño, el doctor no te dirá que tu hijo duerme demasiado poco, sino que tiene un TDAH"
+> "Si llevas al médico a un niño que duerme mal y le describes estos síntomas sin mencionarle la falta de sueño, el doctor no te dirá que tu hijo duerme demasiado poco, sino que tiene un TDAH (trastorno por déficit de atención con hiperactividad)"
 >
 >_Matthew Walker, "Por qué dormimos"._
 {: style="text-align: right;"}
@@ -124,4 +124,9 @@ DV
 ---
 
 ## Referencias
-- Sanderson, B. (2010). *El Camino de los Reyes*. New York: Tor Books.
+
+- Kahneman, D. (2011). *Piensa rápido, piensa despacio*. Farrar, Straus and Giroux. Disponible en Amazon: [https://www.amazon.com/-/es/Daniel-Kahneman-ebook/dp/B008BPHBTO](https://www.amazon.com/-/es/Daniel-Kahneman-ebook/dp/B008BPHBTO)
+
+- Walker, M. (2017). *¿Por qué dormimos? La nueva ciencia del sueño y los sueños*. Scribner. Disponible en Amazon: [https://www.amazon.com/-/es/Matthew-Walker-ebook/dp/B0849ZW5BD](https://www.amazon.com/-/es/Matthew-Walker-ebook/dp/B0849ZW5BD)
+
+- Clear, J. (2018). *Hábitos atómicos*. Avery. Disponible en Amazon: [https://www.amazon.com/-/es/James-Clear-ebook/dp/B07PLNHHDP](https://www.amazon.com/-/es/James-Clear-ebook/dp/B07PLNHHDP)
