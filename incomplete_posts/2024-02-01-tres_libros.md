@@ -11,8 +11,8 @@ classes: wide
 collections: 
 
 header:
-  image: /assets/images/simple_post_images/banner_el_camino_de_los_reyes.png
-  teaser: /assets/images/simple_post_images/banner_el_camino_de_los_reyes.png
+  image: /assets/images/simple_post_images/tres_grandes_libros.png
+  teaser: /assets/images/simple_post_images/tres_grandes_libros.png
 
 categories:
   - Reflexiones de libros
