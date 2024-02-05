@@ -26,7 +26,7 @@ tags:
   - Fantasía Épica
 ---
 <div markdown="1" style="text-align: justify;">
-En el corazón de la enseñanza y el aprendizaje - lo que yo llamo "aprendanza" - se encuentra la búsqueda constante de mejora, la comprensión de quienes somos y el lugar al que pertenecemos. Hoy, quiero presentar tres libros que considero fundamentales para cualquier persona que se enfrenta a los retos de la pedagogía moderna y quiere ser parte de ese universo que está lleno de dificultades: "Piensa rápido, piensa despacio", "Hábitos Atómicos", y "¿Por qué dormimos?".
+En el corazón de la enseñanza y el aprendizaje - lo que yo llamo "aprendanza" - se encuentra la búsqueda constante de mejora, la comprensión de quienes somos y el lugar al que pertenecemos. Tras 15 años dictando clases, creo que independiente de la disciplina que impartas como docente, es lo único que realmente importa a quienes tienes a tu cargo, tus estudiantes. Por esta razón, hoy quiero presentar tres libros que considero fundamentales para cualquier persona que se enfrenta a los retos de la pedagogía moderna y quiere ser parte de ese universo que está lleno de dificultades: "Piensa rápido, piensa despacio", "Hábitos Atómicos", y "¿Por qué dormimos?".
 
 ## Desvelando Nuestros Sesgos: Una Llamada a la Conciencia Pedagógica
 
