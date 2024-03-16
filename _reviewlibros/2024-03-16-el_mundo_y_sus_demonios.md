@@ -1,5 +1,5 @@
 ---
-title: "Un diálogo entre "El mundo y sus demonios" de Carl Sagan y mi trayectoria en astronomía y educación"
+title: "Un diálogo entre 'El mundo y sus demonios' de Carl Sagan y mi trayectoria en astronomía y educación"
 layout: single
 author_profile: true
 related: true
