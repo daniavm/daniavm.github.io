@@ -25,6 +25,11 @@ Mi travesía, desde la enseñanza en aulas hasta mi rol actual analizando datos 
 
 Observando la enseñanza de la ciencia en Chile, he notado con desaliento cómo a menudo se reduce a fórmulas y memorización, despojando a la ciencia de la pasión y curiosidad que Sagan tan elocuentemente promovía. La ciencia, especialmente la física y la astronomía, no se trata solo de resolver ecuaciones, sino de fomentar una profunda curiosidad sobre el mundo y nuestro lugar en el cosmos.
 
+> "La ciencia no solo es compatible con la espiritualidad; es una fuente profunda de espiritualidad"
+>
+>_Carl Sagan, El Mundo y sus Demonios._
+{: style="text-align: right;"}
+
 Para los educadores, mi viaje resalta la importancia de la honestidad y la pasión en la enseñanza. La educación debe ser un acto de construcción social, inspirando a los estudiantes a ser curiosos y escépticos, características esenciales para el pensamiento científico. La lectura, especialmente obras como "El mundo y sus demonios", es crucial para desarrollar una visión amplia y crítica del mundo.
 
 A los estudiantes les animo a abrazar los desafíos y a buscar comunidades de apoyo. La ciencia es un camino lleno de preguntas difíciles, pero también de descubrimientos asombrosos. En este viaje, nadie debería caminar solo. La colaboración y el intercambio de ideas son fundamentales para el avance científico.
