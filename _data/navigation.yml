@@ -2,15 +2,56 @@
 main:
   #- title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-   - title: "Home"
-     url: /
-   - title: "Learning Analytics"
-     url: /learninganalytics/
-   - title: "Posts"
-     url: /categories/
-   - title: "Youtube"
-     url: https://www.youtube.com/channel/UCE9a5RZRjCwvyFlg2ORG1HA
-   - title: "Portfolio"
-     url: /portfolio/
-   - title: "About"
-     url: /about/
+  - title: "Home"
+    url: /
+  - title: "Learning Analytics"
+    url: /learninganalytics/
+  - title: "Sagas"
+    url: /sagas/
+  - title: "RLibros"
+    url: /reviewlibros/
+  - title: "Posts"
+    url: /categories/
+  - title: "Portfolio"
+    url: /portfolio/
+  - title: "AboutMe"
+    url: /about/
+
+modelo_perdido:
+  - title: Exploración
+    children:
+      - title: "Parte 1: Exploración"
+        url: /_posts/en_busca_del_modelo_perdido/2023-09-22-en-busca-del-modelo-perdido-parte-1
+      - title: "Parte 2: Herramientas"
+        url: /_posts/en_busca_del_modelo_perdido/2023-09-30-en-busca-del-modelo-perdido-parte-2
+
+  - title: El Random Forest
+    children:
+      - title: "Parte 3: El Random Forest + ChatGPT"
+        url: /_posts/en_busca_del_modelo_perdido/2023-10-09-en-busca-del-modelo-perdido-parte-3
+      - title: "Parte 4:  Explorando el Random Forest"
+        url: /_posts/en_busca_del_modelo_perdido/2023-11-10-en-busca-del-modelo-perdido-parte-4
+      - title: "Parte 5: Afinando el Random Forest"
+        url: /_posts/en_busca_del_modelo_perdido/2023-11-18-en-busca-del-modelo-perdido-parte-5
+      - title: "Parte 6: La Primera Reliquia"
+        url: /_posts/en_busca_del_modelo_perdido/2023-11-26-en-busca-del-modelo-perdido-parte-6
+  - title: El Modelo XGBoost
+    children:
+      - title: "Parte 7: Bagging vs Boosting: Desenredando los Hilos del Aprendizaje Automático"
+        url: /_posts/en_busca_del_modelo_perdido/2024-01-17-en-busca-del-modelo-perdido-parte-7
+      - title: "Parte 8: El Laberinto de XGBoost"
+        url: /_posts/en_busca_del_modelo_perdido/2024-01-19-en-busca-del-modelo-perdido-parte-8
+      - title: "Parte 9: Explorando el Terreno de Hiperparámetros con Grid Search e Hyperopt"
+        url: /_posts/en_busca_del_modelo_perdido/2024-01-30-en-busca-del-modelo-perdido-parte-9
+
+historias_de_clase:
+  - title: Mis Recuerdos
+    children:
+      - title: "Clase 1: El Círculo-Cuadrado"
+        url: /_posts/historias_de_clase/2023-11-20-el-circulo-cuadrado
+      - title: "Clase 2: 12 + 1 = 1"
+        url: /_posts/historias_de_clase/2023-11-29-12_mas_1_es_1
+
+  - title: Recuerdos de Estudiantes
+
+

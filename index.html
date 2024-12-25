@@ -1,13 +1,89 @@
 ---
 header:
-  overlay_color: "#000"
-  overlay_image: /assets/images/teaser_wallpaper.jpg
+  image: /assets/images/teaser_wallpaper.png
+  teaser: /assets/images/teaser_wallpaper.png
+# header:
+  # image: /assets/images/teaser_wallpaper.jpg
+  # teaser: /assets/images/teaser_wallpaper.jpg
+  # overlay_color: "#000"
+  # overlay_image: /assets/images/teaser_wallpaper.jpg
   # actions:
   #  - label: "Learn More..."
   #    url: "/about/"
-title: "En algún cronopunto debemos empezar ..."
-excerpt: >
-  Un proyecto personal para compartir de ciencia, código, pensamientos y la aprendanza con l@s ciudadan@s de nuestro planeta.
-layout: home
+title: "Principia - Home"
+excerpt: 'En algún cronopunto debemos empezar ...'
+layout: splash
 author_profile: true
+classes: wide
+entries_layout: grid
+
+intro: 
+  - excerpt: 'Un proyecto personal para compartir de ciencia, código, pensamientos y la aprendanza con l@s personas de nuestro planeta.'
+
+intro2: 
+  - excerpt: 'Una historia para intentar aportar en el desarrollo de la educación. Hay muchos caminos para llegar al futuro, pero espero que de una buena vez sea el que beneficie realmente a tod@s quienes están y vendrán'
+feature_row:
+  - image_path: /assets/images/learning_analytics_index2.png
+    alt: "Analítica"
+    title: "Learning Analytics"
+    excerpt: "Todo acerca de análitica de aprendizaje y las herramientas que he podido crear para la educación actualmente"
+    url: "https://daniavm.github.io/learninganalytics/"
+    btn_class: "btn--primary"
+    btn_label: "Ver más"
+  - image_path: /assets/images/sagas_index2.png
+    alt: "Sagas"
+    title: "Sagas"
+    excerpt: "Publicaciones que engloban temas específicos y representan mis creaciones técnicas y literarias más relevantes para poder seguir"
+    url: "https://daniavm.github.io/sagas/"
+    btn_class: "btn--primary"
+    btn_label: "Ver más"
+  - image_path: /assets/images/books_index2.png
+    alt: "Libros"
+    title: "Reseñas de Libros"
+    excerpt: "Reseñas e impresiones de los libros que he podido abordar desde que creé este espacio en la web"
+    url: "https://daniavm.github.io/reviewlibros/"
+    btn_class: "btn--primary"
+    btn_label: "Ver más"
+
+feature_row2:
+  - image_path: /assets/images/portafolio_index2.png
+    alt: "Portafolio"
+    title: "Visita Mi Portafolio"
+    excerpt: "Sumérgete en mi mundo de Data Science, donde cada proyecto es una historia única contada a través de los datos. Aún no está completo - y me pregunto cuando realmente lo estará - pero puedes darle una mirada para conocer algo de lo que he hecho en mi trabajo. ¡Explora, descubre y déjate inspirar!"
+    url: "https://daniavm.github.io/portfolio/"
+    btn_class: "btn--primary"
+    btn_label: "Ir al Portafolio"
+
 ---
+
+<div style="font-size: 1.5em; letter-spacing: 0.05em;">
+  {% include feature_row id="intro" type="center" %}
+</div>
+
+<div style="text-align: center;">
+  <h6 style="text-align: center;">Mis secciones principales</h6>
+  {% include feature_row%}
+</div>
+
+<div style="font-size: 1.5em; letter-spacing: 0.05em;">
+  {% include feature_row id="intro2" type="center" %}
+</div>
+
+{% include feature_row id="feature_row2" type="left" %}
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: 'Publicaciones Recientes' }}</h3>
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in posts %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
+</div>
+
+{% include paginator.html %}
