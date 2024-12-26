@@ -33,7 +33,7 @@ La educación no es un camino lineal. A lo largo de mis años como profesor y re
 ---
 
 ## Una contradicción que todos intuimos
-En la teoría pedagógica moderna, entendemos que la educación debe ir más allá de la transmisión de contenidos. Se habla de aprendizaje activo, de participación y de colaboración. Sin embargo, en la práctica cotidiana, todavía se reproducen inercias que nos llevan a planificar y desarrollar la enseñanza de forma más cercana al modelo tradicional.
+En la teoría pedagógica moderna, entendemos que la educación debe ir más allá de la transmisión de contenidos. Se habla de aprendizaje activo, de participación y de colaboración. Sin embargo, en la práctica cotidiana, todavía se reproducen inercias que nos llevan a planificar y desarrollar la enseñanza de forma más cercana al modelo tradicional. Esta contradicción no ocurre por ignorancia o mala voluntad, sino porque el sistema educativo valora resultados rápidos y cuantificables, lo que dificulta la transformación profunda.
 
 Esta situación no implica que veamos hoy a los profesores como meros transmisores de contenidos o a los estudiantes como receptores pasivos. Por el contrario, existe gran claridad teórica sobre la relevancia de la interacción y la adaptación a contextos diversos. Aun así, algo sigue impidiendo que esta visión se materialice por completo, generando una tensión entre lo que creemos deseable y lo que realmente sucede en el día a día.
 
@@ -51,7 +51,7 @@ No extraña, entonces, que muchos sientan que “la vida comienza” tras la ens
 ## De la física a la reflexión educativa: la semilla de la Aprendanza
 Mi experiencia como profesor, junto con mi formación en astronomía y física, me hizo ver la sala de clases con ojos distintos. En mecánica cuántica, aprendí que la realidad de una partícula no se define completamente hasta que interactuamos con ella: la medición colapsa sus múltiples estados posibles a uno solo.
 
-Aun sin dominar la cuántica, esta metáfora sugiere algo potente: **la interacción determina lo que percibimos como realidad**. Al pensar en la educación, me pregunté si no era necesario un “colapso” similar para que enseñar y aprender dejen de ser procesos paralelos y se conviertan en una experiencia transformadora.
+Aun sin dominar la cuántica, esta metáfora sugiere algo potente: **la interacción determina lo que percibimos como realidad**. Al pensar en la educación, me pregunté si no era necesario un “colapso” similar para que enseñar y aprender dejen de ser procesos paralelos y se conviertan en una experiencia transformadora. La teoría pedagógica señala la importancia de la participación y el diálogo, pero en la práctica tendemos a encasillar a un actor que enseña y otro que aprende, sin producir ese verdadero encuentro.
 
 ¿Y si la clave estuviera en reconocer la unidad de ambos procesos? Esta pregunta marcaría el inicio de mi reflexión sobre lo que, más tarde, denominaría *aprendanza*.
 
@@ -66,6 +66,11 @@ En educación, algo similar ocurre cuando intentamos separar enseñar y aprender
 
 ## Aprendanza: la unidad básica de la educación
 De estas reflexiones surgió la idea de *aprendanza*, un término que fusiona *aprendizaje* y *enseñanza* para destacar su **indivisibilidad**. Más que un concepto meramente descriptivo, lo concibo como **una forma de nombrar la esencia misma de la educación**, la unidad mínima que otorga vida al proceso. Así como la célula es la unidad más elemental de lo que consideramos “vivo”, la *aprendanza* se plantea como la unidad básica de lo que podríamos llamar “educación”.
+
+Este planteamiento se debe a que:
+- **Ambos procesos son simultáneos:** Aprender y enseñar se alimentan mutuamente, generando una dinámica que no puede separarse sin perder su sentido fundamental.
+- **La dimensión superior de la interacción:** Al situar *aprendizaje* y *enseñanza* en una esfera conjunta, superamos la lógica de “suma de partes” y comprendemos la educación como un fenómeno más amplio y complejo, donde cada individuo puede ejercer ambos roles sin conflicto.
+- **Rompe con la separación artificial:** Históricamente, se ha planteado a la enseñanza y al aprendizaje como funciones aisladas, asignadas a distintos actores. La *aprendanza* nace para recordarnos que esa disociación no solo es poco realista, sino que limita el potencial transformador de la educación.
 
 ---
 
