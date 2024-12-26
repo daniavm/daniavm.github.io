@@ -31,7 +31,7 @@ tags:
 
 ### **Capítulos de la Saga de la Aprendanza**
 
-1. **[Capítulo 1 - Entre la teoría y la práctica: El surgimiento de la Aprendanza](_posts/saga_aprendanza/2024-12-25-Aprendanza-entre-la-teoria-y-la-practica.md)**  
+1. **[Capítulo 1 - Entre la teoría y la práctica: El surgimiento de la Aprendanza]**(_posts/saga_aprendanza/2024-12-25-Aprendanza-entre-la-teoria-y-la-practica)  
    En este capítulo inaugural, comparto la historia detrás del concepto de *aprendanza*: cómo surgió de mis vivencias como profesor, mi formación en física y astronomía, y las analogías que me llevaron a cuestionar la separación entre enseñar y aprender. Una reflexión personal que conecta ciencia, pedagogía y experiencia de aula.
 
 2. **Capítulo 2 - Los fundamentos de la Aprendanza: Más allá de la interacción**  
