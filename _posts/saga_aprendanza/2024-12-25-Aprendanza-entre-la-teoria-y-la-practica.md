@@ -28,7 +28,11 @@ tags:
 ---
 
 <div align="justify" markdown="1">
-La educación no es un camino lineal, pero hay procesos que claramente son determinantes para hablar de ella. A lo largo de mis años como profesor y reflexionando desde mi formación científica, he llegado a la conclusión de que enseñar y aprender no son procesos separados. Puede ser algo básico al nivel de un teórico de la educación, pero creo que la parte intersante de esto es precisamente el cómo hacemos que lo que justificamos de manera teórica se materialice en la práctica. Después de todo, tras unos 1800 años de dar explicación a las cosas como lo hacía Aristóteltes (literalmente casi pura teoría) nos dimos cuenta que era absolutamente necesario que las cosas se expresaran en la realidad. De lo contrario no podemos hablar de ciencia o mejor dicho, de la realidad. Así, en esta publicación, te invito a explorar cómo nació el concepto de *aprendanza*, un término que busca dar sentido a esa unidad indivisible que define la esencia misma de la educación.
+La educación no es un camino lineal, aunque existen procesos que resultan fundamentales para comprenderla en su totalidad. A lo largo de mi trayectoria como docente y reflexionando desde mi perspectiva científica, he llegado a la convicción de que enseñar y aprender no son procesos independientes. Esto puede parecer un principio básico para cualquier teórico de la educación, pero lo realmente interesante es cómo logramos que esas ideas teóricas se traduzcan en acciones prácticas.
+
+Durante siglos, siguiendo el modelo aristotélico de explicación basado casi exclusivamente en la teoría, nos dimos cuenta de que era imprescindible que estas ideas cobraran vida en la realidad. Tal vez, sin ser plenamente conscientes, hemos adoptado un enfoque similar con el concepto de enseñanza y aprendizaje: su conexión es tan evidente que podría parecer que no hay más que añadir. Sin embargo, ignorar esa relación nos alejaría de la comprensión científica y, en última instancia, de la realidad misma.
+
+Por eso, en esta publicación, quiero invitarte a explorar el origen del concepto de *aprendanza*. Este término busca encapsular esa unidad indivisible que constituye la esencia de la educación, uniendo teoría y práctica en un equilibrio que refleja su verdadera naturaleza.
 
 ---
 
