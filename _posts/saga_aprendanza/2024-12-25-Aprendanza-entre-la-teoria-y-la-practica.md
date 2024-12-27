@@ -30,9 +30,11 @@ tags:
 <div align="justify" markdown="1">
 La educación no es un camino lineal, aunque existen procesos que resultan fundamentales para comprenderla en su totalidad. A lo largo de mi trayectoria como docente y reflexionando desde mi perspectiva científica, he llegado a la convicción de que enseñar y aprender no son procesos independientes. Esto puede parecer un principio básico para cualquier teórico de la educación, pero lo realmente interesante es cómo logramos que esas ideas teóricas se traduzcan en acciones prácticas.
 
-Durante siglos, siguiendo el modelo aristotélico de explicación basado casi exclusivamente en la teoría, nos dimos cuenta de que era imprescindible que estas ideas cobraran vida en la realidad. Tal vez, sin ser plenamente conscientes, hemos adoptado un enfoque similar con el concepto de enseñanza y aprendizaje: su conexión es tan evidente que podría parecer que no hay más que añadir. Sin embargo, ignorar esa relación nos alejaría de la comprensión científica y, en última instancia, de la realidad misma.
+Curiosamente, durante más de 1800 años, la humanidad adoptó un modelo de pensamiento que Aristóteles había instaurado, basado casi exclusivamente en la teoría, sin cuestionarlo ni llevarlo a la realidad. La autoridad de su figura fue tan abrumadora que nos cegamos, aceptando sus ideas como verdades absolutas y dejando de indagar más allá de lo que él propuso. No fue sino hasta que este paradigma se enfrentó a la necesidad de demostrar sus conceptos en la práctica que nos dimos cuenta del enorme vacío que habíamos ignorado.
 
-Por eso, en esta publicación, quiero invitarte a explorar el origen del concepto de *aprendanza*. Este término busca encapsular esa unidad indivisible que constituye la esencia de la educación, uniendo teoría y práctica en un equilibrio que refleja su verdadera naturaleza.
+¿Es posible que algo similar haya ocurrido con nuestra visión de la enseñanza y el aprendizaje? La conexión entre ambos es tan evidente que parecería no necesitar mayor análisis. Pero esta falta de cuestionamiento podría estar impidiéndonos comprender su verdadera esencia.
+
+En esta publicación, quiero invitarte a reflexionar sobre el concepto de *aprendanza*, un término que busca dar sentido a esa unidad indivisible entre enseñar y aprender, y que podría transformar la manera en que entendemos la educación al integrar teoría y práctica como una sola realidad.
 
 ---
 
