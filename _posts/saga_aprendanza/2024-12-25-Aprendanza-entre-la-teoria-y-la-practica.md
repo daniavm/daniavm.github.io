@@ -50,11 +50,11 @@ Esta brecha entre lo que la educación busca y lo que realmente logra no solo af
 ---
 
 ## El trabajo no es la vida: una brecha que empieza en la escuela
-En Chile (y en muchas partes del mundo) se escucha con frecuencia la frase *“El trabajo no es la vida”*. Refleja la desconexión que se percibe entre lo que hacemos a diario y lo que realmente somos o aspiramos a ser.
+En vista de las observaciones anteriores, vale mencionar que la desconexión entre teoría y práctica en la educación no solo afecta el aprendizaje, sino también cómo entendemos el trabajo y la vida. En Chile, como en muchas otras partes del mundo, la frase “El trabajo no es la vida” surge como una respuesta al desgaste y la frustración que genera un sistema que parece estar diseñado para sofocar las aspiraciones de quienes desean ser buenos profesores, estudiantes, directivos o apoderados.
 
-Esta brecha no se origina en la adultez, sino que arraiga en la etapa escolar. Estudiantes y profesores a menudo se ven empujados por la lógica de “cumplir”: rendir pruebas, cubrir programas; los directivos deben demostrar resultados externos y los apoderados confían en esas métricas para juzgar la calidad del colegio. La escuela termina asumiéndose como un trámite, alejado de los proyectos vitales de las personas.
+Esta frustración tiene sus raíces en la escuela, donde desde temprana edad tanto estudiantes como docentes quedan atrapados en la lógica del “cumplimiento”: rendir pruebas, cubrir programas; mientras los directivos intentan demostrar resultados medibles y las familias evalúan la calidad educativa en función de estas métricas. En este esquema, el tiempo de calidad para el aprendizaje o la reflexión se ve desplazado por el exceso de tareas repetitivas y trabajo sin sentido, lo que desvincula la educación de los proyectos vitales de cada persona.
 
-No extraña, entonces, que muchos sientan que “la vida comienza” tras la enseñanza media o la universidad, sin haber encontrado un verdadero nexo entre su formación y las aspiraciones de cada cual.
+No sorprende, entonces, que muchos terminen disociando esta realidad saturada y fallida de lo que consideran su verdadera vida, recurriendo a frases como “El trabajo no es la vida” para marcar la separación. El colegio, la universidad o incluso el trabajo diario se convierten en un trámite, alejados de lo que realmente importa, reforzando la percepción de que la vida empieza “después” de estas etapas. Este fenómeno evidencia que, más allá de la educación en sí, el sistema actual obstaculiza la posibilidad de integrar lo aprendido con nuestras aspiraciones más profundas y reales.
 
 ---
 
