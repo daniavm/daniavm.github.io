@@ -28,7 +28,7 @@ tags:
 ---
 
 <div align="justify" markdown="1">
-La educación no es un camino lineal. A lo largo de mis años como profesor y reflexionando desde mi formación científica, he llegado a la conclusión de que enseñar y aprender no son procesos separados. En esta publicación, te invito a explorar cómo nació el concepto de *aprendanza*, un término que busca dar sentido a esa unidad indivisible que define la esencia misma de la educación.
+La educación no es un camino lineal, pero hay procesos que claramente son determinantes para hablar de ella. A lo largo de mis años como profesor y reflexionando desde mi formación científica, he llegado a la conclusión de que enseñar y aprender no son procesos separados. Puede ser algo básico al nivel de un teórico de la educación, pero creo que la parte intersante de esto es precisamente el cómo hacemos que lo que justificamos de manera teórica se materialice en la práctica. Después de todo, tras unos 1800 años de dar explicación a las cosas como lo hacía Aristóteltes (literalmente casi pura teoría) nos dimos cuenta que era absolutamente necesario que las cosas se expresaran en la realidad. De lo contrario no podemos hablar de ciencia o mejor dicho, de la realidad. Así, en esta publicación, te invito a explorar cómo nació el concepto de *aprendanza*, un término que busca dar sentido a esa unidad indivisible que define la esencia misma de la educación.
 
 ---
 
