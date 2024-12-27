@@ -38,10 +38,14 @@ En esta publicación, quiero invitarte a reflexionar sobre el concepto de *apren
 
 ---
 
-## Una contradicción que todos intuimos
-En la teoría pedagógica moderna, entendemos que la educación debe ir más allá de la transmisión de contenidos. Se habla de aprendizaje activo, de participación y de colaboración. Sin embargo, en la práctica cotidiana, todavía se reproducen inercias que nos llevan a planificar y desarrollar la enseñanza de forma más cercana al modelo tradicional. Esta contradicción no ocurre por ignorancia o mala voluntad, sino porque el sistema educativo valora resultados rápidos y cuantificables, lo que dificulta la transformación profunda.
+## Una contradicción que tod@s intuimos
+En la teoría pedagógica moderna, entendemos que la educación debe ir más allá de la transmisión de contenidos. Se habla de aprendizaje activo, de participación y de colaboración. Sin embargo, en la práctica cotidiana, todavía se reproducen inercias que nos llevan a planificar y desarrollar la enseñanza de forma más cercana al modelo tradicional. Esta contradicción no ocurre por ignorancia o mala voluntad, sino porque el sistema educativo valora resultados rápidos y cuantificables, lo que dificulta la transformación profunda o el pensamiento creativo.
 
-Esta situación no implica que veamos hoy a los profesores como meros transmisores de contenidos o a los estudiantes como receptores pasivos. Por el contrario, existe gran claridad teórica sobre la relevancia de la interacción y la adaptación a contextos diversos. Aun así, algo sigue impidiendo que esta visión se materialice por completo, generando una tensión entre lo que creemos deseable y lo que realmente sucede en el día a día.
+Por ejemplo, en el contexto chileno, un profesor que intenta implementar estrategias innovadoras, como proyectos interdisciplinarios o debates críticos, se enfrenta a presiones externas e internas. Por un lado, los tiempos ajustados del currículum y la preparación para evaluaciones nacionales como el SIMCE o la PAES lo obligan a priorizar objetivos medibles. Por otro lado, sus propios hábitos, formados en un modelo tradicional, pueden llevarlo casi de manera automática a estructurar sus clases de forma expositiva, incluso cuando desea lo contrario.
+
+Esta tensión se ve reflejada también en los estudiantes. Muchos, después de años inmersos en un sistema que premia la memorización y los resultados numéricos, tienden a buscar "la fórmula correcta" para aprobar una evaluación, pidiendo resúmenes o ejercicios repetitivos en lugar de participar activamente en propuestas más abiertas o colaborativas. Aunque existe gran claridad teórica sobre la relevancia de la interacción y la adaptación a contextos diversos, estas dinámicas siguen impidiendo que la visión moderna de la educación se materialice por completo, generando una brecha entre lo que creemos deseable y lo que realmente sucede en el día a día.
+
+Esta brecha entre lo que la educación busca y lo que realmente logra no solo afecta el aprendizaje, sino también cómo entendemos el equilibrio entre el trabajo, el éxito y la vida desde las primeras etapas de formación.
 
 ---
 
