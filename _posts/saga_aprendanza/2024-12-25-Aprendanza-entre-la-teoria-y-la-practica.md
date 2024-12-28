@@ -86,34 +86,36 @@ Imagina que tratamos de construir una célula - la unidad básica que podemos ll
 
 Usemos esto y traslademos esta analogía al ámbito educativo. El sistema actual nos lleva a creer que la educación surge al juntar a quienes enseñan, aprenden, supervisan y evalúan, asignándoles roles claramente delimitados con la idea de que produciremos los efectos de una verdadera educación. Tras hacerlo durante muchos años, hoy notamos que esta fragmentación **no produce los resultados que esperábamos**. De hecho es todo lo contrario, hoy incluso podemos decir que tenemos una sociedad tan fracturada como la fragmentación de estos roles. La relación entre las partes es tan escasa que hasta podríamos decir que se rigen más por un contrato que por un compromiso con su labor. Al igual que en la situación con la célula, el resultado no parece ser el que buscábamos construir, por ende hay algo que replantearse. Después de todo, si queremos resultados distintos hay que dejar de hacer siempre lo mismo.
 
-En este contexto, la fragmentación de roles en la educación —profesor, estudiante, directivo, apoderado— equivale a desarmar una célula y esperar que siga funcionando como quizás lo hicieron edades, pasadas en que la educación sí tenía un impacto social, y sí cumplía un rol transformados tanto en las personas como en las sociedades. Un profesor que enseña sin aprender, un estudiante que aprende sin enseñar, o un directivo que supervisa sin participar activamente en el aprendizaje colectivo, o un apoderado que no está involucrado con el entorno escolar no contribuyen a un sistema educativo realmente funcional. La interacción dinámica entre enseñar y aprender no puede relegarse a distintos roles o personas. **Debe ocurrir en cada individuo y entre ellos, como un todo indivisible.** Esta es la razón por la que creo que la idea de que el aprendizaje y la enseñanza son dos caras de una misma moneda tiene una pregunta que va un poco más lejos, ¿Y cuál es el nombre de esa "moneda"?
+En este contexto, la fragmentación de roles en la educación —profesor, estudiante, directivo, apoderado— equivale a desarmar una célula y esperar que siga funcionando como quizás lo hicieron edades, pasadas en que la educación sí tenía un impacto social, y sí cumplía un rol transformados tanto en las personas como en las sociedades. Un profesor que enseña sin aprender, un estudiante que aprende sin enseñar, o un directivo que supervisa sin participar activamente en el aprendizaje colectivo, o un apoderado que no está involucrado con el entorno escolar no contribuyen a un sistema educativo realmente funcional. La interacción dinámica entre enseñar y aprender no puede relegarse a distintos roles o personas. **Debe ocurrir en cada individuo y entre ellos, como un todo indivisible.** 
+
+Esta es la razón por la que creo que la idea de que "el aprendizaje y la enseñanza son dos caras de una misma moneda" tiene una pregunta que va un poco más lejos ... ¿Y cuál es el nombre de esa "moneda"?
 
 ---
 
 ## Aprendanza: la unidad básica de la educación
-Así como la célula es la unidad básica de la vida, la **aprendanza** es la unidad mínima de la educación viva. Este término no surge solo como una síntesis entre aprendizaje y enseñanza, sino como un reconocimiento de que estos procesos son **inseparables, interdependientes y necesarios dentro de cada individuo y en sus relaciones con los demás.**
+Así como la célula es la unidad básica de la vida, la **aprendanza** es la unidad mínima de la educación que transforma, la educación que es viva. Este término no me surge solo como una síntesis entre aprendizaje y enseñanza, sino como un reconocimiento de que estos procesos son **inseparables, interdependientes y necesarios dentro de cada individuo y en sus relaciones con los demás.**
 
-¿Por qué es tan relevante este concepto?  
-Porque desafía el paradigma que ha sostenido la educación durante siglos: la separación artificial de roles. Esta separación no solo ha limitado la efectividad del sistema educativo, sino que ha contribuido a una desconexión profunda entre las personas y sus propios procesos formativos.
+¿Por qué es tan relevante esta idea?  
+Porque desafía el paradigma que ha sostenido la educación durante siglos: la separación artificial de roles para construir la educación. Esta separación no solo ha limitado la efectividad del sistema educativo, sino que probablemente ha contribuido a una desconexión profunda entre las personas y sus propios procesos formativos.
 
 En la aprendanza:
-1. **El aprendizaje y la enseñanza son simultáneos:** Un profesor que no aprende de sus estudiantes, de su entorno y de su práctica está limitando su capacidad de enseñar. Del mismo modo, un estudiante que no enseña —que no comparte, explica o externaliza lo aprendido— nunca completa el ciclo de aprendizaje. Cada interacción en el aula debería reflejar esta reciprocidad.
+1. **El aprendizaje y la enseñanza no son separables:** Un profesor que no aprende de sus estudiantes, de su entorno y de su práctica está limitando su capacidad de enseñar. Del mismo modo, un estudiante que no enseña —que no comparte, explica o externaliza lo aprendido— nunca completa el ciclo. De la misma manera que la naturaleza de un imán es tener estrictamente dos polos y que no se separan al separar el imán (porque se generan al momento de dividir el artefacto), la naturaleza de la aprendanza exige la existencia del aprendizaje y la enseñanza.
    
-2. **No hay jerarquías rígidas:** La aprendanza desdibuja las líneas entre quién enseña y quién aprende. Un directivo puede aprender de un estudiante, un apoderado puede enseñar a un docente, y un estudiante puede ser el principal motor de cambio en un proyecto educativo. La educación viva no reconoce la autoridad como el eje central, sino la interacción genuina y horizontal entre sus actores.
+2. **No hay jerarquías rígidas:** La aprendanza desdibuja las líneas entre quién enseña y quién aprende. Un directivo puede aprender de un estudiante, un apoderado puede enseñar a un docente, y un estudiante puede ser el principal motor de cambio en un proyecto educativo. La educación viva no reconoce el rol o la autoridad como el eje central, sino la interacción genuina y generativa entre sus actores.
 
-3. **Transforma el propósito de la educación:** La aprendanza devuelve a la educación su sentido esencial: ser un proceso humano, significativo y transformador. No se trata de cumplir metas externas ni de preparar para exámenes, sino de formar personas capaces de reflexionar, crear, cuestionar y aportar a la sociedad.
+3. **Transforma el propósito de la educación:** La aprendanza devuelve a la educación su sentido esencial: ser un proceso humano, significativo y transformador. No se trata solo de cumplir metas externas ni de responder a examenes o al trabajo administrativo, se trata de responder a cómo es que cada persona descubre su lugar en el mundo para que con sus acciones impacte en los demás.
 
 ---
 
 ## Principia: el sueño de una educación viva
-**Principia** nace como un laboratorio para la aprendanza. Aquí, profesores, estudiantes, directivos y apoderados son participantes activos en un proceso educativo donde los roles tradicionales se desdibujan y el aprendizaje se convierte en una experiencia compartida.  
+**Principia** nace como un espacio para la aprendanza. Aquí, profesores, estudiantes, directivos y apoderados son participantes activos en un proceso educativo donde los roles tradicionales se desdibujan y el aprendizaje se convierte en una experiencia compartida.  
 
 Nuestro sueño es construir un modelo donde:  
 - Los docentes sigan aprendiendo a lo largo de toda su vida profesional.  
 - Los estudiantes sean protagonistas de su educación, enseñando y compartiendo sus aprendizajes.  
 - Las familias y directivos sean co-creadores, y no simples observadores, del proceso educativo.
 
-En **Principia**, la educación se vive como un todo integrado, donde enseñar y aprender son un solo acto, indivisible, vivo y transformador.
+En **Principia**, la educación se vive como un todo integrado, donde enseñar y aprender son partes de una misma cosa, indivisible, viva y transformadora. Ambos son parte de lo que creo que debemos llamar "aprendanza".
 
 ---
 
