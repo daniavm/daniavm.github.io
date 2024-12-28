@@ -28,26 +28,22 @@ tags:
 ---
 
 <div align="justify" markdown="1">
-La educación no es un camino lineal, aunque existen procesos que resultan fundamentales para comprenderla en su totalidad. A lo largo de mi trayectoria como docente y reflexionando desde mi perspectiva científica, he llegado a la convicción de que enseñar y aprender no son procesos independientes. Esto puede parecer un principio básico para cualquier teórico de la educación, pero lo realmente interesante es cómo logramos que esas ideas teóricas se traduzcan en acciones prácticas.
+La educación no es un camino lineal, aunque existen procesos que resultan fundamentales para comprenderla en su totalidad. A lo largo de mi trayectoria como docente y reflexionando desde mi perspectiva científica, he llegado a la convicción de que enseñar y aprender no solo son procesos dependientes - lo cuál es algo entendido como "básico" en la jerga educacional - , sino que incluso no pueden disociarse en roles o personas diferentes.
 
-Curiosamente, durante más de 1800 años, la humanidad adoptó un modelo de pensamiento que Aristóteles había instaurado, basado casi exclusivamente en la teoría, sin cuestionarlo ni llevarlo a la realidad. La autoridad de su figura fue tan abrumadora que nos cegamos, aceptando sus ideas como verdades absolutas y dejando de indagar más allá de lo que él propuso. No fue sino hasta que este paradigma se enfrentó a la necesidad de demostrar sus conceptos en la práctica que nos dimos cuenta del enorme vacío que habíamos ignorado.
-
-¿Es posible que algo similar haya ocurrido con nuestra visión de la enseñanza y el aprendizaje? La conexión entre ambos es tan evidente que parecería no necesitar mayor análisis. Pero esta falta de cuestionamiento podría estar impidiéndonos comprender su verdadera esencia.
-
-En esta publicación, quiero invitarte a reflexionar sobre el concepto de *aprendanza*, un término que busca dar sentido a esa unidad indivisible entre enseñar y aprender, y que podría transformar la manera en que entendemos la educación al integrar teoría y práctica como una sola realidad.
+Así, en esta publicación quiero invitarte a reflexionar sobre el concepto de *aprendanza*, un término que busca dar sentido a esa unidad indivisible entre enseñar y aprender, y que podría transformar la manera en que entendemos la educación al integrar teoría y práctica como una sola realidad.
 
 ---
 
-## Algunos "hechos" y sus consecuencias
+### Una disociación que persiste en la práctica
+Aunque en la teoría pedagógica moderna se reconoce que la enseñanza y el aprendizaje son procesos interdependientes, en la práctica educativa aún se asume, de forma implícita, que enseñar es tarea exclusiva del profesor y aprender, del estudiante. Este enfoque tradicional invisibiliza el rol de otros actores clave, como directivos y apoderados, cuya participación podría enriquecer el proceso educativo en su conjunto. Sin embargo, estas dinámicas persisten, limitando el potencial transformador de la educación.
 
-### Una contradicción que tod@s intuimos
-En la teoría pedagógica moderna, entendemos que la educación debe ir más allá de la transmisión de contenidos. Se habla de aprendizaje activo, de participación y de colaboración. Sin embargo, en la práctica cotidiana, todavía se reproducen inercias que nos llevan a planificar y desarrollar la enseñanza de forma más cercana al modelo tradicional. Esta contradicción no ocurre por ignorancia o mala voluntad, sino porque el sistema educativo valora resultados rápidos y cuantificables, lo que dificulta la transformación profunda o el pensamiento creativo.
+En Chile, estas inercias son evidentes en la rutina escolar. Las presiones por cumplir con currículums ajustados y evaluaciones estandarizadas como el SIMCE o la PAES relegan a los profesores a centrarse en transmitir contenidos, mientras que el aprendizaje de los estudiantes queda reducido a la memorización/ejecticación de respuestas correctas o en su defecto, a responder lo que se les pide que respondan. El razonamiento o el desarrollo del pensamiento individual queda relegado a algo que la persona debe buscar en sus tiempos "libres" o a la iniviativa personal, y aunque algunos profesores buscan implementar metodologías innovadoras, las expectativas tradicionales, el control excesivo y los tiempos limitados los llevan a priorizar el cumplimiento por sobre la reflexión, la creatividad o las habilidades necesarias para enfrentar “la vida”.
 
-Por ejemplo, en el contexto chileno, un profesor que intenta implementar estrategias innovadoras, como proyectos interdisciplinarios o debates críticos, se enfrenta a presiones externas e internas. Por un lado, los tiempos ajustados del currículum y la preparación para evaluaciones nacionales como el SIMCE o la PAES lo obligan a priorizar objetivos medibles. Por otro lado, sus propios hábitos, formados en un modelo tradicional, pueden llevarlo casi de manera automática a estructurar sus clases de forma expositiva, incluso cuando desea lo contrario.
+Por su parte, los estudiantes también han interiorizado estas prácticas. Muchos consideran que una clase efectiva es aquella con estructura rígida y respuestas claras, donde la exploración personal o la creatividad tienen poco espacio. Este modelo refuerza un sistema que rara vez los empodera como participantes activos en su educación, perpetuando la separación entre enseñar y aprender.
 
-Esta tensión se ve reflejada también en los estudiantes. Muchos, después de años inmersos en un sistema que premia la memorización y los resultados numéricos, tienden a buscar "la fórmula correcta" para aprobar una evaluación, pidiendo resúmenes o ejercicios repetitivos en lugar de participar activamente en propuestas más abiertas o colaborativas. Aunque existe gran claridad teórica sobre la relevancia de la interacción y la adaptación a contextos diversos, estas dinámicas siguen impidiendo que la visión moderna de la educación se materialice por completo, generando una brecha entre lo que creemos deseable y lo que realmente sucede en el día a día.
+En este esquema, los directivos y apoderados suelen quedar relegados a roles administrativos o evaluativos, más centrados en los resultados que en el proceso educativo. Esta visión fragmentada limita la capacidad de la escuela para construir un proyecto pedagógico más integral y significativo.
 
-Esta brecha entre lo que la educación busca y lo que realmente logra no solo afecta el aprendizaje, sino también cómo entendemos el equilibrio entre el trabajo, el éxito y la vida desde las primeras etapas de formación.
+En este contexto, la frase “El trabajo no es la vida” encapsula la frustración de quienes atraviesan un sistema educativo que no logra conectar lo que sucede en el aula con las aspiraciones y proyectos vitales de las personas.
 
 ---
 
