@@ -38,7 +38,9 @@ En esta publicación, quiero invitarte a reflexionar sobre el concepto de *apren
 
 ---
 
-## Una contradicción que tod@s intuimos
+## Algunos "hechos" y sus consecuencias
+
+### Una contradicción que tod@s intuimos
 En la teoría pedagógica moderna, entendemos que la educación debe ir más allá de la transmisión de contenidos. Se habla de aprendizaje activo, de participación y de colaboración. Sin embargo, en la práctica cotidiana, todavía se reproducen inercias que nos llevan a planificar y desarrollar la enseñanza de forma más cercana al modelo tradicional. Esta contradicción no ocurre por ignorancia o mala voluntad, sino porque el sistema educativo valora resultados rápidos y cuantificables, lo que dificulta la transformación profunda o el pensamiento creativo.
 
 Por ejemplo, en el contexto chileno, un profesor que intenta implementar estrategias innovadoras, como proyectos interdisciplinarios o debates críticos, se enfrenta a presiones externas e internas. Por un lado, los tiempos ajustados del currículum y la preparación para evaluaciones nacionales como el SIMCE o la PAES lo obligan a priorizar objetivos medibles. Por otro lado, sus propios hábitos, formados en un modelo tradicional, pueden llevarlo casi de manera automática a estructurar sus clases de forma expositiva, incluso cuando desea lo contrario.
@@ -49,7 +51,7 @@ Esta brecha entre lo que la educación busca y lo que realmente logra no solo af
 
 ---
 
-## El trabajo no es la vida: una brecha que empieza en la escuela
+### El trabajo no es la vida: una brecha que empieza en la escuela
 En vista de las observaciones anteriores, vale mencionar que la desconexión entre teoría y práctica en la educación no solo afecta el aprendizaje, sino también cómo entendemos el trabajo y la vida. En Chile, como en muchas otras partes del mundo, la frase “El trabajo no es la vida” surge como una respuesta al desgaste y la frustración que genera un sistema que parece estar diseñado para sofocar las aspiraciones de quienes desean ser buenos profesores, estudiantes, directivos o apoderados.
 
 Esta frustración tiene sus raíces en la escuela, donde desde temprana edad tanto estudiantes como docentes quedan atrapados en la lógica del “cumplimiento”: rendir pruebas, cubrir programas; mientras los directivos intentan demostrar resultados medibles y las familias evalúan la calidad educativa en función de estas métricas. En este esquema, el tiempo de calidad para el aprendizaje o la reflexión se ve desplazado por el exceso de tareas repetitivas y trabajo sin sentido, lo que desvincula la educación de los proyectos vitales de cada persona.
