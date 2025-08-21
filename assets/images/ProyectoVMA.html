@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Principia — Plan de Trabajo Interactivo para Villa María Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Lato:wght@400;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root{
+          /* --- Principia Design System Tokens --- */
+          --pri-orange:#FFA630;
+          --pri-orange-600:#F17720;
+          --pri-blue:#00A7E1;
+          --pri-blue-600:#008ac1;
+          --pri-ink:#3D3D3D;
+          --pri-ink-2:#757575;
+          --pri-bg:#FFFFFF;
+          --surface-100: #F8F9FA;
+          --surface-200: #FFFFFF;
+          --border-color: #E5E7EB;
+          --success:#2E7D32;
+          --error:#D32F2F;
+        }
+
+        html.dark {
+          --pri-ink: #e4e4e7;
+          --pri-ink-2: #a1a1aa;
+          --pri-bg: #18181b;
+          --surface-100: #27272a;
+          --surface-200: #3f3f46;
+          --border-color: #52525b;
+          --success:#4ade80;
+          --error:#f87171;
+        }
+
+        html, body { height: 100%; }
+        body { font-family: 'Lato', sans-serif; background-color: var(--pri-bg); color: var(--pri-ink); transition: background-color 0.3s, color 0.3s; display: flex; flex-direction: column; }
+        main { flex-grow: 1; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Fira Sans', sans-serif; }
+        .font-raleway { font-family: 'Raleway', sans-serif; }
+        
+        h1.gradient-text, h2.section-title {
+            background: linear-gradient(90deg, var(--pri-orange), var(--pri-orange-600));
+            -webkit-background-clip: text; background-clip: text;
+            color: transparent;
+        }
+
+        .h-deco{position:relative}
+        .h-deco:after{content:"";display:block;height:4px;width:100px;margin:12px auto 0;background:linear-gradient(90deg, var(--pri-orange), var(--pri-orange-600));border-radius:999px;}
+        
+        .content-container {
+            background-color: var(--surface-200);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        html.dark .content-container { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2); }
+
+        .btn-primary {
+            background: linear-gradient(to right, var(--pri-orange), var(--pri-orange-600));
+            color: white;
+            padding: .75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform .15s, box-shadow .15s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(241, 119, 32, .3);
+        }
+        .btn-secondary {
+            background-color: var(--surface-200);
+            color: var(--pri-blue);
+            border: 1px solid var(--pri-blue);
+            padding: .75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .btn-secondary:hover {
+             background-color: rgba(0, 167, 225, 0.1);
+        }
+        .btn-secondary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background-color: var(--surface-100);
+            border-color: var(--border-color);
+            color: var(--pri-ink-2);
+        }
+
+
+        /* --- Custom Component Styles (Aligned with Principia) --- */
+        .modal-overlay {
+            position: fixed; inset: 0; background: rgba(0,0,0,.7);
+            backdrop-filter: blur(8px); z-index: 1000; display: flex;
+            align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transition: all .35s;
+        }
+        .modal-overlay.visible { opacity: 1; visibility: visible; }
+        .modal-container {
+            background: var(--surface-100); width: 90%; max-width: 900px;
+            height: 90vh; border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,.2);
+            display: flex; flex-direction: column; transform: scale(.96);
+            transition: transform .35s;
+        }
+        .modal-overlay.visible .modal-container { transform: scale(1); }
+        .modal-section h4 { border-bottom: 2px solid var(--pri-orange); padding-bottom: 0.5rem; }
+        .code-block {
+            background: #27272a; color: #e4e4e7;
+            padding: 1rem; border-radius: 8px; font-family: 'Fira Code', monospace;
+            font-size: 0.85rem; white-space: pre; overflow-x: auto;
+        }
+        .timeline::before {
+            content: ''; position: absolute; top: 24px; left: 5%; right: 5%;
+            height: 4px; background-color: var(--border-color); z-index: 0;
+        }
+        .timeline-progress {
+            position: absolute; top: 24px; left: 5%; height: 4px;
+            background: linear-gradient(to right, var(--pri-orange), var(--pri-orange-600));
+            z-index: 1; width: 0; transition: width .5s ease-in-out;
+        }
+        .timeline-step .timeline-icon {
+            border: 4px solid var(--border-color);
+            background-color: var(--surface-200);
+            color: var(--pri-ink-2);
+            transition: all .3s;
+        }
+        .timeline-step:hover .timeline-icon { transform: scale(1.15) rotate(10deg); }
+        .timeline-step.active .timeline-icon { border-color: var(--pri-orange); color: var(--pri-orange); }
+        .timeline-details { max-height: 0; overflow: hidden; transition: all .5s ease-in-out; opacity: 0; }
+        .timeline-details.open { max-height: 500px; margin-top: 1.5rem; opacity: 1; }
+        .animated-card { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
+        .accordion-item-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; padding: 0 1.5rem; }
+        .accordion-item-content.open { max-height: 1000px; padding-top: 1.5rem; }
+        .accordion-header .chevron { transition: transform 0.3s ease-in-out; }
+        .accordion-header.active .chevron { transform: rotate(90deg); }
+        
+        .slide { display: none; animation: fadeIn 0.5s ease-in-out; height: 100%; }
+        .slide-centered { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body>
+    <header class="bg-[var(--surface-200)]/80 backdrop-blur-lg shadow-md sticky top-0 z-50 border-b border-[var(--border-color)]">
+        <div class="container mx-auto px-6">
+            <nav class="flex justify-between items-center py-3">
+                <a href="#" class="flex items-center gap-3 text-lg">
+                    <img src="https://daniavm.github.io/assets/images/Principia_Logo_Oficial.png" alt="Principia Logo" class="h-8">
+                    <span class="font-raleway font-bold text-xl" data-key="principia">Principia</span>
+                    <span class="text-gray-400 font-light mx-1">×</span>
+                    <img src="https://daniavm.github.io/assets/images/VMA_Logo.png" alt="Villa María Academy Logo" class="h-8">
+                    <span class="font-bold text-xl hidden sm:inline" data-key="villaMaria">Villa María Academy</span>
+                </a>
+
+                <div class="flex items-center space-x-2">
+                    <div class="hidden md:flex items-center gap-3 text-xs pr-2">
+                        <button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)]" id="themeToggle" aria-label="Cambiar tema">
+                            <i id="sun-icon" class="fas fa-sun fa-lg"></i>
+                            <i id="moon-icon" class="fas fa-moon fa-lg hidden"></i>
+                        </button>
+                        <button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)] w-8" id="langToggle" aria-label="Cambiar idioma">
+                            ENG
+                        </button>
+                    </div>
+                    <button id="hamburger-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden hover:bg-gray-100 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menú principal</span>
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="hidden lg:hidden" id="mobile-menu">
+                <ul class="flex flex-col items-center py-4 space-y-4">
+                    <li class="md:hidden flex items-center gap-3 text-sm">
+                        <button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)]" id="themeToggleMobile" aria-label="Cambiar tema">
+                            <i id="sun-icon-mobile" class="fas fa-sun fa-lg mr-2"></i> <span data-key="themeLabelLight">Modo Claro</span>
+                            <i id="moon-icon-mobile" class="fas fa-moon fa-lg mr-2 hidden"></i> <span data-key="themeLabelDark" class="hidden">Modo Oscuro</span>
+                        </button>
+                    </li>
+                    <li class="md:hidden flex items-center gap-3 text-sm">
+                        <button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)]" id="langToggleMobile" aria-label="Cambiar idioma">
+                            <i class="fas fa-globe fa-lg mr-2"></i> <span data-key="langLabel">Cambiar a Inglés</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <div id="slides-container" class="h-full container mx-auto px-6">
+            <!-- Slide 1: Hero -->
+            <div class="slide slide-centered">
+                <section class="text-center py-12 md:py-20">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text" data-key="heroTitle">Una Alianza para la Articulación Colaborativa</h1>
+                    <p class="text-lg md:text-xl text-[var(--pri-ink-2)] max-w-3xl mx-auto" data-key="heroSubtitle">
+                        Esta es una alianza para construir el futuro del colegio, juntos. Durante seis meses, transformaremos nuestra colaboración en un legado tangible: la fundación del primer Departamento de Investigación y Desarrollo (I+D), un motor de innovación que nacerá desde el corazón de la institución para asegurar su evolución y liderazgo.
+                    </p>
+                </section>
+            </div>
+
+            <!-- Slide 2: Journey & Objectives -->
+            <div class="slide py-12 md:py-20">
+                <section class="mb-16 content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 h-deco section-title" data-key="journeyTitle">Nuestro Viaje de Implementación</h2>
+                    <div class="timeline relative flex justify-between items-start" id="timeline-interactive">
+                        <div class="timeline-progress" id="timeline-progress"></div>
+                        <div class="timeline-step w-1/3 text-center cursor-pointer relative z-10" data-act="1">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <h3 class="font-bold text-lg" data-key="act1Title">Acto I</h3>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="act1Subtitle">Vincular y Ordenar</p>
+                        </div>
+                        <div class="timeline-step w-1/3 text-center cursor-pointer relative z-10" data-act="2">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+                            <h3 class="font-bold text-lg" data-key="act2Title">Acto II</h3>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="act2Subtitle">Explorar y Probar</p>
+                        </div>
+                        <div class="timeline-step w-1/3 text-center cursor-pointer relative z-10" data-act="3">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <h3 class="font-bold text-lg" data-key="act3Title">Acto III</h3>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="act3Subtitle">Innovar y Formalizar</p>
+                        </div>
+                    </div>
+                    <div id="timeline-details-container" class="timeline-details"></div>
+                </section>
+
+                <section class="content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="objectivesTitle">Objetivos Específicos</h2>
+                    <div id="objectives-accordion" class="space-y-1"></div>
+                </section>
+            </div>
+
+            <!-- Slide 3: Framework -->
+            <div class="slide py-12 md:py-20">
+                <section class="content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="requirementsTitle">Requisitos para el Éxito</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-users fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req1Title">Patrocinio Directivo</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req1Desc">Respaldo activo de Dirección y Coordinación.</p>
+                            </div>
+                        </div>
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-database fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req2Title">Acceso a Plataformas</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req2Desc">Acceso a fuentes de datos y Workspace.</p>
+                            </div>
+                        </div>
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-bullseye fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req3Title">Puntos Focales</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req3Desc">Interlocutores en áreas clave.</p>
+                            </div>
+                        </div>
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors">
+                           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-calendar-check fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req4Title">Gobernanza Ágil</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req4Desc">Reuniones quincenales de seguimiento.</p>
+                            </div>
+                        </div>
+                        <div class="animated-card md:col-span-2 lg:col-span-1 flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-shield-alt fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req5Title">Privacidad y Seguridad</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req5Desc">Uso responsable y confidencial de datos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mt-16 content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="valuesTitle">Nuestros Valores</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+                           <div class="w-16 h-16 mx-auto rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center mb-4"><i class="fas fa-hands-helping fa-2x"></i></div>
+                            <h4 class="font-bold text-lg" data-key="val1Title">Colaboración Radical</h4>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="val1Desc">Las mejores soluciones se construyen en conjunto.</p>
+                        </div>
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center mb-4"><i class="fas fa-bolt fa-2x"></i></div>
+                            <h4 class="font-bold text-lg" data-key="val2Title">Entrega de Valor Temprano</h4>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="val2Desc">Nos enfocamos en ciclos cortos para generar resultados visibles.</p>
+                        </div>
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+                           <div class="w-16 h-16 mx-auto rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center mb-4"><i class="fas fa-comments fa-2x"></i></div>
+                            <h4 class="font-bold text-lg" data-key="val3Title">Comunicación Transparente</h4>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="val3Desc">Mantenemos un diálogo fluido sobre avances y desafíos.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <div class="modal-overlay" id="blueprint-modal">
+        <div class="modal-container">
+            <div class="modal-header p-5 flex justify-between items-center border-b border-[var(--border-color)]">
+                <h3 id="modal-title" class="text-xl font-bold"></h3>
+                <button id="modal-close-btn" class="text-2xl font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)] transition-colors">&times;</button>
+            </div>
+            <div class="modal-content p-6 overflow-y-auto" id="modal-content"></div>
+        </div>
+    </div>
+
+    <footer class="bg-[var(--surface-200)]/80 backdrop-blur-lg border-t border-[var(--border-color)] sticky bottom-0 z-40">
+        <div id="slide-nav" class="container mx-auto py-3 px-6 flex items-center">
+            <div class="flex-1 flex justify-start">
+                <button id="prev-btn" class="btn-secondary">
+                    <i class="fas fa-arrow-left mr-2"></i> <span data-key="prevButton">Anterior</span>
+                </button>
+            </div>
+            <div class="flex-1 flex justify-center">
+                <div id="step-indicator" class="text-sm font-bold text-[var(--pri-ink-2)]"></div>
+            </div>
+            <div class="flex-1 flex justify-end">
+                <button id="next-btn" class="btn-primary">
+                    <span data-key="nextButton">Siguiente</span> <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentLanguage = 'es';
+            const translations = {
+                es: {
+                    principia: "Principia",
+                    villaMaria: "Villa María Academy",
+                    heroTitle: "Una Alianza para la Articulación Colaborativa",
+                    heroSubtitle: "Esta es una alianza para construir el futuro del colegio, juntos. Durante seis meses, transformaremos nuestra colaboración en un legado tangible: la fundación del primer Departamento de Investigación y Desarrollo (I+D), un motor de innovación que nacerá desde el corazón de la institución para asegurar su evolución y liderazgo.",
+                    journeyTitle: "Nuestro Viaje de Implementación",
+                    act1Title: "Acto I", act1Subtitle: "Vincular y Ordenar",
+                    act2Title: "Acto II", act2Subtitle: "Explorar y Probar",
+                    act3Title: "Acto III", act3Subtitle: "Innovar y Formalizar",
+                    objectivesTitle: "Objetivos Específicos",
+                    requirementsTitle: "Requisitos para el Éxito",
+                    req1Title: "Patrocinio Directivo", req1Desc: "Respaldo activo de Dirección y Coordinación.",
+                    req2Title: "Acceso a Plataformas", req2Desc: "Acceso a fuentes de datos y Workspace.",
+                    req3Title: "Puntos Focales", req3Desc: "Interlocutores en áreas clave.",
+                    req4Title: "Gobernanza Ágil", req4Desc: "Reuniones quincenales de seguimiento.",
+                    req5Title: "Privacidad y Seguridad", req5Desc: "Uso responsable y confidencial de datos.",
+                    valuesTitle: "Nuestros Valores",
+                    val1Title: "Colaboración Radical", val1Desc: "Las mejores soluciones se construyen en conjunto.",
+                    val2Title: "Entrega de Valor Temprano", val2Desc: "Nos enfocamos en ciclos cortos para generar resultados visibles.",
+                    val3Title: "Comunicación Transparente", val3Desc: "Mantenemos un diálogo fluido sobre avances y desafíos.",
+                    version: "Propuesta de Colaboración: Principia & Villa María Academy — Agosto 2025",
+                    viewBlueprint: "Ver Blueprint", modalTitlePrefix: "Blueprint:",
+                    artifactsArchitecture: "Arquitectura de Artefactos (Google Workspace)", workPlan: "Plan de Trabajo",
+                    durationLabel: "Duración:", weeksLabel: "semanas", descriptionLabel: "Descripción", objectivesLabel: "Objetivos",
+                    prevButton: "Anterior", nextButton: "Siguiente", stepLabel: "Paso", toStartButton: "Volver al Inicio",
+                    themeLabelLight: "Modo Claro", themeLabelDark: "Modo Oscuro", langLabel: "Cambiar a Inglés",
+                    timelineActs: {
+                        1: { title: 'Acto I: Vincular y Ordenar la Información', description: 'Nuestro viaje comienza con la escucha activa. Nos convertiremos en exploradores del colegio para entender su ADN, un proceso donde Victoria de la Maza desde el departamento de análisis de datos, será clave para mapear cómo fluyen los datos y se toman las decisiones hoy. El objetivo es transformar la información dispersa en un activo estratégico, creando un lenguaje común y un entendimiento compartido que nos permita identificar las verdaderas oportunidades de mejora.' },
+                        2: { title: 'Acto II: Explorar y Probar Automatizaciones', description: 'Ahora que comprendemos el terreno, transformamos el conocimiento en acción directa. En este acto, aplicamos lo aprendido para devolver el recurso más valioso a los educadores: el tiempo. Con las oportunidades de mejora ya identificadas, abordamos las tareas administrativas y repetitivas para convertirlas en las primeras candidatas a la automatización. Mediante " Quick Wins" —pequeños prototipos funcionales— demostraremos de forma tangible cómo la tecnología puede simplificar procesos, liberar horas y permitir que el foco vuelva a la pedagogía.' },
+                        3: { title: 'Acto III: Instalar una Lógica de Innovación', description: 'El acto final es la construcción del futuro. Con la confianza ganada y el valor demostrado, el objetivo es instalar una capacidad de innovación permanente dentro del colegio a través de la creación del Área de Desarrollo e Investigación (I+D). Esta área quedará operativa con una estructura y metodología claras, lo que incluye, como parte de su gestión continua, el mapeo del plan de trabajo y un sistema de reportabilidad mensual para asegurar la visibilidad de los resultados. Así, más que un plan, lo que se entrega es un motor de innovación autónomo y en funcionamiento.' }
+                    },
+                    contentData: {
+                        'vincular-informacion': { title: "Objetivo 1: Vincular y Ordenar", durationWeeks: "12–16", stages: { 'vinculacion-contextual': { title: 'Vinculación Contextual', subtitle: 'Entender el ADN de los datos.', description: 'Inmersión con equipos clave para mapear fuentes, responsables y dolores actuales.', objectives: 'Instalar confianza, detectar brechas y priorizar decisiones que requieren buena evidencia.', blueprint: { architecture: '/discovery_datos/\n├── entrevistas/\n├── inventario_fuentes.gsheet\n└── hallazgos.gdoc', workplan: [{phase:'Semanas 1-4', tasks:['Entrevistas con equipos clave', 'Levantamiento de sistemas']}, {phase:'Semanas 5-6', tasks:['Consolidación de inventario', 'Priorización de brechas']}] } }, 'exploracion-oportunidades': { title: 'Exploración Activa', subtitle: 'Identificar intervenciones de impacto.', description: 'Identificamos "quick wins" como alertas de asistencia o vistas de rendimiento.', objectives: 'Validar 2–3 oportunidades de alto valor que puedan ser prototipadas rápidamente.', blueprint: { architecture: '/oportunidades_datos/\n├── matriz_ice.gsheet\n└── backlog_priorizado.gsheet', workplan: [{phase:'Semanas 1-2', tasks:['Workshop de ideación', 'Scoring de iniciativas']}, {phase:'Semanas 3-4', tasks:['Selección de quick wins', 'Plan de prototipado']}] } }, 'demostracion-dashboard': { title: 'Demostración de Capacidad', subtitle: 'Visualizar el poder de los datos.', description: 'Construimos un panel sencillo en Looker Studio con KPIs clave usando datos reales.', objectives: 'Entregar una herramienta tangible que centralice métricas claras y actualizadas.', blueprint: { architecture: '/minidash_p1/\n├── conectores/\n├── modelo_datos/\n└── reporte_demo.looker', workplan: [{phase:'Semanas 1-2', tasks:['Definición de KPIs', 'Gestión de accesos']}, {phase:'Semanas 3-5', tasks:['Desarrollo del modelo y vista', 'Monitorización de Uso y Rendimiento']}, {phase:'Semana 6', tasks:['Sesión de lectura de datos', 'Entrega de guía']}] } } } },
+                        'probar-automatizaciones': { title: "Objetivo 2: Automatizar y Liberar", durationWeeks: "10–15", stages: { 'mapeo-procesos': { title: 'Mapeo de Procesos', subtitle: 'Visibilizar el tiempo administrativo.', description: 'Levantamos las tareas administrativas más recurrentes para visibilizar cuellos de botella.', objectives: 'Crear un inventario priorizado de procesos candidatos a la automatización.', blueprint: { architecture: '/inventario_procesos/\n├── entrevistas/\n└── matriz_esfuerzo_impacto.gsheet', workplan: [{phase:'Semanas 1-2', tasks:['Síntesis de insights y diseño de soluciones', 'Medición de tiempos']}, {phase:'Semana 3', tasks:['Creación de matriz', 'Selección de quick wins']}] } }, 'demostracion-quickwins': { title: 'Demostración con "Quick Wins"', subtitle: 'Scripts que devuelven horas.', description: 'Diseñamos e implementamos soluciones de automatización a medida que optimizan procesos críticos, como la consolidación y validación de evaluaciones.', objectives: 'Probar el valor tangible de la automatización con bajo riesgo en un grupo piloto.', blueprint: { architecture: '/quickwins_automatizacion/\n├── scripts/\n│   └── consolidar_notas.gs\n└── bitacora_ejecucion.gsheet', workplan: [{phase:'Semanas 1-2', tasks:['Definición de métricas de éxito', 'Checklist de seguridad']}, {phase:'Semanas 3-5', tasks:['Desarrollo y pruebas', 'Síntesis de insights y diseño de soluciones']}, {phase:'Semana 6', tasks:['Medición de impacto', 'Traspaso']}] } } } },
+                        'instalar-innovacion': { title: 'Objetivo 3: Innovar y Formalizar', durationWeeks: "8–12", stages: { 'demostracion-ia': { title: 'Asistente IA para la Eficiencia Docente', subtitle: 'Explorar la IA de forma segura.', description: 'Creamos un entorno de pruebas para que docentes pioneros usen IA en dos tareas clave: la revisión ágil de trabajos estudiantiles y la creación de nuevo material pedagógico.', objectives: 'Explorar el potencial de la IA para reducir el tiempo dedicado a la revisión y, a la vez, mejorar la calidad en la creación de material educativo.', blueprint: { architecture: '/sandbox_ia_docente/\n├── prompts_estandar/\n└── guias_calidad.gdoc', workplan: [{phase:'Semanas 1', tasks:['Selección de pilotos', 'Definición de prompts base']}, {phase:'Semanas 2-3', tasks:['Sesiones de pilotaje guiado', 'Recolección de feedback']}, {phase:'Semana 4', tasks:['Definición de aprendizajes']}] } }, 'codiseno-documento-base': { title: 'Codiseño del Documento Base', subtitle: 'La piedra angular para el futuro.', description: 'Sintetizamos todos los aprendizajes y co-diseñamos los pilares del Área de D+I para 2026.', objectives: 'Producir y validar el Documento Base que guiará la implementación del Proyecto 2.', blueprint: { architecture: '/area_di_base_2026/\n├── 1_pilares_y_servicios.gdoc\n└── 2_roadmap_q1_2026.gslides', workplan: [{phase:'Semanas 1', tasks:['Síntesis de hallazgos', 'Borrador de pilares']}, {phase:'Semana 2', tasks:['Diseño de procesos y roles', 'Backlog inicial 2026']}, {phase:'Semana 3', tasks:['Taller de validación', 'Ajustes y acuerdos']}, {phase:'Semana 4', tasks:['Entrega del Documento Base final']}] } } } }
+                    }
+                },
+                en: {
+                    principia: "Principia",
+                    villaMaria: "Villa María Academy",
+                    heroTitle: "An Alliance for Collaborative Articulation",
+                    heroSubtitle: "This is an alliance to build the future of the school, together. For six months, we will transform our collaboration into a tangible legacy: the foundation of the first Research and Development (R&D) Department, an engine of innovation that will be born from the heart of the institution to ensure its evolution and leadership.",
+                    journeyTitle: "Our Implementation Journey",
+                    act1Title: "Act I", act1Subtitle: "Link and Organize",
+                    act2Title: "Act II", act2Subtitle: "Explore and Test",
+                    act3Title: "Act III", act3Subtitle: "Innovate and Formalize",
+                    objectivesTitle: "Specific Objectives",
+                    requirementsTitle: "Requirements for Success",
+                    req1Title: "Executive Sponsorship", req1Desc: "Active support from Directors and Coordinators.",
+                    req2Title: "Platform Access", req2Desc: "Access to data sources and Workspace.",
+                    req3Title: "Focal Points", req3Desc: "Key contacts in crucial areas.",
+                    req4Title: "Agile Governance", req4Desc: "Bi-weekly follow-up meetings.",
+                    req5Title: "Privacy and Security", req5Desc: "Responsible and confidential use of data.",
+                    valuesTitle: "Our Values",
+                    val1Title: "Radical Collaboration", val1Desc: "The best solutions are built together.",
+                    val2Title: "Early Value Delivery", val2Desc: "We focus on short cycles to generate visible results.",
+                    val3Title: "Transparent Communication", val3Desc: "We maintain a fluid dialogue about progress and challenges.",
+                    version: "Collaboration Proposal: Principia & Villa María Academy — August 2025",
+                    viewBlueprint: "View Blueprint", modalTitlePrefix: "Blueprint:",
+                    artifactsArchitecture: "Artifacts Architecture (Google Workspace)", workPlan: "Work Plan",
+                    durationLabel: "Duration:", weeksLabel: "weeks", descriptionLabel: "Description", objectivesLabel: "Objectives",
+                    prevButton: "Previous", nextButton: "Next", stepLabel: "Step", toStartButton: "Back to Start",
+                    themeLabelLight: "Light Mode", themeLabelDark: "Dark Mode", langLabel: "Switch to Spanish",
+                    timelineActs: {
+                        1: { title: 'Act I: Linking and Organizing Information', description: 'Our journey begins with active listening. We will become explorers of the school to understand its DNA, a process where Victoria de la Maza from the data analysis department will be key to mapping how data flows and decisions are made today. The goal is to transform scattered information into a strategic asset, creating a common language and shared understanding that allows us to identify real opportunities for improvement.' },
+                        2: { title: 'Act II: Exploring and Testing Automations', description: 'Now that we understand the terrain, we transform knowledge into direct action. In this act, we apply what we have learned to give back the most valuable resource to educators: time. With improvement opportunities already identified, we address administrative and repetitive tasks to make them the first candidates for automation. Through "Quick Wins"—small functional prototypes—we will tangibly demonstrate how technology can simplify processes, free up hours, and allow the focus to return to pedagogy.' },
+                        3: { title: 'Act III: Installing a Logic of Innovation', description: 'The final act is building the future. With the trust gained and value demonstrated, the goal is to install a permanent innovation capacity within the school through the creation of the Research and Development (R&D) Area. This area will be operational with a clear structure and methodology, which includes, as part of its ongoing management, mapping the work plan and a monthly reporting system to ensure visibility of results. Thus, more than a plan, what is delivered is an autonomous and functioning innovation engine.' }
+                    },
+                    contentData: {
+                        'vincular-informacion': { title: "Objective 1: Link and Organize", durationWeeks: "12–16", stages: { 'vinculacion-contextual': { title: 'Contextual Linking', subtitle: 'Understand the DNA of the data.', description: 'Immersion with key teams to map sources, responsibilities, and current pain points.', objectives: 'Build trust, detect gaps, and prioritize decisions that require good evidence.', blueprint: { architecture: '/data_discovery/\n├── interviews/\n├── source_inventory.gsheet\n└── findings.gdoc', workplan: [{phase:'Weeks 1-4', tasks:['Interviews with key teams', 'System survey']}, {phase:'Weeks 5-6', tasks:['Inventory consolidation', 'Gap prioritization']}] } }, 'exploracion-oportunidades': { title: 'Active Exploration', subtitle: 'Identify high-impact interventions.', description: 'We identify "quick wins" such as attendance alerts or performance views.', objectives: 'Validate 2–3 high-value opportunities that can be prototyped quickly.', blueprint: { architecture: '/data_opportunities/\n├── ice_matrix.gsheet\n└── prioritized_backlog.gsheet', workplan: [{phase:'Weeks 1-2', tasks:['Ideation workshop', 'Initiative scoring']}, {phase:'Weeks 3-4', tasks:['Selection of quick wins', 'Prototyping plan']}] } }, 'demostracion-dashboard': { title: 'Capability Demonstration', subtitle: 'Visualize the power of data.', description: 'We build a simple dashboard in Looker Studio with key KPIs using real data.', objectives: 'Deliver a tangible tool that centralizes clear and updated metrics.', blueprint: { architecture: '/minidash_p1/\n├── connectors/\n├── data_model/\n└── demo_report.looker', workplan: [{phase:'Weeks 1-2', tasks:['KPI definition', 'Access management']}, {phase:'Weeks 3-5', tasks:['Model and view development', 'Usage and Performance Monitoring']}, {phase:'Week 6', tasks:['Data reading session', 'Guide delivery']}] } } } },
+                        'probar-automatizaciones': { title: "Objective 2: Automate and Free Up", durationWeeks: "10–15", stages: { 'mapeo-procesos': { title: 'Process Mapping', subtitle: 'Visualize administrative time.', description: 'We survey the most recurrent administrative tasks to identify bottlenecks.', objectives: 'Create a prioritized inventory of processes suitable for automation.', blueprint: { architecture: '/process_inventory/\n├── interviews/\n└── effort_impact_matrix.gsheet', workplan: [{phase:'Weeks 1-2', tasks:['Insight synthesis and solution design', 'Time measurement']}, {phase:'Week 3', tasks:['Matrix creation', 'Selection of quick wins']}] } }, 'demostracion-quickwins': { title: 'Demonstration with "Quick Wins"', subtitle: 'Scripts that save hours.', description: 'We design and implement custom automation solutions that optimize critical processes, such as the consolidation and validation of assessments.', objectives: 'Test the tangible value of automation with low risk in a pilot group.', blueprint: { architecture: '/automation_quickwins/\n├── scripts/\n│   └── consolidate_grades.gs\n└── execution_log.gsheet', workplan: [{phase:'Weeks 1-2', tasks:['Definition of success metrics', 'Security checklist']}, {phase:'Weeks 3-5', tasks:['Development and testing', 'Insight synthesis and solution design']}, {phase:'Week 6', tasks:['Impact measurement', 'Handover']}] } } } },
+                        'instalar-innovacion': { title: 'Objective 3: Innovate and Formalize', durationWeeks: "8–12", stages: { 'demostracion-ia': { title: 'AI Assistant for Teacher Efficiency', subtitle: 'Explore AI safely.', description: 'We create a testing environment for pioneer teachers to use AI for two key tasks: agile review of student work and the creation of new pedagogical material.', objectives: 'Explore the potential of AI to reduce time spent on reviews and, at the same time, improve the quality of educational material creation.', blueprint: { architecture: '/teacher_ai_sandbox/\n├── standard_prompts/\n└── quality_guides.gdoc', workplan: [{phase:'Week 1', tasks:['Pilot selection', 'Definition of base prompts']}, {phase:'Weeks 2-3', tasks:['Guided piloting sessions', 'Feedback collection']}, {phase:'Week 4', tasks:['Learning definition']}] } }, 'codiseno-documento-base': { title: 'Co-design of the Base Document', subtitle: 'The cornerstone for the future.', description: 'We synthesize all learnings and co-design the pillars of the R&D Area for 2026.', objectives: 'Produce and validate the Base Document that will guide the implementation of Project 2.', blueprint: { architecture: '/rd_base_2026/\n├── 1_pillars_and_services.gdoc\n└── 2_roadmap_q1_2026.gslides', workplan: [{phase:'Week 1', tasks:['Synthesis of findings', 'Draft of pillars']}, {phase:'Week 2', tasks:['Design of processes and roles', 'Initial 2026 backlog']}, {phase:'Week 3', tasks:['Validation workshop', 'Adjustments and agreements']}, {phase:'Week 4', tasks:['Delivery of the final Base Document']}] } } } }
+                    }
+                }
+            };
+            
+            const root = document.documentElement;
+            const themeToggles = [document.getElementById('themeToggle'), document.getElementById('themeToggleMobile')];
+            const langToggles = [document.getElementById('langToggle'), document.getElementById('langToggleMobile')];
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function setTheme(theme) {
+                root.className = theme === 'dark' ? 'dark scroll-smooth' : 'scroll-smooth';
+                document.getElementById('sun-icon').classList.toggle('hidden', theme === 'dark');
+                document.getElementById('moon-icon').classList.toggle('hidden', theme === 'light');
+                document.getElementById('sun-icon-mobile').classList.toggle('hidden', theme === 'dark');
+                document.getElementById('moon-icon-mobile').classList.toggle('hidden', theme === 'light');
+                document.querySelector('[data-key="themeLabelLight"]').classList.toggle('hidden', theme === 'dark');
+                document.querySelector('[data-key="themeLabelDark"]').classList.toggle('hidden', theme === 'light');
+            }
+            
+            themeToggles.forEach(toggle => toggle.addEventListener('click', () => {
+                const currentTheme = root.classList.contains('dark') ? 'dark' : 'light';
+                setTheme(currentTheme === 'light' ? 'dark' : 'light');
+            }));
+
+            hamburgerButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                hamburgerButton.setAttribute('aria-expanded', !mobileMenu.classList.contains('hidden'));
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.animated-card').forEach(card => observer.observe(card));
+
+            let timelineActs = translations[currentLanguage].timelineActs;
+            let contentData = translations[currentLanguage].contentData;
+
+            const timelineInteractive = document.getElementById('timeline-interactive');
+            const timelineDetailsContainer = document.getElementById('timeline-details-container');
+            const timelineProgress = document.getElementById('timeline-progress');
+
+            timelineInteractive.addEventListener('click', e => {
+                const step = e.target.closest('.timeline-step');
+                if (!step) return;
+                const actId = step.dataset.act;
+                const alreadyActive = step.classList.contains('active');
+                document.querySelectorAll('.timeline-step').forEach(s => s.classList.remove('active'));
+                if (alreadyActive) {
+                    timelineDetailsContainer.classList.remove('open');
+                    timelineProgress.style.width = '0%';
+                } else {
+                    step.classList.add('active');
+                    const actData = timelineActs[actId];
+                    const progressPercentage = (actId - 1) * 45 + 5;
+                    timelineProgress.style.width = `${progressPercentage}%`;
+                    timelineDetailsContainer.innerHTML = `<div class="p-6 rounded-lg border bg-[var(--surface-100)] border-[var(--border-color)]"><h3 class="font-bold text-xl">${actData.title}</h3><p class="mt-2 text-[var(--pri-ink-2)]">${actData.description}</p></div>`;
+                    timelineDetailsContainer.classList.add('open');
+                }
+            });
+            
+            const accordionContainer = document.getElementById('objectives-accordion');
+            const modal = document.getElementById('blueprint-modal');
+            const closeBtn = document.getElementById('modal-close-btn');
+
+            function renderAccordion() {
+                const lang = translations[currentLanguage];
+                accordionContainer.innerHTML = Object.keys(contentData).map((key) => {
+                    const objective = contentData[key];
+                    const stagesHtml = Object.keys(objective.stages).map(stageKey => {
+                        const stage = objective.stages[stageKey];
+                        return `<div class="p-4 rounded-lg border border-[var(--border-color)] bg-[var(--surface-100)]">
+                                <h4 class="font-bold">${stage.title}</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]">${stage.subtitle}</p>
+                                <div class="mt-4"><h5 class="font-semibold text-sm uppercase text-[var(--pri-ink-2)] tracking-wider">${lang.descriptionLabel}</h5><p class="text-sm mt-1">${stage.description}</p></div>
+                                <div class="mt-2"><h5 class="font-semibold text-sm uppercase text-[var(--pri-ink-2)] tracking-wider">${lang.objectivesLabel}</h5><p class="text-sm mt-1">${stage.objectives}</p></div>
+                                <div class="mt-4"><button class="btn-primary text-sm py-2 px-4" data-goal-id="${key}" data-stage-id="${stageKey}"><i class="fas fa-file-alt mr-2"></i> ${lang.viewBlueprint}</button></div>
+                            </div>`;
+                    }).join('');
+                    return `<div class="accordion-item border-b border-[var(--border-color)] last:border-b-0">
+                            <button class="accordion-header w-full text-left p-4 hover:bg-[var(--surface-100)] rounded-lg transition-colors flex justify-between items-center">
+                                <div><h3 class="text-xl font-bold">${objective.title}</h3><p class="text-sm text-[var(--pri-ink-2)]">${lang.durationLabel} ${objective.durationWeeks} ${lang.weeksLabel}</p></div>
+                                <span class="chevron text-2xl text-[var(--pri-ink-2)] font-thin transform transition-transform"><i class="fas fa-chevron-right"></i></span>
+                            </button>
+                            <div class="accordion-item-content"><div class="space-y-4">${stagesHtml}</div></div>
+                        </div>`;
+                }).join('');
+                accordionContainer.querySelectorAll('.accordion-header').forEach(header => {
+                    header.addEventListener('click', () => {
+                        const content = header.nextElementSibling;
+                        const wasOpen = content.classList.contains('open');
+                        document.querySelectorAll('.accordion-item-content.open').forEach(openContent => { openContent.classList.remove('open'); openContent.previousElementSibling.classList.remove('active'); });
+                        if (!wasOpen) { header.classList.add('active'); content.classList.add('open'); }
+                    });
+                });
+                accordionContainer.querySelectorAll('.btn-primary').forEach(button => {
+                    button.addEventListener('click', (e) => { e.stopPropagation(); openModal(button.dataset.goalId, button.dataset.stageId); });
+                });
+            }
+
+            function openModal(goalId, stageId) {
+                const lang = translations[currentLanguage];
+                const stage = contentData[goalId].stages[stageId];
+                const blueprint = stage.blueprint;
+                if (!blueprint) return;
+                document.getElementById('modal-title').textContent = `${lang.modalTitlePrefix} ${stage.title}`;
+                const workplanHtml = blueprint.workplan.map(phase => `<div class="mb-2"><p class="font-semibold">${phase.phase}:</p><ul class="list-disc list-inside text-[var(--pri-ink-2)]">${phase.tasks.map(task => `<li>${task}</li>`).join('')}</ul></div>`).join('');
+                document.getElementById('modal-content').innerHTML = `<div class="space-y-6"><div><h4 class="font-bold text-lg mb-2 modal-section">${lang.artifactsArchitecture}</h4><div class="code-block">${blueprint.architecture.trim()}</div></div><div><h4 class="font-bold text-lg mb-2 modal-section">${lang.workPlan}</h4>${workplanHtml}</div></div>`;
+                modal.classList.add('visible');
+            }
+
+            function setLanguage(lang) {
+                currentLanguage = lang;
+                const langData = translations[lang];
+                document.documentElement.lang = lang;
+                langToggles.forEach(toggle => {
+                    if(toggle.id === 'langToggle') toggle.textContent = lang === 'es' ? 'ENG' : 'ESP';
+                    else {
+                        const span = toggle.querySelector('span');
+                        if (span) span.textContent = lang === 'es' ? langData.langLabel : 'Switch to Spanish';
+                    }
+                });
+                document.querySelectorAll('[data-key]').forEach(element => {
+                    const key = element.getAttribute('data-key');
+                    if (langData[key]) element.innerHTML = langData[key];
+                });
+                timelineActs = langData.timelineActs;
+                contentData = langData.contentData;
+                timelineDetailsContainer.classList.remove('open');
+                timelineDetailsContainer.innerHTML = '';
+                document.querySelectorAll('.timeline-step').forEach(s => s.classList.remove('active'));
+                timelineProgress.style.width = '0%';
+                renderAccordion();
+                updateSlideNav();
+            }
+
+            langToggles.forEach(toggle => toggle.addEventListener('click', () => setLanguage(currentLanguage === 'es' ? 'en' : 'es')));
+
+            const slides = document.querySelectorAll('.slide');
+            const slideNav = document.getElementById('slide-nav');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const stepIndicator = document.getElementById('step-indicator');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.style.display = i === index ? 'block' : 'none';
+                    if (i === 0) {
+                        slide.style.display = i === index ? 'flex' : 'none';
+                    }
+                });
+                currentSlide = index;
+                if (index !== 0) {
+                    window.scrollTo(0, 0);
+                }
+                updateSlideNav();
+            }
+            
+            function updateSlideNav() {
+                const lang = translations[currentLanguage];
+                const prevBtnContainer = prevBtn.parentElement;
+                
+                if (currentSlide === 0) {
+                    prevBtnContainer.style.visibility = 'hidden';
+                } else {
+                    prevBtnContainer.style.visibility = 'visible';
+                }
+                
+                nextBtn.innerHTML = currentSlide === slides.length - 1 ? `<span data-key="toStartButton">${lang.toStartButton}</span> <i class="fas fa-home ml-2"></i>` : `<span data-key="nextButton">${lang.nextButton}</span> <i class="fas fa-arrow-right ml-2"></i>`;
+                stepIndicator.textContent = `${lang.stepLabel} ${currentSlide + 1} / ${slides.length}`;
+            }
+
+            prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+            nextBtn.addEventListener('click', () => showSlide((currentSlide + 1) % slides.length));
+
+            closeBtn.addEventListener('click', () => modal.classList.remove('visible'));
+            modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('visible'); });
+
+            setLanguage(currentLanguage);
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
