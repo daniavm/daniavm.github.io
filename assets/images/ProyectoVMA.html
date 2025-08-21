@@ -62,31 +62,42 @@
         }
         html.dark .content-container { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2); }
 
+        .btn {
+            padding: .75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform .15s, box-shadow .15s, background-color .2s;
+            border: 1px solid transparent;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
         .btn-primary {
             background: linear-gradient(to right, var(--pri-orange), var(--pri-orange-600));
             color: white;
-            padding: .75rem 1.5rem;
-            border-radius: 9999px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: transform .15s, box-shadow .15s;
         }
         .btn-primary:hover {
-            transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(241, 119, 32, .3);
         }
+
+        .btn-action-blue {
+            background: linear-gradient(to right, var(--pri-blue), var(--pri-blue-600));
+            color: white;
+        }
+        .btn-action-blue:hover {
+             box-shadow: 0 8px 20px rgba(0, 167, 225, 0.3);
+        }
+
         .btn-secondary {
             background-color: var(--surface-200);
             color: var(--pri-blue);
-            border: 1px solid var(--pri-blue);
-            padding: .75rem 1.5rem;
-            border-radius: 9999px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background-color 0.2s;
+            border-color: var(--pri-blue);
         }
         .btn-secondary:hover {
              background-color: rgba(0, 167, 225, 0.1);
+             transform: translateY(-2px);
         }
         .btn-secondary:disabled {
             opacity: 0.5;
@@ -342,7 +353,7 @@
     <footer class="bg-[var(--surface-200)]/80 backdrop-blur-lg border-t border-[var(--border-color)] sticky bottom-0 z-40">
         <div id="slide-nav" class="container mx-auto py-3 px-6 flex items-center">
             <div class="flex-1 flex justify-start">
-                <button id="prev-btn" class="btn-secondary">
+                <button id="prev-btn" class="btn btn-secondary">
                     <i class="fas fa-arrow-left mr-2"></i> <span data-key="prevButton">Anterior</span>
                 </button>
             </div>
@@ -350,7 +361,7 @@
                 <div id="step-indicator" class="text-sm font-bold text-[var(--pri-ink-2)]"></div>
             </div>
             <div class="flex-1 flex justify-end">
-                <button id="next-btn" class="btn-primary">
+                <button id="next-btn" class="btn btn-action-blue">
                     <span data-key="nextButton">Siguiente</span> <i class="fas fa-arrow-right ml-2"></i>
                 </button>
             </div>
@@ -523,7 +534,7 @@
                                 <p class="text-sm text-[var(--pri-ink-2)]">${stage.subtitle}</p>
                                 <div class="mt-4"><h5 class="font-semibold text-sm uppercase text-[var(--pri-ink-2)] tracking-wider">${lang.descriptionLabel}</h5><p class="text-sm mt-1">${stage.description}</p></div>
                                 <div class="mt-2"><h5 class="font-semibold text-sm uppercase text-[var(--pri-ink-2)] tracking-wider">${lang.objectivesLabel}</h5><p class="text-sm mt-1">${stage.objectives}</p></div>
-                                <div class="mt-4"><button class="btn-primary text-sm py-2 px-4" data-goal-id="${key}" data-stage-id="${stageKey}"><i class="fas fa-file-alt mr-2"></i> ${lang.viewBlueprint}</button></div>
+                                <div class="mt-4"><button class="btn btn-primary text-sm py-2 px-4" data-goal-id="${key}" data-stage-id="${stageKey}"><i class="fas fa-file-alt mr-2"></i> ${lang.viewBlueprint}</button></div>
                             </div>`;
                     }).join('');
                     return `<div class="accordion-item border-b border-[var(--border-color)] last:border-b-0">
