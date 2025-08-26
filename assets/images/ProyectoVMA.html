@@ -171,6 +171,23 @@
         .slider.round { border-radius: 34px; }
         .slider.round:before { border-radius: 50%; }
 
+        /* Velo opcional para mejorar contraste del texto sobre el banner */
+        .hero-veil{
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+
+        opacity: .9;
+        }
+        html.dark .hero-veil{ 
+
+        opacity: 1;
+        }
+
+        /* (Opcional) evita scroll horizontal si usas full-bleed con w-screen */
+        body { overflow-x: hidden; }
+
+
         /* Custom Brand Text Color */
         .text-brand { color: #52525b; }
         html.dark .text-brand { color: var(--pri-ink); } /* Use primary ink in dark mode for readability */
@@ -224,22 +241,32 @@
                 </ul>
             </div>
         </div>
-    </header> 
+    </header>
 
     <main class="flex-grow">
         <div id="slides-container" class="h-full container mx-auto px-6">
-            <!-- Slide 1: Hero -->
-            <div class="slide slide-centered">
-                <section class="text-center z-10">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text" data-key="heroTitle">Construyendo el Futuro de Nuestras Niñas</h1>
-                    <p class="text-lg md:text-xl text-[var(--pri-ink-2)] max-w-3xl mx-auto" data-key="heroSubtitle">
-                        Una alianza para transformar datos en oportunidades de crecimiento para cada alumna. Durante seis meses, sentaremos las bases del primer Departamento de Innovación, un motor que nacerá desde el corazón del colegio para asegurar su liderazgo y la evolución constante de su proyecto educativo.
-                    </p>
-                </section>
-                <div class="absolute bottom-10 left-0 right-0 flex justify-center opacity-60 dark:opacity-40">
-                    <img src="https://daniavm.github.io/assets/images/proyectoVMA_banner.png" alt="Ilustración de aves volando sobre siluetas de niñas" class="h-24 md:h-32 w-auto object-contain">
-                </div>
+            <!-- Slide 1: Hero (texto centrado; fondo 5:1 anclado abajo, full-bleed) -->
+            <div
+            class="slide slide-centered relative
+                    w-screen left-1/2 -translate-x-1/2
+                    min-h-[70vh]
+                    bg-no-repeat bg-bottom bg-[length:100%_auto]"
+            style="background-image:url('./proyectoVMA_banner.png');"
+            >
+            <!-- Velo para legibilidad (opcional) -->
+            <div class="hero-veil"></div>
+
+            <!-- Contenido centrado -->
+            <section class="text-center relative z-10 px-6">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text" data-key="heroTitle">
+                Construyendo el Futuro de Nuestras Niñas
+                </h1>
+                <p class="text-lg md:text-xl text-[var(--pri-ink-2)] max-w-3xl mx-auto" data-key="heroSubtitle">
+                Una alianza para transformar datos en oportunidades de crecimiento para cada alumna. Durante seis meses, sentaremos las bases del primer Departamento de Innovación, un motor que nacerá desde el corazón del colegio para asegurar su liderazgo y la evolución constante de su proyecto educativo.
+                </p>
+            </section>
             </div>
+
 
             <!-- Slide 2: Journey & Objectives -->
             <div class="slide py-12 md:py-20">
