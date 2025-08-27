@@ -199,7 +199,7 @@
             <nav class="flex justify-between items-center py-3">
                 <a href="#" class="flex items-center gap-3 text-lg">
                     <img src="https://daniavm.github.io/assets/images/PropuestaVMA/Principia_Logo_Oficial.png" alt="Principia Logo" class="h-8">
-                    <span class="font-raleway font-normal text-2xl text-brand" data-key="principia">Principia</span>
+                    <span class="font-raleway font-normal text-2xl text-brand hidden sm:inline" data-key="principia">Principia</span>
                     <span class="text-gray-400 font-light mx-1">×</span>
                     <img src="https://daniavm.github.io/assets/images/PropuestaVMA/VMA_Logo.png" alt="Villa María Academy Logo" class="h-8">
                     <span class="font-bold text-xl hidden sm:inline" data-key="villaMaria">Villa María Academy</span>
@@ -309,63 +309,80 @@
             <div class="slide py-12 md:py-20">
                 <section class="content-container">
                     <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="requirementsTitle">Requisitos para el Éxito</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors">
+
+                    <div class="flex flex-wrap justify-center gap-8">
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
                             <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-users fa-lg"></i></div>
                             <div>
-                                <h4 class="font-bold text-lg" data-key="req1Title">Patrocinio Directivo</h4>
-                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req1Desc">Respaldo activo de Dirección y Coordinación.</p>
+                                <h4 class="font-bold text-lg" data-key="req1Title">Liderazgo y Patrocinio Académico</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req1Desc">Respaldo activo de la Dirección Académica.</p>
                             </div>
                         </div>
-                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors">
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
                             <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-database fa-lg"></i></div>
                             <div>
                                 <h4 class="font-bold text-lg" data-key="req2Title">Acceso a Plataformas</h4>
                                 <p class="text-sm text-[var(--pri-ink-2)]" data-key="req2Desc">Acceso a fuentes de datos y Workspace.</p>
                             </div>
                         </div>
-                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors">
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
                             <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-bullseye fa-lg"></i></div>
                             <div>
-                                <h4 class="font-bold text-lg" data-key="req3Title">Puntos Focales</h4>
-                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req3Desc">Interlocutores en áreas clave.</p>
+                                <h4 class="font-bold text-lg" data-key="req3Title">Interlocutores Académicos</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req3Desc">Coordinadores y Jefes de Departamento.</p>
                             </div>
                         </div>
-                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors">
-                           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-calendar-check fa-lg"></i></div>
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-calendar-check fa-lg"></i></div>
                             <div>
                                 <h4 class="font-bold text-lg" data-key="req4Title">Gobernanza Ágil</h4>
                                 <p class="text-sm text-[var(--pri-ink-2)]" data-key="req4Desc">Reuniones quincenales de seguimiento.</p>
                             </div>
                         </div>
-                        <div class="animated-card md:col-span-2 lg:col-span-1 flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors">
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
                             <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-shield-alt fa-lg"></i></div>
                             <div>
                                 <h4 class="font-bold text-lg" data-key="req5Title">Privacidad y Seguridad</h4>
                                 <p class="text-sm text-[var(--pri-ink-2)]" data-key="req5Desc">Uso responsable y confidencial de datos.</p>
                             </div>
                         </div>
+
                     </div>
                 </section>
 
                 <section class="mt-16 content-container">
                     <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="valuesTitle">Nuestros Valores</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all">
-                           <div class="w-16 h-16 mx-auto rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center mb-4"><i class="fas fa-hands-helping fa-2x"></i></div>
+                    <div class="flex flex-wrap justify-center gap-8">
+
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full max-w-sm">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-hands-helping fa-2x"></i>
+                            </div>
                             <h4 class="font-bold text-lg" data-key="val1Title">Colaboración Radical</h4>
                             <p class="text-sm text-[var(--pri-ink-2)]" data-key="val1Desc">Las mejores soluciones se construyen en conjunto.</p>
                         </div>
-                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all">
-                            <div class="w-16 h-16 mx-auto rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center mb-4"><i class="fas fa-bolt fa-2x"></i></div>
+
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full max-w-sm">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-bolt fa-2x"></i>
+                            </div>
                             <h4 class="font-bold text-lg" data-key="val2Title">Entrega de Valor Temprano</h4>
                             <p class="text-sm text-[var(--pri-ink-2)]" data-key="val2Desc">Nos enfocamos en ciclos cortos para generar resultados visibles.</p>
                         </div>
-                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all">
-                           <div class="w-16 h-16 mx-auto rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center mb-4"><i class="fas fa-comments fa-2x"></i></div>
+
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full max-w-sm">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-comments fa-2x"></i>
+                            </div>
                             <h4 class="font-bold text-lg" data-key="val3Title">Comunicación Transparente</h4>
                             <p class="text-sm text-[var(--pri-ink-2)]" data-key="val3Desc">Mantenemos un diálogo fluido sobre avances y desafíos.</p>
                         </div>
+
                     </div>
                 </section>
             </div>
@@ -407,17 +424,17 @@
                 es: {
                     principia: "Principia",
                     villaMaria: "Villa María Academy",
-                    heroTitle: "Construyendo el Futuro de Nuestras Niñas",
-                    heroSubtitle: "Una alianza para transformar datos en oportunidades de crecimiento para cada alumna. Durante seis meses, sentaremos las bases del primer Departamento de Innovación, un motor que nacerá desde el corazón del colegio para asegurar su liderazgo y la evolución constante de su proyecto educativo.",
-                    journeyTitle: "Nuestro Viaje de Implementación",
-                    act1Title: "Acto I", act1Subtitle: "Escuchar y Ordenar",
-                    act2Title: "Acto II", act2Subtitle: "Resolver y Demostrar",
-                    act3Title: "Acto III", act3Subtitle: "Formalizar y Crecer",
-                    objectivesTitle: "Objetivos Específicos",
+                    heroTitle: "Liderazgo Académico Basado en Datos",
+                    heroSubtitle: "Una alianza estratégica con Dirección Académica para transformar la información en decisiones pedagógicas de alto impacto. Durante seis meses, sentaremos las bases de una nueva capacidad de innovación para potenciar el seguimiento formativo de cada alumna y consolidar la excelencia del proyecto educativo.",
+                    journeyTitle: "Nuestro Plan de Acción Estratégico",
+                    act1Title: "Acto I", act1Subtitle: "Diagnóstico y Alineación",
+                    act2Title: "Acto II", act2Subtitle: "Soluciones y Valor Táctico",
+                    act3Title: "Acto III", act3Subtitle: "Innovación y Sostenibilidad",
+                    objectivesTitle: "Objetivos para la Gestión Académica",
                     requirementsTitle: "Requisitos para el Éxito",
-                    req1Title: "Patrocinio Directivo", req1Desc: "Respaldo activo de Dirección y Coordinación.",
+                    req1Title: "Liderazgo y Patrocinio Académico", req1Desc: "Respaldo activo de la Dirección Académica.",
                     req2Title: "Acceso a Plataformas", req2Desc: "Acceso a fuentes de datos y Workspace.",
-                    req3Title: "Puntos Focales", req3Desc: "Interlocutores en áreas clave.",
+                    req3Title: "Interlocutores Académicos", req3Desc: "Coordinadores y Jefes de Departamento.",
                     req4Title: "Gobernanza Ágil", req4Desc: "Reuniones quincenales de seguimiento.",
                     req5Title: "Privacidad y Seguridad", req5Desc: "Uso responsable y confidencial de datos.",
                     valuesTitle: "Nuestros Valores",
@@ -427,33 +444,33 @@
                     version: "Propuesta de Colaboración: Principia & Villa María Academy — Agosto 2025",
                     viewBlueprint: "Ver Ejemplo Visual", modalTitlePrefix: "Ejemplo:",
                     artifactsArchitecture: "Ejemplo de Entregable", workPlan: "Plan de Trabajo Simplificado",
-                    durationLabel: "Duración:", weeksLabel: "semanas", descriptionLabel: "Descripción", objectivesLabel: "Objetivos",
+                    durationLabel: "Duración:", weeksLabel: "semanas", descriptionLabel: "Descripción", objectivesLabel: "Objetivos Clave",
                     prevButton: "Anterior", nextButton: "Siguiente", stepLabel: "Paso", toStartButton: "Volver al Inicio",
                     themeLabelLight: "Modo Claro", themeLabelDark: "Modo Oscuro", langLabel: "Switch to English",
                     timelineActs: {
-                        1: { title: 'Acto I: Escuchar y Ordenar la Información', description: 'Nuestro viaje comienza con la escucha activa. Nos reuniremos con los equipos para entender su día a día, mapeando cómo fluye la información y dónde están las oportunidades. El objetivo es crear un lenguaje común y un entendimiento compartido que nos permita tomar mejores decisiones.' },
-                        2: { title: 'Acto II: Resolver y Demostrar con Prototipos', description: 'Transformamos el conocimiento en acción. Aplicamos lo aprendido para devolver el recurso más valioso a los educadores: el tiempo. A través de prototipos funcionales y rápidos, demostraremos de forma tangible cómo la tecnología puede simplificar procesos, liberar horas y permitir que el foco vuelva a la pedagogía.' },
-                        3: { title: 'Acto III: Formalizar la Capacidad de Innovar', description: 'El acto final es la construcción del futuro. Con la confianza ganada y el valor demostrado, el objetivo es instalar una capacidad de innovación permanente dentro del colegio. Entregaremos la estructura, metodología y hoja de ruta para fundar el Área de Innovación y Desarrollo, un verdadero motor para la evolución del colegio, no solo un set de herramientas terminadas.' }
+                        1: { title: 'Acto I: Diagnóstico y Alineación Estratégica', description: 'Comenzamos con una inmersión profunda para entender los flujos de información y los desafíos clave de la Dirección Académica. El objetivo es mapear sus procesos actuales para alinear nuestras soluciones con sus metas estratégicas y asegurar que cada paso aporte valor directo a su gestión.' },
+                        2: { title: 'Acto II: Soluciones Tácticas y Valor Demostrado', description: 'Transformamos el diagnóstico en acción. Desarrollamos prototipos rápidos que resuelven problemas concretos, como la consolidación de reportes o la automatización de alertas, demostrando de forma tangible cómo la tecnología optimiza la gestión pedagógica y libera tiempo valioso.' },
+                        3: { title: 'Acto III: Innovación y Sostenibilidad Académica', description: 'Con la confianza ganada, co-diseñamos una capacidad de innovación permanente al servicio del área académica. Entregamos la estructura y hoja de ruta para un nuevo motor de mejora continua, asegurando que el liderazgo pedagógico del colegio se proyecte hacia el futuro.' }
                     },
                     contentData: {
-                        'vincular-informacion': { title: "Objetivo 1: Entender y Visualizar Datos", durationWeeks: "12–16", stages: { 
-                            'vinculacion-contextual': { title: 'Vinculación Contextual', subtitle: 'Entender el ADN de los datos.', description: 'Inmersión con equipos clave para mapear fuentes de información, responsables y desafíos actuales.', objectives: 'Instalar confianza, detectar brechas de información y priorizar las decisiones que más necesitan de buena evidencia.', blueprint: { visual: './people_link.mp4', workplan: [{phase:'Semanas 1-4', tasks:['Reuniones con equipos clave', 'Levantamiento de sistemas y planillas']}, {phase:'Semanas 5-6', tasks:['Mapeo de brechas de información', 'Priorización de oportunidades']}] } }, 
-                            'exploracion-oportunidades': { title: 'Exploración de Oportunidades', subtitle: 'Identificar ideas de alto impacto.', description: 'Junto a los equipos, identificamos "victorias tempranas", como la creación de alertas de asistencia o vistas de rendimiento académico.', objectives: 'Validar 2–3 oportunidades de alto valor que puedan ser prototipadas rápidamente para demostrar valor.', blueprint: { visual: './quick_wins.png', workplan: [{phase:'Semanas 1-2', tasks:['Taller de ideas con equipos', 'Clasificación de iniciativas']}, {phase:'Semanas 3-4', tasks:['Selección de prototipos iniciales', 'Definición del plan de acción']}] } }, 
-                            'demostracion-dashboard': { title: 'Demostración de Capacidad', subtitle: 'Visualizar el poder de los datos.', description: 'Construimos un panel interactivo (dashboard) en Looker Studio con indicadores clave, usando datos reales del colegio.', objectives: 'Entregar una herramienta tangible que centralice métricas claras y actualizadas para la toma de decisiones.', blueprint: { visual: './DA_dashboard.png', workplan: [{phase:'Semanas 1-2', tasks:['Definición de indicadores clave (KPIs)', 'Gestión de accesos a datos']}, {phase:'Semanas 3-5', tasks:['Desarrollo del panel y pruebas', 'Monitorización de uso y rendimiento']}, {phase:'Semana 6', tasks:['Sesión de "cómo leer los datos"', 'Entrega de guía de uso']}] } } 
+                        'vincular-informacion': { title: "Objetivo 1: Potenciar la Toma de Decisiones con Datos Académicos", durationWeeks: "12–16", stages: { 
+                            'vinculacion-contextual': { title: 'Visión 360° de la Trayectoria del Alumno', subtitle: 'Unificar fuentes para una visión completa.', description: 'Inmersión con la Dirección Académica y coordinadores para centralizar las fuentes de datos clave (Schooltrack, Psicofast, etc.) en un modelo de información coherente.', objectives: 'Establecer una "única fuente de verdad" que permita un seguimiento integral del progreso y bienestar de las alumnas, eliminando silos de información.', blueprint: { visual: './people_link.mp4', workplan: [{phase:'Semanas 1-4', tasks:['Reuniones con equipos clave', 'Levantamiento de sistemas y planillas']}, {phase:'Semanas 5-6', tasks:['Mapeo de brechas de información', 'Priorización de oportunidades']}] } }, 
+                            'exploracion-oportunidades': { title: 'Identificación de Oportunidades de Intervención Temprana', subtitle: 'Convertir datos en acciones preventivas.', description: 'En talleres con el equipo directivo, identificamos indicadores clave para prototipar "victorias tempranas", como alertas de riesgo académico o seguimiento de rendimiento por asignatura.', objectives: 'Validar 2-3 prototipos de alto impacto que permitan a los coordinadores y profesores intervenir de manera proactiva y oportuna.', blueprint: { visual: './quick_wins.png', workplan: [{phase:'Semanas 1-2', tasks:['Taller de ideas con equipos', 'Clasificación de iniciativas']}, {phase:'Semanas 3-4', tasks:['Selección de prototipos iniciales', 'Definición del plan de acción']}] } }, 
+                            'demostracion-dashboard': { title: 'Dashboard de Gestión Académica', subtitle: 'Visualizar para liderar con evidencia.', description: 'Construimos un panel interactivo en Looker Studio para la Dirección Académica, con los indicadores definidos para monitorear el pulso del colegio en tiempo real.', objectives: 'Entregar una herramienta de liderazgo que facilite el análisis de tendencias, la toma de decisiones estratégicas y la comunicación de resultados a toda la comunidad.', blueprint: { visual: './DA_dashboard.png', workplan: [{phase:'Semanas 1-2', tasks:['Definición de indicadores clave (KPIs)', 'Gestión de accesos a datos']}, {phase:'Semanas 3-5', tasks:['Desarrollo del panel y pruebas', 'Monitorización de uso y rendimiento']}, {phase:'Semana 6', tasks:['Sesión de "cómo leer los datos"', 'Entrega de guía de uso']}] } } 
                         } },
-                        'probar-automatizaciones': { title: "Objetivo 2: Automatizar y Liberar Tiempo", durationWeeks: "10–15", stages: { 
-                            'mapeo-procesos': { title: 'Mapeo de Procesos para Identificar Oportunidades', subtitle: 'Visibilizar el tiempo administrativo para actuar con precisión.', description: 'Analizamos las tareas administrativas más recurrentes para entender cuánto tiempo consumen e identificar cuellos de botella. Este es el punto de partida para encontrar las mejores oportunidades de automatización.', objectives: 'Crear una lista priorizada de procesos que son buenos candidatos para ser automatizados, enfocándonos en aquellos que liberarán más tiempo para los equipos.', blueprint: { visual: './procesos_oportunidades_es.png', workplan: [{phase:'Semanas 1-2', tasks:['Análisis de tareas recurrentes', 'Medición de tiempos y recursos']}, {phase:'Semana 3', tasks:['Creación de mapa visual del proceso', 'Selección de puntos a optimizar']}] } },
-                            'enrutador-schooltrack': { title: 'Ejemplo 1: Enrutador de Reportes "FlyAway"', subtitle: 'Automatizar la gestión de datos de Schooltrack.', description: 'Como resultado del mapeo, podemos crear flujos automatizados que toman los reportes de Schooltrack y los organizan instantáneamente en Google Drive. Esto elimina la descarga y subida manual de archivos, asegurando que los datos estén siempre actualizados para los dashboards.', objectives: 'Demostrar cómo resolver uno de los procesos más complejos y manuales del colegio, asegurando la integridad y disponibilidad de los datos en tiempo real.', blueprint: { visual: './flyaway.mp4', workplan: [{phase:'Semanas 1-3', tasks:['Mapeo del proceso de descarga y guardado actual', 'Diseño del flujo automatizado']}, {phase:'Semanas 4-6', tasks:['Desarrollo del prototipo "FlyAway"', 'Pruebas con reportes reales']}] } },
-                            'reportes-instantaneos': { title: 'Ejemplo 2: Generador de Reportes Instantáneos', subtitle: 'De datos crudos a insights en segundos.', description: 'Otro ejemplo potente es una herramienta para los reportes de Psicofast, donde simplemente se arrastra el archivo para generar un reporte visual estandarizado. Esto elimina la necesidad de re-tipear datos y capacitar en análisis complejo.', objectives: 'Demostrar cómo la automatización elimina tareas repetitivas, estandariza la reportería y empodera a los docentes con datos claros de forma inmediata.', blueprint: { visual: './autoreport.mp4', workplan: [{phase:'Semanas 1-2', tasks:['Definición de la estructura del reporte estándar', 'Diseño de la interfaz simple']}, {phase:'Semanas 3-5', tasks:['Desarrollo del algoritmo de procesamiento', 'Pruebas con equipo piloto']}, {phase:'Semana 6', tasks:['Entrega de la herramienta y guía rápida', 'Medición del tiempo ahorrado']}] } }
+                        'probar-automatizaciones': { title: "Objetivo 2: Optimizar la Gestión Pedagógica y Liberar Tiempo Docente", durationWeeks: "10–15", stages: { 
+                            'mapeo-procesos': { title: 'Diagnóstico de Carga Administrativa', subtitle: 'Identificar cuellos de botella en la operación académica.', description: 'Analizamos junto a los coordinadores las tareas administrativas que más tiempo consumen (generación de informes, gestión de notas, etc.) para detectar los puntos de mayor fricción.', objectives: 'Crear un mapa de procesos priorizado que nos permita enfocar los esfuerzos de automatización donde más impacto generen, devolviendo horas a la planificación pedagógica.', blueprint: { visual: './procesos_oportunidades_es.png', workplan: [{phase:'Semanas 1-2', tasks:['Análisis de tareas recurrentes', 'Medición de tiempos y recursos']}, {phase:'Semana 3', tasks:['Creación de mapa visual del proceso', 'Selección de puntos a optimizar']}] } },
+                            'enrutador-schooltrack': { title: 'Ejemplo 1: Flujo de Datos Confiable y Automatizado', subtitle: 'Garantizar la integridad de la información académica.', description: 'Creamos un flujo automatizado que extrae y organiza los reportes de Schooltrack, asegurando que los datos que alimentan el Dashboard de Gestión Académica sean siempre precisos y puntuales.', objectives: 'Eliminar la dependencia de procesos manuales, reducir errores y asegurar que la Dirección Académica siempre base sus decisiones en información actualizada y confiable.', blueprint: { visual: './flyaway.mp4', workplan: [{phase:'Semanas 1-3', tasks:['Mapeo del proceso de descarga y guardado actual', 'Diseño del flujo automatizado']}, {phase:'Semanas 4-6', tasks:['Desarrollo del prototipo "FlyAway"', 'Pruebas con reportes reales']}] } },
+                            'reportes-instantaneos': { title: 'Ejemplo 2: Estandarización de Reportes de Apoyo', subtitle: 'Agilizar el análisis para un mejor acompañamiento.', description: 'Desarrollamos una herramienta que transforma datos complejos (ej. Psicofast) en reportes visuales estandarizados con un solo clic, listos para ser analizados por el equipo de apoyo.', objectives: 'Facilitar un diagnóstico rápido y consistente, permitiendo que los equipos dediquen menos tiempo a procesar datos y más tiempo a diseñar estrategias de apoyo para las alumnas.', blueprint: { visual: './autoreport.mp4', workplan: [{phase:'Semanas 1-2', tasks:['Definición de la estructura del reporte estándar', 'Diseño de la interfaz simple']}, {phase:'Semanas 3-5', tasks:['Desarrollo del algoritmo de procesamiento', 'Pruebas con equipo piloto']}, {phase:'Semana 6', tasks:['Entrega de la herramienta y guía rápida', 'Medición del tiempo ahorrado']}] } }
                         } },
-                        'instalar-innovacion': { title: 'Objetivo 3: Instalar la Capacidad de Innovar', durationWeeks: "8–12", stages: { 
-                            'sistema-propuestas': { title: 'Sistema de Propuesta y Priorización de Iniciativas', subtitle: 'Un canal único para que las buenas ideas tomen forma.', description: 'Crearemos un sistema simple (usando Google Forms y Sheets) donde cualquier miembro del personal pueda proponer una necesidad o una idea innovadora. Esto centraliza las propuestas y permite un proceso transparente de priorización basado en el impacto y la viabilidad.', objectives: 'Democratizar la innovación, capturar ideas valiosas de quienes están en el día a día y establecer un flujo de trabajo claro para seleccionar los próximos proyectos.', blueprint: { visual: './proposal_system.png', workplan: [{phase:'Semanas 1-2', tasks:['Co-diseño del formulario de propuestas', 'Definición de criterios de priorización (impacto vs. esfuerzo)']}, {phase:'Semanas 3-4', tasks:['Implementación del formulario y la planilla conectada', 'Comunicación y lanzamiento del nuevo canal']}] } }, 
-                            'tablero-monitoreo': { title: 'Tablero de Monitoreo de Proyectos en Tiempo Real', subtitle: 'Visibilidad total sobre el avance de la innovación.', description: 'Construiremos un tablero visual (similar a un Kanban, en Google Sheets o Looker Studio) que muestre el estado de cada iniciativa aprobada. Seguirá los proyectos desde "Idea Propuesta" hasta "Completado", haciendo que todo el ciclo de innovación sea visible para todos.', objectives: 'Proporcionar transparencia sobre el progreso de los proyectos, facilitar el seguimiento a los interesados y establecer una herramienta visual y sencilla para gestionar la cartera de innovación.', blueprint: { visual: './innovation_progress_es.png', workplan: [{phase:'Semanas 1-2', tasks:['Diseño de las etapas del proyecto (Ej: Idea, Análisis, En Progreso, Completado)', 'Creación de la plantilla en Google Sheets/Looker Studio']}, {phase:'Semanas 3-4', tasks:['Conexión con el sistema de propuestas', 'Capacitación al equipo central sobre cómo mantener y leer el tablero']}] } },
-                            'codiseno-documento-base': { title: 'Co-diseño del Área de Innovación', subtitle: 'La piedra angular para el futuro.', description: 'Sintetizamos todos los aprendizajes y co-diseñamos los pilares y la hoja de ruta del Área de Innovación y Desarrollo para 2026.', objectives: 'Producir y validar el Documento Base que guiará la implementación y crecimiento del área, asegurando que el colegio se apropie de esta nueva capacidad.', blueprint: { visual: './co_design.png', workplan: [{phase:'Semanas 1', tasks:['Síntesis de todos los hallazgos', 'Borrador de la misión y visión del área']}, {phase:'Semana 2', tasks:['Diseño de procesos, roles y responsabilidades', 'Creación de la primera lista de proyectos para 2026']}, {phase:'Semana 3', tasks:['Taller de validación con el equipo directivo', 'Ajustes finales y acuerdos']}, {phase:'Semana 4', tasks:['Entrega del Documento Base final y presentación']}] } } 
+                        'instalar-innovacion': { title: 'Objetivo 3: Instalar una Capacidad de Innovación Académica', durationWeeks: "8–12", stages: { 
+                            'sistema-propuestas': { title: 'Canal de Iniciativas de Mejora Pedagógica', subtitle: 'Un sistema para capturar y gestionar la innovación.', description: 'Implementamos un sistema simple para que coordinadores y docentes puedan proponer iniciativas de mejora. Esto permite a la Dirección Académica tener un portafolio de proyectos priorizado.', objectives: 'Formalizar un proceso de innovación bottom-up, alineando las ideas que surgen en el día a día con las metas estratégicas del área académica.', blueprint: { visual: './proposal_system.png', workplan: [{phase:'Semanas 1-2', tasks:['Co-diseño del formulario de propuestas', 'Definición de criterios de priorización (impacto vs. esfuerzo)']}, {phase:'Semanas 3-4', tasks:['Implementación del formulario y la planilla conectada', 'Comunicación y lanzamiento del nuevo canal']}] } }, 
+                            'tablero-monitoreo': { title: 'Tablero de Seguimiento de Proyectos Estratégicos', subtitle: 'Visibilidad total sobre el avance de la innovación.', description: 'Construimos un tablero visual que permite a la Dirección Académica monitorear el estado de cada iniciativa de innovación en tiempo real, desde su propuesta hasta su implementación.', objectives: 'Proporcionar una herramienta de gobernanza para gestionar el portafolio de proyectos, facilitar el seguimiento y comunicar los avances de forma transparente.', blueprint: { visual: './innovation_progress_es.png', workplan: [{phase:'Semanas 1-2', tasks:['Diseño de las etapas del proyecto (Ej: Idea, Análisis, En Progreso, Completado)', 'Creación de la plantilla en Google Sheets/Looker Studio']}, {phase:'Semanas 3-4', tasks:['Conexión con el sistema de propuestas', 'Capacitación al equipo central sobre cómo mantener y leer el tablero']}] } },
+                            'codiseno-documento-base': { title: 'Co-diseño del Área de Innovación Académica', subtitle: 'La piedra angular para el futuro.', description: 'En un taller final con el equipo directivo, co-diseñamos los pilares y la hoja de ruta del Área de Innovación, asegurando su alineación con el Proyecto Educativo 2026.', objectives: 'Validar y entregar el Documento Base que formaliza esta nueva capacidad, garantizando que nazca desde la Dirección Académica para servir a sus objetivos a largo plazo.', blueprint: { visual: './co_design.png', workplan: [{phase:'Semanas 1', tasks:['Síntesis de todos los hallazgos', 'Borrador de la misión y visión del área']}, {phase:'Semana 2', tasks:['Diseño de procesos, roles y responsabilidades', 'Creación de la primera lista de proyectos para 2026']}, {phase:'Semana 3', tasks:['Taller de validación con el equipo directivo', 'Ajustes finales y acuerdos']}, {phase:'Semana 4', tasks:['Entrega del Documento Base final y presentación']}] } } 
                         } }
                     }
                 },
-                en: {
+                en: { // Mantenemos la versión en inglés sin cambios
                     principia: "Principia",
                     villaMaria: "Villa María Academy",
                     heroTitle: "Building the Future for Our Girls",
