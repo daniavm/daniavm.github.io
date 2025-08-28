@@ -197,13 +197,18 @@
     <header class="bg-[var(--surface-200)]/80 backdrop-blur-lg shadow-md sticky top-0 z-50 border-b border-[var(--border-color)]">
         <div class="container mx-auto px-6">
             <nav class="flex justify-between items-center py-3">
-                <a href="#" class="flex items-center gap-3 text-lg">
+                <div class="flex items-center gap-3 text-lg">
+                <a href="https://daniavm.github.io/assets/images/PropuestaVMA/ProyectoVMA.html" target="_blank" rel="noopener" class="flex items-center gap-2">
                     <img src="https://daniavm.github.io/assets/images/PropuestaVMA/Principia_Logo_Oficial.png" alt="Principia Logo" class="h-8">
                     <span class="font-raleway font-normal text-2xl text-brand hidden sm:inline" data-key="principia">Principia</span>
-                    <span class="text-gray-400 font-light mx-1">×</span>
+                </a>
+                <span class="text-gray-400 font-light mx-1">×</span>
+                <a href="https://vma.cl/" target="_blank" rel="noopener" class="flex items-center gap-2">
                     <img src="https://daniavm.github.io/assets/images/PropuestaVMA/VMA_Logo.png" alt="Villa María Academy Logo" class="h-8">
                     <span class="font-bold text-xl hidden sm:inline" data-key="villaMaria">Villa María Academy</span>
                 </a>
+                </div>
+
 
                 <div class="flex items-center space-x-2">
                     <div class="hidden md:flex items-center gap-4">
@@ -386,6 +391,38 @@
                     </div>
                 </section>
             </div>
+            <!-- Slide 4: Único enlace al documento detallado -->
+            <div class="slide py-12 md:py-20">
+    
+                <div class="h-full flex flex-col items-center justify-center">
+
+
+                        
+                        <div class="text-6xl text-[var(--pri-orange)] mb-6">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 section-title" data-key="docsTitle">
+                            Documento Detallado del Plan
+                        </h2>
+                        <div class="h-1 w-24 bg-gradient-to-r from-[var(--pri-orange)] to-[var(--pri-orange-600)] mx-auto mb-8 rounded-full"></div>
+                
+                        <p class="text-[var(--pri-ink-2)] mb-10 max-w-2xl mx-auto" data-key="docsSubtitle">
+                            Este es el siguiente paso. Abre el documento interactivo que desarrolla en profundidad cada componente del plan, sus entregables y cronogramas.
+                        </p>
+                
+                        <a href="https://docs.google.com/document/d/1osOVP6qYvxQXmKFbOd-gRoOqaWlH5kADif7TtKBxgcA/edit?usp=sharing"
+                        target="_blank" rel="noopener"
+                        class="btn btn-primary inline-flex items-center text-lg px-8 py-3">
+                            <span data-key="openDocButton">Abrir Plan Detallado</span>
+                            <i class="fas fa-arrow-up-right-from-square ml-3"></i>
+                        </a>
+                
+                    
+
+                </div> 
+            </div>
+
         </div>
     </main>
     
@@ -427,9 +464,9 @@
                     heroTitle: "Liderazgo Académico Basado en Datos",
                     heroSubtitle: "Una alianza estratégica con Dirección Académica para transformar la información en decisiones pedagógicas de alto impacto. Durante seis meses, sentaremos las bases de una nueva capacidad de innovación para potenciar el seguimiento formativo de cada alumna y consolidar la excelencia del proyecto educativo.",
                     journeyTitle: "Nuestro Plan de Acción Estratégico",
-                    act1Title: "Acto I", act1Subtitle: "Diagnóstico y Alineación",
-                    act2Title: "Acto II", act2Subtitle: "Soluciones y Valor Táctico",
-                    act3Title: "Acto III", act3Subtitle: "Innovación y Sostenibilidad",
+                    act1Title: "Fase I", act1Subtitle: "Diagnóstico y Alineación",
+                    act2Title: "Fase II", act2Subtitle: "Soluciones y Valor Táctico",
+                    act3Title: "Fase III", act3Subtitle: "Innovación y Sostenibilidad",
                     objectivesTitle: "Objetivos para la Gestión Académica",
                     requirementsTitle: "Requisitos para el Éxito",
                     req1Title: "Liderazgo y Patrocinio Académico", req1Desc: "Respaldo activo de la Dirección Académica.",
@@ -447,6 +484,9 @@
                     durationLabel: "Duración:", weeksLabel: "semanas", descriptionLabel: "Descripción", objectivesLabel: "Objetivos Clave",
                     prevButton: "Anterior", nextButton: "Siguiente", stepLabel: "Paso", toStartButton: "Volver al Inicio",
                     themeLabelLight: "Modo Claro", themeLabelDark: "Modo Oscuro", langLabel: "Switch to English",
+                    docsTitle: "Documento Detallado del Plan",
+                    docsSubtitle: "Abre el documento que desarrolla cada componente del plan.",
+                    openDocButton: "Abrir documento",
                     timelineActs: {
                         1: { title: 'Acto I: Diagnóstico y Alineación Estratégica', description: 'Comenzamos con una inmersión profunda para entender los flujos de información y los desafíos clave de la Dirección Académica. El objetivo es mapear sus procesos actuales para alinear nuestras soluciones con sus metas estratégicas y asegurar que cada paso aporte valor directo a su gestión.' },
                         2: { title: 'Acto II: Soluciones Tácticas y Valor Demostrado', description: 'Transformamos el diagnóstico en acción. Desarrollamos prototipos rápidos que resuelven problemas concretos, como la consolidación de reportes o la automatización de alertas, demostrando de forma tangible cómo la tecnología optimiza la gestión pedagógica y libera tiempo valioso.' },
@@ -476,9 +516,9 @@
                     heroTitle: "Building the Future for Our Girls",
                     heroSubtitle: "An alliance to transform data into growth opportunities for every student. For six months, we will lay the foundation for the first Innovation Department, an engine born from the heart of the school to ensure its leadership and the constant evolution of its educational project.",
                     journeyTitle: "Our Implementation Journey",
-                    act1Title: "Act I", act1Subtitle: "Listen and Organize",
-                    act2Title: "Act II", act2Subtitle: "Solve and Demonstrate",
-                    act3Title: "Act III", act3Subtitle: "Formalize and Grow",
+                    act1Title: "Phase I", act1Subtitle: "Listen and Organize",
+                    act2Title: "Phase II", act2Subtitle: "Solve and Demonstrate",
+                    act3Title: "Phase III", act3Subtitle: "Formalize and Grow",
                     objectivesTitle: "Specific Objectives",
                     requirementsTitle: "Requirements for Success",
                     req1Title: "Executive Sponsorship", req1Desc: "Active support from Directors and Coordinators.",
@@ -496,6 +536,10 @@
                     durationLabel: "Duration:", weeksLabel: "weeks", descriptionLabel: "Description", objectivesLabel: "Objectives",
                     prevButton: "Previous", nextButton: "Next", stepLabel: "Step", toStartButton: "Back to Start",
                     themeLabelLight: "Light Mode", themeLabelDark: "Dark Mode", langLabel: "Switch to Spanish",
+                    docsTitle: "Full Plan Document",
+                    docsSubtitle: "Open the document with the detailed plan.",
+                    openDocButton: "Open document",
+
                     timelineActs: {
                         1: { title: 'Act I: Listen and Organize Information', description: 'Our journey begins with active listening. We will meet with the teams to understand their day-to-day, mapping how information flows and where the opportunities lie. The goal is to create a common language and shared understanding that allows us to make better decisions.' },
                         2: { title: 'Act II: Solve and Demonstrate with Prototypes', description: 'We transform knowledge into action. We apply what we have learned to give back the most valuable resource to educators: time. Through functional and rapid prototypes, we will tangibly demonstrate how technology can simplify processes, free up hours, and allow the focus to return to pedagogy.' },
