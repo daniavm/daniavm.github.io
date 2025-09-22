@@ -69,6 +69,7 @@
             cursor: pointer;
             transition: transform .15s, box-shadow .15s, background-color .2s;
             border: 1px solid transparent;
+            white-space: nowrap; /* Evita que el texto del botón se parta */
         }
         .btn:hover {
             transform: translateY(-2px);
@@ -156,7 +157,7 @@
         .accordion-header .chevron { transition: transform 0.3s ease-in-out; }
         .accordion-header.active .chevron { transform: rotate(90deg); }
         
-        .slide { display: none; animation: fadeIn 0.5s ease-in-out; min-height: 70vh; }
+        .slide { display: none; animation: fadeIn 0.5s ease-in-out; height: 100%; position: relative; }
         .slide-centered { display: flex; flex-direction: column; justify-content: center; align-items: center; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
@@ -173,24 +174,50 @@
 
         /* Velo opcional para mejorar contraste del texto sobre el banner */
         .hero-veil{
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        background: radial-gradient(circle, rgba(255,255,255,0) 0%, var(--pri-bg) 85%);
-        opacity: .9;
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: .9;
         }
         html.dark .hero-veil{ 
-        background: radial-gradient(circle, rgba(24,24,27,0) 0%, var(--pri-bg) 85%);
-        opacity: 1;
+            opacity: 1;
         }
 
         /* (Opcional) evita scroll horizontal si usas full-bleed con w-screen */
         body { overflow-x: hidden; }
 
-
         /* Custom Brand Text Color */
         .text-brand { color: #52525b; }
         html.dark .text-brand { color: var(--pri-ink); } /* Use primary ink in dark mode for readability */
+        
+        /* --- NUEVAS REGLAS PARA RESPONSIVIDAD --- */
+        @media (max-width: 380px) {
+            #slides-container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            h1.gradient-text {
+                font-size: 2rem; /* Reduce el tamaño del título principal */
+            }
+            .content-container {
+                padding: 1.5rem;
+            }
+            /* Oculta el texto en los botones de navegación si no hay espacio */
+            #slide-nav .btn-text {
+                display: none;
+            }
+            #slide-nav .btn {
+                padding: 0.75rem; /* Ajusta el padding para que sea un círculo */
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #slide-nav .btn i {
+                margin: 0; /* Elimina márgenes de los íconos */
+            }
+        }
     </style>
 </head>
 <body>
@@ -203,8 +230,7 @@
                     <span class="font-raleway font-normal text-2xl text-brand hidden sm:inline" data-key="principia">Principia</span>
                 </a>
                 <span class="text-gray-400 font-light mx-1">×</span>
-                <a href="#" class="flex items-center gap-2">
-                    <!-- Placeholder for client logo -->
+                <a href="https://colegioalmenarsv.cl/" class="flex items-center gap-2" target="_blank">
                     <img src="https://daniavm.github.io/assets/images/PropuestaAlmenar/logoAlmenar.png" alt="Almenar Logo" class="h-8">
                     <span class="font-bold text-xl hidden sm:inline" data-key="clientName">Colegio Almenar</span>
                 </a>
@@ -221,6 +247,9 @@
                             </label>
                             <i class="fas fa-moon text-blue-300"></i>
                         </div>
+                        <button class="font-bold text-sm text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)] w-8" id="langToggle" aria-label="Cambiar idioma">
+                            ESP
+                        </button>
                     </div>
                     <button id="hamburger-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden hover:bg-gray-100 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Abrir menú principal</span>
@@ -236,6 +265,11 @@
                             <i id="moon-icon-mobile" class="fas fa-moon fa-lg mr-2 hidden"></i> <span data-key="themeLabelDark" class="hidden">Modo Oscuro</span>
                         </button>
                     </li>
+                    <li class="md:hidden flex items-center gap-3 text-sm">
+                        <button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)]" id="langToggleMobile" aria-label="Cambiar idioma">
+                            <i class="fas fa-globe fa-lg mr-2"></i> <span data-key="langLabel">Cambiar a Inglés</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -243,13 +277,12 @@
 
     <main class="flex-grow">
         <div id="slides-container" class="h-full container mx-auto px-6">
-            <!-- Slide 1: Hero -->
             <div
             class="slide slide-centered relative
                     w-screen left-1/2 -translate-x-1/2
                     min-h-[70vh]
                     bg-no-repeat bg-bottom bg-[length:100%_auto]"
-            style="background-image:url('https://daniavm.github.io/assets/images/PropuestaVMA/proyectoVMA_banner.png');"
+            style="background-image:url('../PropuestaVMA/proyectoVMA_banner.png');"
             >
             <div class="hero-veil"></div>
             <section class="text-center relative z-10 px-6">
@@ -257,13 +290,12 @@
                 Sistematización Estratégica para Potenciar el "Método Almenar"
                 </h1>
                 <p class="text-lg md:text-xl text-[var(--pri-ink-2)] max-w-3xl mx-auto" data-key="heroSubtitle">
-                Una alianza para transformar los datos en un pilar del acompañamiento formativo, fortalecer la convivencia escolar y capitalizar el conocimiento pedagógico, consolidando el modelo de excelencia que los hizo merecedores del reconocimiento SNED.
+                Una alianza para transformar los datos en un pilar del acompañamiento formativo, fortalecer la convivencia escolar y preservar el conocimiento pedagógico, consolidando el modelo de excelencia que los hizo merecedores del reconocimiento SNED.
                 </p>
             </section>
             </div>
 
 
-            <!-- Slide 2: Journey & Objectives -->
             <div class="slide py-12 md:py-20">
                 <section class="mb-16 content-container">
                     <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 h-deco section-title" data-key="journeyTitle">Nuestro Viaje de Colaboración</h2>
@@ -288,7 +320,7 @@
                                 <i class="fa-solid fa-brain"></i>
                             </div>
                             <h3 class="font-bold text-lg" data-key="act3Title">Centralización y Futuro</h3>
-                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act3Subtitle">Capitalizar y Escalar</h4>
+                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act3Subtitle">Organizar y Escalar</h4>
                         </div>
                     </div>
                     <div id="timeline-details-container" class="timeline-details"></div>
@@ -300,7 +332,6 @@
                 </section>
             </div>
 
-            <!-- Slide 3: Framework -->
             <div class="slide py-12 md:py-20">
                 <section class="content-container">
                     <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="requirementsTitle">Requisitos para el Éxito</h2>
@@ -382,7 +413,6 @@
                 </section>
             </div>
             
-            <!-- Slide 4: Investment -->
             <div class="slide py-12 md:py-20 flex items-center">
                 <section class="content-container w-full">
                     <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 h-deco section-title" data-key="investmentTitle">Inversión y Términos de la Alianza</h2>
@@ -391,7 +421,6 @@
                     </p>
 
                     <div class="flex flex-wrap justify-center gap-8 items-stretch">
-                        <!-- Card 1: Investment Summary -->
                         <div class="animated-card w-full max-w-md bg-[var(--surface-100)] p-8 rounded-xl border border-[var(--border-color)] flex flex-col">
                             <div class="grid grid-cols-2 gap-6 text-center">
                                 <div>
@@ -399,16 +428,15 @@
                                     <div class="text-3xl font-bold text-[var(--pri-orange)] mt-1" data-key="investmentMonths">5 Meses</div>
                                 </div>
                                 <div>
-                                    <div class="text-sm text-[var(--pri-ink-2)] uppercase tracking-wider" data-key="investmentMonthlyFee">Inversión Mensual</div>
-                                    <div class="text-3xl font-bold text-[var(--pri-orange)] mt-1" data-key="investmentUF">26 UF + IVA</div>
+                                    <div class="text-sm text-[var(--pri-ink-2)] uppercase tracking-wider" data-key="investmentMonthlyFee">Inversión Mensual Necesaria</div>
+                                    <div class="text-3xl font-bold text-[var(--pri-orange)] mt-1" data-key="investmentUF">22 UF + IVA</div>
                                 </div>
                                 <div class="col-span-2 pt-4 border-t border-[var(--border-color)]">
                                     <div class="text-sm text-[var(--pri-ink-2)] uppercase tracking-wider" data-key="investmentTotal">Inversión Total del Proyecto</div>
-                                    <div class="text-4xl font-bold mt-1" data-key="investmentTotalUF">130 UF + IVA</div>
+                                    <div class="text-4xl font-bold mt-1" data-key="investmentTotalUF">110 UF + IVA</div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Card 2: Includes -->
                         <div class="animated-card w-full max-w-md flex-grow">
                              <h4 class="font-bold text-xl mb-4" data-key="investmentIncludesTitle">El servicio incluye:</h4>
                              <ul class="space-y-3">
@@ -422,7 +450,7 @@
                                  </li>
                                  <li class="flex items-start">
                                      <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                     <span class="text-[var(--pri-ink-2)]" data-key="investmentInclude3">Capacitación y acompañamiento a los equipos involucrados.</span>
+                                     <span class="text-[var(--pri-ink-2)]" data-key="investmentInclude3">Creación de tutoriales y material de apoyo para el uso de las herramientas, con sesiones remotas de acompañamiento.</span>
                                  </li>
                                   <li class="flex items-start">
                                      <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
@@ -431,46 +459,45 @@
                              </ul>
                         </div>
                     </div>
+
+                    <div class="text-center mt-16 animated-card">
+                        <h3 class="text-2xl font-bold" data-key="docsTitle">Documentos para Formalización</h3>
+                        <p class="text-[var(--pri-ink-2)] max-w-2xl mx-auto mt-2 mb-6" data-key="docsSubtitle">Para avanzar, te invitamos a revisar el Plan de Trabajo detallado y la propuesta de Contrato de Servicios.</p>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-file-alt mr-2"></i> <span data-key="docButtonLabel">Revisar Plan de Trabajo y Contrato</span>
+                        </a>
+                    </div>
+
                 </section>
             </div>
 
-            <!-- Slide 5: Next Steps -->
-             <div class="slide py-12 md:py-20 flex items-center">
+            <div class="slide py-12 md:py-20 flex items-center">
                 <section class="w-full">
                     <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 h-deco section-title" data-key="nextStepsTitle">Próximos Pasos para Iniciar</h2>
                      <p class="text-center text-[var(--pri-ink-2)] max-w-3xl mx-auto mb-12" data-key="nextStepsSubtitle">
                         Estamos listos para comenzar a construir juntos. Proponemos la siguiente ruta para formalizar nuestra alianza.
                     </p>
                     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        <!-- Step 1 -->
+                        
                         <div class="animated-card text-center p-6">
-                            <div class="relative">
-                                <div class="text-5xl font-bold text-amber-200 dark:text-amber-900/50">01</div>
-                                <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                    <i class="fas fa-comments fa-2x"></i>
-                                </div>
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-comments fa-2x"></i>
                             </div>
                             <h4 class="font-bold text-lg mt-4" data-key="step1Title">Revisión y Ajuste</h4>
                             <p class="text-sm text-[var(--pri-ink-2)] mt-2" data-key="step1Desc">Agendamos una reunión para resolver dudas y ajustar cualquier detalle de esta propuesta.</p>
                         </div>
-                         <!-- Step 2 -->
-                        <div class="animated-card text-center p-6">
-                             <div class="relative">
-                                <div class="text-5xl font-bold text-amber-200 dark:text-amber-900/50">02</div>
-                                <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                    <i class="fas fa-file-signature fa-2x"></i>
-                                </div>
+
+                         <div class="animated-card text-center p-6">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-file-signature fa-2x"></i>
                             </div>
                             <h4 class="font-bold text-lg mt-4" data-key="step2Title">Acuerdo de Servicios</h4>
                             <p class="text-sm text-[var(--pri-ink-2)] mt-2" data-key="step2Desc">Formalizamos la colaboración a través de la firma del contrato de prestación de servicios.</p>
                         </div>
-                         <!-- Step 3 -->
-                        <div class="animated-card text-center p-6">
-                             <div class="relative">
-                                <div class="text-5xl font-bold text-amber-200 dark:text-amber-900/50">03</div>
-                                <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                    <i class="fas fa-rocket fa-2x"></i>
-                                </div>
+
+                         <div class="animated-card text-center p-6">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-rocket fa-2x"></i>
                             </div>
                             <h4 class="font-bold text-lg mt-4" data-key="step3Title">Kickoff del Proyecto</h4>
                             <p class="text-sm text-[var(--pri-ink-2)] mt-2" data-key="step3Desc">Realizamos la primera reunión de trabajo para dar inicio oficial a la Fase 1.</p>
@@ -480,8 +507,8 @@
                          <h4 class="font-bold text-xl mb-2" data-key="contactTitle">Conversemos</h4>
                          <p class="text-[var(--pri-ink-2)]" data-key="contactPerson">Daniel Valdés Medel</p>
                          <p class="text-sm text-[var(--pri-ink-2)]" data-key="contactRole">Director, Principia SpA</p>
-                         <a href="mailto:daniel.valdes@principia.cl" class="mt-4 inline-block btn btn-primary">
-                             <i class="fas fa-envelope mr-2"></i> daniel.valdes@principia.cl
+                         <a href="mailto:descubre@principias.ai" class="mt-4 inline-block btn btn-primary">
+                             <i class="fas fa-envelope mr-2"></i> descubre@principias.ai
                          </a>
                     </div>
                 </section>
@@ -504,7 +531,7 @@
         <div id="slide-nav" class="container mx-auto py-3 px-6 flex items-center">
             <div class="flex-1 flex justify-start">
                 <button id="prev-btn" class="btn btn-secondary">
-                    <i class="fas fa-arrow-left mr-2"></i> <span data-key="prevButton">Anterior</span>
+                    <i class="fas fa-arrow-left mr-2"></i><span class="btn-text" data-key="prevButton">Anterior</span>
                 </button>
             </div>
             <div class="flex-1 flex justify-center">
@@ -512,7 +539,7 @@
             </div>
             <div class="flex-1 flex justify-end">
                 <button id="next-btn" class="btn btn-action-blue">
-                    <span data-key="nextButton">Siguiente</span> <i class="fas fa-arrow-right ml-2"></i>
+                    <span class="btn-text" data-key="nextButton">Siguiente</span><i class="fas fa-arrow-right ml-2"></i>
                 </button>
             </div>
         </div>
@@ -526,11 +553,11 @@
                     principia: "Principia",
                     clientName: "Colegio Almenar",
                     heroTitle: "Sistematización Estratégica para Potenciar el 'Método Almenar'",
-                    heroSubtitle: "Una alianza para transformar los datos en un pilar del acompañamiento formativo, fortalecer la convivencia escolar y capitalizar el conocimiento pedagógico, consolidando el modelo de excelencia que los hizo merecedores del reconocimiento SNED.",
+                    heroSubtitle: "Una alianza para transformar los datos en un pilar del acompañamiento formativo, fortalecer la convivencia escolar y preservar el conocimiento pedagógico, consolidando el modelo de excelencia que los hizo merecedores del reconocimiento SNED.",
                     journeyTitle: "Nuestro Viaje de Colaboración",
                     act1Title: "Diagnóstico y Automatización", act1Subtitle: "Conectar y Ordenar",
                     act2Title: "Construcción y Visualización", act2Subtitle: "Crear y Empoderar",
-                    act3Title: "Centralización y Futuro", act3Subtitle: "Capitalizar y Escalar",
+                    act3Title: "Centralización y Futuro", act3Subtitle: "Organizar y Escalar",
                     objectivesTitle: "Objetivos Específicos del Proyecto",
                     requirementsTitle: "Requisitos para el Éxito",
                     req1Title: "Patrocinio de Rectoría", req1Desc: "Respaldo activo del equipo directivo.",
@@ -542,25 +569,27 @@
                     val1Title: "Colaboración Radical", val1Desc: "Las mejores soluciones se construyen en conjunto.",
                     val2Title: "Entrega de Valor Temprano", val2Desc: "Nos enfocamos en ciclos cortos para generar resultados visibles.",
                     val3Title: "Comunicación Transparente", val3Desc: "Mantenemos un diálogo fluido sobre avances y desafíos.",
-                    version: "Propuesta de Colaboración: Principia & Colegio Almenar — Septiembre 2025",
                     viewBlueprint: "Ver Ejemplo Visual", modalTitlePrefix: "Ejemplo:",
                     artifactsArchitecture: "Ejemplo de Entregable", workPlan: "Plan de Trabajo Simplificado",
                     durationLabel: "Duración:", weeksLabel: "semanas", descriptionLabel: "Descripción", objectivesLabel: "Objetivos Clave",
                     prevButton: "Anterior", nextButton: "Siguiente", stepLabel: "Paso", toStartButton: "Volver al Inicio",
-                    themeLabelLight: "Modo Claro", themeLabelDark: "Modo Oscuro",
+                    themeLabelLight: "Modo Claro", themeLabelDark: "Modo Oscuro", langLabel: "Cambiar a Inglés",
                     investmentTitle: "Inversión y Términos de la Alianza",
                     investmentSubtitle: "Una propuesta transparente para una colaboración de alto impacto, diseñada para generar un retorno medible en eficiencia y capacidad pedagógica.",
                     investmentDuration: "Duración del Proyecto",
                     investmentMonths: "5 Meses",
-                    investmentMonthlyFee: "Inversión Mensual",
-                    investmentUF: "26 UF + IVA",
+                    investmentMonthlyFee: "Inversión Mensual Necesaria",
+                    investmentUF: "22 UF + IVA",
                     investmentTotal: "Inversión Total del Proyecto",
-                    investmentTotalUF: "130 UF + IVA",
+                    investmentTotalUF: "110 UF + IVA",
                     investmentIncludesTitle: "El servicio incluye:",
                     investmentInclude1: "40 horas mensuales de consultoría estratégica y desarrollo.",
                     investmentInclude2: "Diseño e implementación de 3 soluciones de datos a medida.",
-                    investmentInclude3: "Capacitación y acompañamiento a los equipos involucrados.",
+                    investmentInclude3: "Creación de tutoriales y material de apoyo para el uso de las herramientas, con sesiones remotas de acompañamiento.",
                     investmentInclude4: "Soporte técnico y estratégico durante todo el proyecto.",
+                    docsTitle: "Documentos para Formalización",
+                    docsSubtitle: "Para avanzar, te invitamos a revisar el Plan de Trabajo detallado y la propuesta de Contrato de Servicios.",
+                    docButtonLabel: "Revisar Plan de Trabajo y Contrato",
                     nextStepsTitle: "Próximos Pasos para Iniciar",
                     nextStepsSubtitle: "Estamos listos para comenzar a construir juntos. Proponemos la siguiente ruta para formalizar nuestra alianza.",
                     step1Title: "Revisión y Ajuste",
@@ -571,71 +600,181 @@
                     step3Desc: "Realizamos la primera reunión de trabajo para dar inicio oficial a la Fase 1.",
                     contactTitle: "Conversemos",
                     contactPerson: "Daniel Valdés Medel",
-                    contactRole: "Director, Principia SpA",
-
+                    contactRole: "Director Ejecutivo, Principia",
                     timelineActs: {
                         1: { title: 'Fase I: Diagnóstico y Automatización de Datos', description: 'Comenzamos conectando las fuentes de datos clave del colegio, como Schooltrack, para establecer flujos de información automáticos y confiables. El objetivo es eliminar procesos manuales y construir una base sólida para el análisis.' },
-                        2: { title: 'Fase II: Construcción de Dashboards y Prototipos', description: 'Con los datos fluyendo, construimos herramientas visuales e interactivas (dashboards) para el monitoreo de asistencia y conducta. En paralelo, co-diseñamos y prototipamos la solución para centralizar las planificaciones pedagógicas.' },
-                        3: { title: 'Fase III: Centralización y Capitalización del Conocimiento', description: 'Implementamos la plataforma de planificaciones, asegurando que el valioso capital intelectual de los docentes se preserve y sea accesible. Entregamos las herramientas finales y una hoja de ruta para escalar el "Método Almenar" a futuro.' }
+                        2: { title: 'Fase II: Construcción de Paneles y Prototipos', description: 'Con los datos fluyendo, construimos herramientas visuales e interactivas (paneles informativos) para el monitoreo de asistencia y conducta. En paralelo, co-diseñamos la solución para centralizar las planificaciones pedagógicas.' },
+                        3: { title: 'Fase III: Centralización y Conocimiento a Futuro', description: 'Implementamos la plataforma de planificaciones, asegurando que el valioso conocimiento de los docentes se preserve y sea accesible. Entregamos las herramientas finales y una hoja de ruta para potenciar el "Método Almenar" a futuro.' }
                     },
                     contentData: {
                         'inasistencias': { title: "Objetivo 1: Monitoreo Proactivo de la Asistencia", durationWeeks: "6–8", stages: { 
-                            'automatizacion-schooltrack': { title: 'Flujo Automatizado de Datos de Asistencia', subtitle: 'Desde Schooltrack a un modelo centralizado.', description: 'Creamos un proceso automático que extrae, limpia y organiza diariamente los datos de inasistencia de Schooltrack, asegurando una fuente de información siempre actualizada y confiable.', objectives: 'Eliminar la carga manual de reportería y establecer una "única fuente de verdad" para el seguimiento de la asistencia de los estudiantes.', blueprint: { 
-                                visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/flyaway.mp4',
-                                workplan: [
-                                    {phase:'Semanas 1-2', tasks:['Análisis de reportes de Schooltrack.', 'Diseño del flujo de datos automatizado.']}, 
-                                    {phase:'Semanas 3-4', tasks:['Construcción del script de extracción (ETL).', 'Pruebas unitarias con datos reales.']}
-                                ] 
-                            } }, 
-                            'dashboard-asistencia': { title: 'Dashboard de Seguimiento y Alertas Tempranas', subtitle: 'Visualizar para intervenir a tiempo.', description: 'Desarrollamos un panel interactivo en Looker Studio que permite a los equipos de gestión y orientación visualizar tendencias de ausentismo, identificar patrones y filtrar por curso, nivel o estudiante específico.', objectives: 'Entregar una herramienta que facilite la detección temprana de riesgo y permita una intervención oportuna y basada en evidencia, fortaleciendo el acompañamiento a cada estudiante.', blueprint: { 
-                                visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/DA_dashboard.png',
-                                workplan: [
-                                    {phase:'Semana 1', tasks:['Taller de co-diseño para definir indicadores (KPIs).', 'Creación del borrador del layout.']},
-                                    {phase:'Semanas 2-3', tasks:['Conexión a la fuente de datos automática.', 'Desarrollo de gráficos y filtros.']},
-                                    {phase:'Semana 4', tasks:['Entrega del dashboard funcional y capacitación.']}
-                                ]
-                            } }
+                            'automatizacion-schooltrack': { title: 'Flujo Automatizado de Datos de Asistencia', subtitle: 'Desde Schooltrack a un modelo centralizado.', description: 'Creamos un proceso automático que extrae, limpia y organiza diariamente los datos de inasistencia de Schooltrack, asegurando una fuente de información siempre actualizada y confiable.', objectives: 'Eliminar la carga manual de reportería y establecer una "única fuente de verdad" para el seguimiento de la asistencia de los estudiantes.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/flyaway.mp4', workplan: [ {phase:'Semanas 1-2', tasks:['Análisis de reportes de Schooltrack.', 'Diseño del flujo de datos automatizado.']}, {phase:'Semanas 3-4', tasks:['Construcción de la herramienta de extracción automática.', 'Pruebas unitarias con datos reales.']} ] } }, 
+                            'dashboard-asistencia': { title: 'Panel de Seguimiento y Alertas Tempranas', subtitle: 'Visualizar para intervenir a tiempo.', description: 'Desarrollamos un panel interactivo que permite a los equipos de gestión y orientación visualizar tendencias de ausentismo, identificar patrones y filtrar por curso, nivel o estudiante específico.', objectives: 'Entregar una herramienta que facilite la detección temprana de riesgo y permita una intervención oportuna y basada en evidencia, fortaleciendo el acompañamiento a cada estudiante.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/DA_dashboard.png', workplan: [ {phase:'Semana 1', tasks:['Taller de co-diseño para definir indicadores (KPIs).', 'Creación del borrador del layout.']}, {phase:'Semanas 2-3', tasks:['Conexión a la fuente de datos automática.', 'Desarrollo de gráficos y filtros.']}, {phase:'Semana 4', tasks:['Entrega del panel funcional y capacitación.']} ] } }
                         } },
                         'conducta': { title: "Objetivo 2: Fortalecer la Convivencia Escolar con Datos", durationWeeks: "8–10", stages: { 
-                            'integracion-registros': { title: 'Integración de Registros Conductuales', subtitle: 'Consolidar la información para una visión 360.', description: 'Al igual que con la asistencia, automatizamos la extracción de los registros conductuales desde Schooltrack, unificándolos en un modelo de datos que permite un análisis integral.', objectives: 'Crear un repositorio de datos seguro y centralizado que sirva como base para entender la dinámica de la convivencia escolar.', blueprint: { 
-                                visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/people_link.mp4',
-                                workplan: [
-                                    {phase:'Semanas 1-2', tasks:['Levantamiento de tipos de registros en Schooltrack.', 'Diseño del modelo de datos consolidado.']},
-                                    {phase:'Semanas 3-4', tasks:['Desarrollo del flujo de extracción y transformación.']}
-                                ]
-                            } },
-                            'panel-gestion-formativa': { title: 'Panel de Gestión Formativa', subtitle: 'Del registro a la acción pedagógica.', description: 'Construimos un dashboard que muestra de forma agregada y anónima las tendencias en los registros conductuales, ayudando al colegio a identificar áreas de mejora y a diseñar estrategias preventivas.', objectives: 'Proveer al equipo directivo y de convivencia escolar una herramienta para el análisis estratégico, apoyando la mejora continua del ambiente de aprendizaje y el respeto mutuo.', blueprint: { 
-                                visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/innovation_progress_es.png',
-                                workplan: [
-                                    {phase:'Semana 1', tasks:['Taller para definir vistas y filtros con Convivencia Escolar.']},
-                                    {phase:'Semanas 2-3', tasks:['Construcción del dashboard.', 'Validación de la correcta visualización de los datos.']}
-                                ]
-                            } }
+                            'integracion-registros': { title: 'Integración de Registros Conductuales', subtitle: 'Consolidar la información para una visión 360.', description: 'Al igual que con la asistencia, automatizamos la extracción de los registros conductuales desde Schooltrack, unificándolos en un modelo de datos que permite un análisis integral.', objectives: 'Crear un repositorio de datos seguro y centralizado que sirva como base para entender la dinámica de la convivencia escolar.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/people_link.mp4', workplan: [ {phase:'Semanas 1-2', tasks:['Levantamiento de tipos de registros en Schooltrack.', 'Diseño del modelo de datos consolidado.']}, {phase:'Semanas 3-4', tasks:['Desarrollo del flujo de extracción y transformación.']} ] } },
+                            'panel-gestion-formativa': { title: 'Panel de Gestión Formativa', subtitle: 'Del registro a la acción pedagógica.', description: 'Construimos un panel visual que muestra de forma agregada y anónima las tendencias en los registros conductuales, ayudando al colegio a identificar áreas de mejora y a diseñar estrategias preventivas.', objectives: 'Proveer al equipo directivo y de convivencia escolar una herramienta para el análisis estratégico, apoyando la mejora continua del ambiente de aprendizaje y el respeto mutuo.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/innovation_progress_es.png', workplan: [ {phase:'Semana 1', tasks:['Taller para definir vistas y filtros con Convivencia Escolar.']}, {phase:'Semanas 2-3', tasks:['Construcción del panel de datos.', 'Validación de la correcta visualización de los datos.']} ] } }
                         } },
-                        'planificaciones': { title: 'Objetivo 3: Capitalizar el Conocimiento Pedagógico', durationWeeks: "12–20", stages: { 
-                            'codiseno-repositorio': { title: 'Co-diseño del Repositorio Pedagógico Central', subtitle: 'Definiendo la estructura del capital intelectual.', description: 'En talleres con los coordinadores académicos, definimos la estructura, estándares y taxonomía para organizar las planificaciones de manera que sean fáciles de encontrar, reutilizar y mejorar.', objectives: 'Establecer un marco de trabajo claro y consensuado que asegure la calidad y coherencia del contenido pedagógico del colegio.', blueprint: { 
-                                visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/co_design.png',
-                                workplan: [
-                                    {phase:'Semana 1', tasks:['Workshop con coordinadores para definir taxonomía.']},
-                                    {phase:'Semana 2', tasks:['Creación del manual de estándares del repositorio.']}
-                                ]
-                            } }, 
-                            'implementacion-google-sites': { title: 'Implementación de la Plataforma Central', subtitle: 'Un "cerebro" pedagógico en Google Sites.', description: 'Desarrollamos un sitio interno en Google Sites que actúa como el repositorio vivo de todas las planificaciones. Su diseño intuitivo permite a los docentes buscar, consultar y colaborar sobre el material existente.', objectives: 'Entregar una plataforma sostenible y de bajo mantenimiento que centralice el conocimiento, fomente la colaboración y facilite la inducción de nuevos docentes.', blueprint: { 
-                                visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/proposal_system.png',
-                                workplan: [
-                                    {phase:'Semanas 1-2', tasks:['Diseño de la arquitectura de información y layout del sitio.']},
-                                    {phase:'Semanas 3-4', tasks:['Construcción del sitio y carga de ejemplos.','Pruebas de usabilidad con equipo piloto.']}
-                                ]
-                            } },
-                            'monitoreo-estandares': { title: 'Sistema de Monitoreo de Estándares', subtitle: 'Asegurando la calidad de forma automática.', description: 'Creamos herramientas y flujos de trabajo (usando Google Apps Script) que ayudan a los coordinadores a revisar las planificaciones y verificar el cumplimiento de los estándares definidos, enviando notificaciones y resúmenes automáticos.', objectives: 'Optimizar el proceso de revisión y retroalimentación, liberando tiempo de gestión y asegurando que el "Método Almenar" se aplique con consistencia y excelencia.', blueprint: { 
-                                visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/autoreport.mp4',
-                                workplan: [
-                                    {phase:'Semana 1', tasks:['Mapeo del proceso de revisión y feedback actual.']},
-                                    {phase:'Semanas 2-4', tasks:['Desarrollo del script de automatización y notificaciones.']},
-                                    {phase:'Semana 5', tasks:['Piloto con un departamento y ajustes finales.']}
-                                ]
-                            } } 
-                        } }
+                        'planificaciones': { 
+                            title: 'Objetivo 3: Preservar el Conocimiento Pedagógico', 
+                            durationWeeks: "12–20", 
+                            stages: { 
+                                'codiseno-repositorio': { 
+                                    title: 'Diseño Remoto del Repositorio Pedagógico', 
+                                    subtitle: 'Definiendo la estructura del conocimiento interno.', 
+                                    description: 'Mediante entrevistas online y encuestas asincrónicas con los coordinadores académicos, definimos colaborativamente la estructura, estándares y categorías para organizar las planificaciones de manera que sean fáciles de encontrar, reutilizar y mejorar.', 
+                                    objectives: 'Establecer un marco de trabajo claro y consensuado que asegure la calidad y coherencia del contenido pedagógico del colegio, utilizando métodos de trabajo remoto eficientes.', 
+                                    blueprint: { 
+                                        visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/co_design.png', 
+                                        workplan: [ 
+                                            {phase:'Semana 1', tasks:['Entrevistas online iniciales para levantamiento de necesidades.', 'Lanzamiento de encuesta para definir categorías y estándares.']},
+                                            {phase:'Semana 2', tasks:['Análisis de resultados y borrador del manual de estándares.', 'Reunión de validación de la propuesta de estructura.']}
+                                        ] 
+                                    } 
+                                }, 
+                                'implementacion-google-sites': { 
+                                    title: 'Implementación de la Plataforma Central', 
+                                    subtitle: 'Un "cerebro" pedagógico en Google Sites.', 
+                                    description: 'Desarrollamos un sitio interno en Google Sites que actúa como el repositorio vivo de todas las planificaciones. Su diseño intuitivo permite a los docentes buscar, consultar y colaborar sobre el material existente.', 
+                                    objectives: 'Entregar una plataforma sostenible y de bajo mantenimiento que centralice el conocimiento, fomente la colaboración y facilite la inducción de nuevos docentes.', 
+                                    blueprint: { 
+                                        visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/proposal_system.png', 
+                                        workplan: [ 
+                                            {phase:'Semanas 1-2', tasks:['Diseño de la arquitectura de información y layout del sitio.']}, 
+                                            {phase:'Semanas 3-4', tasks:['Construcción del sitio y carga de ejemplos.','Sesiones remotas de prueba de usabilidad con equipo piloto.']}
+                                        ] 
+                                    } 
+                                },
+                                'monitoreo-estandares': { 
+                                    title: 'Sistema de Monitoreo de Estándares', 
+                                    subtitle: 'Asegurando la calidad de forma automática.', 
+                                    description: 'Creamos herramientas y flujos de trabajo (usando Google Apps Script) que ayudan a los coordinadores a revisar las planificaciones y verificar el cumplimiento de los estándares definidos, enviando notificaciones y resúmenes automáticos.', 
+                                    objectives: 'Optimizar el proceso de revisión y retroalimentación, liberando tiempo de gestión y asegurando que el "Método Almenar" se aplique con consistencia y excelencia.', 
+                                    blueprint: { 
+                                        visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/autoreport.mp4', 
+                                        workplan: [ 
+                                            {phase:'Semana 1', tasks:['Mapeo del proceso de revisión y feedback actual.']}, 
+                                            {phase:'Semanas 2-4', tasks:['Desarrollo del script de automatización y notificaciones.']}, 
+                                            {phase:'Semana 5', tasks:['Piloto remoto con un departamento y ajustes finales.']}
+                                        ] 
+                                    } 
+                                } 
+                            } 
+                        }
+                    }
+                },
+                en: {
+                    principia: "Principia",
+                    clientName: "Almenar School",
+                    heroTitle: "Strategic Systematization to Enhance the 'Almenar Method'",
+                    heroSubtitle: "A partnership to transform data into a cornerstone of formative support, strengthen school climate, and preserve pedagogical knowledge, consolidating the model of excellence that earned them SNED recognition.",
+                    journeyTitle: "Our Collaboration Journey",
+                    act1Title: "Diagnosis & Automation", act1Subtitle: "Connect & Organize",
+                    act2Title: "Construction & Visualization", act2Subtitle: "Create & Empower",
+                    act3Title: "Centralization & Future", act3Subtitle: "Organize & Scale",
+                    objectivesTitle: "Specific Project Objectives",
+                    requirementsTitle: "Requirements for Success",
+                    req1Title: "Principal's Sponsorship", req1Desc: "Active support from the management team.",
+                    req2Title: "Access to Schooltrack & Workspace", req2Desc: "Access to data sources for automation.",
+                    req3Title: "Pedagogical Stakeholders", req3Desc: "Available Coordinators and Department Heads.",
+                    req4Title: "Agile Governance", req4Desc: "Bi-weekly follow-up meetings.",
+                    req5Title: "Privacy & Security", req5Desc: "Responsible and confidential use of data.",
+                    valuesTitle: "Our Values",
+                    val1Title: "Radical Collaboration", val1Desc: "The best solutions are built together.",
+                    val2Title: "Early Value Delivery", val2Desc: "We focus on short cycles to generate visible results.",
+                    val3Title: "Transparent Communication", val3Desc: "We maintain a fluid dialogue about progress and challenges.",
+                    viewBlueprint: "View Visual Example", modalTitlePrefix: "Example:",
+                    artifactsArchitecture: "Example Deliverable", workPlan: "Simplified Work Plan",
+                    durationLabel: "Duration:", weeksLabel: "weeks", descriptionLabel: "Description", objectivesLabel: "Key Objectives",
+                    prevButton: "Previous", nextButton: "Next", stepLabel: "Step", toStartButton: "Back to Start",
+                    themeLabelLight: "Light Mode", themeLabelDark: "Dark Mode", langLabel: "Cambiar a Español",
+                    investmentTitle: "Investment and Partnership Terms",
+                    investmentSubtitle: "A transparent proposal for a high-impact collaboration, designed to generate a measurable return on efficiency and pedagogical capacity.",
+                    investmentDuration: "Estimated Project Duration",
+                    investmentMonths: "5 Months",
+                    investmentMonthlyFee: "Required Monthly Investment",
+                    investmentUF: "22 UF + VAT",
+                    investmentTotal: "Total Project Investment",
+                    investmentTotalUF: "110 UF + VAT",
+                    investmentIncludesTitle: "The service includes:",
+                    investmentInclude1: "40 monthly hours of strategic consulting and development.",
+                    investmentInclude2: "Design and implementation of 3 custom data solutions.",
+                    investmentInclude3: "Creation of tutorials and support materials for tool usage, with remote support sessions.",
+                    investmentInclude4: "Technical and strategic support throughout the project.",
+                    docsTitle: "Documents for Formalization",
+                    docsSubtitle: "To move forward, we invite you to review the detailed Work Plan and the proposed Service Agreement.",
+                    docButtonLabel: "Review Work Plan and Contract",
+                    nextStepsTitle: "Next Steps to Get Started",
+                    nextStepsSubtitle: "We are ready to start building together. We propose the following path to formalize our partnership.",
+                    step1Title: "Review and Adjust",
+                    step1Desc: "We will schedule a meeting to resolve any questions and adjust any details of this proposal.",
+                    step2Title: "Service Agreement",
+                    step2Desc: "We formalize the collaboration by signing the service agreement.",
+                    step3Title: "Project Kickoff",
+                    step3Desc: "We hold the first working meeting to officially start Phase 1.",
+                    contactTitle: "Let's Talk",
+                    contactPerson: "Daniel Valdés Medel",
+                    contactRole: "Director, Principia SpA",
+                    timelineActs: {
+                        1: { title: 'Phase I: Diagnosis and Data Automation', description: 'We begin by connecting the school\'s key data sources, such as Schooltrack, to establish automatic and reliable information flows. The goal is to eliminate manual processes and build a solid foundation for analysis.' },
+                        2: { title: 'Phase II: Dashboard Construction and Prototyping', description: 'With the data flowing, we build visual and interactive tools (dashboards) for monitoring attendance and behavior. In parallel, we co-design the solution to centralize pedagogical planning.' },
+                        3: { title: 'Phase III: Centralization and Future Knowledge', description: 'We implement the planning platform, ensuring that valuable teacher knowledge is preserved and accessible. We deliver the final tools and a roadmap to enhance the "Almenar Method" going forward.' }
+                    },
+                    contentData: {
+                        'inasistencias': { title: "Objective 1: Proactive Attendance Monitoring", durationWeeks: "6–8", stages: { 
+                            'automatizacion-schooltrack': { title: 'Automated Attendance Data Flow', subtitle: 'From Schooltrack to a centralized model.', description: 'We create an automated process that extracts, cleans, and organizes attendance data from Schooltrack daily, ensuring an always-updated and reliable source of information.', objectives: 'Eliminate the manual reporting burden and establish a "single source of truth" for tracking student attendance.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/flyaway.mp4', workplan: [ {phase:'Weeks 1-2', tasks:['Analysis of Schooltrack reports.', 'Design of the automated data flow.']}, {phase:'Weeks 3-4', tasks:['Construction of the automatic extraction tool.', 'Unit tests with real data.']} ] } }, 
+                            'dashboard-asistencia': { title: 'Tracking Dashboard and Early Alerts', subtitle: 'Visualize to intervene in time.', description: 'We develop an interactive dashboard that allows management and guidance teams to visualize absenteeism trends, identify patterns, and filter by class, grade, or specific student.', objectives: 'Provide a tool that facilitates early risk detection and allows for timely, evidence-based intervention, strengthening support for each student.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/DA_dashboard.png', workplan: [ {phase:'Week 1', tasks:['Co-design workshop to define indicators (KPIs).', 'Creation of the layout draft.']}, {phase:'Weeks 2-3', tasks:['Connection to the automatic data source.', 'Development of charts and filters.']}, {phase:'Week 4', tasks:['Delivery of the functional dashboard and training.']} ] } }
+                        } },
+                        'conducta': { title: "Objective 2: Strengthening School Climate with Data", durationWeeks: "8–10", stages: { 
+                            'integracion-registros': { title: 'Integration of Behavioral Records', subtitle: 'Consolidating information for a 360° view.', description: 'As with attendance, we automate the extraction of behavioral records from Schooltrack, unifying them into a data model that allows for comprehensive analysis.', objectives: 'Create a secure and centralized data repository to serve as a basis for understanding the dynamics of the school climate.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/people_link.mp4', workplan: [ {phase:'Weeks 1-2', tasks:['Survey of record types in Schooltrack.', 'Design of the consolidated data model.']}, {phase:'Weeks 3-4', tasks:['Development of the extraction and transformation flow.']} ] } },
+                            'panel-gestion-formativa': { title: 'Formative Management Dashboard', subtitle: 'From record to pedagogical action.', description: 'We build a visual dashboard that displays aggregated and anonymized trends in behavioral records, helping the school identify areas for improvement and design preventive strategies.', objectives: 'Provide the management and school climate team with a tool for strategic analysis, supporting the continuous improvement of the learning environment and mutual respect.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/innovation_progress_es.png', workplan: [ {phase:'Week 1', tasks:['Workshop to define views and filters with the School Climate team.']}, {phase:'Weeks 2-3', tasks:['Construction of the data dashboard.', 'Validation of correct data visualization.']} ] } }
+                        } },
+                        'planificaciones': { 
+                            title: 'Objective 3: Preserving Pedagogical Knowledge', 
+                            durationWeeks: "12–20", 
+                            stages: { 
+                                'codiseno-repositorio': { 
+                                    title: 'Remote Design of the Pedagogical Repository', 
+                                    subtitle: 'Defining the structure of internal knowledge.', 
+                                    description: 'Through online interviews and asynchronous surveys with academic coordinators, we collaboratively define the structure, standards, and categories to organize lesson plans so they are easy to find, reuse, and improve.', 
+                                    objectives: 'Establish a clear and agreed-upon framework that ensures the quality and consistency of the school\'s pedagogical content, using efficient remote work methods.', 
+                                    blueprint: { 
+                                        visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/co_design.png', 
+                                        workplan: [ 
+                                            {phase:'Week 1', tasks:['Initial online interviews for needs assessment.', 'Launch survey to define categories and standards.']},
+                                            {phase:'Week 2', tasks:['Analysis of results and draft of the standards manual.', 'Validation meeting for the proposed structure.']}
+                                        ] 
+                                    } 
+                                }, 
+                                'implementacion-google-sites': { 
+                                    title: 'Implementation of the Central Platform', 
+                                    subtitle: 'A pedagogical "brain" in Google Sites.', 
+                                    description: 'We develop an internal site in Google Sites that acts as the living repository for all lesson plans. Its intuitive design allows teachers to search, consult, and collaborate on existing material.', 
+                                    objectives: 'Deliver a sustainable, low-maintenance platform that centralizes knowledge, fosters collaboration, and facilitates the onboarding of new teachers.', 
+                                    blueprint: { 
+                                        visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/proposal_system.png', 
+                                        workplan: [ 
+                                            {phase:'Weeks 1-2', tasks:['Design of the information architecture and site layout.']}, 
+                                            {phase:'Weeks 3-4', tasks:['Construction of the site and loading of examples.','Remote usability testing sessions with a pilot team.']}
+                                        ] 
+                                    } 
+                                },
+                                'monitoreo-estandares': { 
+                                    title: 'Standards Monitoring System', 
+                                    subtitle: 'Ensuring quality automatically.', 
+                                    description: 'We create tools and workflows (using Google Apps Script) that help coordinators review lesson plans and verify compliance with defined standards, sending automatic notifications and summaries.', 
+                                    objectives: 'Optimize the review and feedback process, freeing up management time and ensuring the "Almenar Method" is applied with consistency and excellence.', 
+                                    blueprint: { 
+                                        visual: 'https://daniavm.github.io/assets/images/PropuestaVMA/autoreport.mp4', 
+                                        workplan: [ 
+                                            {phase:'Week 1', tasks:['Mapping of the current review and feedback process.']}, 
+                                            {phase:'Weeks 2-4', tasks:['Development of the automation and notification script.']}, 
+                                            {phase:'Week 5', tasks:['Remote pilot with one department and final adjustments.']}
+                                        ] 
+                                    } 
+                                } 
+                            } 
+                        }
                     }
                 }
             };
@@ -643,6 +782,7 @@
             const root = document.documentElement;
             const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
             const themeToggleMobile = document.getElementById('themeToggleMobile');
+            const langToggles = [document.getElementById('langToggle'), document.getElementById('langToggleMobile')];
             const hamburgerButton = document.getElementById('hamburger-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
@@ -825,11 +965,23 @@
                 currentLanguage = lang;
                 const langData = translations[lang];
                 document.documentElement.lang = lang;
+                
+                langToggles.forEach(toggle => {
+                    if(toggle.id === 'langToggle') {
+                        toggle.textContent = lang === 'es' ? 'ENG' : 'ESP';
+                    } else {
+                        const span = toggle.querySelector('span');
+                        if (span) span.textContent = lang === 'es' ? translations.en.langLabel : translations.es.langLabel;
+                    }
+                });
 
                 document.querySelectorAll('[data-key]').forEach(element => {
                     const key = element.getAttribute('data-key');
-                    if (langData[key]) element.innerHTML = langData[key];
+                    if (langData[key] && !element.closest('#langToggle, #langToggleMobile')) {
+                         element.innerHTML = langData[key];
+                    }
                 });
+                
                 timelineActs = langData.timelineActs;
                 contentData = langData.contentData;
                 if(timelineDetailsContainer) {
@@ -838,9 +990,12 @@
                 }
                 document.querySelectorAll('.timeline-step').forEach(s => s.classList.remove('active'));
                 if(timelineProgress) timelineProgress.style.width = '0%';
+                
                 renderAccordion();
                 updateSlideNav();
             }
+
+            langToggles.forEach(toggle => toggle.addEventListener('click', () => setLanguage(currentLanguage === 'es' ? 'en' : 'es')));
 
             const slides = document.querySelectorAll('.slide');
             const prevBtn = document.getElementById('prev-btn');
@@ -852,8 +1007,8 @@
                 if(slides.length === 0) return;
                 slides.forEach((slide, i) => {
                     slide.style.display = i === index ? 'block' : 'none';
-                    if (i === 0 || i === slides.length - 1 || i === slides.length-2) {
-                         slide.style.display = i === index ? 'flex' : 'none';
+                     if (slide.classList.contains('flex') || slide.classList.contains('slide-centered')) {
+                        slide.style.display = i === index ? 'flex' : 'none';
                     }
                 });
                 currentSlide = index;
@@ -866,7 +1021,16 @@
                 if (!prevBtn || !nextBtn || !stepIndicator) return;
 
                 prevBtn.parentElement.style.visibility = currentSlide === 0 ? 'hidden' : 'visible';
-                nextBtn.innerHTML = currentSlide === slides.length - 1 ? `<span data-key="toStartButton">${lang.toStartButton}</span> <i class="fas fa-home ml-2"></i>` : `<span data-key="nextButton">${lang.nextButton}</span> <i class="fas fa-arrow-right ml-2"></i>`;
+                
+                const nextBtnText = nextBtn.querySelector('.btn-text');
+                const prevBtnText = prevBtn.querySelector('.btn-text');
+
+                if (currentSlide === slides.length - 1) {
+                    nextBtn.innerHTML = `<span class="btn-text" data-key="toStartButton">${lang.toStartButton}</span><i class="fas fa-home ml-2"></i>`;
+                } else {
+                    nextBtn.innerHTML = `<span class="btn-text" data-key="nextButton">${lang.nextButton}</span><i class="fas fa-arrow-right ml-2"></i>`;
+                }
+
                 stepIndicator.textContent = `${lang.stepLabel} ${currentSlide + 1} / ${slides.length}`;
             }
 
@@ -890,4 +1054,3 @@
     </script>
 </body>
 </html>
-

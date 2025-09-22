@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Principia — Proposal for Villa María Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Lato:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root{
+            --pri-orange:#FFA630;
+            --pri-orange-600:#F17720;
+            --pri-blue:#00A7E1;
+            --pri-ink:#3D3D3D;
+            --pri-ink-2:#757575;
+            --pri-bg:#FFFFFF;
+            --surface:#F8F9FA;
+            --border:#E0E0E0;
+        }
+        html.dark{ --pri-ink:#FFFFFF; --pri-ink-2:#BDBDBD; --pri-bg:#121212; --surface:#1E1E1E; --border:#424242; }
+        html,body{height:100%}
+        body{font-family:'Lato',sans-serif;background:var(--pri-bg);color:var(--pri-ink);transition:background-color .3s,color .3s;display:flex;flex-direction:column}
+        main{flex-grow:1}
+        h1,h2,h3,h4,h5,h6{font-family:'Fira Sans',sans-serif}
+        .font-raleway{font-family:'Raleway',sans-serif}
+        .h-deco:after{content:"";display:block;height:4px;width:100px;margin:12px auto 0;background:linear-gradient(90deg,var(--pri-orange),var(--pri-orange-600));border-radius:999px}
+        .content-container{background:linear-gradient(180deg,rgba(255,255,255,.6),rgba(255,255,255,.85));padding:2rem;border-radius:12px}
+        .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:8px;border:1px solid transparent;cursor:pointer}
+        .btn-primary{background:var(--pri-orange);color:#fff}.btn-secondary{background:transparent;border-color:var(--border);color:var(--pri-ink-2)}
+        .timeline{display:flex;gap:1rem}.timeline-step{flex:1;padding:1rem;border-radius:8px}.timeline-icon{width:48px;height:48px;border-radius:999px;border:2px solid var(--border);display:flex;align-items:center;justify-content:center}
+        .timeline-step.active .timeline-icon{border-color:var(--pri-orange);color:var(--pri-orange)}
+        .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;z-index:60}
+        .modal-overlay.visible{display:flex}
+        .modal-container{background:var(--pri-bg);padding:1.5rem;border-radius:10px;width:90%;max-width:900px;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+        .blueprint-visual{width:100%;height:300px;object-fit:cover}
+        @media(min-width:768px){.timeline{gap:2rem}}
+        /* theme switch */
+        .theme-switch-wrapper{display:flex;align-items:center;gap:8px}.theme-switch{display:inline-block;height:24px;position:relative;width:44px}.theme-switch input{display:none}.slider{background:#ccc;position:absolute;inset:0;border-radius:34px;transition:.4s}.slider:before{content:"";position:absolute;left:4px;bottom:4px;height:16px;width:16px;background:#fff;border-radius:50%;transition:.4s}input:checked+.slider{background:var(--pri-orange)}input:checked+.slider:before{transform:translateX(20px)}
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-[var(--surface)]/80 backdrop-blur-lg shadow-md sticky top-0 z-50 border-b border-[var(--border)]">
+        <div class="container mx-auto px-6">
+            <nav class="flex justify-between items-center py-3">
+                <div class="flex items-center gap-3 text-lg">
+                    <a href="#" class="flex items-center gap-2"><img src="https://daniavm.github.io/assets/images/PropuestaVMA/Principia_Logo_Oficial.png" alt="Principia" class="h-8"><span class="font-raleway font-normal text-2xl hidden sm:inline" data-key="principia">Principia</span></a>
+                    <span class="text-gray-400 font-light mx-1">×</span>
+                    <a href="https://vma.cl/" target="_blank" rel="noopener" class="flex items-center gap-2"><img src="https://daniavm.github.io/assets/images/PropuestaVMA/VMA_Logo.png" alt="VMA" class="h-8"><span class="font-bold text-xl hidden sm:inline" data-key="clientName">Villa María Academy</span></a>
+                </div>
+
+                <div class="flex items-center space-x-2">
+                    <div class="hidden md:flex items-center gap-4">
+                        <div class="theme-switch-wrapper"><i class="fas fa-sun text-yellow-500"></i><label class="theme-switch" for="theme-toggle-desktop"><input type="checkbox" id="theme-toggle-desktop" /><span class="slider"></span></label><i class="fas fa-moon text-blue-300"></i></div>
+                        <button class="font-bold text-sm text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)] w-20 text-right" id="langToggle">ESP</button>
+                    </div>
+                    <button id="hamburger-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false"><span class="sr-only">Open main menu</span><i class="fas fa-bars fa-lg"></i></button>
+                </div>
+            </nav>
+            <div class="hidden lg:hidden" id="mobile-menu">
+                <ul class="flex flex-col items-center py-4 space-y-4">
+                    <li class="md:hidden flex items-center gap-3 text-sm"><button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)]" id="themeToggleMobile" aria-label="Toggle theme"><i id="sun-icon-mobile" class="fas fa-sun fa-lg mr-2"></i> <span data-key="themeLabelLight">Light</span><i id="moon-icon-mobile" class="fas fa-moon fa-lg mr-2 hidden"></i> <span data-key="themeLabelDark" class="hidden">Dark</span></button></li>
+                    <li class="md:hidden flex items-center gap-3 text-sm"><button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)]" id="langToggleMobile" aria-label="Toggle language"><i class="fas fa-globe fa-lg mr-2"></i> <span data-key="langLabel">Switch to English</span></button></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <div id="slides-container" class="h-full container mx-auto px-6">
+            <div class="slide slide-centered relative w-screen left-1/2 -translate-x-1/2 min-h-[60vh] bg-no-repeat bg-bottom bg-[length:100%_auto]" style="background-image:url('https://daniavm.github.io/assets/images/PropuestaVMA/proyectoVMA_banner.png');">
+                <div class="hero-veil"></div>
+                <section class="text-center relative z-10 px-6 py-20">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text" data-key="heroTitle">Modernizing Data Management for Academic Leadership</h1>
+                    <p class="text-lg md:text-xl text-[var(--pri-ink-2)] max-w-3xl mx-auto" data-key="heroSubtitle">An alliance to transform data into a pillar of pedagogical accompaniment, strengthen school climate and preserve pedagogical knowledge — laying the foundations for an Innovation Area.</p>
+                </section>
+            </div>
+
+            <div class="slide py-12 md:py-20">
+                <section class="mb-16 content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 h-deco section-title" data-key="journeyTitle">Our Implementation Journey</h2>
+                    <div class="timeline relative" id="timeline-interactive">
+                        <div class="timeline-step text-center cursor-pointer relative z-10" data-act="1">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl"><i class="fa-solid fa-database"></i></div>
+                            <h3 class="font-bold text-lg" data-key="act1Title">Phase I</h3>
+                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act1Subtitle">Listen and Organize</h4>
+                        </div>
+                        <div class="timeline-step text-center cursor-pointer relative z-10" data-act="2">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl"><i class="fa-solid fa-chart-simple"></i></div>
+                            <h3 class="font-bold text-lg" data-key="act2Title">Phase II</h3>
+                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act2Subtitle">Solve & Demonstrate</h4>
+                        </div>
+                        <div class="timeline-step text-center cursor-pointer relative z-10" data-act="3">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl"><i class="fa-solid fa-brain"></i></div>
+                            <h3 class="font-bold text-lg" data-key="act3Title">Phase III</h3>
+                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act3Subtitle">Formalize & Grow</h4>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-container">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-3" data-key="objectivesTitle">Specific Objectives</h3>
+                        <p class="text-[var(--pri-ink-2)] max-w-3xl mx-auto" data-key="purposeDescription">This document details a 5-month initial collaboration to set operational and technological foundations and co-design tools that justify creating an Innovation Area in 2026.</p>
+                    </div>
+
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-center mb-4 raleway" data-key="expectedResultsTitle">Expected Results</h3>
+                        <div class="grid md:grid-cols-2 gap-6 text-left">
+                            <div class="bg-[var(--surface)] p-4 rounded-lg border border-[var(--border)] flex items-start"><i class="fas fa-bullseye text-[var(--pri-blue)] mr-3 mt-1"></i><span data-key="result1">A strategic proposal for an Innovation Area.</span></div>
+                            <div class="bg-[var(--surface)] p-4 rounded-lg border border-[var(--border)] flex items-start"><i class="fas fa-chart-line text-[var(--pri-blue)] mr-3 mt-1"></i><span data-key="result2">A data architecture with automated flows in progress.</span></div>
+                            <div class="bg-[var(--surface)] p-4 rounded-lg border border-[var(--border)] flex items-start"><i class="fas fa-users text-[var(--pri-blue)] mr-3 mt-1"></i><span data-key="result3">A functional prototype of the Comprehensive Student Profile.</span></div>
+                            <div class="bg-[var(--surface)] p-4 rounded-lg border border-[var(--border)] flex items-start"><i class="fas fa-map-signs text-[var(--pri-blue)] mr-3 mt-1"></i><span data-key="result4">A clear roadmap for Innovation (2026-2027).</span></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="plan" class="py-20">
+                    <div class="container mx-auto px-6">
+                        <h2 class="text-3xl font-bold text-center fira" data-key="planTitle">Work Plan: 5 Strategic Phases</h2>
+                        <p class="text-center mt-2 text-[var(--pri-ink-2)] mb-12 raleway" data-key="planSubtitle">A condensed timeline to deliver prototypes, stabilize flows and build the case for an Innovation Area.</p>
+
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="p-4 bg-[var(--surface)] rounded-lg border border-[var(--border)]">
+                                <h4 class="font-bold">Phase 1 — Strategic Proposal & Foundations</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)] mt-2">Deliver a validated proposal for the Innovation Area and stabilize technical access and core automations.</p>
+                                <p class="mt-3 text-[var(--pri-blue)] font-semibold">Duration: Month 1</p>
+                            </div>
+                            <div class="p-4 bg-[var(--surface)] rounded-lg border border-[var(--border)]">
+                                <h4 class="font-bold">Phase 2 — Co-design Student Profile</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)] mt-2">Prototype a navigable student profile that aggregates academic, formative and contextual data.</p>
+                                <p class="mt-3 text-[var(--pri-blue)] font-semibold">Duration: Month 2</p>
+                            </div>
+                            <div class="p-4 bg-[var(--surface)] rounded-lg border border-[var(--border)]">
+                                <h4 class="font-bold">Phase 3 — Build & Assessment Diagnostics</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)] mt-2">Construct initial dashboards and assess existing evaluation systems for alignment.</p>
+                                <p class="mt-3 text-[var(--pri-blue)] font-semibold">Duration: Month 3</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 grid md:grid-cols-2 gap-6">
+                            <div class="p-4 bg-[var(--surface)] rounded-lg border border-[var(--border)]">
+                                <h4 class="font-bold">Phase 4 — AI Readiness & Refinement</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)] mt-2">Diagnose how AI can support teachers and prepare a roadmap for pilot implementations.</p>
+                                <p class="mt-3 text-[var(--pri-blue)] font-semibold">Duration: Month 4</p>
+                            </div>
+                            <div class="p-4 bg-[var(--surface)] rounded-lg border border-[var(--border)]">
+                                <h4 class="font-bold">Phase 5 — Consolidation & Roadmap</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)] mt-2">Deliver final documentation and the operational roadmap to scale the Innovation Area.</p>
+                                <p class="mt-3 text-[var(--pri-blue)] font-semibold">Duration: Month 5</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-12">
+                    <div class="container mx-auto px-6 content-container">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-xl font-bold mb-3" data-key="requirementsTitle">Requirements for Success</h3>
+                                <ul class="list-disc pl-6 text-[var(--pri-ink-2)]">
+                                    <li data-key="req1">Executive Sponsorship: Active support from Directors and Coordinators.</li>
+                                    <li data-key="req2">Platform Access: Schooltrack license and Workspace access.</li>
+                                    <li data-key="req3">Focal Points: Key contacts in critical areas.</li>
+                                    <li data-key="req4">Agile Governance: Bi-weekly follow-ups.</li>
+                                    <li data-key="req5">Privacy & Security: Responsible and confidential handling of data.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-3">Next Steps</h3>
+                                <p class="text-[var(--pri-ink-2)]" data-key="nextStepsDescription">Validate this plan with the Academic Sub-Directorate, sign the agreement and start Phase 1 focused on delivering the strategic proposal in October.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="blueprint-modal" role="dialog" aria-modal="true"><div class="modal-container"><div class="flex justify-between items-center mb-4"><h4 id="modal-title" class="font-bold">Example</h4><button id="modal-close" class="text-xl" aria-label="Close modal">&times;</button></div><div id="modal-body">Loading…</div></div></div>
+
+    <footer class="bg-[var(--surface)]/80 backdrop-blur-lg border-t border-[var(--border)] sticky bottom-0 z-40">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-sm text-[var(--pri-ink-2)]" data-key="footerText">© 2025 Principia SpA. Transforming education through data.</div>
+            <div class="flex items-center gap-4">
+                <button id="open-doc" class="btn btn-secondary">Open Document</button>
+                <div class="text-sm text-[var(--pri-ink-2)]">Version: <span data-key="version">Collaboration Proposal — August 2025</span></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const translations = {
+                en: {
+                    principia: 'Principia', clientName: 'Villa María Academy', heroTitle: 'Modernizing Data Management for Academic Leadership',
+                    heroSubtitle: 'An alliance to transform data into a pillar of pedagogical accompaniment, strengthen school climate and preserve pedagogical knowledge — laying the foundations for an Innovation Area.',
+                    journeyTitle: 'Our Implementation Journey', act1Title: 'Phase I', act1Subtitle: 'Listen and Organize', act2Title: 'Phase II', act2Subtitle: 'Solve & Demonstrate',
+                    act3Title: 'Phase III', act3Subtitle: 'Formalize & Grow', objectivesTitle: 'Specific Objectives', purposeDescription: 'This document details a 5-month initial collaboration to set operational and technological foundations and co-design tools that justify creating an Innovation Area in 2026.',
+                    expectedResultsTitle: 'Expected Results', result1: 'A strategic proposal for an Innovation Area.', result2: 'A data architecture with automated flows in progress.', result3: 'A functional prototype of the Comprehensive Student Profile.', result4: 'A clear roadmap for Innovation (2026-2027).',
+                    planTitle: 'Work Plan: 5 Strategic Phases', planSubtitle: 'A condensed timeline to deliver prototypes, stabilize flows and build the case for an Innovation Area.',
+                    requirementsTitle: 'Requirements for Success', req1: 'Executive Sponsorship: Active support from Directors and Coordinators.', req2: 'Platform Access: Schooltrack license and Workspace access.', req3: 'Focal Points: Key contacts in critical areas.', req4: 'Agile Governance: Bi-weekly follow-ups.', req5: 'Privacy & Security: Responsible and confidential handling of data.',
+                    nextStepsDescription: 'Validate this plan with the Academic Sub-Directorate, sign the agreement and start Phase 1 focused on delivering the strategic proposal in October.',
+                    footerText: '© 2025 Principia SpA. Transforming education through data.', version: 'Collaboration Proposal: Principia & Villa María Academy — August 2025',
+                    modalTitlePrefix: 'Example:', themeLabelLight: 'Light', themeLabelDark: 'Dark', langLabel: 'Switch to English'
+                },
+                es: {
+                    principia: 'Principia', clientName: 'Villa María Academy', heroTitle: 'Modernizar la Gestión de Datos para el Liderazgo Académico',
+                    heroSubtitle: 'Una alianza para transformar los datos en un pilar del acompañamiento formativo, fortalecer la convivencia escolar y preservar el conocimiento pedagógico.',
+                    journeyTitle: 'Nuestro Plan de Implementación', act1Title: 'Fase I', act1Subtitle: 'Diagnóstico y Alineación', act2Title: 'Fase II', act2Subtitle: 'Soluciones y Valor Táctico',
+                    act3Title: 'Fase III', act3Subtitle: 'Formalizar y Crecer', objectivesTitle: 'Objetivos Específicos', purposeDescription: 'Este documento detalla un plan inicial de colaboración de 5 meses para sentar bases operativas y tecnológicas y co-diseñar herramientas que permitan crear un Área de Innovación en 2026.',
+                    expectedResultsTitle: 'Resultados Esperados', result1: 'Una propuesta estratégica para un Área de Innovación.', result2: 'Una arquitectura de datos con flujos automatizados en proceso.', result3: 'Un prototipo funcional del Perfil Integral de la Alumna.', result4: 'Una hoja de ruta clara para la Innovación (2026-2027).',
+                    planTitle: 'Plan de Trabajo: 5 Fases Estratégicas', planSubtitle: 'Un cronograma condensado para entregar prototipos, estabilizar flujos y construir el caso para un Área de Innovación.',
+                    requirementsTitle: 'Requisitos para el Éxito', req1: 'Liderazgo Comprometido: Apoyo activo de Directoras y Coordinadores.', req2: 'Acceso a Plataformas: Licencia de Schooltrack y acceso al Workspace.', req3: 'Contrapartes: Contactos clave en áreas críticas.', req4: 'Gobernanza Ágil: Seguimientos quincenales.', req5: 'Privacidad y Seguridad: Manejo responsable y confidencial de datos.',
+                    nextStepsDescription: 'Validar este plan con la Subdirección Académica, firmar el acuerdo e iniciar la Fase 1 enfocada en entregar la propuesta estratégica en octubre.',
+                    footerText: '© 2025 Principia SpA. Transformando la educación a través de los datos.', version: 'Propuesta de Colaboración: Principia & Villa María Academy — Agosto 2025',
+                    modalTitlePrefix: 'Ejemplo:', themeLabelLight: 'Modo Claro', themeLabelDark: 'Modo Oscuro', langLabel: 'Cambiar a Inglés'
+                }
+            };
+
+            // default language: English
+            let currentLanguage = 'en';
+
+            const langToggles = [document.getElementById('langToggle'), document.getElementById('langToggleMobile')];
+            const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+            const themeToggleMobile = document.getElementById('themeToggleMobile');
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function applyTheme(theme){
+                document.documentElement.className = theme === 'dark' ? 'dark scroll-smooth' : 'scroll-smooth';
+                localStorage.setItem('theme', theme);
+                if(themeToggleDesktop) themeToggleDesktop.checked = theme === 'dark';
+                const sun = document.getElementById('sun-icon-mobile');
+                const moon = document.getElementById('moon-icon-mobile');
+                if(sun) sun.classList.toggle('hidden', theme === 'dark');
+                if(moon) moon.classList.toggle('hidden', theme === 'light');
+            }
+
+            if(themeToggleDesktop) themeToggleDesktop.addEventListener('change', e => applyTheme(e.target.checked ? 'dark' : 'light'));
+            if(themeToggleMobile) themeToggleMobile.addEventListener('click', () => { const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'; applyTheme(currentTheme === 'light' ? 'dark' : 'light'); });
+            if(hamburgerButton) hamburgerButton.addEventListener('click', () => { if(mobileMenu){ mobileMenu.classList.toggle('hidden'); hamburgerButton.setAttribute('aria-expanded', !mobileMenu.classList.contains('hidden')); }});
+
+            function setLanguage(lang){
+                currentLanguage = lang;
+                const langData = translations[lang] || translations['en'];
+                document.documentElement.lang = lang;
+                document.querySelectorAll('[data-key]').forEach(el => { const key = el.getAttribute('data-key'); if(key && langData[key]) el.innerHTML = langData[key]; });
+                langToggles.forEach(toggle => { if(!toggle) return; if(toggle.id === 'langToggle') toggle.textContent = lang === 'en' ? 'ESP' : 'ENG'; else { const span = toggle.querySelector('span'); if(span) span.textContent = lang === 'en' ? translations['en'].langLabel : translations['es'].langLabel; }});
+            }
+
+            langToggles.forEach(toggle => { if(toggle) toggle.addEventListener('click', () => setLanguage(currentLanguage === 'es' ? 'en' : 'es')); });
+
+            // Modal wiring
+            const blueprintModal = document.getElementById('blueprint-modal');
+            const modalClose = document.getElementById('modal-close');
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+            document.querySelectorAll('[data-blueprint]').forEach(btn => btn.addEventListener('click', e => { const id = e.currentTarget.getAttribute('data-blueprint'); modalTitle.textContent = translations[currentLanguage].modalTitlePrefix + ' ' + (btn.getAttribute('data-title') || 'Example'); modalBody.innerHTML = '<p>Visual example will appear here.</p>'; if(blueprintModal) blueprintModal.classList.add('visible'); }));
+            if(modalClose) modalClose.addEventListener('click', () => blueprintModal && blueprintModal.classList.remove('visible'));
+            if(blueprintModal) blueprintModal.addEventListener('click', e => { if(e.target === blueprintModal) blueprintModal.classList.remove('visible'); });
+
+            // Init
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            applyTheme(savedTheme);
+            setLanguage(currentLanguage);
+        });
+    </script>
+</body>
+</html>
+                <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                    <div class="text-sm text-[var(--pri-ink-2)]" data-key="footerText">© 2025 Principia SpA. Transforming education through data.</div>
+                    <div class="flex items-center gap-4">
+                        <button id="open-doc" class="btn btn-secondary">Open Document</button>
+                        <div class="text-sm text-[var(--pri-ink-2)]">Version: <span data-key="version">Collaboration Proposal — August 2025</span></div>
+                    </div>
+                </div>
+            </footer>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function(){
+                    // Language translations (minimal, using content from existing file)
+                    const translations = {
+                        en: {
+                            principia: 'Principia',
+                            clientName: 'Villa María Academy',
+                            heroTitle: 'Modernizing Data Management for Academic Leadership',
+                            heroSubtitle: 'An alliance to transform data into a pillar of pedagogical accompaniment, strengthen school climate and preserve pedagogical knowledge — laying the foundations for an Innovation Area.',
+                            journeyTitle: 'Our Implementation Journey',
+                            act1Title: 'Phase I', act1Subtitle: 'Listen and Organize',
+                            act2Title: 'Phase II', act2Subtitle: 'Solve & Demonstrate',
+                            act3Title: 'Phase III', act3Subtitle: 'Formalize & Grow',
+                            objectivesTitle: 'Specific Objectives',
+                            purposeDescription: 'This document details a 5-month initial collaboration to set operational and technological foundations and co-design tools that justify creating an Innovation Area in 2026.',
+                            expectedResultsTitle: 'Expected Results',
+                            result1: 'A strategic proposal for an Innovation Area.',
+                            result2: 'A data architecture with automated flows in progress.',
+                            result3: 'A functional prototype of the Comprehensive Student Profile.',
+                            result4: 'A clear roadmap for Innovation (2026-2027).',
+                            planTitle: 'Work Plan: 5 Strategic Phases',
+                            planSubtitle: 'A condensed timeline to deliver prototypes, stabilize flows and build the case for an Innovation Area.',
+                            requirementsTitle: 'Requirements for Success',
+                            req1: 'Executive Sponsorship: Active support from Directors and Coordinators.',
+                            req2: 'Platform Access: Schooltrack license and Workspace access.',
+                            req3: 'Focal Points: Key contacts in critical areas.',
+                            req4: 'Agile Governance: Bi-weekly follow-ups.',
+                            req5: 'Privacy & Security: Responsible and confidential handling of data.',
+                            nextStepsDescription: 'Validate this plan with the Academic Sub-Directorate, sign the agreement and start Phase 1 focused on delivering the strategic proposal in October.',
+                            footerText: '© 2025 Principia SpA. Transforming education through data.',
+                            version: 'Collaboration Proposal: Principia & Villa María Academy — August 2025',
+                            viewBlueprint: 'View Visual Example',
+                            modalTitlePrefix: 'Example:',
+                            themeLabelLight: 'Light', themeLabelDark: 'Dark',
+                            langLabel: 'Switch to English',
+                            toStartButton: 'Back to Start', nextButton: 'Next', prevButton: 'Previous', stepLabel: 'Step'
+                        },
+                        es: {
+                            principia: 'Principia',
+                            clientName: 'Villa María Academy',
+                            heroTitle: 'Modernizar la Gestión de Datos para el Liderazgo Académico',
+                            heroSubtitle: 'Una alianza para transformar los datos en un pilar del acompañamiento formativo, fortalecer la convivencia escolar y preservar el conocimiento pedagógico.',
+                            journeyTitle: 'Nuestro Plan de Implementación',
+                            act1Title: 'Fase I', act1Subtitle: 'Diagnóstico y Alineación',
+                            act2Title: 'Fase II', act2Subtitle: 'Soluciones y Valor Táctico',
+                            act3Title: 'Fase III', act3Subtitle: 'Formalizar y Crecer',
+                            objectivesTitle: 'Objetivos Específicos',
+                            purposeDescription: 'Este documento detalla un plan inicial de colaboración de 5 meses para sentar bases operativas y tecnológicas y co-diseñar herramientas que permitan crear un Área de Innovación en 2026.',
+                            expectedResultsTitle: 'Resultados Esperados',
+                            result1: 'Una propuesta estratégica para un Área de Innovación.',
+                            result2: 'Una arquitectura de datos con flujos automatizados en proceso.',
+                            result3: 'Un prototipo funcional del Perfil Integral de la Alumna.',
+                            result4: 'Una hoja de ruta clara para la Innovación (2026-2027).',
+                            planTitle: 'Plan de Trabajo: 5 Fases Estratégicas',
+                            planSubtitle: 'Un cronograma condensado para entregar prototipos, estabilizar flujos y construir el caso para un Área de Innovación.',
+                            requirementsTitle: 'Requisitos para el Éxito',
+                            req1: 'Liderazgo Comprometido: Apoyo activo de Directoras y Coordinadores.',
+                            req2: 'Acceso a Plataformas: Licencia de Schooltrack y acceso al Workspace.',
+                            req3: 'Contrapartes: Contactos clave en áreas críticas.',
+                            req4: 'Gobernanza Ágil: Seguimientos quincenales.',
+                            req5: 'Privacidad y Seguridad: Manejo responsable y confidencial de datos.',
+                            nextStepsDescription: 'Validar este plan con la Subdirección Académica, firmar el acuerdo e iniciar la Fase 1 enfocada en entregar la propuesta estratégica en octubre.',
+                            footerText: '© 2025 Principia SpA. Transformando la educación a través de los datos.',
+                            version: 'Propuesta de Colaboración: Principia & Villa María Academy — Agosto 2025',
+                            viewBlueprint: 'Ver Ejemplo Visual',
+                            modalTitlePrefix: 'Ejemplo:',
+                            themeLabelLight: 'Modo Claro', themeLabelDark: 'Modo Oscuro',
+                            langLabel: 'Cambiar a Inglés',
+                            toStartButton: 'Volver al Inicio', nextButton: 'Siguiente', prevButton: 'Anterior', stepLabel: 'Paso'
+                        }
+                    };
+
+                    // default language: English
+                    let currentLanguage = 'en';
+
+                    const langToggles = [document.getElementById('langToggle'), document.getElementById('langToggleMobile')];
+                    const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+                    const themeToggleMobile = document.getElementById('themeToggleMobile');
+                    const hamburgerButton = document.getElementById('hamburger-button');
+                    const mobileMenu = document.getElementById('mobile-menu');
+
+                    function applyTheme(theme) {
+                        document.documentElement.className = theme === 'dark' ? 'dark scroll-smooth' : 'scroll-smooth';
+                        localStorage.setItem('theme', theme);
+                        if(themeToggleDesktop) themeToggleDesktop.checked = theme === 'dark';
+                        if(document.getElementById('sun-icon-mobile')) document.getElementById('sun-icon-mobile').classList.toggle('hidden', theme === 'dark');
+                        if(document.getElementById('moon-icon-mobile')) document.getElementById('moon-icon-mobile').classList.toggle('hidden', theme === 'light');
+                    }
+
+                    if(themeToggleDesktop) themeToggleDesktop.addEventListener('change', (e)=> applyTheme(e.target.checked ? 'dark' : 'light'));
+                    if(themeToggleMobile) themeToggleMobile.addEventListener('click', ()=>{
+                        const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+                        applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+                    });
+
+                    if(hamburgerButton) hamburgerButton.addEventListener('click', ()=>{ if(mobileMenu) { mobileMenu.classList.toggle('hidden'); hamburgerButton.setAttribute('aria-expanded', !mobileMenu.classList.contains('hidden')); } });
+
+                    function setLanguage(lang){
+                        currentLanguage = lang;
+                        const langData = translations[lang];
+                        document.documentElement.lang = lang;
+                        document.querySelectorAll('[data-key]').forEach(element=>{
+                            const key = element.getAttribute('data-key');
+                            if(langData[key]) element.innerHTML = langData[key];
+                        });
+                        // update toggles
+                        langToggles.forEach(toggle=>{
+                            if(!toggle) return;
+                            if(toggle.id === 'langToggle') toggle.textContent = lang === 'en' ? 'ESP' : 'ENG';
+                            else{
+                                const span = toggle.querySelector('span');
+                                if(span) span.textContent = lang === 'en' ? translations['en'].langLabel : translations['es'].langLabel;
+                            }
+                        });
+                    }
+
+                    langToggles.forEach(toggle => { if(toggle) toggle.addEventListener('click', ()=> setLanguage(currentLanguage === 'es' ? 'en' : 'es')) });
+
+                    // Modal behavior
+                    const blueprintModal = document.getElementById('blueprint-modal');
+                    const modalClose = document.getElementById('modal-close');
+                    const modalTitle = document.getElementById('modal-title');
+                    const modalBody = document.getElementById('modal-body');
+                    document.querySelectorAll('[data-blueprint]').forEach(btn=> btn.addEventListener('click', (e)=>{
+                        const id = e.currentTarget.getAttribute('data-blueprint');
+                        modalTitle.textContent = translations[currentLanguage].modalTitlePrefix + ' ' + (btn.getAttribute('data-title') || 'Example');
+                        modalBody.innerHTML = '<p>Visual example will appear here.</p>';
+                        blueprintModal.classList.add('visible');
+                    }));
+                    if(modalClose) modalClose.addEventListener('click', ()=> blueprintModal.classList.remove('visible'));
+                    if(blueprintModal) blueprintModal.addEventListener('click', (e)=>{ if(e.target === blueprintModal) blueprintModal.classList.remove('visible'); });
+
+                    // Initial load: theme + language
+                    const savedTheme = localStorage.getItem('theme') || 'light';
+                    applyTheme(savedTheme);
+                    setLanguage(currentLanguage);
+                });
+            </script>
+        </body>
+        </html>
+                         "Acceso a Plataformas: Licencia de Schooltrack con permisos para crear y descargar reportes.",
+                         "Acceso Remoto: Configuración de Chrome Remote Desktop para permitir el trabajo externo."
+                    ],
+                    nextStepsTitle: "Próximos Pasos",
+                    nextStepsDescription: "El paso inmediato es validar este plan de trabajo con la Subdirección Académica para luego proceder a la firma del acuerdo y dar inicio a la Fase 1, con foco en la entrega de la propuesta estratégica en octubre.",
+                    footerText: "© 2025 Principia SpA. Transformando la educación a través de los datos.",
+                    phases: [
+                        { title: "Propuesta Estratégica y Bases Operativas", duration: "Mes 1" },
+                        { title: "Co-diseño del \"Perfil Integral de la Alumna\"", duration: "Mes 2" },
+                        { title: "Construcción y Diagnóstico de Evaluaciones", duration: "Mes 3" },
+                        { title: "Refinamiento y Diagnóstico para IA", duration: "Mes 4" },
+                        { title: "Consolidación y Hoja de Ruta", duration: "Mes 5" }
+                    ],
+                    modalContent: [
+                        {
+                            title: "Fase 1: Propuesta Estratégica y Bases Operativas",
+                            content: `<div><h4 class="font-bold text-lg mb-2">Propuesta para la Creación del Área de Innovación y Desarrollo</h4><p class="mb-1"><strong>Descripción:</strong> En talleres intensivos con la Subdirección, co-diseñaremos el documento estratégico que presentaremos al Colegio. Este definirá los objetivos, estructura, roles y portafolio de proyectos para la formalización de una potencial área de innovación.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Objetivo Clave (Prioritario):</strong> Entregar la propuesta formal para su presentación y validación interna durante la tercera semana de octubre, con el fin de dialogar sobre costos y viabilidad para el presupuesto 2026.</p></div><div><h4 class="font-bold text-lg mb-2 mt-4">Establecimiento de la Infraestructura Técnica</h4><p class="mb-1"><strong>Descripción:</strong> En paralelo, trabajaremos en asegurar los accesos y recursos técnicos necesarios. Se iniciará la estabilización y automatización de los flujos de datos que alimentan las herramientas existentes.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Objetivo Clave:</strong> Iniciar la estabilización de la infraestructura de datos y definir, en conjunto con el Colegio, la hoja de ruta para lograr su automatización a lo largo del proyecto.</p></div>`
+                        },
+                        {
+                            title: "Fase 2: Co-diseño del \"Perfil Integral de la Alumna\"",
+                            content: `<div><h4 class="font-bold text-lg mb-2">Unificando la Visión de la Estudiante</h4><p class="mb-1"><strong>Descripción:</strong> El "Perfil Integral de la Alumna" es una plataforma de visualización que unifica en un solo lugar toda la información relevante de una estudiante. En lugar de cruzar datos manualmente, este perfil ofrecerá una visión completa de su trayectoria académica, formativa y familiar para tomar decisiones de apoyo más ágiles.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Objetivo Clave:</strong> Entregar un prototipo navegable y validado del perfil, la herramienta prioritaria para la Subdirección.</p></div>`
+                        },
+                        {
+                            title: "Fase 3: Construcción v1 y Diagnóstico de Sistemas de Evaluación",
+                            content: `<div><h4 class="font-bold text-lg mb-2">Del Análisis Puntual al Seguimiento Continuo</h4><p class="mb-1"><strong>Descripción:</strong> Desarrollaremos la primera versión funcional del "Perfil Integral". En paralelo, realizaremos un diagnóstico para evolucionar a un "Sistema de Seguimiento de Evaluaciones". Esto permite visualizar el progreso y las tendencias de aprendizaje a lo largo del tiempo para identificar patrones y anticipar dificultades.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Objetivo Clave:</strong> Entregar el perfil funcional para su uso inicial y un manual de buenas prácticas para estandarizar la recolección de datos de evaluación.</p></div>`
+                        },
+                        {
+                            title: "Fase 4: Refinamiento del Perfil y Diagnóstico para Asistencia con IA",
+                            content: `<div><h4 class="font-bold text-lg mb-2">Potenciando al Equipo Docente con IA</h4><p class="mb-1"><strong>Descripción:</strong> Investigaremos cómo la Inteligencia Artificial puede servir como un asistente para el equipo docente. Un sistema de revisión asistida por IA puede analizar grandes volúmenes de documentos (planificaciones, pruebas) para verificar consistencia, liberando tiempo valioso de los profesores.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Objetivo Clave:</strong> Entregar una versión mejorada del perfil y un plan de acción detallado para la futura implementación de herramientas de asistencia con IA.</p></div>`
+                        },
+                        {
+                            title: "Fase 5: Consolidación y Hoja de Ruta Final",
+                            content: `<div><h4 class="font-bold text-lg mb-2">Diseñando el Futuro</h4><p class="mb-1"><strong>Descripción:</strong> Consolidaremos todos los aprendizajes y entregables en un documento final que servirá como la Hoja de Ruta de Innovación 2026-2027. Al final de esta fase, se entregará la base operativa estabilizada y los prototipos funcionales listos para su siguiente ciclo de evolución.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Objetivo Clave:</strong> Entregar a la Dirección una propuesta validada y detallada para escalar la colaboración y ejecutar el plan de innovación.</p></div>`
+                        }
+                    ]
+                },
+                en: {
+                    clientName: "Villa María Academy",
+                    mainTitle: "Modernizing Data Management for Academic Leadership",
+                    mainSubtitle: "A Principia Project for Villa Maria Academy School",
+                    projectPeriod: "Period: October 2025 - February 2026",
+                    purposeTitle: "Our Proposal: Objectives and Outcomes",
+                    purposeDescription: "This document details the work plan for an initial 5-month strategic collaboration phase. The objective is twofold: first, to lay the operational and technological foundations for modern data management; and second, to co-design and validate the key tools that will justify and shape the proposal for creating an innovation area at the School starting in 2026.",
+                    expectedResultsTitle: "Expected Outcomes",
+                    result1: "A Strategic Proposal for the Creation of an Innovation Area.",
+                    result2: "A Data Architecture in the Process of Automation.",
+                    result3: "A Functional Prototype of the 'Comprehensive Student Profile'.",
+                    result4: "A Clear Roadmap for Innovation (2026-2027).",
+                    planTitle: "Work Plan: 5 Strategic Phases",
+                    planSubtitle: "Click on each phase to see the details of objectives and deliverables.",
+                    noteTitle: "A Note on the Nature of Deliverables",
+                    noteDescription: "It is essential to understand that the tools to be developed are evolutionary functional prototypes, not final, closed products. Their purpose is to validate hypotheses and deliver early value. The maturity of solutions like the 'Student Profile' will depend on a collaborative process of discovery and refinement that will extend beyond this initial phase, laying the groundwork for more in-depth work during 2026.",
+                    successTitle: "Foundations for a Successful Project",
+                    successSubtitle: "Collaboration and the right resources are essential to meet deadlines and objectives.",
+                    collaborationTitle: "Collaboration and Commitment",
+                    collaborationList: [
+                        "Committed Leadership: Executive willingness to adopt new tools and optimize processes.",
+                        "Designated Counterpart: A single point of contact (Champion) to facilitate agile decision-making.",
+                        "Involved Team: Availability of the team to actively participate in workshops and validations.",
+                        "Constructive Feedback: Feedback delivered within agreed-upon deadlines to maintain work pace."
+                    ],
+                    resourcesTitle: "Critical Resources and Access",
+                    resourcesList: [
+                        "Official User Account: Creation of an email account (@vma.cl) for Principia, with the necessary permissions.",
+                        "Dedicated Equipment: A physical computer at the school with access to the internal network.",
+                        "Platform Access: Schooltrack license with permissions to create and download reports.",
+                        "Remote Access: Configuration of Chrome Remote Desktop to allow for external work."
+                    ],
+                    nextStepsTitle: "Next Steps",
+                    nextStepsDescription: "The immediate next step is to validate this work plan with the Academic Sub-Directorate, then proceed to sign the agreement and kick off Phase 1, focusing on delivering the strategic proposal in October.",
+                    footerText: "© 2025 Principia SpA. Transforming education through data.",
+                    phases: [
+                        { title: "Strategic Proposal & Operational Foundations", duration: "Month 1" },
+                        { title: "Co-design of the \"Comprehensive Student Profile\"", duration: "Month 2" },
+                        { title: "Build & Assessment Diagnostics", duration: "Month 3" },
+                        { title: "Refinement & AI Diagnostics", duration: "Month 4" },
+                        { title: "Consolidation & Roadmap", duration: "Month 5" }
+                    ],
+                    modalContent: [
+                        {
+                            title: "Phase 1: Strategic Proposal & Operational Foundations",
+                            content: `<div><h4 class="font-bold text-lg mb-2">Proposal for the Creation of the Innovation and Development Area</h4><p class="mb-1"><strong>Description:</strong> In intensive workshops with the Sub-Directorate, we will co-design the strategic document to be presented to the School. It will define the objectives, structure, roles, and project portfolio for the formalization of a potential innovation area.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Key Objective (Priority):</strong> Deliver the formal proposal for internal presentation and validation during the third week of October to discuss costs and feasibility for the 2026 budget.</p></div><div><h4 class="font-bold text-lg mb-2 mt-4">Establishment of Technical Infrastructure</h4><p class="mb-1"><strong>Description:</strong> In parallel, we will work on securing the necessary technical access and resources. We will begin stabilizing and automating the data flows that feed existing tools.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Key Objective:</strong> Begin stabilizing the existing data infrastructure and define, together with the School, the roadmap to achieve its automation throughout the project.</p></div>`
+                        },
+                        {
+                            title: "Phase 2: Co-design of the \"Comprehensive Student Profile\"",
+                            content: `<div><h4 class="font-bold text-lg mb-2">Unifying the Student Vision</h4><p class="mb-1"><strong>Description:</strong> The "Comprehensive Student Profile" is a visualization platform that unifies all relevant student information in one place. Instead of manually cross-referencing data, this profile will offer a complete view of their academic, formative, and family trajectory to make more agile support decisions.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Key Objective:</strong> Deliver a navigable and validated prototype of the profile, a priority tool for the Sub-Directorate.</p></div>`
+                        },
+                        {
+                            title: "Phase 3: V1 Build & Assessment Systems Diagnostics",
+                            content: `<div><h4 class="font-bold text-lg mb-2">From Point-in-Time Analysis to Continuous Tracking</h4><p class="mb-1"><strong>Description:</strong> We will develop the first functional version of the "Comprehensive Profile." In parallel, we will conduct a diagnostic to evolve into an "Assessment Tracking System." This allows for visualizing learning progress and trends over time to identify patterns and anticipate difficulties.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Key Objective:</strong> Deliver the functional profile for initial use and a best practices guide for standardizing assessment data collection.</p></div>`
+                        },
+                        {
+                            title: "Phase 4: Profile Refinement & AI Assistance Diagnostics",
+                            content: `<div><h4 class="font-bold text-lg mb-2">Empowering the Teaching Team with AI</h4><p class="mb-1"><strong>Description:</strong> We will investigate how Artificial Intelligence can serve as an assistant for the teaching staff. An AI-assisted review system can analyze large volumes of documents (plans, tests) to check for consistency, freeing up valuable teacher time.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Key Objective:</strong> Deliver an improved version of the profile and a detailed action plan for the future implementation of AI assistance tools.</p></div>`
+                        },
+                        {
+                            title: "Phase 5: Consolidation and Final Roadmap",
+                            content: `<div><h4 class="font-bold text-lg mb-2">Designing the Future</h4><p class="mb-1"><strong>Description:</strong> We will consolidate all learnings and deliverables into a final document that will serve as the 2026-2027 Innovation Roadmap. At the end of this phase, the stabilized operational base and functional prototypes will be ready for their next evolution cycle.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Key Objective:</strong> Deliver a validated and detailed proposal to the Directorate to scale the collaboration and execute the innovation plan.</p></div>`
+                        }
+                    ]
+                }
+            };
+
+            const setLanguage = (lang) => {
+                currentLanguage = lang;
+                const langData = translations[currentLanguage];
+                document.documentElement.lang = currentLanguage;
+                document.getElementById('lang-toggle').textContent = currentLanguage.toUpperCase();
+                
+                document.querySelectorAll('[data-key]').forEach(el => {
+                    const key = el.getAttribute('data-key');
+                    if (langData[key]) {
+                        if (Array.isArray(langData[key])) {
+                            el.innerHTML = langData[key].map(item => `<li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><span>${item}</span></li>`).join('');
+                        } else {
+                            el.innerHTML = langData[key];
+                        }
+                    }
+                });
+
+                const timelineContainer = document.getElementById('timeline-container');
+                timelineContainer.innerHTML = langData.phases.map((phase, index) => `
+                    <div class="timeline-step text-center cursor-pointer relative z-10" data-phase="${index}">
+                        <div class="mx-auto w-16 h-16 rounded-full bg-[var(--pri-blue)] text-white flex items-center justify-center text-2xl font-bold border-4 border-[var(--bg)] shadow-md">${index + 1}</div>
+                        <p class="mt-4 font-bold raleway">${phase.title}</p>
+                        <p class="text-sm text-gray-500">${phase.duration}</p>
+                    </div>
+                `).join('');
+                
+                addTimelineListeners();
+            };
+            
+            // Theme Switcher
+            const themeToggle = document.getElementById('theme-toggle');
+            const applyTheme = (theme) => {
+                document.documentElement.classList.toggle('dark', theme === 'dark');
+                localStorage.setItem('theme', theme);
+                themeToggle.checked = theme === 'dark';
+            };
+            themeToggle.addEventListener('change', (e) => applyTheme(e.target.checked ? 'dark' : 'light'));
+            
+            // Language Switcher
+            document.getElementById('lang-toggle').addEventListener('click', () => {
+                setLanguage(currentLanguage === 'es' ? 'en' : 'es');
+            });
+
+            // Modal Logic
+            const modal = document.getElementById('phase-modal');
+            const closeModalBtn = document.getElementById('close-modal');
+            const openModal = (phaseIndex) => {
+                const lang = translations[currentLanguage];
+                const phaseData = lang.modalContent[phaseIndex];
+                document.getElementById('modal-title').textContent = phaseData.title;
+                document.getElementById('modal-duration').textContent = lang.phases[phaseIndex].duration;
+                document.getElementById('modal-content-body').innerHTML = phaseData.content;
+                modal.classList.add('visible');
+            };
+            const closeModal = () => modal.classList.remove('visible');
+            
+            closeModalBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+            });
+            
+            function addTimelineListeners() {
+                document.querySelectorAll('.timeline-step').forEach(step => {
+                    step.addEventListener('click', () => {
+                        openModal(step.dataset.phase);
+                    });
+                });
+            }
+
+            // Initial Load
+            setLanguage('es');
+            applyTheme(localStorage.getItem('theme') || 'light');
+        });
+    </script>
+</body>
+</html>
+
