@@ -1,0 +1,79 @@
+﻿PROPUESTA DE SERVICIO
+Modernización de la Gestión de Datos para el Liderazgo Académico: Fase de Colaboración Inicial
+Un Proyecto de Principia para Colegio Villa Maria Academy
+Periodo: Octubre 2025 - Febrero 2026
+
+
+1. Nuestra Propuesta: Objetivos y Resultados
+Propósito: Este documento detalla el plan de trabajo para una fase inicial de colaboración estratégica de 5 meses. El objetivo es doble: primero, sentar las bases operativas y tecnológicas para una gestión de datos moderna; y segundo, co-diseñar y validar las herramientas clave que justifiquen y conformen la propuesta de creación de un área de innovación en el Colegio a partir de 2026.
+Resultados Esperados: Al finalizar este proyecto, Colegio Villa Maria Academy contará con:
+* Una Propuesta Estratégica para la Creación de un Área de Innovación: Entregada durante la tercera semana de octubre, este documento definirá la visión, estructura, hoja de ruta y costos asociados para que el Colegio pueda evaluar su viabilidad e inclusión en el presupuesto de 2026.
+* Una Arquitectura de Datos en Proceso de Automatización: La infraestructura que actualmente soporta el dashboard de Dirección estará estabilizada y con una hoja de ruta clara para su autonomía.
+* Un Prototipo Funcional del "Perfil Integral de la Alumna": Una primera versión de la plataforma de visualización de la trayectoria de las alumnas, que servirá como pilar para el desarrollo futuro.
+* Una Hoja de Ruta Clara para la Innovación (2026-2027): Un plan de acción concreto que incluirá las directrices para implementar sistemas de seguimiento de evaluaciones y el uso de IA para la gestión pedagógica.
+Compromisos de Servicio:
+* Colaboración Eficiente: Coordinación estrecha con su equipo para un avance fluido.
+* Resultados Tangibles: Enfoque en productos funcionales y medibles en ciclos cortos.
+* Comunicación Clara y Continua: Reporte constante sobre avances, hitos y próximos pasos.
+
+
+2. Metodología y Modalidad de Trabajo
+Trabajaremos con un enfoque ágil y de co-construcción, basado en una dedicación de 10 horas semanales. Nuestra modalidad combina:
+* Reuniones Semanales de Avance: Sesiones de trabajo con la Subdirectora Académica para revisar progresos, tomar decisiones y planificar los siguientes pasos.
+* Sesiones de Co-diseño: Talleres presenciales con el equipo directivo y académico para definir prioridades, validar prototipos y diseñar soluciones en conjunto.
+* Desarrollo Iterativo: Ciclos cortos de desarrollo donde construiremos, probaremos y refinaremos las herramientas de datos.
+* Comunicación Continua: Un canal de comunicación directo (vía Slack o similar) para asegurar el alineamiento constante.
+Una Nota sobre la Naturaleza de los Entregables: Es fundamental comprender que las herramientas a desarrollar son prototipos funcionales evolutivos, no productos finales cerrados. Su objetivo es validar hipótesis y entregar valor temprano. La madurez de soluciones como el "Perfil de la Alumna", que se nutre de múltiples fuentes, dependerá de un proceso colaborativo de descubrimiento y refinamiento que se extenderá más allá de esta fase inicial, sentando las bases para un trabajo de mayor profundidad durante 2026.
+3. Plan de Trabajo: Fases y Enfoque Estratégico
+El proyecto se estructura para entregar valor estratégico inmediato mientras se construyen las bases técnicas.
+Fase
+	Duración
+	Foco Principal
+	Fase 1
+	Mes 1
+	Propuesta Estratégica del Área de Innovación y Bases Operativas.
+	Fase 2
+	Mes 2
+	Co-diseño y Prototipado del "Perfil Integral de la Alumna".
+	Fase 3
+	Mes 3
+	Construcción v1 del Perfil y Diagnóstico de Sistemas de Evaluación.
+	Fase 4
+	Mes 4
+	Refinamiento del Perfil y Diagnóstico para Asistencia con IA.
+	Fase 5
+	Mes 5
+	Consolidación y Entrega de la Hoja de Ruta de Innovación 2026.
+	4. Detalle de Fases y Entregables por Objetivo
+Fase 1: Propuesta Estratégica y Bases Operativas (Mes 1)
+* Propuesta para la Creación del Área de Innovación y Desarrollo:
+   * Descripción: En talleres intensivos con la Subdirección, co-diseñaremos el documento estratégico que presentaremos al Colegio. Este definirá los objetivos, estructura, roles y portafolio de proyectos para la formalización de una potencial área de innovación.
+   * Objetivo Clave (Prioritario): Entregar la propuesta formal para su presentación y validación interna durante la tercera semana de octubre, con el fin de dialogar sobre costos y viabilidad para el presupuesto 2026.
+* Establecimiento de la Infraestructura Técnica:
+   * Descripción: En paralelo, trabajaremos en asegurar los accesos y recursos técnicos necesarios. Se iniciará la estabilización y automatización de los flujos de datos que alimentan las herramientas existentes (ej. Dashboard de Dirección).
+   * Objetivo Clave: Iniciar la estabilización de la infraestructura de datos existente y definir, en conjunto con el Colegio, la hoja de ruta para lograr su automatización a lo largo del proyecto. El avance de este objetivo es directamente dependiente de la provisión de los recursos y accesos descritos en la sección "Bases para un Proyecto Exitoso".
+Fase 2: Co-diseño del "Perfil Integral de la Alumna" (Mes 2)
+* Descripción: El "Perfil Integral de la Alumna" es una plataforma de visualización que unifica en un solo lugar toda la información relevante de una estudiante, que hoy se encuentra dispersa. En lugar de cruzar datos de Schooltrack, informes de profesores y registros internos manualmente, este perfil ofrecerá una visión completa y contextualizada de su trayectoria académica, formativa y familiar. El objetivo es dotar al equipo directivo y docente de una herramienta que permita comprender rápidamente la situación de cada alumna para tomar decisiones de apoyo más ágiles y precisas.
+* Objetivo Clave: Entregar un prototipo navegable y validado del perfil, la herramienta prioritaria para la Subdirección.
+Fase 3: Construcción v1 del Perfil y Diagnóstico de Sistemas de Evaluación (Mes 3)
+* Descripción: Desarrollaremos la primera versión funcional del "Perfil Integral de la Alumna". En paralelo, realizaremos un diagnóstico para evolucionar del análisis de evaluaciones puntuales a un "Sistema de Seguimiento de Evaluaciones". La diferencia es clave: mientras que hoy se analiza el resultado de una prueba, un sistema de seguimiento nos permite visualizar el progreso y las tendencias de aprendizaje de una alumna o de un curso completo a lo largo del tiempo. Esto permite identificar patrones, anticipar dificultades y ajustar la estrategia pedagógica de manera proactiva.
+* Objetivo Clave: Entregar el perfil funcional para su uso inicial y un manual de buenas prácticas para estandarizar la recolección de datos de evaluación, paso indispensable para construir futuros sistemas de seguimiento.
+Fase 4: Refinamiento del Perfil y Diagnóstico para Asistencia con IA (Mes 4)
+* Descripción: Recogeremos feedback sobre el perfil para refinarlo. En paralelo, investigaremos cómo la Inteligencia Artificial (IA) puede servir como un asistente para el equipo docente. El foco no es reemplazar, sino potenciar. Un sistema de revisión asistida por IA puede analizar grandes volúmenes de documentos (planificaciones, pruebas, ensayos) para verificar consistencia, identificar áreas de mejora o detectar similitudes, liberando tiempo valioso de los profesores para que puedan dedicarlo a la interacción directa con las alumnas y a la planificación de clases de mayor impacto.
+* Objetivo Clave: Entregar una versión mejorada del perfil y un plan de acción detallado para la futura implementación de herramientas de asistencia con IA.
+Fase 5: Consolidación y Hoja de Ruta Final (Mes 5)
+* Descripción: Consolidaremos todos los aprendizajes y entregables en un documento final que servirá como la Hoja de Ruta de Innovación 2026-2027. Al final de esta fase, se entregará la base operativa estabilizada y los prototipos funcionales listos para su siguiente ciclo de evolución.
+* Objetivo Clave: Entregar a la Dirección una propuesta validada y detallada para escalar la colaboración y ejecutar el plan de innovación.
+5. Próximos Pasos
+El paso inmediato es validar este plan de trabajo con la Subdirección Académica para luego proceder a la firma del acuerdo y dar inicio a la Fase 1, con foco en la entrega de la propuesta estratégica en octubre.
+6. Bases para un Proyecto Exitoso
+Para que este proyecto genere un impacto real y sostenible, se requiere una base de colaboración sólida. Los siguientes puntos son fundamentales y deben estar resueltos antes del inicio de la Fase 1 para cumplir con los plazos.
+* Liderazgo Comprometido: Voluntad directiva para adoptar nuevas herramientas y optimizar procesos.
+* Contraparte Designada: Un responsable único (Champion) para facilitar la toma de decisiones ágil.
+* Equipo Involucrado: Disponibilidad del equipo para participar activamente en talleres y validaciones.
+* Feedback Constructivo: Retroalimentación entregada en los plazos acordados para mantener el ritmo de trabajo.
+* Acceso Oportuno a Recursos Críticos: Entrega de la información, datos y permisos técnicos necesarios para el desarrollo del proyecto, incluyendo:
+* Cuenta de Usuario Oficial: Creación de una cuenta de correo (@vma.cl) para Principia, con los permisos/servicios de las unidades organizativas de Subdirección Académica, Coordinación y Jefes de Departamento.
+* Equipo Dedicado: Un computador físico en el colegio con acceso a la red interna.
+* Acceso a Plataformas: Licencia de Schooltrack instalada en el equipo, con permisos para crear, modificar y descargar reportes y archivos de datos.
+* Acceso Remoto: Instalación y configuración de Chrome Remote Desktop en el equipo dedicado para permitir el trabajo externo de Principia de manera segura.

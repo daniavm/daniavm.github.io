@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Principia — Proposal for Villa María Academy</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Principia — Propuesta Estratégica para Colegio Villa María Academy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,59 +11,248 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         :root{
-            --pri-orange:#FFA630;
-            --pri-orange-600:#F17720;
-            --pri-blue:#00A7E1;
-            --pri-ink:#3D3D3D;
-            --pri-ink-2:#757575;
-            --pri-bg:#FFFFFF;
-            --surface:#F8F9FA;
-            --border:#E0E0E0;
+          /* --- Principia Design System Tokens --- */
+          --pri-orange:#FFA630;
+          --pri-orange-600:#F17720;
+          --pri-blue:#00A7E1;
+          --pri-blue-600:#008ac1;
+          --pri-ink:#3D3D3D;
+          --pri-ink-2:#757575;
+          --pri-bg:#FFFFFF;
+          --surface-100: #F8F9FA;
+          --surface-200: #FFFFFF;
+          --border-color: #E5E7EB;
+          --success:#2E7D32;
+          --error:#D32F2F;
         }
-        html.dark{ --pri-ink:#FFFFFF; --pri-ink-2:#BDBDBD; --pri-bg:#121212; --surface:#1E1E1E; --border:#424242; }
-        html,body{height:100%}
-        body{font-family:'Lato',sans-serif;background:var(--pri-bg);color:var(--pri-ink);transition:background-color .3s,color .3s;display:flex;flex-direction:column}
-        main{flex-grow:1}
-        h1,h2,h3,h4,h5,h6{font-family:'Fira Sans',sans-serif}
-        .font-raleway{font-family:'Raleway',sans-serif}
-        .h-deco:after{content:"";display:block;height:4px;width:100px;margin:12px auto 0;background:linear-gradient(90deg,var(--pri-orange),var(--pri-orange-600));border-radius:999px}
-        .content-container{background:linear-gradient(180deg,rgba(255,255,255,.6),rgba(255,255,255,.85));padding:2rem;border-radius:12px}
-        .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:8px;border:1px solid transparent;cursor:pointer}
-        .btn-primary{background:var(--pri-orange);color:#fff}.btn-secondary{background:transparent;border-color:var(--border);color:var(--pri-ink-2)}
-        .timeline{display:flex;gap:1rem}.timeline-step{flex:1;padding:1rem;border-radius:8px}.timeline-icon{width:48px;height:48px;border-radius:999px;border:2px solid var(--border);display:flex;align-items:center;justify-content:center}
-        .timeline-step.active .timeline-icon{border-color:var(--pri-orange);color:var(--pri-orange)}
-        .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;z-index:60}
-        .modal-overlay.visible{display:flex}
-        .modal-container{background:var(--pri-bg);padding:1.5rem;border-radius:10px;width:90%;max-width:900px;box-shadow:0 10px 30px rgba(0,0,0,.15)}
-        .blueprint-visual{width:100%;height:300px;object-fit:cover}
-        @media(min-width:768px){.timeline{gap:2rem}}
-        /* theme switch */
-        .theme-switch-wrapper{display:flex;align-items:center;gap:8px}.theme-switch{display:inline-block;height:24px;position:relative;width:44px}.theme-switch input{display:none}.slider{background:#ccc;position:absolute;inset:0;border-radius:34px;transition:.4s}.slider:before{content:"";position:absolute;left:4px;bottom:4px;height:16px;width:16px;background:#fff;border-radius:50%;transition:.4s}input:checked+.slider{background:var(--pri-orange)}input:checked+.slider:before{transform:translateX(20px)}
+
+        html.dark {
+          --pri-ink: #e4e4e7;
+          --pri-ink-2: #a1a1aa;
+          --pri-bg: #18181b;
+          --surface-100: #27272a;
+          --surface-200: #3f3f46;
+          --border-color: #52525b;
+          --success:#4ade80;
+          --error:#f87171;
+        }
+
+        html, body { height: 100%; }
+        body { font-family: 'Lato', sans-serif; background-color: var(--pri-bg); color: var(--pri-ink); transition: background-color 0.3s, color 0.3s; display: flex; flex-direction: column; overflow-x: hidden; }
+        main { flex-grow: 1; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Fira Sans', sans-serif; }
+        .font-raleway { font-family: 'Raleway', sans-serif; }
+        
+        h1.gradient-text, h2.section-title {
+            background: linear-gradient(90deg, var(--pri-orange), var(--pri-orange-600));
+            -webkit-background-clip: text; background-clip: text;
+            color: transparent;
+        }
+
+        .h-deco{position:relative}
+        .h-deco:after{content:"";display:block;height:4px;width:100px;margin:12px auto 0;background:linear-gradient(90deg, var(--pri-orange), var(--pri-orange-600));border-radius:999px;}
+        
+        .content-container {
+            background-color: var(--surface-200);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        html.dark .content-container { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2); }
+
+        .btn {
+            padding: .75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform .15s, box-shadow .15s, background-color .2s;
+            border: 1px solid transparent;
+            white-space: nowrap;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, var(--pri-orange), var(--pri-orange-600));
+            color: white;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 8px 20px rgba(241, 119, 32, .3);
+        }
+
+        .btn-action-blue {
+            background: linear-gradient(to right, var(--pri-blue), var(--pri-blue-600));
+            color: white;
+        }
+        .btn-action-blue:hover {
+             box-shadow: 0 8px 20px rgba(0, 167, 225, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--surface-200);
+            color: var(--pri-blue);
+            border-color: var(--pri-blue);
+        }
+        .btn-secondary:hover {
+             background-color: rgba(0, 167, 225, 0.1);
+             transform: translateY(-2px);
+        }
+
+        /* --- Custom Component Styles --- */
+        .modal-overlay {
+            position: fixed; inset: 0; background: rgba(0,0,0,.7);
+            backdrop-filter: blur(8px); z-index: 1000; display: flex;
+            align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transition: all .35s;
+        }
+        .modal-overlay.visible { opacity: 1; visibility: visible; }
+        .modal-container {
+            background: var(--surface-100); width: 90%; max-width: 900px;
+            height: 90vh; border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,.2);
+            display: flex; flex-direction: column; transform: scale(.96);
+            transition: transform .35s;
+        }
+        .modal-overlay.visible .modal-container { transform: scale(1); }
+        .blueprint-visual {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            background-color: var(--border-color);
+            object-fit: cover;
+        }
+        .timeline::before {
+            content: ''; position: absolute; top: 24px; left: 5%; right: 5%;
+            height: 4px; background-color: var(--border-color); z-index: 0;
+        }
+        .timeline-progress {
+            position: absolute; top: 24px; left: 5%; height: 4px;
+            background: linear-gradient(to right, var(--pri-orange), var(--pri-orange-600));
+            z-index: 1; width: 0; transition: width .5s ease-in-out;
+        }
+        .timeline-step .timeline-icon {
+            border: 4px solid var(--border-color);
+            background-color: var(--surface-200);
+            color: var(--pri-ink-2);
+            transition: all .3s;
+        }
+        .timeline-step:hover .timeline-icon { transform: scale(1.15) rotate(10deg); }
+        .timeline-step.active .timeline-icon { border-color: var(--pri-orange); color: var(--pri-orange); }
+        .timeline-details { max-height: 0; overflow: hidden; transition: all .5s ease-in-out; opacity: 0; }
+        .timeline-details.open { max-height: 500px; margin-top: 1.5rem; opacity: 1; }
+        .animated-card { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
+        .accordion-item-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; padding: 0 1.5rem; }
+        .accordion-item-content.open { max-height: 1000px; padding-top: 1.5rem; padding-bottom: 1.5rem;}
+        .accordion-header .chevron { transition: transform 0.3s ease-in-out; }
+        .accordion-header.active .chevron { transform: rotate(90deg); }
+        
+        .slide { display: none; animation: fadeIn 0.5s ease-in-out; height: 100%; position: relative; }
+        .slide-centered { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* Theme Switcher */
+        .theme-switch-wrapper { display: flex; align-items: center; gap: 8px; }
+        .theme-switch { display: inline-block; height: 24px; position: relative; width: 44px; }
+        .theme-switch input { display:none; }
+        .slider { background-color: #ccc; bottom: 0; cursor: pointer; left: 0; position: absolute; right: 0; top: 0; transition: .4s; }
+        .slider:before { background-color: #fff; bottom: 4px; content: ""; height: 16px; left: 4px; position: absolute; transition: .4s; width: 16px; }
+        input:checked + .slider { background-color: var(--pri-orange); }
+        input:checked + .slider:before { transform: translateX(20px); }
+        .slider.round { border-radius: 34px; }
+        .slider.round:before { border-radius: 50%; }
+
+        .hero-veil{
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: .9;
+        }
+        html.dark .hero-veil{ 
+            opacity: 1;
+        }
+
+        .text-brand { color: #52525b; }
+        html.dark .text-brand { color: var(--pri-ink); }
+        
+        @media (max-width: 380px) {
+            #slides-container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            h1.gradient-text {
+                font-size: 2rem;
+            }
+            .content-container {
+                padding: 1.5rem;
+            }
+            #slide-nav .btn-text {
+                display: none;
+            }
+            #slide-nav .btn {
+                padding: 0.75rem;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #slide-nav .btn i {
+                margin: 0;
+            }
+        }
     </style>
 </head>
-<body class="antialiased">
-
-    <header class="bg-[var(--surface)]/80 backdrop-blur-lg shadow-md sticky top-0 z-50 border-b border-[var(--border)]">
+<body>
+    <header class="bg-[var(--surface-200)]/80 backdrop-blur-lg shadow-md sticky top-0 z-50 border-b border-[var(--border-color)]">
         <div class="container mx-auto px-6">
             <nav class="flex justify-between items-center py-3">
                 <div class="flex items-center gap-3 text-lg">
-                    <a href="#" class="flex items-center gap-2"><img src="https://daniavm.github.io/assets/images/PropuestaVMA/Principia_Logo_Oficial.png" alt="Principia" class="h-8"><span class="font-raleway font-normal text-2xl hidden sm:inline" data-key="principia">Principia</span></a>
+                    <a href="#" class="flex items-center gap-2">
+                        <img src="https://daniavm.github.io/assets/images/PropuestaVMA/Principia_Logo_Oficial.png" alt="Principia Logo" class="h-8">
+                        <span class="font-raleway font-normal text-2xl text-brand hidden sm:inline" data-key="principia">Principia</span>
+                    </a>
                     <span class="text-gray-400 font-light mx-1">×</span>
-                    <a href="https://vma.cl/" target="_blank" rel="noopener" class="flex items-center gap-2"><img src="https://daniavm.github.io/assets/images/PropuestaVMA/VMA_Logo.png" alt="VMA" class="h-8"><span class="font-bold text-xl hidden sm:inline" data-key="clientName">Villa María Academy</span></a>
+                    <a href="https://www.colegiovma.cl/" class="flex items-center gap-2" target="_blank">
+                        <img src="logoAlmenar.png" alt="VMA Logo" class="h-8">
+                        <span class="font-bold text-xl hidden sm:inline" data-key="clientName">Colegio Villa María Academy</span>
+                    </a>
                 </div>
 
                 <div class="flex items-center space-x-2">
                     <div class="hidden md:flex items-center gap-4">
-                        <div class="theme-switch-wrapper"><i class="fas fa-sun text-yellow-500"></i><label class="theme-switch" for="theme-toggle-desktop"><input type="checkbox" id="theme-toggle-desktop" /><span class="slider"></span></label><i class="fas fa-moon text-blue-300"></i></div>
-                        <button class="font-bold text-sm text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)] w-20 text-right" id="langToggle">ESP</button>
+                        <div class="theme-switch-wrapper">
+                            <i class="fas fa-sun text-yellow-500"></i>
+                            <label class="theme-switch" for="theme-toggle-desktop">
+                                <input type="checkbox" id="theme-toggle-desktop" />
+                                <span class="slider round"></span>
+                            </label>
+                            <i class="fas fa-moon text-blue-300"></i>
+                        </div>
+                        <button class="font-bold text-sm text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)] w-8" id="langToggle" aria-label="Cambiar idioma">
+                            ESP
+                        </button>
                     </div>
-                    <button id="hamburger-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false"><span class="sr-only">Open main menu</span><i class="fas fa-bars fa-lg"></i></button>
+                    <button id="hamburger-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden hover:bg-gray-100 dark:hover:bg-zinc-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menú principal</span>
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
                 </div>
             </nav>
             <div class="hidden lg:hidden" id="mobile-menu">
                 <ul class="flex flex-col items-center py-4 space-y-4">
-                    <li class="md:hidden flex items-center gap-3 text-sm"><button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)]" id="themeToggleMobile" aria-label="Toggle theme"><i id="sun-icon-mobile" class="fas fa-sun fa-lg mr-2"></i> <span data-key="themeLabelLight">Light</span><i id="moon-icon-mobile" class="fas fa-moon fa-lg mr-2 hidden"></i> <span data-key="themeLabelDark" class="hidden">Dark</span></button></li>
-                    <li class="md:hidden flex items-center gap-3 text-sm"><button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)]" id="langToggleMobile" aria-label="Toggle language"><i class="fas fa-globe fa-lg mr-2"></i> <span data-key="langLabel">Switch to English</span></button></li>
+                    <li class="md:hidden flex items-center gap-3 text-sm">
+                        <button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)]" id="themeToggleMobile" aria-label="Cambiar tema">
+                            <i id="sun-icon-mobile" class="fas fa-sun fa-lg mr-2"></i> <span data-key="themeLabelLight">Modo Claro</span>
+                            <i id="moon-icon-mobile" class="fas fa-moon fa-lg mr-2 hidden"></i> <span data-key="themeLabelDark" class="hidden">Modo Oscuro</span>
+                        </button>
+                    </li>
+                    <li class="md:hidden flex items-center gap-3 text-sm">
+                        <button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)]" id="langToggleMobile" aria-label="Cambiar idioma">
+                            <i class="fas fa-globe fa-lg mr-2"></i> <span data-key="langLabel">Cambiar a Inglés</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -71,113 +260,279 @@
 
     <main class="flex-grow">
         <div id="slides-container" class="h-full container mx-auto px-6">
-            <div class="slide slide-centered relative w-screen left-1/2 -translate-x-1/2 min-h-[60vh] bg-no-repeat bg-bottom bg-[length:100%_auto]" style="background-image:url('https://daniavm.github.io/assets/images/PropuestaVMA/proyectoVMA_banner.png');">
+            <!-- Slide 1: Hero -->
+            <div class="slide slide-centered relative w-screen left-1/2 -translate-x-1/2 min-h-[70vh] bg-no-repeat bg-bottom bg-[length:100%_auto]" style="background-image:url('https://daniavm.github.io/assets/images/PropuestaVMA/proyectoVMA_banner.png');">
                 <div class="hero-veil"></div>
-                <section class="text-center relative z-10 px-6 py-20">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text" data-key="heroTitle">Modernizing Data Management for Academic Leadership</h1>
-                    <p class="text-lg md:text-xl text-[var(--pri-ink-2)] max-w-3xl mx-auto" data-key="heroSubtitle">An alliance to transform data into a pillar of pedagogical accompaniment, strengthen school climate and preserve pedagogical knowledge — laying the foundations for an Innovation Area.</p>
+                <section class="text-center relative z-10 px-6">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text" data-key="heroTitle">
+                        Modernización de la Gestión de Datos para el Liderazgo Académico
+                    </h1>
+                    <p class="text-lg md:text-xl text-[var(--pri-ink-2)] max-w-3xl mx-auto" data-key="heroSubtitle">
+                        Un Proyecto de Principia para Colegio Villa Maria Academy — Fase de Colaboración Inicial (Octubre 2025 - Febrero 2026)
+                    </p>
                 </section>
             </div>
 
+            <!-- Slide 2: Plan de Trabajo y Objetivos -->
             <div class="slide py-12 md:py-20">
                 <section class="mb-16 content-container">
-                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 h-deco section-title" data-key="journeyTitle">Our Implementation Journey</h2>
-                    <div class="timeline relative" id="timeline-interactive">
-                        <div class="timeline-step text-center cursor-pointer relative z-10" data-act="1">
-                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl"><i class="fa-solid fa-database"></i></div>
-                            <h3 class="font-bold text-lg" data-key="act1Title">Phase I</h3>
-                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act1Subtitle">Listen and Organize</h4>
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 h-deco section-title" data-key="journeyTitle">Nuestro Plan de Trabajo</h2>
+                    <div class="timeline relative flex justify-between items-start" id="timeline-interactive">
+                        <div class="timeline-progress" id="timeline-progress"></div>
+                        <div class="timeline-step w-1/5 text-center cursor-pointer relative z-10" data-act="1">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <h3 class="font-bold text-lg" data-key="act1Title">Fase 1</h3>
+                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act1Subtitle">Propuesta Estratégica</h4>
                         </div>
-                        <div class="timeline-step text-center cursor-pointer relative z-10" data-act="2">
-                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl"><i class="fa-solid fa-chart-simple"></i></div>
-                            <h3 class="font-bold text-lg" data-key="act2Title">Phase II</h3>
-                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act2Subtitle">Solve & Demonstrate</h4>
+                        <div class="timeline-step w-1/5 text-center cursor-pointer relative z-10" data-act="2">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h3 class="font-bold text-lg" data-key="act2Title">Fase 2</h3>
+                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act2Subtitle">Co-diseño del Perfil</h4>
                         </div>
-                        <div class="timeline-step text-center cursor-pointer relative z-10" data-act="3">
-                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl"><i class="fa-solid fa-brain"></i></div>
-                            <h3 class="font-bold text-lg" data-key="act3Title">Phase III</h3>
-                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act3Subtitle">Formalize & Grow</h4>
+                        <div class="timeline-step w-1/5 text-center cursor-pointer relative z-10" data-act="3">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <h3 class="font-bold text-lg" data-key="act3Title">Fase 3</h3>
+                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act3Subtitle">Construcción v1</h4>
                         </div>
+                        <div class="timeline-step w-1/5 text-center cursor-pointer relative z-10" data-act="4">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h3 class="font-bold text-lg" data-key="act4Title">Fase 4</h3>
+                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act4Subtitle">Refinamiento e IA</h4>
+                        </div>
+                        <div class="timeline-step w-1/5 text-center cursor-pointer relative z-10" data-act="5">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-map-signs"></i>
+                            </div>
+                            <h3 class="font-bold text-lg" data-key="act5Title">Fase 5</h3>
+                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act5Subtitle">Consolidación</h4>
+                        </div>
+                    </div>
+                    <div id="timeline-details-container" class="timeline-details"></div>
+                </section>
+
+                <section class="content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="objectivesTitle">Objetivos y Resultados Esperados</h2>
+                    <div id="objectives-accordion" class="space-y-1"></div>
+                </section>
+            </div>
+
+            <!-- Slide 3: Metodología y Modalidad -->
+            <div class="slide py-12 md:py-20">
+                <section class="content-container mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="methodologyTitle">Metodología y Modalidad de Trabajo</h2>
+                    <p class="text-center text-[var(--pri-ink-2)] mb-8" data-key="methodologySubtitle">Trabajaremos con un enfoque ágil y de co-construcción, basado en una dedicación de 10 horas semanales.</p>
+                    
+                    <div class="flex flex-wrap justify-center gap-8">
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center">
+                                <i class="fas fa-calendar-check fa-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold" data-key="method1Title">Reuniones Semanales</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="method1Desc">Sesiones de trabajo con la Subdirectora Académica para revisar progresos.</p>
+                            </div>
+                        </div>
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center">
+                                <i class="fas fa-users-gear fa-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold" data-key="method2Title">Sesiones de Co-diseño</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="method2Desc">Talleres presenciales con el equipo directivo y académico.</p>
+                            </div>
+                        </div>
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center">
+                                <i class="fas fa-code-branch fa-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold" data-key="method3Title">Desarrollo Iterativo</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="method3Desc">Ciclos cortos de desarrollo, prueba y refinamiento.</p>
+                            </div>
+                        </div>
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center">
+                                <i class="fas fa-comments fa-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold" data-key="method4Title">Comunicación Continua</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="method4Desc">Canal directo para asegurar el alineamiento constante.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 p-6 bg-[var(--pri-blue)]/10 rounded-lg border border-[var(--pri-blue)]/20">
+                        <h4 class="font-bold mb-3" data-key="noteTitle">Una Nota sobre la Naturaleza de los Entregables</h4>
+                        <p class="text-sm" data-key="noteDesc">Es fundamental comprender que las herramientas a desarrollar son prototipos funcionales evolutivos, no productos finales cerrados. Su objetivo es validar hipótesis y entregar valor temprano.</p>
                     </div>
                 </section>
 
                 <section class="content-container">
-                    <div class="text-center">
-                        <h3 class="text-2xl font-bold mb-3" data-key="objectivesTitle">Specific Objectives</h3>
-                        <p class="text-[var(--pri-ink-2)] max-w-3xl mx-auto" data-key="purposeDescription">This document details a 5-month initial collaboration to set operational and technological foundations and co-design tools that justify creating an Innovation Area in 2026.</p>
-                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="valuesTitle">Nuestros Compromisos de Servicio</h2>
+                    <div class="flex flex-wrap justify-center gap-8">
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full max-w-sm">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-handshake fa-2x"></i>
+                            </div>
+                            <h3 class="font-bold text-xl mb-2" data-key="val1Title">Colaboración Eficiente</h3>
+                            <p class="text-[var(--pri-ink-2)]" data-key="val1Desc">Coordinación estrecha con su equipo para un avance fluido.</p>
+                        </div>
 
-                    <div class="mt-8">
-                        <h3 class="text-xl font-bold text-center mb-4 raleway" data-key="expectedResultsTitle">Expected Results</h3>
-                        <div class="grid md:grid-cols-2 gap-6 text-left">
-                            <div class="bg-[var(--surface)] p-4 rounded-lg border border-[var(--border)] flex items-start"><i class="fas fa-bullseye text-[var(--pri-blue)] mr-3 mt-1"></i><span data-key="result1">A strategic proposal for an Innovation Area.</span></div>
-                            <div class="bg-[var(--surface)] p-4 rounded-lg border border-[var(--border)] flex items-start"><i class="fas fa-chart-line text-[var(--pri-blue)] mr-3 mt-1"></i><span data-key="result2">A data architecture with automated flows in progress.</span></div>
-                            <div class="bg-[var(--surface)] p-4 rounded-lg border border-[var(--border)] flex items-start"><i class="fas fa-users text-[var(--pri-blue)] mr-3 mt-1"></i><span data-key="result3">A functional prototype of the Comprehensive Student Profile.</span></div>
-                            <div class="bg-[var(--surface)] p-4 rounded-lg border border-[var(--border)] flex items-start"><i class="fas fa-map-signs text-[var(--pri-blue)] mr-3 mt-1"></i><span data-key="result4">A clear roadmap for Innovation (2026-2027).</span></div>
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full max-w-sm">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-clipboard-check fa-2x"></i>
+                            </div>
+                            <h3 class="font-bold text-xl mb-2" data-key="val2Title">Resultados Tangibles</h3>
+                            <p class="text-[var(--pri-ink-2)]" data-key="val2Desc">Enfoque en productos funcionales y medibles en ciclos cortos.</p>
+                        </div>
+
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full max-w-sm">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-comment-dots fa-2x"></i>
+                            </div>
+                            <h3 class="font-bold text-xl mb-2" data-key="val3Title">Comunicación Clara</h3>
+                            <p class="text-[var(--pri-ink-2)]" data-key="val3Desc">Reporte constante sobre avances, hitos y próximos pasos.</p>
                         </div>
                     </div>
                 </section>
-
-                <section id="plan" class="py-20">
-                    <div class="container mx-auto px-6">
-                        <h2 class="text-3xl font-bold text-center fira" data-key="planTitle">Work Plan: 5 Strategic Phases</h2>
-                        <p class="text-center mt-2 text-[var(--pri-ink-2)] mb-12 raleway" data-key="planSubtitle">A condensed timeline to deliver prototypes, stabilize flows and build the case for an Innovation Area.</p>
-
-                        <div class="grid md:grid-cols-3 gap-6">
-                            <div class="p-4 bg-[var(--surface)] rounded-lg border border-[var(--border)]">
-                                <h4 class="font-bold">Phase 1 — Strategic Proposal & Foundations</h4>
-                                <p class="text-sm text-[var(--pri-ink-2)] mt-2">Deliver a validated proposal for the Innovation Area and stabilize technical access and core automations.</p>
-                                <p class="mt-3 text-[var(--pri-blue)] font-semibold">Duration: Month 1</p>
-                            </div>
-                            <div class="p-4 bg-[var(--surface)] rounded-lg border border-[var(--border)]">
-                                <h4 class="font-bold">Phase 2 — Co-design Student Profile</h4>
-                                <p class="text-sm text-[var(--pri-ink-2)] mt-2">Prototype a navigable student profile that aggregates academic, formative and contextual data.</p>
-                                <p class="mt-3 text-[var(--pri-blue)] font-semibold">Duration: Month 2</p>
-                            </div>
-                            <div class="p-4 bg-[var(--surface)] rounded-lg border border-[var(--border)]">
-                                <h4 class="font-bold">Phase 3 — Build & Assessment Diagnostics</h4>
-                                <p class="text-sm text-[var(--pri-ink-2)] mt-2">Construct initial dashboards and assess existing evaluation systems for alignment.</p>
-                                <p class="mt-3 text-[var(--pri-blue)] font-semibold">Duration: Month 3</p>
-                            </div>
-                        </div>
-
-                        <div class="mt-6 grid md:grid-cols-2 gap-6">
-                            <div class="p-4 bg-[var(--surface)] rounded-lg border border-[var(--border)]">
-                                <h4 class="font-bold">Phase 4 — AI Readiness & Refinement</h4>
-                                <p class="text-sm text-[var(--pri-ink-2)] mt-2">Diagnose how AI can support teachers and prepare a roadmap for pilot implementations.</p>
-                                <p class="mt-3 text-[var(--pri-blue)] font-semibold">Duration: Month 4</p>
-                            </div>
-                            <div class="p-4 bg-[var(--surface)] rounded-lg border border-[var(--border)]">
-                                <h4 class="font-bold">Phase 5 — Consolidation & Roadmap</h4>
-                                <p class="text-sm text-[var(--pri-ink-2)] mt-2">Deliver final documentation and the operational roadmap to scale the Innovation Area.</p>
-                                <p class="mt-3 text-[var(--pri-blue)] font-semibold">Duration: Month 5</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="py-12">
-                    <div class="container mx-auto px-6 content-container">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <h3 class="text-xl font-bold mb-3" data-key="requirementsTitle">Requirements for Success</h3>
-                                <ul class="list-disc pl-6 text-[var(--pri-ink-2)]">
-                                    <li data-key="req1">Executive Sponsorship: Active support from Directors and Coordinators.</li>
-                                    <li data-key="req2">Platform Access: Schooltrack license and Workspace access.</li>
-                                    <li data-key="req3">Focal Points: Key contacts in critical areas.</li>
-                                    <li data-key="req4">Agile Governance: Bi-weekly follow-ups.</li>
-                                    <li data-key="req5">Privacy & Security: Responsible and confidential handling of data.</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-3">Next Steps</h3>
-                                <p class="text-[var(--pri-ink-2)]" data-key="nextStepsDescription">Validate this plan with the Academic Sub-Directorate, sign the agreement and start Phase 1 focused on delivering the strategic proposal in October.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
             </div>
+
+            <!-- Slide 4: Bases para el Éxito -->
+            <div class="slide py-12 md:py-20">
+                <section class="content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="requirementsTitle">Bases para un Proyecto Exitoso</h2>
+                    <p class="text-center text-[var(--pri-ink-2)] max-w-3xl mx-auto mb-12" data-key="requirementsSubtitle">
+                        Para que este proyecto genere un impacto real y sostenible, se requiere una base de colaboración sólida. Los siguientes puntos son fundamentales y deben estar resueltos antes del inicio de la Fase 1.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <h3 class="text-xl font-bold mb-6 text-center" data-key="commitmentTitle">Compromiso Organizacional</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-3 p-3 rounded-lg bg-[var(--surface-100)]">
+                                    <span class="mt-1 text-[var(--pri-orange)]"><i class="fas fa-check-circle"></i></span>
+                                    <div>
+                                        <h4 class="font-semibold" data-key="req1Title">Liderazgo Comprometido</h4>
+                                        <p class="text-sm text-[var(--pri-ink-2)]" data-key="req1Desc">Voluntad directiva para adoptar nuevas herramientas y optimizar procesos.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 p-3 rounded-lg bg-[var(--surface-100)]">
+                                    <span class="mt-1 text-[var(--pri-orange)]"><i class="fas fa-check-circle"></i></span>
+                                    <div>
+                                        <h4 class="font-semibold" data-key="req2Title">Contraparte Designada</h4>
+                                        <p class="text-sm text-[var(--pri-ink-2)]" data-key="req2Desc">Un responsable único (Champion) para facilitar la toma de decisiones ágil.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 p-3 rounded-lg bg-[var(--surface-100)]">
+                                    <span class="mt-1 text-[var(--pri-orange)]"><i class="fas fa-check-circle"></i></span>
+                                    <div>
+                                        <h4 class="font-semibold" data-key="req3Title">Equipo Involucrado</h4>
+                                        <p class="text-sm text-[var(--pri-ink-2)]" data-key="req3Desc">Disponibilidad del equipo para participar activamente en talleres y validaciones.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 p-3 rounded-lg bg-[var(--surface-100)]">
+                                    <span class="mt-1 text-[var(--pri-orange)]"><i class="fas fa-check-circle"></i></span>
+                                    <div>
+                                        <h4 class="font-semibold" data-key="req4Title">Feedback Constructivo</h4>
+                                        <p class="text-sm text-[var(--pri-ink-2)]" data-key="req4Desc">Retroalimentación entregada en los plazos acordados para mantener el ritmo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold mb-6 text-center" data-key="resourcesTitle">Acceso a Recursos Críticos</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-3 p-3 rounded-lg bg-[var(--surface-100)]">
+                                    <span class="mt-1 text-[var(--pri-blue)]"><i class="fas fa-key"></i></span>
+                                    <div>
+                                        <h4 class="font-semibold" data-key="res1Title">Cuenta de Usuario Oficial</h4>
+                                        <p class="text-sm text-[var(--pri-ink-2)]" data-key="res1Desc">Creación de una cuenta de correo (@vma.cl) para Principia.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 p-3 rounded-lg bg-[var(--surface-100)]">
+                                    <span class="mt-1 text-[var(--pri-blue)]"><i class="fas fa-laptop"></i></span>
+                                    <div>
+                                        <h4 class="font-semibold" data-key="res2Title">Equipo Dedicado</h4>
+                                        <p class="text-sm text-[var(--pri-ink-2)]" data-key="res2Desc">Un computador físico en el colegio con acceso a la red interna.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 p-3 rounded-lg bg-[var(--surface-100)]">
+                                    <span class="mt-1 text-[var(--pri-blue)]"><i class="fas fa-database"></i></span>
+                                    <div>
+                                        <h4 class="font-semibold" data-key="res3Title">Acceso a Plataformas</h4>
+                                        <p class="text-sm text-[var(--pri-ink-2)]" data-key="res3Desc">Licencia de Schooltrack con permisos para crear y descargar reportes.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 p-3 rounded-lg bg-[var(--surface-100)]">
+                                    <span class="mt-1 text-[var(--pri-blue)]"><i class="fas fa-wifi"></i></span>
+                                    <div>
+                                        <h4 class="font-semibold" data-key="res4Title">Acceso Remoto</h4>
+                                        <p class="text-sm text-[var(--pri-ink-2)]" data-key="res4Desc">Configuración de Chrome Remote Desktop para trabajo externo seguro.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Slide 5: Próximos Pasos -->
+            <div class="slide py-12 md:py-20 flex items-center">
+                <section class="w-full">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 h-deco section-title" data-key="nextStepsTitle">Próximos Pasos</h2>
+                    <p class="text-center text-[var(--pri-ink-2)] max-w-3xl mx-auto mb-12" data-key="nextStepsSubtitle">
+                        El paso inmediato es validar este plan de trabajo con la Subdirección Académica para luego proceder a la firma del acuerdo y dar inicio a la Fase 1.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <div class="animated-card text-center p-6">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-calendar-check fa-2x"></i>
+                            </div>
+                            <h3 class="font-bold text-xl mb-2" data-key="step1Title">Validación del Plan</h3>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="step1Desc">Revisamos y ajustamos este plan con la Subdirección Académica.</p>
+                        </div>
+                        
+                        <div class="animated-card text-center p-6">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-file-signature fa-2x"></i>
+                            </div>
+                            <h3 class="font-bold text-xl mb-2" data-key="step2Title">Firma del Acuerdo</h3>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="step2Desc">Formalizamos la colaboración mediante contrato de servicios.</p>
+                        </div>
+                        
+                        <div class="animated-card text-center p-6">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-rocket fa-2x"></i>
+                            </div>
+                            <h3 class="font-bold text-xl mb-2" data-key="step3Title">Inicio de la Fase 1</h3>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="step3Desc">Comenzamos con la entrega de la propuesta estratégica en octubre.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-16">
+                        <h4 class="font-bold text-xl mb-2" data-key="contactTitle">Conversemos</h4>
+                        <p class="text-[var(--pri-ink-2)]" data-key="contactPerson">Daniel Valdés Medel</p>
+                        <p class="text-sm text-[var(--pri-ink-2)]" data-key="contactRole">Director, Principia SpA</p>
+                        <a href="mailto:descubre@principias.ai" class="mt-4 inline-block btn btn-primary">
+                            <i class="fas fa-envelope mr-2"></i><span data-key="contactButton">Escribir Correo</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
         </div>
     </main>
 
@@ -185,10 +540,10 @@
 
     <footer class="bg-[var(--surface)]/80 backdrop-blur-lg border-t border-[var(--border)] sticky bottom-0 z-40">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-sm text-[var(--pri-ink-2)]" data-key="footerText">© 2025 Principia SpA. Transforming education through data.</div>
+            <div class="text-sm text-[var(--pri-ink-2)]" data-key="footerText">© 2025 Principia SpA. Transformando la educación a través de los datos.</div>
             <div class="flex items-center gap-4">
-                <button id="open-doc" class="btn btn-secondary">Open Document</button>
-                <div class="text-sm text-[var(--pri-ink-2)]">Version: <span data-key="version">Collaboration Proposal — August 2025</span></div>
+                <button id="open-doc" class="btn btn-secondary">Abrir Documento</button>
+                <div class="text-sm text-[var(--pri-ink-2)]">Versión: <span data-key="version">Propuesta de Colaboración: Principia & Villa María Academy — Septiembre 2025</span></div>
             </div>
         </div>
     </footer>
@@ -421,186 +776,4 @@
             </script>
         </body>
         </html>
-                         "Acceso a Plataformas: Licencia de Schooltrack con permisos para crear y descargar reportes.",
-                         "Acceso Remoto: Configuración de Chrome Remote Desktop para permitir el trabajo externo."
-                    ],
-                    nextStepsTitle: "Próximos Pasos",
-                    nextStepsDescription: "El paso inmediato es validar este plan de trabajo con la Subdirección Académica para luego proceder a la firma del acuerdo y dar inicio a la Fase 1, con foco en la entrega de la propuesta estratégica en octubre.",
-                    footerText: "© 2025 Principia SpA. Transformando la educación a través de los datos.",
-                    phases: [
-                        { title: "Propuesta Estratégica y Bases Operativas", duration: "Mes 1" },
-                        { title: "Co-diseño del \"Perfil Integral de la Alumna\"", duration: "Mes 2" },
-                        { title: "Construcción y Diagnóstico de Evaluaciones", duration: "Mes 3" },
-                        { title: "Refinamiento y Diagnóstico para IA", duration: "Mes 4" },
-                        { title: "Consolidación y Hoja de Ruta", duration: "Mes 5" }
-                    ],
-                    modalContent: [
-                        {
-                            title: "Fase 1: Propuesta Estratégica y Bases Operativas",
-                            content: `<div><h4 class="font-bold text-lg mb-2">Propuesta para la Creación del Área de Innovación y Desarrollo</h4><p class="mb-1"><strong>Descripción:</strong> En talleres intensivos con la Subdirección, co-diseñaremos el documento estratégico que presentaremos al Colegio. Este definirá los objetivos, estructura, roles y portafolio de proyectos para la formalización de una potencial área de innovación.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Objetivo Clave (Prioritario):</strong> Entregar la propuesta formal para su presentación y validación interna durante la tercera semana de octubre, con el fin de dialogar sobre costos y viabilidad para el presupuesto 2026.</p></div><div><h4 class="font-bold text-lg mb-2 mt-4">Establecimiento de la Infraestructura Técnica</h4><p class="mb-1"><strong>Descripción:</strong> En paralelo, trabajaremos en asegurar los accesos y recursos técnicos necesarios. Se iniciará la estabilización y automatización de los flujos de datos que alimentan las herramientas existentes.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Objetivo Clave:</strong> Iniciar la estabilización de la infraestructura de datos y definir, en conjunto con el Colegio, la hoja de ruta para lograr su automatización a lo largo del proyecto.</p></div>`
-                        },
-                        {
-                            title: "Fase 2: Co-diseño del \"Perfil Integral de la Alumna\"",
-                            content: `<div><h4 class="font-bold text-lg mb-2">Unificando la Visión de la Estudiante</h4><p class="mb-1"><strong>Descripción:</strong> El "Perfil Integral de la Alumna" es una plataforma de visualización que unifica en un solo lugar toda la información relevante de una estudiante. En lugar de cruzar datos manualmente, este perfil ofrecerá una visión completa de su trayectoria académica, formativa y familiar para tomar decisiones de apoyo más ágiles.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Objetivo Clave:</strong> Entregar un prototipo navegable y validado del perfil, la herramienta prioritaria para la Subdirección.</p></div>`
-                        },
-                        {
-                            title: "Fase 3: Construcción v1 y Diagnóstico de Sistemas de Evaluación",
-                            content: `<div><h4 class="font-bold text-lg mb-2">Del Análisis Puntual al Seguimiento Continuo</h4><p class="mb-1"><strong>Descripción:</strong> Desarrollaremos la primera versión funcional del "Perfil Integral". En paralelo, realizaremos un diagnóstico para evolucionar a un "Sistema de Seguimiento de Evaluaciones". Esto permite visualizar el progreso y las tendencias de aprendizaje a lo largo del tiempo para identificar patrones y anticipar dificultades.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Objetivo Clave:</strong> Entregar el perfil funcional para su uso inicial y un manual de buenas prácticas para estandarizar la recolección de datos de evaluación.</p></div>`
-                        },
-                        {
-                            title: "Fase 4: Refinamiento del Perfil y Diagnóstico para Asistencia con IA",
-                            content: `<div><h4 class="font-bold text-lg mb-2">Potenciando al Equipo Docente con IA</h4><p class="mb-1"><strong>Descripción:</strong> Investigaremos cómo la Inteligencia Artificial puede servir como un asistente para el equipo docente. Un sistema de revisión asistida por IA puede analizar grandes volúmenes de documentos (planificaciones, pruebas) para verificar consistencia, liberando tiempo valioso de los profesores.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Objetivo Clave:</strong> Entregar una versión mejorada del perfil y un plan de acción detallado para la futura implementación de herramientas de asistencia con IA.</p></div>`
-                        },
-                        {
-                            title: "Fase 5: Consolidación y Hoja de Ruta Final",
-                            content: `<div><h4 class="font-bold text-lg mb-2">Diseñando el Futuro</h4><p class="mb-1"><strong>Descripción:</strong> Consolidaremos todos los aprendizajes y entregables en un documento final que servirá como la Hoja de Ruta de Innovación 2026-2027. Al final de esta fase, se entregará la base operativa estabilizada y los prototipos funcionales listos para su siguiente ciclo de evolución.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Objetivo Clave:</strong> Entregar a la Dirección una propuesta validada y detallada para escalar la colaboración y ejecutar el plan de innovación.</p></div>`
-                        }
-                    ]
-                },
-                en: {
-                    clientName: "Villa María Academy",
-                    mainTitle: "Modernizing Data Management for Academic Leadership",
-                    mainSubtitle: "A Principia Project for Villa Maria Academy School",
-                    projectPeriod: "Period: October 2025 - February 2026",
-                    purposeTitle: "Our Proposal: Objectives and Outcomes",
-                    purposeDescription: "This document details the work plan for an initial 5-month strategic collaboration phase. The objective is twofold: first, to lay the operational and technological foundations for modern data management; and second, to co-design and validate the key tools that will justify and shape the proposal for creating an innovation area at the School starting in 2026.",
-                    expectedResultsTitle: "Expected Outcomes",
-                    result1: "A Strategic Proposal for the Creation of an Innovation Area.",
-                    result2: "A Data Architecture in the Process of Automation.",
-                    result3: "A Functional Prototype of the 'Comprehensive Student Profile'.",
-                    result4: "A Clear Roadmap for Innovation (2026-2027).",
-                    planTitle: "Work Plan: 5 Strategic Phases",
-                    planSubtitle: "Click on each phase to see the details of objectives and deliverables.",
-                    noteTitle: "A Note on the Nature of Deliverables",
-                    noteDescription: "It is essential to understand that the tools to be developed are evolutionary functional prototypes, not final, closed products. Their purpose is to validate hypotheses and deliver early value. The maturity of solutions like the 'Student Profile' will depend on a collaborative process of discovery and refinement that will extend beyond this initial phase, laying the groundwork for more in-depth work during 2026.",
-                    successTitle: "Foundations for a Successful Project",
-                    successSubtitle: "Collaboration and the right resources are essential to meet deadlines and objectives.",
-                    collaborationTitle: "Collaboration and Commitment",
-                    collaborationList: [
-                        "Committed Leadership: Executive willingness to adopt new tools and optimize processes.",
-                        "Designated Counterpart: A single point of contact (Champion) to facilitate agile decision-making.",
-                        "Involved Team: Availability of the team to actively participate in workshops and validations.",
-                        "Constructive Feedback: Feedback delivered within agreed-upon deadlines to maintain work pace."
-                    ],
-                    resourcesTitle: "Critical Resources and Access",
-                    resourcesList: [
-                        "Official User Account: Creation of an email account (@vma.cl) for Principia, with the necessary permissions.",
-                        "Dedicated Equipment: A physical computer at the school with access to the internal network.",
-                        "Platform Access: Schooltrack license with permissions to create and download reports.",
-                        "Remote Access: Configuration of Chrome Remote Desktop to allow for external work."
-                    ],
-                    nextStepsTitle: "Next Steps",
-                    nextStepsDescription: "The immediate next step is to validate this work plan with the Academic Sub-Directorate, then proceed to sign the agreement and kick off Phase 1, focusing on delivering the strategic proposal in October.",
-                    footerText: "© 2025 Principia SpA. Transforming education through data.",
-                    phases: [
-                        { title: "Strategic Proposal & Operational Foundations", duration: "Month 1" },
-                        { title: "Co-design of the \"Comprehensive Student Profile\"", duration: "Month 2" },
-                        { title: "Build & Assessment Diagnostics", duration: "Month 3" },
-                        { title: "Refinement & AI Diagnostics", duration: "Month 4" },
-                        { title: "Consolidation & Roadmap", duration: "Month 5" }
-                    ],
-                    modalContent: [
-                        {
-                            title: "Phase 1: Strategic Proposal & Operational Foundations",
-                            content: `<div><h4 class="font-bold text-lg mb-2">Proposal for the Creation of the Innovation and Development Area</h4><p class="mb-1"><strong>Description:</strong> In intensive workshops with the Sub-Directorate, we will co-design the strategic document to be presented to the School. It will define the objectives, structure, roles, and project portfolio for the formalization of a potential innovation area.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Key Objective (Priority):</strong> Deliver the formal proposal for internal presentation and validation during the third week of October to discuss costs and feasibility for the 2026 budget.</p></div><div><h4 class="font-bold text-lg mb-2 mt-4">Establishment of Technical Infrastructure</h4><p class="mb-1"><strong>Description:</strong> In parallel, we will work on securing the necessary technical access and resources. We will begin stabilizing and automating the data flows that feed existing tools.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Key Objective:</strong> Begin stabilizing the existing data infrastructure and define, together with the School, the roadmap to achieve its automation throughout the project.</p></div>`
-                        },
-                        {
-                            title: "Phase 2: Co-design of the \"Comprehensive Student Profile\"",
-                            content: `<div><h4 class="font-bold text-lg mb-2">Unifying the Student Vision</h4><p class="mb-1"><strong>Description:</strong> The "Comprehensive Student Profile" is a visualization platform that unifies all relevant student information in one place. Instead of manually cross-referencing data, this profile will offer a complete view of their academic, formative, and family trajectory to make more agile support decisions.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Key Objective:</strong> Deliver a navigable and validated prototype of the profile, a priority tool for the Sub-Directorate.</p></div>`
-                        },
-                        {
-                            title: "Phase 3: V1 Build & Assessment Systems Diagnostics",
-                            content: `<div><h4 class="font-bold text-lg mb-2">From Point-in-Time Analysis to Continuous Tracking</h4><p class="mb-1"><strong>Description:</strong> We will develop the first functional version of the "Comprehensive Profile." In parallel, we will conduct a diagnostic to evolve into an "Assessment Tracking System." This allows for visualizing learning progress and trends over time to identify patterns and anticipate difficulties.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Key Objective:</strong> Deliver the functional profile for initial use and a best practices guide for standardizing assessment data collection.</p></div>`
-                        },
-                        {
-                            title: "Phase 4: Profile Refinement & AI Assistance Diagnostics",
-                            content: `<div><h4 class="font-bold text-lg mb-2">Empowering the Teaching Team with AI</h4><p class="mb-1"><strong>Description:</strong> We will investigate how Artificial Intelligence can serve as an assistant for the teaching staff. An AI-assisted review system can analyze large volumes of documents (plans, tests) to check for consistency, freeing up valuable teacher time.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Key Objective:</strong> Deliver an improved version of the profile and a detailed action plan for the future implementation of AI assistance tools.</p></div>`
-                        },
-                        {
-                            title: "Phase 5: Consolidation and Final Roadmap",
-                            content: `<div><h4 class="font-bold text-lg mb-2">Designing the Future</h4><p class="mb-1"><strong>Description:</strong> We will consolidate all learnings and deliverables into a final document that will serve as the 2026-2027 Innovation Roadmap. At the end of this phase, the stabilized operational base and functional prototypes will be ready for their next evolution cycle.</p><p class="text-[var(--pri-blue)] font-semibold"><strong>Key Objective:</strong> Deliver a validated and detailed proposal to the Directorate to scale the collaboration and execute the innovation plan.</p></div>`
-                        }
-                    ]
-                }
-            };
-
-            const setLanguage = (lang) => {
-                currentLanguage = lang;
-                const langData = translations[currentLanguage];
-                document.documentElement.lang = currentLanguage;
-                document.getElementById('lang-toggle').textContent = currentLanguage.toUpperCase();
-                
-                document.querySelectorAll('[data-key]').forEach(el => {
-                    const key = el.getAttribute('data-key');
-                    if (langData[key]) {
-                        if (Array.isArray(langData[key])) {
-                            el.innerHTML = langData[key].map(item => `<li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><span>${item}</span></li>`).join('');
-                        } else {
-                            el.innerHTML = langData[key];
-                        }
-                    }
-                });
-
-                const timelineContainer = document.getElementById('timeline-container');
-                timelineContainer.innerHTML = langData.phases.map((phase, index) => `
-                    <div class="timeline-step text-center cursor-pointer relative z-10" data-phase="${index}">
-                        <div class="mx-auto w-16 h-16 rounded-full bg-[var(--pri-blue)] text-white flex items-center justify-center text-2xl font-bold border-4 border-[var(--bg)] shadow-md">${index + 1}</div>
-                        <p class="mt-4 font-bold raleway">${phase.title}</p>
-                        <p class="text-sm text-gray-500">${phase.duration}</p>
-                    </div>
-                `).join('');
-                
-                addTimelineListeners();
-            };
-            
-            // Theme Switcher
-            const themeToggle = document.getElementById('theme-toggle');
-            const applyTheme = (theme) => {
-                document.documentElement.classList.toggle('dark', theme === 'dark');
-                localStorage.setItem('theme', theme);
-                themeToggle.checked = theme === 'dark';
-            };
-            themeToggle.addEventListener('change', (e) => applyTheme(e.target.checked ? 'dark' : 'light'));
-            
-            // Language Switcher
-            document.getElementById('lang-toggle').addEventListener('click', () => {
-                setLanguage(currentLanguage === 'es' ? 'en' : 'es');
-            });
-
-            // Modal Logic
-            const modal = document.getElementById('phase-modal');
-            const closeModalBtn = document.getElementById('close-modal');
-            const openModal = (phaseIndex) => {
-                const lang = translations[currentLanguage];
-                const phaseData = lang.modalContent[phaseIndex];
-                document.getElementById('modal-title').textContent = phaseData.title;
-                document.getElementById('modal-duration').textContent = lang.phases[phaseIndex].duration;
-                document.getElementById('modal-content-body').innerHTML = phaseData.content;
-                modal.classList.add('visible');
-            };
-            const closeModal = () => modal.classList.remove('visible');
-            
-            closeModalBtn.addEventListener('click', closeModal);
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) closeModal();
-            });
-            window.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') closeModal();
-            });
-            
-            function addTimelineListeners() {
-                document.querySelectorAll('.timeline-step').forEach(step => {
-                    step.addEventListener('click', () => {
-                        openModal(step.dataset.phase);
-                    });
-                });
-            }
-
-            // Initial Load
-            setLanguage('es');
-            applyTheme(localStorage.getItem('theme') || 'light');
-        });
-    </script>
-</body>
-</html>
-
+                      

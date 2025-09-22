@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Principia — Plan de Trabajo Interactivo para Villa María Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Lato:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root{
+          /* --- Principia Design System Tokens --- */
+          --pri-orange:#FFA630;
+          --pri-orange-600:#F17720;
+          --pri-blue:#00A7E1;
+          --pri-blue-600:#008ac1;
+          --pri-ink:#3D3D3D;
+          --pri-ink-2:#757575;
+          --pri-bg:#FFFFFF;
+          --surface-100: #F8F9FA;
+          --surface-200: #FFFFFF;
+          --border-color: #E5E7EB;
+          --success:#2E7D32;
+          --error:#D32F2F;
+        }
+
+        html.dark {
+          --pri-ink: #e4e4e7;
+          --pri-ink-2: #a1a1aa;
+          --pri-bg: #18181b;
+          --surface-100: #27272a;
+          --surface-200: #3f3f46;
+          --border-color: #52525b;
+          --success:#4ade80;
+          --error:#f87171;
+        }
+
+        html, body { height: 100%; }
+        body { font-family: 'Lato', sans-serif; background-color: var(--pri-bg); color: var(--pri-ink); transition: background-color 0.3s, color 0.3s; display: flex; flex-direction: column; }
+        main { flex-grow: 1; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Fira Sans', sans-serif; }
+        .font-raleway { font-family: 'Raleway', sans-serif; }
+        
+        h1.gradient-text, h2.section-title {
+            background: linear-gradient(90deg, var(--pri-orange), var(--pri-orange-600));
+            -webkit-background-clip: text; background-clip: text;
+            color: transparent;
+        }
+
+        .h-deco{position:relative}
+        .h-deco:after{content:"";display:block;height:4px;width:100px;margin:12px auto 0;background:linear-gradient(90deg, var(--pri-orange), var(--pri-orange-600));border-radius:999px;}
+        
+        .content-container {
+            background-color: var(--surface-200);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        html.dark .content-container { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2); }
+
+        .btn {
+            padding: .75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform .15s, box-shadow .15s, background-color .2s;
+            border: 1px solid transparent;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, var(--pri-orange), var(--pri-orange-600));
+            color: white;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 8px 20px rgba(241, 119, 32, .3);
+        }
+
+        .btn-action-blue {
+            background: linear-gradient(to right, var(--pri-blue), var(--pri-blue-600));
+            color: white;
+        }
+        .btn-action-blue:hover {
+             box-shadow: 0 8px 20px rgba(0, 167, 225, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--surface-200);
+            color: var(--pri-blue);
+            border-color: var(--pri-blue);
+        }
+        .btn-secondary:hover {
+             background-color: rgba(0, 167, 225, 0.1);
+             transform: translateY(-2px);
+        }
+        .btn-secondary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background-color: var(--surface-100);
+            border-color: var(--border-color);
+            color: var(--pri-ink-2);
+        }
+
+
+        /* --- Custom Component Styles (Aligned with Principia) --- */
+        .modal-overlay {
+            position: fixed; inset: 0; background: rgba(0,0,0,.7);
+            backdrop-filter: blur(8px); z-index: 1000; display: flex;
+            align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transition: all .35s;
+        }
+        .modal-overlay.visible { opacity: 1; visibility: visible; }
+        .modal-container {
+            background: var(--surface-100); width: 90%; max-width: 900px;
+            height: 90vh; border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,.2);
+            display: flex; flex-direction: column; transform: scale(.96);
+            transition: transform .35s;
+        }
+        .modal-overlay.visible .modal-container { transform: scale(1); }
+        .modal-section h4 { border-bottom: 2px solid var(--pri-orange); padding-bottom: 0.5rem; }
+        .blueprint-visual {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            background-color: var(--border-color);
+            object-fit: cover;
+        }
+        .timeline::before {
+            content: ''; position: absolute; top: 24px; left: 5%; right: 5%;
+            height: 4px; background-color: var(--border-color); z-index: 0;
+        }
+        .timeline-progress {
+            position: absolute; top: 24px; left: 5%; height: 4px;
+            background: linear-gradient(to right, var(--pri-orange), var(--pri-orange-600));
+            z-index: 1; width: 0; transition: width .5s ease-in-out;
+        }
+        .timeline-step .timeline-icon {
+            border: 4px solid var(--border-color);
+            background-color: var(--surface-200);
+            color: var(--pri-ink-2);
+            transition: all .3s;
+        }
+        .timeline-step:hover .timeline-icon { transform: scale(1.15) rotate(10deg); }
+        .timeline-step.active .timeline-icon { border-color: var(--pri-orange); color: var(--pri-orange); }
+        .timeline-details { max-height: 0; overflow: hidden; transition: all .5s ease-in-out; opacity: 0; }
+        .timeline-details.open { max-height: 500px; margin-top: 1.5rem; opacity: 1; }
+        .animated-card { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
+        .accordion-item-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; padding: 0 1.5rem; }
+        .accordion-item-content.open { max-height: 1000px; padding-top: 1.5rem; padding-bottom: 1.5rem;}
+        .accordion-header .chevron { transition: transform 0.3s ease-in-out; }
+        .accordion-header.active .chevron { transform: rotate(90deg); }
+        
+        .slide { display: none; animation: fadeIn 0.5s ease-in-out; height: 100%; position: relative; }
+        .slide-centered { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* Theme Switcher */
+        .theme-switch-wrapper { display: flex; align-items: center; gap: 8px; }
+        .theme-switch { display: inline-block; height: 24px; position: relative; width: 44px; }
+        .theme-switch input { display:none; }
+        .slider { background-color: #ccc; bottom: 0; cursor: pointer; left: 0; position: absolute; right: 0; top: 0; transition: .4s; }
+        .slider:before { background-color: #fff; bottom: 4px; content: ""; height: 16px; left: 4px; position: absolute; transition: .4s; width: 16px; }
+        input:checked + .slider { background-color: var(--pri-orange); }
+        input:checked + .slider:before { transform: translateX(20px); }
+        .slider.round { border-radius: 34px; }
+        .slider.round:before { border-radius: 50%; }
+
+        /* Velo opcional para mejorar contraste del texto sobre el banner */
+        .hero-veil{
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+
+        opacity: .9;
+        }
+        html.dark .hero-veil{ 
+
+        opacity: 1;
+        }
+
+        /* (Opcional) evita scroll horizontal si usas full-bleed con w-screen */
+        body { overflow-x: hidden; }
+
+
+        /* Custom Brand Text Color */
+        .text-brand { color: #52525b; }
+        html.dark .text-brand { color: var(--pri-ink); } /* Use primary ink in dark mode for readability */
+    </style>
+</head>
+<body>
+    <header class="bg-[var(--surface-200)]/80 backdrop-blur-lg shadow-md sticky top-0 z-50 border-b border-[var(--border-color)]">
+        <div class="container mx-auto px-6">
+            <nav class="flex justify-between items-center py-3">
+                <div class="flex items-center gap-3 text-lg">
+                <a href="https://daniavm.github.io/assets/images/PropuestaVMA/ProyectoVMA.html" target="_blank" rel="noopener" class="flex items-center gap-2">
+                    <img src="https://daniavm.github.io/assets/images/PropuestaVMA/Principia_Logo_Oficial.png" alt="Principia Logo" class="h-8">
+                    <span class="font-raleway font-normal text-2xl text-brand hidden sm:inline" data-key="principia">Principia</span>
+                </a>
+                <span class="text-gray-400 font-light mx-1">×</span>
+                <a href="https://vma.cl/" target="_blank" rel="noopener" class="flex items-center gap-2">
+                    <img src="https://daniavm.github.io/assets/images/PropuestaVMA/VMA_Logo.png" alt="Villa María Academy Logo" class="h-8">
+                    <span class="font-bold text-xl hidden sm:inline" data-key="villaMaria">Villa María Academy</span>
+                </a>
+                </div>
+
+
+                <div class="flex items-center space-x-2">
+                    <div class="hidden md:flex items-center gap-4">
+                        <div class="theme-switch-wrapper">
+                            <i class="fas fa-sun text-yellow-500"></i>
+                            <label class="theme-switch" for="theme-toggle-desktop">
+                                <input type="checkbox" id="theme-toggle-desktop" />
+                                <span class="slider round"></span>
+                            </label>
+                            <i class="fas fa-moon text-blue-300"></i>
+                        </div>
+                        <button class="font-bold text-sm text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)] w-8" id="langToggle" aria-label="Cambiar idioma">
+                            ESP
+                        </button>
+                    </div>
+                    <button id="hamburger-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden hover:bg-gray-100 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menú principal</span>
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="hidden lg:hidden" id="mobile-menu">
+                <ul class="flex flex-col items-center py-4 space-y-4">
+                    <li class="md:hidden flex items-center gap-3 text-sm">
+                        <button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)]" id="themeToggleMobile" aria-label="Cambiar tema">
+                            <i id="sun-icon-mobile" class="fas fa-sun fa-lg mr-2"></i> <span data-key="themeLabelLight">Modo Claro</span>
+                            <i id="moon-icon-mobile" class="fas fa-moon fa-lg mr-2 hidden"></i> <span data-key="themeLabelDark" class="hidden">Modo Oscuro</span>
+                        </button>
+                    </li>
+                    <li class="md:hidden flex items-center gap-3 text-sm">
+                        <button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)]" id="langToggleMobile" aria-label="Cambiar idioma">
+                            <i class="fas fa-globe fa-lg mr-2"></i> <span data-key="langLabel">Cambiar a Español</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <div id="slides-container" class="h-full container mx-auto px-6">
+            <!-- Slide 1: Hero (texto centrado; fondo 5:1 anclado abajo, full-bleed) -->
+            <div
+            class="slide slide-centered relative
+                    w-screen left-1/2 -translate-x-1/2
+                    min-h-[70vh]
+                    bg-no-repeat bg-bottom bg-[length:100%_auto]"
+            style="background-image:url('./proyectoVMA_banner.png');"
+            >
+            <!-- Velo para legibilidad (opcional) -->
+            <div class="hero-veil"></div>
+
+            <!-- Contenido centrado -->
+            <section class="text-center relative z-10 px-6">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text" data-key="heroTitle">
+                Construyendo el Futuro de Nuestras Niñas
+                </h1>
+                <p class="text-lg md:text-xl text-[var(--pri-ink-2)] max-w-3xl mx-auto" data-key="heroSubtitle">
+                Una alianza para transformar datos en oportunidades de crecimiento para cada alumna. Durante seis meses, sentaremos las bases del primer Departamento de Innovación, un motor que nacerá desde el corazón del colegio para asegurar su liderazgo y la evolución constante de su proyecto educativo.
+                </p>
+            </section>
+            </div>
+
+
+            <!-- Slide 2: Journey & Objectives -->
+            <div class="slide py-12 md:py-20">
+                <section class="mb-16 content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 h-deco section-title" data-key="journeyTitle">Nuestro Viaje de Implementación</h2>
+                    <div class="timeline relative flex justify-between items-start" id="timeline-interactive">
+                        <div class="timeline-progress" id="timeline-progress"></div>
+                        <div class="timeline-step w-1/3 text-center cursor-pointer relative z-10" data-act="1">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <h3 class="font-bold text-lg" data-key="act1Title">Fase I</h3>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="act1Subtitle">Vincular y Ordenar</p>
+                        </div>
+                        <div class="timeline-step w-1/3 text-center cursor-pointer relative z-10" data-act="2">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+                            <h3 class="font-bold text-lg" data-key="act2Title">Fase II</h3>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="act2Subtitle">Explorar y Probar</p>
+                        </div>
+                        <div class="timeline-step w-1/3 text-center cursor-pointer relative z-10" data-act="3">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <h3 class="font-bold text-lg" data-key="act3Title">Fase III</h3>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="act3Subtitle">Innovar y Formalizar</p>
+                        </div>
+                    </div>
+                    <div id="timeline-details-container" class="timeline-details"></div>
+                </section>
+
+                <section class="content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="objectivesTitle">Objetivos Específicos</h2>
+                    <div id="objectives-accordion" class="space-y-1"></div>
+                </section>
+            </div>
+
+            <!-- Slide 3: Framework -->
+            <div class="slide py-12 md:py-20">
+                <section class="content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="requirementsTitle">Requisitos para el Éxito</h2>
+
+                    <div class="flex flex-wrap justify-center gap-8">
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-users fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req1Title">Liderazgo y Patrocinio Académico</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req1Desc">Respaldo activo de la Dirección Académica.</p>
+                            </div>
+                        </div>
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-database fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req2Title">Acceso a Plataformas</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req2Desc">Acceso a fuentes de datos y Workspace.</p>
+                            </div>
+                        </div>
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-bullseye fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req3Title">Interlocutores Académicos</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req3Desc">Coordinadores y Jefes de Departamento.</p>
+                            </div>
+                        </div>
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-calendar-check fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req4Title">Gobernanza Ágil</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req4Desc">Reuniones quincenales de seguimiento.</p>
+                            </div>
+                        </div>
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-shield-alt fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req5Title">Privacidad y Seguridad</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req5Desc">Uso responsable y confidencial de datos.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="mt-16 content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="valuesTitle">Nuestros Valores</h2>
+                    <div class="flex flex-wrap justify-center gap-8">
+
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full max-w-sm">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-hands-helping fa-2x"></i>
+                            </div>
+                            <h4 class="font-bold text-lg" data-key="val1Title">Colaboración Radical</h4>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="val1Desc">Las mejores soluciones se construyen en conjunto.</p>
+                        </div>
+
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full max-w-sm">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-bolt fa-2x"></i>
+                            </div>
+                            <h4 class="font-bold text-lg" data-key="val2Title">Entrega de Valor Temprano</h4>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="val2Desc">Nos enfocamos en ciclos cortos para generar resultados visibles.</p>
+                        </div>
+
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full max-w-sm">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-comments fa-2x"></i>
+                            </div>
+                            <h4 class="font-bold text-lg" data-key="val3Title">Comunicación Transparente</h4>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="val3Desc">Mantenemos un diálogo fluido sobre avances y desafíos.</p>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+            <!-- Slide 4: Único enlace al documento detallado -->
+            <div class="slide py-12 md:py-20">
+    
+                <div class="h-full flex flex-col items-center justify-center">
+
+
+                        
+                        <div class="text-6xl text-[var(--pri-orange)] mb-6">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 section-title" data-key="docsTitle">
+                            Documento Detallado del Plan
+                        </h2>
+                        <div class="h-1 w-24 bg-gradient-to-r from-[var(--pri-orange)] to-[var(--pri-orange-600)] mx-auto mb-8 rounded-full"></div>
+                
+                        <p class="text-[var(--pri-ink-2)] mb-10 max-w-2xl mx-auto" data-key="docsSubtitle">
+                            Este es el siguiente paso. Abre el documento interactivo que desarrolla en profundidad cada componente del plan, sus entregables y cronogramas.
+                        </p>
+                
+                        <a href="https://docs.google.com/document/d/1osOVP6qYvxQXmKFbOd-gRoOqaWlH5kADif7TtKBxgcA/edit?usp=sharing"
+                        target="_blank" rel="noopener"
+                        class="btn btn-primary inline-flex items-center text-lg px-8 py-3">
+                            <span data-key="openDocButton">Abrir Plan Detallado</span>
+                            <i class="fas fa-arrow-up-right-from-square ml-3"></i>
+                        </a>
+                
+                    
+
+                </div> 
+            </div>
+
+        </div>
+    </main>
+    
+    <div class="modal-overlay" id="blueprint-modal">
+        <div class="modal-container">
+            <div class="modal-header p-5 flex justify-between items-center border-b border-[var(--border-color)]">
+                <h3 id="modal-title" class="text-xl font-bold"></h3>
+                <button id="modal-close-btn" class="text-2xl font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)] transition-colors">&times;</button>
+            </div>
+            <div class="modal-content p-6 overflow-y-auto" id="modal-content"></div>
+        </div>
+    </div>
+
+    <footer class="bg-[var(--surface-200)]/80 backdrop-blur-lg border-t border-[var(--border-color)] sticky bottom-0 z-40">
+        <div id="slide-nav" class="container mx-auto py-3 px-6 flex items-center">
+            <div class="flex-1 flex justify-start">
+                <button id="prev-btn" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left mr-2"></i> <span data-key="prevButton">Anterior</span>
+                </button>
+            </div>
+            <div class="flex-1 flex justify-center">
+                <div id="step-indicator" class="text-sm font-bold text-[var(--pri-ink-2)]"></div>
+            </div>
+            <div class="flex-1 flex justify-end">
+                <button id="next-btn" class="btn btn-action-blue">
+                    <span data-key="nextButton">Siguiente</span> <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentLanguage = 'en';
+            const translations = {
+                es: {
+                    principia: "Principia",
+                    villaMaria: "Villa María Academy",
+                    heroTitle: "Liderazgo Académico Basado en Datos",
+                    heroSubtitle: "Una alianza estratégica con Dirección Académica para transformar la información en decisiones pedagógicas de alto impacto. Durante seis meses, sentaremos las bases de una nueva capacidad de innovación para potenciar el seguimiento formativo de cada alumna y consolidar la excelencia del proyecto educativo.",
+                    journeyTitle: "Nuestro Plan de Acción Estratégico",
+                    act1Title: "Fase I", act1Subtitle: "Diagnóstico y Alineación",
+                    act2Title: "Fase II", act2Subtitle: "Soluciones y Valor Táctico",
+                    act3Title: "Fase III", act3Subtitle: "Innovación y Sostenibilidad",
+                    objectivesTitle: "Objetivos para la Gestión Académica",
+                    requirementsTitle: "Requisitos para el Éxito",
+                    req1Title: "Liderazgo y Patrocinio Académico", req1Desc: "Respaldo activo de la Dirección Académica.",
+                    req2Title: "Acceso a Plataformas", req2Desc: "Acceso a fuentes de datos y Workspace.",
+                    req3Title: "Interlocutores Académicos", req3Desc: "Coordinadores y Jefes de Departamento.",
+                    req4Title: "Gobernanza Ágil", req4Desc: "Reuniones quincenales de seguimiento.",
+                    req5Title: "Privacidad y Seguridad", req5Desc: "Uso responsable y confidencial de datos.",
+                    valuesTitle: "Nuestros Valores",
+                    val1Title: "Colaboración Radical", val1Desc: "Las mejores soluciones se construyen en conjunto.",
+                    val2Title: "Entrega de Valor Temprano", val2Desc: "Nos enfocamos en ciclos cortos para generar resultados visibles.",
+                    val3Title: "Comunicación Transparente", val3Desc: "Mantenemos un diálogo fluido sobre avances y desafíos.",
+                    version: "Propuesta de Colaboración: Principia & Villa María Academy — Agosto 2025",
+                    viewBlueprint: "Ver Ejemplo Visual", modalTitlePrefix: "Ejemplo:",
+                    artifactsArchitecture: "Ejemplo de Entregable", workPlan: "Plan de Trabajo Simplificado",
+                    durationLabel: "Duración:", weeksLabel: "semanas", descriptionLabel: "Descripción", objectivesLabel: "Objetivos Clave",
+                    prevButton: "Anterior", nextButton: "Siguiente", stepLabel: "Paso", toStartButton: "Volver al Inicio",
+                    themeLabelLight: "Modo Claro", themeLabelDark: "Modo Oscuro", langLabel: "Switch to English",
+                    docsTitle: "Documento Detallado del Plan",
+                    docsSubtitle: "Abre el documento que desarrolla cada componente del plan.",
+                    openDocButton: "Abrir documento",
+                    timelineActs: {
+                        1: { title: 'Fase I: Diagnóstico y Alineación Estratégica', description: 'Comenzamos con una inmersión profunda para entender los flujos de información y los desafíos clave de la Dirección Académica. El objetivo es mapear sus procesos actuales para alinear nuestras soluciones con sus metas estratégicas y asegurar que cada paso aporte valor directo a su gestión.' },
+                        2: { title: 'Fase II: Soluciones Tácticas y Valor Demostrado', description: 'Transformamos el diagnóstico en acción. Desarrollamos prototipos rápidos que resuelven problemas concretos, como la consolidación de reportes o la automatización de alertas, demostrando de forma tangible cómo la tecnología optimiza la gestión pedagógica y libera tiempo valioso.' },
+                        3: { title: 'Fase III: Innovación y Sostenibilidad Académica', description: 'Con la confianza ganada, co-diseñamos una capacidad de innovación permanente al servicio del área académica. Entregamos la estructura y hoja de ruta para un nuevo motor de mejora continua, asegurando que el liderazgo pedagógico del colegio se proyecte hacia el futuro.' }
+                    },
+                    contentData: {
+                        'vincular-informacion': { title: "Objetivo 1: Potenciar la Toma de Decisiones con Datos Académicos", durationWeeks: "12–16", stages: { 
+                            'vinculacion-contextual': { title: 'Visión 360° de la Trayectoria del Alumno', subtitle: 'Unificar fuentes para una visión completa.', description: 'Inmersión con la Dirección Académica y coordinadores para centralizar las fuentes de datos clave (Schooltrack, Psicofast, etc.) en un modelo de información coherente.', objectives: 'Establecer una "única fuente de verdad" que permita un seguimiento integral del progreso y bienestar de las alumnas, eliminando silos de información.', blueprint: { visual: './people_link.mp4', workplan: [{phase:'Semanas 1-4', tasks:['Reuniones con equipos clave', 'Levantamiento de sistemas y planillas']}, {phase:'Semanas 5-6', tasks:['Mapeo de brechas de información', 'Priorización de oportunidades']}] } }, 
+                            'exploracion-oportunidades': { title: 'Identificación de Oportunidades de Intervención Temprana', subtitle: 'Convertir datos en acciones preventivas.', description: 'En talleres con el equipo directivo, identificamos indicadores clave para prototipar "victorias tempranas", como alertas de riesgo académico o seguimiento de rendimiento por asignatura.', objectives: 'Validar 2-3 prototipos de alto impacto que permitan a los coordinadores y profesores intervenir de manera proactiva y oportuna.', blueprint: { visual: './quick_wins.png', workplan: [{phase:'Semanas 1-2', tasks:['Taller de ideas con equipos', 'Clasificación de iniciativas']}, {phase:'Semanas 3-4', tasks:['Selección de prototipos iniciales', 'Definición del plan de acción']}] } }, 
+                            'demostracion-dashboard': { title: 'Dashboard de Gestión Académica', subtitle: 'Visualizar para liderar con evidencia.', description: 'Construimos un panel interactivo en Looker Studio para la Dirección Académica, con los indicadores definidos para monitorear el pulso del colegio en tiempo real.', objectives: 'Entregar una herramienta de liderazgo que facilite el análisis de tendencias, la toma de decisiones estratégicas y la comunicación de resultados a toda la comunidad.', blueprint: { visual: './DA_dashboard.png', workplan: [{phase:'Semanas 1-2', tasks:['Definición de indicadores clave (KPIs)', 'Gestión de accesos a datos']}, {phase:'Semanas 3-5', tasks:['Desarrollo del panel y pruebas', 'Monitorización de uso y rendimiento']}, {phase:'Semana 6', tasks:['Sesión de "cómo leer los datos"', 'Entrega de guía de uso']}] } } 
+                        } },
+                        'probar-automatizaciones': { title: "Objetivo 2: Optimizar la Gestión Pedagógica y Liberar Tiempo Docente", durationWeeks: "10–15", stages: { 
+                            'mapeo-procesos': { title: 'Diagnóstico de Carga Administrativa', subtitle: 'Identificar cuellos de botella en la operación académica.', description: 'Analizamos junto a los coordinadores las tareas administrativas que más tiempo consumen (generación de informes, gestión de notas, etc.) para detectar los puntos de mayor fricción.', objectives: 'Crear un mapa de procesos priorizado que nos permita enfocar los esfuerzos de automatización donde más impacto generen, devolviendo horas a la planificación pedagógica.', blueprint: { visual: './procesos_oportunidades_es.png', workplan: [{phase:'Semanas 1-2', tasks:['Análisis de tareas recurrentes', 'Medición de tiempos y recursos']}, {phase:'Semana 3', tasks:['Creación de mapa visual del proceso', 'Selección de puntos a optimizar']}] } },
+                            'enrutador-schooltrack': { title: 'Ejemplo 1: Flujo de Datos Confiable y Automatizado', subtitle: 'Garantizar la integridad de la información académica.', description: 'Creamos un flujo automatizado que extrae y organiza los reportes de Schooltrack, asegurando que los datos que alimentan el Dashboard de Gestión Académica sean siempre precisos y puntuales.', objectives: 'Eliminar la dependencia de procesos manuales, reducir errores y asegurar que la Dirección Académica siempre base sus decisiones en información actualizada y confiable.', blueprint: { visual: './flyaway.mp4', workplan: [{phase:'Semanas 1-3', tasks:['Mapeo del proceso de descarga y guardado actual', 'Diseño del flujo automatizado']}, {phase:'Semanas 4-6', tasks:['Desarrollo del prototipo "FlyAway"', 'Pruebas con reportes reales']}] } },
+                            'reportes-instantaneos': { title: 'Ejemplo 2: Estandarización de Reportes de Apoyo', subtitle: 'Agilizar el análisis para un mejor acompañamiento.', description: 'Desarrollamos una herramienta que transforma datos complejos (ej. Psicofast) en reportes visuales estandarizados con un solo clic, listos para ser analizados por el equipo de apoyo.', objectives: 'Facilitar un diagnóstico rápido y consistente, permitiendo que los equipos dediquen menos tiempo a procesar datos y más tiempo a diseñar estrategias de apoyo para las alumnas.', blueprint: { visual: './autoreport.mp4', workplan: [{phase:'Semanas 1-2', tasks:['Definición de la estructura del reporte estándar', 'Diseño de la interfaz simple']}, {phase:'Semanas 3-5', tasks:['Desarrollo del algoritmo de procesamiento', 'Pruebas con equipo piloto']}, {phase:'Semana 6', tasks:['Entrega de la herramienta y guía rápida', 'Medición del tiempo ahorrado']}] } }
+                        } },
+                        'instalar-innovacion': { title: 'Objetivo 3: Instalar una Capacidad de Innovación Académica', durationWeeks: "8–12", stages: { 
+                            'sistema-propuestas': { title: 'Canal de Iniciativas de Mejora Pedagógica', subtitle: 'Un sistema para capturar y gestionar la innovación.', description: 'Implementamos un sistema simple para que coordinadores y docentes puedan proponer iniciativas de mejora. Esto permite a la Dirección Académica tener un portafolio de proyectos priorizado.', objectives: 'Formalizar un proceso de innovación bottom-up, alineando las ideas que surgen en el día a día con las metas estratégicas del área académica.', blueprint: { visual: './proposal_system.png', workplan: [{phase:'Semanas 1-2', tasks:['Co-diseño del formulario de propuestas', 'Definición de criterios de priorización (impacto vs. esfuerzo)']}, {phase:'Semanas 3-4', tasks:['Implementación del formulario y la planilla conectada', 'Comunicación y lanzamiento del nuevo canal']}] } }, 
+                            'tablero-monitoreo': { title: 'Tablero de Seguimiento de Proyectos Estratégicos', subtitle: 'Visibilidad total sobre el avance de la innovación.', description: 'Construimos un tablero visual que permite a la Dirección Académica monitorear el estado de cada iniciativa de innovación en tiempo real, desde su propuesta hasta su implementación.', objectives: 'Proporcionar una herramienta de gobernanza para gestionar el portafolio de proyectos, facilitar el seguimiento y comunicar los avances de forma transparente.', blueprint: { visual: './innovation_progress_es.png', workplan: [{phase:'Semanas 1-2', tasks:['Diseño de las etapas del proyecto (Ej: Idea, Análisis, En Progreso, Completado)', 'Creación de la plantilla en Google Sheets/Looker Studio']}, {phase:'Semanas 3-4', tasks:['Conexión con el sistema de propuestas', 'Capacitación al equipo central sobre cómo mantener y leer el tablero']}] } },
+                            'codiseno-documento-base': { title: 'Co-diseño del Área de Innovación Académica', subtitle: 'La piedra angular para el futuro.', description: 'En un taller final con el equipo directivo, co-diseñamos los pilares y la hoja de ruta del Área de Innovación, asegurando su alineación con el Proyecto Educativo 2026.', objectives: 'Validar y entregar el Documento Base que formaliza esta nueva capacidad, garantizando que nazca desde la Dirección Académica para servir a sus objetivos a largo plazo.', blueprint: { visual: './co_design.png', workplan: [{phase:'Semanas 1', tasks:['Síntesis de todos los hallazgos', 'Borrador de la misión y visión del área']}, {phase:'Semana 2', tasks:['Diseño de procesos, roles y responsabilidades', 'Creación de la primera lista de proyectos para 2026']}, {phase:'Semana 3', tasks:['Taller de validación con el equipo directivo', 'Ajustes finales y acuerdos']}, {phase:'Semana 4', tasks:['Entrega del Documento Base final y presentación']}] } } 
+                        } }
+                    }
+                },
+                en: { // Mantenemos la versión en inglés sin cambios
+                    principia: "Principia",
+                    villaMaria: "Villa María Academy",
+                    heroTitle: "Building the Future for Our Girls",
+                    heroSubtitle: "An alliance to transform data into growth opportunities for every student. For six months, we will lay the foundation for the first Innovation Department, an engine born from the heart of the school to ensure its leadership and the constant evolution of its educational project.",
+                    journeyTitle: "Our Implementation Journey",
+                    act1Title: "Phase I", act1Subtitle: "Listen and Organize",
+                    act2Title: "Phase II", act2Subtitle: "Solve and Demonstrate",
+                    act3Title: "Phase III", act3Subtitle: "Formalize and Grow",
+                    objectivesTitle: "Specific Objectives",
+                    requirementsTitle: "Requirements for Success",
+                    req1Title: "Executive Sponsorship", req1Desc: "Active support from Directors and Coordinators.",
+                    req2Title: "Platform Access", req2Desc: "Access to data sources and Workspace.",
+                    req3Title: "Focal Points", req3Desc: "Key contacts in crucial areas.",
+                    req4Title: "Agile Governance", req4Desc: "Bi-weekly follow-up meetings.",
+                    req5Title: "Privacy and Security", req5Desc: "Responsible and confidential use of data.",
+                    valuesTitle: "Our Values",
+                    val1Title: "Radical Collaboration", val1Desc: "The best solutions are built together.",
+                    val2Title: "Early Value Delivery", val2Desc: "We focus on short cycles to generate visible results.",
+                    val3Title: "Transparent Communication", val3Desc: "We maintain a fluid dialogue about progress and challenges.",
+                    version: "Collaboration Proposal: Principia & Villa María Academy — August 2025",
+                    viewBlueprint: "View Visual Example", modalTitlePrefix: "Example:",
+                    artifactsArchitecture: "Example Deliverable", workPlan: "Simplified Work Plan",
+                    durationLabel: "Duration:", weeksLabel: "weeks", descriptionLabel: "Description", objectivesLabel: "Objectives",
+                    prevButton: "Previous", nextButton: "Next", stepLabel: "Step", toStartButton: "Back to Start",
+                    themeLabelLight: "Light Mode", themeLabelDark: "Dark Mode", langLabel: "Switch to Spanish",
+                    docsTitle: "Full Plan Document",
+                    docsSubtitle: "Open the document with the detailed plan.",
+                    openDocButton: "Open document",
+
+                    timelineActs: {
+                        1: { title: 'Phase I: Listen and Organize Information', description: 'Our journey begins with active listening. We will meet with the teams to understand their day-to-day, mapping how information flows and where the opportunities lie. The goal is to create a common language and shared understanding that allows us to make better decisions.' },
+                        2: { title: 'Phase II: Solve and Demonstrate with Prototypes', description: 'We transform knowledge into action. We apply what we have learned to give back the most valuable resource to educators: time. Through functional and rapid prototypes, we will tangibly demonstrate how technology can simplify processes, free up hours, and allow the focus to return to pedagogy.' },
+                        3: { title: 'Phase III: Formalize the Capacity to Innovate', description: 'The final act is building the future. With the trust gained and value demonstrated, the goal is to install a permanent innovation capacity within the school. We will deliver the structure, methodology, and roadmap to found the Innovation and Development Area, a true engine for the school\'s evolution, not just a set of finished tools.' }
+                    },
+                    contentData: {
+                        'vincular-informacion': { title: "Objective 1: Understand and Visualize Data", durationWeeks: "12–16", stages: { 
+                            'vinculacion-contextual': { title: 'Contextual Linking', subtitle: 'Understand the data DNA.', description: 'Immersion with key teams to map information sources, responsibilities, and current challenges.', objectives: 'Build trust, detect information gaps, and prioritize decisions that require good evidence.', blueprint: { visual: './people_link.mp4', workplan: [{phase:'Weeks 1-4', tasks:['Meetings with key teams', 'Survey of systems and spreadsheets']}, {phase:'Weeks 5-6', tasks:['Mapping of information gaps', 'Prioritization of opportunities']}] } }, 
+                            'exploracion-oportunidades': { title: 'Opportunity Exploration', subtitle: 'Identify high-impact ideas.', description: 'Together with the teams, we identify "early wins," such as creating attendance alerts or academic performance views.', objectives: 'Validate 2–3 high-value opportunities that can be quickly prototyped to demonstrate value.', blueprint: { visual: './quick_wins.png', workplan: [{phase:'Weeks 1-2', tasks:['Ideation workshop with teams', 'Initiative classification']}, {phase:'Weeks 3-4', tasks:['Selection of initial prototypes', 'Action plan definition']}] } }, 
+                            'demostracion-dashboard': { title: 'Capability Demonstration', subtitle: 'Visualize the power of data.', description: 'We build an interactive dashboard in Looker Studio with key indicators, using real school data.', objectives: 'Deliver a tangible tool that centralizes clear and updated metrics for decision-making.', blueprint: { visual: './DA_dashboard.png', workplan: [{phase:'Weeks 1-2', tasks:['Definition of Key Performance Indicators (KPIs)', 'Data access management']}, {phase:'Weeks 3-5', tasks:['Dashboard development and testing', 'Usage and performance monitoring']}, {phase:'Week 6', tasks:['"How to read the data" session', 'User guide delivery']}] } } 
+                        } },
+                        'probar-automatizaciones': { title: "Objective 2: Automate and Free Up Time", durationWeeks: "10–15", stages: { 
+                            'mapeo-procesos': { title: 'Process Mapping to Identify Opportunities', subtitle: 'Visualizing administrative time to act with precision.', description: 'We analyze the most recurrent administrative tasks to understand how much time they consume and identify bottlenecks. This is the starting point for finding the best automation opportunities.', objectives: 'Create a prioritized list of processes that are good candidates for automation, focusing on those that will free up the most time for the teams.', blueprint: { visual: './procesos_oportunidades_en.png', workplan: [{phase:'Weeks 1-2', tasks:['Analysis of recurring tasks', 'Measurement of time and resources']}, {phase:'Week 3', tasks:['Creation of a visual process map', 'Selection of points to optimize']}] } },
+                            'enrutador-schooltrack': { title: 'Example 1: "FlyAway" Report Router', subtitle: 'Automate Schooltrack data management.', description: 'As a result of the mapping, we can create automated workflows that take Schooltrack reports and instantly organize them in Google Drive. This eliminates manual file downloading and uploading, ensuring data is always up-to-date for dashboards.', objectives: 'Demonstrate how to solve one of the most complex and manual processes at the school, ensuring data integrity and real-time availability.', blueprint: { visual: './flyaway.mp4', workplan: [{phase:'Weeks 1-3', tasks:['Map current download and save process', 'Design automated workflow']}, {phase:'Weeks 4-6', tasks:['Develop "FlyAway" prototype', 'Test with real reports']}] } },
+                            'reportes-instantaneos': { title: 'Example 2: Instant Report Generator', subtitle: 'From raw data to insights in seconds.', description: 'Another powerful example is a tool for Psicofast reports, where you simply drag and drop the file to generate a standardized visual report. This eliminates the need for re-typing data and complex analysis training.', objectives: 'Demonstrate how automation eliminates repetitive tasks, standardizes reporting, and empowers teachers with clear data immediately.', blueprint: { visual: './autoreport.mp4', workplan: [{phase:'Weeks 1-2', tasks:['Define standard report structure', 'Design simple interface']}, {phase:'Weeks 3-5', tasks:['Develop processing algorithm', 'Pilot team testing']}, {phase:'Week 6', tasks:['Deliver tool and quick guide', 'Measure time saved']}] } }
+                        } },
+                        'instalar-innovacion': { title: 'Objective 3: Install the Capacity to Innovate', durationWeeks: "8–12", stages: { 
+                            'sistema-propuestas': { title: 'Initiative Proposal and Prioritization System', subtitle: 'A single channel for good ideas to take shape.', description: 'We will create a simple system (using Google Forms and Sheets) where any staff member can submit a need or an innovative idea. This centralizes proposals and allows for a transparent prioritization process based on impact and feasibility.', objectives: 'To democratize innovation, capture valuable ideas from those on the front lines, and establish a clear, data-driven workflow for selecting which projects to pursue.', blueprint: { visual: './proposal_system.png', workplan: [{phase:'Weeks 1-2', tasks:['Co-design of the proposal form', 'Definition of prioritization criteria (impact vs. effort)']}, {phase:'Weeks 3-4', tasks:['Implementation of the form and connected spreadsheet', 'Communication and launch of the new channel']}] } },
+                            'tablero-monitoreo': { title: 'Real-Time Project Monitoring Dashboard', subtitle: 'Full visibility on innovation progress.', description: 'We will build a visual dashboard (like a Kanban board in Google Sheets or a simple Looker Studio report) that shows the status of every approved initiative. It will track projects from "Idea Proposed" to "Completed", making the entire innovation pipeline visible to everyone.', objectives: 'To provide transparency on project progress, facilitate follow-up for stakeholders, and establish a simple, visual tool for managing the innovation portfolio.', blueprint: { visual: './innovation_progress_en.png', workplan: [{phase:'Weeks 1-2', tasks:['Design of project stages (e.g., Idea, Analysis, In Progress, Completed)', 'Template creation in Google Sheets/Looker Studio']}, {phase:'Weeks 3-4', tasks:['Connection with the proposal system', 'Training for the core team on how to maintain and read the board']}] } },
+                            'codiseno-documento-base': { title: 'Co-design of the Innovation Area', subtitle: 'The cornerstone for the future.', description: 'We synthesize all learnings from the previous months and co-design the pillars and roadmap for the Innovation and Development Area for 2026.', objectives: 'Produce and validate the Base Document that will guide the implementation and growth of the area, ensuring the school takes ownership of this new capability.', blueprint: { visual: './co_design.png', workplan: [{phase:'Semanas 1', tasks:['Synthesis of all findings', 'Draft of the area\'s mission and vision']}, {phase:'Semana 2', tasks:['Design of processes, roles, and responsibilities', 'Creation of the first project list for 2026']}, {phase:'Semana 3', tasks:['Validation workshop with the management team', 'Final adjustments and agreements']}, {phase:'Semana 4', tasks:['Delivery of the final Base Document and presentation']}] } } 
+                        } }
+                    }
+                }
+            };
+            
+            const root = document.documentElement;
+            const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+            const themeToggleMobile = document.getElementById('themeToggleMobile');
+            const langToggles = [document.getElementById('langToggle'), document.getElementById('langToggleMobile')];
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function applyTheme(theme) {
+                root.className = theme === 'dark' ? 'dark scroll-smooth' : 'scroll-smooth';
+                localStorage.setItem('theme', theme);
+                
+                themeToggleDesktop.checked = theme === 'dark';
+                document.getElementById('sun-icon-mobile').classList.toggle('hidden', theme === 'dark');
+                document.getElementById('moon-icon-mobile').classList.toggle('hidden', theme === 'light');
+                document.querySelector('[data-key="themeLabelLight"]').classList.toggle('hidden', theme === 'dark');
+                document.querySelector('[data-key="themeLabelDark"]').classList.toggle('hidden', theme === 'light');
+            }
+            
+            themeToggleDesktop.addEventListener('change', (e) => {
+                applyTheme(e.target.checked ? 'dark' : 'light');
+            });
+
+            themeToggleMobile.addEventListener('click', () => {
+                const currentTheme = root.classList.contains('dark') ? 'dark' : 'light';
+                applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+            });
+
+            hamburgerButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                hamburgerButton.setAttribute('aria-expanded', !mobileMenu.classList.contains('hidden'));
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.animated-card').forEach(card => observer.observe(card));
+
+            let timelineActs = translations[currentLanguage].timelineActs;
+            let contentData = translations[currentLanguage].contentData;
+
+            const timelineInteractive = document.getElementById('timeline-interactive');
+            const timelineDetailsContainer = document.getElementById('timeline-details-container');
+            const timelineProgress = document.getElementById('timeline-progress');
+
+            timelineInteractive.addEventListener('click', e => {
+                const step = e.target.closest('.timeline-step');
+                if (!step) return;
+                const actId = step.dataset.act;
+                const alreadyActive = step.classList.contains('active');
+                document.querySelectorAll('.timeline-step').forEach(s => s.classList.remove('active'));
+                if (alreadyActive) {
+                    timelineDetailsContainer.classList.remove('open');
+                    timelineProgress.style.width = '0%';
+                } else {
+                    step.classList.add('active');
+                    const actData = timelineActs[actId];
+                    const progressPercentage = (actId - 1) * 45 + 5;
+                    timelineProgress.style.width = `${progressPercentage}%`;
+                    timelineDetailsContainer.innerHTML = `<div class="p-6 rounded-lg border bg-[var(--surface-100)] border-[var(--border-color)]"><h3 class="font-bold text-xl">${actData.title}</h3><p class="mt-2 text-[var(--pri-ink-2)]">${actData.description}</p></div>`;
+                    timelineDetailsContainer.classList.add('open');
+                }
+            });
+            
+            const accordionContainer = document.getElementById('objectives-accordion');
+            const modal = document.getElementById('blueprint-modal');
+            const closeBtn = document.getElementById('modal-close-btn');
+
+            function renderAccordion() {
+                const lang = translations[currentLanguage];
+                accordionContainer.innerHTML = Object.keys(contentData).map((key) => {
+                    const objective = contentData[key];
+                    const stagesHtml = Object.keys(objective.stages).map(stageKey => {
+                        const stage = objective.stages[stageKey];
+                        return `<div class="p-4 rounded-lg border border-[var(--border-color)] bg-[var(--surface-100)]">
+                                <h4 class="font-bold">${stage.title}</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]">${stage.subtitle}</p>
+                                <div class="mt-4"><h5 class="font-semibold text-sm uppercase text-[var(--pri-ink-2)] tracking-wider">${lang.descriptionLabel}</h5><p class="text-sm mt-1">${stage.description}</p></div>
+                                <div class="mt-2"><h5 class="font-semibold text-sm uppercase text-[var(--pri-ink-2)] tracking-wider">${lang.objectivesLabel}</h5><p class="text-sm mt-1">${stage.objectives}</p></div>
+                                <div class="mt-4"><button class="btn btn-primary text-sm py-2 px-4" data-goal-id="${key}" data-stage-id="${stageKey}"><i class="fas fa-eye mr-2"></i> ${lang.viewBlueprint}</button></div>
+                            </div>`;
+                    }).join('');
+                    return `<div class="accordion-item border-b border-[var(--border-color)] last:border-b-0">
+                            <button class="accordion-header w-full text-left p-4 hover:bg-[var(--surface-100)] rounded-lg transition-colors flex justify-between items-center">
+                                <div><h3 class="text-xl font-bold">${objective.title}</h3><p class="text-sm text-[var(--pri-ink-2)]">${lang.durationLabel} ${objective.durationWeeks} ${lang.weeksLabel}</p></div>
+                                <span class="chevron text-2xl text-[var(--pri-ink-2)] font-thin transform transition-transform"><i class="fas fa-chevron-right"></i></span>
+                            </button>
+                            <div class="accordion-item-content"><div class="space-y-4">${stagesHtml}</div></div>
+                        </div>`;
+                }).join('');
+                accordionContainer.querySelectorAll('.accordion-header').forEach(header => {
+                    header.addEventListener('click', () => {
+                        const content = header.nextElementSibling;
+                        const wasOpen = content.classList.contains('open');
+
+                        // Cierra todos los acordeones abiertos y resetea su altura
+                        document.querySelectorAll('.accordion-item-content.open').forEach(openContent => {
+                            openContent.style.maxHeight = null; // Resetea la altura
+                            openContent.classList.remove('open');
+                            openContent.previousElementSibling.classList.remove('active');
+                        });
+
+                        // Si el que se clickeó no estaba abierto, lo abrimos dinámicamente
+                        if (!wasOpen) {
+                            header.classList.add('active');
+                            content.classList.add('open');
+                            // Calculamos la altura real del contenido que se desborda
+                            const scrollHeight = content.scrollHeight;
+                            // Aplicamos esa altura dinámicamente para una transición suave
+                            content.style.maxHeight = (scrollHeight + 50) + 'px'; // Añade un margen de 50px
+                        }
+                    });
+                });
+                accordionContainer.querySelectorAll('.btn-primary').forEach(button => {
+                    button.addEventListener('click', (e) => { e.stopPropagation(); openModal(button.dataset.goalId, button.dataset.stageId); });
+                });
+            }
+
+            function openModal(goalId, stageId) {
+                const lang = translations[currentLanguage];
+                const stage = contentData[goalId].stages[stageId];
+                const blueprint = stage.blueprint;
+                if (!blueprint) return;
+
+                document.getElementById('modal-title').textContent = `${lang.modalTitlePrefix} ${stage.title}`;
+
+                const workplanHtml = (blueprint.workplan || []).map(phase => {
+                    return `<div class="mb-2"><p class="font-semibold">${phase.phase}:</p>
+                            <ul class="list-disc list-inside text-[var(--pri-ink-2)]">
+                                ${phase.tasks.map(t => `<li>${t}</li>`).join('')}
+                            </ul></div>`;
+                }).join('');
+
+                const visualRaw = (blueprint.visual || '').trim();
+                let visualHtml = '';
+
+                // 1) MP4 / WEBM / OGG -> insertar <video> nativo con controles
+                if (/\.(mp4|webm|ogg)(\?.*)?$/i.test(visualRaw)) {
+                const ext = (visualRaw.match(/\.([a-z0-9]+)(\?.*)?$/i) || [,'mp4'])[1].toLowerCase();
+                visualHtml = `
+                    <video class="blueprint-visual" controls playsinline preload="metadata" style="object-fit:contain;background:#000;">
+                    <source src="${visualRaw}" type="video/${ext}">
+                    Tu navegador no soporta reproducir este video.
+                    </video>`;
+                }
+                else if (visualRaw.match(/\/d\/([a-zA-Z0-9_-]+)/)) {
+                    const fileId = visualRaw.match(/\/d\/([a-zA-Z0-9_-]+)/)[1];
+                    visualHtml = `<iframe src="https://drive.google.com/file/d/${fileId}/preview" class="blueprint-visual" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+                } else if (/\.(png|jpe?g|gif|svg)(\?.*)?$/i.test(visualRaw)) {
+                    visualHtml = `<img src="${visualRaw}" class="blueprint-visual" alt="${stage.title}">`;
+                } else if (visualRaw.startsWith('<iframe')) {
+                    visualHtml = visualRaw;
+                } else if (/^https?:\/\//i.test(visualRaw)) {
+                    visualHtml = `<iframe src="${visualRaw}" class="blueprint-visual" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+                } else {
+                    visualHtml = `<div class="blueprint-visual flex items-center justify-center text-[var(--pri-ink-2)] p-6">No se pudo previsualizar este contenido. <br><a href="${visualRaw}" target="_blank" rel="noopener">Abrir</a></div>`;
+                }
+
+                document.getElementById('modal-content').innerHTML = `
+                    <div class="space-y-6">
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 modal-section">${lang.artifactsArchitecture}</h4>
+                        ${visualHtml}
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 modal-section">${lang.workPlan}</h4>
+                        ${workplanHtml}
+                    </div>
+                    </div>
+                `;
+
+                // Si añadimos el wrapper con botón, ahora conectamos el handler desde aquí (NO inline SCRIPT)
+                const playBtn = document.getElementById('play-btn');
+                if (playBtn) {
+                    playBtn.addEventListener('click', () => {
+                    const wrapper = document.getElementById('video-wrapper');
+                    if (!wrapper) return;
+                    const video = document.createElement('video');
+                    video.className = 'blueprint-visual';
+                    video.controls = true;
+                    video.playsInline = true;
+                    video.autoplay = true;
+                    video.preload = 'metadata';
+                    video.style.width = '100%';
+                    video.style.height = '100%';
+                    video.style.objectFit = 'cover';
+
+                    const src = document.createElement('source');
+                    src.src = visualRaw;
+                    // intenta inferir tipo
+                    if (/\.(webm)(\?.*)?$/i.test(visualRaw)) src.type = 'video/webm';
+                    else if (/\.(ogg)(\?.*)?$/i.test(visualRaw)) src.type = 'video/ogg';
+                    else src.type = 'video/mp4';
+
+                    video.appendChild(src);
+                    wrapper.innerHTML = ''; // remueve poster + boton
+                    wrapper.appendChild(video);
+                    // intenta reproducir (si falla, el usuario tiene controles)
+                    const p = video.play();
+                    if (p && p.catch) p.catch(err => console.warn('Autoplay fail:', err));
+                    }, { once: true });
+                }
+
+                modal.classList.add('visible');
+            }
+
+            function closeModal() {
+                const video = modal.querySelector('video');
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0; // Opcional: para que el video empiece desde el inicio la próxima vez
+                }
+                modal.classList.remove('visible');
+            }
+
+
+            function setLanguage(lang) {
+                currentLanguage = lang;
+                const langData = translations[lang];
+                document.documentElement.lang = lang;
+                langToggles.forEach(toggle => {
+                    if(toggle.id === 'langToggle') toggle.textContent = lang === 'en' ? 'ESP' : 'ENG';
+                    else {
+                        const span = toggle.querySelector('span');
+                        if (span) span.textContent = lang === 'en' ? langData.langLabel : 'Switch to English';
+                    }
+                });
+                document.querySelectorAll('[data-key]').forEach(element => {
+                    const key = element.getAttribute('data-key');
+                    if (langData[key]) element.innerHTML = langData[key];
+                });
+                timelineActs = langData.timelineActs;
+                contentData = langData.contentData;
+                timelineDetailsContainer.classList.remove('open');
+                timelineDetailsContainer.innerHTML = '';
+                document.querySelectorAll('.timeline-step').forEach(s => s.classList.remove('active'));
+                timelineProgress.style.width = '0%';
+                renderAccordion();
+                updateSlideNav();
+            }
+
+            langToggles.forEach(toggle => toggle.addEventListener('click', () => setLanguage(currentLanguage === 'es' ? 'en' : 'es')));
+
+            const slides = document.querySelectorAll('.slide');
+            const slideNav = document.getElementById('slide-nav');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const stepIndicator = document.getElementById('step-indicator');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.style.display = i === index ? 'block' : 'none';
+                    if (i === 0) {
+                        slide.style.display = i === index ? 'flex' : 'none';
+                    }
+                });
+                currentSlide = index;
+                if (index !== 0) {
+                    window.scrollTo(0, 0);
+                }
+                updateSlideNav();
+            }
+            
+            function updateSlideNav() {
+                const lang = translations[currentLanguage];
+                const prevBtnContainer = prevBtn.parentElement;
+                
+                if (currentSlide === 0) {
+                    prevBtnContainer.style.visibility = 'hidden';
+                } else {
+                    prevBtnContainer.style.visibility = 'visible';
+                }
+                
+                nextBtn.innerHTML = currentSlide === slides.length - 1 ? `<span data-key="toStartButton">${lang.toStartButton}</span> <i class="fas fa-home ml-2"></i>` : `<span data-key="nextButton">${lang.nextButton}</span> <i class="fas fa-arrow-right ml-2"></i>`;
+                stepIndicator.textContent = `${lang.stepLabel} ${currentSlide + 1} / ${slides.length}`;
+            }
+
+            prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+            nextBtn.addEventListener('click', () => showSlide((currentSlide + 1) % slides.length));
+
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('visible')) {
+                    closeModal();
+                }
+            });
+
+            // Initial Load
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            applyTheme(savedTheme);
+            setLanguage(currentLanguage);
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
