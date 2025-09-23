@@ -27,20 +27,52 @@
         }
 
         html.dark {
-          --pri-ink: #e4e4e7;
-          --pri-ink-2: #a1a1aa;
-          --pri-bg: #18181b;
-          --surface-100: #27272a;
-          --surface-200: #3f3f46;
-          --border-color: #52525b;
-          --success:#4ade80;
-          --error:#f87171;
+          --pri-ink: #f1f5f9;
+          --pri-ink-2: #cbd5e1;
+          --pri-bg: #020617;
+          --surface-100: #0f172a;
+          --surface-200: #1e293b;
+          --border-color: #334155;
+          --success:#22c55e;
+          --error:#ef4444;
+        }
+
+        /* Global Sunset/Sunrise Transitions - Efecto Atardecer */
+        * {
+          transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                      border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                      color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                      box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         html, body { height: 100%; }
-        body { font-family: 'Lato', sans-serif; background-color: var(--pri-bg); color: var(--pri-ink); transition: background-color 0.3s, color 0.3s; display: flex; flex-direction: column; }
+        body { 
+            font-family: 'Lato', sans-serif; 
+            background-color: var(--pri-bg); 
+            color: var(--pri-ink); 
+            transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+            display: flex; 
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Night Sky Background - Matching index.html */
+        html.dark body {
+            background: linear-gradient(135deg, #020617 0%, #0f172a 25%, #1e293b 50%, #0f172a 75%, #020617 100%);
+        }
+
+        /* Enhanced Dark Mode Cards - Matching index.html */
+        html.dark .content-container {
+            background: linear-gradient(135deg, #0f172a, #1e293b) !important;
+            border-color: rgba(51, 65, 85, 0.3) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+        }
+
         main { flex-grow: 1; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Fira Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { 
+            font-family: 'Fira Sans', sans-serif;
+            transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
         .font-raleway { font-family: 'Raleway', sans-serif; }
         
         h1.gradient-text, h2.section-title {
@@ -50,7 +82,15 @@
         }
 
         .h-deco{position:relative}
-        .h-deco:after{content:"";display:block;height:4px;width:100px;margin:12px auto 0;background:linear-gradient(90deg, var(--pri-orange), var(--pri-orange-600));border-radius:999px;}
+        .h-deco:after{
+            content:"";
+            display:block;
+            height:4px;
+            width:100px;
+            margin:12px auto 0;
+            background:linear-gradient(90deg, var(--pri-orange), var(--pri-orange-600));
+            border-radius:999px;
+        }
         
         .content-container {
             background-color: var(--surface-200);
@@ -58,37 +98,69 @@
             border-radius: 1rem;
             border: 1px solid var(--border-color);
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            transition: background-color 0.3s, border-color 0.3s;
+            transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                       border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                       box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                       transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        html.dark .content-container { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2); }
+
+        .content-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+        }
+
+        html.dark .content-container:hover {
+            box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+        }
 
         .btn {
             padding: .75rem 1.5rem;
             border-radius: 9999px;
             font-weight: 700;
             cursor: pointer;
-            transition: transform .15s, box-shadow .15s, background-color .2s;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             border: 1px solid transparent;
-            white-space: nowrap; /* Evita que el texto del botón se parta */
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
         }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
         .btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-2px) scale(1.01);
+            will-change: transform;
+        }
+
+        .btn:hover::before {
+            left: 100%;
         }
 
         .btn-primary {
-            background: linear-gradient(to right, var(--pri-orange), var(--pri-orange-600));
+            background: linear-gradient(135deg, var(--pri-orange) 0%, var(--pri-orange-600) 100%);
             color: white;
         }
         .btn-primary:hover {
-            box-shadow: 0 8px 20px rgba(241, 119, 32, .3);
+            background: linear-gradient(135deg, var(--pri-orange-600) 0%, #dc2626 100%);
+            box-shadow: 0 8px 25px rgba(255, 166, 48, 0.4);
         }
 
         .btn-action-blue {
-            background: linear-gradient(to right, var(--pri-blue), var(--pri-blue-600));
+            background: linear-gradient(135deg, var(--pri-blue) 0%, var(--pri-blue-600) 100%);
             color: white;
         }
         .btn-action-blue:hover {
-             box-shadow: 0 8px 20px rgba(0, 167, 225, 0.3);
+            background: linear-gradient(135deg, var(--pri-blue-600) 0%, #1d4ed8 100%);
+            box-shadow: 0 8px 25px rgba(0, 167, 225, 0.4);
         }
 
         .btn-secondary {
@@ -97,8 +169,8 @@
             border-color: var(--pri-blue);
         }
         .btn-secondary:hover {
-             background-color: rgba(0, 167, 225, 0.1);
-             transform: translateY(-2px);
+            background-color: rgba(0, 167, 225, 0.1);
+            transform: translateY(-2px) scale(1.01);
         }
         .btn-secondary:disabled {
             opacity: 0.5;
@@ -108,33 +180,139 @@
             color: var(--pri-ink-2);
         }
 
+        /* Hero Section Enhanced */
+        .hero-banner {
+            position: relative;
+            overflow: hidden;
+            animation: none !important; /* Evita conflicto con fadeIn de .slide */
+        }
 
-        /* --- Custom Component Styles (Aligned with Principia) --- */
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: inherit;
+            background-size: inherit;
+            background-position: inherit;
+            background-repeat: inherit;
+            opacity: 0;
+            transform: translateY(20px) scale(1.03);
+            animation: bannerFadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            animation-delay: 0.1s;
+        }
+
+        @keyframes bannerFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(1.03);
+                filter: blur(3px);
+            }
+            70% {
+                opacity: 0.8;
+                transform: translateY(5px) scale(1.01);
+                filter: blur(1px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+        }
+
+        .hero-veil{
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: veilFadeIn 0.8s ease-out forwards;
+            animation-delay: 0.4s;
+        }
+
+        @keyframes veilFadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: .9;
+            }
+        }
+
+        html.dark .hero-veil{ 
+            opacity: 1;
+        }
+
+        /* Content Fade In Animation */
+        .hero-content {
+            opacity: 0;
+            transform: translateY(15px);
+            animation: contentFadeIn 1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            animation-delay: 0.6s;
+        }
+
+        @keyframes contentFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Enhanced gradient text animation */
+        .gradient-text {
+            background-size: 200% 100%;
+            animation: gradientShift 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Modal Styles with Enhanced Transitions */
         .modal-overlay {
             position: fixed; inset: 0; background: rgba(0,0,0,.7);
             backdrop-filter: blur(8px); z-index: 1000; display: flex;
             align-items: center; justify-content: center;
-            opacity: 0; visibility: hidden; transition: all .35s;
+            opacity: 0; visibility: hidden; 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .modal-overlay.visible { opacity: 1; visibility: visible; }
         .modal-container {
             background: var(--surface-100); width: 90%; max-width: 900px;
             height: 90vh; border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,.2);
             display: flex; flex-direction: column; transform: scale(.96);
-            transition: transform .35s;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .modal-overlay.visible .modal-container { transform: scale(1); }
-        .modal-section h4 { border-bottom: 2px solid var(--pri-orange); padding-bottom: 0.5rem; }
+        .modal-section h4 { 
+            border-bottom: 2px solid var(--pri-orange); 
+            padding-bottom: 0.5rem; 
+        }
         .blueprint-visual {
             width: 100%;
             aspect-ratio: 16 / 9;
             border-radius: 8px;
             background-color: var(--border-color);
             object-fit: cover;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
+        /* Timeline Enhanced Styles */
         .timeline::before {
             content: ''; position: absolute; top: 24px; left: 5%; right: 5%;
             height: 4px; background-color: var(--border-color); z-index: 0;
+            transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .timeline-progress {
             position: absolute; top: 24px; left: 5%; height: 4px;
@@ -145,51 +323,149 @@
             border: 4px solid var(--border-color);
             background-color: var(--surface-200);
             color: var(--pri-ink-2);
-            transition: all .3s;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .timeline-step:hover .timeline-icon { transform: scale(1.15) rotate(10deg); }
-        .timeline-step.active .timeline-icon { border-color: var(--pri-orange); color: var(--pri-orange); }
-        .timeline-details { max-height: 0; overflow: hidden; transition: all .5s ease-in-out; opacity: 0; }
-        .timeline-details.open { max-height: 500px; margin-top: 1.5rem; opacity: 1; }
-        .animated-card { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
-        .accordion-item-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; padding: 0 1.5rem; }
-        .accordion-item-content.open { max-height: 1000px; padding-top: 1.5rem; padding-bottom: 1.5rem;}
-        .accordion-header .chevron { transition: transform 0.3s ease-in-out; }
-        .accordion-header.active .chevron { transform: rotate(90deg); }
-        
-        .slide { display: none; animation: fadeIn 0.5s ease-in-out; height: 100%; position: relative; }
-        .slide-centered { display: flex; flex-direction: column; justify-content: center; align-items: center; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .timeline-step:hover .timeline-icon { 
+            transform: scale(1.15) rotate(10deg); 
+            box-shadow: 0 8px 20px rgba(255, 166, 48, 0.2);
+        }
+        .timeline-step.active .timeline-icon { 
+            border-color: var(--pri-orange); 
+            color: var(--pri-orange);
+            animation: gentleGlow 2s ease-in-out infinite;
+        }
+        .timeline-details { 
+            max-height: 0; overflow: hidden; 
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+            opacity: 0; 
+        }
+        .timeline-details.open { 
+            max-height: 500px; 
+            margin-top: 1.5rem; 
+            opacity: 1; 
+        }
 
-        /* Theme Switcher */
-        .theme-switch-wrapper { display: flex; align-items: center; gap: 8px; }
-        .theme-switch { display: inline-block; height: 24px; position: relative; width: 44px; }
+        /* Accordion Enhanced Styles */
+        .accordion-item-content { 
+            max-height: 0; overflow: hidden; 
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                       padding 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+            padding: 0 1.5rem; 
+        }
+        .accordion-item-content.open { 
+            max-height: 1000px; 
+            padding-top: 1.5rem; 
+            padding-bottom: 1.5rem;
+        }
+        .accordion-header .chevron { 
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .accordion-header.active .chevron { 
+            transform: rotate(90deg); 
+        }
+
+        /* Enhanced Card Animations */
+        .animated-card { 
+            opacity: 0; 
+            transform: translateY(20px); 
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                       transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        
+        /* Slide Animations */
+        .slide { 
+            display: none; 
+            animation: fadeIn 0.5s ease-in-out; 
+            height: 100%; 
+            position: relative; 
+        }
+        .slide-centered { 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(10px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+        @keyframes gentleGlow {
+            0%, 100% { box-shadow: 0 0 5px rgba(255, 166, 48, 0.2); }
+            50% { box-shadow: 0 0 20px rgba(255, 166, 48, 0.4), 0 0 30px rgba(255, 166, 48, 0.1); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* Theme Switcher Enhanced */
+        .theme-switch-wrapper { 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+        }
+        .theme-switch { 
+            display: inline-block; 
+            height: 24px; 
+            position: relative; 
+            width: 44px; 
+        }
         .theme-switch input { display:none; }
-        .slider { background-color: #ccc; bottom: 0; cursor: pointer; left: 0; position: absolute; right: 0; top: 0; transition: .4s; }
-        .slider:before { background-color: #fff; bottom: 4px; content: ""; height: 16px; left: 4px; position: absolute; transition: .4s; width: 16px; }
-        input:checked + .slider { background-color: var(--pri-orange); }
-        input:checked + .slider:before { transform: translateX(20px); }
+        .slider { 
+            background-color: #ccc; 
+            bottom: 0; cursor: pointer; left: 0; 
+            position: absolute; right: 0; top: 0; 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .slider:before { 
+            background-color: #fff; 
+            bottom: 4px; content: ""; 
+            height: 16px; left: 4px; 
+            position: absolute; 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+            width: 16px; 
+        }
+        input:checked + .slider { 
+            background-color: var(--pri-orange); 
+        }
+        input:checked + .slider:before { 
+            transform: translateX(20px); 
+        }
         .slider.round { border-radius: 34px; }
         .slider.round:before { border-radius: 50%; }
 
-        /* Velo opcional para mejorar contraste del texto sobre el banner */
-        .hero-veil{
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            opacity: .9;
-        }
-        html.dark .hero-veil{ 
-            opacity: 1;
-        }
-
-        /* (Opcional) evita scroll horizontal si usas full-bleed con w-screen */
-        body { overflow-x: hidden; }
-
         /* Custom Brand Text Color */
-        .text-brand { color: #52525b; }
-        html.dark .text-brand { color: var(--pri-ink); } /* Use primary ink in dark mode for readability */
-        
+        .text-brand { 
+            color: #52525b; 
+            transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        html.dark .text-brand { 
+            color: var(--pri-ink); 
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--surface-100);
+            transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, var(--pri-orange), var(--pri-orange-600));
+            border-radius: 3px;
+            transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, var(--pri-orange-600), #dc2626);
+        }
+
         /* --- NUEVAS REGLAS PARA RESPONSIVIDAD --- */
         @media (max-width: 380px) {
             #slides-container {
@@ -197,17 +473,16 @@
                 padding-right: 1rem;
             }
             h1.gradient-text {
-                font-size: 2rem; /* Reduce el tamaño del título principal */
+                font-size: 2rem;
             }
             .content-container {
                 padding: 1.5rem;
             }
-            /* Oculta el texto en los botones de navegación si no hay espacio */
             #slide-nav .btn-text {
                 display: none;
             }
             #slide-nav .btn {
-                padding: 0.75rem; /* Ajusta el padding para que sea un círculo */
+                padding: 0.75rem;
                 width: 44px;
                 height: 44px;
                 display: flex;
@@ -215,7 +490,7 @@
                 justify-content: center;
             }
             #slide-nav .btn i {
-                margin: 0; /* Elimina márgenes de los íconos */
+                margin: 0;
             }
         }
     </style>
@@ -231,7 +506,7 @@
                 </a>
                 <span class="text-gray-400 font-light mx-1">×</span>
                 <a href="#" class="flex items-center gap-2" target="_blank">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTveBr-FpLZE6it_YBG_ZPw-uh-3-P45s-PzA&s" alt="IRFE Logo" class="h-8">
+                    <img src="https://daniavm.github.io/assets/images/PropuestaIRFE/logoIRFE.png" alt="IRFE Logo" class="h-8">
                     <span class="font-bold text-xl hidden sm:inline" data-key="clientName">IRFE</span>
                 </a>
                 </div>
@@ -278,14 +553,14 @@
     <main class="flex-grow">
         <div id="slides-container" class="h-full container mx-auto px-6">
             <div
-            class="slide slide-centered relative
+            class="slide slide-centered relative hero-banner
                     w-screen left-1/2 -translate-x-1/2
                     min-h-[70vh]
                     bg-no-repeat bg-bottom bg-[length:100%_auto]"
             style="background-image:url('https://daniavm.github.io/assets/images/PropuestaVMA/proyectoVMA_banner.png');"
             >
             <div class="hero-veil"></div>
-            <section class="text-center relative z-10 px-6">
+            <section class="text-center relative z-10 px-6 hero-content">
                 <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text" data-key="heroTitle">
                 Modernización de la Gestión de Datos para el Liderazgo Académico
                 </h1>
@@ -463,9 +738,14 @@
                     <div class="text-center mt-16 animated-card">
                         <h3 class="text-2xl font-bold" data-key="docsTitle">Documentos para Formalización</h3>
                         <p class="text-[var(--pri-ink-2)] max-w-2xl mx-auto mt-2 mb-6" data-key="docsSubtitle">Para avanzar, te invitamos a revisar el Plan de Trabajo detallado y la propuesta de Contrato de Servicios.</p>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fas fa-file-alt mr-2"></i> <span data-key="docButtonLabel">Revisar Plan de Trabajo y Contrato</span>
-                        </a>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <a href="https://docs.google.com/document/d/1N3aYwpseddMUW2Yx5lkQoh-Mf0W-3G940wQWgvFMTkI/edit?usp=sharing" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-file-alt mr-2"></i> <span data-key="workPlanButtonLabel">Plan de Trabajo</span>
+                            </a>
+                            <a href="https://docs.google.com/document/d/1ArDGPajwt-ZfNKYXXnT0ZEQtPzkAT2mVpqs-EcO31bc/edit?usp=sharing" class="btn btn-secondary" target="_blank">
+                                <i class="fas fa-file-contract mr-2"></i> <span data-key="contractButtonLabel">Propuesta de Contrato</span>
+                            </a>
+                        </div>
                     </div>
 
                 </section>
@@ -507,7 +787,7 @@
                          <h4 class="font-bold text-xl mb-2" data-key="contactTitle">Conversemos</h4>
                          <p class="text-[var(--pri-ink-2)]" data-key="contactPerson">Daniel Valdés Medel</p>
                          <p class="text-sm text-[var(--pri-ink-2)]" data-key="contactRole">Director, Principia SpA</p>
-                         <a href="mailto:descubre@principias.ai" class="mt-4 inline-block btn btn-primary">
+                         <a href="mailto:descubre@principias.ai" class="mt-4 inline-block btn btn-primary focus-outline">
                              <i class="fas fa-envelope mr-2"></i> descubre@principias.ai
                          </a>
                     </div>
@@ -589,7 +869,8 @@
                     investmentInclude4: "Configuración de alertas, capacitación y soporte durante el proyecto.",
                     docsTitle: "Documentos para Formalización",
                     docsSubtitle: "Para avanzar, te invitamos a revisar el Plan de Trabajo detallado y la propuesta de Contrato de Servicios.",
-                    docButtonLabel: "Revisar Plan de Trabajo y Contrato",
+                    workPlanButtonLabel: "Plan de Trabajo",
+                    contractButtonLabel: "Propuesta de Contrato",
                     nextStepsTitle: "Próximos Pasos para Iniciar",
                     nextStepsSubtitle: "Estamos listos para comenzar a construir juntos. Proponemos la siguiente ruta para formalizar nuestra alianza.",
                     step1Title: "Revisión y Ajuste",
@@ -661,7 +942,8 @@
                     investmentInclude4: "Alert configuration, training, and support throughout the project.",
                     docsTitle: "Documents for Formalization",
                     docsSubtitle: "To move forward, we invite you to review the detailed Work Plan and the proposed Service Agreement.",
-                    docButtonLabel: "Review Work Plan and Contract",
+                    workPlanButtonLabel: "Work Plan",
+                    contractButtonLabel: "Contract Proposal",
                     nextStepsTitle: "Next Steps to Get Started",
                     nextStepsSubtitle: "We are ready to start building together. We propose the following path to formalize our partnership.",
                     step1Title: "Review and Adjust",
