@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <!-- ===================================================================
+       Metadatos base
+  ==================================================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Empresas GO — Soluciones de Capital Humano</title>
+
+  <!-- Descripción corta (≈155–160 caracteres) -->
+  <meta name="description" content="Servicios transitorios, outsourcing y reclutamiento con 21+ años de experiencia. Cobertura ágil, selección precisa y gestión documental con tecnología." />
+  <meta name="author" content="Empresas GO" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#0794C6" />
+  <!-- Chile / español -->
+  <meta http-equiv="content-language" content="es-CL" />
+
+  <!-- Indexación/Canonical -->
+  <link rel="canonical" href="https://www.tudominio.cl/" />
+  <meta name="robots" content="index,follow" />
+  <!-- Hreflang (ajusta si tienes versiones en otros idiomas/países) -->
+  <link rel="alternate" href="https://www.tudominio.cl/" hreflang="es-cl" />
+
+  <!-- ===================================================================
+       Open Graph / Twitter Cards
+       (Reemplaza URL_DE_OG_IMAGE por tu imagen 1200x630 optimizada)
+  ==================================================================== -->
+  <meta property="og:site_name" content="Empresas GO" />
+  <meta property="og:title" content="Empresas GO — Soluciones de Capital Humano" />
+  <meta property="og:description" content="Cobertura ágil, selección precisa y cumplimiento garantizado. Con tecnología para gestión documental y analítica." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.tudominio.cl/" />
+  <meta property="og:image" content="https://www.tudominio.cl/og-image-1200x630.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Empresas GO — Capital humano y tecnología" />
+  <meta property="og:locale" content="es_CL" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Empresas GO — Soluciones de Capital Humano" />
+  <meta name="twitter:description" content="Cobertura ágil, selección precisa y cumplimiento garantizado." />
+  <meta name="twitter:image" content="https://www.tudominio.cl/og-image-1200x630.jpg" />
+  <!-- <meta name="twitter:site" content="@TuCuenta"> -->
+
+  <!-- ===================================================================
+       Favicons / PWA (coloca tus archivos reales en /)
+       Puedes mantener también el favicon placeholder como fallback
+  ==================================================================== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0794C6" />
+  <meta name="msapplication-TileColor" content="#0794C6" />
+  <!-- Favicon temporal (TODO: reemplazar por tus archivos definitivos) -->
+  <link rel="icon" href="https://placehold.co/32x32/0794C6/FFFFFF?text=GO" type="image/png" />
+
+  <!-- iOS meta (opcional) -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Empresas GO" />
+
+  <!-- Verificación de sitio (opcional) -->
+  <!-- <meta name="google-site-verification" content="TU_TOKEN_DE_GOOGLE" /> -->
+
+  <!-- ===================================================================
+       Performance: DNS Prefetch + Preconnect + Preload
+       (Ajusta dominios externos que realmente usas en producción)
+  ==================================================================== -->
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="//cdn.tailwindcss.com" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="//images.pexels.com" />
+  <link rel="dns-prefetch" href="//placehold.co" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.pexels.com" />
+  <link rel="preconnect" href="https://placehold.co" />
+
+  <!-- Preload hero (ajusta la URL si cambiaste la imagen) -->
+  <link rel="preload" as="image"
+        href="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1200&dpr=2"
+        imagesrcset="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 1260w"
+        imagesizes="(max-width: 768px) 100vw, 1260px" />
+
+  <!-- ===================================================================
+       Tipografías + Tailwind (prototipo con CDN)
+       TIP: para producción, compila Tailwind y considera self-host de fuentes
+  ==================================================================== -->
+  <!-- Google Fonts: Raleway & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Config opcional de Tailwind (si quisieras extender fuentes como utilidades)
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+            raleway: ['Raleway', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ===================================================================
+       Estilos del sitio (TU BLOQUE CSS). Mantengo tu CSS actualizado,
+       incluyendo las clases para tabs y mejoras de accesibilidad.
+       Si prefieres, muévelo a un .css externo y minifícalo.
+  ==================================================================== -->
+  <style>
+        :root {
+            --color-primary: #0794C6;
+            --color-accent: #8DEAF7;
+            --color-text: #212529;
+            --color-background: #FFFFFF;
+            --color-light-gray: #F8F9FA;
+            --nav-offset: 80px; /* valor por defecto, se recalcula en JS */
+        }
+
+        /* Tipografías personalizadas */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--color-text);
+            background-color: var(--color-background);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        /* Para que los anclajes no queden tapados por el header fijo */
+        html { scroll-padding-top: var(--nav-offset); }
+
+        /* Estilo para la barra de navegación activa */
+        .nav-link-active {
+            color: var(--color-primary) !important;
+            border-bottom: 2px solid var(--color-primary);
+        }
+
+        /* Degradado para CTAs */
+        .cta-gradient {
+            background-image: linear-gradient(to right, var(--color-primary), #34b3d6);
+            transition: all 0.3s ease;
+        }
+        .cta-gradient:active {
+            transform: scale(0.98);
+        }
+
+        /* Animación para el carrusel de logos */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .logo-carousel-track {
+            display: flex;
+            animation: scroll 35s linear infinite;
+            width: calc(250px * 16);
+            will-change: transform;
+        }
+        .logo-carousel-track:hover { animation-play-state: paused; }
+        
+        /* Animaciones de entrada */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Enlace CTA secundario */
+        .cta-link {
+            font-weight: 600;
+            color: var(--color-primary);
+            transition: all 0.2s ease-in-out;
+            background-image: linear-gradient(var(--color-primary), var(--color-primary));
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+        }
+        .cta-link:hover { background-size: 100% 2px; }
+        
+        /* Textura de fondo sutil */
+        .subtle-dots-bg {
+             background-color: var(--color-light-gray);
+             background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.04) 1px, transparent 0);
+             background-size: 25px 25px;
+        }
+        
+        .service-card {
+            border-top: 4px solid transparent;
+            transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+        }
+        .service-card:hover {
+            border-top-color: var(--color-primary);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        /* --- Tabs Tecnología: crossfade + cascada reiniciable --- */
+        .tech-panels { position: relative; }
+
+        /* Base: apilados, invisibles y sin eventos (permite animar) */
+        .tech-panel {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity .35s ease, visibility 0s linear .35s;
+        }
+
+        /* Activo: ocupa el flujo y se ve (contiene el alto del contenedor) */
+        .tech-panel.is-active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: opacity .35s ease;
+        }
+
+        /* Saliente: crossfade elegante */
+        .tech-panel.is-leaving {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        visibility: visible;
+        pointer-events: none;
+        }
+
+        /* --- Cascada multi-nivel ---
+        Usamos una variable CSS (--stagger-delay) que setea el JS en cada hijo. */
+        .tech-panel .tech-panel-content * {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity .45s ease, transform .45s ease;
+        transition-delay: var(--stagger-delay, 0ms);
+        }
+
+        /* Cuando el panel está activo, los elementos pasan a visible */
+        .tech-panel.is-active .tech-panel-content * {
+        opacity: 1;
+        transform: translateY(0);
+        }
+
+        /* RESET forzado para re-armar la animación en cada activación */
+        .tech-panel.stagger-reset .tech-panel-content * {
+        transition: none !important;
+        opacity: 0 !important;
+        transform: translateY(10px) !important;
+        }
+
+        /* Respeto a reduce motion */
+        @media (prefers-reduced-motion: reduce) {
+        .tech-panel,
+        .tech-panel.is-active,
+        .tech-panel.is-leaving { transition: none !important; }
+        .tech-panel .tech-panel-content * {
+            transition: none !important;
+            transform: none !important;
+            opacity: 1 !important;
+        }
+        }
+
+
+
+    </style>
+
+  <!-- ===================================================================
+       Datos estructurados (JSON-LD)
+       Ajusta "sameAs" y teléfonos. Agrega "LocalBusiness" si corresponde.
+  ==================================================================== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Empresas GO",
+    "url":"https://www.tudominio.cl",
+    "logo":"https://www.tudominio.cl/logo.png",
+    "sameAs":["https://www.linkedin.com/company/tuempresa"],
+    "contactPoint":[
+      {"@type":"ContactPoint","contactType":"Ventas","telephone":"+56995535676","areaServed":"CL","availableLanguage":["es"]}
+    ]
+  }
+  </script>
+
+  <!-- ===================================================================
+       Google Analytics 4 (reemplaza G-XXXXXXXXXX por tu ID)
+       Los eventos se disparan en tu JS (CTA, tabs, formulario, etc.)
+  ==================================================================== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+</head>
+
+<body>
+
+    <!-- ========== HEADER / NAVBAR ========== -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#inicio" id="logo" class="text-2xl font-bold text-white transition-colors duration-300" style="font-family: 'Inter', sans-serif;">
+                <span id="logo-accent" class="transition-colors duration-300">GO</span> Empresas
+            </a>
+
+            <!-- Menú de Navegación -->
+            <nav class="hidden md:flex space-x-8 items-center font-medium" style="font-family: 'Inter', sans-serif;" role="navigation" aria-label="Principal">
+                <a href="#inicio" class="nav-link pb-1 border-b-2 border-transparent text-white transition-colors duration-300">Inicio</a>
+                <a href="#servicios" class="nav-link pb-1 border-b-2 border-transparent text-white transition-colors duration-300">Servicios</a>
+                <a href="#nuestra-esencia" class="nav-link pb-1 border-b-2 border-transparent text-white transition-colors duration-300">Nuestra Esencia</a>
+                <a href="#tecnologia" class="nav-link pb-1 border-b-2 border-transparent text-white transition-colors duration-300">Tecnología</a>
+                <a href="#clientes" class="nav-link pb-1 border-b-2 border-transparent text-white transition-colors duración-300">Clientes</a>
+                <a href="#contacto" class="px-6 py-2 text-white font-semibold rounded-full cta-gradient hover:opacity-90">
+                    Agendemos un Café
+                </a>
+            </nav>
+
+            <!-- Menú Móvil (Botón) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none transition-colors duration-300"
+                        aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Menú Móvil (Contenido) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pt-2 pb-4 font-medium" style="font-family: 'Inter', sans-serif;" aria-hidden="true">
+            <a href="#inicio" class="block py-2 text-gray-700">Inicio</a>
+            <a href="#servicios" class="block py-2 text-gray-700">Servicios</a>
+            <a href="#nuestra-esencia" class="block py-2 text-gray-700">Nuestra Esencia</a>
+            <a href="#tecnologia" class="block py-2 text-gray-700">Tecnología</a>
+            <a href="#clientes" class="block py-2 text-gray-700">Clientes</a>
+            <a href="#contacto" class="block mt-2 text-center py-2 text-white font-semibold rounded-full cta-gradient">Agendemos un Café</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ========== HERO SECTION ========== -->
+        <section id="inicio" class="relative h-screen flex items-center justify-center text-white">
+            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Reunión de negocios en un ambiente profesional y relajado" class="absolute top-0 left-0 w-full h-full object-cover" fetchpriority="high">
+            <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60"></div>
+
+            <div class="relative z-10 text-center px-4">
+                <h1 class="font-extrabold fade-in-up" style="font-size:clamp(2rem, 6vw, 4.5rem); line-height:1.05">
+                    Transformamos Desafíos <br class="hidden md:block"> en Éxitos Concretos
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-200 fade-in-up" style="transition-delay: 150ms;">
+                    Con más de 21 años de trayectoria, somos su socio estratégico en capital humano. Entregamos soluciones rápidas, integrales y adaptadas a sus necesidades.
+                </p>
+                <a href="#contacto" class="mt-10 inline-block px-10 py-4 text-lg font-bold text-white rounded-full cta-gradient hover:opacity-90 transform hover:scale-105 fade-in-up" style="transition-delay: 300ms; font-family: 'Inter', sans-serif;">
+                    Conversemos
+                </a>
+            </div>
+        </section>
+
+        <!-- ========== SERVICIOS ========== -->
+        <section id="servicios" class="py-24 bg-white">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl font-bold text-gray-900 fade-in-up">Soluciones para tu Negocio</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto fade-in-up" style="transition-delay: 150ms;">Ofrecemos un portafolio de servicios de alto estándar, diseñado para optimizar tu operación y potenciar tu crecimiento de manera sostenible.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tarjeta de Servicio -->
+                    <div class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm service-card fade-in-up" style="transition-delay: 200ms;">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-[var(--color-primary)] text-white mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Servicios Transitorios</h3>
+                        <p class="mt-2 text-gray-600">Cobertura ágil para licencias, vacaciones, aumentos de producción o proyectos urgentes.</p>
+                    </div>
+                     <!-- Tarjeta de Servicio -->
+                    <div class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm service-card fade-in-up" style="transition-delay: 300ms;">
+                         <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-[var(--color-primary)] text-white mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2 2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Outsourcing</h3>
+                        <p class="mt-2 text-gray-600">Externalice unidades de trabajo completas con nuestro personal capacitado y listo para integrarse.</p>
+                    </div>
+                     <!-- Tarjeta de Servicio -->
+                    <div class="bg-white p-8 rounded-lg border border-gray-100 shadow-sm service-card fade-in-up" style="transition-delay: 400ms;">
+                         <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-[var(--color-primary)] text-white mb-5">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Reclutamiento</h3>
+                        <p class="mt-2 text-gray-600">Encontramos el talento ideal para cubrir sus vacantes permanentes, asegurando el ajuste perfecto.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-16 fade-in-up" style="transition-delay: 500ms;">
+                    <p class="text-lg text-gray-600">¿Necesitas una solución a la medida? <a href="#contacto" class="cta-link">Conversemos sobre tu proyecto.</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: HITOS / CONTADORES (REUBICADA) -->
+        <section id="hitos" class="subtle-dots-bg py-20">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="fade-in-up">
+                        <h3 class="text-4xl lg:text-5xl font-extrabold text-[var(--color-primary)] counter" data-target="21">0</h3>
+                        <p class="mt-2 text-gray-600 font-semibold">Años de Experiencia</p>
+                    </div>
+                    <div class="fade-in-up" style="transition-delay: 100ms;">
+                        <h3 class="text-4xl lg:text-5xl font-extrabold text-[var(--color-primary)] counter" data-target="500">0</h3>
+                        <p class="mt-2 text-gray-600 font-semibold">Clientes Satisfechos</p>
+                    </div>
+                    <div class="fade-in-up" style="transition-delay: 200ms;">
+                        <h3 class="text-4xl lg:text-5xl font-extrabold text-[var(--color-primary)] counter" data-target="10000">0</h3>
+                        <p class="mt-2 text-gray-600 font-semibold">Profesionales Contratados</p>
+                    </div>
+                    <div class="fade-in-up" style="transition-delay: 300ms;">
+                        <h3 class="text-4xl lg:text-5xl font-extrabold text-[var(--color-primary)] counter" data-target="99">0</h3>
+                        <p class="mt-2 text-gray-600 font-semibold">% de Cobertura Efectiva</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== NUESTRA ESENCIA ========== -->
+        <section id="nuestra-esencia" class="py-24 bg-white">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-center">
+                 <div class="fade-in-up" style="transition-delay: 200ms;">
+                    <h2 class="text-5xl font-bold text-gray-900">21 Años Construyendo Confianza</h2>
+                    <p class="mt-6 text-lg text-gray-600">No eres solo un cliente, <strong>eres un socio estratégico</strong>. Llevamos más de dos décadas apoyando a empresas líderes, transformando sus desafíos en resultados concretos. Nuestra misión es ser el motor de tu crecimiento, combinando agilidad, compromiso y una cercanía que marca la diferencia.</p>
+                    <div class="mt-10">
+                         <a href="#contacto" class="inline-block px-8 py-3 text-lg font-bold text-white rounded-full cta-gradient hover:opacity-90 transform hover:scale-105" style="font-family: 'Inter', sans-serif;">
+                            Conoce Nuestra Historia
+                        </a>
+                    </div>
+                </div>
+                <!-- Collage de imágenes para el factor humano -->
+                <div class="grid grid-cols-2 gap-4 fade-in-up">
+                    <img loading="lazy" src="https://images.pexels.com/photos/5439152/pexels-photo-5439152.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Profesional del área de la salud" class="rounded-lg shadow-xl w-full h-full object-cover col-span-1">
+                    <div class="grid grid-rows-2 gap-4">
+                        <img loading="lazy" src="https://images.pexels.com/photos/3184429/pexels-photo-3184429.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Equipo en ambiente corporativo" class="rounded-lg shadow-xl w-full h-full object-cover">
+                        <img loading="lazy" src="https://images.pexels.com/photos/3760126/pexels-photo-3760126.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Personal en faena industrial" class="rounded-lg shadow-xl w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TESTIMONIOS ========== -->
+        <section id="testimonios" class="py-24 subtle-dots-bg">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl font-bold text-gray-900 fade-in-up">El Valor de las Personas</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto fade-in-up" style="transition-delay: 150ms;">El éxito de nuestros clientes es el reflejo del profesionalismo y dedicación de nuestro equipo.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Testimonio 1 -->
+                    <div class="bg-white p-8 rounded-lg border border-gray-100 fade-in-up shadow" style="transition-delay: 200ms;">
+                        <img loading="lazy" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar cliente 1" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                        <p class="text-gray-600 italic">"La agilidad de Empresas GO para cubrir una vacante crítica fue excepcional. El profesional que nos enviaron se integró perfectamente al equipo desde el primer día."</p>
+                        <h4 class="mt-4 font-bold text-lg text-gray-900">Juan Pérez</h4>
+                        <p class="text-sm text-gray-500">Jefe de Operaciones, Empresa Logística</p>
+                    </div>
+                     <!-- Testimonio 2 -->
+                    <div class="bg-white p-8 rounded-lg border border-gray-100 fade-in-up shadow" style="transition-delay: 300ms;">
+                        <img loading="lazy" src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar cliente 2" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                        <p class="text-gray-600 italic">"Confiamos en GO para el outsourcing de nuestra área administrativa. Su equipo no solo es eficiente, sino que también proactivo en la mejora de procesos."</p>
+                        <h4 class="mt-4 font-bold text-lg text-gray-900">María González</h4>
+                        <p class="text-sm text-gray-500">Gerente de Administración, Clínica Privada</p>
+                    </div>
+                     <!-- Testimonio 3 -->
+                    <div class="bg-white p-8 rounded-lg border border-gray-100 fade-in-up shadow" style="transition-delay: 400ms;">
+                        <img loading="lazy" src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar cliente 3" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                        <p class="text-gray-600 italic">"El proceso de reclutamiento fue impecable. Entendieron a la perfección el perfil que buscábamos y nos presentaron candidatos de altísimo nivel."</p>
+                        <h4 class="mt-4 font-bold text-lg text-gray-900">Carlos Soto</h4>
+                        <p class="text-sm text-gray-500">Director de TI, Compañía de Seguros</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TECNOLOGÍA (HORIZONTAL TABS) ========== -->
+        <section id="tecnologia" class="py-24 bg-white">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl font-bold fade-in-up text-gray-900">Tecnología a tu Servicio</h2>
+                    <p class="mt-4 text-lg max-w-3xl mx-auto text-gray-600 fade-in-up" style="transition-delay: 150ms;">Integramos soluciones que optimizan procesos y te dan acceso a información clave en tiempo real, garantizando eficiencia y control.</p>
+                </div>
+                
+                <div class="fade-in-up max-w-5xl mx-auto">
+                    <!-- Barra de TABS Horizontales -->
+                    <div class="border-b border-gray-200">
+                        <nav class="-mb-px flex space-x-6 overflow-x-auto" aria-label="Tabs" role="tablist">
+                            <button data-target="tech-h-1" class="tech-tab-h active shrink-0 flex items-center space-x-2 p-4 text-lg font-medium"
+                                    role="tab" aria-selected="true" aria-controls="tech-h-1" id="tab-h-1">
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h12A2.25 2.25 0 0120.25 6v3.776" /></svg>
+                                <span>Espacio GO</span>
+                            </button>
+                            <button data-target="tech-h-2" class="tech-tab-h shrink-0 flex items-center space-x-2 p-4 text-lg font-medium text-gray-500 hover:text-gray-700"
+                                    role="tab" aria-selected="false" aria-controls="tech-h-2" id="tab-h-2">
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>
+                                <span>Power BI</span>
+                            </button>
+                            <button data-target="tech-h-3" class="tech-tab-h shrink-0 flex items-center space-x-2 p-4 text-lg font-medium text-gray-500 hover:text-gray-700"
+                                    role="tab" aria-selected="false" aria-controls="tech-h-3" id="tab-h-3">
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                <span>ERP Softland</span>
+                            </button>
+                            <button data-target="tech-h-4" class="tech-tab-h shrink-0 flex items-center space-x-2 p-4 text-lg font-medium text-gray-500 hover:text-gray-700"
+                                    role="tab" aria-selected="false" aria-controls="tech-h-4" id="tab-h-4">
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" /></svg>
+                                <span>ControlDoc</span>
+                            </button>
+                            <button data-target="tech-h-5" class="tech-tab-h shrink-0 flex items-center space-x-2 p-4 text-lg font-medium text-gray-500 hover:text-gray-700"
+                                    role="tab" aria-selected="false" aria-controls="tech-h-5" id="tab-h-5">
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6-2.292m0 0v14.25" /></svg>
+                                <span>Asesoría Legal</span>
+                            </button>
+                        </nav>
+                    </div>
+                    
+                    <!-- Contenido de TABS -->
+                    <div class="mt-8 tech-panels min-h-[300px]">
+                        <div id="tech-h-1" class="tech-panel is-active" role="tabpanel" aria-labelledby="tab-h-1">
+                            <div class="grid md:grid-cols-2 gap-8 items-center tech-panel-content">
+                                <img loading="lazy" src="https://images.pexels.com/photos/4144223/pexels-photo-4144223.jpeg?auto=compress&cs=tinysrgb&w=600" class="rounded-lg shadow-lg w-full" alt="Gestor de documentos en línea">
+                                <div>
+                                    <h3 class="text-3xl font-bold text-gray-900">Gestor de Documentos en Línea</h3>
+                                    <p class="mt-2 text-gray-600">Accede a liquidaciones, contratos, anexos y más, de forma segura y centralizada, tanto para trabajadores como para clientes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tech-h-2" class="tech-panel" role="tabpanel" aria-labelledby="tab-h-2" hidden>
+                           <div class="grid md:grid-cols-2 gap-8 items-center tech-panel-content">
+                                <img loading="lazy" src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=600" class="rounded-lg shadow-lg w-full" alt="Análisis de datos">
+                                <div>
+                                    <h3 class="text-3xl font-bold text-gray-900">Análisis de Datos e Indicadores</h3>
+                                    <p class="mt-2 text-gray-600">Transformamos tus datos en decisiones. Visualiza reportes de gestión e indicadores clave de forma interactiva para un análisis profundo de tu operación.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tech-h-3" class="tech-panel" role="tabpanel" aria-labelledby="tab-h-3" hidden>
+                           <div class="grid md:grid-cols-2 gap-8 items-center tech-panel-content">
+                                <img loading="lazy" src="https://images.pexels.com/photos/5926382/pexels-photo-5926382.jpeg?auto=compress&cs=tinysrgb&w=600" class="rounded-lg shadow-lg w-full" alt="Gestión de personas con ERP">
+                                <div>
+                                    <h3 class="text-3xl font-bold text-gray-900">Potencia en Gestión de Personas</h3>
+                                    <p class="mt-2 text-gray-600">Administración de BBDD, licencias médicas, y cálculo de remuneraciones, cotizaciones y finiquitos con la máxima precisión.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tech-h-4" class="tech-panel" role="tabpanel" aria-labelledby="tab-h-4" hidden>
+                            <div class="grid md:grid-cols-2 gap-8 items-center tech-panel-content">
+                                <img loading="lazy" src="https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=600" class="rounded-lg shadow-lg w-full" alt="Firma electrónica ControlDoc">
+                                <div>
+                                    <h3 class="text-3xl font-bold text-gray-900">Firma Electrónica con ControlDoc</h3>
+                                    <p class="mt-2 text-gray-600">Agiliza tus procesos de contratación y gestión documental con la firma electrónica de documentos laborales de manera simple y segura.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tech-h-5" class="tech-panel" role="tabpanel" aria-labelledby="tab-h-5" hidden>
+                           <div class="grid md:grid-cols-2 gap-8 items-center tech-panel-content">
+                                <img loading="lazy" src="https://images.pexels.com/photos/7551608/pexels-photo-7551608.jpeg?auto=compress&cs=tinysrgb&w=600" class="rounded-lg shadow-lg w-full" alt="Cumplimiento normativo">
+                                <div>
+                                    <h3 class="text-3xl font-bold text-gray-900">Cumplimiento Normativo Garantizado</h3>
+                                    <p class="mt-2 text-gray-600">Contamos con soporte legal permanente para garantizar el cumplimiento de toda la normativa laboral vigente, minimizando riesgos para tu empresa.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========== CLIENTES ========== -->
+        <section id="clientes" class="py-24 subtle-dots-bg overflow-hidden">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl font-bold text-gray-900 fade-in-up">Han Confiado en Nosotros</h2>
+                </div>
+                <div class="relative w-full">
+                    <div class="logo-carousel-track">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=ACHS" alt="Logo ACHS" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=CNN+CHILE" alt="Logo CNN Chile" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=CHILEVISION" alt="Logo Chilevisión" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=WARNER+MEDIA" alt="Logo Warner Media" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=TNT+SPORTS" alt="Logo TNT Sports" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=UNAB" alt="Logo UNAB" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=CLINICA+MEDS" alt="Logo Clínica Meds" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=SACK" alt="Logo Sack" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <!-- Duplicados -->
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=ACHS" alt="Logo ACHS" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=CNN+CHILE" alt="Logo CNN Chile" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=CHILEVISION" alt="Logo Chilevisión" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=WARNER+MEDIA" alt="Logo Warner Media" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=TNT+SPORTS" alt="Logo TNT Sports" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=UNAB" alt="Logo UNAB" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=CLINICA+MEDS" alt="Logo Clínica Meds" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                        <img loading="lazy" src="https://placehold.co/250x100/f0f0f0/666666?text=SACK" alt="Logo Sack" class="mx-10 h-12 self-center grayscale opacity-60 hover:opacity-100 transition-all">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACTO ========== -->
+        <section id="contacto" class="py-24 bg-white">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl font-bold text-gray-900 fade-in-up">¿Listo para un Café?</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto fade-in-up" style="transition-delay: 150ms;">Conversemos sobre cómo podemos potenciar tus operaciones. El primer café va por nuestra cuenta.</p>
+                </div>
+                <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 bg-gray-50 p-8 md:p-12 rounded-lg shadow-lg border border-gray-100">
+                    <form id="contact-form" class="space-y-4 fade-in-up" style="transition-delay: 200ms;">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-gray-700">Nombre</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)]">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-semibold text-gray-700">Empresa</label>
+                            <input type="text" id="company" name="company" class="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)]">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)]">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-700">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)]"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 px-4 font-semibold text-white rounded-md cta-gradient hover:opacity-90" style="font-family: 'Inter', sans-serif;">
+                            Enviar Mensaje
+                        </button>
+                        <p id="form-status" class="text-center text-sm mt-2"></p>
+                    </form>
+                    <div class="space-y-8 fade-in-up" style="transition-delay: 300ms;">
+                        <h3 class="text-3xl font-bold text-gray-900">O contáctanos directamente</h3>
+                        <div class="flex items-start space-x-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[var(--color-primary)] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2 2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            <div>
+                                <h4 class="font-semibold text-lg" style="font-family: 'Inter', sans-serif;">Correo</h4>
+                                <a href="mailto:cortega@goltda.cl" class="text-gray-600 hover:text-[var(--color-primary)]">cortega@goltda.cl</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[var(--color-primary)] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                            <div>
+                                <h4 class="font-semibold text-lg" style="font-family: 'Inter', sans-serif;">Teléfono</h4>
+                                <a href="tel:+56995535676" class="text-gray-600 hover:text-[var(--color-primary)]">+56 9 9553 5676</a>
+                            </div>
+                        </div>
+                         <div class="flex items-start space-x-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[var(--color-primary)] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            <div>
+                                <h4 class="font-semibold text-lg" style="font-family: 'Inter', sans-serif;">Dirección</h4>
+                                <p class="text-gray-600">Ma. Luisa Santander 568, <br>Providencia, Santiago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-gray-800 text-white pt-16 pb-12">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Columna 1: Logo y Copyright -->
+                <div>
+                    <h3 class="text-2xl font-bold" style="font-family: 'Inter', sans-serif;"><span class="text-[var(--color-accent)] font-extrabold">GO</span> Empresas</h3>
+                    <p class="mt-4 text-sm text-gray-400">&copy; 2025 Empresas GO. <br>Todos los derechos reservados.</p>
+                </div>
+                <!-- Columna 2: Navegación -->
+                <div>
+                    <h4 class="font-bold uppercase tracking-wider text-sm" style="font-family: 'Inter', sans-serif;">Navegación</h4>
+                    <nav class="mt-4 flex flex-col space-y-2">
+                        <a href="#inicio" class="text-gray-400 hover:text-white">Inicio</a>
+                        <a href="#servicios" class="text-gray-400 hover:text-white">Servicios</a>
+                        <a href="#nuestra-esencia" class="text-gray-400 hover:text-white">Nuestra Esencia</a>
+                        <a href="#tecnologia" class="text-gray-400 hover:text-white">Tecnología</a>
+                        <a href="#clientes" class="text-gray-400 hover:text-white">Clientes</a>
+                    </nav>
+                </div>
+                <!-- Columna 3: Contacto -->
+                <div>
+                    <h4 class="font-bold uppercase tracking-wider text-sm" style="font-family: 'Inter', sans-serif;">Contacto</h4>
+                    <div class="mt-4 space-y-2 text-gray-400">
+                        <p>Ma. Luisa Santander 568, Providencia</p>
+                        <p>cortega@goltda.cl</p>
+                        <p>+56 9 9553 5676</p>
+                    </div>
+                </div>
+                <!-- Columna 4: Portales y Redes -->
+                <div>
+                    <h4 class="font-bold uppercase tracking-wider text-sm" style="font-family: 'Inter', sans-serif;">Portales y Redes</h4>
+                    <nav class="mt-4 flex flex-col space-y-2">
+                        <a href="#" target="_blank" class="text-gray-400 hover:text-white">Portal Clientes (Espacio GO)</a>
+                        <a href="#" target="_blank" class="text-gray-400 hover:text-white">Portal SIA</a>
+                    </nav>
+                    <div class="mt-4">
+                        <a href="#" target="_blank" class="text-gray-400 hover:text-white" aria-label="LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Navbar Sombra y Color con Scroll ---
+            const navbar = document.getElementById('navbar');
+            const logo = document.getElementById('logo');
+            const logoAccent = document.getElementById('logo-accent');
+            const navLinks = document.querySelectorAll('#navbar nav a.nav-link');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+
+            const updateNavbar = () => {
+                if (window.scrollY > 10) {
+                    navbar.classList.add('scrolled');
+                    logo.classList.remove('text-white');
+                    logo.classList.add('text-gray-900');
+                    logoAccent.classList.add('text-[var(--color-primary)]');
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-white');
+                        link.classList.add('text-gray-600');
+                    });
+                    mobileMenuButton.classList.remove('text-white');
+                    mobileMenuButton.classList.add('text-gray-800');
+                } else {
+                    navbar.classList.remove('scrolled');
+                    logo.classList.add('text-white');
+                    logo.classList.remove('text-gray-900');
+                    logoAccent.classList.remove('text-[var(--color-primary)]');
+                    navLinks.forEach(link => {
+                        link.classList.add('text-white');
+                        link.classList.remove('text-gray-600');
+                    });
+                    mobileMenuButton.classList.add('text-white');
+                    mobileMenuButton.classList.remove('text-gray-800');
+                }
+            };
+            window.addEventListener('scroll', updateNavbar, { passive: true });
+            updateNavbar(); 
+
+            // --- Menú Móvil ---
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
+                mobileMenu.setAttribute('aria-hidden', String(expanded));
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => { 
+                    mobileMenu.classList.add('hidden'); 
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    mobileMenu.setAttribute('aria-hidden', 'true');
+                });
+            });
+
+            // --- Navegación Activa con Scroll (versión determinista) ---
+            const targetIds = Array.from(navLinks)
+              .map(link => link.getAttribute('href'))
+              .filter(h => h && h.startsWith('#'))
+              .map(h => h.slice(1));
+
+            const sections = targetIds
+              .map(id => document.getElementById(id))
+              .filter(Boolean);
+
+            function updateNavOffsetVar() {
+              const navOffset = navbar.offsetHeight + 8;
+              document.documentElement.style.setProperty('--nav-offset', `${navOffset}px`);
+            }
+            updateNavOffsetVar();
+            window.addEventListener('resize', updateNavOffsetVar, { passive: true });
+
+            function setActiveLinkOnScroll() {
+              const offset = navbar.offsetHeight + 8;
+              const scrollPos = window.scrollY + offset;
+              let currentId = sections[0]?.id || '';
+
+              for (const sec of sections) {
+                const top = sec.offsetTop;
+                const bottom = top + sec.offsetHeight;
+                if (scrollPos >= top && scrollPos < bottom) {
+                  currentId = sec.id;
+                  break;
+                }
+              }
+
+              navLinks.forEach(link => {
+                link.classList.remove('nav-link-active');
+                link.removeAttribute('aria-current');
+                if (link.getAttribute('href') === `#${currentId}`) {
+                  link.classList.add('nav-link-active');
+                  link.setAttribute('aria-current', 'page');
+                }
+              });
+            }
+
+            window.addEventListener('scroll', setActiveLinkOnScroll, { passive: true });
+            window.addEventListener('resize', setActiveLinkOnScroll, { passive: true });
+            setActiveLinkOnScroll();
+
+            // --- Animaciones de Entrada ---
+            const animatedElements = document.querySelectorAll('.fade-in-up');
+            const animationObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            animatedElements.forEach(el => { animationObserver.observe(el); });
+
+            // --- Formulario de Contacto ---
+            const contactForm = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                formStatus.textContent = 'Enviando...';
+                formStatus.style.color = 'gray';
+                setTimeout(() => {
+                    formStatus.textContent = '¡Gracias! Tu mensaje ha sido enviado.';
+                    formStatus.style.color = 'green';
+                    contactForm.reset();
+                    setTimeout(() => { formStatus.textContent = ''; }, 5000);
+                }, 1200);
+            });
+
+            // --- TABS Tecnología (sin estilos inline, 100% clases + ARIA) ---
+            const tabs = document.querySelectorAll('.tech-tab-h');
+            const panels = document.querySelectorAll('.tech-panel');
+
+            tabs.forEach(tab => {
+              tab.addEventListener('click', () => {
+                const targetId = tab.dataset.target;
+
+                // Estado visual accesible de los tabs
+                tabs.forEach(btn => {
+                  btn.classList.remove('active', 'text-[var(--color-primary)]');
+                  btn.classList.add('text-gray-500', 'hover:text-gray-700');
+                  btn.setAttribute('aria-selected', 'false');
+                });
+                tab.classList.add('active', 'text-[var(--color-primary)]');
+                tab.classList.remove('text-gray-500', 'hover:text-gray-700');
+                tab.setAttribute('aria-selected', 'true');
+
+                // Mostrar/ocultar paneles (clases + atributo hidden)
+                panels.forEach(panel => {
+                  panel.classList.remove('is-active');
+                  panel.setAttribute('hidden', '');
+                });
+                const targetPanel = document.getElementById(targetId);
+                if (targetPanel) {
+                  targetPanel.classList.add('is-active');
+                  targetPanel.removeAttribute('hidden');
+                }
+              });
+            });
+
+            // --- Lógica para Contadores Animados ---
+            const counters = document.querySelectorAll('.counter');
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = +counter.getAttribute('data-target');
+                        counter.innerText = '0';
+                        
+                        const updateCounter = () => {
+                            const c = +counter.innerText.replace(/\./g, '');
+                            const increment = target / 100;
+
+                            if (c < target) {
+                                counter.innerText = Math.ceil(c + increment).toLocaleString('es-CL');
+                                setTimeout(updateCounter, 10);
+                            } else {
+                                counter.innerText = target.toLocaleString('es-CL');
+                                if (counter.dataset.target === '21') counter.innerText = '21+';
+                                if (counter.dataset.target === '500') counter.innerText = '500+';
+                            }
+                        };
+                        updateCounter();
+                        observer.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.8 });
+            counters.forEach(counter => { counterObserver.observe(counter); });
+        });
+    </script>
+    <script>
+    // --- TABS Tecnología: crossfade + cascada reiniciable y accesible ---
+    (function () {
+        const tabs   = document.querySelectorAll('.tech-tab-h');
+        const panels = document.querySelectorAll('.tech-panel');
+        if (!tabs.length || !panels.length) return;
+
+        // 0) Sanitizar: quitar 'hidden' (mata transiciones) y preparar ARIA
+        panels.forEach(p => {
+        p.removeAttribute('hidden');
+        p.setAttribute('role', 'tabpanel');
+        p.setAttribute('aria-hidden', p.classList.contains('is-active') ? 'false' : 'true');
+        });
+
+        let activeTab   = document.querySelector('.tech-tab-h.active') || tabs[0];
+        let activePanel = document.querySelector('.tech-panel.is-active') || panels[0];
+
+        tabs.forEach((btn, i) => {
+        btn.setAttribute('role', 'tab');
+        const isActive = btn === activeTab;
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        btn.setAttribute('tabindex', isActive ? '0' : '-1');
+        });
+
+        // ---------- Cascada (stagger) ----------
+        // Preparamos delays por panel:
+        //  - Nivel 1: hijos directos de .tech-panel-content (imagen y columna de texto)
+        //  - Nivel 2: elementos dentro de la columna de texto (h3, p, etc.)
+        function primeStagger(panel) {
+        const groups = panel.querySelectorAll('.tech-panel-content');
+        groups.forEach(group => {
+            const step = Number(group.dataset.staggerStep || 100); // ms entre elementos
+            const kids = Array.from(group.children);
+
+            // Nivel 1
+            kids.forEach((child, i) => {
+            child.style.setProperty('--stagger-delay', `${i * step}ms`);
+            });
+
+            // Nivel 2: se asume que la columna de texto es el último <div> directo
+            const textCol = group.querySelector(':scope > div:last-child');
+            if (textCol) {
+            const innerStep = Math.max(70, Math.round(step * 0.7));
+            const baseDelay = kids.length * step;
+            Array.from(textCol.children).forEach((el, j) => {
+                el.style.setProperty('--stagger-delay', `${baseDelay + j * innerStep}ms`);
+            });
+            }
+        });
+        }
+        panels.forEach(primeStagger);
+
+        function setActiveTabClasses(tab) {
+        tabs.forEach(btn => {
+            btn.classList.remove('active', 'text-[var(--color-primary)]');
+            btn.classList.add('text-gray-500', 'hover:text-gray-700');
+            btn.setAttribute('aria-selected', 'false');
+            btn.setAttribute('tabindex', '-1');
+        });
+        tab.classList.add('active', 'text-[var(--color-primary)]');
+        tab.classList.remove('text-gray-500', 'hover:text-gray-700');
+        tab.setAttribute('aria-selected', 'true');
+        tab.setAttribute('tabindex', '0');
+        }
+
+        function crossfadeTo(nextPanel) {
+        if (nextPanel === activePanel) return;
+
+        // Sale el actual
+        activePanel.classList.remove('is-active');
+        activePanel.classList.add('is-leaving');
+        activePanel.setAttribute('aria-hidden', 'true');
+
+        // --- REINICIO DE ANIMACIÓN EN EL PANEL ENTRANTE ---
+        // 1) Aplicamos 'stagger-reset' para forzar estado inicial sin transición
+        nextPanel.classList.add('stagger-reset');
+        nextPanel.setAttribute('aria-hidden', 'false');
+
+        // 2) Forzamos reflow para fijar el estado inicial
+        // eslint-disable-next-line no-unused-expressions
+        nextPanel.offsetHeight;
+
+        // 3) Quitamos reset (vuelven las transiciones) y activamos el panel -> dispara cascada
+        nextPanel.classList.remove('stagger-reset');
+        nextPanel.classList.add('is-active');
+
+        // 4) Limpieza del saliente al terminar el fade-out
+        setTimeout(() => {
+            activePanel.classList.remove('is-leaving');
+        }, 350);
+
+        activePanel = nextPanel;
+        }
+
+        function activate(tab) {
+        const targetId  = tab.dataset.target;
+        const nextPanel = document.getElementById(targetId);
+        if (!nextPanel) return;
+        setActiveTabClasses(tab);
+        crossfadeTo(nextPanel);
+        activeTab = tab;
+        }
+
+        // Click
+        tabs.forEach(tab => tab.addEventListener('click', () => activate(tab)));
+
+        // Teclado: ← / →
+        tabs.forEach((tab, idx) => {
+        tab.addEventListener('keydown', (e) => {
+            if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+            e.preventDefault();
+            const dir = e.key === 'ArrowRight' ? 1 : -1;
+            const nextIdx = (idx + dir + tabs.length) % tabs.length;
+            tabs[nextIdx].focus();
+            activate(tabs[nextIdx]);
+        });
+        });
+    })();
+    </script>
+
+
+
+</body>
+</html>
