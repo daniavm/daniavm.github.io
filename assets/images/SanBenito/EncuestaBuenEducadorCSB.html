@@ -21,6 +21,70 @@
       backdrop-filter: blur(1.5px);
     }
     .screen-busy.show { display: flex; }
+
+    /* =========================================================
+       LENGÜETA (diseño carpeta) – versión sin “peek” + rebote suave
+       ========================================================= */
+    .help-ribbon {
+      position: fixed; inset-inline: 0; bottom: 0; z-index: 40;
+      pointer-events: none; /* solo elementos internos reciben eventos */
+    }
+    .help-shell {
+      pointer-events: auto;
+      margin: 0 auto; max-width: 56rem; position: relative;
+      /* contenedor centrado, no afecta el layout principal */
+    }
+
+    /* Panel: completamente fuera de vista cuando está cerrado */
+    .help-panel {
+      position: fixed; /* fijo al viewport para controlar bien el borde */
+      left: 50%; transform: translateX(-50%) translateY(100%);
+      bottom: 0;
+      width: min(56rem, calc(100vw - 1.5rem));
+      border-top-left-radius: 1rem; border-top-right-radius: 1rem;
+      box-shadow: 0 -10px 30px rgba(2,6,23,.08);
+      border: 1px solid rgb(226 232 240);
+      background: white;
+      max-height: 60vh; overflow: hidden;
+      transition: transform .28s ease;
+      will-change: transform;
+    }
+    .help-panel.open {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Cuerpo desplazable dentro del panel */
+    .help-body {
+      max-height: calc(60vh - 52px);
+      overflow-y: auto;
+    }
+
+    /* Pestaña siempre visible, pegada al borde inferior de la ventana */
+    .help-tab {
+      position: fixed; left: 50%; bottom: 0; transform: translateX(-50%);
+      background: var(--color-primary); color: white;
+      border-top-left-radius: .75rem; border-top-right-radius: .75rem;
+      padding: .6rem .9rem;
+      display: inline-flex; align-items: center; gap: .5rem;
+      box-shadow: 0 6px 14px rgba(2,6,23,.18);
+      cursor: pointer; user-select: none;
+      min-height: 40px;
+      z-index: 41; /* encima del panel */
+    }
+    .help-tab:hover { background: var(--color-primary-hover); }
+    .help-tab:focus { outline: none; box-shadow: 0 0 0 3px rgba(167,40,45,.25), 0 6px 14px rgba(2,6,23,.18); }
+    .help-tab .chev { transition: transform .2s ease; }
+    .help-tab.open .chev { transform: rotate(180deg); }
+
+    /* Rebote suave (3 veces, con delay inicial) */
+    @keyframes gentle-bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      30%      { transform: translateX(-50%) translateY(-6px); }
+      60%      { transform: translateX(-50%) translateY(0); }
+    }
+    .help-tab.tease {
+      animation: gentle-bounce 1.2s ease-in-out 3 3s; /* 3 veces, empieza a los 3s */
+    }
   </style>
 </head>
 <body class="bg-slate-100 text-slate-800">
@@ -61,6 +125,9 @@
       <p class="mt-2 text-slate-700 font-medium">Procesando…</p>
     </div>
   </div>
+
+  <!-- Lengüeta inferior (se muestra solo para usuarios validados) -->
+  <div id="helpRibbon" class="help-ribbon hidden" aria-live="polite"></div>
 
   <script>
     // =================== CONFIG API (JSONP) ===================
@@ -114,6 +181,7 @@
     const softError = document.getElementById('softError');
     const toast = document.getElementById('toast');
     const busyOverlay = document.getElementById('busyOverlay');
+    const helpRibbon = document.getElementById('helpRibbon');
 
     function showError(msg){ softError.textContent = msg || 'Ocurrió un error'; softError.classList.remove('hidden'); }
     function hideError(){ softError.classList.add('hidden'); softError.textContent = ''; }
@@ -137,7 +205,7 @@
           <span class="inline-flex items-center justify-center gap-2">
             <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+              <path class="opacity-75" fill="currentColor" d="M4 12a 8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
             </svg>
             ${busyText}
           </span>`;
@@ -216,7 +284,105 @@
         </div>`;
     }
 
+    /* ================== NUEVA LENGÜETA ================== */
+    function buildHelpRibbon() {
+      if (!helpRibbon) return;
+      if (helpRibbon.dataset.ready === '1') {
+        helpRibbon.classList.remove('hidden');
+        return;
+      }
+
+      // Estructura: tab fija abajo + panel fijo que sube desde abajo
+      helpRibbon.innerHTML = `
+        <div class="help-shell">
+          <button id="helpToggle" class="help-tab tease" type="button" aria-controls="helpPanel" aria-label="Abrir ayuda">
+            <svg class="chev h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10.75 3.5a.75.75 0 00-1.5 0v9.19L6.3 9.74a.75.75 0 10-1.06 1.06l4.25 4.25a.75.75 0 001.06 0l4.25-4.25a.75.75 0 10-1.06-1.06l-2.95 2.95V3.5z"/>
+            </svg>
+            <span class="text-sm font-medium">¿Cómo elegir?</span>
+          </button>
+
+          <section class="help-panel" id="helpPanel" aria-hidden="true">
+            <div class="help-body px-4 sm:px-6 pt-4 pb-5">
+              <div class="prose prose-sm max-w-none">
+                <p class="text-slate-700">
+                  <strong>Día del Educador 2025.</strong> Distinguiremos a quienes viven su vocación formando a nuestros niños y jóvenes.
+                </p>
+                <h4 class="text-slate-900 font-semibold mt-3">¿A quiénes distinguiremos?</h4>
+                <ul class="list-disc pl-5 text-slate-700">
+                  <li>Un <strong>buen profesor</strong> en <em>Primer Ciclo</em> (PK a 2° básico).</li>
+                  <li>Dos <strong>buenos profesores</strong> de <em>Segundo, Tercer y Cuarto Ciclo</em> (3º básico a IVº medio).</li>
+                  <li>Un <strong>buen educador</strong> que forma sin dictar clases formalmente.</li>
+                </ul>
+
+                <p class="mt-3 text-slate-700">Se consideran las últimas evaluaciones de desempeño, las características del educador Manquehuino y, siguiendo a San Benito, el consejo de la comunidad.</p>
+
+                <h4 class="text-slate-900 font-semibold mt-3">Buscamos educadores que…</h4>
+                <ul class="list-disc pl-5 text-slate-700">
+                  <li><strong>Valoren el conocimiento y la mejora continua</strong>
+                    <ul class="list-disc pl-5">
+                      <li>Cultiven la excelencia profesional.</li>
+                      <li>Se actualicen, reflexionen e innoven.</li>
+                      <li>Promuevan el trabajo bien hecho.</li>
+                    </ul>
+                  </li>
+                  <li class="mt-2"><strong>Ejerzan liderazgo pedagógico</strong>
+                    <ul class="list-disc pl-5">
+                      <li>Autoridad como servicio a los alumnos.</li>
+                      <li>Motiven dando sentido al aprendizaje.</li>
+                    </ul>
+                  </li>
+                  <li class="mt-2"><strong>Gestionen buscando el logro</strong>
+                    <ul class="list-disc pl-5">
+                      <li>Movilicen lo cognitivo, social y valórico.</li>
+                      <li>Sean proactivos, ordenados y responsables.</li>
+                    </ul>
+                  </li>
+                  <li class="mt-2"><strong>Promuevan la vida comunitaria y el trabajo colaborativo</strong>
+                    <ul class="list-disc pl-5">
+                      <li>Sean factor de unión en su equipo.</li>
+                      <li>Participen en actividades de la comunidad.</li>
+                      <li>Asuman los desafíos académicos y formativos del colegio.</li>
+                    </ul>
+                  </li>
+                  <li class="mt-2"><strong>Trayectoria destacada</strong> en los últimos cinco años.</li>
+                </ul>
+
+                <p class="mt-3 text-slate-700">
+                  Este formulario estará abierto hasta el <strong>viernes 7 de octubre</strong>.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
+
+      const panel  = document.getElementById('helpPanel');
+      const toggle = document.getElementById('helpToggle');
+
+      function openPanel(open) {
+        panel.classList.toggle('open', open);
+        toggle.classList.toggle('open', open);
+        panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+        // al abrir una vez, quitamos el “tease” para no molestar
+        if (open) toggle.classList.remove('tease');
+      }
+      function togglePanel() { openPanel(!panel.classList.contains('open')); }
+
+      toggle.addEventListener('click', togglePanel);
+      toggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); togglePanel(); }
+      });
+
+      helpRibbon.classList.remove('hidden');
+      helpRibbon.dataset.ready = '1';
+    }
+    /* ================== FIN LENGÜETA ================== */
+
     function renderVotingForm(currentUser, userRole){
+      // Mostrar la lengüeta de ayuda (solo usuarios válidos)
+      buildHelpRibbon();
+
       const isMe = p => normalizeEmail(p.email)===normalizeEmail(currentUser.email);
       const elegible = allData.filter(p=> calcularAntiguedad(p.fechaIngreso)>=5 && !isMe(p) && !p._excluded);
       const profesores = elegible.filter(p=> p.rolCalculado==='Profesor de Sala' && isProfessorSubarea(p.departamento));
@@ -357,6 +523,9 @@
       userInfo.style.color = '#7f1f25';
       userInfo.classList.remove('hidden');
 
+      // Activar lengüeta de ayuda para usuarios válidos
+      buildHelpRibbon();
+
       // ¿Ya votó?
       setScreenBusy(true, 'Comprobando estado de tu voto…');
       try {
@@ -379,6 +548,9 @@
     }
 
     function promptForRole(currentUser){
+      // Aseguramos que la lengüeta esté lista cuando ya sabemos que es usuario válido
+      buildHelpRibbon();
+
       formContainer.innerHTML = `
         <div class="text-center p-8 border-2 border-dashed border-slate-200 rounded-lg">
           <h3 class="text-xl font-semibold text-slate-800 mb-6">¿Eres profesor titular de alguna asignatura?</h3>
