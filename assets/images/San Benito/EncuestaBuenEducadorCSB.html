@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Consejo premio al buen educador 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --color-primary:#A7282D; --color-primary-hover:#7f1f25; }
+    body{ font-family:'Inter',sans-serif }
+    .toast{ visibility:hidden; min-width:250px; background:#333; color:#fff; text-align:center; border-radius:8px; padding:16px; position:fixed; z-index:50; left:50%; bottom:30px; transform:translateX(-50%); opacity:0; transition:.5s }
+    .toast.show{ visibility:visible; opacity:1; bottom:50px }
+    .bg-primary{ background:var(--color-primary) } .hover\:bg-primary-hover:hover{ background:var(--color-primary-hover) }
+    .focus\:ring-primary:focus{ box-shadow:0 0 0 4px var(--color-primary) } .focus\:border-primary:focus{ border-color:var(--color-primary) }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800">
+  <div class="container mx-auto p-4 md:p-8 max-w-3xl">
+    <header class="text-center mb-8">
+      <img id="logo" src="https://daniavm.github.io/assets/images/logoCSB.png" alt="Logo" class="mx-auto h-20 w-auto mb-6">
+      <h1 class="text-3xl md:text-4xl font-bold text-slate-900">Consejo premio al buen educador 2025</h1>
+      <p class="text-slate-600 mt-2">Te invitamos a participar de este importante proceso.</p>
+    </header>
+
+    <main class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-slate-200">
+      <div id="userInfo" class="p-4 rounded-lg hidden mb-6"></div>
+
+      <div id="loading" class="text-center p-8">
+        <svg class="animate-spin h-8 w-8 text-primary mx-auto" viewBox="0 0 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.4 0 0 5.4 0 12h4z"/>
+        </svg>
+        <p class="mt-2 font-medium">Cargando datos...</p>
+      </div>
+
+      <div id="formContainer"></div>
+      <div id="softError" class="hidden mt-4 p-4 rounded-lg border border-red-200 bg-red-50 text-red-800 text-sm"></div>
+    </main>
+  </div>
+  <div id="toast" class="toast">¡Gracias! Tu voto ha sido registrado.</div>
+
+  <script>
+    // =================== CONFIG API ===================
+    const GAS_BASE_URL = 'PASTE_YOUR_WEBAPP_EXEC_URL_HERE'; // p.ej. https://script.google.com/macros/s/AKfycb.../exec
+    const API_KEY = ''; // si configuraste SHARED_API_KEY en Apps Script, ponla aquí (sino déjalo vacío)
+
+    // Lectura de user email (querystring ?user=...) o localStorage
+    function getUserEmail() {
+      const params = new URLSearchParams(location.search);
+      const q = (params.get('user') || '').trim();
+      if (q) { localStorage.setItem('userEmail', q); return q; }
+      const saved = localStorage.getItem('userEmail') || '';
+      if (saved) return saved;
+      const ask = prompt('Ingresa tu correo institucional para continuar:') || '';
+      localStorage.setItem('userEmail', ask.trim());
+      return ask.trim();
+    }
+    const LOGGED_IN_USER_EMAIL = getUserEmail();
+
+    // =================== API Client ===================
+    const api = {
+      async getSheetDataSafe() {
+        const url = new URL(GAS_BASE_URL);
+        url.searchParams.set('fn', 'getSheetDataSafe');
+        if (API_KEY) url.searchParams.set('key', API_KEY);
+        const res = await fetch(url.toString(), { method: 'GET' });
+        return res.json();
+      },
+      async hasVoted(email) {
+        const url = new URL(GAS_BASE_URL);
+        url.searchParams.set('fn', 'hasVoted');
+        url.searchParams.set('email', email);
+        if (API_KEY) url.searchParams.set('key', API_KEY);
+        const res = await fetch(url.toString(), { method: 'GET' });
+        return res.json();
+      },
+      async saveVote(payload) {
+        const body = { fn: 'saveVote', payload };
+        if (API_KEY) body.key = API_KEY;
+        const res = await fetch(GAS_BASE_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+        });
+        return res.json();
+      }
+    };
+
+    // =================== UI HELPERS ===================
+    const formContainer = document.getElementById('formContainer');
+    const loading = document.getElementById('loading');
+    const userInfo = document.getElementById('userInfo');
+    const softError = document.getElementById('softError');
+    const toast = document.getElementById('toast');
+
+    function showError(msg){ softError.textContent = msg || 'Ocurrió un error'; softError.classList.remove('hidden'); }
+    function hideError(){ softError.classList.add('hidden'); softError.textContent = ''; }
+    function showToast(msg='¡Gracias! Tu voto ha sido registrado.'){ toast.textContent=msg; toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'),3000); }
+    function darken(hex, p=10){ hex=hex.replace('#',''); let r=parseInt(hex.substr(0,2),16), g=parseInt(hex.substr(2,2),16), b=parseInt(hex.substr(4,2),16); r=Math.floor(r*(100-p)/100); g=Math.floor(g*(100-p)/100); b=Math.floor(b*(100-p)/100); return `#${((1<<24)+(r<<16)+(g<<8)+b).toString(16).slice(1)}`; }
+    function hexToRgba(hex, a=1){ const m=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex); return m?`rgba(${parseInt(m[1],16)}, ${parseInt(m[2],16)}, ${parseInt(m[3],16)}, ${a})`:''; }
+
+    // ====== Reglas de subáreas válidas (como tu versión) ======
+    const PROFESSOR_SUBAREAS_SOURCE = ['Lenguaje','Matemática','Música','Inglés secundaria','Ciencias','Ed. Física','Inglés - 1° ciclo','Preescolar','Lenguaje','Inglés - 2° ciclo','Inglés Secundaria','Matemática','Historia','1°- 2° Básico','Religión y Filosofía','Preescolar','Arte'];
+    const norm = s => String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[-–—]/g,' ').replace(/\s+/g,' ').trim();
+    const PROFESSOR_SUBAREAS = new Set(PROFESSOR_SUBAREAS_SOURCE.map(norm));
+    const isProfessorSubarea = s => PROFESSOR_SUBAREAS.has(norm(s));
+
+    // =================== Datos y flujo ===================
+    let allData = [];      // registros
+    let indexByEmail = new Map();
+
+    function calcularAntiguedad(f){
+      if(!f) return 0; const p=String(f).split(/[\/\-]/); let d;
+      if(p.length===3){ d = (p[0].length===4) ? new Date(p[0],p[1]-1,p[2]) : new Date(p[2],p[1]-1,p[0]); } else return 0;
+      const h=new Date(); let a=h.getFullYear()-d.getFullYear(); const m=h.getMonth()-d.getMonth(); if(m<0 || (m===0 && h.getDate()<d.getDate())) a--; return a;
+    }
+
+    function processData(arr){
+      return (arr||[]).map(p=>{
+        const nombreCompleto = `${p.nombre||''} ${p.primerApellido||''} ${p.segundoApellido||''}`.replace(/\s+/g,' ').trim();
+        let rol = 'Indefinido'; if(String(p.grupo).trim()==='2') rol='Profesor de Sala'; else if(String(p.grupo).trim()==='1') rol='Educador';
+        const _excluded = !!p.noSeIncluye; // ahora viene del backend
+        return {...p, nombreCompleto, rolCalculado:rol, _excluded};
+      }).filter(p => p.nombreCompleto && p.email);
+    }
+
+    function createSelectOptions(list){
+      const usable=list.filter(p=>!p._excluded);
+      if(!usable.length) return '<option value="">-- No hay candidatos disponibles --</option>';
+      const sorted=[...usable].sort((a,b)=>a.nombreCompleto.localeCompare(b.nombreCompleto));
+      let html='<option value="">-- Selecciona una persona --</option>';
+      sorted.forEach(p=> html+=`<option value="${p.email}">${p.nombreCompleto}</option>`);
+      return html;
+    }
+    function createSelectOptionsWithSubarea(list){
+      const usable=list.filter(p=>!p._excluded);
+      if(!usable.length) return '<option value="">-- No hay candidatos disponibles --</option>';
+      const sorted=[...usable].sort((a,b)=>{
+        const A=String(a.departamento||'').toLowerCase(), B=String(b.departamento||'').toLowerCase();
+        if(A<B) return -1; if(A>B) return 1; return a.nombreCompleto.localeCompare(b.nombreCompleto);
+      });
+      let html='<option value="">-- Selecciona una persona --</option>';
+      sorted.forEach(p=> html+=`<option value="${p.email}">${p.departamento||'(Sin subárea)'} — ${p.nombreCompleto}</option>`);
+      return html;
+    }
+
+    function renderSuccessCard(nombre){
+      formContainer.innerHTML = `
+        <div class="text-center p-8 border-2 border-dashed border-emerald-200 rounded-2xl bg-emerald-50/70">
+          <svg class="mx-auto mb-4 h-10 w-10 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2l4 -4m6 2a9 9 0 11-18 0a9 9 0 0118 0z"/>
+          </svg>
+          <h3 class="text-2xl font-semibold text-emerald-800">¡Gracias, ${nombre||'participante'}!</h3>
+          <p class="text-slate-700 mt-2">Tu respuesta fue enviada correctamente.</p>
+        </div>`;
+    }
+
+    function renderVotingForm(currentUser, userRole){
+      const isMe = p => p.email.toLowerCase()===currentUser.email.toLowerCase();
+      const elegible = allData.filter(p=> calcularAntiguedad(p.fechaIngreso)>=5 && !isMe(p) && !p._excluded);
+      const profesores = elegible.filter(p=> p.rolCalculado==='Profesor de Sala' && isProfessorSubarea(p.departamento));
+      const educadores = elegible.filter(p=> p.rolCalculado==='Educador');
+
+      let html = '<form id="recognitionForm" class="space-y-6">';
+      if(userRole==='Profesor'){
+        const myDept = norm(currentUser.departamento);
+        const mismos = profesores.filter(p=> norm(p.departamento)===myDept);
+        const otros  = profesores.filter(p=> norm(p.departamento)!==myDept);
+        html += `
+          <div class="space-y-4 p-4 border border-slate-200 rounded-lg bg-slate-50/80">
+            <p class="text-md font-semibold text-slate-800">Pregunta 1: Votación por Profesores</p>
+            <div class="pl-2 border-l-4 border-primary/50 pt-1">
+              <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-primary mr-1">1a.</strong>Profesor de tu departamento</label>
+              <select name="vote1" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-primary focus:border-primary" required>${createSelectOptions(mismos)}</select>
+            </div>
+            <div class="pl-2 border-l-4 border-primary/50 pt-1">
+              <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-primary mr-1">1b.</strong>Profesor de otro departamento</label>
+              <select name="vote2" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-primary focus:border-primary" required>${createSelectOptionsWithSubarea(otros)}</select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-slate-700 mr-1">2.</strong>EDUCADOR</label>
+            <select name="vote3" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-primary focus:border-primary" required>${createSelectOptionsWithSubarea(educadores)}</select>
+          </div>`;
+      } else {
+        html += `
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-slate-700 mr-1">1.</strong>PROFESOR</label>
+            <select name="vote1" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-primary focus:border-primary" required>${createSelectOptionsWithSubarea(profesores)}</select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-slate-700 mr-1">2.</strong>EDUCADOR</label>
+            <select name="vote2" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-primary focus:border-primary" required>${createSelectOptionsWithSubarea(educadores)}</select>
+          </div>`;
+      }
+      html += `<button type="submit" id="voteButton" class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary-hover transition">Enviar Votación</button></form>`;
+      formContainer.innerHTML = html;
+
+      indexByEmail = new Map(allData.map(p=>[p.email.toLowerCase(), p]));
+
+      document.getElementById('recognitionForm').addEventListener('submit', async (ev)=>{
+        ev.preventDefault(); hideError();
+        const f = ev.target;
+        const v1 = f.vote1?.value||'', v2=f.vote2?.value||'', v3=f.vote3?.value||'';
+        if(!v1 || !v2) return showError('Debes completar al menos las dos primeras selecciones.');
+        const vals=[v1,v2].concat(v3?[v3]:[]); const lower=vals.map(x=>String(x).toLowerCase());
+        if(new Set(lower).size!==lower.length) return showError('Los votos deben ser por personas distintas.');
+        const me = indexByEmail.get(LOGGED_IN_USER_EMAIL.toLowerCase());
+        if(me && lower.includes(me.email.toLowerCase())) return showError('No puedes votarte a ti mismo.');
+
+        const pick = email => { const p=indexByEmail.get(String(email||'').toLowerCase()); return p?{name:p.nombreCompleto,email:p.email,subarea:p.departamento}:null; };
+        const d1=pick(v1), d2=pick(v2), d3=v3?pick(v3):null;
+        const voter = me ? { name:me.nombreCompleto, email:me.email, subarea:me.departamento } : { name:'', email:LOGGED_IN_USER_EMAIL, subarea:'' };
+
+        const payload = {
+          votanteEmail: voter.email,
+          voto1: v1, voto2: v2, voto3: v3 || null,
+          voter, details: [{slot:1,...d1},{slot:2,...d2}, ...(d3?[{slot:3,...d3}]:[])]
+        };
+
+        try {
+          const resp = await api.saveVote(payload);
+          if (!resp || resp.ok !== true) throw new Error(resp?.error || 'No se pudo guardar');
+          showToast('¡Gracias! Tu voto ha sido registrado.'); renderSuccessCard(voter.name);
+        } catch (err) { showError('Error al guardar: ' + (err?.message || err)); }
+      });
+    }
+
+    function promptForRole(currentUser){
+      userInfo.innerHTML = `<p><strong>Votando como:</strong> ${currentUser.nombreCompleto} <span class="text-slate-500">(${currentUser.email})</span></p>`;
+      userInfo.style.backgroundColor = hexToRgba('#A7282D',0.08);
+      userInfo.style.color = '#7f1f25';
+      userInfo.classList.remove('hidden');
+
+      formContainer.innerHTML = `
+        <div class="text-center p-8 border-2 border-dashed border-slate-200 rounded-lg">
+          <h3 class="text-xl font-semibold text-slate-800 mb-6">¿Eres profesor titular de alguna asignatura?</h3>
+          <div class="flex justify-center gap-4">
+            <button id="answerYes" class="w-24 bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary-hover">Sí</button>
+            <button id="answerNo" class="w-24 bg-slate-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-slate-700">No</button>
+          </div>
+        </div>`;
+      document.getElementById('answerYes').onclick = ()=>renderVotingForm(currentUser,'Profesor');
+      document.getElementById('answerNo').onclick  = ()=>renderVotingForm(currentUser,'Educador');
+    }
+
+    // =================== INIT ===================
+    (async function init(){
+      try {
+        const payload = await api.getSheetDataSafe();
+        if(!payload || payload.ok!==true) throw new Error(payload?.error || 'Error de carga');
+        allData = processData(payload.data || []);
+        indexByEmail = new Map(allData.map(p=>[p.email.toLowerCase(), p]));
+        const me = allData.find(p=> p.email.toLowerCase()===LOGGED_IN_USER_EMAIL.toLowerCase());
+        loading.classList.add('hidden');
+
+        if(!me){
+          formContainer.innerHTML = `<div class="text-center p-8 border-2 border-dashed border-red-200 rounded-lg">
+            <h3 class="text-xl font-semibold text-red-800">Acceso Denegado</h3>
+            <p class="text-slate-600 mt-2">Tu correo (<strong class="font-mono">${LOGGED_IN_USER_EMAIL||'(desconocido)'}</strong>) no aparece en la lista.</p>
+          </div>`;
+          return;
+        }
+
+        // Chequeo "ya votó"
+        try {
+          const info = await api.hasVoted(me.email);
+          if (info && info.voted) {
+            formContainer.innerHTML = `
+              <div class="text-center p-8 border-2 border-dashed border-emerald-200 rounded-lg bg-emerald-50/70">
+                <h3 class="text-xl font-semibold text-emerald-800">¡Gracias!</h3>
+                <p class="text-slate-700 mt-2">Ya registraste un voto el <strong>${info.lastAt}</strong>.</p>
+              </div>`;
+            userInfo.innerHTML = `<p><strong>Votaste como:</strong> ${me.nombreCompleto} <span class="text-slate-500">(${me.email})</span></p>`;
+            userInfo.classList.remove('hidden');
+          } else {
+            promptForRole(me);
+          }
+        } catch {
+          // si falla, seguimos con el flujo normal
+          promptForRole(me);
+        }
+      } catch (err) {
+        loading.classList.add('hidden');
+        showError('No se pudo cargar la data: ' + (err?.message || err));
+      }
+    })();
+  </script>
+</body>
+</html>
