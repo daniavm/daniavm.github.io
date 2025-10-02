@@ -9,10 +9,18 @@
   <style>
     :root { --color-primary:#A7282D; --color-primary-hover:#7f1f25; }
     body{ font-family:'Inter',sans-serif }
-    .toast{ visibility:hidden; min-width:250px; background:#333; color:#fff; text-align:center; border-radius:8px; padding:16px; position:fixed; z-index:50; left:50%; bottom:30px; transform:translateX(-50%); opacity:0; transition:.5s }
+    .toast{ visibility:hidden; min-width:250px; background:#333; color:#fff; text-align:center; border-radius:8px; padding:16px; position:fixed; z-index:60; left:50%; bottom:30px; transform:translateX(-50%); opacity:0; transition:.5s }
     .toast.show{ visibility:visible; opacity:1; bottom:50px }
     .bg-primary{ background:var(--color-primary) } .hover\:bg-primary-hover:hover{ background:var(--color-primary-hover) }
     .focus\:ring-primary:focus{ box-shadow:0 0 0 4px var(--color-primary) } .focus\:border-primary:focus{ border-color:var(--color-primary) }
+
+    /* Overlay pantalla completa */
+    .screen-busy {
+      position: fixed; inset: 0; background: rgba(15, 23, 42, .35);
+      display: none; align-items: center; justify-content: center; z-index: 50;
+      backdrop-filter: blur(1.5px);
+    }
+    .screen-busy.show { display: flex; }
   </style>
 </head>
 <body class="bg-slate-100 text-slate-800">
@@ -27,7 +35,7 @@
       <div id="userInfo" class="p-4 rounded-lg hidden mb-6"></div>
 
       <div id="loading" class="text-center p-8">
-        <!-- SVG loader con viewBox correcto -->
+        <!-- Loader inicial -->
         <svg class="animate-spin h-8 w-8 text-primary mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
@@ -39,16 +47,29 @@
       <div id="softError" class="hidden mt-4 p-4 rounded-lg border border-red-200 bg-red-50 text-red-800 text-sm"></div>
     </main>
   </div>
+
+  <!-- Toast -->
   <div id="toast" class="toast">¡Gracias! Tu voto ha sido registrado.</div>
+
+  <!-- Overlay global para procesos largos -->
+  <div id="busyOverlay" class="screen-busy" role="status" aria-live="polite">
+    <div class="rounded-xl bg-white/90 px-6 py-5 shadow-xl border border-slate-200 text-center">
+      <svg class="animate-spin h-8 w-8 text-primary mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+      </svg>
+      <p class="mt-2 text-slate-700 font-medium">Procesando…</p>
+    </div>
+  </div>
 
   <script>
     // =================== CONFIG API (JSONP) ===================
-    const GAS_BASE_URL = 'https://script.google.com/macros/s/AKfycbyrh-gOhjB7JKvEsKt5QQ3IOOxeJBQmwhVjfj91TrIjPIwMKiXKlOj0BrXQuk7ZSo1G-A/exec'; // <-- reemplaza por tu /exec
-    const API_KEY = '';               // si configuraste SHARED_API_KEY en Apps Script
-    const ALLOWED_DOMAIN = 'colegiosanbenito.org'; // dominio permitido (o '' para cualquiera)
+    const GAS_BASE_URL = 'https://script.google.com/macros/s/AKfycbyrh-gOhjB7JKvEsKt5QQ3IOOxeJBQmwhVjfj91TrIjPIwMKiXKlOj0BrXQuk7ZSo1G-A/exec'; // <-- tu /exec
+    const API_KEY = '';               // si usas SHARED_API_KEY en Apps Script
+    const ALLOWED_DOMAIN = 'colegiosanbenito.org';
 
     // JSONP helper
-    function jsonp(url, timeoutMs = 15000) {
+    function jsonp(url, timeoutMs = 20000) {
       return new Promise((resolve, reject) => {
         const cbName = 'jsonp_cb_' + Math.random().toString(36).slice(2);
         const script = document.createElement('script');
@@ -92,11 +113,40 @@
     const userInfo = document.getElementById('userInfo');
     const softError = document.getElementById('softError');
     const toast = document.getElementById('toast');
+    const busyOverlay = document.getElementById('busyOverlay');
 
     function showError(msg){ softError.textContent = msg || 'Ocurrió un error'; softError.classList.remove('hidden'); }
     function hideError(){ softError.classList.add('hidden'); softError.textContent = ''; }
     function showToast(msg='¡Gracias! Tu voto ha sido registrado.'){ toast.textContent=msg; toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'),3000); }
     function hexToRgba(hex, a=1){ const m=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex); return m?`rgba(${parseInt(m[1],16)}, ${parseInt(m[2],16)}, ${parseInt(m[3],16)}, ${a})`:''; }
+
+    // Overlay global
+    function setScreenBusy(on, text='Procesando…'){
+      const label = busyOverlay.querySelector('p');
+      if (label) label.textContent = text;
+      busyOverlay.classList.toggle('show', !!on);
+    }
+
+    // Spinner en botón
+    function setButtonBusy(btn, on, busyText='Enviando…'){
+      if(!btn) return;
+      if (on) {
+        btn.dataset._orig = btn.textContent;
+        btn.disabled = true;
+        btn.innerHTML = `
+          <span class="inline-flex items-center justify-center gap-2">
+            <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+            </svg>
+            ${busyText}
+          </span>`;
+      } else {
+        btn.disabled = false;
+        btn.textContent = btn.dataset._orig || 'Enviar';
+        delete btn.dataset._orig;
+      }
+    }
 
     // ====== Reglas de subáreas válidas ======
     const PROFESSOR_SUBAREAS_SOURCE = [
@@ -212,28 +262,40 @@
       document.getElementById('recognitionForm').addEventListener('submit', async (ev)=>{
         ev.preventDefault(); hideError();
         const f = ev.target;
+        const btn = document.getElementById('voteButton');
+
+        // Validaciones previas
         const v1 = f.vote1?.value||'', v2=f.vote2?.value||'', v3=f.vote3?.value||'';
         if(!v1 || !v2) return showError('Debes completar al menos las dos primeras selecciones.');
         const vals=[v1,v2].concat(v3?[v3]:[]); const lower=vals.map(x=>normalizeEmail(x));
         if(new Set(lower).size!==lower.length) return showError('Los votos deben ser por personas distintas.');
         if(lower.includes(normalizeEmail(currentUser.email))) return showError('No puedes votarte a ti mismo.');
 
+        // Construcción payload
         const pick = email => { const p=indexByEmail.get(normalizeEmail(email)); return p?{name:p.nombreCompleto,email:p.email,subarea:p.departamento}:null; };
         const d1=pick(v1), d2=pick(v2), d3=v3?pick(v3):null;
         const voter = { name:currentUser.nombreCompleto, email:currentUser.email, subarea:currentUser.departamento };
-
         const payload = {
           votanteEmail: voter.email,
           voto1: v1, voto2: v2, voto3: v3 || null,
           voter, details: [{slot:1,...d1},{slot:2,...d2}, ...(d3?[{slot:3,...d3}]:[])]
         };
 
+        // Busy states
+        setButtonBusy(btn, true, 'Enviando…');
+        setScreenBusy(true, 'Registrando tu voto…');
+
         try {
           const resp = await api.saveVote(payload);
           if (!resp || resp.ok !== true) throw new Error(resp?.error || 'No se pudo guardar');
           showToast('¡Gracias! Tu voto ha sido registrado.');
           renderSuccessCard(voter.name); // oculta el formulario
-        } catch (err) { showError('Error al guardar: ' + (err?.message || err)); }
+        } catch (err) {
+          showError('Error al guardar: ' + (err?.message || err));
+          setButtonBusy(btn, false);
+        } finally {
+          setScreenBusy(false);
+        }
       });
     }
 
@@ -250,7 +312,7 @@
               <input type="email" name="email" required placeholder="tucorreo@${ALLOWED_DOMAIN||'tu-dominio'}"
                 class="w-full p-3 border border-slate-300 rounded-lg focus:ring-primary focus:border-primary" />
             </div>
-            <button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary-hover transition">Continuar</button>
+            <button id="loginBtn" class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary-hover transition">Continuar</button>
           </form>
           <div id="loginError" class="hidden mt-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg p-3"></div>
         </div>
@@ -258,13 +320,24 @@
 
       const form = document.getElementById('loginForm');
       const err  = document.getElementById('loginError');
-      form.addEventListener('submit', (ev)=>{
+      const btn  = document.getElementById('loginBtn');
+
+      form.addEventListener('submit', async (ev)=>{
         ev.preventDefault(); hideError(); err.classList.add('hidden'); err.textContent='';
         const email = normalizeEmail(new FormData(form).get('email')||'');
-        handleLogin(email).catch(e=>{
+
+        try {
+          // Busy mientras validamos y consultamos “hasVoted”
+          setButtonBusy(btn, true, 'Verificando…');
+          setScreenBusy(true, 'Verificando acceso…');
+          await handleLogin(email);
+        } catch (e){
           err.textContent = e?.message || 'No se pudo validar tu correo.';
           err.classList.remove('hidden');
-        });
+        } finally {
+          setButtonBusy(btn, false);
+          setScreenBusy(false);
+        }
       });
     }
 
@@ -285,6 +358,7 @@
       userInfo.classList.remove('hidden');
 
       // ¿Ya votó?
+      setScreenBusy(true, 'Comprobando estado de tu voto…');
       try {
         const info = await api.hasVoted(email);
         if (info && info.voted) {
@@ -297,7 +371,10 @@
           promptForRole(me);
         }
       } catch {
+        // si falla, seguimos con el flujo normal
         promptForRole(me);
+      } finally {
+        setScreenBusy(false);
       }
     }
 
@@ -317,14 +394,13 @@
     // =================== INIT ===================
     (async function init(){
       try {
-        // 1) Obtener directorio
+        setScreenBusy(true, 'Cargando directorio…');
         const payload = await api.getSheetDataSafe();
         if(!payload || payload.ok!==true) throw new Error(payload?.error || 'Error de carga');
         allData = processData(payload.data || []);
         indexByEmail = new Map(allData.map(p=>[normalizeEmail(p.email), p]));
         loading.classList.add('hidden');
 
-        // 2) Usuario por ?user= o localStorage
         const params = new URLSearchParams(location.search);
         let email = normalizeEmail(params.get('user') || localStorage.getItem('userEmail') || '');
 
@@ -333,10 +409,10 @@
         } else {
           renderLogin();
         }
-
       } catch (err) {
-        loading.classList.add('hidden');
         showError('No se pudo cargar la data: ' + (err?.message || err));
+      } finally {
+        setScreenBusy(false);
       }
     })();
   </script>
