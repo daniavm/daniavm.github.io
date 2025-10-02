@@ -22,69 +22,34 @@
     }
     .screen-busy.show { display: flex; }
 
-    /* =========================================================
-       LENGÜETA (diseño carpeta) – versión sin “peek” + rebote suave
-       ========================================================= */
-    .help-ribbon {
-      position: fixed; inset-inline: 0; bottom: 0; z-index: 40;
-      pointer-events: none; /* solo elementos internos reciben eventos */
+    /* FAB reporte problemas */
+    .fab-report {
+      position: fixed; right: 16px; bottom: 18px; z-index: 55;
+      display:flex; align-items:center; gap:.5rem;
+      background:#fff; border:1px solid rgb(226,232,240); color:#0f172a;
+      padding:.6rem .9rem; border-radius:9999px; box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);
+      transition: transform .2s ease, box-shadow .2s ease;
     }
-    .help-shell {
-      pointer-events: auto;
-      margin: 0 auto; max-width: 56rem; position: relative;
-      /* contenedor centrado, no afecta el layout principal */
+    .fab-report:hover{ transform: translateY(-2px); box-shadow:0 15px 20px -3px rgba(0,0,0,.12),0 8px 10px -6px rgba(0,0,0,.12) }
+    .fab-badge {
+      position:absolute; top:-6px; right:-6px; background:#ef4444; color:#fff; font-size:10px; font-weight:700; border-radius:9999px; padding:.15rem .35rem; display:none;
     }
-
-    /* Panel: completamente fuera de vista cuando está cerrado */
-    .help-panel {
-      position: fixed; /* fijo al viewport para controlar bien el borde */
-      left: 50%; transform: translateX(-50%) translateY(100%);
-      bottom: 0;
-      width: min(56rem, calc(100vw - 1.5rem));
-      border-top-left-radius: 1rem; border-top-right-radius: 1rem;
-      box-shadow: 0 -10px 30px rgba(2,6,23,.08);
-      border: 1px solid rgb(226 232 240);
-      background: white;
-      max-height: 60vh; overflow: hidden;
-      transition: transform .28s ease;
-      will-change: transform;
-    }
-    .help-panel.open {
-      transform: translateX(-50%) translateY(0);
+    .fab-report.attn { animation: nudge 1.6s ease-in-out infinite; }
+    @keyframes nudge {
+      0%,100% { transform: translateY(0) }
+      10% { transform: translateY(-2px) }
+      20% { transform: translateY(0) }
+      30% { transform: translateY(-1px) }
+      40% { transform: translateY(0) }
     }
 
-    /* Cuerpo desplazable dentro del panel */
-    .help-body {
-      max-height: calc(60vh - 52px);
-      overflow-y: auto;
+    /* Modal reporte */
+    .modal-backdrop {
+      position: fixed; inset:0; background: rgba(15, 23, 42, .45);
+      display:none; align-items:center; justify-content:center; z-index:70;
+      backdrop-filter: blur(2px);
     }
-
-    /* Pestaña siempre visible, pegada al borde inferior de la ventana */
-    .help-tab {
-      position: fixed; left: 50%; bottom: 0; transform: translateX(-50%);
-      background: var(--color-primary); color: white;
-      border-top-left-radius: .75rem; border-top-right-radius: .75rem;
-      padding: .6rem .9rem;
-      display: inline-flex; align-items: center; gap: .5rem;
-      box-shadow: 0 6px 14px rgba(2,6,23,.18);
-      cursor: pointer; user-select: none;
-      min-height: 40px;
-      z-index: 41; /* encima del panel */
-    }
-    .help-tab:hover { background: var(--color-primary-hover); }
-    .help-tab:focus { outline: none; box-shadow: 0 0 0 3px rgba(167,40,45,.25), 0 6px 14px rgba(2,6,23,.18); }
-    .help-tab .chev { transition: transform .2s ease; }
-    .help-tab.open .chev { transform: rotate(180deg); }
-
-    /* Rebote suave (3 veces, con delay inicial) */
-    @keyframes gentle-bounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      30%      { transform: translateX(-50%) translateY(-6px); }
-      60%      { transform: translateX(-50%) translateY(0); }
-    }
-    .help-tab.tease {
-      animation: gentle-bounce 1.2s ease-in-out 3 3s; /* 3 veces, empieza a los 3s */
-    }
+    .modal-backdrop.show { display:flex; }
   </style>
 </head>
 <body class="bg-slate-100 text-slate-800">
@@ -126,16 +91,68 @@
     </div>
   </div>
 
-  <!-- Lengüeta inferior (se muestra solo para usuarios validados) -->
-  <div id="helpRibbon" class="help-ribbon hidden" aria-live="polite"></div>
+  <!-- FAB: Reportar problemas -->
+  <button id="reportFab" type="button" class="fab-report" aria-controls="reportModal" aria-expanded="false" title="¿Problemas? Reportar">
+    <span class="fab-badge" id="reportBadge">!</span>
+    <svg class="h-5 w-5 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 9.75l.041.008a.75.75 0 01.709.742v3.75a.75.75 0 01-1.5 0v-3.75a.75.75 0 01.75-.75zm.75 7.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12 3a9 9 0 100 18 9 9 0 000-18z"/>
+    </svg>
+    <span class="text-sm font-medium">¿Problemas? Reportar</span>
+  </button>
+
+  <!-- Modal reporte -->
+  <div id="reportModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="reportTitle">
+    <div class="bg-white rounded-2xl shadow-2xl w-[95%] max-w-xl border border-slate-200">
+      <div class="px-5 py-4 border-b border-slate-200 flex items-center justify-between">
+        <h3 id="reportTitle" class="text-lg font-semibold text-slate-900">Reportar un problema</h3>
+        <button id="reportClose" class="p-2 rounded-lg hover:bg-slate-100" aria-label="Cerrar">
+          <svg class="h-5 w-5 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="px-5 pt-4 pb-2 space-y-3">
+        <p class="text-sm text-slate-600">Cuéntanos brevemente qué ocurrió. Incluiremos automáticamente datos técnicos (navegador, red, últimos errores) para ayudarte más rápido.</p>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1">Tu correo</label>
+          <input id="reportEmail" type="email" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-primary focus:border-primary"
+                 placeholder="tu@colegiosanbenito.org" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1">Descripción</label>
+          <textarea id="reportMessage" rows="4" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-primary focus:border-primary"
+                    placeholder="¿Qué intentabas hacer? ¿Apareció algún mensaje?"></textarea>
+        </div>
+
+        <div class="flex flex-wrap gap-3 pt-1">
+          <button id="reportRetry" class="px-4 py-2 rounded-lg bg-slate-700 text-white hover:bg-slate-800">Reintentar</button>
+          <button id="reportCopy"  class="px-4 py-2 rounded-lg bg-white border border-slate-300 hover:bg-slate-50">Copiar diagnóstico</button>
+          <a id="reportSend" href="#" class="px-4 py-2 rounded-lg bg-primary text-white hover:bg-primary-hover">Enviar correo</a>
+        </div>
+
+        <details class="mt-2">
+          <summary class="text-sm text-slate-600 cursor-pointer select-none">Ver diagnóstico (técnico)</summary>
+          <pre id="reportPreview" class="mt-2 max-h-56 overflow-auto text-xs bg-slate-50 border border-slate-200 rounded-lg p-3"></pre>
+        </details>
+      </div>
+
+      <div class="px-5 py-3 border-t border-slate-200 text-right">
+        <button id="reportCloseBottom" class="px-4 py-2 rounded-lg bg-white border border-slate-300 hover:bg-slate-50">Cerrar</button>
+      </div>
+    </div>
+  </div>
 
   <script>
-    // =================== CONFIG API (JSONP) ===================
-    const GAS_BASE_URL = 'https://script.google.com/macros/s/AKfycbyrh-gOhjB7JKvEsKt5QQ3IOOxeJBQmwhVjfj91TrIjPIwMKiXKlOj0BrXQuk7ZSo1G-A/exec'; // <-- tu /exec
+    /* =================== CONFIG API (JSONP) =================== */
+    const GAS_BASE_URL = 'https://script.google.com/macros/s/AKfycbyrh-gOhjB7JKvEsKt5QQ3IOOxeJBQmwhVjfj91TrIjPIwMKiXKlOj0BrXQuk7ZSo1G-A/exec';
     const API_KEY = '';               // si usas SHARED_API_KEY en Apps Script
     const ALLOWED_DOMAIN = 'colegiosanbenito.org';
+    const SUPPORT_EMAIL = 'dvaldes@colegiosanbenito.org'; // <--- cambia si quieres
 
-    // JSONP helper
+    /* =================== JSONP helper =================== */
     function jsonp(url, timeoutMs = 20000) {
       return new Promise((resolve, reject) => {
         const cbName = 'jsonp_cb_' + Math.random().toString(36).slice(2);
@@ -150,7 +167,7 @@
       });
     }
 
-    // Cliente API
+    /* =================== API Client =================== */
     const api = {
       getSheetDataSafe() {
         const url = new URL(GAS_BASE_URL);
@@ -174,16 +191,15 @@
       }
     };
 
-    // =================== UI HELPERS ===================
+    /* =================== UI HELPERS =================== */
     const formContainer = document.getElementById('formContainer');
     const loading = document.getElementById('loading');
     const userInfo = document.getElementById('userInfo');
     const softError = document.getElementById('softError');
     const toast = document.getElementById('toast');
     const busyOverlay = document.getElementById('busyOverlay');
-    const helpRibbon = document.getElementById('helpRibbon');
 
-    function showError(msg){ softError.textContent = msg || 'Ocurrió un error'; softError.classList.remove('hidden'); }
+    function showError(msg){ softError.textContent = msg || 'Ocurrió un error'; softError.classList.remove('hidden'); logErr('UI.showError', msg); pulseReportFab(); }
     function hideError(){ softError.classList.add('hidden'); softError.textContent = ''; }
     function showToast(msg='¡Gracias! Tu voto ha sido registrado.'){ toast.textContent=msg; toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'),3000); }
     function hexToRgba(hex, a=1){ const m=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex); return m?`rgba(${parseInt(m[1],16)}, ${parseInt(m[2],16)}, ${parseInt(m[3],16)}, ${a})`:''; }
@@ -205,7 +221,7 @@
           <span class="inline-flex items-center justify-center gap-2">
             <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-              <path class="opacity-75" fill="currentColor" d="M4 12a 8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
             </svg>
             ${busyText}
           </span>`;
@@ -226,9 +242,46 @@
     const PROFESSOR_SUBAREAS = new Set(PROFESSOR_SUBAREAS_SOURCE.map(norm));
     const isProfessorSubarea = s => PROFESSOR_SUBAREAS.has(norm(s));
 
-    // =================== Datos y flujo ===================
-    let allData = [];      // registros
-    let indexByEmail = new Map();
+    /* =================== DIAGNÓSTICO & REPORTE =================== */
+    const reportFab = document.getElementById('reportFab');
+    const reportBadge = document.getElementById('reportBadge');
+    const reportModal = document.getElementById('reportModal');
+    const reportClose = document.getElementById('reportClose');
+    const reportCloseBottom = document.getElementById('reportCloseBottom');
+    const reportEmail = document.getElementById('reportEmail');
+    const reportMsg = document.getElementById('reportMessage');
+    const reportPreview = document.getElementById('reportPreview');
+    const btnRetry = document.getElementById('reportRetry');
+    const btnCopy = document.getElementById('reportCopy');
+    const btnSend = document.getElementById('reportSend');
+
+    const ERROR_BUFFER_MAX = 20;
+    const errorLog = []; // { ts, type, where, message, extra }
+
+    function logErr(where, err, extra={}) {
+      const entry = {
+        ts: new Date().toISOString(),
+        type: 'error',
+        where: String(where||''),
+        message: (err && err.message) ? String(err.message) : String(err||''),
+        extra
+      };
+      errorLog.push(entry);
+      if (errorLog.length > ERROR_BUFFER_MAX) errorLog.shift();
+      // señal para el FAB
+      reportBadge.style.display = 'inline-block';
+      reportFab.classList.add('attn');
+    }
+
+    // Captura global de errores JS
+    window.addEventListener('error', (e)=> logErr('window.error', e?.error || e?.message || 'Error', {filename:e?.filename, lineno:e?.lineno, colno:e?.colno}));
+    window.addEventListener('unhandledrejection', (e)=> logErr('unhandledrejection', e?.reason || 'Promise rejection'));
+
+    function pulseReportFab() {
+      // pequeño pulso visual si hay error
+      reportFab.classList.add('attn');
+      setTimeout(()=> reportFab.classList.remove('attn'), 2000);
+    }
 
     function normalizeEmail(s){ return String(s||'').trim().toLowerCase(); }
     function isAllowedDomain(email){
@@ -236,6 +289,84 @@
       const parts = normalizeEmail(email).split('@');
       return parts.length===2 && parts[1]===ALLOWED_DOMAIN;
     }
+
+    function getUserEmailCached(){
+      const q = new URLSearchParams(location.search).get('user') || '';
+      if (q) return q.trim();
+      const saved = localStorage.getItem('userEmail') || '';
+      return saved.trim();
+    }
+
+    function buildDiagnostics() {
+      const env = {
+        url: location.href,
+        online: navigator.onLine,
+        userAgent: navigator.userAgent,
+        language: navigator.language,
+        platform: navigator.platform,
+        time: new Date().toString(),
+        gasBaseUrl: GAS_BASE_URL,
+        allowedDomain: ALLOWED_DOMAIN,
+        apiKeySet: !!API_KEY,
+        emailCached: getUserEmailCached(),
+      };
+      const snapshot = {
+        env,
+        lastErrors: errorLog.slice(-10),
+      };
+      return JSON.stringify(snapshot, null, 2);
+    }
+
+    function openReportModal() {
+      reportEmail.value = getUserEmailCached();
+      reportPreview.textContent = buildDiagnostics();
+      reportModal.classList.add('show');
+      reportFab.setAttribute('aria-expanded','true');
+    }
+    function closeReportModal() {
+      reportModal.classList.remove('show');
+      reportFab.setAttribute('aria-expanded','false');
+    }
+
+    async function copyDiagnostics() {
+      const text = `Diagnóstico técnico:\n\n${buildDiagnostics()}`;
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast('Diagnóstico copiado');
+      } catch {
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); showToast('Diagnóstico copiado'); } catch {}
+        document.body.removeChild(ta);
+      }
+    }
+
+    function sendEmailReport() {
+      const to = encodeURIComponent(SUPPORT_EMAIL);
+      const subject = encodeURIComponent('Reporte de problema – Consejo Buen Educador 2025');
+      const user = (reportEmail.value || getUserEmailCached() || '(sin correo)').trim();
+      const desc = (reportMsg.value || '(sin descripción)').trim();
+      const body = encodeURIComponent(
+        `Correo del usuario: ${user}\n` +
+        `Descripción:\n${desc}\n\n` +
+        `---\n${buildDiagnostics()}`
+      );
+      const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
+      btnSend.setAttribute('href', mailto);
+    }
+
+    // Eventos del report modal
+    reportFab.addEventListener('click', openReportModal);
+    reportClose.addEventListener('click', closeReportModal);
+    reportCloseBottom.addEventListener('click', closeReportModal);
+    btnRetry.addEventListener('click', ()=> location.reload());
+    btnCopy.addEventListener('click', copyDiagnostics);
+    btnSend.addEventListener('click', sendEmailReport);
+
+    /* =================== Datos y flujo (lo tuyo, intacto) =================== */
+    let allData = [];      // registros
+    let indexByEmail = new Map();
 
     function calcularAntiguedad(f){
       if(!f) return 0; const p=String(f).split(/[\/\-]/); let d;
@@ -260,6 +391,7 @@
       sorted.forEach(p=> html+=`<option value="${p.email}">${p.nombreCompleto}</option>`);
       return html;
     }
+
     function createSelectOptionsWithSubarea(list){
       const usable=list.filter(p=>!p._excluded);
       if(!usable.length) return '<option value="">-- No hay candidatos disponibles --</option>';
@@ -284,105 +416,7 @@
         </div>`;
     }
 
-    /* ================== NUEVA LENGÜETA ================== */
-    function buildHelpRibbon() {
-      if (!helpRibbon) return;
-      if (helpRibbon.dataset.ready === '1') {
-        helpRibbon.classList.remove('hidden');
-        return;
-      }
-
-      // Estructura: tab fija abajo + panel fijo que sube desde abajo
-      helpRibbon.innerHTML = `
-        <div class="help-shell">
-          <button id="helpToggle" class="help-tab tease" type="button" aria-controls="helpPanel" aria-label="Abrir ayuda">
-            <svg class="chev h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path d="M10.75 3.5a.75.75 0 00-1.5 0v9.19L6.3 9.74a.75.75 0 10-1.06 1.06l4.25 4.25a.75.75 0 001.06 0l4.25-4.25a.75.75 0 10-1.06-1.06l-2.95 2.95V3.5z"/>
-            </svg>
-            <span class="text-sm font-medium">¿Cómo elegir?</span>
-          </button>
-
-          <section class="help-panel" id="helpPanel" aria-hidden="true">
-            <div class="help-body px-4 sm:px-6 pt-4 pb-5">
-              <div class="prose prose-sm max-w-none">
-                <p class="text-slate-700">
-                  <strong>Día del Educador 2025.</strong> Distinguiremos a quienes viven su vocación formando a nuestros niños y jóvenes.
-                </p>
-                <h4 class="text-slate-900 font-semibold mt-3">¿A quiénes distinguiremos?</h4>
-                <ul class="list-disc pl-5 text-slate-700">
-                  <li>Un <strong>buen profesor</strong> en <em>Primer Ciclo</em> (PK a 2° básico).</li>
-                  <li>Dos <strong>buenos profesores</strong> de <em>Segundo, Tercer y Cuarto Ciclo</em> (3º básico a IVº medio).</li>
-                  <li>Un <strong>buen educador</strong> que forma sin dictar clases formalmente.</li>
-                </ul>
-
-                <p class="mt-3 text-slate-700">Se consideran las últimas evaluaciones de desempeño, las características del educador Manquehuino y, siguiendo a San Benito, el consejo de la comunidad.</p>
-
-                <h4 class="text-slate-900 font-semibold mt-3">Buscamos educadores que…</h4>
-                <ul class="list-disc pl-5 text-slate-700">
-                  <li><strong>Valoren el conocimiento y la mejora continua</strong>
-                    <ul class="list-disc pl-5">
-                      <li>Cultiven la excelencia profesional.</li>
-                      <li>Se actualicen, reflexionen e innoven.</li>
-                      <li>Promuevan el trabajo bien hecho.</li>
-                    </ul>
-                  </li>
-                  <li class="mt-2"><strong>Ejerzan liderazgo pedagógico</strong>
-                    <ul class="list-disc pl-5">
-                      <li>Autoridad como servicio a los alumnos.</li>
-                      <li>Motiven dando sentido al aprendizaje.</li>
-                    </ul>
-                  </li>
-                  <li class="mt-2"><strong>Gestionen buscando el logro</strong>
-                    <ul class="list-disc pl-5">
-                      <li>Movilicen lo cognitivo, social y valórico.</li>
-                      <li>Sean proactivos, ordenados y responsables.</li>
-                    </ul>
-                  </li>
-                  <li class="mt-2"><strong>Promuevan la vida comunitaria y el trabajo colaborativo</strong>
-                    <ul class="list-disc pl-5">
-                      <li>Sean factor de unión en su equipo.</li>
-                      <li>Participen en actividades de la comunidad.</li>
-                      <li>Asuman los desafíos académicos y formativos del colegio.</li>
-                    </ul>
-                  </li>
-                  <li class="mt-2"><strong>Trayectoria destacada</strong> en los últimos cinco años.</li>
-                </ul>
-
-                <p class="mt-3 text-slate-700">
-                  Este formulario estará abierto hasta el <strong>viernes 7 de octubre</strong>.
-                </p>
-              </div>
-            </div>
-          </section>
-        </div>
-      `;
-
-      const panel  = document.getElementById('helpPanel');
-      const toggle = document.getElementById('helpToggle');
-
-      function openPanel(open) {
-        panel.classList.toggle('open', open);
-        toggle.classList.toggle('open', open);
-        panel.setAttribute('aria-hidden', open ? 'false' : 'true');
-        // al abrir una vez, quitamos el “tease” para no molestar
-        if (open) toggle.classList.remove('tease');
-      }
-      function togglePanel() { openPanel(!panel.classList.contains('open')); }
-
-      toggle.addEventListener('click', togglePanel);
-      toggle.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); togglePanel(); }
-      });
-
-      helpRibbon.classList.remove('hidden');
-      helpRibbon.dataset.ready = '1';
-    }
-    /* ================== FIN LENGÜETA ================== */
-
     function renderVotingForm(currentUser, userRole){
-      // Mostrar la lengüeta de ayuda (solo usuarios válidos)
-      buildHelpRibbon();
-
       const isMe = p => normalizeEmail(p.email)===normalizeEmail(currentUser.email);
       const elegible = allData.filter(p=> calcularAntiguedad(p.fechaIngreso)>=5 && !isMe(p) && !p._excluded);
       const profesores = elegible.filter(p=> p.rolCalculado==='Profesor de Sala' && isProfessorSubarea(p.departamento));
@@ -432,10 +466,10 @@
 
         // Validaciones previas
         const v1 = f.vote1?.value||'', v2=f.vote2?.value||'', v3=f.vote3?.value||'';
-        if(!v1 || !v2) return showError('Debes completar al menos las dos primeras selecciones.');
+        if(!v1 || !v2) { showError('Debes completar al menos las dos primeras selecciones.'); return; }
         const vals=[v1,v2].concat(v3?[v3]:[]); const lower=vals.map(x=>normalizeEmail(x));
-        if(new Set(lower).size!==lower.length) return showError('Los votos deben ser por personas distintas.');
-        if(lower.includes(normalizeEmail(currentUser.email))) return showError('No puedes votarte a ti mismo.');
+        if(new Set(lower).size!==lower.length) { showError('Los votos deben ser por personas distintas.'); return; }
+        if(lower.includes(normalizeEmail(currentUser.email))) { showError('No puedes votarte a ti mismo.'); return; }
 
         // Construcción payload
         const pick = email => { const p=indexByEmail.get(normalizeEmail(email)); return p?{name:p.nombreCompleto,email:p.email,subarea:p.departamento}:null; };
@@ -457,6 +491,7 @@
           showToast('¡Gracias! Tu voto ha sido registrado.');
           renderSuccessCard(voter.name); // oculta el formulario
         } catch (err) {
+          logErr('api.saveVote', err, {payloadLight:{voter:voter.email, v1:v1, v2:v2, v3:!!v3}});
           showError('Error al guardar: ' + (err?.message || err));
           setButtonBusy(btn, false);
         } finally {
@@ -498,6 +533,7 @@
           setScreenBusy(true, 'Verificando acceso…');
           await handleLogin(email);
         } catch (e){
+          logErr('handleLogin', e, {email});
           err.textContent = e?.message || 'No se pudo validar tu correo.';
           err.classList.remove('hidden');
         } finally {
@@ -523,9 +559,6 @@
       userInfo.style.color = '#7f1f25';
       userInfo.classList.remove('hidden');
 
-      // Activar lengüeta de ayuda para usuarios válidos
-      buildHelpRibbon();
-
       // ¿Ya votó?
       setScreenBusy(true, 'Comprobando estado de tu voto…');
       try {
@@ -539,7 +572,8 @@
         } else {
           promptForRole(me);
         }
-      } catch {
+      } catch (e) {
+        logErr('api.hasVoted', e, {email});
         // si falla, seguimos con el flujo normal
         promptForRole(me);
       } finally {
@@ -548,9 +582,6 @@
     }
 
     function promptForRole(currentUser){
-      // Aseguramos que la lengüeta esté lista cuando ya sabemos que es usuario válido
-      buildHelpRibbon();
-
       formContainer.innerHTML = `
         <div class="text-center p-8 border-2 border-dashed border-slate-200 rounded-lg">
           <h3 class="text-xl font-semibold text-slate-800 mb-6">¿Eres profesor titular de alguna asignatura?</h3>
@@ -582,6 +613,8 @@
           renderLogin();
         }
       } catch (err) {
+        logErr('api.getSheetDataSafe', err);
+        loading.classList.add('hidden');
         showError('No se pudo cargar la data: ' + (err?.message || err));
       } finally {
         setScreenBusy(false);
