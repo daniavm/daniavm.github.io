@@ -18,7 +18,7 @@
 <body class="bg-slate-100 text-slate-800">
   <div class="container mx-auto p-4 md:p-8 max-w-3xl">
     <header class="text-center mb-8">
-      <img id="logo" src="https://daniavm.github.io/assets/images/logoCSB.png" alt="Logo" class="mx-auto h-20 w-auto mb-6">
+      <img id="logo" src="https://daniavm.github.io/assets/images/logoCSB.png" alt="Logo Institucional" class="mx-auto h-20 w-auto mb-6">
       <h1 class="text-3xl md:text-4xl font-bold text-slate-900">Consejo premio al buen educador 2025</h1>
       <p class="text-slate-600 mt-2">Te invitamos a participar de este importante proceso.</p>
     </header>
@@ -27,7 +27,7 @@
       <div id="userInfo" class="p-4 rounded-lg hidden mb-6"></div>
 
       <div id="loading" class="text-center p-8">
-        <!-- SVG corregido: viewBox="0 0 24 24" -->
+        <!-- SVG loader con viewBox correcto -->
         <svg class="animate-spin h-8 w-8 text-primary mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
@@ -43,23 +43,18 @@
 
   <script>
     // =================== CONFIG API (JSONP) ===================
-    const GAS_BASE_URL = 'https://script.google.com/macros/s/AKfycbyrh-gOhjB7JKvEsKt5QQ3IOOxeJBQmwhVjfj91TrIjPIwMKiXKlOj0BrXQuk7ZSo1G-A/exec';
-    const API_KEY = ''; // si configuraste SHARED_API_KEY en Apps Script, colócala aquí (opcional)
+    const GAS_BASE_URL = 'https://script.google.com/macros/s/AKfycbyrh-gOhjB7JKvEsKt5QQ3IOOxeJBQmwhVjfj91TrIjPIwMKiXKlOj0BrXQuk7ZSo1G-A/exec'; // <-- reemplaza por tu /exec
+    const API_KEY = '';               // si configuraste SHARED_API_KEY en Apps Script
+    const ALLOWED_DOMAIN = 'colegiosanbenito.org'; // dominio permitido (o '' para cualquiera)
 
-    // JSONP helper: inyecta <script src="...&callback=cb"> y resuelve Promesa
+    // JSONP helper
     function jsonp(url, timeoutMs = 15000) {
       return new Promise((resolve, reject) => {
         const cbName = 'jsonp_cb_' + Math.random().toString(36).slice(2);
         const script = document.createElement('script');
         const timer = setTimeout(() => { cleanup(); reject(new Error('JSONP timeout')); }, timeoutMs);
-
-        function cleanup() {
-          clearTimeout(timer);
-          delete window[cbName];
-          if (script && script.parentNode) script.parentNode.removeChild(script);
-        }
+        function cleanup(){ clearTimeout(timer); delete window[cbName]; if (script && script.parentNode) script.parentNode.removeChild(script); }
         window[cbName] = (data) => { cleanup(); resolve(data); };
-
         const sep = url.includes('?') ? '&' : '?';
         script.src = url + sep + 'callback=' + encodeURIComponent(cbName);
         script.onerror = () => { cleanup(); reject(new Error('JSONP error')); };
@@ -67,7 +62,7 @@
       });
     }
 
-    // Cliente API vía JSONP (evita CORS desde GitHub Pages)
+    // Cliente API
     const api = {
       getSheetDataSafe() {
         const url = new URL(GAS_BASE_URL);
@@ -85,24 +80,11 @@
       saveVote(payload) {
         const url = new URL(GAS_BASE_URL);
         url.searchParams.set('fn','saveVote');
-        url.searchParams.set('payload', JSON.stringify(payload)); // va url-encoded por el jsonp()
+        url.searchParams.set('payload', JSON.stringify(payload));
         if (API_KEY) url.searchParams.set('key', API_KEY);
         return jsonp(url.toString());
       }
     };
-
-    // =================== Lectura de usuario ===================
-    function getUserEmail() {
-      const params = new URLSearchParams(location.search);
-      const q = (params.get('user') || '').trim();
-      if (q) { localStorage.setItem('userEmail', q); return q; }
-      const saved = localStorage.getItem('userEmail') || '';
-      if (saved) return saved;
-      const ask = prompt('Ingresa tu correo institucional para continuar:') || '';
-      localStorage.setItem('userEmail', ask.trim());
-      return ask.trim();
-    }
-    const LOGGED_IN_USER_EMAIL = getUserEmail();
 
     // =================== UI HELPERS ===================
     const formContainer = document.getElementById('formContainer');
@@ -116,8 +98,12 @@
     function showToast(msg='¡Gracias! Tu voto ha sido registrado.'){ toast.textContent=msg; toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'),3000); }
     function hexToRgba(hex, a=1){ const m=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex); return m?`rgba(${parseInt(m[1],16)}, ${parseInt(m[2],16)}, ${parseInt(m[3],16)}, ${a})`:''; }
 
-    // ====== Reglas de subáreas válidas (como tu versión) ======
-    const PROFESSOR_SUBAREAS_SOURCE = ['Lenguaje','Matemática','Música','Inglés secundaria','Ciencias','Ed. Física','Inglés - 1° ciclo','Preescolar','Lenguaje','Inglés - 2° ciclo','Inglés Secundaria','Matemática','Historia','1°- 2° Básico','Religión y Filosofía','Preescolar','Arte'];
+    // ====== Reglas de subáreas válidas ======
+    const PROFESSOR_SUBAREAS_SOURCE = [
+      'Lenguaje','Matemática','Música','Inglés secundaria','Ciencias','Ed. Física',
+      'Inglés - 1° ciclo','Preescolar','Lenguaje','Inglés - 2° ciclo','Inglés Secundaria',
+      'Matemática','Historia','1°- 2° Básico','Religión y Filosofía','Preescolar','Arte'
+    ];
     const norm = s => String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[-–—]/g,' ').replace(/\s+/g,' ').trim();
     const PROFESSOR_SUBAREAS = new Set(PROFESSOR_SUBAREAS_SOURCE.map(norm));
     const isProfessorSubarea = s => PROFESSOR_SUBAREAS.has(norm(s));
@@ -125,6 +111,13 @@
     // =================== Datos y flujo ===================
     let allData = [];      // registros
     let indexByEmail = new Map();
+
+    function normalizeEmail(s){ return String(s||'').trim().toLowerCase(); }
+    function isAllowedDomain(email){
+      if(!ALLOWED_DOMAIN) return true;
+      const parts = normalizeEmail(email).split('@');
+      return parts.length===2 && parts[1]===ALLOWED_DOMAIN;
+    }
 
     function calcularAntiguedad(f){
       if(!f) return 0; const p=String(f).split(/[\/\-]/); let d;
@@ -174,7 +167,7 @@
     }
 
     function renderVotingForm(currentUser, userRole){
-      const isMe = p => p.email.toLowerCase()===currentUser.email.toLowerCase();
+      const isMe = p => normalizeEmail(p.email)===normalizeEmail(currentUser.email);
       const elegible = allData.filter(p=> calcularAntiguedad(p.fechaIngreso)>=5 && !isMe(p) && !p._excluded);
       const profesores = elegible.filter(p=> p.rolCalculado==='Profesor de Sala' && isProfessorSubarea(p.departamento));
       const educadores = elegible.filter(p=> p.rolCalculado==='Educador');
@@ -214,21 +207,20 @@
       html += `<button type="submit" id="voteButton" class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary-hover transition">Enviar Votación</button></form>`;
       formContainer.innerHTML = html;
 
-      indexByEmail = new Map(allData.map(p=>[p.email.toLowerCase(), p]));
+      indexByEmail = new Map(allData.map(p=>[normalizeEmail(p.email), p]));
 
       document.getElementById('recognitionForm').addEventListener('submit', async (ev)=>{
         ev.preventDefault(); hideError();
         const f = ev.target;
         const v1 = f.vote1?.value||'', v2=f.vote2?.value||'', v3=f.vote3?.value||'';
         if(!v1 || !v2) return showError('Debes completar al menos las dos primeras selecciones.');
-        const vals=[v1,v2].concat(v3?[v3]:[]); const lower=vals.map(x=>String(x).toLowerCase());
+        const vals=[v1,v2].concat(v3?[v3]:[]); const lower=vals.map(x=>normalizeEmail(x));
         if(new Set(lower).size!==lower.length) return showError('Los votos deben ser por personas distintas.');
-        const me = indexByEmail.get(LOGGED_IN_USER_EMAIL.toLowerCase());
-        if(me && lower.includes(me.email.toLowerCase())) return showError('No puedes votarte a ti mismo.');
+        if(lower.includes(normalizeEmail(currentUser.email))) return showError('No puedes votarte a ti mismo.');
 
-        const pick = email => { const p=indexByEmail.get(String(email||'').toLowerCase()); return p?{name:p.nombreCompleto,email:p.email,subarea:p.departamento}:null; };
+        const pick = email => { const p=indexByEmail.get(normalizeEmail(email)); return p?{name:p.nombreCompleto,email:p.email,subarea:p.departamento}:null; };
         const d1=pick(v1), d2=pick(v2), d3=v3?pick(v3):null;
-        const voter = me ? { name:me.nombreCompleto, email:me.email, subarea:me.departamento } : { name:'', email:LOGGED_IN_USER_EMAIL, subarea:'' };
+        const voter = { name:currentUser.nombreCompleto, email:currentUser.email, subarea:currentUser.departamento };
 
         const payload = {
           votanteEmail: voter.email,
@@ -239,17 +231,77 @@
         try {
           const resp = await api.saveVote(payload);
           if (!resp || resp.ok !== true) throw new Error(resp?.error || 'No se pudo guardar');
-          showToast('¡Gracias! Tu voto ha sido registrado.'); renderSuccessCard(voter.name);
+          showToast('¡Gracias! Tu voto ha sido registrado.');
+          renderSuccessCard(voter.name); // oculta el formulario
         } catch (err) { showError('Error al guardar: ' + (err?.message || err)); }
       });
     }
 
-    function promptForRole(currentUser){
-      userInfo.innerHTML = `<p><strong>Votando como:</strong> ${currentUser.nombreCompleto} <span class="text-slate-500">(${currentUser.email})</span></p>`;
+    function renderLogin() {
+      loading.classList.add('hidden');
+      formContainer.innerHTML = `
+        <div class="p-6 sm:p-8 rounded-2xl border border-slate-200 bg-white">
+          <h3 class="text-xl font-semibold text-slate-900">Identifícate para votar</h3>
+          <p class="text-slate-600 mt-2">Usa tu correo institucional para validar que estás en la lista.</p>
+
+          <form id="loginForm" class="mt-6 space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">Correo institucional</label>
+              <input type="email" name="email" required placeholder="tucorreo@${ALLOWED_DOMAIN||'tu-dominio'}"
+                class="w-full p-3 border border-slate-300 rounded-lg focus:ring-primary focus:border-primary" />
+            </div>
+            <button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary-hover transition">Continuar</button>
+          </form>
+          <div id="loginError" class="hidden mt-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg p-3"></div>
+        </div>
+      `;
+
+      const form = document.getElementById('loginForm');
+      const err  = document.getElementById('loginError');
+      form.addEventListener('submit', (ev)=>{
+        ev.preventDefault(); hideError(); err.classList.add('hidden'); err.textContent='';
+        const email = normalizeEmail(new FormData(form).get('email')||'');
+        handleLogin(email).catch(e=>{
+          err.textContent = e?.message || 'No se pudo validar tu correo.';
+          err.classList.remove('hidden');
+        });
+      });
+    }
+
+    async function handleLogin(email){
+      if(!email) throw new Error('Ingresa un correo.');
+      if(!isAllowedDomain(email)) throw new Error(`Debe ser @${ALLOWED_DOMAIN}.`);
+
+      const me = allData.find(p => normalizeEmail(p.email) === email);
+      if(!me){
+        throw new Error(`Tu correo (${email}) no aparece en la lista.`);
+      }
+
+      localStorage.setItem('userEmail', email);
+
+      userInfo.innerHTML = `<p><strong>Votando como:</strong> ${me.nombreCompleto} <span class="text-slate-500">(${me.email})</span></p>`;
       userInfo.style.backgroundColor = hexToRgba('#A7282D',0.08);
       userInfo.style.color = '#7f1f25';
       userInfo.classList.remove('hidden');
 
+      // ¿Ya votó?
+      try {
+        const info = await api.hasVoted(email);
+        if (info && info.voted) {
+          formContainer.innerHTML = `
+            <div class="text-center p-8 border-2 border-dashed border-emerald-200 rounded-lg bg-emerald-50/70">
+              <h3 class="text-xl font-semibold text-emerald-800">¡Gracias!</h3>
+              <p class="text-slate-700 mt-2">Ya registraste un voto el <strong>${info.lastAt}</strong>.</p>
+            </div>`;
+        } else {
+          promptForRole(me);
+        }
+      } catch {
+        promptForRole(me);
+      }
+    }
+
+    function promptForRole(currentUser){
       formContainer.innerHTML = `
         <div class="text-center p-8 border-2 border-dashed border-slate-200 rounded-lg">
           <h3 class="text-xl font-semibold text-slate-800 mb-6">¿Eres profesor titular de alguna asignatura?</h3>
@@ -265,39 +317,23 @@
     // =================== INIT ===================
     (async function init(){
       try {
+        // 1) Obtener directorio
         const payload = await api.getSheetDataSafe();
         if(!payload || payload.ok!==true) throw new Error(payload?.error || 'Error de carga');
         allData = processData(payload.data || []);
-        indexByEmail = new Map(allData.map(p=>[p.email.toLowerCase(), p]));
-        const me = allData.find(p=> p.email.toLowerCase()===LOGGED_IN_USER_EMAIL.toLowerCase());
+        indexByEmail = new Map(allData.map(p=>[normalizeEmail(p.email), p]));
         loading.classList.add('hidden');
 
-        if(!me){
-          formContainer.innerHTML = `<div class="text-center p-8 border-2 border-dashed border-red-200 rounded-lg">
-            <h3 class="text-xl font-semibold text-red-800">Acceso Denegado</h3>
-            <p class="text-slate-600 mt-2">Tu correo (<strong class="font-mono">${LOGGED_IN_USER_EMAIL||'(desconocido)'}</strong>) no aparece en la lista.</p>
-          </div>`;
-          return;
+        // 2) Usuario por ?user= o localStorage
+        const params = new URLSearchParams(location.search);
+        let email = normalizeEmail(params.get('user') || localStorage.getItem('userEmail') || '');
+
+        if (email && isAllowedDomain(email) && indexByEmail.has(email)) {
+          await handleLogin(email);
+        } else {
+          renderLogin();
         }
 
-        // Chequeo "ya votó"
-        try {
-          const info = await api.hasVoted(me.email);
-          if (info && info.voted) {
-            formContainer.innerHTML = `
-              <div class="text-center p-8 border-2 border-dashed border-emerald-200 rounded-lg bg-emerald-50/70">
-                <h3 class="text-xl font-semibold text-emerald-800">¡Gracias!</h3>
-                <p class="text-slate-700 mt-2">Ya registraste un voto el <strong>${info.lastAt}</strong>.</p>
-              </div>`;
-            userInfo.innerHTML = `<p><strong>Votaste como:</strong> ${me.nombreCompleto} <span class="text-slate-500">(${me.email})</span></p>`;
-            userInfo.classList.remove('hidden');
-          } else {
-            promptForRole(me);
-          }
-        } catch {
-          // si falla, seguimos con el flujo normal
-          promptForRole(me);
-        }
       } catch (err) {
         loading.classList.add('hidden');
         showError('No se pudo cargar la data: ' + (err?.message || err));
