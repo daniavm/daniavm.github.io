@@ -24,7 +24,7 @@
 
     /* FAB reporte problemas */
     .fab-report {
-      position: fixed; right: 16px; bottom: 18px; z-index: 55;
+      position: fixed; right: 16px; bottom: 18px; z-index: 65;
       display:flex; align-items:center; gap:.5rem;
       background:#fff; border:1px solid rgb(226,232,240); color:#0f172a;
       padding:.6rem .9rem; border-radius:9999px; box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);
@@ -35,11 +35,55 @@
       position:absolute; top:-6px; right:-6px; background:#ef4444; color:#fff; font-size:10px; font-weight:700; border-radius:9999px; padding:.15rem .35rem; display:none;
     }
     .fab-report.attn { animation: nudge 1.6s ease-in-out infinite; }
-    @keyframes nudge {
+
+    /* --- Lengüeta guía (tipo carpeta) --- */
+    .guide-host {
+      position: fixed; left: 50%; bottom: 0; transform: translateX(-50%);
+      width: min(100%, 64rem); /* ~max-w-5xl/6xl según contenedor */
+      z-index: 60; pointer-events: none; /* no interceptar clics fuera */
+    }
+    .guide-wrap {
+      position: relative; pointer-events: none;
+    }
+    .guide-panel {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      transition: transform .4s cubic-bezier(.4,0,.2,1);
+      pointer-events: auto; /* sí recibe clics */
+      /* El transform se aplica dinámicamente via JavaScript */
+    }
+
+    .guide-tab {
+      position: absolute;
+      bottom: 100%; /* Colocar justo encima del panel */
+      left: 24px;
+      display: inline-flex; align-items: center; gap:.5rem;
+      height: 42px; padding: 0 16px;
+      background: #fff; color:#0f172a;
+      border:1px solid rgb(226,232,240); border-bottom: none;
+      border-top-left-radius: 12px; border-top-right-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.08);
+      cursor: pointer;
+    }
+    .guide-tab svg { flex: none; }
+
+    .guide-card {
+      background:#ffffff; border:1px solid rgb(226,232,240);
+      border-bottom: none;
+      border-top-left-radius: 14px; border-top-right-radius: 14px;
+      box-shadow: 0 -10px 25px rgba(0,0,0,.08);
+      padding: 16px 18px 10px 18px;
+      height: min(55vh, 560px);
+      overflow: auto;
+      position: relative; /* Asegurar contexto de apilamiento */
+    }
+
+    /* Nudge de la lengüeta cuando está cerrada */
+    .guide-nudge .guide-tab { animation: guideNudge 2.2s ease-in-out infinite; }
+    @keyframes guideNudge {
       0%,100% { transform: translateY(0) }
-      10% { transform: translateY(-2px) }
+      10% { transform: translateY(-3px) }
       20% { transform: translateY(0) }
-      30% { transform: translateY(-1px) }
+      30% { transform: translateY(-2px) }
       40% { transform: translateY(0) }
     }
 
@@ -50,6 +94,8 @@
       backdrop-filter: blur(2px);
     }
     .modal-backdrop.show { display:flex; }
+
+    @keyframes nudge { 0%,100% { transform: translateY(0) } 10% { transform: translateY(-2px) } 20% { transform: translateY(0) } 30% { transform: translateY(-1px) } 40% { transform: translateY(0) } }
   </style>
 </head>
 <body class="bg-slate-100 text-slate-800">
@@ -92,12 +138,12 @@
   </div>
 
   <!-- FAB: Reportar problemas -->
-  <button id="reportFab" type="button" class="fab-report" aria-controls="reportModal" aria-expanded="false" title="¿Problemas? Reportar">
+  <button id="reportFab" type="button" class="fab-report" aria-controls="reportModal" aria-expanded="false" title="¿No puedes votar?">
     <span class="fab-badge" id="reportBadge">!</span>
     <svg class="h-5 w-5 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 9.75l.041.008a.75.75 0 01.709.742v3.75a.75.75 0 01-1.5 0v-3.75a.75.75 0 01.75-.75zm.75 7.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12 3a9 9 0 100 18 9 9 0 000-18z"/>
     </svg>
-    <span class="text-sm font-medium">¿Problemas? Reportar</span>
+    <span class="text-sm font-medium">¿No puedes votar?</span>
   </button>
 
   <!-- Modal reporte -->
@@ -141,6 +187,46 @@
 
       <div class="px-5 py-3 border-t border-slate-200 text-right">
         <button id="reportCloseBottom" class="px-4 py-2 rounded-lg bg-white border border-slate-300 hover:bg-slate-50">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lengüeta guía (solo aparece con usuario válido) -->
+  <div id="guideHost" class="guide-host" hidden>
+    <div id="guideWrap" class="guide-wrap">
+      <div id="guidePanel" class="guide-panel guide-nudge" aria-live="polite">
+        <button id="guideTab" class="guide-tab" type="button" aria-expanded="false" aria-controls="guideCard" title="Ver guía para votar">
+          <svg id="guideIcon" class="h-4 w-4 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path id="guideIconPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8l-4 4h8l-4-4z"/>
+          </svg>
+          <span class="text-sm font-medium text-slate-800">Guía para votar</span>
+        </button>
+
+        <div id="guideCard" class="guide-card" role="region" aria-label="Guía para votar">
+          <div class="prose prose-sm max-w-none">
+            <p class="text-sm text-slate-700">
+              En el Día del Educador 2025 queremos destacar la labor de profesores y funcionarios que, día a día, colaboran en la formación de nuestros niños y jóvenes. Se distinguen:
+            </p>
+            <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+              <li>Un buen profesor en Primer Ciclo (PK a 2° básico).</li>
+              <li>Dos buenos profesores de Segundo, Tercer y Cuarto Ciclo (3º Básico a IVº Medio).</li>
+              <li>Un buen educador que ejerce su misión fuera de la sala de clases.</li>
+            </ul>
+            <p class="text-sm text-slate-700 mt-2">Se consideran: últimas evaluaciones de desempeño, características del educador Manquehuino y, como enseña San Benito, el consejo de la comunidad.</p>
+            <p class="text-sm text-slate-700 mt-2">Buscamos educadores que:</p>
+            <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+              <li><strong>Valoren el conocimiento</strong> y la mejora continua (excelencia, actualización, innovación, trabajo bien hecho).</li>
+              <li><strong>Ejerzan liderazgo pedagógico</strong> (autoridad como servicio, sentido del aprendizaje).</li>
+              <li><strong>Gestionen buscando el logro</strong> (aprendizaje cognitivo, social y valórico; proactividad, orden, responsabilidad).</li>
+              <li><strong>Promuevan la vida comunitaria</strong> y el trabajo colaborativo (factor de unión, participación, asumir desafíos del colegio).</li>
+              <li><strong>Trayectoria destacada</strong> en los últimos cinco años.</li>
+            </ul>
+            <p class="text-xs text-slate-500 mt-3">El formulario estará abierto hasta el martes 7 de octubre.</p>
+          </div>
+          <div class="flex justify-end pt-3">
+            <button id="guideCloseBtn" class="px-3 py-1.5 text-sm rounded-lg bg-slate-100 hover:bg-slate-200 border border-slate-200">Cerrar</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -273,12 +359,10 @@
       reportFab.classList.add('attn');
     }
 
-    // Captura global de errores JS
     window.addEventListener('error', (e)=> logErr('window.error', e?.error || e?.message || 'Error', {filename:e?.filename, lineno:e?.lineno, colno:e?.colno}));
     window.addEventListener('unhandledrejection', (e)=> logErr('unhandledrejection', e?.reason || 'Promise rejection'));
 
     function pulseReportFab() {
-      // pequeño pulso visual si hay error
       reportFab.classList.add('attn');
       setTimeout(()=> reportFab.classList.remove('attn'), 2000);
     }
@@ -310,10 +394,7 @@
         apiKeySet: !!API_KEY,
         emailCached: getUserEmailCached(),
       };
-      const snapshot = {
-        env,
-        lastErrors: errorLog.slice(-10),
-      };
+      const snapshot = { env, lastErrors: errorLog.slice(-10) };
       return JSON.stringify(snapshot, null, 2);
     }
 
@@ -334,7 +415,6 @@
         await navigator.clipboard.writeText(text);
         showToast('Diagnóstico copiado');
       } catch {
-        // Fallback
         const ta = document.createElement('textarea');
         ta.value = text; document.body.appendChild(ta); ta.select();
         try { document.execCommand('copy'); showToast('Diagnóstico copiado'); } catch {}
@@ -356,7 +436,6 @@
       btnSend.setAttribute('href', mailto);
     }
 
-    // Eventos del report modal
     reportFab.addEventListener('click', openReportModal);
     reportClose.addEventListener('click', closeReportModal);
     reportCloseBottom.addEventListener('click', closeReportModal);
@@ -364,7 +443,7 @@
     btnCopy.addEventListener('click', copyDiagnostics);
     btnSend.addEventListener('click', sendEmailReport);
 
-    /* =================== Datos y flujo (lo tuyo, intacto) =================== */
+    /* =================== Datos y flujo (votación) =================== */
     let allData = [];      // registros
     let indexByEmail = new Map();
 
@@ -464,14 +543,12 @@
         const f = ev.target;
         const btn = document.getElementById('voteButton');
 
-        // Validaciones previas
         const v1 = f.vote1?.value||'', v2=f.vote2?.value||'', v3=f.vote3?.value||'';
         if(!v1 || !v2) { showError('Debes completar al menos las dos primeras selecciones.'); return; }
         const vals=[v1,v2].concat(v3?[v3]:[]); const lower=vals.map(x=>normalizeEmail(x));
         if(new Set(lower).size!==lower.length) { showError('Los votos deben ser por personas distintas.'); return; }
         if(lower.includes(normalizeEmail(currentUser.email))) { showError('No puedes votarte a ti mismo.'); return; }
 
-        // Construcción payload
         const pick = email => { const p=indexByEmail.get(normalizeEmail(email)); return p?{name:p.nombreCompleto,email:p.email,subarea:p.departamento}:null; };
         const d1=pick(v1), d2=pick(v2), d3=v3?pick(v3):null;
         const voter = { name:currentUser.nombreCompleto, email:currentUser.email, subarea:currentUser.departamento };
@@ -481,7 +558,6 @@
           voter, details: [{slot:1,...d1},{slot:2,...d2}, ...(d3?[{slot:3,...d3}]:[])]
         };
 
-        // Busy states
         setButtonBusy(btn, true, 'Enviando…');
         setScreenBusy(true, 'Registrando tu voto…');
 
@@ -489,7 +565,7 @@
           const resp = await api.saveVote(payload);
           if (!resp || resp.ok !== true) throw new Error(resp?.error || 'No se pudo guardar');
           showToast('¡Gracias! Tu voto ha sido registrado.');
-          renderSuccessCard(voter.name); // oculta el formulario
+          renderSuccessCard(voter.name);
         } catch (err) {
           logErr('api.saveVote', err, {payloadLight:{voter:voter.email, v1:v1, v2:v2, v3:!!v3}});
           showError('Error al guardar: ' + (err?.message || err));
@@ -528,7 +604,6 @@
         const email = normalizeEmail(new FormData(form).get('email')||'');
 
         try {
-          // Busy mientras validamos y consultamos “hasVoted”
           setButtonBusy(btn, true, 'Verificando…');
           setScreenBusy(true, 'Verificando acceso…');
           await handleLogin(email);
@@ -559,7 +634,12 @@
       userInfo.style.color = '#7f1f25';
       userInfo.classList.remove('hidden');
 
-      // ¿Ya votó?
+      // Mostrar lengüeta guía solo para usuario válido
+      const guideHost = document.getElementById('guideHost');
+      const guidePanel = document.getElementById('guidePanel');
+      guideHost.hidden = false;       // aparece
+      guidePanel.classList.add('guide-nudge'); // arranca con nudge suave
+
       setScreenBusy(true, 'Comprobando estado de tu voto…');
       try {
         const info = await api.hasVoted(email);
@@ -574,7 +654,6 @@
         }
       } catch (e) {
         logErr('api.hasVoted', e, {email});
-        // si falla, seguimos con el flujo normal
         promptForRole(me);
       } finally {
         setScreenBusy(false);
@@ -593,6 +672,89 @@
       document.getElementById('answerYes').onclick = ()=>renderVotingForm(currentUser,'Profesor');
       document.getElementById('answerNo').onclick  = ()=>renderVotingForm(currentUser,'Educador');
     }
+
+    /* ======= Comportamiento de la lengüeta guía ======= */
+    (function setupGuideTab(){
+      const guideHost = document.getElementById('guideHost');
+      const guidePanel = document.getElementById('guidePanel');
+      const guideTab = document.getElementById('guideTab');
+      const guideIconPath = document.getElementById('guideIconPath');
+      const guideCloseBtn = document.getElementById('guideCloseBtn');
+      const guideCard = document.getElementById('guideCard');
+
+      if (!guideHost || !guidePanel || !guideTab || !guideIconPath || !guideCloseBtn || !guideCard) return;
+
+      let isOpen = false;
+      
+      // Función para calcular y aplicar el transform correcto
+      function updatePanelTransform() {
+        if (!isOpen) {
+          // Cuando está cerrado, obtener la altura total del contenido (excluyendo la lengüeta)
+          const cardHeight = guideCard.scrollHeight;
+          const tabHeight = 42;
+          // Mover el panel hacia abajo para que solo la lengüeta sea visible
+          guidePanel.style.transform = `translateY(${cardHeight}px)`;
+        } else {
+          guidePanel.style.transform = 'translateY(0)';
+        }
+      }
+      
+      function applyState(){
+        guidePanel.classList.toggle('guide-open', isOpen);
+        
+        // Actualizar el transform después de que se aplique la clase
+        setTimeout(updatePanelTransform, 0);
+        
+        // Icono: flecha arriba (cerrar) cuando está abierto, flecha abajo cuando está cerrado
+        guideIconPath.setAttribute('d', isOpen ? 'M12 16l4-4H8l4 4z' : 'M12 8l-4 4h8l-4-4z');
+        guideTab.setAttribute('aria-expanded', String(isOpen));
+        
+        // si se abre, quitar nudge
+        if (isOpen) {
+          guidePanel.classList.remove('guide-nudge');
+        }
+        
+        // Ajustar posición del FAB
+        const reportFab = document.getElementById('reportFab');
+        if (reportFab) {
+          reportFab.style.bottom = isOpen ? '80px' : '18px';
+        }
+      }
+
+      // Inicializar la posición correcta al cargar
+      setTimeout(() => {
+        updatePanelTransform();
+      }, 100);
+
+      guideTab.addEventListener('click', ()=>{ 
+        isOpen = !isOpen; 
+        applyState(); 
+      });
+      
+      guideCloseBtn.addEventListener('click', ()=>{ 
+        isOpen = false; 
+        applyState(); 
+      });
+
+      // Cerrar al hacer scroll fuerte hacia abajo (opcional)
+      let lastY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        if (y > lastY + 50 && isOpen) { 
+          isOpen = false; 
+          applyState(); 
+        }
+        lastY = y;
+      });
+
+      // Observador para recalcular cuando cambie el contenido
+      const resizeObserver = new ResizeObserver(() => {
+        if (!isOpen) {
+          updatePanelTransform();
+        }
+      });
+      resizeObserver.observe(guideCard);
+    })();
 
     // =================== INIT ===================
     (async function init(){
