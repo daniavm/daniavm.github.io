@@ -557,26 +557,26 @@
           <div class="space-y-4 p-4 border border-slate-200 rounded-lg bg-slate-50/80">
             <p class="text-md font-semibold text-slate-800">Pregunta 1: Votación por Profesores</p>
             <div class="pl-2 border-l-4 border-primary/50 pt-1">
-              <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-primary mr-1">1a.</strong>Profesor de tu departamento</label>
+              <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-primary mr-1">1a.</strong>Selecciona un profesor de tu mismo equipo que crees que cumple con las características del buen educador</label>
               <select name="vote1" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-primary focus:border-primary" required>${createSelectOptions(mismos)}</select>
             </div>
             <div class="pl-2 border-l-4 border-primary/50 pt-1">
-              <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-primary mr-1">1b.</strong>Profesor de otro departamento</label>
+              <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-primary mr-1">1b.</strong>Selecciona el nombre de un profesor de otro departamento que cumple con todas las características del buen educador</label>
               <select name="vote2" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-primary focus:border-primary" required>${createSelectOptionsWithSubarea(otros)}</select>
             </div>
           </div>
           <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-slate-700 mr-1">2.</strong>EDUCADOR</label>
+            <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-slate-700 mr-1">2.</strong>Selecciona al educador que consideras merece el premio al buen educador sin ser profesor de aula</label>
             <select name="vote3" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-primary focus:border-primary" required>${createSelectOptionsWithSubarea(educadores)}</select>
           </div>`;
       } else {
         html += `
           <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-slate-700 mr-1">1.</strong>PROFESOR</label>
+            <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-slate-700 mr-1">1.</strong>Selecciona el nombre de un profesor que cumple con todas las características del buen educador</label>
             <select name="vote1" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-primary focus:border-primary" required>${createSelectOptionsWithSubarea(profesores)}</select>
           </div>
           <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-slate-700 mr-1">2.</strong>EDUCADOR</label>
+            <label class="block text-sm font-medium text-slate-700 mb-2"><strong class="font-bold text-slate-700 mr-1">2.</strong>Selecciona al educador que consideras merece el premio al buen educador sin ser profesor de aula</label>
             <select name="vote2" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-primary focus:border-primary" required>${createSelectOptionsWithSubarea(educadores)}</select>
           </div>`;
       }
