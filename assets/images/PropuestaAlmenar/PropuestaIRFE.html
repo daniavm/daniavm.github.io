@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Principia — Propuesta Estratégica para IRFE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Lato:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root{
+          /* --- Principia Design System Tokens --- */
+          --pri-orange:#FFA630;
+          --pri-orange-600:#F17720;
+          --pri-blue:#00A7E1;
+          --pri-blue-600:#008ac1;
+          --pri-ink:#3D3D3D;
+          --pri-ink-2:#757575;
+          --pri-bg:#FFFFFF;
+          --surface-100: #F8F9FA;
+          --surface-200: #FFFFFF;
+          --border-color: #E5E7EB;
+          --success:#2E7D32;
+          --error:#D32F2F;
+        }
+
+        html.dark {
+          --pri-ink: #f1f5f9;
+          --pri-ink-2: #cbd5e1;
+          --pri-bg: #020617;
+          --surface-100: #0f172a;
+          --surface-200: #1e293b;
+          --border-color: #334155;
+          --success:#22c55e;
+          --error:#ef4444;
+        }
+
+        /* Global Sunset/Sunrise Transitions - Efecto Atardecer */
+        * {
+          transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                      border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                      color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                      box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html, body { height: 100%; }
+        body { 
+            font-family: 'Lato', sans-serif; 
+            background-color: var(--pri-bg); 
+            color: var(--pri-ink); 
+            transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+            display: flex; 
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Night Sky Background - Matching index.html */
+        html.dark body {
+            background: linear-gradient(135deg, #020617 0%, #0f172a 25%, #1e293b 50%, #0f172a 75%, #020617 100%);
+        }
+
+        /* Enhanced Dark Mode Cards - Matching index.html */
+        html.dark .content-container {
+            background: linear-gradient(135deg, #0f172a, #1e293b) !important;
+            border-color: rgba(51, 65, 85, 0.3) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        main { flex-grow: 1; }
+        h1, h2, h3, h4, h5, h6 { 
+            font-family: 'Fira Sans', sans-serif;
+            transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .font-raleway { font-family: 'Raleway', sans-serif; }
+        
+        h1.gradient-text, h2.section-title {
+            background: linear-gradient(90deg, var(--pri-orange), var(--pri-orange-600));
+            -webkit-background-clip: text; background-clip: text;
+            color: transparent;
+        }
+
+        .h-deco{position:relative}
+        .h-deco:after{
+            content:"";
+            display:block;
+            height:4px;
+            width:100px;
+            margin:12px auto 0;
+            background:linear-gradient(90deg, var(--pri-orange), var(--pri-orange-600));
+            border-radius:999px;
+        }
+        
+        .content-container {
+            background-color: var(--surface-200);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                       border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                       box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                       transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .content-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+        }
+
+        html.dark .content-container:hover {
+            box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+        }
+
+        .btn {
+            padding: .75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid transparent;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px) scale(1.01);
+            will-change: transform;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--pri-orange) 0%, var(--pri-orange-600) 100%);
+            color: white;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--pri-orange-600) 0%, #dc2626 100%);
+            box-shadow: 0 8px 25px rgba(255, 166, 48, 0.4);
+        }
+
+        .btn-action-blue {
+            background: linear-gradient(135deg, var(--pri-blue) 0%, var(--pri-blue-600) 100%);
+            color: white;
+        }
+        .btn-action-blue:hover {
+            background: linear-gradient(135deg, var(--pri-blue-600) 0%, #1d4ed8 100%);
+            box-shadow: 0 8px 25px rgba(0, 167, 225, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: var(--surface-200);
+            color: var(--pri-blue);
+            border-color: var(--pri-blue);
+        }
+        .btn-secondary:hover {
+            background-color: rgba(0, 167, 225, 0.1);
+            transform: translateY(-2px) scale(1.01);
+        }
+        .btn-secondary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background-color: var(--surface-100);
+            border-color: var(--border-color);
+            color: var(--pri-ink-2);
+        }
+
+        /* Hero Section Enhanced */
+        .hero-banner {
+            position: relative;
+            overflow: hidden;
+            animation: none !important; /* Evita conflicto con fadeIn de .slide */
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: inherit;
+            background-size: inherit;
+            background-position: inherit;
+            background-repeat: inherit;
+            opacity: 0;
+            transform: translateY(20px) scale(1.03);
+            animation: bannerFadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            animation-delay: 0.1s;
+        }
+
+        @keyframes bannerFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(1.03);
+                filter: blur(3px);
+            }
+            70% {
+                opacity: 0.8;
+                transform: translateY(5px) scale(1.01);
+                filter: blur(1px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+        }
+
+        .hero-veil{
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: veilFadeIn 0.8s ease-out forwards;
+            animation-delay: 0.4s;
+        }
+
+        @keyframes veilFadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: .9;
+            }
+        }
+
+        html.dark .hero-veil{ 
+            opacity: 1;
+        }
+
+        /* Content Fade In Animation */
+        .hero-content {
+            opacity: 0;
+            transform: translateY(15px);
+            animation: contentFadeIn 1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            animation-delay: 0.6s;
+        }
+
+        @keyframes contentFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Enhanced gradient text animation */
+        .gradient-text {
+            background-size: 200% 100%;
+            animation: gradientShift 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Modal Styles with Enhanced Transitions */
+        .modal-overlay {
+            position: fixed; inset: 0; background: rgba(0,0,0,.7);
+            backdrop-filter: blur(8px); z-index: 1000; display: flex;
+            align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .modal-overlay.visible { opacity: 1; visibility: visible; }
+        .modal-container {
+            background: var(--surface-100); width: 90%; max-width: 900px;
+            height: 90vh; border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,.2);
+            display: flex; flex-direction: column; transform: scale(.96);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .modal-overlay.visible .modal-container { transform: scale(1); }
+        .modal-section h4 { 
+            border-bottom: 2px solid var(--pri-orange); 
+            padding-bottom: 0.5rem; 
+        }
+        .blueprint-visual {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            background-color: var(--border-color);
+            object-fit: cover;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Timeline Enhanced Styles */
+        .timeline::before {
+            content: ''; position: absolute; top: 24px; left: 5%; right: 5%;
+            height: 4px; background-color: var(--border-color); z-index: 0;
+            transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .timeline-progress {
+            position: absolute; top: 24px; left: 5%; height: 4px;
+            background: linear-gradient(to right, var(--pri-orange), var(--pri-orange-600));
+            z-index: 1; width: 0; transition: width .5s ease-in-out;
+        }
+        .timeline-step .timeline-icon {
+            border: 4px solid var(--border-color);
+            background-color: var(--surface-200);
+            color: var(--pri-ink-2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .timeline-step:hover .timeline-icon { 
+            transform: scale(1.15) rotate(10deg); 
+            box-shadow: 0 8px 20px rgba(255, 166, 48, 0.2);
+        }
+        .timeline-step.active .timeline-icon { 
+            border-color: var(--pri-orange); 
+            color: var(--pri-orange);
+            animation: gentleGlow 2s ease-in-out infinite;
+        }
+        .timeline-details { 
+            max-height: 0; overflow: hidden; 
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+            opacity: 0; 
+        }
+        .timeline-details.open { 
+            max-height: 500px; 
+            margin-top: 1.5rem; 
+            opacity: 1; 
+        }
+
+        /* Accordion Enhanced Styles */
+        .accordion-item-content { 
+            max-height: 0; overflow: hidden; 
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                       padding 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+            padding: 0 1.5rem; 
+        }
+        .accordion-item-content.open { 
+            max-height: 1000px; 
+            padding-top: 1.5rem; 
+            padding-bottom: 1.5rem;
+        }
+        .accordion-header .chevron { 
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .accordion-header.active .chevron { 
+            transform: rotate(90deg); 
+        }
+
+        /* Enhanced Card Animations */
+        .animated-card { 
+            opacity: 0; 
+            transform: translateY(20px); 
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                       transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        
+        /* Slide Animations */
+        .slide { 
+            display: none; 
+            animation: fadeIn 0.5s ease-in-out; 
+            height: 100%; 
+            position: relative; 
+        }
+        .slide-centered { 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(10px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+        @keyframes gentleGlow {
+            0%, 100% { box-shadow: 0 0 5px rgba(255, 166, 48, 0.2); }
+            50% { box-shadow: 0 0 20px rgba(255, 166, 48, 0.4), 0 0 30px rgba(255, 166, 48, 0.1); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* Theme Switcher Enhanced */
+        .theme-switch-wrapper { 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+        }
+        .theme-switch { 
+            display: inline-block; 
+            height: 24px; 
+            position: relative; 
+            width: 44px; 
+        }
+        .theme-switch input { display:none; }
+        .slider { 
+            background-color: #ccc; 
+            bottom: 0; cursor: pointer; left: 0; 
+            position: absolute; right: 0; top: 0; 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .slider:before { 
+            background-color: #fff; 
+            bottom: 4px; content: ""; 
+            height: 16px; left: 4px; 
+            position: absolute; 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+            width: 16px; 
+        }
+        input:checked + .slider { 
+            background-color: var(--pri-orange); 
+        }
+        input:checked + .slider:before { 
+            transform: translateX(20px); 
+        }
+        .slider.round { border-radius: 34px; }
+        .slider.round:before { border-radius: 50%; }
+
+        /* Custom Brand Text Color */
+        .text-brand { 
+            color: #52525b; 
+            transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        html.dark .text-brand { 
+            color: var(--pri-ink); 
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--surface-100);
+            transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, var(--pri-orange), var(--pri-orange-600));
+            border-radius: 3px;
+            transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, var(--pri-orange-600), #dc2626);
+        }
+
+        /* --- NUEVAS REGLAS PARA RESPONSIVIDAD --- */
+        @media (max-width: 380px) {
+            #slides-container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            h1.gradient-text {
+                font-size: 2rem;
+            }
+            .content-container {
+                padding: 1.5rem;
+            }
+            #slide-nav .btn-text {
+                display: none;
+            }
+            #slide-nav .btn {
+                padding: 0.75rem;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #slide-nav .btn i {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-[var(--surface-200)]/80 backdrop-blur-lg shadow-md sticky top-0 z-50 border-b border-[var(--border-color)]">
+        <div class="container mx-auto px-6">
+            <nav class="flex justify-between items-center py-3">
+                <div class="flex items-center gap-3 text-lg">
+                <a href="#" class="flex items-center gap-2">
+                    <img src="https://daniavm.github.io/assets/images/PropuestaVMA/Principia_Logo_Oficial.png" alt="Principia Logo" class="h-8">
+                    <span class="font-raleway font-normal text-2xl text-brand hidden sm:inline" data-key="principia">Principia</span>
+                </a>
+                <span class="text-gray-400 font-light mx-1">×</span>
+                <a href="#" class="flex items-center gap-2" target="_blank">
+                    <img src="https://daniavm.github.io/assets/images/PropuestaIRFE/logoIRFE.png" alt="IRFE Logo" class="h-8">
+                    <span class="font-bold text-xl hidden sm:inline" data-key="clientName">IRFE</span>
+                </a>
+                </div>
+
+
+                <div class="flex items-center space-x-2">
+                    <div class="hidden md:flex items-center gap-4">
+                        <div class="theme-switch-wrapper">
+                            <i class="fas fa-sun text-yellow-500"></i>
+                            <label class="theme-switch" for="theme-toggle-desktop">
+                                <input type="checkbox" id="theme-toggle-desktop" />
+                                <span class="slider round"></span>
+                            </label>
+                            <i class="fas fa-moon text-blue-300"></i>
+                        </div>
+                        <button class="font-bold text-sm text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)] w-8" id="langToggle" aria-label="Cambiar idioma">
+                            ESP
+                        </button>
+                    </div>
+                    <button id="hamburger-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden hover:bg-gray-100 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menú principal</span>
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="hidden lg:hidden" id="mobile-menu">
+                <ul class="flex flex-col items-center py-4 space-y-4">
+                    <li class="md:hidden flex items-center gap-3 text-sm">
+                        <button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)]" id="themeToggleMobile" aria-label="Cambiar tema">
+                            <i id="sun-icon-mobile" class="fas fa-sun fa-lg mr-2"></i> <span data-key="themeLabelLight">Modo Claro</span>
+                            <i id="moon-icon-mobile" class="fas fa-moon fa-lg mr-2 hidden"></i> <span data-key="themeLabelDark" class="hidden">Modo Oscuro</span>
+                        </button>
+                    </li>
+                    <li class="md:hidden flex items-center gap-3 text-sm">
+                        <button class="font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)]" id="langToggleMobile" aria-label="Cambiar idioma">
+                            <i class="fas fa-globe fa-lg mr-2"></i> <span data-key="langLabel">Cambiar a Inglés</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <div id="slides-container" class="h-full container mx-auto px-6">
+            <div
+            class="slide slide-centered relative hero-banner
+                    w-screen left-1/2 -translate-x-1/2
+                    min-h-[70vh]
+                    bg-no-repeat bg-bottom bg-[length:100%_auto]"
+            style="background-image:url('https://daniavm.github.io/assets/images/PropuestaVMA/proyectoVMA_banner.png');"
+            >
+            <div class="hero-veil"></div>
+            <section class="text-center relative z-10 px-6 hero-content">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text" data-key="heroTitle">
+                Modernización de la Gestión de Datos para el Liderazgo Académico
+                </h1>
+                <p class="text-lg md:text-xl text-[var(--pri-ink-2)] max-w-3xl mx-auto" data-key="heroSubtitle">
+                Una alianza para unificar las fuentes de datos del Colegio, automatizar la reportería y transformar la información en inteligencia accionable para la toma de decisiones estratégicas.
+                </p>
+            </section>
+            </div>
+
+
+            <div class="slide py-12 md:py-20">
+                <section class="mb-16 content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 h-deco section-title" data-key="journeyTitle">Nuestro Viaje de Colaboración</h2>
+                    <div class="timeline relative flex justify-between items-start" id="timeline-interactive">
+                        <div class="timeline-progress" id="timeline-progress"></div>
+                        <div class="timeline-step w-1/3 text-center cursor-pointer relative z-10" data-act="1">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <h3 class="font-bold text-lg" data-key="act1Title">Análisis y Construcción</h3>
+                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act1Subtitle">Diseñar la Arquitectura y el Motor de Datos</h4>
+                        </div>
+                        <div class="timeline-step w-1/3 text-center cursor-pointer relative z-10" data-act="2">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-chart-simple"></i>
+                            </div>
+                            <h3 class="font-bold text-lg" data-key="act2Title">Piloto y Adopción</h3>
+                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act2Subtitle">Implementar y Capacitar</h4>
+                        </div>
+                        <div class="timeline-step w-1/3 text-center cursor-pointer relative z-10" data-act="3">
+                            <div class="timeline-icon w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h3 class="font-bold text-lg" data-key="act3Title">Expansión y Futuro</h3>
+                            <h4 class="text-sm text-[var(--pri-ink-2)]" data-key="act3Subtitle">Escalar y Consolidar</h4>
+                        </div>
+                    </div>
+                    <div id="timeline-details-container" class="timeline-details"></div>
+                </section>
+
+                <section class="content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="objectivesTitle">Objetivos Específicos del Proyecto</h2>
+                    <div id="objectives-accordion" class="space-y-1"></div>
+                </section>
+            </div>
+
+            <div class="slide py-12 md:py-20">
+                <section class="content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="requirementsTitle">Requisitos para el Éxito</h2>
+
+                    <div class="flex flex-wrap justify-center gap-8">
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-users fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req1Title">Liderazgo Comprometido</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req1Desc">Voluntad directiva para adoptar nuevas herramientas.</p>
+                            </div>
+                        </div>
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-database fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req2Title">Acceso Oportuno a Datos</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req2Desc">Entrega de información y permisos necesarios.</p>
+                            </div>
+                        </div>
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-bullseye fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req3Title">Contraparte Designada</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req3Desc">Un "Champion" para facilitar decisiones ágiles.</p>
+                            </div>
+                        </div>
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-calendar-check fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req4Title">Equipo Involucrado</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req4Desc">Disponibilidad para talleres y validaciones.</p>
+                            </div>
+                        </div>
+
+                        <div class="animated-card flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--surface-100)] transition-colors w-full max-w-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 flex items-center justify-center"><i class="fas fa-shield-alt fa-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-key="req5Title">Feedback Constructivo</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]" data-key="req5Desc">Retroalimentación en plazos acordados.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="mt-16 content-container">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 h-deco section-title" data-key="valuesTitle">Nuestros Valores</h2>
+                    <div class="flex flex-wrap justify-center gap-8">
+
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full max-w-sm">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-hands-helping fa-2x"></i>
+                            </div>
+                            <h4 class="font-bold text-lg" data-key="val1Title">Colaboración Eficiente</h4>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="val1Desc">Nos coordinamos estrechamente para un avance fluido.</p>
+                        </div>
+
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full max-w-sm">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-bolt fa-2x"></i>
+                            </div>
+                            <h4 class="font-bold text-lg" data-key="val2Title">Resultados Tangibles</h4>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="val2Desc">Nos enfocamos en entregar productos funcionales en ciclos cortos.</p>
+                        </div>
+
+                        <div class="animated-card text-center p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full max-w-sm">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-comments fa-2x"></i>
+                            </div>
+                            <h4 class="font-bold text-lg" data-key="val3Title">Comunicación Clara y Continua</h4>
+                            <p class="text-sm text-[var(--pri-ink-2)]" data-key="val3Desc">Mantenemos un reporte constante sobre avances y próximos pasos.</p>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+            
+            <div class="slide py-12 md:py-20 flex items-center">
+                <section class="content-container w-full">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 h-deco section-title" data-key="investmentTitle">Inversión y Términos de la Alianza</h2>
+                    <p class="text-center text-[var(--pri-ink-2)] max-w-3xl mx-auto mb-12" data-key="investmentSubtitle">
+                        Una propuesta transparente para una colaboración de alto impacto, diseñada para generar un retorno medible en eficiencia y capacidad estratégica.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center gap-8 items-stretch">
+                        <div class="animated-card w-full max-w-md bg-[var(--surface-100)] p-8 rounded-xl border border-[var(--border-color)] flex flex-col">
+                            <div class="grid grid-cols-2 gap-6 text-center">
+                                <div>
+                                    <div class="text-sm text-[var(--pri-ink-2)] uppercase tracking-wider" data-key="investmentDuration">Duración del Proyecto</div>
+                                    <div class="text-3xl font-bold text-[var(--pri-orange)] mt-1" data-key="investmentMonths">5 Meses</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-[var(--pri-ink-2)] uppercase tracking-wider" data-key="investmentMonthlyFee">Inversión Mensual Necesaria</div>
+                                    <div class="text-3xl font-bold text-[var(--pri-orange)] mt-1" data-key="investmentUF">26 UF + IVA</div>
+                                </div>
+                                <div class="col-span-2 pt-4 border-t border-[var(--border-color)]">
+                                    <div class="text-sm text-[var(--pri-ink-2)] uppercase tracking-wider" data-key="investmentTotal">Inversión Total del Proyecto</div>
+                                    <div class="text-4xl font-bold mt-1" data-key="investmentTotalUF">130 UF + IVA</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="animated-card w-full max-w-md flex-grow">
+                             <h4 class="font-bold text-xl mb-4" data-key="investmentIncludesTitle">El servicio incluye:</h4>
+                             <ul class="space-y-3">
+                                 <li class="flex items-start">
+                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                     <span class="text-[var(--pri-ink-2)]" data-key="investmentInclude1">Análisis de flujos de datos y diseño de arquitectura.</span>
+                                 </li>
+                                 <li class="flex items-start">
+                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                     <span class="text-[var(--pri-ink-2)]" data-key="investmentInclude2">Implementación de flujos de datos automatizados.</span>
+                                 </li>
+                                 <li class="flex items-start">
+                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                     <span class="text-[var(--pri-ink-2)]" data-key="investmentInclude3">Construcción de base de datos centralizada y dashboard interactivo.</span>
+                                 </li>
+                                  <li class="flex items-start">
+                                     <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                     <span class="text-[var(--pri-ink-2)]" data-key="investmentInclude4">Configuración de alertas, capacitación y soporte durante el proyecto.</span>
+                                 </li>
+                             </ul>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-16 animated-card">
+                        <h3 class="text-2xl font-bold" data-key="docsTitle">Documentos para Formalización</h3>
+                        <p class="text-[var(--pri-ink-2)] max-w-3xl mx-auto mt-2 mb-6" data-key="docsSubtitle">Para avanzar, te invitamos a revisar el Plan de Trabajo detallado, la propuesta de Contrato de Servicios y el Framework de Privacidad por Diseño.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                            <a href="https://docs.google.com/document/d/1N3aYwpseddMUW2Yx5lkQoh-Mf0W-3G940wQWgvFMTkI/edit?usp=sharing" class="btn btn-primary w-full" target="_blank">
+                                <i class="fas fa-file-alt mr-2"></i> <span data-key="workPlanButtonLabel">Plan de Trabajo</span>
+                            </a>
+                            <a href="https://docs.google.com/document/d/10BMyxFgW1qdz7IiJ2x-eWz23fzdgG1zuVJHs6Egyaos/edit?usp=sharing" class="btn btn-action-blue w-full" target="_blank">
+                                <i class="fas fa-shield-alt mr-2"></i> <span data-key="privacyFrameworkButtonLabel">Framework de Privacidad</span>
+                            </a>
+                            <a href="https://docs.google.com/document/d/1ArDGPajwt-ZfNKYXXnT0ZEQtPzkAT2mVpqs-EcO31bc/edit?usp=sharing" class="btn btn-secondary w-full sm:col-span-2 lg:col-span-1" target="_blank">
+                                <i class="fas fa-file-contract mr-2"></i> <span data-key="contractButtonLabel">Propuesta de Contrato</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class="slide py-12 md:py-20 flex items-center">
+                <section class="w-full">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 h-deco section-title" data-key="nextStepsTitle">Próximos Pasos para Iniciar</h2>
+                     <p class="text-center text-[var(--pri-ink-2)] max-w-3xl mx-auto mb-12" data-key="nextStepsSubtitle">
+                        Estamos listos para comenzar a construir juntos. Proponemos la siguiente ruta para formalizar nuestra alianza.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        
+                        <div class="animated-card text-center p-6">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-comments fa-2x"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mt-4" data-key="step1Title">Revisión y Ajuste</h4>
+                            <p class="text-sm text-[var(--pri-ink-2)] mt-2" data-key="step1Desc">Agendamos una reunión para resolver dudas y ajustar cualquier detalle de esta propuesta.</p>
+                        </div>
+
+                         <div class="animated-card text-center p-6">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-file-signature fa-2x"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mt-4" data-key="step2Title">Acuerdo de Servicios</h4>
+                            <p class="text-sm text-[var(--pri-ink-2)] mt-2" data-key="step2Desc">Formalizamos la colaboración a través de la firma del contrato de prestación de servicios.</p>
+                        </div>
+
+                         <div class="animated-card text-center p-6">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 flex items-center justify-center mb-4">
+                                <i class="fas fa-rocket fa-2x"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mt-4" data-key="step3Title">Kickoff del Proyecto</h4>
+                            <p class="text-sm text-[var(--pri-ink-2)] mt-2" data-key="step3Desc">Realizamos la primera reunión de trabajo para dar inicio oficial a la Fase 1.</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-16">
+                         <h4 class="font-bold text-xl mb-2" data-key="contactTitle">Conversemos</h4>
+                         <p class="text-[var(--pri-ink-2)]" data-key="contactPerson">Daniel Valdés Medel</p>
+                         <p class="text-sm text-[var(--pri-ink-2)]" data-key="contactRole">Director, Principia SpA</p>
+                         <a href="mailto:descubre@principias.ai" class="mt-4 inline-block btn btn-primary focus-outline">
+                             <i class="fas fa-envelope mr-2"></i> descubre@principias.ai
+                         </a>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </main>
+    
+    <div class="modal-overlay" id="blueprint-modal">
+        <div class="modal-container">
+            <div class="modal-header p-5 flex justify-between items-center border-b border-[var(--border-color)]">
+                <h3 id="modal-title" class="text-xl font-bold"></h3>
+                <button id="modal-close-btn" class="text-2xl font-bold text-[var(--pri-ink-2)] hover:text-[var(--pri-orange)] transition-colors">&times;</button>
+            </div>
+            <div class="modal-content p-6 overflow-y-auto" id="modal-content"></div>
+        </div>
+    </div>
+
+    <footer class="bg-[var(--surface-200)]/80 backdrop-blur-lg border-t border-[var(--border-color)] sticky bottom-0 z-40">
+        <div id="slide-nav" class="container mx-auto py-3 px-6 flex items-center">
+            <div class="flex-1 flex justify-start">
+                <button id="prev-btn" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left mr-2"></i><span class="btn-text" data-key="prevButton">Anterior</span>
+                </button>
+            </div>
+            <div class="flex-1 flex justify-center">
+                <div id="step-indicator" class="text-sm font-bold text-[var(--pri-ink-2)]"></div>
+            </div>
+            <div class="flex-1 flex justify-end">
+                <button id="next-btn" class="btn btn-action-blue">
+                    <span class="btn-text" data-key="nextButton">Siguiente</span><i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentLanguage = 'es';
+            const translations = {
+                es: {
+                    principia: "Principia",
+                    clientName: "IRFE",
+                    heroTitle: "Modernización de la Gestión de Datos para el Liderazgo Académico",
+                    heroSubtitle: "Una alianza para unificar las fuentes de datos del Colegio, automatizar la reportería y transformar la información en inteligencia accionable para la toma de decisiones estratégicas.",
+                    journeyTitle: "Nuestro Viaje de Colaboración",
+                    act1Title: "Análisis y Construcción", act1Subtitle: "Diseñar la Arquitectura y el Motor de Datos",
+                    act2Title: "Piloto y Adopción", act2Subtitle: "Implementar y Capacitar",
+                    act3Title: "Expansión y Futuro", act3Subtitle: "Escalar y Consolidar",
+                    objectivesTitle: "Objetivos Específicos del Proyecto",
+                    requirementsTitle: "Requisitos para el Éxito",
+                    req1Title: "Liderazgo Comprometido", req1Desc: "Voluntad directiva para adoptar nuevas herramientas.",
+                    req2Title: "Acceso Oportuno a Datos", req2Desc: "Entrega de información y permisos necesarios.",
+                    req3Title: "Contraparte Designada", req3Desc: "Un \"Champion\" para facilitar decisiones ágiles.",
+                    req4Title: "Equipo Involucrado", req4Desc: "Disponibilidad para talleres y validaciones.",
+                    req5Title: "Feedback Constructivo", req5Desc: "Retroalimentación en plazos acordados.",
+                    valuesTitle: "Nuestros Valores",
+                    val1Title: "Colaboración Eficiente", val1Desc: "Nos coordinamos estrechamente para un avance fluido.",
+                    val2Title: "Resultados Tangibles", val2Desc: "Nos enfocamos en entregar productos funcionales en ciclos cortos.",
+                    val3Title: "Comunicación Clara y Continua", val3Desc: "Mantenemos un reporte constante sobre avances y próximos pasos.",
+                    viewBlueprint: "Ver Ejemplo Visual", modalTitlePrefix: "Ejemplo:",
+                    artifactsArchitecture: "Ejemplo de Entregable", workPlan: "Plan de Trabajo Simplificado",
+                    durationLabel: "Duración:", weeksLabel: "semanas", descriptionLabel: "Descripción", objectivesLabel: "Objetivos Clave",
+                    prevButton: "Anterior", nextButton: "Siguiente", stepLabel: "Paso", toStartButton: "Volver al Inicio",
+                    themeLabelLight: "Modo Claro", themeLabelDark: "Modo Oscuro", langLabel: "Cambiar a Inglés",
+                    investmentTitle: "Inversión y Términos de la Alianza",
+                    investmentSubtitle: "Una propuesta transparente para una colaboración de alto impacto, diseñada para generar un retorno medible en eficiencia y capacidad estratégica.",
+                    investmentDuration: "Duración del Proyecto",
+                    investmentMonths: "5 Meses",
+                    investmentMonthlyFee: "Inversión Mensual Necesaria",
+                    investmentUF: "26 UF + IVA",
+                    investmentTotal: "Inversión Total del Proyecto",
+                    investmentTotalUF: "130 UF + IVA",
+                    investmentIncludesTitle: "El servicio incluye:",
+                    investmentInclude1: "Análisis de flujos de datos y diseño de arquitectura.",
+                    investmentInclude2: "Implementación de flujos de datos automatizados.",
+                    investmentInclude3: "Construcción de base de datos centralizada y dashboard interactivo.",
+                    investmentInclude4: "Configuración de alertas, capacitación y soporte durante el proyecto.",
+                    docsTitle: "Documentos para Formalización",
+                    docsSubtitle: "Para avanzar, te invitamos a revisar el Plan de Trabajo detallado, la propuesta de Contrato de Servicios y el Framework de Privacidad por Diseño.",
+                    workPlanButtonLabel: "Plan de Trabajo",
+                    contractButtonLabel: "Propuesta de Contrato",
+                    privacyFrameworkButtonLabel: "Framework de Privacidad",
+                    nextStepsTitle: "Próximos Pasos para Iniciar",
+                    nextStepsSubtitle: "Estamos listos para comenzar a construir juntos. Proponemos la siguiente ruta para formalizar nuestra alianza.",
+                    step1Title: "Revisión y Ajuste",
+                    step1Desc: "Agendamos una reunión para resolver dudas y ajustar cualquier detalle de esta propuesta.",
+                    step2Title: "Acuerdo de Servicios",
+                    step2Desc: "Formalizamos la colaboración a través de la firma del contrato de prestación de servicios.",
+                    step3Title: "Kickoff del Proyecto",
+                    step3Desc: "Realizamos la primera reunión de trabajo para dar inicio oficial a la Fase 1.",
+                    contactTitle: "Conversemos",
+                    contactPerson: "Daniel Valdés Medel",
+                    contactRole: "Director, Principia SpA",
+                    timelineActs: {
+                        1: { title: 'Fase I y II: Análisis y Construcción del Motor de Datos', description: 'Comenzamos validando el acceso a los datos, analizando los flujos existentes y diseñando la arquitectura de la solución. Luego, desarrollamos los primeros flujos de automatización y construimos la base de datos centralizada, lista para la visualización.' },
+                        2: { title: 'Fase III: Piloto del Dashboard y Adopción', description: 'Construimos la primera versión del dashboard interactivo en Looker Studio, lo implementamos con un grupo de usuarios clave (equipo directivo) y realizamos una sesión de capacitación para asegurar su correcta adopción y uso.' },
+                        3: { title: 'Fase IV y V: Evaluación, Expansión y Visión de Futuro', description: 'Medimos el éxito del piloto, incorporamos la retroalimentación para mejorar el dashboard y diseñamos el plan para escalar la solución. Finalmente, implementamos el sistema de alertas y transferimos el conocimiento para la sostenibilidad a largo plazo.' }
+                    },
+                    contentData: {
+                        'cimientos': { title: "Objetivo 1: Cimientos de Datos Confiables", durationWeeks: "14", stages: { 
+                            'arquitectura-datos': { title: 'Documento de Arquitectura de Datos', subtitle: 'El plano de nuestra solución.', description: 'Validamos el acceso a datos, analizamos flujos y diseñamos la arquitectura de la solución centralizada, entregando un plan claro y un mapa de métricas de éxito.', objectives: 'Lograr claridad total sobre cómo se unificarán los datos y un acuerdo formal sobre cómo se medirá el éxito del proyecto.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaIRFE/assets/obj1.png', workplan: [ {phase:'Mes 1', tasks:['Análisis de flujos de datos existentes.', 'Diseño del flujo de datos automatizado.', 'Definición de KPIs.']} ] } }, 
+                            'motor-datos': { title: 'Motor de Datos Funcional (v1.0)', subtitle: 'De manual a automático.', description: 'Desarrollamos los primeros flujos de automatización y construimos la base de datos centralizada, dejando la información lista para ser visualizada.', objectives: 'Reducir inmediatamente el tiempo dedicado a la recolección manual de datos y demostrar de forma tangible el valor de la automatización.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaIRFE/assets/obj6.png', workplan: [ {phase:'Mes 2', tasks:['Construcción de flujos automáticos de datos.', 'Implementación de la Base de Datos Centralizada (v1.0).']} ] } }
+                        } },
+                        'visual': { title: "Objetivo 2: Inteligencia Visual para Decisiones", durationWeeks: "10", stages: { 
+                            'dashboard-piloto': { title: 'Dashboard Interactivo (v1.0) y Piloto', subtitle: 'Transformando datos en insights.', description: 'Construimos la primera versión del dashboard en Looker Studio y lo implementamos con el equipo directivo, incluyendo una sesión de capacitación y material de apoyo.', objectives: 'Permitir que el equipo directivo comience a tomar decisiones con datos centralizados y recoger feedback valioso para futuras mejoras.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaIRFE/assets/obj2.png', workplan: [ {phase:'Mes 3', tasks:['Diseño y construcción del Dashboard (v1.0).', 'Implementación del piloto con directivos.', 'Sesión de capacitación.']} ] } },
+                            'dashboard-mejorado': { title: 'Dashboard Mejorado (v2.0) y Plan de Expansión', subtitle: 'Escalando el éxito.', description: 'Analizamos los resultados del piloto, incorporamos la retroalimentación de los usuarios para lanzar una versión 2.0 del dashboard y diseñamos un plan para su despliegue a otros niveles de la organización.', objectives: 'Proveer evidencia concreta del retorno de la inversión y una hoja de ruta clara para maximizar el alcance y el impacto de la solución.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaIRFE/assets/obj7.png', workplan: [ {phase:'Mes 4', tasks:['Informe de resultados del piloto.', 'Desarrollo de mejoras (v2.0).', 'Creación del plan de expansión.']} ] } }
+                        } },
+                        'proactiva': { title: "Objetivo 3: Inteligencia Proactiva y Sostenibilidad", durationWeeks: "12", stages: { 
+                            'alertas-proactivas': { title: 'Motor de Alertas Proactivas para KPIs', subtitle: 'De la reacción a la anticipación.', description: 'Implementamos un sistema de alertas automáticas que notifica a los responsables cuando los indicadores clave (KPIs) superan umbrales predefinidos, permitiendo una gestión proactiva.', objectives: 'Cambiar el paradigma de un análisis reactivo a una gestión que se anticipa a los problemas, mejorando la capacidad de respuesta estratégica del colegio.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaIRFE/assets/obj4.png', workplan: [ {phase:'Mes 5', tasks:['Definición de umbrales para KPIs.', 'Configuración del motor de alertas.']} ] } }, 
+                            'gobernanza-futuro': { title: 'Modelo de Gobernanza y Visión de Futuro', subtitle: 'Instalando capacidad de innovación.', description: 'Entregamos una propuesta para un modelo de gobernanza de datos a largo plazo y un plan de soporte post-proyecto, asegurando la sostenibilidad y autonomía del colegio.', objectives: 'Dejar una capacidad de innovación instalada, asegurando que el colegio pueda mantener y evolucionar la solución de forma independiente en el futuro.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaIRFE/assets/obj5.png', workplan: [ {phase:'Mes 5', tasks:['Propuesta de modelo de gobernanza.', 'Entrega del plan de soporte y mantenimiento.']} ] } }
+                        } }
+                    }
+                },
+                en: {
+                    principia: "Principia",
+                    clientName: "IRFE",
+                    heroTitle: "Modernization of Data Management for Academic Leadership",
+                    heroSubtitle: "A partnership to unify the School's data sources, automate reporting, and transform information into actionable intelligence for strategic decision-making.",
+                    journeyTitle: "Our Collaboration Journey",
+                    act1Title: "Analysis & Construction", act1Subtitle: "Design Architecture & Data Engine",
+                    act2Title: "Pilot & Adoption", act2Subtitle: "Implement & Train",
+                    act3Title: "Expansion & Future", act3Subtitle: "Scale & Consolidate",
+                    objectivesTitle: "Specific Project Objectives",
+                    requirementsTitle: "Requirements for Success",
+                    req1Title: "Committed Leadership", req1Desc: "Management's willingness to adopt new tools.",
+                    req2Title: "Timely Data Access", req2Desc: "Provision of necessary information and permissions.",
+                    req3Title: "Designated Counterpart", req3Desc: "A \"Champion\" to facilitate agile decisions.",
+                    req4Title: "Involved Team", req4Desc: "Availability for workshops and validations.",
+                    req5Title: "Constructive Feedback", req5Desc: "Feedback provided within agreed timelines.",
+                    valuesTitle: "Our Values",
+                    val1Title: "Efficient Collaboration", val1Desc: "We coordinate closely for smooth progress.",
+                    val2Title: "Tangible Results", val2Desc: "We focus on delivering functional products in short cycles.",
+                    val3Title: "Clear and Continuous Communication", val3Desc: "We maintain constant reporting on progress and next steps.",
+                    viewBlueprint: "View Visual Example", modalTitlePrefix: "Example:",
+                    artifactsArchitecture: "Example Deliverable", workPlan: "Simplified Work Plan",
+                    durationLabel: "Duration:", weeksLabel: "weeks", descriptionLabel: "Description", objectivesLabel: "Key Objectives",
+                    prevButton: "Previous", nextButton: "Next", stepLabel: "Step", toStartButton: "Back to Start",
+                    themeLabelLight: "Light Mode", themeLabelDark: "Dark Mode", langLabel: "Switch to Spanish",
+                    investmentTitle: "Investment and Partnership Terms",
+                    investmentSubtitle: "A transparent proposal for a high-impact collaboration, designed to generate a measurable return on efficiency and strategic capacity.",
+                    investmentDuration: "Project Duration",
+                    investmentMonths: "5 Months",
+                    investmentMonthlyFee: "Required Monthly Investment",
+                    investmentUF: "26 UF + VAT",
+                    investmentTotal: "Total Project Investment",
+                    investmentTotalUF: "130 UF + VAT",
+                    investmentIncludesTitle: "The service includes:",
+                    investmentInclude1: "Data flow analysis and architecture design.",
+                    investmentInclude2: "Implementation of automated data flows.",
+                    investmentInclude3: "Construction of a centralized database and interactive dashboard.",
+                    investmentInclude4: "Alert configuration, training, and support throughout the project.",
+                    docsTitle: "Documents for Formalization",
+                    docsSubtitle: "To move forward, we invite you to review the detailed Work Plan, the proposed Service Agreement, and the Privacy by Design Framework.",
+                    workPlanButtonLabel: "Work Plan",
+                    contractButtonLabel: "Contract Proposal",
+                    privacyFrameworkButtonLabel: "Privacy Framework",
+                    nextStepsTitle: "Next Steps to Get Started",
+                    nextStepsSubtitle: "We are ready to start building together. We propose the following path to formalize our partnership.",
+                    step1Title: "Review and Adjust",
+                    step1Desc: "We will schedule a meeting to resolve any questions and adjust any details of this proposal.",
+                    step2Title: "Service Agreement",
+                    step2Desc: "We formalize the collaboration by signing the service agreement.",
+                    step3Title: "Project Kickoff",
+                    step3Desc: "We hold the first working meeting to officially start Phase 1.",
+                    contactTitle: "Let's Talk",
+                    contactPerson: "Daniel Valdés Medel",
+                    contactRole: "Director, Principia SpA",
+                    timelineActs: {
+                        1: { title: 'Phase I & II: Analysis and Construction of the Data Engine', description: 'We start by validating data access, analyzing existing flows, and designing the solution architecture. Then, we develop the first automation flows and build the centralized database, ready for visualization.' },
+                        2: { title: 'Phase III: Dashboard Pilot and Adoption', description: 'We build the first version of the interactive dashboard in Looker Studio, implement it with a group of key users (management team), and conduct a training session to ensure its proper adoption and use.' },
+                        3: { title: 'Phase IV & V: Evaluation, Expansion, and Future Vision', description: 'We measure the success of the pilot, incorporate feedback to improve the dashboard, and design a plan to scale the solution. Finally, we implement the alert system and transfer knowledge for long-term sustainability.' }
+                    },
+                    contentData: {
+                        'cimientos': { title: "Objective 1: Reliable Data Foundations", durationWeeks: "14", stages: { 
+                            'arquitectura-datos': { title: 'Data Architecture Document', subtitle: 'The blueprint of our solution.', description: 'We validate data access, analyze flows, and design the architecture of the centralized solution, delivering a clear plan and a map of success metrics.', objectives: 'Achieve total clarity on how data will be unified and a formal agreement on how project success will be measured.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaIRFE/assets/obj1.png', workplan: [ {phase:'Month 1', tasks:['Analysis of existing data flows.', 'Design of the automated data flow.', 'Definition of KPIs.']} ] } }, 
+                            'motor-datos': { title: 'Functional Data Engine (v1.0)', subtitle: 'From manual to automatic.', description: 'We develop the first automation flows and build the centralized database, making the information ready to be visualized.', objectives: 'Immediately reduce the time spent on manual data collection and tangibly demonstrate the value of automation.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaIRFE/assets/obj6.png', workplan: [ {phase:'Month 2', tasks:['Construction of automatic data flows.', 'Implementation of the Centralized Database (v1.0).']} ] } }
+                        } },
+                        'visual': { title: "Objective 2: Visual Intelligence for Decisions", durationWeeks: "10", stages: { 
+                            'dashboard-piloto': { title: 'Interactive Dashboard (v1.0) and Pilot', subtitle: 'Transforming data into insights.', description: 'We build the first version of the dashboard in Looker Studio and implement it with the management team, including a training session and support materials.', objectives: 'Enable the management team to start making decisions with centralized data and gather valuable feedback for future improvements.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaIRFE/assets/obj2.png', workplan: [ {phase:'Month 3', tasks:['Design and construction of the Dashboard (v1.0).', 'Pilot implementation with managers.', 'Training session.']} ] } },
+                            'dashboard-mejorado': { title: 'Improved Dashboard (v2.0) and Expansion Plan', subtitle: 'Scaling success.', description: 'We analyze the pilot results, incorporate user feedback to launch a 2.0 version of the dashboard, and design a plan for its deployment to other levels of the organization.', objectives: 'Provide concrete evidence of the return on investment and a clear roadmap to maximize the solution\'s reach and impact.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaIRFE/assets/obj7.png', workplan: [ {phase:'Month 4', tasks:['Pilot results report.', 'Development of improvements (v2.0).', 'Creation of the expansion plan.']} ] } }
+                        } },
+                        'proactiva': { title: "Objective 3: Proactive Intelligence and Sustainability", durationWeeks: "12", stages: { 
+                            'alertas-proactivas': { title: 'Proactive Alerts Engine for KPIs', subtitle: 'From reaction to anticipation.', description: 'We implement an automatic alert system that notifies stakeholders when key performance indicators (KPIs) exceed predefined thresholds, enabling proactive management.', objectives: 'Shift the paradigm from reactive analysis to management that anticipates problems, improving the school\'s strategic response capability.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaIRFE/assets/obj4.png', workplan: [ {phase:'Month 5', tasks:['Definition of thresholds for KPIs.', 'Configuration of the alert engine.']} ] } }, 
+                            'gobernanza-futuro': { title: 'Governance Model and Future Vision', subtitle: 'Installing innovation capacity.', description: 'We deliver a proposal for a long-term data governance model and a post-project support plan, ensuring the school\'s sustainability and autonomy.', objectives: 'Leave an installed innovation capacity, ensuring the school can maintain and evolve the solution independently in the future.', blueprint: { visual: 'https://daniavm.github.io/assets/images/PropuestaIRFE/assets/obj5.png', workplan: [ {phase:'Month 5', tasks:['Proposal for a governance model.', 'Delivery of the support and maintenance plan.']} ] } }
+                        } }
+                    }
+                }
+            };
+            
+            const root = document.documentElement;
+            const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+            const themeToggleMobile = document.getElementById('themeToggleMobile');
+            const langToggles = [document.getElementById('langToggle'), document.getElementById('langToggleMobile')];
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function applyTheme(theme) {
+                root.className = theme === 'dark' ? 'dark scroll-smooth' : 'scroll-smooth';
+                localStorage.setItem('theme', theme);
+                
+                if(themeToggleDesktop) themeToggleDesktop.checked = theme === 'dark';
+
+                if (themeToggleMobile) {
+                    document.getElementById('sun-icon-mobile').classList.toggle('hidden', theme === 'dark');
+                    document.getElementById('moon-icon-mobile').classList.toggle('hidden', theme === 'light');
+                    document.querySelector('[data-key="themeLabelLight"]').classList.toggle('hidden', theme === 'dark');
+                    document.querySelector('[data-key="themeLabelDark"]').classList.toggle('hidden', theme === 'light');
+                }
+            }
+            
+            if(themeToggleDesktop) {
+                themeToggleDesktop.addEventListener('change', (e) => {
+                    applyTheme(e.target.checked ? 'dark' : 'light');
+                });
+            }
+
+            if(themeToggleMobile) {
+                themeToggleMobile.addEventListener('click', () => {
+                    const currentTheme = root.classList.contains('dark') ? 'dark' : 'light';
+                    applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+                });
+            }
+
+            if(hamburgerButton) {
+                hamburgerButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    hamburgerButton.setAttribute('aria-expanded', !mobileMenu.classList.contains('hidden'));
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.animated-card').forEach(card => observer.observe(card));
+
+            let timelineActs = translations[currentLanguage].timelineActs;
+            let contentData = translations[currentLanguage].contentData;
+
+            const timelineInteractive = document.getElementById('timeline-interactive');
+            const timelineDetailsContainer = document.getElementById('timeline-details-container');
+            const timelineProgress = document.getElementById('timeline-progress');
+
+            if(timelineInteractive) {
+                timelineInteractive.addEventListener('click', e => {
+                    const step = e.target.closest('.timeline-step');
+                    if (!step) return;
+                    const actId = step.dataset.act;
+                    const alreadyActive = step.classList.contains('active');
+                    document.querySelectorAll('.timeline-step').forEach(s => s.classList.remove('active'));
+                    if (alreadyActive) {
+                        timelineDetailsContainer.classList.remove('open');
+                        timelineProgress.style.width = '0%';
+                    } else {
+                        step.classList.add('active');
+                        const actData = timelineActs[actId];
+                        const progressPercentage = (actId - 1) * 45 + 5;
+                        timelineProgress.style.width = `${progressPercentage}%`;
+                        timelineDetailsContainer.innerHTML = `<div class="p-6 rounded-lg border bg-[var(--surface-100)] border-[var(--border-color)]"><h3 class="font-bold text-xl">${actData.title}</h3><p class="mt-2 text-[var(--pri-ink-2)]">${actData.description}</p></div>`;
+                        timelineDetailsContainer.classList.add('open');
+                    }
+                });
+            }
+            
+            const accordionContainer = document.getElementById('objectives-accordion');
+            const modal = document.getElementById('blueprint-modal');
+            const closeBtn = document.getElementById('modal-close-btn');
+
+            function renderAccordion() {
+                const lang = translations[currentLanguage];
+                if (!accordionContainer) return;
+                accordionContainer.innerHTML = Object.keys(contentData).map((key) => {
+                    const objective = contentData[key];
+                    const stagesHtml = Object.keys(objective.stages).map(stageKey => {
+                        const stage = objective.stages[stageKey];
+                        return `<div class="p-4 rounded-lg border border-[var(--border-color)] bg-[var(--surface-100)]">
+                                <h4 class="font-bold">${stage.title}</h4>
+                                <p class="text-sm text-[var(--pri-ink-2)]">${stage.subtitle}</p>
+                                <div class="mt-4"><h5 class="font-semibold text-sm uppercase text-[var(--pri-ink-2)] tracking-wider">${lang.descriptionLabel}</h5><p class="text-sm mt-1">${stage.description}</p></div>
+                                <div class="mt-2"><h5 class="font-semibold text-sm uppercase text-[var(--pri-ink-2)] tracking-wider">${lang.objectivesLabel}</h5><p class="text-sm mt-1">${stage.objectives}</p></div>
+                                <div class="mt-4"><button class="btn btn-primary text-sm py-2 px-4" data-goal-id="${key}" data-stage-id="${stageKey}"><i class="fas fa-eye mr-2"></i> ${lang.viewBlueprint}</button></div>
+                            </div>`;
+                    }).join('');
+                    return `<div class="accordion-item border-b border-[var(--border-color)] last:border-b-0">
+                            <button class="accordion-header w-full text-left p-4 hover:bg-[var(--surface-100)] rounded-lg transition-colors flex justify-between items-center">
+                                <div><h3 class="text-xl font-bold">${objective.title}</h3><p class="text-sm text-[var(--pri-ink-2)]">${lang.durationLabel} ${objective.durationWeeks} ${lang.weeksLabel}</p></div>
+                                <span class="chevron text-2xl text-[var(--pri-ink-2)] font-thin transform transition-transform"><i class="fas fa-chevron-right"></i></span>
+                            </button>
+                            <div class="accordion-item-content"><div class="space-y-4">${stagesHtml}</div></div>
+                        </div>`;
+                }).join('');
+                accordionContainer.querySelectorAll('.accordion-header').forEach(header => {
+                    header.addEventListener('click', () => {
+                        const content = header.nextElementSibling;
+                        const wasOpen = content.classList.contains('open');
+
+                        document.querySelectorAll('.accordion-item-content.open').forEach(openContent => {
+                            if (openContent !== content) {
+                                openContent.classList.remove('open');
+                                openContent.previousElementSibling.classList.remove('active');
+                            }
+                        });
+
+                        header.classList.toggle('active');
+                        content.classList.toggle('open');
+                    });
+                });
+                accordionContainer.querySelectorAll('.btn-primary').forEach(button => {
+                    button.addEventListener('click', (e) => { e.stopPropagation(); openModal(button.dataset.goalId, button.dataset.stageId); });
+                });
+            }
+
+            function openModal(goalId, stageId) {
+                const lang = translations[currentLanguage];
+                const stage = contentData[goalId].stages[stageId];
+                const blueprint = stage.blueprint;
+                if (!blueprint || !modal) return;
+
+                document.getElementById('modal-title').textContent = `${lang.modalTitlePrefix} ${stage.title}`;
+
+                const workplanHtml = (blueprint.workplan || []).map(phase => {
+                    return `<div class="mb-2"><p class="font-semibold">${phase.phase}:</p>
+                            <ul class="list-disc list-inside text-[var(--pri-ink-2)]">
+                                ${phase.tasks.map(t => `<li>${t}</li>`).join('')}
+                            </ul></div>`;
+                }).join('');
+
+                const visualRaw = (blueprint.visual || '').trim();
+                let visualHtml = '';
+
+                if (/\.(mp4|webm|ogg)(\?.*)?$/i.test(visualRaw)) {
+                const ext = (visualRaw.match(/\.([a-z0-9]+)(\?.*)?$/i) || [,'mp4'])[1].toLowerCase();
+                visualHtml = `
+                    <video class="blueprint-visual" controls playsinline preload="metadata" style="object-fit:contain;background:#000;">
+                    <source src="${visualRaw}" type="video/${ext}">
+                    Your browser does not support the video tag.
+                    </video>`;
+                } else if (/\.(png|jpe?g|gif|svg)(\?.*)?$/i.test(visualRaw)) {
+                    visualHtml = `<img src="${visualRaw}" class="blueprint-visual" alt="${stage.title}">`;
+                } else {
+                    visualHtml = `<div class="blueprint-visual flex items-center justify-center text-[var(--pri-ink-2)] p-6">Visual example not available.</div>`;
+                }
+
+                document.getElementById('modal-content').innerHTML = `
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 modal-section">${lang.artifactsArchitecture}</h4>
+                            ${visualHtml}
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 modal-section">${lang.workPlan}</h4>
+                            ${workplanHtml}
+                        </div>
+                    </div>
+                `;
+                modal.classList.add('visible');
+            }
+
+            function closeModal() {
+                if (!modal) return;
+                const video = modal.querySelector('video');
+                if (video) video.pause();
+                modal.classList.remove('visible');
+            }
+
+            function setLanguage(lang) {
+                currentLanguage = lang;
+                const langData = translations[lang];
+                document.documentElement.lang = lang;
+                
+                langToggles.forEach(toggle => {
+                    if(toggle.id === 'langToggle') {
+                        toggle.textContent = lang === 'es' ? 'ENG' : 'ESP';
+                    } else {
+                        const span = toggle.querySelector('span');
+                        if (span) span.textContent = lang === 'es' ? translations.en.langLabel : translations.es.langLabel;
+                    }
+                });
+
+                document.querySelectorAll('[data-key]').forEach(element => {
+                    const key = element.getAttribute('data-key');
+                    if (langData[key] && !element.closest('#langToggle, #langToggleMobile')) {
+                         element.innerHTML = langData[key];
+                    }
+                });
+                
+                timelineActs = langData.timelineActs;
+                contentData = langData.contentData;
+                if(timelineDetailsContainer) {
+                    timelineDetailsContainer.classList.remove('open');
+                    timelineDetailsContainer.innerHTML = '';
+                }
+                document.querySelectorAll('.timeline-step').forEach(s => s.classList.remove('active'));
+                if(timelineProgress) timelineProgress.style.width = '0%';
+                
+                renderAccordion();
+                updateSlideNav();
+            }
+
+            langToggles.forEach(toggle => toggle.addEventListener('click', () => setLanguage(currentLanguage === 'es' ? 'en' : 'es')));
+
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const stepIndicator = document.getElementById('step-indicator');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                if(slides.length === 0) return;
+                slides.forEach((slide, i) => {
+                    slide.style.display = i === index ? 'block' : 'none';
+                     if (slide.classList.contains('flex') || slide.classList.contains('slide-centered')) {
+                        slide.style.display = i === index ? 'flex' : 'none';
+                    }
+                });
+                currentSlide = index;
+                if (index !== 0) window.scrollTo(0, 0);
+                updateSlideNav();
+            }
+            
+            function updateSlideNav() {
+                const lang = translations[currentLanguage];
+                if (!prevBtn || !nextBtn || !stepIndicator) return;
+
+                prevBtn.parentElement.style.visibility = currentSlide === 0 ? 'hidden' : 'visible';
+                
+                const nextBtnText = nextBtn.querySelector('.btn-text');
+                const prevBtnText = prevBtn.querySelector('.btn-text');
+
+                if (currentSlide === slides.length - 1) {
+                    nextBtn.innerHTML = `<span class="btn-text" data-key="toStartButton">${lang.toStartButton}</span><i class="fas fa-home ml-2"></i>`;
+                } else {
+                    nextBtn.innerHTML = `<span class="btn-text" data-key="nextButton">${lang.nextButton}</span><i class="fas fa-arrow-right ml-2"></i>`;
+                }
+
+                stepIndicator.textContent = `${lang.stepLabel} ${currentSlide + 1} / ${slides.length}`;
+            }
+
+            if(prevBtn) prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+            if(nextBtn) nextBtn.addEventListener('click', () => {
+                if (currentSlide === slides.length - 1) {
+                    showSlide(0);
+                } else {
+                    showSlide(currentSlide + 1);
+                }
+            });
+            if(closeBtn) closeBtn.addEventListener('click', closeModal);
+            if(modal) modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+            window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            applyTheme(savedTheme);
+            setLanguage('es');
+            showSlide(0);
+        });
+    </script>
+</body>
+</html>
