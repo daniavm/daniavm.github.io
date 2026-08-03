@@ -29,6 +29,8 @@ Soy un lector y oyente de libros absoluto. Me encanta la fantasía y la novela, 
 
 Me fascina el arte, el diseño, la estética y la arquitectura pero creo que estas áreas aportan más bien el motor de mis estudios antes que la forma en que los adquiero. Y supongo que siempre debo darle un espacio a la música en lo que refiere a las artes. Soy un amante de esta área sin duda y me encanta trabajar en ella cada vez que puedo. 
 
+Si quieres entender de dónde nace este proyecto y la convicción que lo sostiene, te invito a leer el [Manifiesto de Principia](/principia/2026-08-03-manifiesto/).
+
 Son tantas cosas las que se pueden hablar en una vida, pero espero que este "about" diera una pincelada de quien soy. Intentaré ir corrigiendo esta sección a medida que avance la vida y los comentarios de quienes me lean ayuden a ver aquello que quizás podría faltar. 
 
 

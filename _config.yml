@@ -365,6 +365,16 @@ defaults:
       layout: single
       author_profile: false
       share: true
+  # _principia
+  - scope:
+      path: ""
+      type: principia
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+      related: true
 
 collections:
   portfolio:
@@ -377,5 +387,8 @@ collections:
     output: true
     permalink: /:collection/:path/
   reviewlibros:
+    output: true
+    permalink: /:collection/:path/
+  principia:
     output: true
     permalink: /:collection/:path/

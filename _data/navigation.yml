@@ -4,6 +4,8 @@ main:
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Home"
     url: /
+  - title: "Principia"
+    url: /principia/
   - title: "Learning Analytics"
     url: /learninganalytics/
   - title: "Sagas"
