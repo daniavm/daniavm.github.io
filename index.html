@@ -2,14 +2,6 @@
 header:
   image: /assets/images/teaser_wallpaper.png
   teaser: /assets/images/teaser_wallpaper.png
-# header:
-  # image: /assets/images/teaser_wallpaper.jpg
-  # teaser: /assets/images/teaser_wallpaper.jpg
-  # overlay_color: "#000"
-  # overlay_image: /assets/images/teaser_wallpaper.jpg
-  # actions:
-  #  - label: "Learn More..."
-  #    url: "/about/"
 title: "Principia - Home"
 excerpt: 'El centro de la educación nunca ha sido el contenido. Siempre ha sido la persona.'
 layout: splash
@@ -43,29 +35,35 @@ feature_row:
 feature_row2:
   - image_path: /assets/images/portafolio_index2.png
     alt: "Portafolio"
-    title: "Visita Mi Portafolio"
-    excerpt: "Sumérgete en mi mundo de Data Science, donde cada proyecto es una historia única contada a través de los datos. Aún no está completo - y me pregunto cuando realmente lo estará - pero puedes darle una mirada para conocer algo de lo que he hecho en mi trabajo. ¡Explora, descubre y déjate inspirar!"
+    title: "Portafolio"
+    excerpt: "Proyectos de datos y educación: el lado concreto de lo que voy construyendo."
     url: "https://daniavm.github.io/portfolio/"
     btn_class: "btn--primary"
     btn_label: "Ir al Portafolio"
 
 ---
 
-<section style="text-align: center; max-width: 36em; margin: 0 auto; padding: 3em 1.25em 3.5em;">
-  <p style="margin: 0 0 0.75em; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.7em; opacity: 0.55;">El fundamento</p>
-  <h2 style="margin: 0 0 0.75em;"><a href="/principia/">Principia</a></h2>
-  <p style="margin: 0 auto 1.75em; line-height: 1.6; max-width: 28em;">
-    El pensamiento detrás de lo que construyo en educación.
+<section style="text-align: center; max-width: 38em; margin: 0 auto; padding: 2.5em 1.25em 3em;">
+  <p style="margin: 0 0 1.25em; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.7em; opacity: 0.55;">El fundamento</p>
+  <blockquote style="margin: 0 auto 1.25em; padding: 0; border: 0; max-width: 32em; font-size: 1.15em; line-height: 1.55; font-style: italic;">
+    “Si quieres construir un barco, no empieces por buscar madera, cortar tablas o distribuir el trabajo. Despierta primero en los hombres el anhelo por el mar.”
+  </blockquote>
+  <p style="margin: 0 auto 0.5em; opacity: 0.65; font-size: 0.9em;">— Antoine de Saint-Exupéry</p>
+  <p style="margin: 1.5em auto 1.75em; line-height: 1.6; max-width: 30em;">
+    Esa es la convicción detrás de Principia y de lo que construyo en educación.
   </p>
   <a href="/principia/2026-08-03-manifiesto/" class="btn btn--primary">Leer el manifiesto</a>
 </section>
 
-<div style="text-align: center; margin-top: 1em; padding-top: 2em; border-top: 1px solid rgba(0,0,0,0.08);">
+<div style="text-align: center; padding-top: 2.5em; border-top: 1px solid rgba(0,0,0,0.08);">
   <h6 style="text-align: center; margin-bottom: 1.5em;">Explorar</h6>
   {% include feature_row%}
 </div>
 
-{% include feature_row id="feature_row2" type="left" %}
+<div style="margin-top: 2.5em; padding-top: 2.5em; border-top: 1px solid rgba(0,0,0,0.08);">
+  <h6 style="text-align: center; margin-bottom: 1.5em;">Obra</h6>
+  {% include feature_row id="feature_row2" type="left" %}
+</div>
 
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: 'Publicaciones Recientes' }}</h3>
 
